@@ -1,0 +1,54 @@
+== Overview
+
+=== Purpose
+
+=== Scope
+
+=== Audience
+
+The target audiences for this document include (but are not limited to):
+
+* data providers (NCs, DCPCs)
+* GAW World Data Centres (WDCs)
+* WMO WIS Operations and Monitoring
+* Metadata implementors (generation, ingest)
+
+== Technical Guidance
+
+=== Global Services
+
+==== Global Broker
+
+==== Global Cache
+
+==== Global Discovery Catalogue
+
+==== Global Monitoring
+
+=== Topic hierarchy
+
+=== Encodings
+
+==== Message Query Protocol notification message format
+
+==== WMO Core Metadata Profile 2
+
+=== Interfaces
+
+==== Message Queuing Protocol
+
+==== Data Discovery
+
+==== Data access
+
+===== APIs and Web Services
+
+
+==== Monitoring
+
+=== Key Performanace Indicators (KPIs)
+
+==== Discovery Metadata
+
+==== Operational Metrics
+
