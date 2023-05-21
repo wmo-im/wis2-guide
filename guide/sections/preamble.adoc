@@ -1,0 +1,14 @@
+== Preamble
+
+=== Purpose
+
+The purpose of this document is to provide technical guidance and additional information for participants in the WIS2 pilot phase and other early adopters of WIS2 to assist them in implementing the practices, procedures, and specifications defined in the Manual on WIS (WMO No. 1060), Vol II.
+
+=== Audience
+This draft guidance document is provided primarily for technical teams of organisations participating in the WIS2 pilot phase.
+
+=== Status of this document
+
+This draft guidance is as an informal document. The content will be updated, modified and improved throughout the WIS2 pilot phase as detailed specifications and procedures are validated through testing. The information provided herein will be consolidated into a new version of the Guide to WIS (WMO No. 1061) upon completion of the pilot phase. 
+
+

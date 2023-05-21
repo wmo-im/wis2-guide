@@ -1,0 +1,52 @@
+== Real-time data exchange
+
+=== What's wrong with the GTS?
+
+The Global Telecommunication System (GTS) has been the mainstay of real-time data exchange within the WMO community since the 1970s. It has evolved over during that time, but its architecture impedes the free flow of information. 
+
+Being "on the GTS" requires operation of a message switching system (MSS) and update of the Routing Tables that control the flow of data between MSS. Once data is published on the GTS, anyone with a MSS can use the data they receive – or forward that data to other MSS. Each hop from MSS to MSS introduces delays and introduces a risk of data loss. Data publishers must trust recipients to respect terms and conditions in their data licenses. More fundamentally, updates to Routing Tables and MSS requires manual intervention – a model that simply will not scale to support the ever-growing community of consumers that need weather, water, and climate data.
+
+=== Real-time data exchange with WIS2
+
+WIS2 addresses the problems with the GTS as follows:
+
+. Controlled access to data: Web services are used to provide access to data in WIS2. A data publisher may choose to implement controlled access to their data by securing their Web-service footnote:[Data accessible via a WIS2 Global Cache will be "Core data" (as defined in the WMO Unified Data Policy) – consequently it must be provided without restriction on use.].
+. Point-to-point data distribution: WIS2 uses the Internet to transport data directly between data suppliers and data consumers footnote:[A WIS2 Global Cache may be used ensure efficient and highly available access to data. See 8.4 Global Cache for more information.]. The Internet provides efficient and robust footnote:[Even if generally robust, the Internet, as opposed to private networks, such as dedicated lines or the RMDCN, has no end-to-end Service Level Agreement (SLA). Robustness is based factual experience and not contractual SLA.] transport of data throughout the globe – with routing managed at the network infrastructure level. WIS2 no longer needs MSS to manually route data via intermediate "hops".
+. Scaling to support many data consumers: WIS2 uses notification messages to alert consumers about the availability of new data. "Publish-subscribe" (pub-sub) messaging makes it simple to distribute these notifications in real-time to many consumers. A message broker allows an authorized agent (person, software system etc.) to create and publish messages to "topics". The message broker then manages requests from consumers to subscribe to those topics – without human intervention. All messages published to a topic are immediately sent to all subscribers. The publisher only needs to know about the topic – they don’t need know who the message broker forwards their message to. Upon receipt of a notification message a data consumer will decide whether to download the data from the Web-service designated in the message. Consequently, WIS2 no longer needs Routing Tables.
+
+WIS2 uses the OASIS MQTT messaging protocol, versions 3.1.1 and 5.0.
+
+Several open-source message brokers are available that support MQTT. These include Mosquitto and RabbitMQ.
+
+=== Notification message format and structure
+
+WIS2 notification messages must be understood by all participants of WIS. Consequently, these messages must comply with a standard format and structure.
+
+WIS2 notification messages extend the GeoJSON format (RFC 7946), requiring the following elements to be included in each message:
+
+. A globally unique identifier (GUID) for the notification message
+. Geometry (point or polygon) of the associated data object (may be null)
+. Publication time of the notification message
+. Date-time of the associated data object
+. Topic hierarchy and unique identifier for the associated data object
+. Actionable links that can be followed to access the associated data object
+
+Details of the WIS2 notification message format are available in WIS2 messages
+
+=== Standard topic hierarchy
+
+A ‘pub-sub’ message broker uses "topics" to organise messages. Messages are published to a specific topic, and consumers subscribe to the topics they are interested in so that the message broker sends them all relevant messages.
+
+To simplify things for all Data Publishers and Data Consumers, a standard topic structure is used throughout WIS2: the "WIS2 Topic Hierarchy".
+
+The standard topic structure enables notification messages to be grouped according to Member (e.g., country or territory), originating WIS Centre, and data type. It embeds the classification scheme of Earth System domains used Annex a of the WMO Unified Data Policy (Resolution 1, Cg-Ext (2021)).
+
+The top-level of the standard topic structure "channel" is used to distinguish between notification messages from WIS Centres (channel = "origin") and notification messages from Global Cache services that host cached copies of data from the originating WIS Centre (channel = "cache"). This makes it simple for Data Consumers to comply with clause 3.2.13 from the Manual on WIS, Vol II:
+
+   3.2.13 Data consumers may access data from Global Caches or directly from a WIS node. Data consumers SHOULD access real-time and near real-time core data via Global Caches.
+
+There is a one-to-one mapping footnote:[Excluding the top two levels ("channel" and "version") – these are not considered part of the data classification scheme in the WMO Core Metadata Profile because they relate to data distribution mechanisms.] between the theme (i.e., keyword) used to describe a Dataset in discovery metadata and the topic used to publish notifications about that Dataset. 
+
+Details of the WIS2 Topic Hierarchy are available in WIS2 topic hierarchy. 
+
+Note: the WIS2 Topic Hierarchy, particularly Earth System-Domain-Subcategory and below, is expected to evolve during the WIS2 pilot phase.

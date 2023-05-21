@@ -1,0 +1,160 @@
+== Data and metadata flows in WIS2
+
+This section provides a visual overview of how data and discovery metadata are shared within WIS2.
+
+Figure 2 introduces the symbology used throughout this section. TODO: crossref
+
+.Symbology used to describe data and metadata flows
+image::images/symbology-data-metadata-flows.png[Symbology used to describe data and metadata flows]
+
+Introducing the key components:
+
+* *MQ Broker*: Used to publish messages advertising the availability of new/updated/deleted discovery metadata and new Data Objects (e.g. data files that comprise the dataset). Implements MQTT 3.1.1 and/or MQTT 5.0.
+* *Data server*: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive Web service that exposes an API. Supported protocols are HTTPS and SFTP.   
+* *Catalogue*: Contains discovery metadata records describing the datasets published by the NC/DCPC. May be implemented as a "static catalogue" with JSON files published on a Web server enabling a user to browse the catalogue, or as a "dynamic catalogue" via an application that offers a search API.
+
+=== Simple NC/DCPC data sharing
+
+Here we introduce the key concepts of publishing discovery metadata, notification messages, and data. For simplicity, the WIS2 Global Services are not shown here.  
+
+Figure 3 illustrates metadata publication and discovery by a Data Consumer.
+
+.Simple NC/DCPC data sharing - metadata and discovery
+image::images/simple-nc-dcpc-data-sharing-metadata-discovery.png[Simple NC/DCPC data sharing - metadata and discovery]
+
+. NC/DCPC shares a new dataset. They publish a discovery metadata record (*R*) to their local catalogue describing this dataset.
+. Data Consumer searches/browses the NC/DCPC’s local catalogue and discover a dataset that they need. They use the links to identify how & where they can download the dataset and subscribe to updates (e.g., when new data is added to the dataset).
+. This is a near-real-time dataset that will be routinely updated. The Data Consumer decides to subscribe to the topic for this dataset on the NC/DCPC’s local MQ broker.
+. Later, NC/DCPC updates the scope of the dataset (e.g. adding data from another observing station). They publish an updated discovery metadata record (*R\**) to their local catalogue
+
+Note: Data Consumer does not need to update their subscription to receive messages about data availability from this new observing station. They have subscribed to updates about the *dataset* - which now includes data from the additional observing station.
+
+Figure 4 illustrates how a Data Consumer subscribes to receive notification messages and responds to receipt of a message by downloading data.
+
+.Figure 4 Simple NC/DCPC data sharing - data distribution
+image::images/simple-nc-dcpc-data-sharing-data-distribution.png[Simple NC/DCPC data sharing - data distribution]
+
+. [Precondition] Data Consumer subscribes to the MQ topic at the NC/DCPC.
+. As the dataset is produced Data Objects (*D*), e.g., observation data BUFR-files, are made available for download, and messages (*m^D^*) are published to the topic for this dataset on the local MQ broker.
+. Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
+. Data Consumer parses the messages to extract the URL for the new Data Object (*D*) and downloads the file.
+
+Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via a Web service API.  
+
+=== Message distribution via Global Broker
+
+Here we add the Global Broker service.
+
+Note that the Global Broker operates two "channels": one for messages originating from NC or DCPCs, the second for messages from Global Cache instances. These are designated "O" and "GC" accordingly.
+Figure 5 illustrates how messages are published from the NC/DCPC to the Global Broker.
+ 
+.Message distribution via Global Broker - publishing messages from NC/DCPC
+image::images/message-distribution-via-gb-publishing-from-nc-dcpc.png[Message distribution via Global Broker - publishing messages from NC/DCPC]
+
+. A[Pre-condition] Bootstrap the Global Broker with a config file that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.
+. B[Precondition] Global Broker determines the MQ broker topics to subscribe to and subscribes to them.
+. As the dataset is produced Data Objects (*D*), e.g., observation data BUFR-files, are made available for download, and messages (*m^D^*) are published to the topic for this dataset on the local MQ broker.
+. Message (*m^D^*) indicating availability of new data are pulled by the subscriber.
+. Message (*m^D^*) is assessed using "anti-loop" logic to avoid resending duplicate messages. If approved, it is added to the appropriate MQ topic of the "originating centre" channel of Global Broker.
+. Message (*m^D^*) is validated against the agreed message format (insert reference). If the message is not compliant, it is discarded.
+
+Figure 6 illustrates how messages are propagated to other Global Broker instances.
+ 
+.Message distribution via Global Broker – publishing messages from other Global Brokers
+image::images/message-distribution-via-gb-publishing-from-other-gb.png[Message distribution via Global Broker – publishing messages from other Global Broker]
+
+. A[Precondition] Global Broker instances subscribe to MQ topics from at least 2 other Global Broker instances. These are not necessarily bilateral relationships.
+. B[Precondition] Message (*m^D^*) already (re-)published by Global Broker #1.
+. Message (*m^D^*) is pulled by subscriber: Global Broker #2. This is not a duplicate message, so GB#2 republishes the message.
+. Message (*m^D^*) is pulled by subscribers: Global Broker instances #1, #3 and #4. GB#3 and GB#4 have not seen this message before, so they republish the message. However, GB#1 identifies the message as a duplicate and discards it.
+. Message (*m^D^*) is made available to subscribers from Global Broker instances #3 and #4. All Global Broker instances already have a copy of the message, so the new copy of the message is discarded thereby avoiding publication of duplicate messages.
+
+=== Data distribution via Global cache
+
+Here we add the Global Cache service.
+
+Figure 7 illustrates how "data availability" notification messages are published by a Global Cache instance once it has downloaded a copy of a data object from an NC or DCPC.
+
+.Data distribution via Global Cache – publishing "data availability" messages
+image::images/data-distribution-via-gb-publishing-data-availability-messages.png[Data distribution via Global Cache – publishing "data availability" messages]
+
+
+. A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.
+. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.
+. C[Pre-condition] Global Broker determines the MQ broker topics to subscribe to and subscribes to them.
+. D[Pre-condition] Global Cache determines the MQ broker topics to subscribe to and subscribes to them.
+. As the dataset is produced Data Objects (*D*) are made available for download, and messages (*m^D^*) are published to the topic for this dataset on the local MQ broker.
+. Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
+. Message (*m^D^*) is not a duplicate, so Global Broker republishes it.
+. Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
+. Global Cache parses the message and downloads the Data Object (*D*).
+. Global Cache adds Data Object (*D*) to its data server and publishes a "data availability" message (*m^D^*) that advertises data availability from the Global Cache instance.
+. Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
+. Message (*m^D^*) is not a duplicate, so Global Broker republishes it – this time on the Global Cache channel.
+. Messages (mD, mD) are pushed to other Global Broker instances and re-published there.
+
+Figure 8 illustrates how data propagates between Global Cache instances.
+
+. Data distribution via Global Cache – propagating data between Global Cache instances
+image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data distribution via Global Cache – propagating data between Global Cache instances]
+
+. A[Pre-condition] Bootstrap the Global Caches with a configuration that indicates connection details for at least one Global Broker instance and the list of datasets that need to be cached.
+. B[Pre-condition] Global Cache determines the MQ broker topics to subscribe to and subscribes to them.
+. C[Pre-condition] NC/DCPC has published Data Object (*D*) and messages (*m^D^*) advertising availability of that Data Object.
+. D[Pre-condition] Global Cache #1 has downloaded Data Object (*D*) and published "data availability" message (*m^D^*).
+. E[Pre-condition] Global Broker has re-published "data availability" messages from NC/DCPC and Global Cache instance #1 (mD, mD).
+. Global Cache #2 subscribes to both channels on the Global Broker. Both messages advertising Data Object (mD, mD) are pushed to GC#2. Message (*m^D^*) arrives first, so message (*m^D^*) is discarded as a duplicate.
+. Global Cache #2 parses the message and downloads the Data Object (*D*) from GC#1.
+. GC#2 adds Data Object (*D*) to its data server and publishes a "data availability" message (m2) that advertises data availability from GC#2.
+. Global Broker also subscribes to GC#2 (details not shown for brevity). New "data availability" message (m2) is pushed to the Global Broker and added to the "Global Cache" channel. It is not a duplicate of message (*m^D^*) because it refers to a different download location – GC#2 not GC#1. Both messages (mD, m2) are published to the same topic on the Global Cache channel, so subscribers to that topic will receive multiple messages.
+. Messages (mD, mD, m2) are pushed to other Global Broker instances and re-published there.
+
+=== Populating the Global Catalogue
+
+Here we add the Global Discovery Catalogue service.
+
+Figure 9 illustrates how discovery metadata records propagate from the NC or DCPC via a Global Cache instance to the Global Discovery Catalogue.
+
+.Populating the Global Catalogue with discovery metadata records
+image::images/populating-gdc-records.png[Populating the Global Catalogue with discovery metadata records]
+
+. A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.
+. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.
+. C[Pre-condition] Bootstrap the Global Catalogue with a configuration that indicates connection details for at least one Global Broker instance.
+. D[Pre-condition] Global Broker, Global Cache, and Global Catalogue determine MQ broker topics to subscribe to and subscribes to them. Global Catalogue subscribes only to the "Global Cache" channel.
+. NC/DCPC publishes a discovery metadata record (R) to their local catalogue describing the dataset they are sharing.
+. NC/DCPC advertises the availability of this metadata record by publishing a message (*m^R^*) to the ‘metadata’ topic on the local MQ broker.
+. Message (*m^R^*) indicating the availability of new metadata is pushed to the Global Broker. The Global Broker republishes the message on the metadata topic of the "Originating Centre" channel.
+. Message (*m^R^*) indicating the availability of new metadata is pushed to the Global Cache.
+. Global Cache parses the message and downloads the discovery metadata record (R).
+. Global Cache adds discovery metadata record (R) to its data server and publishes a message (*m^R^*) that advertises availability of the record from the Global Cache instance.
+. Message (*m^R^*) indicating availability of new metadata at the Global Cache is pushed to the Global Broker. The Global Broker republishes the message on the metadata topic of the "Global Cache" channel.
+. Message (*m^R^*) indicating the availability of new metadata at the Global Cache is pushed to the Global Catalogue.
+. Global Catalogue parses the message (*m^R^*) indicating the availability of new metadata, asserts that this is not a duplicate message, and downloads the discovery metadata record (R) from the Global Cache. It does not matter which Global Cache instance the record is downloaded from – a Global Cache will only publish a message (*m^R^*) when they hold a copy of record (R).
+. Global Catalogue creates a copy of the original record (new record is R*) and adds links indicating where Data Consumers can subscribe for updates to this dataset at each Global Broker instance. Global Catalogue adds record R* to the catalogue.
+
+=== Data distribution including the Global Services
+
+Here we bring all the components together to show how data is distributed from NCs or DCPCs to Data Consumers in WIS2. See Figure 10.
+
+.Data distribution with Global Services
+image::images/data-distribution-with-global-services.png[Data distribution with Global Services]
+
+Pre-conditions:
+
+* WIS2 Global Service Components are correctly configured and operating.
+* NC/DCPC has published a discovery metadata record (R) to their local catalogue describing the dataset they are sharing. This record has propagated to the Global Catalogue, where an amended metadata record (R*) is published. Record (R*) includes additional actionable links to Global Broker instances where Data Consumers can subscribe for updates to the dataset.
+. Data Consumer searches/browses the Global Catalogue and discovers a dataset that they need. Discovery metadata record (R*) provides  links indicating how and where to download the data set and/or subscribe to updates.
+  A. Download from NC/DCPC.
+  B. Subscribe to updates from NC/DCPC local MQ broker.
+  C. Subscribe to updates from Global Broker’s "Originating Centre" channel.
+  D. Subscribe to updates from Global Broker’s "Global Cache" channel.
+. Data Consumer wants to download Data Objects from the Global Cache, so decides to subscribe to dataset updates from the Global Broker’s "Global Cache" channel.
+. [Data Object publication and propagation to Global Cache instances]
+  * NC/DCPC has published Data Object (*D*) as part of their dataset. Data Object (*D*) is propagated to Global Cache #1 and Global Cache #2.
+  * NC/DCPC has published a message (*m^D^*) advertising availability of Data Object (*D*).
+  * GC#1 has published a message (*m^D^*) advertising availability of Data Object (*D*).
+  * #2 has published a message (m2) advertising availability of Data Object (*D*).
+  * Global Broker has republished message (*m^D^*) on its "Originating Centre" channel, and messages (mD, m2) on its "Global Cache" channel.
+. Messages (mD, m2) are pushed to the subscriber. Message (*m^D^*) arrives second, so it is discarded.
+. Data Consumer parses the message (m2) to extract the URL for the new Data Object (*D*) hosted on GC#2 and downloads the Data Object.

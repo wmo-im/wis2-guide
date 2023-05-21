@@ -1,0 +1,122 @@
+== Implementation and operation of WIS2 Node
+
+=== Practices and procedures
+
+==== Registration and decommissioning of a WIS node
+
+This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.
+
+TODO: To be completed
+
+==== Registration and removal of a Dataset
+
+This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
+
+TODO: to be completed
+
+==== Connecting with Global Services
+
+This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
+
+TODO: to be completed
+
+=== Publishing data, discovery metadata, and notification messages
+
+==== Discovery metadata
+
+Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2
+
+Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a Data Publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue/collection).   
+
+These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse.
+
+Discovery metadata must be published before data sharing through WIS begins.
+
+TODO: to be completed
+
+==== Notification messages
+
+There is no requirement for an NC/DCPC to publish "data availability" notification messages relating to infrequently changing Datasets, such as a data archive, especially where the user community have no requirement to be instantly updated about changes to a Dataset (e.g., the addition of new records into a climate observation archive). Data Publishers should note that without providing notification messages their data will not be copied into the Global Cache. However, since the Global Cache only holds real-time (or near real-time) Datasets, this is not a concern for Data Publishers with infrequently changing Datasets.
+
+TODO: to be completed
+
+==== Data
+
+WIS2 provides the "plumbing" for data sharing within the WMO community, but it defines neither which data to share, nor how that data should be encoded. WIS Centres need to evaluate WMO Programme requirements and the WMO Unified Data Policy to determine which Datasets should be made available through WIS.
+
+WMO Technical Regulations may require that data is encoded in particular formats. For example: synoptic observations should be encoded in BUFR. The Manual on Codes (WMO No. 306) provides details of data formats formally approved for use in WMO. 
+
+However, Technical Regulations don’t cover all data sharing requirements. In such cases, Data Publishers should select data formats that are widely adopted and understood in their target user community. 
+
+WIS2 does not require the use of specific file-naming conventions. Where communities commonly use file-naming conventions (e.g., with embedded metadata), Data Publishers should ensure that adequate documentation is provided to users. Data Publishers cannot assume that users will understand (or respect) their file-naming rules – many Data Consumers will simply treat the filename as an opaque string.
+
+Data publishers also have choices about how they publish data.
+
+As a minimum, Data Publishers may publish data objects (e.g., the atomic bits of data that comprise a Dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see 4.3 Notification message format and structure, and WIS2 messages 4.4 Standard topic hierarchy).
+
+A Dataset (for example, a collection of climate model runs) may comprise thousands or more files. A Data Publisher may choose to provide users with a mechanism to browse through the set of files, enabling them to identify those which are relevant to them. Examples of such mechanisms include:
+
+* Web Accessible Folders (WAF) – a Web-based folder structure listing the data object files by name .
+* Spatio-Temporal Asset Catalog (STAC) – a common language based on GeoJSON to describe geospatial data files so that it can be easily indexed, discovered, and accessed. Freely available, open-source tools present STAC records (one for each data object file) through a Web-based, browse-able user interface.
+
+WAFs and STAC are provided to illustrate options. There is no requirement for a Data Publisher to provide any such browse-able user interface to their data.
+
+Increasingly, interactive Web APIs are being used to provide access to datasets. Although requiring a little more sophistication to implement, a Web API provides significant advantages:
+
+* Data Consumers can select and download only the parts of a dataset that they need – providing them will a smaller dataset subset to work with and reducing the burden on the Data Publisher’s network infrastructure.
+* Data Consumers are insulated from the complexities of how a Data Publisher chooses to persist their data. The Web API can provide access to Datasets in a way that is easy for users to understand.
+* A Web API may allow Data Consumers to download data in their preferred file format or encoding. 
+
+WIS-TECHSPEC-2 states:
+
+    4.3.3 URLs provided for accessing core data, as defined in WMO Unified Data Policy (Res. 1), and discovery metadata shall be directly resolvable, i.e., data or discovery metadata can be downloaded simply by resolving the given URL without further action, such as populating elements of an API, is required.
+
+When using a Web API to publish "core" data, the URL included in the data availability notification message must be directly resolvable, i.e., the Data Consumer must not be required to complete any additional fields in the API request. This can be achieved by identifying the data object in the URL. A Data Consumer or a Global Cache instance can simply resolve the URL to download the data object regardless of the manner in which it is made available.  
+
+WIS2 isn’t yet mature enough to prescribe the use of particular Web APIs. Instead, WIS2 seeks to leverage the experience of Data Publishers who have been using Web APIs to serve their communities.
+
+First, interactive Web APIs should be self-describing. A Data Consumer should not need to know, a priori, how to make requests from a Web API. They should be able to discover this information from the Web API endpoint itself – even if this is just a link to a documentation page they need to read.
+
+Second, we recommend that Web APIs are compliant with OpenAPI version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Effectively, OpenAPI provides metadata that describes the Web API endpoint. Tooling(free, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the Web API. 
+
+Third, the Open Geospatial Consortium (OGC) have developed a suite of APIs (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI v3. Among these, OGC API – Environmental Data Retrieval (EDR), OGC API – Features, and OGC API - Coverages are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and commercial) that support them. We recommend that Data Publishers assess these open-standard API specifications to determine their suitability to for publishing their Datasets using APIs.
+
+Finally, we’re increasingly concerned with providing access to very large Datasets. The OGC has published a series of informative blogs on the subject of cloud-native geospatial data sharing. These are listed among in section 11.4.2 Informative References.
+
+TODO: to be completed
+
+=== Performance managemenT
+
+==== Service levels and performance indicators
+
+This section describes the minimum performance criteria for operation of a WIS node.
+
+TODO: to be completed
+
+==== Provision of system performance metrics
+
+This section describes how a WIS node should provide metrics to the Global Monitor service and its primary GISC.
+
+TODO: to be completed
+
+=== WIS Node reference implementation: wis2box
+
+Members may use whichever software components they consider most appropriate to comply with the WIS2 Technical Regulations.
+
+To assist Members participate in WIS2, a freely available, open-source Reference Implementation has been developed: "WIS2 in a box" (referred to as wis2box). It builds on mature and robust free and open-source software components that are widely adopted for operational use.
+
+wis2box provides functionality required for both Data Publisher and Data Consumer roles. It provides the following technical functions:
+
+* Real-time or archive data and metadata publishing to WIS2 (Publish), including available data transformation and processing pipelines
+* MQTT Message Broker and notification message publication (Subscribe)
+* Object storage server providing raw data access (Download)
+* OGC API server, providing dynamic APIs and Web services for discovery, access, visualization and processing functionality (APIs)
+* Discovery metadata curation / editing tools
+* Notification subscription and real-time download of data upon receipt of notifications.
+* Provision of system performance and data availability metrics 
+* The modular design of wis2box makes it simple to extend to meet additional requirements or integrate with existing data management systems.
+* wis2box already provides a useful set of functionality and will continue to evolve and develop throughout the WIS2 pilot phase and beyond.
+
+Documentation is published in wis2box documentation.
+
+The project in hosted in GitHub: https://github.com/wmo-im/wis2box

@@ -1,0 +1,37 @@
+== Coordinating WIS
+
+GISCs ensure the efficient and effective operation of WIS within their Area of Responsibility (AoR) and, in collaboration with the WMO Secretariat, globally.
+
+Guidance is provided here to help GISCs fulfil this vital obligation.
+
+=== Supporting WIS centres in their area of responsibilitY
+
+The primary function of a GISC is to support Members in their Area of Responsibility (AoR) participate effectively in WIS – both as Data Publishers and Data Consumers.
+
+To provide effective support, it is recommended that GISCs operate a helpdesk or ticketing system to manage issues and requests raised from WIS Centres in their AoR.
+
+TODO: to be completed
+
+=== Performance management
+
+Monitoring of WIS is intended to improve the exchange of information by WMO Programmes and to ensure that the functions of WIS centres minimize the cost of operating WIS. It is also essential for planning and scaling WIS components to meet changing user needs. It complements monitoring of quality of the information being exchanged, which is the responsibility of the Programmes sponsoring the information within WIS.
+
+To ensure efficient and effective operation of WIS in their Area of Responsibility (AoR), GISCs are responsible for collecting metrics from Centres in their AoR.
+
+A GISC may provide a publicly visible portal displaying performance status of WIS.
+
+TODO: to be completed
+
+=== Incident management
+
+GISC are responsible for resolving incidents that impede the operation of WIS.
+
+Appendix E of the Guide to the WMO Information System (WMO No. 1061) describes the key management activities relating to incident management and service continuity in IT systems.
+
+Where the impact arising from an incident may affect WIS Centres outside their Area of Responsibility (AoR), a GISC must coordinate with WMO Secretariat and other GISCs.
+
+Appendix F of the Guide to the WMO Information System (WMO No. 1061) describes the process for responding to an IT security (cybersecurity) incident.
+
+GISCs collaborative provide a "GISC Watch" function wherein, according to a mutually agreed roster, a nominated GISC will actively monitor the global performance of the WIS and coordinate with WMO Secretariat and other GISCs to respond to any issues or incidents arising.
+
+TODO: to be completed

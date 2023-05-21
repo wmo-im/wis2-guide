@@ -1,9 +1,9 @@
-# WIS 2.0 Guide
+# WIS2 Guide
 
 ## Overview
 
-This directory manages the WIS 2.0 Guide.  This document provides
-technical guidance on the implementation of WIS 2.0
+This directory manages the WIS2 Guide.  This document provides
+technical guidance on the implementation of WIS2
 
 ### Dependencies
 
