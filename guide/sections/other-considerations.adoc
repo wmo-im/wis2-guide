@@ -1,0 +1,15 @@
+== Other considerations
+
+=== Competencies of personnel
+
+The Manual on WIS (WMO No. 1060), Vol II. Part I, 1.6, recommends that Members have access to staff who have the required competencies needed to operate their WIS Centres. This includes both generic Information Technology competencies and those specific to the operation of WIS.
+
+WIS2 embraces use of open standards and widely adopted Web technologies. As such, there are many training and development resources available online. WIS-specific competencies are described in Appendix A: Competencies.
+
+=== Audit and certification of WIS Centres
+
+INFCOM recognizes that for WIS to remain fully functional regular reviews of each NC, DCPC, and GISC are required to assess ongoing compliance with the Manual on WIS. Recommended practices for this rolling review are provided in Appendix B: Recommended Practices for Audit and Certification of WIS Centres
+
+=== Pilot phase deployment configuration
+
+TODO: To be completed Once the WIS2 pilot phase is established, information will be added describing the location and configuration details required to connect to Global Services

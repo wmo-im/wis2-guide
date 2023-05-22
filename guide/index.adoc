@@ -1,8 +1,8 @@
-:title: WMO Information System Tehcnical Guidance
+:title: Draft guidance on technical specifications of WIS2
 :titletext: {title}
 :version: 2.0.0alpha1
-:date: 2022-08-12
-:copyright: Copyright © 2022 World Meteorological Organization (WMO)
+:date: 2023-05-22
+:copyright: Copyright © 2023 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -12,6 +12,7 @@
 :sectnums:
 :sectnumlevels: 4
 :sectanchors:
+:sectnum-start: 2
 
 = {title}
 
@@ -32,4 +33,32 @@
 toc::[]
 <<<
 
-include::000-overview.adoc[]
+include::sections/preamble.adoc[]
+
+include::sections/introduction.adoc[]
+
+include::sections/quickstarts.adoc[]
+
+include::sections/data-and-metadata-flows.adoc[]
+
+include::sections/real-time-data-exchange.adoc[]
+
+include::sections/discovery-metadata.adoc[]
+
+include::sections/wis-metrics.adoc[]
+
+include::sections/wis2node.adoc[]
+
+include::sections/global-services.adoc[]
+
+include::sections/coordinating-wis.adoc[]
+
+include::sections/information-management.adoc[]
+
+include::sections/other-considerations.adoc[]
+
+include::sections/references.adoc[]
+
+include::sections/annex-a-competencies.adoc[]
+
+include::sections/annex-b-audit-certification.adoc[]
