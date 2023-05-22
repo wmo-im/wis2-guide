@@ -4,7 +4,7 @@ GISCs ensure the efficient and effective operation of WIS within their Area of R
 
 Guidance is provided here to help GISCs fulfil this vital obligation.
 
-=== Supporting WIS centres in their area of responsibilitY
+=== Supporting WIS centres in their area of responsibility
 
 The primary function of a GISC is to support Members in their Area of Responsibility (AoR) participate effectively in WIS – both as Data Publishers and Data Consumers.
 

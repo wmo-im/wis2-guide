@@ -85,7 +85,7 @@ Finally, we’re increasingly concerned with providing access to very large Data
 
 TODO: to be completed
 
-=== Performance managemenT
+=== Performance management
 
 ==== Service levels and performance indicators
 
