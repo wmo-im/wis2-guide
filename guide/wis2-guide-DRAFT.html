@@ -1543,7 +1543,7 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>Point-to-point data distribution: WIS2 uses the Internet to transport data directly between data suppliers and data consumers <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>. The Internet provides efficient and robust <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> transport of data throughout the globe – with routing managed at the network infrastructure level. WIS2 no longer needs MSS to manually route data via intermediate "hops".</p>
 </li>
 <li>
-<p>Scaling to support many data consumers: WIS2 uses notification messages to alert consumers about the availability of new data. "Publish-subscribe" (pub-sub) messaging makes it simple to distribute these notifications in real-time to many consumers. A message broker allows an authorized agent (person, software system etc.) to create and publish messages to "topics". The message broker then manages requests from consumers to subscribe to those topics – without human intervention. All messages published to a topic are immediately sent to all subscribers. The publisher only needs to know about the topic – they don’t need know who the message broker forwards their message to. Upon receipt of a notification message a data consumer will decide whether to download the data from the Web-service designated in the message. Consequently, WIS2 no longer needs Routing Tables.</p>
+<p>Scaling to support many data consumers: WIS2 uses notification messages to alert consumers about the availability of new data. "Publish-subscribe" (Pub/Sub) messaging makes it simple to distribute these notifications in real-time to many consumers. A message broker allows an authorized agent (person, software system etc.) to create and publish messages to "topics". The message broker then manages requests from consumers to subscribe to those topics – without human intervention. All messages published to a topic are immediately sent to all subscribers. The publisher only needs to know about the topic – they don’t need know who the message broker forwards their message to. Upon receipt of a notification message a data consumer will decide whether to download the data from the Web-service designated in the message. Consequently, WIS2 no longer needs Routing Tables.</p>
 </li>
 </ol>
 </div>
@@ -1591,7 +1591,7 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <div class="sect2">
 <h3 id="_standard_topic_hierarchy"><a class="anchor" href="#_standard_topic_hierarchy"></a>5.4. Standard topic hierarchy</h3>
 <div class="paragraph">
-<p>A ‘pub-sub’ message broker uses "topics" to organise messages. Messages are published to a specific topic, and consumers subscribe to the topics they are interested in so that the message broker sends them all relevant messages.</p>
+<p>A ‘Pub/Sub’ message broker uses "topics" to organise messages. Messages are published to a specific topic, and consumers subscribe to the topics they are interested in so that the message broker sends them all relevant messages.</p>
 </div>
 <div class="paragraph">
 <p>To simplify things for all Data Publishers and Data Consumers, a standard topic structure is used throughout WIS2: the "WIS2 Topic Hierarchy".</p>
@@ -2054,16 +2054,19 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>Global Discovery Catalogue instances operate independently of each other – each Global Discovery Catalogue instance will hold all discovery metadata records. There is no need to synchronise between Global Discovery Catalogue instances.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue instance is populated with discovery metadata records from a Global Cache instance – receiving messages about availability of discovery metadata records via a Global Broker.</p>
+<p>A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance – receiving messages about availability of discovery metadata records via a Global Broker.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue instance should connect to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance shall discard duplicate messages as needed.</p>
+<p>A Global Discovery Catalogue should connect to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance shall discard duplicate messages as needed.</p>
 </li>
 <li>
 <p>A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2), discarding non-compliant records and raising an alert.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue instance will update discovery metadata records it receives to add  links for subscription URLs at Global Broker instances.</p>
+<p>A Global Discovery Catalogue will update discovery metadata records it receives to add links for subscription URLs at Global Broker instances.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue should applying faceting capability as specified in the cataloguing considerations of the WCMP2 specification as defined in OGC API - Records.</p>
 </li>
 <li>
 <p>A Global Discovery Catalogue shall provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.</p>
@@ -4344,7 +4347,7 @@ b) Full audit (every second audit, i.e., every eight years): this audit will res
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-22 17:53:06 UTC
+Last updated 2023-08-29 14:27:58 UTC
 </div>
 </div>
 </body>
