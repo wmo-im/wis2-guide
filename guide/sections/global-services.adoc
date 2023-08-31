@@ -117,3 +117,12 @@ TODO: to be completed
 Procedures pertinent to the Global Monitor will be described here once validated through testing during the WIS2 pilot phase.
 
 TODO: to be completed
+
+=== Global Registry ===
+
+* The roles of the Global Registry is to make available the information required for Global Infrastructure and WIS2 nodes to connect with each other. 
+* The Global Registry makes available to Global Caches the list of registered WIS2 Nodes. The following metadata is made available for each WIS2 Node: hostname and port(s) of local broker, center_id, list of implemented protocols (MQTT, MQTTs, web-socket).
+* The Global Registry makes available to WIS2 nodes the list of IP addresses used by Global Brokers and Global Caches to subscribe to and download data from WIS2 nodes.
+* The Global Registry provides authorized contacts the means to update information about their WIS2 Node or Global Infrastrucure.
+* The Global Registry makes information available in such a way that minimizes the downtime of WIS2 nodes in case of changes to a node's metadata.
+* The Global Registry is a non-operational service. Nodes obtaining information from the Global Registry shall make provisions to keep operating without the Global Registry for at least 14 days.
