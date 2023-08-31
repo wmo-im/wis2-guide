@@ -39,7 +39,7 @@ TODO: to be completed
 
 ==== Practices and procedures
 
-The following procedures will be described here once validated through testing during the WIS pilot phase:
+The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 
 * Assigning a Global Broker to a NC or DCPC
 * Alerting originating NC or DCPC about malformed or non-compliant messages
