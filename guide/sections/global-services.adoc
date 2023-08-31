@@ -62,7 +62,7 @@ TODO: to be completed
 * A Global Cache will store a full set of discovery metadata records. This is not an additional metadata catalogue that Data Consumers can search and browse – it provides a complete set of discovery metadata records to support populating a Global Discovery Catalogue instance.
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file. 
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-* A Global Cache maintains the list of IP addresses used for outgoing subscription connections to WIS2 nodes in the Global Registry. The Global Cache must announce changes to these IP addresses at least one month before implementing these changes.
+* A Global Cache maintains the list of IP addresses used for outgoing connections to WIS2 nodes in the Global Registry. The Global Cache must announce changes to these IP addresses at least one month before implementing these changes.
 
 TODO: to be completed
 
