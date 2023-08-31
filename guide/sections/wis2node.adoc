@@ -2,11 +2,17 @@
 
 === Practices and procedures
 
-==== Registration and decommissioning of a WIS node
+==== Registration and decommissioning of a WIS2 node
 
-This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.
+This section describes the process used to register or remove a WIS2 node within WIS2. To register one or more WIS nodes, the Member responside for the node needs to be designated as a NC or DCPC.
 
-TODO: To be completed
+An NC or DCPC can register new WIS2 nodes by submitting node metadata to the Gloabl Registry. 
+
+An NC or DCPC can remove an existing WIS2 node by removing the node from the Gloabl Registry. 
+
+An NC or DCPC can update WIS2 node metadata by editing the corresponding entry in the Gloabl Registry.
+
+National Focal points for WIS have the authority to change WIS2 node entries for the country which designated them, in the Global Registry.
 
 ==== Registration and removal of a Dataset
 
@@ -16,9 +22,11 @@ TODO: to be completed
 
 ==== Connecting with Global Services
 
-This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
+This section describes the process by which a WIS2 node is registered with one or more Global Broker and Global Cache components.
 
-TODO: to be completed
+A WIS2 node shall allow at least one Global Broker and Global Cache to connect to its local broker and web storage. For this, the WIS2 node shall allow the outgoing IP addresses used by the Global Broker and Global Cache to establish connections to broker and web-storage, and allow the Global Cache to subscribe to the topic corresponding to this WIS2 node using the username and password combination "everyone/everyone".
+
+The list of IP addresses used by Global Brokers and Caches can be obtained from the Global Registry. If a WIS2 node implements source IP filtering to grant a Global Broker and Global Cache access, it shall implement changes to its filterting within one month of the changes being published to the Global Registry.
 
 === Publishing data, discovery metadata, and notification messages
 
