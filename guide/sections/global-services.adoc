@@ -123,10 +123,10 @@ TODO: to be completed
 
 === Global Registry ===
 
-* The role of the Global Registry is to make available the information required for Global Infrastructure and WIS nodes to connect with each other. 
-* The Global Registry makes available to Global Caches the list of registered WIS Nodes. The following metadata is made available for each WIS Node: hostname and port(s) of local broker, center_id, list of implemented protocols (MQTT, MQTTs, web-socket).
+* The role of the Global Registry is to make available the information required for Global Services and WIS nodes to connect with each other. 
+* The Global Registry makes available to Global Brokers the list of registered WIS Nodes. The following metadata is made available for each WIS Node: hostname and port(s) of local broker, center_id, list of implemented protocols (MQTT, MQTTs, web-socket).
 * The Global Registry makes available to WIS nodes the list of IP addresses used by Global Brokers and Global Caches to subscribe to and download data from WIS nodes.
-* The Global Registry provides authorized contacts the means to update information about their WIS Node or Global Infrastrucure.
+* The Global Registry provides authorized contacts the means to update information about their WIS Node or Global Services.
 * The Global Registry makes information available in such a way that minimizes the downtime of WIS nodes in case of changes to a node's metadata.
 
 ==== Service level
