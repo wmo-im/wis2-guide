@@ -4,7 +4,7 @@
 
 ==== Registration and decommissioning of a WIS node
 
-This section describes the process used to register or remove a WIS node within WIS. To register one or more WIS nodes, the Member responside for the node needs to be designated as a NC or DCPC.
+This section describes the process used to register or remove a WIS node within WIS. To register one or more WIS nodes, the Member responside for the node needs to be designated as a NC or DCPC by the PR of the Member.
 
 An NC or DCPC can register new WIS nodes by submitting node metadata to the Global Registry. 
 
@@ -24,7 +24,7 @@ TODO: to be completed
 
 This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
 
-A WIS node shall allow at least one Global Broker and Global Cache to connect to its local broker and web storage. For this, the WIS node shall allow the outgoing IP addresses used by the Global Broker and Global Cache to establish connections to broker and web-storage, and allow the Global Cache to subscribe to the topic corresponding to this WIS node using the username and password combination "everyone/everyone".
+A WIS node shall allow at least two Global Brokers to connect to its local broker and at least two Global Caches to its and web storage. For this, the WIS node shall allow the outgoing IP addresses used by the Global Broker and Global Cache to establish connections to broker and web-storage, and allow the Global Broker to subscribe to the topic corresponding to this WIS node using the username and password combination "everyone/everyone".
 
 The list of IP addresses used by Global Brokers and Caches can be obtained from the Global Registry. If a WIS node implements source IP filtering to grant a Global Broker and Global Cache access, it shall implement changes to its filterting within one month of the changes being published to the Global Registry.
 
