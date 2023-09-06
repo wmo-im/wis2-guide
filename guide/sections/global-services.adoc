@@ -22,8 +22,7 @@ TODO: to be completed
 * A Global Broker instance subscribes to messages from NC/DCPCs and other Global Brokers
 * A Global Broker instance will subscribe to messages from a subset of NC/DCPCs and republish them.
 ** A Global Broker obtains the following list of metadata fields for each of the WIS nodes in the subset of NC/DCPCs covered by this Global Broker, from the Global Registry: Hostname and port(s) of broker, center_id, list of supported protocols (MQTT, MQTTs, web-socket). 
-** A Global Broker uses the username/password combination "everyone/everyone" to subscribe to the topic corresponding to the WIS node using one of the supported protocols.
-* At least one Global Broker will subscribe to messages from every NC/DCPC.
+* At least two Global Brokers will subscribe to messages from every NC/DCPC.
 * For full global coverage, a Global Broker instance will subscribe to messages from other Global Broker instances and republish them.
 * A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".
 * It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT. 
@@ -33,7 +32,8 @@ TODO: to be completed
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
 ** Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.
-* A Global Broker maintains the list of IP addresses used for outgoing subscription connections to WIS nodes in the Global Registry. The Global Broker must announce changes to these IP addresses at least one month before implementing these changes.
+* When establishing a TLS connection to a WIS2 node, the Global Broker shall use the certificate issued by the Global Registry as a client certificate. 
+* When establishing a TLS connection to a WIS2 node, the Global Broker should validate the WIS2 node server certificate and check that it matches the hostname. 
 
 TODO: to be completed
 
@@ -62,7 +62,8 @@ TODO: to be completed
 * A Global Cache will store a full set of discovery metadata records. This is not an additional metadata catalogue that Data Consumers can search and browse – it provides a complete set of discovery metadata records to support populating a Global Discovery Catalogue instance.
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file. 
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-* A Global Cache maintains the list of IP addresses used for outgoing connections to WIS nodes in the Global Registry. The Global Cache must announce changes to these IP addresses at least one month before implementing these changes.
+* When establishing a TLS connection to a WIS2 node, the Global Cache shall use the certificate issued by the Global Registry as a client certificate. 
+* When establishing a TLS connection to a WIS2 node, the Global Cache should validate the WIS2 node server certificate and check that it matches the hostname.
 
 TODO: to be completed
 
@@ -125,8 +126,8 @@ TODO: to be completed
 
 * The role of the Global Registry is to make available the information required for Global Services and WIS nodes to connect with each other. 
 * The Global Registry makes available to Global Brokers the list of registered WIS Nodes. The following metadata is made available for each WIS Node: hostname and port(s) of local broker, center_id, list of implemented protocols (MQTT, MQTTs, web-socket).
-* The Global Registry makes available to WIS nodes the list of IP addresses used by Global Brokers and Global Caches to subscribe to and download data from WIS nodes.
-* The Global Registry provides authorized contacts the means to update information about their WIS Node or Global Services.
+* The Global Registry issues X.509 certificates to all GBs and GCs and periodically renews them.
+* The Global Registry maintains a certificate revokation list.
 * The Global Registry makes information available in such a way that minimizes the downtime of WIS nodes in case of changes to a node's metadata.
 
 ==== Service level
