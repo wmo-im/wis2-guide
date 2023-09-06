@@ -32,8 +32,8 @@ TODO: to be completed
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
 ** Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.
-* When establishing a TLS connection to a WIS2 node, the Global Broker shall use the certificate issued by the Global Registry as a client certificate. 
-* When establishing a TLS connection to a WIS2 node, the Global Broker should validate the WIS2 node server certificate and check that it matches the hostname. 
+* When establishing a TLS connection to a WIS node, the Global Broker shall use the certificate issued by the Global Registry as a client certificate. 
+* When establishing a TLS connection to a WIS node, the Global Broker should validate the server certificate and check that it matches the hostname. 
 
 TODO: to be completed
 
@@ -62,8 +62,8 @@ TODO: to be completed
 * A Global Cache will store a full set of discovery metadata records. This is not an additional metadata catalogue that Data Consumers can search and browse – it provides a complete set of discovery metadata records to support populating a Global Discovery Catalogue instance.
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file. 
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-* When establishing a TLS connection to a WIS2 node, the Global Cache shall use the certificate issued by the Global Registry as a client certificate. 
-* When establishing a TLS connection to a WIS2 node, the Global Cache should validate the WIS2 node server certificate and check that it matches the hostname.
+* When establishing a TLS connection to a WIS node, the Global Cache shall use the certificate issued by the Global Registry as a client certificate. 
+* When establishing a TLS connection to a WIS node, the Global Cache should validate the server certificate and check that it matches the hostname.
 
 TODO: to be completed
 
