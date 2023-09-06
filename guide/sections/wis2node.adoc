@@ -24,7 +24,7 @@ TODO: to be completed
 
 This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
 
- * A WIS node shall allow at least two Global Brokers to connect to its local broker and at least two Global Caches to its and web storage. 
+ * A WIS node shall allow at least two Global Brokers to connect to its local broker and at least two Global Caches to its web storage. 
  * If a WIS node would like to restrict access to its broker or web-storage components it shall implement server-side TLS and use the client certificate supplied by Global Brokers and Global Caches for access control.
 
 === Publishing data, discovery metadata, and notification messages
