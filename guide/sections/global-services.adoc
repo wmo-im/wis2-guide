@@ -127,6 +127,7 @@ TODO: to be completed
 * The role of the Global Registry is to make available the information required for Global Services and WIS nodes to connect with each other. 
 * The Global Registry makes available to Global Brokers the list of registered WIS Nodes. The following metadata is made available for each WIS Node: hostname and port(s) of local broker, center_id, list of implemented protocols (MQTT, MQTTs, web-socket).
 * The Global Registry issues X.509 certificates to all GBs and GCs and periodically renews them.
+* The Global Registry makes available to WIS nodes the (public) CA certificate used to issue the certificates to GBs/GCs.
 * The Global Registry maintains a certificate revokation list.
 * The Global Registry makes information available in such a way that minimizes the downtime of WIS nodes in case of changes to a node's metadata.
 
