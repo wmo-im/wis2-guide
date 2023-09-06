@@ -24,9 +24,8 @@ TODO: to be completed
 
 This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
 
-A WIS node shall allow at least two Global Brokers to connect to its local broker and at least two Global Caches to its and web storage. For this, the WIS node shall allow the outgoing IP addresses used by the Global Broker and Global Cache to establish connections to broker and web-storage, and allow the Global Broker to subscribe to the topic corresponding to this WIS node using the username and password combination "everyone/everyone".
-
-The list of IP addresses used by Global Brokers and Caches can be obtained from the Global Registry. If a WIS node implements source IP filtering to grant a Global Broker and Global Cache access, it shall implement changes to its filterting within one month of the changes being published to the Global Registry.
+ * A WIS node shall allow at least two Global Brokers to connect to its local broker and at least two Global Caches to its and web storage. 
+ * If a WIS node would like to restrict access to its broker or web-storage components it shall implement server-side TLS and use the client certificate supplied by Global Brokers and Global Caches to for access control.
 
 === Publishing data, discovery metadata, and notification messages
 
