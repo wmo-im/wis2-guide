@@ -1,11 +1,13 @@
 == Discovery metadata
 
-Discovery metadata provides a description of a Dataset sufficient for someone to determine whether meets their needs and includes links to where one may access more detailed information about the Dataset or access the Dataset itself.
+Discovery metadata provides a description of a dataset sufficient for someone to determine whether that dataset meets their needs and includes links to where one may access more detailed information about the dataset or access the dataset itself.
 
 Discovery metadata is an essential component of WIS2.
 
-Data Publishers must provide a discovery metadata record for each Dataset they make available within WIS. These discovery metadata records are aggregated within the Global Discovery Catalogue providing Data Consumers the means to search and browse every Dataset within WIS.
+Data Publishers must provide a discovery metadata record for each dataset they make available within WIS. These discovery metadata records are aggregated within the Global Discovery Catalogue providing Data Consumers the means to search and browse every dataset within WIS.
 
 Discovery metadata provided in WIS2 must conform to the WMO Core Metadata Profile version 2 (WCMP2), a profile of the OGC API - Records standard.
 
-The WMCP2 specification, including usage examples, is published WCMP2.
+The WCMP2 specification, including usage examples, is published WCMP2.
+
+TODO: Add link to the WCMP2 specification
