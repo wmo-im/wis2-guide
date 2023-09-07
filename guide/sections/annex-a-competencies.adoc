@@ -182,7 +182,7 @@ Staff will be able to:
 * Maintain quality standards (service levels) by monitoring, and responding to, traffic flow, missing data and products, errors and service messages;
 * Apply relevant data policies to data and products;
 * Identify appropriate formats for data and product exchange;
-* Write and read data in WIS formats using their centre’s tools.
+* Write and read data in data formats as agreed by WMO programs using their centre’s tools.
 
 Staff will learn:
 
@@ -214,7 +214,7 @@ Staff must be able to:
 
 Data policies
 
-* Resolution 1 (Cg-Ext 2021) – WMO Unified Data policy for the exchange of WMO Unified Data Policy for the exchange of earth system data (weather, climate, hydrology, ocean, atmospheric composition, cryosphere, space weather) including guidelines on the relationships in commercial meteorological activities;
+* Resolution 1 (Cg-Ext 2021) – WMO Unified Data policy for the exchange of earth system data (weather, climate, hydrology, ocean, atmospheric composition, cryosphere, space weather) including guidelines on the relationships in commercial meteorological activities;
 The centre’s data policies.
 
 Data representations
@@ -446,7 +446,7 @@ Staff must be able to:
 
 Local resources
 
-* level agreements (as used by their centre);
+* Service level agreements (as used by their centre);
 * FAQ documents (for the user);
 * WIS software user guides;
 * Guidelines for services available at WIS centre;
@@ -508,7 +508,7 @@ Staff will learn:
 
 To learn how to perform the required tasks staff may:
 
-quality and service performance standards;
+Follow quality and service performance standards;
 Analyse quality and service performance in the WIS centre;
 Demonstrate and report quality and service performance;
 Maintain troubleshooting, backup and restoration procedures;
