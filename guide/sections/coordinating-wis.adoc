@@ -1,6 +1,6 @@
 == Coordinating WIS
 
-GISCs ensure the efficient and effective operation of WIS within their Area of Responsibility (AoR) and, in collaboration with the WMO Secretariat, globally.
+GISCs ensure the efficient and effective operation of WIS and WIS2 within their Area of Responsibility (AoR) and, in collaboration with the WMO Secretariat, globally. In WIS2 they cooperate with the Global Services and the WIS2 Nodes in their AoR. In the following the term WIS also refers to WIS2.
 
 Guidance is provided here to help GISCs fulfil this vital obligation.
 
