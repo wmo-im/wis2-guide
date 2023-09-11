@@ -10,11 +10,11 @@ The roles of centers with respect to the monitoring as well as the content and s
 
 ==== Global Monitoring (GM)
 
-	The Global Monitoring (Centers) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+The Global Monitoring (Centers) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
 
 ==== Global Services
 
-The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue and so on expose monitoring metrics on their respective service to the Global Monitoring. See <<_wis2_metric_hierarchy>> for further details.
+The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue and so on expose monitoring metrics on their respective service to the Global Monitoring. See <<wis2-metric-hierarchy>> for further details.
 
 ==== WIS2 Nodes
 
@@ -28,9 +28,13 @@ WMO Programs can define monitoring requirements in order to be able to verify if
 ==== Conventions for metric naming
 
 Metrics for the WIS2 monitoring should follow the naming convention:
+
   wmo_<program>_<name>
+
 where program is the name of the responsible WMO Program and name is the name of the metric. Examples for WIS2 metrics can look like
+
   wmo_wis2_gc_received
+
   wmo_wis2_gb_messages_invalid
 
 ==== Metrics for Global Brokers
