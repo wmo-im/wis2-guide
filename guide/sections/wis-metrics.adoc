@@ -49,7 +49,7 @@ See <<wmo-wmh>> for further details.
 
 ==== Metrics for Global Discovery Catalogues
 
-See <<wmo-wmh>> for further details.
+See footnote:wmo-wmh[] for further details.
 
 ==== Other metrics
 
