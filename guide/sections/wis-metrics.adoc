@@ -43,7 +43,7 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 
 [%header,format=csv]
 |===
-include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/blob/main/metric-hierarchy/gb.csv[]
+include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv[]
 |===
 See footnote:wmo-wmh[] for further details.
 
@@ -51,7 +51,7 @@ See footnote:wmo-wmh[] for further details.
 
 [%header,format=csv]
 |===
-include::https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metric-hierarchy/gc.csv[]
+include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv[]
 |===
 See footnote:wmo-wmh[] for further details.
 
