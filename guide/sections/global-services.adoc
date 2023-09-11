@@ -26,11 +26,11 @@ TODO: to be completed
 * A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".
 * It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT. 
 * Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see WIS2 messages
-* 4.4 	Standard topic hierarchy). 
-* A Global Broker will validate notification messages against the standard format (see 4.3 	Notification message format and structure), discarding non-compliant messages and raising an alert.
-* A Global Broker is built around two software components:
-** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
-** Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.
+* Standard topic hierarchy
+** A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert.
+** A Global Broker is built around two software components:
+*** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
+*** Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.
 
 
 TODO: to be completed
