@@ -37,7 +37,7 @@ where program is the name of the responsible WMO Program and name is the name of
 
   wmo_wis2_gb_messages_invalid
 
-The full set of the WIS2 monitoring metrics is given in [[wmo-wmh]] WMO: WIS2 Metric Hierarchy footnote:[https://github.com/wmo-im/wis2-metric-hierarchy]
+The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:wmo-wmh[https://github.com/wmo-im/wis2-metric-hierarchy]
 
 ==== Metrics for Global Brokers
 
