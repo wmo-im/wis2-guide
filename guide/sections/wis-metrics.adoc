@@ -42,31 +42,31 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 ==== Metrics for Global Brokers
 
 [%header,format=csv]
-|===
+,===
 include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv[]
-|===
+,===
 See footnote:wmo-wmh[] for further details.
 
 ==== Metrics for Global Caches
 
 [%header,format=csv]
-|===
+,===
 include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv[]
-|===
+,===
 See footnote:wmo-wmh[] for further details.
 
 ==== Metrics for Global Discovery Catalogues
 
 [%header,format=csv]
-|===
-include::https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metric-hierarchy/gdc.csv[]
-|===
+,===
+include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv[]
+,===
 See footnote:wmo-wmh[] for further details.
 
 ==== Other metrics
 
 [%header,format=csv]
-|===
-include::https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metric-hierarchy/sensor.csv[]
-|===
+,===
+include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/sensor.csv[]
+,===
 See footnote:wmo-wmh[] for further details.
