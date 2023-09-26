@@ -5,7 +5,8 @@
 * [[wmo-1060]] WMO: Manual on WIS (WMO No. 1060), Vol II. WIS 2.0
 * [[wmo-wcmp2]] WMO: WMO Core Metadata Profile version 2 (WCMP2) footnote:[https://wmo-im.github.io/wcmp2]
 * [[wmo-wth]] WMO: WIS2 Topic Hierarchy footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
-* [[wmo-wnm]] WMO: WIS2 Notification Message format [https://wmo-im.github.io/wis2-notification-message]
+* [[wmo-wnm]] WMO: WIS2 Notification Message format footnote:[https://wmo-im.github.io/wis2-notification-message]
+* [[wmo-wmh]] WMO: WIS2 Metric Hierarchy footnote:[https://github.com/wmo-im/wis2-metric-hierarchy]
 * [[w3c-www]] W3C: Architecture of the World Wide Web, Volume One footnote:[https://www.w3.org/TR/webarch]
 * [[ietf-rfc3339]] IETF: RFC 3339 Date and Time on the Internet: Timestamps footnote:[https://www.ietf.org/rfc/rfc3339.txt]
 * [[ietf-rfc3986]] IETF: RFC 3986 Uniform Resource Identifier: Generic Syntax footnote:[https://www.ietf.org/rfc/rfc3986.txt]
