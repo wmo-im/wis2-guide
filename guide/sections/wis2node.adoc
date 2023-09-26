@@ -85,6 +85,10 @@ Finally, we’re increasingly concerned with providing access to very large Data
 
 TODO: to be completed
 
+===== Publication and topic selection
+
+When publishing a dataset, a data publisher selects a given topic according to the WIS Topic Hierarchy.  Given the multidisciplinary nature of some data, a data publisher must select a single topic for publication purposes, and always uses WCMP2 discovery metadata to provide a fulsome description of their dataset and its relevance to additional disciplines.
+
 === Performance management
 
 ==== Service levels and performance indicators
