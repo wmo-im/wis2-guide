@@ -1,7 +1,7 @@
 {
     "ignorePatterns": [
         {
-            "pattern": "^https://github.com/wmo-im/tree/"
+            "pattern": "^https://github.com/wmo-im/wis2-guide/tree/"
         }
     ]
 }
