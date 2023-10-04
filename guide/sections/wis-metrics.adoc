@@ -2,15 +2,15 @@
 
 The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.
 
-WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualisation of metrics provided in this form, making it simple to generate performance insights.
+WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualisation of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:cncf-openmetrics[https://openmetrics.io].
 
-The roles of centers with respect to the monitoring as well as the content and structure of metrics specific to WIS2 (e.g., data availability) are described below.
+The roles of centres with respect to the monitoring as well as the content and structure of metrics specific to WIS2 (e.g., data availability) are described below.
 
 === Roles
 
 ==== Global Monitoring (GM)
 
-The Global Monitoring (Centers) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
 
 ==== Global Services
 
@@ -20,9 +20,9 @@ The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discove
 
 There is no requirement on WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which in turn can provide metrics on the availability of WIS2 Nodes.
 
-==== Sensor Centers and WMO programs
+==== Sensor Centres and WMO programs
 
-WMO Programs can define monitoring requirements in order to be able to verify if the program's requirements are met. To do so, they need to define the relevant metrics. Metrics not directly related to the core services of WIS2 can be exported by so called Sensor Centers. Sensor Centers can read data or query services defined by the relevant WMO Program and provide the results in OpenMetrics format.
+WMO Programs can define monitoring requirements in order to be able to verify if the program's requirements are met. To do so, they need to define the relevant metrics. Metrics not directly related to the core services of WIS2 can be exported by so called Sensor Centres. Sensor Centres can read data or query services defined by the relevant WMO Program and provide the results in OpenMetrics format.
 
 === WIS2 Metric Hierarchy
 ==== Conventions for metric naming
