@@ -25,7 +25,7 @@ TODO: to be completed
 * For full global coverage, a Global Broker instance will subscribe to messages from other Global Broker instances and republish them.
 * A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".
 * It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT. 
-* Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see WIS2 messages
+* Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see <<_standard_topic_hierarchy>>).
 * Standard topic hierarchy
 ** A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert.
 ** A Global Broker is built around two software components:
@@ -51,11 +51,10 @@ TODO: to be completed
 * The Global Cache will contain copies of real-time and near real-time data designated as "core" within the WMO Unified Data Policy (Resolution 1).
 * During the initial stages of the WIS2 pilot phase Global Cache instances will provide open access to their cached content. Access control mechanisms may be added later.
 * A Global Cache instance will host data objects copied from NC/DCPCs. These are persisted as files.
-* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see 4.3 	Notification message format and structure).
-* A Global Cache instance will use the standard topic structure in their local message brokers (see WIS2 messages 4.4 Standard topic hierarchy).
+* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see <<_notification_message_format_and_structure>>).
+* A Global Cache instance will use the standard topic structure in their local message brokers (see <<_standard_topic_hierarchy>>).
 * There will be multiple Global Cache instances to ensure highly available, low latency global provision of real-time and near real-time "core" data within WIS.
 * Global Cache instances may attempt to download cacheable data objects from all originating centres with "cacheable" content. A Global Cache instance will also download data objects from other instances. This ensures the instance has full global coverage, mitigating where direct download from an originating centre is not possible.
-* For full global coverage, a Global Cache instance will download Data Objects and discovery metadata records from other instances.
 * Global Cache instance will operate independently of other Global Cache instances. Each Global Cache instance will hold a full copy of the cache – albeit that there may be small differences between Global Cache instances as "data availability" notification messages propagate through WIS to each Global Cache in turn. There is no formal ‘synchronisation’ between Global Cache instances.
 * A Global Cache will store a full set of discovery metadata records. This is not an additional metadata catalogue that Data Consumers can search and browse – it provides a complete set of discovery metadata records to support populating a Global Discovery Catalogue instance.
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file. 

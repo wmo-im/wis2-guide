@@ -12,13 +12,18 @@ TODO: To be completed
 
 This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
 
-TODO: to be completed
+For registration of a new dataset a new metadata record is created in WCMP2 format and a notification is generated and published announcing the newly added metadata record to the local catalogue (see also <<_discovery_metadata>>.). The origin notification will be transferred to the Global Caches via the Global Brokers and the Global Caches will download the new metadata record into their cache and send their cache notification.  
+The cache notification is used by the Global Discovery Catalogue to download the new metadata record and to include it in their catalogue after validation. 
+
+If the new metadata is included in the Global Discovery Catalog, it will be found in searches interested consumers can subscribe to the corresponding topic at the Global Brokers. New dataset instances of the new data product are announced via the notifications and subscibers receive the notification and can download the data via the link included in the notification.
 
 ==== Connecting with Global Services
 
 This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
 
-TODO: to be completed
+During registration of a WIS2 node, the address of the local MQ broker of the new WIS2 node is announced to all Global Brokers. For security reasons, it is recommended to limit access to the local MQ brokers to the Global Brokers. The required authentication data is announced by the WIS2 node during the registration process.
+
+For the download of Core Data, any required access credentials for the Global Caches must be submitted during the registration process.
 
 === Publishing data, discovery metadata, and notification messages
 

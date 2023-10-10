@@ -80,7 +80,7 @@ image::images/data-distribution-via-gb-publishing-data-availability-messages.png
 
 
 . A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.
-. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.
+. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance.
 . C[Pre-condition] Global Broker determines the MQ broker topics to subscribe to and subscribes to them.
 . D[Pre-condition] Global Cache determines the MQ broker topics to subscribe to and subscribes to them.
 . As the dataset is produced Data Objects (*D*) are made available for download, and messages (*m^D^*) are published to the topic for this dataset on the local MQ broker.
@@ -119,7 +119,7 @@ Figure 9 illustrates how discovery metadata records propagate from the NC or DCP
 image::images/populating-gdc-records.png[Populating the Global Catalogue with discovery metadata records]
 
 . A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.
-. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.
+. B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance.
 . C[Pre-condition] Bootstrap the Global Catalogue with a configuration that indicates connection details for at least one Global Broker instance.
 . D[Pre-condition] Global Broker, Global Cache, and Global Catalogue determine MQ broker topics to subscribe to and subscribes to them. Global Catalogue subscribes only to the "Global Cache" channel.
 . NC/DCPC publishes a discovery metadata record (R) to their local catalogue describing the dataset they are sharing.

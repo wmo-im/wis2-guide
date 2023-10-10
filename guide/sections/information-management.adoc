@@ -12,7 +12,7 @@ Note: The term "information" is used in a general sense and includes data and pr
 
 High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.
 
-The principles of information management are described in Section 6.2. Section 6.3 describes the information management lifecycle through the identification of five focus areas. These are: 
+The principles of information management are described in Section <<_principles_of_information_management>>. Section <<_the_information_management_lifecycle>> describes the information management lifecycle through the identification of five focus areas. These are: 
 
 . Planning, information creation and acquisition. Creation of information using internal and external data sources and the acquisition of information from various sources.
 . Representation and metadata. Standards to represent metadata, data and information are of primary importance to enable interoperability and long-term usability of the information.
@@ -38,7 +38,7 @@ Effective management of information is essential for WMO Centres to deliver oper
 
 ==== Principle 1: Information is a valued asset
 * An information asset is information that has value. This value may be related to the cost of generating and collecting the information, a value associated with the immediate use or a value associated with the longer term preservation and subsequent reuse of the information.
-* 10.2.1.2	This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information. 
+* This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information. 
 
 ==== Principle 2: Information must be managed
 

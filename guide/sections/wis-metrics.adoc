@@ -33,7 +33,7 @@ Metrics for the WIS2 monitoring should follow the naming convention:
 
 where program is the name of the responsible WMO Program and name is the name of the metric. Examples for WIS2 metrics can look like
 
-  wmo_wis2_gc_received
+  wmo_wis2_gc_downloaded
 
   wmo_wis2_gb_messages_invalid
 
