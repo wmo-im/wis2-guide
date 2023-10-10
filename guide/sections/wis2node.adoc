@@ -12,7 +12,7 @@ TODO: To be completed
 
 This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
 
-For registration of a new dataset a new metadata record is created in WCMP2 format and a notification is generated and published announcing the newly added metadata record to the local catalogue (see also <<_discovery_metadata>>.). The origin notification will be transferred to the Global Caches via the Global Brokers and the Global Caches will download the new metadata record into their cache and send their cache notification.  
+For registration of a new dataset a new metadata record is created in WCMP2 format and a notification is generated and published announcing the newly added metadata record to the local catalogue (see also <<discovery-metadata>>.). The origin notification will be transferred to the Global Caches via the Global Brokers and the Global Caches will download the new metadata record into their cache and send their cache notification.  
 The cache notification is used by the Global Discovery Catalogue to download the new metadata record and to include it in their catalogue after validation. 
 
 If the new metadata is included in the Global Discovery Catalog, it will be found in searches interested consumers can subscribe to the corresponding topic at the Global Brokers. New dataset instances of the new data product are announced via the notifications and subscibers receive the notification and can download the data via the link included in the notification.
