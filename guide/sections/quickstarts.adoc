@@ -13,15 +13,15 @@ As a Data Publisher planning to operate a WIS node, you should read the followin
 
 ==== How to publish Dataset discovery metadata to the Global Discovery Catalogue
 
-A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue. 
+A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see <<discovery-metadata>>) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue. 
 
 ==== How to publish data notifications 
 
-A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker. 
+A Data Producer publishes data notifications by generating a notification message (see <<notification_message-format-and-structure>>) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker. 
 
 ==== How to publish data to the Global Broker
 
-Data publishing is realized as a function of publishing data notifications (see 2.1.2 How to publish data notifications ).
+Data publishing is realized as a function of publishing data notifications (see <<how-to-publish-data-notifications>>).
 
 TODO: To be completed
 
@@ -31,15 +31,15 @@ As a Data Consumer wanting to use data published via WIS2 you should read the gu
 
 ==== How to search the Global Discovery Catalogue to find Datasets
 
-A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see PART V Discovery Metadata). A Data Consumer may discover a Dataset using keywords, topics, geographic area of interest, or date(s) associated with the Dataset. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing), from which a Data Consumer can assess and evaluate their interest in accessing/downloading the Dataset’s data.
+A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see <<discovery-metadata>>). A Data Consumer may discover a Dataset using keywords, topics, geographic area of interest, or date(s) associated with the Dataset. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing), from which a Data Consumer can assess and evaluate their interest in accessing/downloading the Dataset’s data.
 
-A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature of the link (informational, direct download, API or Web service) so that the Data Consumer can interact with the data accordingly. For example, a Dataset record may include a link to subscribe to notifications (see 2.2.2 how to subscribe to notification about availability of new data) about the data, or a API or Web service, or an offline archive retrieval service.
+A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature of the link (informational, direct download, API or Web service) so that the Data Consumer can interact with the data accordingly. For example, a Dataset record may include a link to subscribe to notifications (see <<how-to-subscribe-to-notifications-about-availability-of-new-data>>) about the data, or a API or Web service, or an offline archive retrieval service.
 
 TODO: To be completed
 
 ==== How to subscribe to notifications about availability of new data
 
-A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy). A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.
+A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see <<standard-topic-hierarchy>>). A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.
 
 Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker at Global Cache instances. 
 

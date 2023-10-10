@@ -57,7 +57,7 @@ WIS2 does not require the use of specific file-naming conventions. Where communi
 
 Data publishers also have choices about how they publish data.
 
-As a minimum, Data Publishers may publish data objects (e.g., the atomic bits of data that comprise a Dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see 4.3 Notification message format and structure, and WIS2 messages 4.4 Standard topic hierarchy).
+As a minimum, Data Publishers may publish data objects (e.g., the atomic bits of data that comprise a Dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see <<notification-message-format-and-structure>>, and <<standard-topic-hierarchy>>).
 
 A Dataset (for example, a collection of climate model runs) may comprise thousands or more files. A Data Publisher may choose to provide users with a mechanism to browse through the set of files, enabling them to identify those which are relevant to them. Examples of such mechanisms include:
 
