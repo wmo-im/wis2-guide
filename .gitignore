@@ -1,4 +1,6 @@
+.asciidoctor/
 guide/*.docx
 guide/*.html
 guide/*.pdf
 guide/images/architecture/*.bkp
+guide/diag-mermaid*.png

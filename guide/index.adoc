@@ -36,15 +36,15 @@ toc::[]
 
 include::sections/preamble.adoc[]
 
-include::sections/part1.adoc[]
+include::sections/part1/index.adoc[]
 
-include::sections/part2.adoc[]
+include::sections/part2/index.adoc[]
 
-include::sections/part3.adoc[]
+include::sections/part3/index.adoc[]
 
-include::sections/part4.adoc[]
+include::sections/part4/index.adoc[]
 
-include::sections/part5.adoc[]
+include::sections/part5/index.adoc[]
 
 
 

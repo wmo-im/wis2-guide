@@ -1,4 +1,4 @@
-== WIS2 Architecture
+=== WIS2 Architecture
 
 // include::sections/data-and-metadata-flows.adoc[]
 
