@@ -17,7 +17,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y \
-          && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
+          && sudo apt-get install -y pandoc npm \
+          && sudo npm install @mermaid-js/mermaid-cli \
+          && sudo gem install asciidoctor asciidoctor-pdf asciidoctor-diagram
       - name: checkout repository
         uses: actions/checkout@v3
       - name: build documentation
