@@ -7,8 +7,56 @@ The purpose of this document is to provide technical guidance and additional inf
 === Audience
 This draft guidance document is provided primarily for technical teams of organisations participating in the WIS2 pilot phase.
 
+[mermaid]
+----
+flowchart TD
+    A[How to find dataset and get WIS2 data?] --> B[Browse search engines, access API <br/>of the Global Discovery Catalog <br/>or use specialised portal<br/>to find the required dataset]
+    B -- The metadata record will <br/>provide the required information<br/>to  obtain the data--> C[Found it !]
+    C -- Find the MQTT<br/> topic to subscribe to --> D{Already have<br/>a WIS2 Download<br/> tool ?}
+    D -- Yes --> E[Add new topic <br/>to the download <br/>configuration]
+    E --> End
+    D -- No --> F[Buy, develop or<br/>use existing tool]
+    F --> G[Buy]
+    F --> H[Develop]
+    F --> I[Use]
+    G -- Contact HMEI vendor --> End
+    H -- "`Look at <br/>**detailed specifications**<br/>in the Guide on WIS2`" --> End
+    I -- "`Look at <br/>**reference implementations**<br/>in the Guide on WIS2`" --> End
+----
+
 === Status of this document
 
 This draft guidance is as an informal document. The content will be updated, modified and improved throughout the WIS2 pilot phase as detailed specifications and procedures are validated through testing. The information provided herein will be consolidated into a new version of the Guide to WIS (WMO No. 1061) upon completion of the pilot phase. 
 
 
+[mermaid]
+----
+sequenceDiagram
+    title: Adding a new WIS2 Node
+    GlobalCaches->>GlobalBrokers: Subscribe to origin/a/wis2/#
+    Center->>WMO: My organisation is ready to run a WIS2 Node.
+    Note over WMO,Center: Center has been already approved by PR.
+    WMO->>Center: OK. What would be the centre_id ? 
+    Note over WMO,Center: The centre_id should be based<br/>on the name of your organisation.<br/>Typically, the domain name is a good choice.<br/>Then, if you intend to run multiple WIS2 Node, each one<br/>must have its own centre_id. The ISO3166 2-lettre code for<br/>your country is ab.
+    Center->>WMO: I propose "ab-myorg-climate"
+    Note over WMO,Center: My main website can be reached at https://www.myorg.ab<br/>This WIS2 Node will provide climate data.
+    WMO->>Center: Can you give me the information of your broker endpoint ?
+    Center->>WMO: Here they are.
+    Note right of Center: Such information includes the protocols<br/> preferably a secure version so MQTTS,<br/>using a valid certificate, a username<br/>and a password, and the topic(s) to subscribe to.
+    Note right of WMO: All information is recorded<br/>in the WIS2 Node database
+    WMO->>Center: That is fine. Let me contact the GISC for your country.
+    Create participant GISC
+    WMO->>GISC: Center is ready with WIS2 Node ab-myorg-climate.<br/>Can you check if everything is correct ?
+    GISC->>Center: Can we check your WIS2 Node implementation ? 
+    Note left of GISC: GISC must verify that Center<br/>as implemented a WIS2 compliant solution.
+    GISC->>Center: Can you publish some test messages with the associated files to download ?
+    Note left of GISC: By using a test MQTT client, the GISC can<br/> verify that the Notification Message is correct<br/>and that the download links are working.
+    Center->>GISC: Done. 
+    GISC->>Center: The MQTTS connection is working. The notification message is correct. The download link works. All good!
+    Note left of GISC: The GISC verifies that the topic used by the center<br/>is compliant with the agreed topic hierarchy.<br/> Compliance of the Notification Message<br/>with the specifications is also verified.<br/>The download link is using HTTPS which is prefered.
+    GISC->>Center: When your dataset is ready, please ensure to provide the relevant metadata record!
+    GISC->>WMO: All checks are good. This new centre_id can be added to WIS2.
+    WMO->>GlobalBrokers: A new centre_id is available. Can you subscribe to the broker endpoint? Here are the details.
+    GlobalBrokers->>Center: Subscribe to agreed topic(s) 
+    GlobalCaches->>Center: Download and cache metadata records.<br/> Download and cache core data (if applicable).
+----
