@@ -1,0 +1,3 @@
+== Security
+
+This section will introduce some concepts on the measures a publisher or a global service can implement to decrease the risk of cyber attacks.

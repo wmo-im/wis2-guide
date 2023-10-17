@@ -1,0 +1,3 @@
+== Competencies
+
+// include::sections/annex-a-competencies.adoc[]

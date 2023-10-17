@@ -1,0 +1,7 @@
+:sectnums!:
+
+== PART V
+
+:sectnums:
+
+include::competencies.adoc[]

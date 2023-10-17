@@ -1,0 +1,11 @@
+:sectnums!:
+
+== PART II
+
+:sectnums:
+
+include::wis2-architecture.adoc[]
+
+include::global-services.adoc[]
+
+include::operations.adoc[]

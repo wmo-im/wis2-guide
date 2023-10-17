@@ -1,0 +1,11 @@
+:sectnums!:
+
+== PART I
+
+:sectnums:
+
+include::introduction.adoc[]
+
+include::data-consumer.adoc[]
+
+include::data-publisher.adoc[]
