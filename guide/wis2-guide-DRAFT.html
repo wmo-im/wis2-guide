@@ -481,301 +481,84 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_preamble">1. Preamble</a>
+<li><a href="#_preamble">Preamble</a>
 <ul class="sectlevel2">
-<li><a href="#_purpose">1.1. Purpose</a></li>
-<li><a href="#_audience">1.2. Audience</a></li>
-<li><a href="#_status_of_this_document">1.3. Status of this document</a></li>
+<li><a href="#_purpose">Purpose</a></li>
+<li><a href="#_audience">Audience</a></li>
+<li><a href="#_status_of_this_document">Status of this document</a></li>
 </ul>
 </li>
-<li><a href="#_introduction_of_wis2">2. Introduction of WIS2</a>
+<li><a href="#_part_i">1. PART I</a>
 <ul class="sectlevel2">
-<li><a href="#_why_wis2">2.1. Why WIS2?</a></li>
-<li><a href="#_what_is_wis2">2.2. What is WIS2?</a></li>
-<li><a href="#_why_are_datasets_so_important">2.3. Why are datasets so important?</a></li>
+<li><a href="#_introduction_of_wis2">1.1. Introduction of WIS2</a>
+<ul class="sectlevel3">
+<li><a href="#_why_wis2">1.1.1. Why WIS2?</a></li>
+<li><a href="#_what_is_wis2">1.1.2. What is WIS2?</a></li>
+<li><a href="#_why_are_datasets_so_important">1.1.3. Why are datasets so important?</a></li>
 </ul>
 </li>
-<li><a href="#_quickstarts">3. Quickstarts</a>
+<li><a href="#_data_consumer">1.2. Data consumer</a>
+<ul class="sectlevel3">
+<li><a href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets">1.2.1. How to search the Global Discovery Catalogue to find Datasets</a></li>
+<li><a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">1.2.2. How to subscribe to notifications about availability of new data</a></li>
+<li><a href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data">1.2.3. How to use a notification message to decide whether to download data</a></li>
+<li><a href="#_how_to_download_data_from_the_global_cache_and_wis_nodes">1.2.4. How to download data from the Global Cache and WIS nodes</a></li>
+<li><a href="#_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref">1.2.5. Additional sections of interest to a Data Consumer (TODO: fix crossref)</a></li>
+</ul>
+</li>
+<li><a href="#_data_publisher">1.3. Data publisher</a>
+<ul class="sectlevel3">
+<li><a href="#_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue">1.3.1. How to publish Dataset discovery metadata to the Global Discovery Catalogue</a></li>
+<li><a href="#_how_to_publish_data_notifications">1.3.2. How to publish data notifications</a></li>
+<li><a href="#_how_to_publish_data_to_the_global_broker">1.3.3. How to publish data to the Global Broker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_part_ii">2. PART II</a>
 <ul class="sectlevel2">
-<li><a href="#_data_publisher">3.1. Data publisher</a>
+<li><a href="#_wis2_architecture">2.1. WIS2 Architecture</a></li>
+<li><a href="#_implementation_and_operation_of_wis2_node">2.2. Implementation and operation of WIS2 Node</a>
 <ul class="sectlevel3">
-<li><a href="#_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue">3.1.1. How to publish Dataset discovery metadata to the Global Discovery Catalogue</a></li>
-<li><a href="#_how_to_publish_data_notifications">3.1.2. How to publish data notifications</a></li>
-<li><a href="#_how_to_publish_data_to_the_global_broker">3.1.3. How to publish data to the Global Broker</a></li>
+<li><a href="#_practices_and_procedures">2.2.1. Practices and procedures</a></li>
+<li><a href="#_publishing_data_discovery_metadata_and_notification_messages">2.2.2. Publishing data, discovery metadata, and notification messages</a></li>
+<li><a href="#_performance_management">2.2.3. Performance management</a></li>
+<li><a href="#_wis_node_reference_implementation_wis2box">2.2.4. WIS Node reference implementation: wis2box</a></li>
 </ul>
 </li>
-<li><a href="#_data_consumer">3.2. Data consumer</a>
+<li><a href="#_implementation_and_operation_of_a_global_service">2.3. Implementation and operation of a Global Service</a>
 <ul class="sectlevel3">
-<li><a href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets">3.2.1. How to search the Global Discovery Catalogue to find Datasets</a></li>
-<li><a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">3.2.2. How to subscribe to notifications about availability of new data</a></li>
-<li><a href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data">3.2.3. How to use a notification message to decide whether to download data</a></li>
-<li><a href="#_how_to_download_data_from_the_global_cache_and_wis_nodes">3.2.4. How to download data from the Global Cache and WIS nodes</a></li>
-<li><a href="#_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref">3.2.5. Additional sections of interest to a Data Consumer (TODO: fix crossref)</a></li>
+<li><a href="#_procedure_for_registration_of_a_new_global_service">2.3.1. Procedure for registration of a new Global Service</a></li>
+<li><a href="#_performance_management_and_monitoring_of_a_global_service">2.3.2. Performance management and monitoring of a Global Service</a></li>
+<li><a href="#_global_broker">2.3.3. Global Broker</a></li>
+<li><a href="#_global_cache">2.3.4. Global Cache</a></li>
+<li><a href="#_global_discovery_catalogue">2.3.5. Global Discovery Catalogue</a></li>
+<li><a href="#_global_monitor">2.3.6. Global Monitor</a></li>
 </ul>
 </li>
+<li><a href="#_operations">2.4. Operations</a></li>
 </ul>
 </li>
-<li><a href="#_data_and_metadata_flows_in_wis2">4. Data and metadata flows in WIS2</a>
+<li><a href="#_part_iii">3. PART III</a>
 <ul class="sectlevel2">
-<li><a href="#_simple_ncdcpc_data_sharing">4.1. Simple NC/DCPC data sharing</a></li>
-<li><a href="#_message_distribution_via_global_broker">4.2. Message distribution via Global Broker</a></li>
-<li><a href="#_data_distribution_via_global_cache">4.3. Data distribution via Global cache</a></li>
-<li><a href="#_populating_the_global_catalogue">4.4. Populating the Global Catalogue</a></li>
-<li><a href="#_data_distribution_including_the_global_services">4.5. Data distribution including the Global Services</a></li>
+<li><a href="#_information_management">3.1. Information management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction">3.1.1. Introduction</a></li>
+<li><a href="#_principles_of_information_management">3.1.2. Principles of information management</a></li>
+<li><a href="#_the_information_management_lifecycle">3.1.3. The information management lifecycle</a></li>
+<li><a href="#_other_considerations">3.1.4. Other considerations</a></li>
 </ul>
 </li>
-<li><a href="#_real_time_data_exchange">5. Real-time data exchange</a>
+</ul>
+</li>
+<li><a href="#_part_iv">4. PART IV</a>
 <ul class="sectlevel2">
-<li><a href="#_whats_wrong_with_the_gts">5.1. What&#8217;s wrong with the GTS?</a></li>
-<li><a href="#_real_time_data_exchange_with_wis2">5.2. Real-time data exchange with WIS2</a></li>
-<li><a href="#_notification_message_format_and_structure">5.3. Notification message format and structure</a></li>
-<li><a href="#_standard_topic_hierarchy">5.4. Standard topic hierarchy</a></li>
+<li><a href="#_security">4.1. Security</a></li>
 </ul>
 </li>
-<li><a href="#_discovery_metadata">6. Discovery metadata</a></li>
-<li><a href="#_wis_metrics">7. WIS metrics</a>
+<li><a href="#_part_v">5. PART V</a>
 <ul class="sectlevel2">
-<li><a href="#_roles">7.1. Roles</a>
-<ul class="sectlevel3">
-<li><a href="#_global_monitoring_gm">7.1.1. Global Monitoring (GM)</a></li>
-<li><a href="#_global_services">7.1.2. Global Services</a></li>
-<li><a href="#_wis2_nodes">7.1.3. WIS2 Nodes</a></li>
-<li><a href="#_sensor_centres_and_wmo_programs">7.1.4. Sensor Centres and WMO programs</a></li>
-</ul>
-</li>
-<li><a href="#_wis2_metric_hierarchy">7.2. WIS2 Metric Hierarchy</a>
-<ul class="sectlevel3">
-<li><a href="#_conventions_for_metric_naming">7.2.1. Conventions for metric naming</a></li>
-<li><a href="#_metrics_for_global_brokers">7.2.2. Metrics for Global Brokers</a></li>
-<li><a href="#_metrics_for_global_caches">7.2.3. Metrics for Global Caches</a></li>
-<li><a href="#_metrics_for_global_discovery_catalogues">7.2.4. Metrics for Global Discovery Catalogues</a></li>
-<li><a href="#_other_metrics">7.2.5. Other metrics</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_implementation_and_operation_of_wis2_node">8. Implementation and operation of WIS2 Node</a>
-<ul class="sectlevel2">
-<li><a href="#_practices_and_procedures">8.1. Practices and procedures</a>
-<ul class="sectlevel3">
-<li><a href="#_registration_and_decommissioning_of_a_wis_node">8.1.1. Registration and decommissioning of a WIS node</a></li>
-<li><a href="#_registration_and_removal_of_a_dataset">8.1.2. Registration and removal of a Dataset</a></li>
-<li><a href="#_connecting_with_global_services">8.1.3. Connecting with Global Services</a></li>
-</ul>
-</li>
-<li><a href="#_publishing_data_discovery_metadata_and_notification_messages">8.2. Publishing data, discovery metadata, and notification messages</a>
-<ul class="sectlevel3">
-<li><a href="#_discovery_metadata_2">8.2.1. Discovery metadata</a></li>
-<li><a href="#_notification_messages">8.2.2. Notification messages</a></li>
-<li><a href="#_data">8.2.3. Data</a></li>
-</ul>
-</li>
-<li><a href="#_performance_management">8.3. Performance management</a>
-<ul class="sectlevel3">
-<li><a href="#_service_levels_and_performance_indicators">8.3.1. Service levels and performance indicators</a></li>
-<li><a href="#_provision_of_system_performance_metrics">8.3.2. Provision of system performance metrics</a></li>
-</ul>
-</li>
-<li><a href="#_wis_node_reference_implementation_wis2box">8.4. WIS Node reference implementation: wis2box</a></li>
-</ul>
-</li>
-<li><a href="#_implementation_and_operation_of_a_global_service">9. Implementation and operation of a Global Service</a>
-<ul class="sectlevel2">
-<li><a href="#_procedure_for_registration_of_a_new_global_service">9.1. Procedure for registration of a new Global Service</a></li>
-<li><a href="#_performance_management_and_monitoring_of_a_global_service">9.2. Performance management and monitoring of a Global Service</a>
-<ul class="sectlevel3">
-<li><a href="#_service_levels_performance_indicators_and_fair_usage_policies">9.2.1. Service levels, performance indicators, and fair-usage policies</a></li>
-<li><a href="#_provision_of_metrics">9.2.2. Provision of metrics</a></li>
-</ul>
-</li>
-<li><a href="#_global_broker">9.3. Global Broker</a>
-<ul class="sectlevel3">
-<li><a href="#_technical_considerations">9.3.1. Technical considerations</a></li>
-<li><a href="#_practices_and_procedures_2">9.3.2. Practices and procedures</a></li>
-</ul>
-</li>
-<li><a href="#_global_cache">9.4. Global Cache</a>
-<ul class="sectlevel3">
-<li><a href="#_technical_considerations_2">9.4.1. Technical considerations</a></li>
-<li><a href="#_practices_and_procedures_3">9.4.2. Practices and procedures</a></li>
-</ul>
-</li>
-<li><a href="#_global_discovery_catalogue">9.5. Global Discovery Catalogue</a>
-<ul class="sectlevel3">
-<li><a href="#_technical_considerations_3">9.5.1. Technical considerations</a></li>
-<li><a href="#_practices_and_procedures_4">9.5.2. Practices and procedures</a></li>
-</ul>
-</li>
-<li><a href="#_global_monitor">9.6. Global Monitor</a>
-<ul class="sectlevel3">
-<li><a href="#_technical_considerations_4">9.6.1. Technical Considerations</a></li>
-<li><a href="#_practices_and_procedures_5">9.6.2. Practices and procedures</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_coordinating_wis">10. Coordinating WIS</a>
-<ul class="sectlevel2">
-<li><a href="#_supporting_wis_centres_in_their_area_of_responsibility">10.1. Supporting WIS centres in their area of responsibility</a></li>
-<li><a href="#_performance_management_2">10.2. Performance management</a></li>
-<li><a href="#_incident_management">10.3. Incident management</a></li>
-</ul>
-</li>
-<li><a href="#_information_management">11. Information management</a>
-<ul class="sectlevel2">
-<li><a href="#_introduction">11.1. Introduction</a>
-<ul class="sectlevel3">
-<li><a href="#_background">11.1.1. Background</a></li>
-<li><a href="#_scope">11.1.2. Scope</a></li>
-<li><a href="#_intended_audience">11.1.3. Intended audience</a></li>
-</ul>
-</li>
-<li><a href="#_principles_of_information_management">11.2. Principles of information management</a>
-<ul class="sectlevel3">
-<li><a href="#_principle_1_information_is_a_valued_asset">11.2.1. Principle 1: Information is a valued asset</a></li>
-<li><a href="#_principle_2_information_must_be_managed">11.2.2. Principle 2: Information must be managed</a></li>
-<li><a href="#_principle_3_information_must_be_fit_for_purpose">11.2.3. Principle 3: Information must be fit for purpose</a></li>
-<li><a href="#_principle_4_information_must_be_standardized_and_interoperable">11.2.4. Principle 4: Information must be standardized and interoperable</a></li>
-<li><a href="#_principle_5_information_must_be_well_documented">11.2.5. Principle 5: Information must be well documented</a></li>
-<li><a href="#_principle_6_information_must_be_discoverable_accessible_and_retrievable">11.2.6. Principle 6: Information must be discoverable, accessible and retrievable</a></li>
-<li><a href="#_principle_7_information_should_be_reusable">11.2.7. Principle 7: Information should be reusable</a></li>
-<li><a href="#_principle_8_information_management_is_subject_to_accountability_and_governance">11.2.8. Principle 8: Information management is subject to accountability and governance.</a></li>
-</ul>
-</li>
-<li><a href="#_the_information_management_lifecycle">11.3. The information management lifecycle</a>
-<ul class="sectlevel3">
-<li><a href="#_overview">11.3.1. Overview</a></li>
-<li><a href="#_overarching_requirements">11.3.2. Overarching requirements</a></li>
-<li><a href="#_aspects_of_the_information_management_lifecycle">11.3.3. Aspects of the information management lifecycle</a></li>
-</ul>
-</li>
-<li><a href="#_other_considerations">11.4. Other considerations</a>
-<ul class="sectlevel3">
-<li><a href="#_technology_and_technology_migration">11.4.1. Technology and technology migration</a></li>
-<li><a href="#_information_security">11.4.2. Information security</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_other_considerations_2">12. Other considerations</a>
-<ul class="sectlevel2">
-<li><a href="#_competencies_of_personnel">12.1. Competencies of personnel</a></li>
-<li><a href="#_audit_and_certification_of_wis_centres">12.2. Audit and certification of WIS Centres</a></li>
-<li><a href="#_pilot_phase_deployment_configuration">12.3. Pilot phase deployment configuration</a></li>
-</ul>
-</li>
-<li><a href="#_references">13. References</a>
-<ul class="sectlevel2">
-<li><a href="#_normative">13.1. Normative</a></li>
-<li><a href="#_informative">13.2. Informative</a></li>
-</ul>
-</li>
-<li><a href="#_competencies">Annex A: Competencies</a>
-<ul class="sectlevel2">
-<li><a href="#_competency_1_manage_the_physical_infrastructure">A.1. Competency 1: manage the physical infrastructure</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description">A.1.1. Competency description</a></li>
-<li><a href="#_performance_components">A.1.2. Performance components</a></li>
-<li><a href="#_management_of_information_technology_operations">A.1.3. Management of information technology operations</a></li>
-<li><a href="#_management_of_facilities">A.1.4. Management of facilities</a></li>
-<li><a href="#_knowledge_and_skill_requirements">A.1.5. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes">A.1.6. Learning outcomes</a></li>
-<li><a href="#_learning_activities">A.1.7. Learning activities</a></li>
-<li><a href="#_assessment">A.1.8. Assessment</a></li>
-<li><a href="#_key_learning_resources">A.1.9. Key learning resources</a></li>
-</ul>
-</li>
-<li><a href="#_competency_2_manage_the_operational_applications">A.2. Competency 2: manage the operational applications</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_2">A.2.1. Competency description</a></li>
-<li><a href="#_performance_components_2">A.2.2. Performance components</a></li>
-<li><a href="#_knowledge_and_skill_requirements_2">A.2.3. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes_2">A.2.4. Learning outcomes</a></li>
-<li><a href="#_learning_activities_2">A.2.5. Learning activities</a></li>
-<li><a href="#_assessment_2">A.2.6. Assessment</a></li>
-<li><a href="#_key_learning_resources_2">A.2.7. Key learning resources</a></li>
-</ul>
-</li>
-<li><a href="#_competency_3_manage_the_data_flow">A.3. Competency 3: manage the data flow</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_3">A.3.1. Competency description</a></li>
-<li><a href="#_performance_components_3">A.3.2. Performance components</a></li>
-<li><a href="#_learning_outcomes_3">A.3.3. Learning outcomes</a></li>
-<li><a href="#_learning_activities_3">A.3.4. Learning activities</a></li>
-<li><a href="#_assessment_3">A.3.5. Assessment</a></li>
-<li><a href="#_key_learning_resources_3">A.3.6. Key learning resources</a></li>
-</ul>
-</li>
-<li><a href="#_competency_4_manage_data_discovery">A.4. Competency 4: manage data discovery</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_4">A.4.1. Competency description</a></li>
-<li><a href="#_performance_components_4">A.4.2. Performance components</a></li>
-<li><a href="#_knowledge_and_skill_requirements_3">A.4.3. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes_4">A.4.4. Learning outcomes</a></li>
-<li><a href="#_learning_activities_4">A.4.5. Learning activities</a></li>
-<li><a href="#_assessment_4">A.4.6. Assessment</a></li>
-</ul>
-</li>
-<li><a href="#_competency_5_manage_interaction_among_wis_centres">A.5. Competency 5: manage interaction among WIS Centres</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_5">A.5.1. Competency description</a></li>
-<li><a href="#_performance_components_5">A.5.2. Performance components</a></li>
-<li><a href="#_knowledge_and_skill_requirements_4">A.5.3. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes_5">A.5.4. Learning outcomes</a></li>
-<li><a href="#_learning_activities_5">A.5.5. Learning activities</a></li>
-<li><a href="#_assessment_5">A.5.6. Assessment</a></li>
-<li><a href="#_key_learning_resources_4">A.5.7. Key learning resources</a></li>
-<li><a href="#_local_resources">A.5.8. Local resources</a></li>
-</ul>
-</li>
-<li><a href="#_competency_6_manage_external_user_interactions">A.6. Competency 6: manage external user interactions</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_6">A.6.1. Competency description</a></li>
-<li><a href="#_performance_components_6">A.6.2. Performance components</a></li>
-<li><a href="#_knowledge_and_skill_requirements_5">A.6.3. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes_6">A.6.4. Learning outcomes</a></li>
-<li><a href="#_learning_activities_6">A.6.5. Learning activities</a></li>
-<li><a href="#_assessment_6">A.6.6. Assessment</a></li>
-<li><a href="#_key_learning_resources_5">A.6.7. Key learning resources</a></li>
-</ul>
-</li>
-<li><a href="#_competency_7_manage_the_operational_service">A.7. Competency 7: manage the operational service</a>
-<ul class="sectlevel3">
-<li><a href="#_competency_description_7">A.7.1. Competency description</a></li>
-<li><a href="#_performance_components_7">A.7.2. Performance components</a></li>
-<li><a href="#_knowledge_and_skill_requirements_6">A.7.3. Knowledge and skill requirements</a></li>
-<li><a href="#_learning_outcomes_7">A.7.4. Learning outcomes</a></li>
-<li><a href="#_learning_activities_7">A.7.5. Learning activities</a></li>
-<li><a href="#_assessment_7">A.7.6. Assessment</a></li>
-<li><a href="#_key_learning_resources_6">A.7.7. Key learning resources</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#_recommended_practices_for_audit_and_certification_of_wis_centres">Annex B: Recommended practices for audit and certification of WIS Centres</a>
-<ul class="sectlevel2">
-<li><a href="#_background_2">B.1. Background</a></li>
-<li><a href="#_auditing_and_certification">B.2. Auditing and certification</a>
-<ul class="sectlevel3">
-<li><a href="#_gisc_audits">B.2.1. GISC audits</a></li>
-</ul>
-</li>
-<li><a href="#_dcpc_certification">B.3. DCPC certification</a>
-<ul class="sectlevel3">
-<li><a href="#_verification_of_compliance_of_ncs">B.3.1. Verification of compliance of NCs</a></li>
-</ul>
-</li>
-<li><a href="#_the_review_cycle">B.4. The review cycle</a>
-<ul class="sectlevel3">
-<li><a href="#_review_of_dcpcs">B.4.1. Review of DCPCs</a></li>
-<li><a href="#_review_of_ncs">B.4.2. Review of NCs</a></li>
-</ul>
-</li>
-<li><a href="#_ad_hoc_audits_or_reviews">B.5. Ad hoc audits or reviews</a></li>
-<li><a href="#_audit_or_review_outcome">B.6. Audit or review outcome</a></li>
-<li><a href="#_format_of_report">B.7. Format of report</a></li>
-<li><a href="#_public_notification_of_type_of_infcom_endorsement">B.8. Public notification of type of INFCOM endorsement</a></li>
-<li><a href="#_review_of_audits_with_qualification">B.9. Review of audits with qualification</a></li>
+<li><a href="#_competencies">5.1. Competencies</a></li>
 </ul>
 </li>
 </ul>
@@ -784,22 +567,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_preamble"><a class="anchor" href="#_preamble"></a>1. Preamble</h2>
+<h2 id="_preamble"><a class="anchor" href="#_preamble"></a>Preamble</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_purpose"><a class="anchor" href="#_purpose"></a>1.1. Purpose</h3>
+<h3 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h3>
 <div class="paragraph">
 <p>The purpose of this document is to provide technical guidance and additional information for participants in the WIS2 pilot phase and other early adopters of WIS2 to assist them in implementing the practices, procedures, and specifications defined in the Manual on WIS (WMO No. 1060), Vol II.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_audience"><a class="anchor" href="#_audience"></a>1.2. Audience</h3>
+<h3 id="_audience"><a class="anchor" href="#_audience"></a>Audience</h3>
 <div class="paragraph">
 <p>This draft guidance document is provided primarily for technical teams of organisations participating in the WIS2 pilot phase.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_status_of_this_document"><a class="anchor" href="#_status_of_this_document"></a>1.3. Status of this document</h3>
+<h3 id="_status_of_this_document"><a class="anchor" href="#_status_of_this_document"></a>Status of this document</h3>
 <div class="paragraph">
 <p>This draft guidance is as an informal document. The content will be updated, modified and improved throughout the WIS2 pilot phase as detailed specifications and procedures are validated through testing. The information provided herein will be consolidated into a new version of the Guide to WIS (WMO No. 1061) upon completion of the pilot phase.</p>
 </div>
@@ -807,10 +590,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction_of_wis2"><a class="anchor" href="#_introduction_of_wis2"></a>2. Introduction of WIS2</h2>
+<h2 id="_part_i"><a class="anchor" href="#_part_i"></a>1. PART I</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_why_wis2"><a class="anchor" href="#_why_wis2"></a>2.1. Why WIS2?</h3>
+<h3 id="_introduction_of_wis2"><a class="anchor" href="#_introduction_of_wis2"></a>1.1. Introduction of WIS2</h3>
+<div class="sect3">
+<h4 id="_why_wis2"><a class="anchor" href="#_why_wis2"></a>1.1.1. Why WIS2?</h4>
 <div class="paragraph">
 <p>The WMO Information System (WIS) provides high-performance and reliable data sharing for all WMO Programmes. WIS2 evolves the original solution that became operational in 2012 in response to technical advances, increases in data volumes, and increased diversity in the people and systems that seek to consume data generated, curated, and shared by WMO Programmes.</p>
 </div>
@@ -884,8 +669,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Underpinning these WIS2 Technical Foundations are the Principles of WIS2. These are described in Appendix A to the Manual on WIS (WMO No. 1060), Vol II. WIS2.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_what_is_wis2"><a class="anchor" href="#_what_is_wis2"></a>2.2. What is WIS2?</h3>
+<div class="sect3">
+<h4 id="_what_is_wis2"><a class="anchor" href="#_what_is_wis2"></a>1.1.2. What is WIS2?</h4>
 <div class="paragraph">
 <p>WIS2 is a federated "system of systems". All WIS Centres will comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060) with regards to how they share data in support of WMO Programme objectives.</p>
 </div>
@@ -1001,8 +786,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>More details on these aspects are provided in Manual on WIS (WMO No. 1060), Vol II. Part III. Functions of WIS. Section 3.2 (Functional Architecture of WIS) provides a simple overview of how WIS2 functions</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_why_are_datasets_so_important"><a class="anchor" href="#_why_are_datasets_so_important"></a>2.3. Why are datasets so important?</h3>
+<div class="sect3">
+<h4 id="_why_are_datasets_so_important"><a class="anchor" href="#_why_are_datasets_so_important"></a>1.1.3. Why are datasets so important?</h4>
 <div class="paragraph">
 <p>The purpose of WIS is to enable sharing of data. "Datasets" provide the mechanism for us to describe what data we publish, or what data we’re interested in.</p>
 </div>
@@ -1029,52 +814,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_quickstarts"><a class="anchor" href="#_quickstarts"></a>3. Quickstarts</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section lists the sections in this technical guidance document that are essential for Data Publishers operating a WIS node (e.g., an NC or a DCPC) and Data Consumers to read before getting started.
-Operators of GlSCs should have an in-depth understanding of how WIS2 functions and operates – not least so that they are able to effectively support the WIS Centres, Data Publishers, and Data Consumers in their Area of Responsibility (AoR). As such, all contents of this guidance document are relevant to GISCs.</p>
-</div>
 <div class="sect2">
-<h3 id="_data_publisher"><a class="anchor" href="#_data_publisher"></a>3.1. Data publisher</h3>
-<div class="paragraph">
-<p>As a Data Publisher planning to operate a WIS node, you should read the following sections: TODO: fix crossrefs
-* 1.2: What is WIS2?
-* 1.3 Why are Datasets so important?
-* PART III Data Metadata flows
-* PART X Information Management</p>
-</div>
-<div class="sect3">
-<h4 id="_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"><a class="anchor" href="#_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"></a>3.1.1. How to publish Dataset discovery metadata to the Global Discovery Catalogue</h4>
-<div class="paragraph">
-<p>A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_how_to_publish_data_notifications"><a class="anchor" href="#_how_to_publish_data_notifications"></a>3.1.2. How to publish data notifications</h4>
-<div class="paragraph">
-<p>A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_how_to_publish_data_to_the_global_broker"><a class="anchor" href="#_how_to_publish_data_to_the_global_broker"></a>3.1.3. How to publish data to the Global Broker</h4>
-<div class="paragraph">
-<p>Data publishing is realized as a function of publishing data notifications (see 2.1.2 How to publish data notifications ).</p>
-</div>
-<div class="paragraph">
-<p>TODO: To be completed</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_data_consumer"><a class="anchor" href="#_data_consumer"></a>3.2. Data consumer</h3>
+<h3 id="_data_consumer"><a class="anchor" href="#_data_consumer"></a>1.2. Data consumer</h3>
 <div class="paragraph">
 <p>As a Data Consumer wanting to use data published via WIS2 you should read the guidance presented here. In addition, a list of references to useful sections in this guidance document is provided where Data Consumers can gain a better understanding of how WIS2 works.</p>
 </div>
 <div class="sect3">
-<h4 id="_how_to_search_the_global_discovery_catalogue_to_find_datasets"><a class="anchor" href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets"></a>3.2.1. How to search the Global Discovery Catalogue to find Datasets</h4>
+<h4 id="_how_to_search_the_global_discovery_catalogue_to_find_datasets"><a class="anchor" href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets"></a>1.2.1. How to search the Global Discovery Catalogue to find Datasets</h4>
 <div class="paragraph">
 <p>A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see PART V Discovery Metadata). A Data Consumer may discover a Dataset using keywords, topics, geographic area of interest, or date(s) associated with the Dataset. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing), from which a Data Consumer can assess and evaluate their interest in accessing/downloading the Dataset’s data.</p>
 </div>
@@ -1086,7 +832,7 @@ Operators of GlSCs should have an in-depth understanding of how WIS2 functions a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_how_to_subscribe_to_notifications_about_availability_of_new_data"><a class="anchor" href="#_how_to_subscribe_to_notifications_about_availability_of_new_data"></a>3.2.2. How to subscribe to notifications about availability of new data</h4>
+<h4 id="_how_to_subscribe_to_notifications_about_availability_of_new_data"><a class="anchor" href="#_how_to_subscribe_to_notifications_about_availability_of_new_data"></a>1.2.2. How to subscribe to notifications about availability of new data</h4>
 <div class="paragraph">
 <p>A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy). A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.</p>
 </div>
@@ -1104,7 +850,7 @@ Operators of GlSCs should have an in-depth understanding of how WIS2 functions a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_how_to_use_a_notification_message_to_decide_whether_to_download_data"><a class="anchor" href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data"></a>3.2.3. How to use a notification message to decide whether to download data</h4>
+<h4 id="_how_to_use_a_notification_message_to_decide_whether_to_download_data"><a class="anchor" href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data"></a>1.2.3. How to use a notification message to decide whether to download data</h4>
 <div class="paragraph">
 <p>Each Global Cache will publish a "data availability" message as the associated data object becomes available from that Global Cache instance. Each "data availability" message will refer to the same logical data object but hosted at a different location within WIS. Data Consumers need to consider their strategy for managing these duplicate messages. From a data perspective, it does not matter which Global Cache instance is used – they will all provide an identical copy of the data object published by the originating NC/DCPC. The simplest strategy is to accept the first "data availability" message and download from the Global Cache instance that the message refers to (i.e., using a URL for the data object at that Global Cache instance). Alternatively, a Data Consumer may have a preferred Global Cache instance, for example, that is located in the Region. Whichever Global Cache instance is chosen, Data Consumers will need to implement logic to discard duplicate "data availability" messages.</p>
 </div>
@@ -1113,7 +859,7 @@ Operators of GlSCs should have an in-depth understanding of how WIS2 functions a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_how_to_download_data_from_the_global_cache_and_wis_nodes"><a class="anchor" href="#_how_to_download_data_from_the_global_cache_and_wis_nodes"></a>3.2.4. How to download data from the Global Cache and WIS nodes</h4>
+<h4 id="_how_to_download_data_from_the_global_cache_and_wis_nodes"><a class="anchor" href="#_how_to_download_data_from_the_global_cache_and_wis_nodes"></a>1.2.4. How to download data from the Global Cache and WIS nodes</h4>
 <div class="paragraph">
 <p>Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.</p>
 </div>
@@ -1122,7 +868,7 @@ Operators of GlSCs should have an in-depth understanding of how WIS2 functions a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref"><a class="anchor" href="#_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref"></a>3.2.5. Additional sections of interest to a Data Consumer (TODO: fix crossref)</h4>
+<h4 id="_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref"><a class="anchor" href="#_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref"></a>1.2.5. Additional sections of interest to a Data Consumer (TODO: fix crossref)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1135,675 +881,52 @@ Operators of GlSCs should have an in-depth understanding of how WIS2 functions a
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_data_and_metadata_flows_in_wis2"><a class="anchor" href="#_data_and_metadata_flows_in_wis2"></a>4. Data and metadata flows in WIS2</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section provides a visual overview of how data and discovery metadata are shared within WIS2.</p>
-</div>
-<div class="paragraph">
-<p>Figure 2 introduces the symbology used throughout this section. TODO: crossref</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/symbology-data-metadata-flows.png" alt="Symbology used to describe data and metadata flows">
-</div>
-<div class="title">Figure 2. Symbology used to describe data and metadata flows</div>
-</div>
-<div class="paragraph">
-<p>Introducing the key components:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>MQ Broker</strong>: Used to publish messages advertising the availability of new/updated/deleted discovery metadata and new Data Objects (e.g. data files that comprise the dataset). Implements MQTT 3.1.1 and/or MQTT 5.0.</p>
-</li>
-<li>
-<p><strong>Data server</strong>: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive Web service that exposes an API. Supported protocols are HTTPS and SFTP.</p>
-</li>
-<li>
-<p><strong>Catalogue</strong>: Contains discovery metadata records describing the datasets published by the NC/DCPC. May be implemented as a "static catalogue" with JSON files published on a Web server enabling a user to browse the catalogue, or as a "dynamic catalogue" via an application that offers a search API.</p>
-</li>
-</ul>
-</div>
 <div class="sect2">
-<h3 id="_simple_ncdcpc_data_sharing"><a class="anchor" href="#_simple_ncdcpc_data_sharing"></a>4.1. Simple NC/DCPC data sharing</h3>
+<h3 id="_data_publisher"><a class="anchor" href="#_data_publisher"></a>1.3. Data publisher</h3>
 <div class="paragraph">
-<p>Here we introduce the key concepts of publishing discovery metadata, notification messages, and data. For simplicity, the WIS2 Global Services are not shown here.</p>
+<p>As a Data Publisher planning to operate a WIS node, you should read the following sections: TODO: fix crossrefs
+* 1.2: What is WIS2?
+* 1.3 Why are Datasets so important?
+* PART III Data Metadata flows
+* PART X Information Management</p>
 </div>
-<div class="paragraph">
-<p>Figure 3 illustrates metadata publication and discovery by a Data Consumer.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/simple-nc-dcpc-data-sharing-metadata-discovery.png" alt="Simple NC/DCPC data sharing - metadata and discovery">
-</div>
-<div class="title">Figure 3. Simple NC/DCPC data sharing - metadata and discovery</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>NC/DCPC shares a new dataset. They publish a discovery metadata record (<strong>R</strong>) to their local catalogue describing this dataset.</p>
-</li>
-<li>
-<p>Data Consumer searches/browses the NC/DCPC’s local catalogue and discover a dataset that they need. They use the links to identify how &amp; where they can download the dataset and subscribe to updates (e.g., when new data is added to the dataset).</p>
-</li>
-<li>
-<p>This is a near-real-time dataset that will be routinely updated. The Data Consumer decides to subscribe to the topic for this dataset on the NC/DCPC’s local MQ broker.</p>
-</li>
-<li>
-<p>Later, NC/DCPC updates the scope of the dataset (e.g. adding data from another observing station). They publish an updated discovery metadata record (<strong>R\</strong>*) to their local catalogue</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Note: Data Consumer does not need to update their subscription to receive messages about data availability from this new observing station. They have subscribed to updates about the <strong>dataset</strong> - which now includes data from the additional observing station.</p>
-</div>
-<div class="paragraph">
-<p>Figure 4 illustrates how a Data Consumer subscribes to receive notification messages and responds to receipt of a message by downloading data.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/simple-nc-dcpc-data-sharing-data-distribution.png" alt="Simple NC/DCPC data sharing - data distribution">
-</div>
-<div class="title">Figure 4. Figure 4 Simple NC/DCPC data sharing - data distribution</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>[Precondition] Data Consumer subscribes to the MQ topic at the NC/DCPC.</p>
-</li>
-<li>
-<p>As the dataset is produced Data Objects (<strong>D</strong>), e.g., observation data BUFR-files, are made available for download, and messages (<strong>m<sup>D</sup></strong>) are published to the topic for this dataset on the local MQ broker.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) indicating availability of new data are pushed to the subscriber.</p>
-</li>
-<li>
-<p>Data Consumer parses the messages to extract the URL for the new Data Object (<strong>D</strong>) and downloads the file.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via a Web service API.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_message_distribution_via_global_broker"><a class="anchor" href="#_message_distribution_via_global_broker"></a>4.2. Message distribution via Global Broker</h3>
-<div class="paragraph">
-<p>Here we add the Global Broker service.</p>
-</div>
-<div class="paragraph">
-<p>Note that the Global Broker operates two "channels": one for messages originating from NC or DCPCs, the second for messages from Global Cache instances. These are designated "O" and "GC" accordingly.
-Figure 5 illustrates how messages are published from the NC/DCPC to the Global Broker.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/message-distribution-via-gb-publishing-from-nc-dcpc.png" alt="Message distribution via Global Broker - publishing messages from NC/DCPC">
-</div>
-<div class="title">Figure 5. Message distribution via Global Broker - publishing messages from NC/DCPC</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A[Pre-condition] Bootstrap the Global Broker with a config file that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.</p>
-</li>
-<li>
-<p>B[Precondition] Global Broker determines the MQ broker topics to subscribe to and subscribes to them.</p>
-</li>
-<li>
-<p>As the dataset is produced Data Objects (<strong>D</strong>), e.g., observation data BUFR-files, are made available for download, and messages (<strong>m<sup>D</sup></strong>) are published to the topic for this dataset on the local MQ broker.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) indicating availability of new data are pulled by the subscriber.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is assessed using "anti-loop" logic to avoid resending duplicate messages. If approved, it is added to the appropriate MQ topic of the "originating centre" channel of Global Broker.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is validated against the agreed message format (insert reference). If the message is not compliant, it is discarded.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Figure 6 illustrates how messages are propagated to other Global Broker instances.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/message-distribution-via-gb-publishing-from-other-gb.png" alt="Message distribution via Global Broker – publishing messages from other Global Broker">
-</div>
-<div class="title">Figure 6. Message distribution via Global Broker – publishing messages from other Global Brokers</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A[Precondition] Global Broker instances subscribe to MQ topics from at least 2 other Global Broker instances. These are not necessarily bilateral relationships.</p>
-</li>
-<li>
-<p>B[Precondition] Message (<strong>m<sup>D</sup></strong>) already (re-)published by Global Broker #1.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is pulled by subscriber: Global Broker #2. This is not a duplicate message, so GB#2 republishes the message.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is pulled by subscribers: Global Broker instances #1, #3 and #4. GB#3 and GB#4 have not seen this message before, so they republish the message. However, GB#1 identifies the message as a duplicate and discards it.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is made available to subscribers from Global Broker instances #3 and #4. All Global Broker instances already have a copy of the message, so the new copy of the message is discarded thereby avoiding publication of duplicate messages.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_data_distribution_via_global_cache"><a class="anchor" href="#_data_distribution_via_global_cache"></a>4.3. Data distribution via Global cache</h3>
-<div class="paragraph">
-<p>Here we add the Global Cache service.</p>
-</div>
-<div class="paragraph">
-<p>Figure 7 illustrates how "data availability" notification messages are published by a Global Cache instance once it has downloaded a copy of a data object from an NC or DCPC.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/data-distribution-via-gb-publishing-data-availability-messages.png" alt="Data distribution via Global Cache – publishing &quot;data availability&quot; messages">
-</div>
-<div class="title">Figure 7. Data distribution via Global Cache – publishing "data availability" messages</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.</p>
-</li>
-<li>
-<p>B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.</p>
-</li>
-<li>
-<p>C[Pre-condition] Global Broker determines the MQ broker topics to subscribe to and subscribes to them.</p>
-</li>
-<li>
-<p>D[Pre-condition] Global Cache determines the MQ broker topics to subscribe to and subscribes to them.</p>
-</li>
-<li>
-<p>As the dataset is produced Data Objects (<strong>D</strong>) are made available for download, and messages (<strong>m<sup>D</sup></strong>) are published to the topic for this dataset on the local MQ broker.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) indicating availability of new data are pushed to the subscriber.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is not a duplicate, so Global Broker republishes it.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) indicating availability of new data are pushed to the subscriber.</p>
-</li>
-<li>
-<p>Global Cache parses the message and downloads the Data Object (<strong>D</strong>).</p>
-</li>
-<li>
-<p>Global Cache adds Data Object (<strong>D</strong>) to its data server and publishes a "data availability" message (<strong>m<sup>D</sup></strong>) that advertises data availability from the Global Cache instance.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) indicating availability of new data are pushed to the subscriber.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>D</sup></strong>) is not a duplicate, so Global Broker republishes it – this time on the Global Cache channel.</p>
-</li>
-<li>
-<p>Messages (mD, mD) are pushed to other Global Broker instances and re-published there.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Figure 8 illustrates how data propagates between Global Cache instances.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Data distribution via Global Cache – propagating data between Global Cache instances
-image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data distribution via Global Cache – propagating data between Global Cache instances]</p>
-</li>
-<li>
-<p>A[Pre-condition] Bootstrap the Global Caches with a configuration that indicates connection details for at least one Global Broker instance and the list of datasets that need to be cached.</p>
-</li>
-<li>
-<p>B[Pre-condition] Global Cache determines the MQ broker topics to subscribe to and subscribes to them.</p>
-</li>
-<li>
-<p>C[Pre-condition] NC/DCPC has published Data Object (<strong>D</strong>) and messages (<strong>m<sup>D</sup></strong>) advertising availability of that Data Object.</p>
-</li>
-<li>
-<p>D[Pre-condition] Global Cache #1 has downloaded Data Object (<strong>D</strong>) and published "data availability" message (<strong>m<sup>D</sup></strong>).</p>
-</li>
-<li>
-<p>E[Pre-condition] Global Broker has re-published "data availability" messages from NC/DCPC and Global Cache instance #1 (mD, mD).</p>
-</li>
-<li>
-<p>Global Cache #2 subscribes to both channels on the Global Broker. Both messages advertising Data Object (mD, mD) are pushed to GC#2. Message (<strong>m<sup>D</sup></strong>) arrives first, so message (<strong>m<sup>D</sup></strong>) is discarded as a duplicate.</p>
-</li>
-<li>
-<p>Global Cache #2 parses the message and downloads the Data Object (<strong>D</strong>) from GC#1.</p>
-</li>
-<li>
-<p>GC#2 adds Data Object (<strong>D</strong>) to its data server and publishes a "data availability" message (m2) that advertises data availability from GC#2.</p>
-</li>
-<li>
-<p>Global Broker also subscribes to GC#2 (details not shown for brevity). New "data availability" message (m2) is pushed to the Global Broker and added to the "Global Cache" channel. It is not a duplicate of message (<strong>m<sup>D</sup></strong>) because it refers to a different download location – GC#2 not GC#1. Both messages (mD, m2) are published to the same topic on the Global Cache channel, so subscribers to that topic will receive multiple messages.</p>
-</li>
-<li>
-<p>Messages (mD, mD, m2) are pushed to other Global Broker instances and re-published there.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_populating_the_global_catalogue"><a class="anchor" href="#_populating_the_global_catalogue"></a>4.4. Populating the Global Catalogue</h3>
-<div class="paragraph">
-<p>Here we add the Global Discovery Catalogue service.</p>
-</div>
-<div class="paragraph">
-<p>Figure 9 illustrates how discovery metadata records propagate from the NC or DCPC via a Global Cache instance to the Global Discovery Catalogue.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/populating-gdc-records.png" alt="Populating the Global Catalogue with discovery metadata records">
-</div>
-<div class="title">Figure 8. Populating the Global Catalogue with discovery metadata records</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A[Pre-condition] Bootstrap the Global Broker with a configuration that indicates (i) NC/DCPCs and Global Cache instances from which to re-publish messages, and (ii) connection details for at least two other Global Broker instances.</p>
-</li>
-<li>
-<p>B[Pre-condition] Bootstrap the Global Cache with a configuration that indicates connection details for at least one Global Broker instance, the list of datasets that need to be cached, and the list of NC/DCPC for which this instance serves as a primary Global Cache.</p>
-</li>
-<li>
-<p>C[Pre-condition] Bootstrap the Global Catalogue with a configuration that indicates connection details for at least one Global Broker instance.</p>
-</li>
-<li>
-<p>D[Pre-condition] Global Broker, Global Cache, and Global Catalogue determine MQ broker topics to subscribe to and subscribes to them. Global Catalogue subscribes only to the "Global Cache" channel.</p>
-</li>
-<li>
-<p>NC/DCPC publishes a discovery metadata record &#174; to their local catalogue describing the dataset they are sharing.</p>
-</li>
-<li>
-<p>NC/DCPC advertises the availability of this metadata record by publishing a message (<strong>m<sup>R</sup></strong>) to the ‘metadata’ topic on the local MQ broker.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>R</sup></strong>) indicating the availability of new metadata is pushed to the Global Broker. The Global Broker republishes the message on the metadata topic of the "Originating Centre" channel.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>R</sup></strong>) indicating the availability of new metadata is pushed to the Global Cache.</p>
-</li>
-<li>
-<p>Global Cache parses the message and downloads the discovery metadata record &#174;.</p>
-</li>
-<li>
-<p>Global Cache adds discovery metadata record &#174; to its data server and publishes a message (<strong>m<sup>R</sup></strong>) that advertises availability of the record from the Global Cache instance.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>R</sup></strong>) indicating availability of new metadata at the Global Cache is pushed to the Global Broker. The Global Broker republishes the message on the metadata topic of the "Global Cache" channel.</p>
-</li>
-<li>
-<p>Message (<strong>m<sup>R</sup></strong>) indicating the availability of new metadata at the Global Cache is pushed to the Global Catalogue.</p>
-</li>
-<li>
-<p>Global Catalogue parses the message (<strong>m<sup>R</sup></strong>) indicating the availability of new metadata, asserts that this is not a duplicate message, and downloads the discovery metadata record &#174; from the Global Cache. It does not matter which Global Cache instance the record is downloaded from – a Global Cache will only publish a message (<strong>m<sup>R</sup></strong>) when they hold a copy of record &#174;.</p>
-</li>
-<li>
-<p>Global Catalogue creates a copy of the original record (new record is R*) and adds links indicating where Data Consumers can subscribe for updates to this dataset at each Global Broker instance. Global Catalogue adds record R* to the catalogue.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_data_distribution_including_the_global_services"><a class="anchor" href="#_data_distribution_including_the_global_services"></a>4.5. Data distribution including the Global Services</h3>
-<div class="paragraph">
-<p>Here we bring all the components together to show how data is distributed from NCs or DCPCs to Data Consumers in WIS2. See Figure 10.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/data-distribution-with-global-services.png" alt="Data distribution with Global Services">
-</div>
-<div class="title">Figure 9. Data distribution with Global Services</div>
-</div>
-<div class="paragraph">
-<p>Pre-conditions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>WIS2 Global Service Components are correctly configured and operating.</p>
-</li>
-<li>
-<p>NC/DCPC has published a discovery metadata record &#174; to their local catalogue describing the dataset they are sharing. This record has propagated to the Global Catalogue, where an amended metadata record (R*) is published. Record (R*) includes additional actionable links to Global Broker instances where Data Consumers can subscribe for updates to the dataset.</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Data Consumer searches/browses the Global Catalogue and discovers a dataset that they need. Discovery metadata record (R*) provides  links indicating how and where to download the data set and/or subscribe to updates.</p>
-<div class="olist upperalpha">
-<ol class="upperalpha">
-<li>
-<p>Download from NC/DCPC.</p>
-</li>
-<li>
-<p>Subscribe to updates from NC/DCPC local MQ broker.</p>
-</li>
-<li>
-<p>Subscribe to updates from Global Broker’s "Originating Centre" channel.</p>
-</li>
-<li>
-<p>Subscribe to updates from Global Broker’s "Global Cache" channel.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Data Consumer wants to download Data Objects from the Global Cache, so decides to subscribe to dataset updates from the Global Broker’s "Global Cache" channel.</p>
-</li>
-<li>
-<p>[Data Object publication and propagation to Global Cache instances]</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>NC/DCPC has published Data Object (<strong>D</strong>) as part of their dataset. Data Object (<strong>D</strong>) is propagated to Global Cache #1 and Global Cache #2.</p>
-</li>
-<li>
-<p>NC/DCPC has published a message (<strong>m<sup>D</sup></strong>) advertising availability of Data Object (<strong>D</strong>).</p>
-</li>
-<li>
-<p>GC#1 has published a message (<strong>m<sup>D</sup></strong>) advertising availability of Data Object (<strong>D</strong>).</p>
-</li>
-<li>
-<p>#2 has published a message (m2) advertising availability of Data Object (<strong>D</strong>).</p>
-</li>
-<li>
-<p>Global Broker has republished message (<strong>m<sup>D</sup></strong>) on its "Originating Centre" channel, and messages (mD, m2) on its "Global Cache" channel.</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Messages (mD, m2) are pushed to the subscriber. Message (<strong>m<sup>D</sup></strong>) arrives second, so it is discarded.</p>
-</li>
-<li>
-<p>Data Consumer parses the message (m2) to extract the URL for the new Data Object (<strong>D</strong>) hosted on GC#2 and downloads the Data Object.</p>
-</li>
-</ol>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_real_time_data_exchange"><a class="anchor" href="#_real_time_data_exchange"></a>5. Real-time data exchange</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_whats_wrong_with_the_gts"><a class="anchor" href="#_whats_wrong_with_the_gts"></a>5.1. What&#8217;s wrong with the GTS?</h3>
-<div class="paragraph">
-<p>The Global Telecommunication System (GTS) has been the mainstay of real-time data exchange within the WMO community since the 1970s. It has evolved over during that time, but its architecture impedes the free flow of information.</p>
-</div>
-<div class="paragraph">
-<p>Being "on the GTS" requires operation of a message switching system (MSS) and update of the Routing Tables that control the flow of data between MSS. Once data is published on the GTS, anyone with a MSS can use the data they receive – or forward that data to other MSS. Each hop from MSS to MSS introduces delays and introduces a risk of data loss. Data publishers must trust recipients to respect terms and conditions in their data licenses. More fundamentally, updates to Routing Tables and MSS requires manual intervention – a model that simply will not scale to support the ever-growing community of consumers that need weather, water, and climate data.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_real_time_data_exchange_with_wis2"><a class="anchor" href="#_real_time_data_exchange_with_wis2"></a>5.2. Real-time data exchange with WIS2</h3>
-<div class="paragraph">
-<p>WIS2 addresses the problems with the GTS as follows:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Controlled access to data: Web services are used to provide access to data in WIS2. A data publisher may choose to implement controlled access to their data by securing their Web-service <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>.</p>
-</li>
-<li>
-<p>Point-to-point data distribution: WIS2 uses the Internet to transport data directly between data suppliers and data consumers <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>. The Internet provides efficient and robust <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> transport of data throughout the globe – with routing managed at the network infrastructure level. WIS2 no longer needs MSS to manually route data via intermediate "hops".</p>
-</li>
-<li>
-<p>Scaling to support many data consumers: WIS2 uses notification messages to alert consumers about the availability of new data. "Publish-subscribe" (Pub/Sub) messaging makes it simple to distribute these notifications in real-time to many consumers. A message broker allows an authorized agent (person, software system etc.) to create and publish messages to "topics". The message broker then manages requests from consumers to subscribe to those topics – without human intervention. All messages published to a topic are immediately sent to all subscribers. The publisher only needs to know about the topic – they don’t need know who the message broker forwards their message to. Upon receipt of a notification message a data consumer will decide whether to download the data from the Web-service designated in the message. Consequently, WIS2 no longer needs Routing Tables.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>WIS2 uses the OASIS MQTT messaging protocol, versions 3.1.1 and 5.0.</p>
-</div>
-<div class="paragraph">
-<p>Several open-source message brokers are available that support MQTT. These include Mosquitto and RabbitMQ.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_notification_message_format_and_structure"><a class="anchor" href="#_notification_message_format_and_structure"></a>5.3. Notification message format and structure</h3>
-<div class="paragraph">
-<p>WIS2 notification messages must be understood by all participants of WIS. Consequently, these messages must comply with a standard format and structure.</p>
-</div>
-<div class="paragraph">
-<p>WIS2 notification messages extend the GeoJSON format (RFC 7946), requiring the following elements to be included in each message:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>A globally unique identifier (GUID) for the notification message</p>
-</li>
-<li>
-<p>Geometry (point or polygon) of the associated data object (may be null)</p>
-</li>
-<li>
-<p>Publication time of the notification message</p>
-</li>
-<li>
-<p>Date-time of the associated data object</p>
-</li>
-<li>
-<p>Topic hierarchy and unique identifier for the associated data object</p>
-</li>
-<li>
-<p>Actionable links that can be followed to access the associated data object</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Details of the WIS2 notification message format are available in WIS2 messages</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_standard_topic_hierarchy"><a class="anchor" href="#_standard_topic_hierarchy"></a>5.4. Standard topic hierarchy</h3>
-<div class="paragraph">
-<p>A ‘Pub/Sub’ message broker uses "topics" to organise messages. Messages are published to a specific topic, and consumers subscribe to the topics they are interested in so that the message broker sends them all relevant messages.</p>
-</div>
-<div class="paragraph">
-<p>To simplify things for all Data Publishers and Data Consumers, a standard topic structure is used throughout WIS2: the "WIS2 Topic Hierarchy".</p>
-</div>
-<div class="paragraph">
-<p>The standard topic structure enables notification messages to be grouped according to Member (e.g., country or territory), originating WIS Centre, and data type. It embeds the classification scheme of Earth System domains used Annex a of the WMO Unified Data Policy (Resolution 1, Cg-Ext (2021)).</p>
-</div>
-<div class="paragraph">
-<p>The top-level of the standard topic structure "channel" is used to distinguish between notification messages from WIS Centres (channel = "origin") and notification messages from Global Cache services that host cached copies of data from the originating WIS Centre (channel = "cache"). This makes it simple for Data Consumers to comply with clause 3.2.13 from the Manual on WIS, Vol II:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>3.2.13 Data consumers may access data from Global Caches or directly from a WIS node. Data consumers SHOULD access real-time and near real-time core data via Global Caches.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>There is a one-to-one mapping <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup> between the theme (i.e., keyword) used to describe a Dataset in discovery metadata and the topic used to publish notifications about that Dataset.</p>
-</div>
-<div class="paragraph">
-<p>Details of the WIS2 Topic Hierarchy are available in WIS2 topic hierarchy.</p>
-</div>
-<div class="paragraph">
-<p>Note: the WIS2 Topic Hierarchy, particularly Earth System-Domain-Subcategory and below, is expected to evolve during the WIS2 pilot phase.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_discovery_metadata"><a class="anchor" href="#_discovery_metadata"></a>6. Discovery metadata</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Discovery metadata provides a description of a dataset sufficient for someone to determine whether that dataset meets their needs and includes links to where one may access more detailed information about the dataset or access the dataset itself.</p>
-</div>
-<div class="paragraph">
-<p>Discovery metadata is an essential component of WIS2.</p>
-</div>
-<div class="paragraph">
-<p>Data Publishers must provide a discovery metadata record for each dataset they make available within WIS. These discovery metadata records are aggregated within the Global Discovery Catalogue providing Data Consumers the means to search and browse every dataset within WIS.</p>
-</div>
-<div class="paragraph">
-<p>Discovery metadata provided in WIS2 must conform to the WMO Core Metadata Profile version 2 (WCMP2), a profile of the OGC API - Records standard.</p>
-</div>
-<div class="paragraph">
-<p>The WCMP2 specification, including usage examples, is published WCMP2.</p>
-</div>
-<div class="paragraph">
-<p>TODO: Add link to the WCMP2 specification</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_wis_metrics"><a class="anchor" href="#_wis_metrics"></a>7. WIS metrics</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.</p>
-</div>
-<div class="paragraph">
-<p>WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualisation of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io <sup class="footnote" id="_footnote_cncf-openmetrics">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>.</p>
-</div>
-<div class="paragraph">
-<p>The roles of centres with respect to the monitoring as well as the content and structure of metrics specific to WIS2 (e.g., data availability) are described below.</p>
-</div>
-<div class="sect2">
-<h3 id="_roles"><a class="anchor" href="#_roles"></a>7.1. Roles</h3>
 <div class="sect3">
-<h4 id="_global_monitoring_gm"><a class="anchor" href="#_global_monitoring_gm"></a>7.1.1. Global Monitoring (GM)</h4>
+<h4 id="_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"><a class="anchor" href="#_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"></a>1.3.1. How to publish Dataset discovery metadata to the Global Discovery Catalogue</h4>
 <div class="paragraph">
-<p>The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.</p>
+<p>A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_services"><a class="anchor" href="#_global_services"></a>7.1.2. Global Services</h4>
+<h4 id="_how_to_publish_data_notifications"><a class="anchor" href="#_how_to_publish_data_notifications"></a>1.3.2. How to publish data notifications</h4>
 <div class="paragraph">
-<p>The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue and so on expose monitoring metrics on their respective service to the Global Monitoring. See <a href="#wis2-metric-hierarchy">[wis2-metric-hierarchy]</a> for further details.</p>
+<p>A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wis2_nodes"><a class="anchor" href="#_wis2_nodes"></a>7.1.3. WIS2 Nodes</h4>
+<h4 id="_how_to_publish_data_to_the_global_broker"><a class="anchor" href="#_how_to_publish_data_to_the_global_broker"></a>1.3.3. How to publish data to the Global Broker</h4>
 <div class="paragraph">
-<p>There is no requirement on WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which in turn can provide metrics on the availability of WIS2 Nodes.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_sensor_centres_and_wmo_programs"><a class="anchor" href="#_sensor_centres_and_wmo_programs"></a>7.1.4. Sensor Centres and WMO programs</h4>
-<div class="paragraph">
-<p>WMO Programs can define monitoring requirements in order to be able to verify if the program&#8217;s requirements are met. To do so, they need to define the relevant metrics. Metrics not directly related to the core services of WIS2 can be exported by so called Sensor Centres. Sensor Centres can read data or query services defined by the relevant WMO Program and provide the results in OpenMetrics format.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_wis2_metric_hierarchy"><a class="anchor" href="#_wis2_metric_hierarchy"></a>7.2. WIS2 Metric Hierarchy</h3>
-<div class="sect3">
-<h4 id="_conventions_for_metric_naming"><a class="anchor" href="#_conventions_for_metric_naming"></a>7.2.1. Conventions for metric naming</h4>
-<div class="paragraph">
-<p>Metrics for the WIS2 monitoring should follow the naming convention:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>wmo_&lt;program&gt;_&lt;name&gt;</pre>
-</div>
+<p>Data publishing is realized as a function of publishing data notifications (see 2.1.2 How to publish data notifications ).</p>
 </div>
 <div class="paragraph">
-<p>where program is the name of the responsible WMO Program and name is the name of the metric. Examples for WIS2 metrics can look like</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>wmo_wis2_gc_received</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>wmo_wis2_gb_messages_invalid</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy <sup class="footnote" id="_footnote_wmo-wmh">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_metrics_for_global_brokers"><a class="anchor" href="#_metrics_for_global_brokers"></a>7.2.2. Metrics for Global Brokers</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv</a></th>
-</tr>
-</thead>
-</table>
-<div class="paragraph">
-<p>See <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup> for further details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_metrics_for_global_caches"><a class="anchor" href="#_metrics_for_global_caches"></a>7.2.3. Metrics for Global Caches</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv</a></th>
-</tr>
-</thead>
-</table>
-<div class="paragraph">
-<p>See <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup> for further details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_metrics_for_global_discovery_catalogues"><a class="anchor" href="#_metrics_for_global_discovery_catalogues"></a>7.2.4. Metrics for Global Discovery Catalogues</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv</a></th>
-</tr>
-</thead>
-</table>
-<div class="paragraph">
-<p>See <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup> for further details.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_other_metrics"><a class="anchor" href="#_other_metrics"></a>7.2.5. Other metrics</h4>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/sensor.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/sensor.csv</a></th>
-</tr>
-</thead>
-</table>
-<div class="paragraph">
-<p>See <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup> for further details.</p>
+<p>TODO: To be completed</p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_implementation_and_operation_of_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_wis2_node"></a>8. Implementation and operation of WIS2 Node</h2>
+<h2 id="_part_ii"><a class="anchor" href="#_part_ii"></a>2. PART II</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_practices_and_procedures"><a class="anchor" href="#_practices_and_procedures"></a>8.1. Practices and procedures</h3>
+<h3 id="_wis2_architecture"><a class="anchor" href="#_wis2_architecture"></a>2.1. WIS2 Architecture</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_implementation_and_operation_of_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_wis2_node"></a>2.2. Implementation and operation of WIS2 Node</h3>
 <div class="sect3">
-<h4 id="_registration_and_decommissioning_of_a_wis_node"><a class="anchor" href="#_registration_and_decommissioning_of_a_wis_node"></a>8.1.1. Registration and decommissioning of a WIS node</h4>
+<h4 id="_practices_and_procedures"><a class="anchor" href="#_practices_and_procedures"></a>2.2.1. Practices and procedures</h4>
+<div class="sect4">
+<h5 id="_registration_and_decommissioning_of_a_wis_node"><a class="anchor" href="#_registration_and_decommissioning_of_a_wis_node"></a>2.2.1.1. Registration and decommissioning of a WIS node</h5>
 <div class="paragraph">
 <p>This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.</p>
 </div>
@@ -1811,8 +934,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: To be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>8.1.2. Registration and removal of a Dataset</h4>
+<div class="sect4">
+<h5 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>2.2.1.2. Registration and removal of a Dataset</h5>
 <div class="paragraph">
 <p>This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.</p>
 </div>
@@ -1820,8 +943,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_connecting_with_global_services"><a class="anchor" href="#_connecting_with_global_services"></a>8.1.3. Connecting with Global Services</h4>
+<div class="sect4">
+<h5 id="_connecting_with_global_services"><a class="anchor" href="#_connecting_with_global_services"></a>2.2.1.3. Connecting with Global Services</h5>
 <div class="paragraph">
 <p>This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.</p>
 </div>
@@ -1830,10 +953,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_publishing_data_discovery_metadata_and_notification_messages"><a class="anchor" href="#_publishing_data_discovery_metadata_and_notification_messages"></a>8.2. Publishing data, discovery metadata, and notification messages</h3>
 <div class="sect3">
-<h4 id="_discovery_metadata_2"><a class="anchor" href="#_discovery_metadata_2"></a>8.2.1. Discovery metadata</h4>
+<h4 id="_publishing_data_discovery_metadata_and_notification_messages"><a class="anchor" href="#_publishing_data_discovery_metadata_and_notification_messages"></a>2.2.2. Publishing data, discovery metadata, and notification messages</h4>
+<div class="sect4">
+<h5 id="_discovery_metadata"><a class="anchor" href="#_discovery_metadata"></a>2.2.2.1. Discovery metadata</h5>
 <div class="paragraph">
 <p>Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2</p>
 </div>
@@ -1850,8 +973,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_notification_messages"><a class="anchor" href="#_notification_messages"></a>8.2.2. Notification messages</h4>
+<div class="sect4">
+<h5 id="_notification_messages"><a class="anchor" href="#_notification_messages"></a>2.2.2.2. Notification messages</h5>
 <div class="paragraph">
 <p>There is no requirement for an NC/DCPC to publish "data availability" notification messages relating to infrequently changing Datasets, such as a data archive, especially where the user community have no requirement to be instantly updated about changes to a Dataset (e.g., the addition of new records into a climate observation archive). Data Publishers should note that without providing notification messages their data will not be copied into the Global Cache. However, since the Global Cache only holds real-time (or near real-time) Datasets, this is not a concern for Data Publishers with infrequently changing Datasets.</p>
 </div>
@@ -1859,8 +982,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_data"><a class="anchor" href="#_data"></a>8.2.3. Data</h4>
+<div class="sect4">
+<h5 id="_data"><a class="anchor" href="#_data"></a>2.2.2.3. Data</h5>
 <div class="paragraph">
 <p>WIS2 provides the "plumbing" for data sharing within the WMO community, but it defines neither which data to share, nor how that data should be encoded. WIS Centres need to evaluate WMO Programme requirements and the WMO Unified Data Policy to determine which Datasets should be made available through WIS.</p>
 </div>
@@ -1940,18 +1063,18 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <div class="paragraph">
 <p>TODO: to be completed</p>
 </div>
-<div class="sect4">
-<h5 id="_publication_and_topic_selection"><a class="anchor" href="#_publication_and_topic_selection"></a>8.2.3.1. Publication and topic selection</h5>
+<div class="sect5">
+<h6 id="_publication_and_topic_selection"><a class="anchor" href="#_publication_and_topic_selection"></a>Publication and topic selection</h6>
 <div class="paragraph">
 <p>When publishing a dataset, a data publisher selects a given topic according to the WIS Topic Hierarchy.  Given the multidisciplinary nature of some data, a data publisher must select a single topic for publication purposes, and always uses WCMP2 discovery metadata to provide a fulsome description of their dataset and its relevance to additional disciplines.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_performance_management"><a class="anchor" href="#_performance_management"></a>8.3. Performance management</h3>
 <div class="sect3">
-<h4 id="_service_levels_and_performance_indicators"><a class="anchor" href="#_service_levels_and_performance_indicators"></a>8.3.1. Service levels and performance indicators</h4>
+<h4 id="_performance_management"><a class="anchor" href="#_performance_management"></a>2.2.3. Performance management</h4>
+<div class="sect4">
+<h5 id="_service_levels_and_performance_indicators"><a class="anchor" href="#_service_levels_and_performance_indicators"></a>2.2.3.1. Service levels and performance indicators</h5>
 <div class="paragraph">
 <p>This section describes the minimum performance criteria for operation of a WIS node.</p>
 </div>
@@ -1959,8 +1082,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_provision_of_system_performance_metrics"><a class="anchor" href="#_provision_of_system_performance_metrics"></a>8.3.2. Provision of system performance metrics</h4>
+<div class="sect4">
+<h5 id="_provision_of_system_performance_metrics"><a class="anchor" href="#_provision_of_system_performance_metrics"></a>2.2.3.2. Provision of system performance metrics</h5>
 <div class="paragraph">
 <p>This section describes how a WIS node should provide metrics to the Global Monitor service and its primary GISC.</p>
 </div>
@@ -1969,8 +1092,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_wis_node_reference_implementation_wis2box"><a class="anchor" href="#_wis_node_reference_implementation_wis2box"></a>8.4. WIS Node reference implementation: wis2box</h3>
+<div class="sect3">
+<h4 id="_wis_node_reference_implementation_wis2box"><a class="anchor" href="#_wis_node_reference_implementation_wis2box"></a>2.2.4. WIS Node reference implementation: wis2box</h4>
 <div class="paragraph">
 <p>Members may use whichever software components they consider most appropriate to comply with the WIS2 Technical Regulations.</p>
 </div>
@@ -2019,35 +1142,33 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_implementation_and_operation_of_a_global_service"><a class="anchor" href="#_implementation_and_operation_of_a_global_service"></a>9. Implementation and operation of a Global Service</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>9.1. Procedure for registration of a new Global Service</h3>
+<h3 id="_implementation_and_operation_of_a_global_service"><a class="anchor" href="#_implementation_and_operation_of_a_global_service"></a>2.3. Implementation and operation of a Global Service</h3>
+<div class="sect3">
+<h4 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>2.3.1. Procedure for registration of a new Global Service</h4>
 <div class="paragraph">
 <p>During the initial stages of the WIS2 pilot phase an informal process is used to register interest in operating a Global Service. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>9.2. Performance management and monitoring of a Global Service</h3>
 <div class="sect3">
-<h4 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>9.2.1. Service levels, performance indicators, and fair-usage policies</h4>
+<h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>2.3.2. Performance management and monitoring of a Global Service</h4>
+<div class="sect4">
+<h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>2.3.2.1. Service levels, performance indicators, and fair-usage policies</h5>
 <div class="paragraph">
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>9.2.2. Provision of metrics</h4>
+<div class="sect4">
+<h5 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>2.3.2.2. Provision of metrics</h5>
 <div class="paragraph">
 <p>TODO: to be completed</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_global_broker"><a class="anchor" href="#_global_broker"></a>9.3. Global Broker</h3>
 <div class="sect3">
-<h4 id="_technical_considerations"><a class="anchor" href="#_technical_considerations"></a>9.3.1. Technical considerations</h4>
+<h4 id="_global_broker"><a class="anchor" href="#_global_broker"></a>2.3.3. Global Broker</h4>
+<div class="sect4">
+<h5 id="_technical_considerations"><a class="anchor" href="#_technical_considerations"></a>2.3.3.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2103,8 +1224,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>9.3.2. Practices and procedures</h4>
+<div class="sect4">
+<h5 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>2.3.3.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:</p>
 </div>
@@ -2123,10 +1244,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_global_cache"><a class="anchor" href="#_global_cache"></a>9.4. Global Cache</h3>
 <div class="sect3">
-<h4 id="_technical_considerations_2"><a class="anchor" href="#_technical_considerations_2"></a>9.4.1. Technical considerations</h4>
+<h4 id="_global_cache"><a class="anchor" href="#_global_cache"></a>2.3.4. Global Cache</h4>
+<div class="sect4">
+<h5 id="_technical_considerations_2"><a class="anchor" href="#_technical_considerations_2"></a>2.3.4.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2171,8 +1292,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_practices_and_procedures_3"><a class="anchor" href="#_practices_and_procedures_3"></a>9.4.2. Practices and procedures</h4>
+<div class="sect4">
+<h5 id="_practices_and_procedures_3"><a class="anchor" href="#_practices_and_procedures_3"></a>2.3.4.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 * Assigning a Global Cache to a NC or DCPC
@@ -2183,10 +1304,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_global_discovery_catalogue"><a class="anchor" href="#_global_discovery_catalogue"></a>9.5. Global Discovery Catalogue</h3>
 <div class="sect3">
-<h4 id="_technical_considerations_3"><a class="anchor" href="#_technical_considerations_3"></a>9.5.1. Technical considerations</h4>
+<h4 id="_global_discovery_catalogue"><a class="anchor" href="#_global_discovery_catalogue"></a>2.3.5. Global Discovery Catalogue</h4>
+<div class="sect4">
+<h5 id="_technical_considerations_3"><a class="anchor" href="#_technical_considerations_3"></a>2.3.5.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2234,8 +1355,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_practices_and_procedures_4"><a class="anchor" href="#_practices_and_procedures_4"></a>9.5.2. Practices and procedures</h4>
+<div class="sect4">
+<h5 id="_practices_and_procedures_4"><a class="anchor" href="#_practices_and_procedures_4"></a>2.3.5.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:</p>
 </div>
@@ -2260,10 +1381,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_global_monitor"><a class="anchor" href="#_global_monitor"></a>9.6. Global Monitor</h3>
 <div class="sect3">
-<h4 id="_technical_considerations_4"><a class="anchor" href="#_technical_considerations_4"></a>9.6.1. Technical Considerations</h4>
+<h4 id="_global_monitor"><a class="anchor" href="#_global_monitor"></a>2.3.6. Global Monitor</h4>
+<div class="sect4">
+<h5 id="_technical_considerations_4"><a class="anchor" href="#_technical_considerations_4"></a>2.3.6.1. Technical Considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2284,8 +1405,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>TODO: to be completed</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_practices_and_procedures_5"><a class="anchor" href="#_practices_and_procedures_5"></a>9.6.2. Practices and procedures</h4>
+<div class="sect4">
+<h5 id="_practices_and_procedures_5"><a class="anchor" href="#_practices_and_procedures_5"></a>2.3.6.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>Procedures pertinent to the Global Monitor will be described here once validated through testing during the WIS2 pilot phase.</p>
 </div>
@@ -2295,73 +1416,21 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_coordinating_wis"><a class="anchor" href="#_coordinating_wis"></a>10. Coordinating WIS</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>GISCs ensure the efficient and effective operation of WIS and WIS2 within their Area of Responsibility (AoR) and, in collaboration with the WMO Secretariat, globally. In WIS2 they cooperate with the Global Services and the WIS2 Nodes in their AoR. In the following the term WIS also refers to WIS2.</p>
-</div>
-<div class="paragraph">
-<p>Guidance is provided here to help GISCs fulfil this vital obligation.</p>
-</div>
 <div class="sect2">
-<h3 id="_supporting_wis_centres_in_their_area_of_responsibility"><a class="anchor" href="#_supporting_wis_centres_in_their_area_of_responsibility"></a>10.1. Supporting WIS centres in their area of responsibility</h3>
-<div class="paragraph">
-<p>The primary function of a GISC is to support Members in their Area of Responsibility (AoR) participate effectively in WIS – both as Data Publishers and Data Consumers.</p>
-</div>
-<div class="paragraph">
-<p>To provide effective support, it is recommended that GISCs operate a helpdesk or ticketing system to manage issues and requests raised from WIS Centres in their AoR.</p>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_performance_management_2"><a class="anchor" href="#_performance_management_2"></a>10.2. Performance management</h3>
-<div class="paragraph">
-<p>Monitoring of WIS is intended to improve the exchange of information by WMO Programmes and to ensure that the functions of WIS centres minimize the cost of operating WIS. It is also essential for planning and scaling WIS components to meet changing user needs. It complements monitoring of quality of the information being exchanged, which is the responsibility of the Programmes sponsoring the information within WIS.</p>
-</div>
-<div class="paragraph">
-<p>To ensure efficient and effective operation of WIS in their Area of Responsibility (AoR), GISCs are responsible for collecting metrics from Centres in their AoR.</p>
-</div>
-<div class="paragraph">
-<p>A GISC may provide a publicly visible portal displaying performance status of WIS.</p>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_incident_management"><a class="anchor" href="#_incident_management"></a>10.3. Incident management</h3>
-<div class="paragraph">
-<p>GISC are responsible for resolving incidents that impede the operation of WIS.</p>
-</div>
-<div class="paragraph">
-<p>Appendix E of the Guide to the WMO Information System (WMO No. 1061) describes the key management activities relating to incident management and service continuity in IT systems.</p>
-</div>
-<div class="paragraph">
-<p>Where the impact arising from an incident may affect WIS Centres outside their Area of Responsibility (AoR), a GISC must coordinate with WMO Secretariat and other GISCs.</p>
-</div>
-<div class="paragraph">
-<p>Appendix F of the Guide to the WMO Information System (WMO No. 1061) describes the process for responding to an IT security (cybersecurity) incident.</p>
-</div>
-<div class="paragraph">
-<p>GISCs collaborative provide a "GISC Watch" function wherein, according to a mutually agreed roster, a nominated GISC will actively monitor the global performance of the WIS and coordinate with WMO Secretariat and other GISCs to respond to any issues or incidents arising.</p>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
+<h3 id="_operations"><a class="anchor" href="#_operations"></a>2.4. Operations</h3>
+
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_information_management"><a class="anchor" href="#_information_management"></a>11. Information management</h2>
+<h2 id="_part_iii"><a class="anchor" href="#_part_iii"></a>3. PART III</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_introduction"><a class="anchor" href="#_introduction"></a>11.1. Introduction</h3>
+<h3 id="_information_management"><a class="anchor" href="#_information_management"></a>3.1. Information management</h3>
 <div class="sect3">
-<h4 id="_background"><a class="anchor" href="#_background"></a>11.1.1. Background</h4>
+<h4 id="_introduction"><a class="anchor" href="#_introduction"></a>3.1.1. Introduction</h4>
+<div class="sect4">
+<h5 id="_background"><a class="anchor" href="#_background"></a>3.1.1.1. Background</h5>
 <div class="paragraph">
 <p>The efficient and effective provision of services relying on meteorological, climatological, hydrological and oceanographic information depends on a reliable information infrastructure. This infrastructure should be guided by community best practices and standards, including recommendations and requirements on sourcing, securing, managing, archiving, exchanging, and providing easy access to information. These terms and activities can be grouped under the term "information management" and this part of the Guide aims to provide high-level guidance on those activities. This is done by identifying and describing the fundamental principles of good information management and by highlighting the different stages of the information management lifecycle.</p>
 </div>
@@ -2369,8 +1438,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>Note: The term "information" is used in a general sense and includes data and products.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_scope"><a class="anchor" href="#_scope"></a>11.1.2. Scope</h4>
+<div class="sect4">
+<h5 id="_scope"><a class="anchor" href="#_scope"></a>3.1.1.2. Scope</h5>
 <div class="paragraph">
 <p>High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.</p>
 </div>
@@ -2397,8 +1466,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ol>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_intended_audience"><a class="anchor" href="#_intended_audience"></a>11.1.3. Intended audience</h4>
+<div class="sect4">
+<h5 id="_intended_audience"><a class="anchor" href="#_intended_audience"></a>3.1.1.3. Intended audience</h5>
 <div class="paragraph">
 <p>This guidance is primarily aimed at personnel within WMO centres, with responsibility for planning and undertaking the creation or acquisition, stewardship, exchange and provision of information related to the Earth system.</p>
 </div>
@@ -2426,13 +1495,13 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_principles_of_information_management"><a class="anchor" href="#_principles_of_information_management"></a>11.2. Principles of information management</h3>
+<div class="sect3">
+<h4 id="_principles_of_information_management"><a class="anchor" href="#_principles_of_information_management"></a>3.1.2. Principles of information management</h4>
 <div class="paragraph">
 <p>Effective management of information is essential for WMO Centres to deliver operational services and information that is authoritative, seamless, secure and timely. The principles below underpin this management across the full information lifecycle and provide a framework for information management. The principles are independent of information type and are largely independent of technology, they are therefore expected to remain stable over time.</p>
 </div>
-<div class="sect3">
-<h4 id="_principle_1_information_is_a_valued_asset"><a class="anchor" href="#_principle_1_information_is_a_valued_asset"></a>11.2.1. Principle 1: Information is a valued asset</h4>
+<div class="sect4">
+<h5 id="_principle_1_information_is_a_valued_asset"><a class="anchor" href="#_principle_1_information_is_a_valued_asset"></a>3.1.2.1. Principle 1: Information is a valued asset</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2444,8 +1513,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_2_information_must_be_managed"><a class="anchor" href="#_principle_2_information_must_be_managed"></a>11.2.2. Principle 2: Information must be managed</h4>
+<div class="sect4">
+<h5 id="_principle_2_information_must_be_managed"><a class="anchor" href="#_principle_2_information_must_be_managed"></a>3.1.2.2. Principle 2: Information must be managed</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2460,8 +1529,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_3_information_must_be_fit_for_purpose"><a class="anchor" href="#_principle_3_information_must_be_fit_for_purpose"></a>11.2.3. Principle 3: Information must be fit for purpose</h4>
+<div class="sect4">
+<h5 id="_principle_3_information_must_be_fit_for_purpose"><a class="anchor" href="#_principle_3_information_must_be_fit_for_purpose"></a>3.1.2.3. Principle 3: Information must be fit for purpose</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2476,8 +1545,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_4_information_must_be_standardized_and_interoperable"><a class="anchor" href="#_principle_4_information_must_be_standardized_and_interoperable"></a>11.2.4. Principle 4: Information must be standardized and interoperable</h4>
+<div class="sect4">
+<h5 id="_principle_4_information_must_be_standardized_and_interoperable"><a class="anchor" href="#_principle_4_information_must_be_standardized_and_interoperable"></a>3.1.2.4. Principle 4: Information must be standardized and interoperable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2498,8 +1567,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_5_information_must_be_well_documented"><a class="anchor" href="#_principle_5_information_must_be_well_documented"></a>11.2.5. Principle 5: Information must be well documented</h4>
+<div class="sect4">
+<h5 id="_principle_5_information_must_be_well_documented"><a class="anchor" href="#_principle_5_information_must_be_well_documented"></a>3.1.2.5. Principle 5: Information must be well documented</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2514,8 +1583,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_6_information_must_be_discoverable_accessible_and_retrievable"><a class="anchor" href="#_principle_6_information_must_be_discoverable_accessible_and_retrievable"></a>11.2.6. Principle 6: Information must be discoverable, accessible and retrievable</h4>
+<div class="sect4">
+<h5 id="_principle_6_information_must_be_discoverable_accessible_and_retrievable"><a class="anchor" href="#_principle_6_information_must_be_discoverable_accessible_and_retrievable"></a>3.1.2.6. Principle 6: Information must be discoverable, accessible and retrievable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2527,8 +1596,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_7_information_should_be_reusable"><a class="anchor" href="#_principle_7_information_should_be_reusable"></a>11.2.7. Principle 7: Information should be reusable</h4>
+<div class="sect4">
+<h5 id="_principle_7_information_should_be_reusable"><a class="anchor" href="#_principle_7_information_should_be_reusable"></a>3.1.2.7. Principle 7: Information should be reusable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2543,11 +1612,11 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 <div class="paragraph">
-<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
+<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup></p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_principle_8_information_management_is_subject_to_accountability_and_governance"><a class="anchor" href="#_principle_8_information_management_is_subject_to_accountability_and_governance"></a>11.2.8. Principle 8: Information management is subject to accountability and governance.</h4>
+<div class="sect4">
+<h5 id="_principle_8_information_management_is_subject_to_accountability_and_governance"><a class="anchor" href="#_principle_8_information_management_is_subject_to_accountability_and_governance"></a>3.1.2.8. Principle 8: Information management is subject to accountability and governance.</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2569,10 +1638,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_the_information_management_lifecycle"><a class="anchor" href="#_the_information_management_lifecycle"></a>11.3. The information management lifecycle</h3>
 <div class="sect3">
-<h4 id="_overview"><a class="anchor" href="#_overview"></a>11.3.1. Overview</h4>
+<h4 id="_the_information_management_lifecycle"><a class="anchor" href="#_the_information_management_lifecycle"></a>3.1.3. The information management lifecycle</h4>
+<div class="sect4">
+<h5 id="_overview"><a class="anchor" href="#_overview"></a>3.1.3.1. Overview</h5>
 <div class="paragraph">
 <p>All information should be subject to a well defined and documented lifecycle. The governance of this process is often referred to as the information management lifecycle and this process helps organizations manage information throughout its full lifecycle, from planning, creation and acquisition through usage and exchange to archival and disposal.</p>
 </div>
@@ -2602,10 +1671,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>Governance covers the rules that apply to managing information in a secure and transparent manner, documentation covers the act of recording the reasons for, and detail of, all operations in the information management process.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_overarching_requirements"><a class="anchor" href="#_overarching_requirements"></a>11.3.2. Overarching requirements</h4>
 <div class="sect4">
-<h5 id="_governance"><a class="anchor" href="#_governance"></a>11.3.2.1. Governance</h5>
+<h5 id="_overarching_requirements"><a class="anchor" href="#_overarching_requirements"></a>3.1.3.2. Overarching requirements</h5>
+<div class="sect5">
+<h6 id="_governance"><a class="anchor" href="#_governance"></a>Governance</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2620,8 +1689,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_documentation"><a class="anchor" href="#_documentation"></a>11.3.2.2. Documentation</h5>
+<div class="sect5">
+<h6 id="_documentation"><a class="anchor" href="#_documentation"></a>Documentation</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -2634,10 +1703,10 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_aspects_of_the_information_management_lifecycle"><a class="anchor" href="#_aspects_of_the_information_management_lifecycle"></a>11.3.3. Aspects of the information management lifecycle</h4>
 <div class="sect4">
-<h5 id="_planning_information_creation_and_acquisition"><a class="anchor" href="#_planning_information_creation_and_acquisition"></a>11.3.3.1. Planning, information creation and acquisition</h5>
+<h5 id="_aspects_of_the_information_management_lifecycle"><a class="anchor" href="#_aspects_of_the_information_management_lifecycle"></a>3.1.3.3. Aspects of the information management lifecycle</h5>
+<div class="sect5">
+<h6 id="_planning_information_creation_and_acquisition"><a class="anchor" href="#_planning_information_creation_and_acquisition"></a>Planning, information creation and acquisition</h6>
 <div class="paragraph">
 <p>Before the creation or acquisition of new information a business case and information management plan should be developed, covering both the input information sources and any derived information. The plans should include:</p>
 </div>
@@ -2676,8 +1745,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>To ensure traceability and reproducibility the information and documents at this, and subsequent stages, should be version controlled and clearly labelled with version information. Similarly, software, or computer code, used to generate or process information should be version controlled with the version information recorded in the documentation and metadata. Where possible, software should be maintained within a code repository.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_representation_and_metadata"><a class="anchor" href="#_representation_and_metadata"></a>11.3.3.2. Representation and metadata</h5>
+<div class="sect5">
+<h6 id="_representation_and_metadata"><a class="anchor" href="#_representation_and_metadata"></a>Representation and metadata</h6>
 <div class="paragraph">
 <p>The formats used to store and exchange information should be standardized to ensure its usability, both in the short and long term. It is essential that the information can be accessed many years after archival if required. To ensure this usability, the format and version information should be recorded in the metadata record for the information and should be included in the information where the format allows.</p>
 </div>
@@ -2691,8 +1760,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>The WMO formats specified in the manuals are subject to strong governance processes, and changes to the formats can be traced through the versions of the manuals. The code tables and controlled vocabularies are also maintained in a code repository. To enable future reuse, the technical information, including detailed format specifications, should be archived alongside information for future access. This includes any controlled vocabulary, such as BUFR tables or WIGOS metadata code lists, associated with the format.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_publication_and_exchange_of_information"><a class="anchor" href="#_publication_and_exchange_of_information"></a>11.3.3.3. Publication and exchange of information</h5>
+<div class="sect5">
+<h6 id="_publication_and_exchange_of_information"><a class="anchor" href="#_publication_and_exchange_of_information"></a>Publication and exchange of information</h6>
 <div class="paragraph">
 <p>To maximize the benefits and return on investment in the acquisition and generation of information there needs to be a clear method as to how the information will be published, exchanged and accessed by users.</p>
 </div>
@@ -2715,8 +1784,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>Note: The newsletter is available from: <a href="https://community.wmo.int/news/operational-newsletter" class="bare">https://community.wmo.int/news/operational-newsletter</a></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_usage_and_communication"><a class="anchor" href="#_usage_and_communication"></a>11.3.3.4. Usage and communication</h5>
+<div class="sect5">
+<h6 id="_usage_and_communication"><a class="anchor" href="#_usage_and_communication"></a>Usage and communication</h6>
 <div class="paragraph">
 <p>For information to have value it must inform users, aid knowledge discovery and have impact through informed decision making. Ensuring that the user can make effective use of the information is an important step in the information management lifecycle. This takes two forms:</p>
 </div>
@@ -2743,8 +1812,8 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 <p>The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_storage_archival_and_disposal"><a class="anchor" href="#_storage_archival_and_disposal"></a>11.3.3.5. Storage, archival and disposal</h5>
+<div class="sect5">
+<h6 id="_storage_archival_and_disposal"><a class="anchor" href="#_storage_archival_and_disposal"></a>Storage, archival and disposal</h6>
 <div class="paragraph">
 <p>The type of storage used should be appropriate to the type of information stored. Core information exchanged operationally should be stored and made available via high-availability and low latency media and services. For some operation critical information, such as hazard warnings, there is a requirement for the end-to-end global distribution of the information to be completed in two minutes. For other operational data there is a requirement for the global exchange to be completed in 15 minutes.</p>
 </div>
@@ -2769,16 +1838,16 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_other_considerations"><a class="anchor" href="#_other_considerations"></a>11.4. Other considerations</h3>
 <div class="sect3">
-<h4 id="_technology_and_technology_migration"><a class="anchor" href="#_technology_and_technology_migration"></a>11.4.1. Technology and technology migration</h4>
+<h4 id="_other_considerations"><a class="anchor" href="#_other_considerations"></a>3.1.4. Other considerations</h4>
+<div class="sect4">
+<h5 id="_technology_and_technology_migration"><a class="anchor" href="#_technology_and_technology_migration"></a>3.1.4.1. Technology and technology migration</h5>
 <div class="paragraph">
 <p>Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the WMO Guide to Emerging Data Issues (WMO-No. 1239).</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_information_security"><a class="anchor" href="#_information_security"></a>11.4.2. Information security</h4>
+<div class="sect4">
+<h5 id="_information_security"><a class="anchor" href="#_information_security"></a>3.1.4.2. Information security</h5>
 <div class="paragraph">
 <p>Further information on information security and best practices can be found in the WMO Guide to Information Technology Security (WMO-No. 1115).</p>
 </div>
@@ -2786,1598 +1855,24 @@ image::images/data-distribution-via-gb-propagating-data-between-gbs.png[Data dis
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_other_considerations_2"><a class="anchor" href="#_other_considerations_2"></a>12. Other considerations</h2>
+<h2 id="_part_iv"><a class="anchor" href="#_part_iv"></a>4. PART IV</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_competencies_of_personnel"><a class="anchor" href="#_competencies_of_personnel"></a>12.1. Competencies of personnel</h3>
+<h3 id="_security"><a class="anchor" href="#_security"></a>4.1. Security</h3>
 <div class="paragraph">
-<p>The Manual on WIS (WMO No. 1060), Vol II. Part I, 1.6, recommends that Members have access to staff who have the required competencies needed to operate their WIS Centres. This includes both generic Information Technology competencies and those specific to the operation of WIS.</p>
-</div>
-<div class="paragraph">
-<p>WIS2 embraces use of open standards and widely adopted Web technologies. As such, there are many training and development resources available online. WIS-specific competencies are described in Appendix A: Competencies.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_audit_and_certification_of_wis_centres"><a class="anchor" href="#_audit_and_certification_of_wis_centres"></a>12.2. Audit and certification of WIS Centres</h3>
-<div class="paragraph">
-<p>INFCOM recognizes that for WIS to remain fully functional regular reviews of each NC, DCPC, and GISC are required to assess ongoing compliance with the Manual on WIS. Recommended practices for this rolling review are provided in Appendix B: Recommended Practices for Audit and Certification of WIS Centres</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_pilot_phase_deployment_configuration"><a class="anchor" href="#_pilot_phase_deployment_configuration"></a>12.3. Pilot phase deployment configuration</h3>
-<div class="paragraph">
-<p>TODO: To be completed Once the WIS2 pilot phase is established, information will be added describing the location and configuration details required to connect to Global Services</p>
+<p>This section will introduce some concepts on the measures a publisher or a global service can implement to decrease the risk of cyber attacks.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>13. References</h2>
+<h2 id="_part_v"><a class="anchor" href="#_part_v"></a>5. PART V</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_normative"><a class="anchor" href="#_normative"></a>13.1. Normative</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a id="wmo-1060"></a> WMO: Manual on WIS (WMO No. 1060), Vol II. WIS 2.0</p>
-</li>
-<li>
-<p><a id="wmo-wcmp2"></a> WMO: WMO Core Metadata Profile version 2 (WCMP2) <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p>
-</li>
-<li>
-<p><a id="wmo-wth"></a> WMO: WIS2 Topic Hierarchy <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup></p>
-</li>
-<li>
-<p><a id="wmo-wnm"></a> WMO: WIS2 Notification Message format <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup></p>
-</li>
-<li>
-<p><a id="wmo-wmh"></a> WMO: WIS2 Metric Hierarchy <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
-</li>
-<li>
-<p><a id="w3c-www"></a> W3C: Architecture of the World Wide Web, Volume One <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup></p>
-</li>
-<li>
-<p><a id="ietf-rfc3339"></a> IETF: RFC 3339 Date and Time on the Internet: Timestamps <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup></p>
-</li>
-<li>
-<p><a id="ietf-rfc3986"></a> IETF: RFC 3986 Uniform Resource Identifier: Generic Syntax <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
-</li>
-<li>
-<p><a id="ietf-rfc7946"></a> IETF: RFC 7946 GeoJSON format <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogcapi-records"></a> OGC: OGC API-Records - Part 1: Core <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup></p>
-</li>
-<li>
-<p><a id="oasis-mqtt-311"></a> OASIS: MQTT 3.1.1 specification <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup></p>
-</li>
-<li>
-<p><a id="oasis-mqtt-50"></a> OASIS: MQTT 5.0 specification <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup></p>
-</li>
-<li>
-<p><a id="cncf-openmetrics"></a>: Cloud Native Computing Foundation: OpenMetrics <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_informative"><a class="anchor" href="#_informative"></a>13.2. Informative</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a id="wmo-1213"></a> WMO: WMO Information System 2.0 Strategy (WMO No. 1213) <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup></p>
-</li>
-<li>
-<p><a id="wmo-1239"></a> WMO: WMO Guidelines on Emerging Data Issues (WMO No. 1239) <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup></p>
-</li>
-<li>
-<p><a id="w3c-dwbp"></a> W3C: Data on the Web Best Practices <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup></p>
-</li>
-<li>
-<p>[[w3c-sdw-bp] [W3C/OGC Spatial Data on the Web Best Practices <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogc-cloud-native-geospatial-1"></a> OGC: Towards a Cloud-Native OGC. Part 1: The Vision: <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogc-cloud-native-geospatial-2"></a> OGC: Towards a Cloud-Native OGC. Part 2: The Standards: <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
-</li>
-<li>
-<p><a id="openapi-310"></a> OpenAPI Initiative: OpenAPI Specification v3.1.0 <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogcapi"></a> OGC: OGC API standards <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogcapi-features"></a> OGC: OGC API – Features – Part 1: Core <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogcapi-coverages"></a> OGC: OGC API – Coverages – Part 1: Core draft <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup></p>
-</li>
-<li>
-<p><a id="ogcapi-environmental-data-retrieval"></a> OGC: OGC API – Environmental Data Retrieval Standard <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup></p>
-</li>
-<li>
-<p><a id="schemaorg"></a> schema.org: Schema.org <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup></p>
-</li>
-<li>
-<p><a id="stac"></a> Spatio Temporal Asset Catalogue: Spatio Temporal Asset Catalogue specification <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup></p>
-</li>
-<li>
-<p><a id="wis2box"></a> wis2box: WIS2 in a box <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup></p>
-</li>
-<li>
-<p><a id="mosquitto"></a> Eclipse Foundation: Eclipse Mosquitto <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup></p>
-</li>
-<li>
-<p><a id="rabbitmq"></a> RabbitMQ: RabbitMQ MQTT plugin <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnotedef_41" title="View footnote.">41</a>]</sup></p>
-</li>
-<li>
-<p><a id="prometheus"></a> Prometheus: Prometheus <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnotedef_42" title="View footnote.">42</a>]</sup></p>
-</li>
-<li>
-<p><a id="grafana"></a> Grafana: Grafana <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnotedef_43" title="View footnote.">43</a>]</sup></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_competencies"><a class="anchor" href="#_competencies"></a>Annex A: Competencies</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Seven competencies across four basic functional areas have been identified as follows:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Infrastructure: manage the physical infrastructure</p>
-</li>
-<li>
-<p>Infrastructure: manage the operational applications</p>
-</li>
-<li>
-<p>Data: manage the data flow</p>
-</li>
-<li>
-<p>Data: manage data discovery</p>
-</li>
-<li>
-<p>External interactions: manage interaction among WIS centres</p>
-</li>
-<li>
-<p>External interactions: manage external user interactions</p>
-</li>
-<li>
-<p>Overall service: manage the operational service</p>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="_competency_1_manage_the_physical_infrastructure"><a class="anchor" href="#_competency_1_manage_the_physical_infrastructure"></a>A.1. Competency 1: manage the physical infrastructure</h3>
-<div class="sect3">
-<h4 id="_competency_description"><a class="anchor" href="#_competency_description"></a>A.1.1. Competency description</h4>
-<div class="paragraph">
-<p>Prepare, plan, design, procure, implement and operate the physical infrastructure, networks and applications required to support the WIS centre.</p>
-</div>
-<div class="paragraph">
-<p>Many of the skills required here are generic ICT skills and will have already been acquired as part of prior education and training or will be provided by hardware and system suppliers.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components"><a class="anchor" href="#_performance_components"></a>A.1.2. Performance components</h4>
+<h3 id="_competencies"><a class="anchor" href="#_competencies"></a>5.1. Competencies</h3>
 
-</div>
-<div class="sect3">
-<h4 id="_management_of_information_technology_operations"><a class="anchor" href="#_management_of_information_technology_operations"></a>A.1.3. Management of information technology operations</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Maintain the system in optimal operational condition by setting and meeting service levels, including:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Configuration;</p>
-</li>
-<li>
-<p>Preventative and corrective maintenance and servicing;</p>
-</li>
-<li>
-<p>Equipment replacement or upgrade;</p>
-</li>
-<li>
-<p>Networking and processing capacity;</p>
-</li>
-<li>
-<p>System monitoring and reporting procedures, and corrective actions;</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Provide contingency planning and operation backup and restoration;</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_management_of_facilities"><a class="anchor" href="#_management_of_facilities"></a>A.1.4. Management of facilities</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Manage physical site security;</p>
-</li>
-<li>
-<p>Manage physical site environmental control.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements"><a class="anchor" href="#_knowledge_and_skill_requirements"></a>A.1.5. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>General ICT skills;</p>
-</li>
-<li>
-<p>Operation, configuration and maintenance of equipment and applications;</p>
-</li>
-<li>
-<p>Recognized information technology service management frameworks;</p>
-</li>
-<li>
-<p>Current technologies and emerging trends;</p>
-</li>
-<li>
-<p>Service level agreements.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes"><a class="anchor" href="#_learning_outcomes"></a>A.1.6. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Maintain the system in optimal operational condition;</p>
-</li>
-<li>
-<p>Plan for upgrades and operation backup and restoration;</p>
-</li>
-<li>
-<p>Maintain site security and environmental control.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>WIS specific systems;</p>
-</li>
-<li>
-<p>WIS site security policies;</p>
-</li>
-<li>
-<p>Service level agreements for the centre.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities"><a class="anchor" href="#_learning_activities"></a>A.1.7. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Attend training sessions run by providers of systems and other tools or by other training providers;</p>
-</li>
-<li>
-<p>Respond to typical monitoring reports;</p>
-</li>
-<li>
-<p>Apply WIS site security measures and respond to typical incidents;</p>
-</li>
-<li>
-<p>Apply WIS site environmental control measures and respond to typical incidents.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment"><a class="anchor" href="#_assessment"></a>A.1.8. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Configure and maintain system components;</p>
-</li>
-<li>
-<p>Respond to monitoring reports;</p>
-</li>
-<li>
-<p>Apply WIS site security measures and respond to typical incidents;</p>
-</li>
-<li>
-<p>Apply WIS site environmental control measures and respond to typical incidents.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources"><a class="anchor" href="#_key_learning_resources"></a>A.1.9. Key learning resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Manufacturers’ handbooks and guides;</p>
-</li>
-<li>
-<p>Documentation of centre’s facilities;</p>
-</li>
-<li>
-<p>WIS manuals and guides;</p>
-</li>
-<li>
-<p>Tools to monitor system security;</p>
-</li>
-<li>
-<p>WIS security policies;</p>
-</li>
-<li>
-<p>WIS environmental control policies.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_2_manage_the_operational_applications"><a class="anchor" href="#_competency_2_manage_the_operational_applications"></a>A.2. Competency 2: manage the operational applications</h3>
-<div class="sect3">
-<h4 id="_competency_description_2"><a class="anchor" href="#_competency_description_2"></a>A.2.1. Competency description</h4>
-<div class="paragraph">
-<p>Prepare, plan, design, procure, implement and operate the applications required to support the WIS functions.</p>
-</div>
-<div class="paragraph">
-<p>Many of the skills required here are generic ICT skills and will have already been acquired as part of prior education and training or will be provided by suppliers of applications.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_2"><a class="anchor" href="#_performance_components_2"></a>A.2.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Meet service levels by maintaining applications in optimal operational condition through:</p>
-</li>
-<li>
-<p>Configuration of applications;</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Monitoring and responding to applications’ behaviour;</p>
-</li>
-<li>
-<p>Preventative and corrective maintenance;</p>
-</li>
-<li>
-<p>Replacement or upgrade of applications;</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Provide contingency planning and application backup and restoration;</p>
-</li>
-<li>
-<p>Ensure data integrity and completeness in the event of system failure;</p>
-</li>
-<li>
-<p>Ensure system security.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements_2"><a class="anchor" href="#_knowledge_and_skill_requirements_2"></a>A.2.3. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>ICT skills;</p>
-</li>
-<li>
-<p>Operation, configuration and maintenance of applications;</p>
-</li>
-<li>
-<p>Recognized information technology service management frameworks;</p>
-</li>
-<li>
-<p>Current technologies and emerging trends;</p>
-</li>
-<li>
-<p>WIS functions and requirements;</p>
-</li>
-<li>
-<p>WIS security policies.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_2"><a class="anchor" href="#_learning_outcomes_2"></a>A.2.4. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Operate, configure and maintain applications;</p>
-</li>
-<li>
-<p>Monitor applications and take corrective action;</p>
-</li>
-<li>
-<p>Apply and test WIS security protocols.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>WIS applications specific to the centre;</p>
-</li>
-<li>
-<p>WIS system security policies and procedures.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_2"><a class="anchor" href="#_learning_activities_2"></a>A.2.5. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Attend training sessions run by providers of systems and other tools or by other training providers;</p>
-</li>
-<li>
-<p>Initiate monitoring and reporting procedures and respond to typical monitoring reports;</p>
-</li>
-<li>
-<p>Apply WIS site security measures and respond to typical incidents.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_2"><a class="anchor" href="#_assessment_2"></a>A.2.6. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Configure and maintain system components;</p>
-</li>
-<li>
-<p>Respond to monitoring reports;</p>
-</li>
-<li>
-<p>Apply site security measures and respond to typical incidents.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources_2"><a class="anchor" href="#_key_learning_resources_2"></a>A.2.7. Key learning resources</h4>
-<div class="paragraph">
-<p>Documentation of centre’s applications;</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part IV. WIS Technical Specifications (WIS TechSpec 6);</p>
-</li>
-<li>
-<p>Guide to the WMO Information System (WMO No. 1061)</p>
-</li>
-<li>
-<p>Tools to monitor system security;</p>
-</li>
-<li>
-<p>WIS security policies.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_3_manage_the_data_flow"><a class="anchor" href="#_competency_3_manage_the_data_flow"></a>A.3. Competency 3: manage the data flow</h3>
-<div class="sect3">
-<h4 id="_competency_description_3"><a class="anchor" href="#_competency_description_3"></a>A.3.1. Competency description</h4>
-<div class="paragraph">
-<p>Manage the collection, processing and distribution of data and products through scheduled and on demand services.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_3"><a class="anchor" href="#_performance_components_3"></a>A.3.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure collection and distribution of data and products as per data policy;</p>
-</li>
-<li>
-<p>Publish data and products;</p>
-</li>
-<li>
-<p>Subscribe to data and products;</p>
-</li>
-<li>
-<p>Encode, decode, validate and package data and products;</p>
-</li>
-<li>
-<p>Create, update and maintain data flow catalogues;</p>
-</li>
-<li>
-<p>Manage connectivity between centres;</p>
-</li>
-<li>
-<p>Control the data flow to meet service levels.</p>
-</li>
-<li>
-<p>Knowledge and skill requirements</p>
-</li>
-<li>
-<p>System and network monitoring and viewing tools;</p>
-</li>
-<li>
-<p>Data formats and protocols;</p>
-</li>
-<li>
-<p>Licensing and data policies;</p>
-</li>
-<li>
-<p>Message and file switching systems.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_3"><a class="anchor" href="#_learning_outcomes_3"></a>A.3.3. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Transfer data and products between their centre, other WIS centres and external users;</p>
-</li>
-<li>
-<p>Request data and respond to data requests using ad hoc and routine delivery mechanisms;</p>
-</li>
-<li>
-<p>Maintain quality standards (service levels) by monitoring, and responding to, traffic flow, missing data and products, errors and service messages;</p>
-</li>
-<li>
-<p>Apply relevant data policies to data and products;</p>
-</li>
-<li>
-<p>Identify appropriate formats for data and product exchange;</p>
-</li>
-<li>
-<p>Write and read data in data formats as agreed by WMO programs using their centre’s tools.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Data representations used in WIS and when to apply them;</p>
-</li>
-<li>
-<p>WMO data policies and how they apply to data in WIS;</p>
-</li>
-<li>
-<p>The structure of the WIS and how to use reference documents to identify and interpret the routing plans and protocols they will need to use;</p>
-</li>
-<li>
-<p>The interfaces of their centre’s WIS applications, the information they use to modify their behaviour, and the tools available to control the operation of the applications to achieve service levels;</p>
-</li>
-<li>
-<p>How to use a WIS centre interface to find and request data for delivery by ad hoc request and by subscription;</p>
-</li>
-<li>
-<p>How WIS handles backup and alternative routings to maintain continuity of data flows.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_3"><a class="anchor" href="#_learning_activities_3"></a>A.3.4. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Subscribe to the WIS services and download data from the Global Cache;</p>
-</li>
-<li>
-<p>Using a WIS centre platform, create, modify and delete a subscription for routine delivery of a dataset;</p>
-</li>
-<li>
-<p>Use the software tools of their centre’s WIS application to exchange information between computers;</p>
-</li>
-<li>
-<p>Assess data flows by analysing monitoring reports from their applications;</p>
-</li>
-<li>
-<p>Investigate how data policy (including WMO Resolutions 1 (Cg-Ext 2021) is applied to data published by their centre;</p>
-</li>
-<li>
-<p>Use tools provided at their centre to view information in different formats and convert data between these formats.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_3"><a class="anchor" href="#_assessment_3"></a>A.3.5. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Go to a WIS centre, find data, download them immediately, subscribe for regular delivery and cancel the subscription;</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources_3"><a class="anchor" href="#_key_learning_resources_3"></a>A.3.6. Key learning resources</h4>
-<div class="paragraph">
-<p>Data policies</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Resolution 1 (Cg-Ext 2021) – WMO Unified Data policy for the exchange of earth system data (weather, climate, hydrology, ocean, atmospheric composition, cryosphere, space weather) including guidelines on the relationships in commercial meteorological activities;
-The centre’s data policies.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Data representations</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on Codes (WMO No. 306), Volume I.1; Volume I.2 and Volume I.3;</p>
-</li>
-<li>
-<p>Guidance on migration to table driven code forms available at <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html" class="bare">http://www.wmo.int/pages/prog/www/WMOCodes.html</a>;</p>
-</li>
-<li>
-<p>Tools used at the centre to read, write, convert, validate and display information in Table Driven Code Forms;</p>
-</li>
-<li>
-<p>Sample data for reading and writing in Table Driven Code Forms.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>WIS discovery, access and retrieval</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part IV. WIS Technical Specifications (WIS TechSpec 2, 3, 4, and 5);</p>
-</li>
-<li>
-<p>Guide to the WMO Information System (WMO No. 1061);</p>
-</li>
-<li>
-<p>User account at a GISC accessible via a Web browser.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Managing data exchange</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System;</p>
-</li>
-<li>
-<p>Weather Reporting (WMO No. 9), Volume C1Volume C1;</p>
-</li>
-<li>
-<p>Training environment on message and file switch;</p>
-</li>
-<li>
-<p>World Weather Watch quantity monitoring statistics</p>
-</li>
-<li>
-<p>WIGOS Data Quality Monitoring.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Security of data exchange</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Guide to Information Technology Security (WMO No. 1115).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Network management</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Network management tool and associated documentation;</p>
-</li>
-<li>
-<p>System error reports and event viewing tools.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_4_manage_data_discovery"><a class="anchor" href="#_competency_4_manage_data_discovery"></a>A.4. Competency 4: manage data discovery</h3>
-<div class="sect3">
-<h4 id="_competency_description_4"><a class="anchor" href="#_competency_description_4"></a>A.4.1. Competency description</h4>
-<div class="paragraph">
-<p>Create and maintain discovery metadata records describing services and information, and upload them to the WIS Discovery Metadata Catalogue.</p>
-</div>
-<div class="paragraph">
-<p>Each datum and product record held within WIS must have metadata associated with it so that it can be found and understood. These metadata records are held in a catalogue for discovery, access and retrieval (DAR).</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_4"><a class="anchor" href="#_performance_components_4"></a>A.4.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Create and maintain discovery metadata records describing products and services;</p>
-</li>
-<li>
-<p>Add, replace or delete metadata records within the catalogue;</p>
-</li>
-<li>
-<p>Ensure that all information and service offerings from a WIS centre have complete, valid and meaningful discovery metadata records uploaded to the catalogue.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements_3"><a class="anchor" href="#_knowledge_and_skill_requirements_3"></a>A.4.3. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Knowledge of WMO and ISO documentation sufficient to create complete and valid metadata;</p>
-</li>
-<li>
-<p>Metadata entry and management tools;</p>
-</li>
-<li>
-<p>Policies;</p>
-</li>
-<li>
-<p>Discovery metadata concepts and formats;</p>
-</li>
-<li>
-<p>Written English.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_4"><a class="anchor" href="#_learning_outcomes_4"></a>A.4.4. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use standard WIS tools to create discovery metadata from descriptions supplied by users;</p>
-</li>
-<li>
-<p>Add, replace or delete metadata records within the catalogue.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The role of metadata in discovery, access and retrieval of data and products;</p>
-</li>
-<li>
-<p>Approved metadata formats;</p>
-</li>
-<li>
-<p>How to identify content that is mandatory, acceptable or inapplicable;</p>
-</li>
-<li>
-<p>Use of metadata creation tools;</p>
-</li>
-<li>
-<p>How to access and modify a catalogue;</p>
-</li>
-<li>
-<p>How data flow within, to and from their centre;</p>
-</li>
-<li>
-<p>About the tools that allow users to input descriptions.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_4"><a class="anchor" href="#_learning_activities_4"></a>A.4.5. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create metadata records based on sample descriptions for a range of data and products typical of their WIS centre;</p>
-</li>
-<li>
-<p>Insert such records into a catalogue, replace them with records that have been changed and delete them.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_4"><a class="anchor" href="#_assessment_4"></a>A.4.6. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to demonstrate:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Successful creation of metadata records for typical products;</p>
-</li>
-<li>
-<p>Competence in publishing and deleting metadata catalogue records.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Key learning resources</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part IV WIS Technical Specifications (WIS TechSpec 1, 2, and 5), and Part V WIS Discovery Metadata;</p>
-</li>
-<li>
-<p>WCMP Homepage on WMO Community website</p>
-</li>
-<li>
-<p>WIS metadata guidance;</p>
-</li>
-<li>
-<p>Metadata entry and management tools;</p>
-</li>
-<li>
-<p>Samples of how to complete typical metadata records;</p>
-</li>
-<li>
-<p>Metadata policies and WIS metadata guidelines;</p>
-</li>
-<li>
-<p>ISO 19100 series: ISO standards on geographic information.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_5_manage_interaction_among_wis_centres"><a class="anchor" href="#_competency_5_manage_interaction_among_wis_centres"></a>A.5. Competency 5: manage interaction among WIS Centres</h3>
-<div class="sect3">
-<h4 id="_competency_description_5"><a class="anchor" href="#_competency_description_5"></a>A.5.1. Competency description</h4>
-<div class="paragraph">
-<p>Manage relationships and compliance between the participants’ centre and other WIS centres.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_5"><a class="anchor" href="#_performance_components_5"></a>A.5.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Exchange information with other centres on operational matters;</p>
-</li>
-<li>
-<p>Facilitate registration of new WIS centres;</p>
-</li>
-<li>
-<p>Facilitate registration of new data and products by other WIS centres;</p>
-</li>
-<li>
-<p>Create and respond to WIS service messages.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements_4"><a class="anchor" href="#_knowledge_and_skill_requirements_4"></a>A.5.3. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Knowledge of current exchanges and requirements for notification of operational changes;</p>
-</li>
-<li>
-<p>Procedures and practices for registration of other centres and their data and products;</p>
-</li>
-<li>
-<p>Service level agreements;</p>
-</li>
-<li>
-<p>Written English.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_5"><a class="anchor" href="#_learning_outcomes_5"></a>A.5.4. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Facilitate registration of new WIS centres and their data and products;</p>
-</li>
-<li>
-<p>Keep other WIS centres informed of the status of services, incidents and requests;</p>
-</li>
-<li>
-<p>Monitor and respond to service level reports;</p>
-</li>
-<li>
-<p>Manage subscriptions.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>About current exchanges and requirements for notification of operational changes;</p>
-</li>
-<li>
-<p>What type of data, products and services are available at their centre;</p>
-</li>
-<li>
-<p>Procedures and practices for registration of other centres and their data and products;</p>
-</li>
-<li>
-<p>Procedures and practices for notifying other centres about operational changes and service availability.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_5"><a class="anchor" href="#_learning_activities_5"></a>A.5.5. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may carry out the above activities with the help of software, tools and guidance as used in their operational environment, either in a classroom or under supervision on the job.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_5"><a class="anchor" href="#_assessment_5"></a>A.5.6. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Respond to a request for registration of a new centre and its data and products;</p>
-</li>
-<li>
-<p>Prepare notifications of typical operational scenarios;</p>
-</li>
-<li>
-<p>Respond to typical notifications from other WIS centres.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources_4"><a class="anchor" href="#_key_learning_resources_4"></a>A.5.7. Key learning resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part III Functions of WIS, and Part IV WIS Technical Specifications;</p>
-</li>
-<li>
-<p>Guide to the WMO Information System (WMO No. 1061);</p>
-</li>
-<li>
-<p>Weather Reporting (WMO No. 9), Volume C1;</p>
-</li>
-<li>
-<p>Exchanging Meteorological Data: Guidelines on Relationships in Commercial Meteorological Activities – WMO Policy and Practice (WMO No. 837).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_local_resources"><a class="anchor" href="#_local_resources"></a>A.5.8. Local resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Service level agreements (as used by the participants’ centre);</p>
-</li>
-<li>
-<p>Frequently Asked Questions (FAQ) documents (for the user);</p>
-</li>
-<li>
-<p>WIS software user guides;</p>
-</li>
-<li>
-<p>Guidelines for services available at WIS centre;</p>
-</li>
-<li>
-<p>Data policy and associated guidance material;</p>
-</li>
-<li>
-<p>First line support procedures and guides;</p>
-</li>
-<li>
-<p>User database (for contact information);</p>
-</li>
-<li>
-<p>Case tracking and customer management;</p>
-</li>
-<li>
-<p>WIS user management;</p>
-</li>
-<li>
-<p>WIS subscription management;</p>
-</li>
-<li>
-<p>Monitoring dashboard for WIS components.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_6_manage_external_user_interactions"><a class="anchor" href="#_competency_6_manage_external_user_interactions"></a>A.6. Competency 6: manage external user interactions</h3>
-<div class="sect3">
-<h4 id="_competency_description_6"><a class="anchor" href="#_competency_description_6"></a>A.6.1. Competency description</h4>
-<div class="paragraph">
-<p>Ensure that users, including other centres, data providers and subscribers, can publish and access data and products through WIS.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_6"><a class="anchor" href="#_performance_components_6"></a>A.6.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Register data providers and subscribers and maintain a service agreement;</p>
-</li>
-<li>
-<p>Set and register access criteria;</p>
-</li>
-<li>
-<p>Provide systems and support for users to publish and access data and products;</p>
-</li>
-<li>
-<p>Manage user relations to ensure a high satisfaction level.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements_5"><a class="anchor" href="#_knowledge_and_skill_requirements_5"></a>A.6.3. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Data policies;</p>
-</li>
-<li>
-<p>External WIS interface;</p>
-</li>
-<li>
-<p>WIS registration and monitoring tools and policies;</p>
-</li>
-<li>
-<p>User support documentation and help files;</p>
-</li>
-<li>
-<p>Written English.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_6"><a class="anchor" href="#_learning_outcomes_6"></a>A.6.4. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Register new WIS users and providers, setting roles, access authorizations and levels;</p>
-</li>
-<li>
-<p>Create and amend WIS user subscriptions;</p>
-</li>
-<li>
-<p>Use WIS tools to assist users and providers in resolving problems;</p>
-</li>
-<li>
-<p>Create and respond to WIS service messages;</p>
-</li>
-<li>
-<p>Undertake first line investigation and diagnosis;</p>
-</li>
-<li>
-<p>Manage incidents and requests: log them, categorize and prioritize them, escalate as appropriate and close them when the user is satisfied;</p>
-</li>
-<li>
-<p>Keep users informed of the status of services, incidents and requests;</p>
-</li>
-<li>
-<p>Gather information and report on user and provider satisfaction;</p>
-</li>
-<li>
-<p>Assist users in uploading and accessing data;</p>
-</li>
-<li>
-<p>Identify potential problems in services and implement improvements.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>What type of data, products and services are available at their centre;</p>
-</li>
-<li>
-<p>How WIS applications, including discovery, access and retrieval (DAR) should be used;</p>
-</li>
-<li>
-<p>How to apply data policies;</p>
-</li>
-<li>
-<p>How to interact effectively with users and providers.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_6"><a class="anchor" href="#_learning_activities_6"></a>A.6.5. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Register users (data providers and subscribers) and set access authorizations and levels using the same software, tools and guidance as in their operational environment;</p>
-</li>
-<li>
-<p>Role play user interactions.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_6"><a class="anchor" href="#_assessment_6"></a>A.6.6. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Register typical data providers and users;</p>
-</li>
-<li>
-<p>Ensure that users are able to upload and access data;</p>
-</li>
-<li>
-<p>Respond to typical incidents.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources_5"><a class="anchor" href="#_key_learning_resources_5"></a>A.6.7. Key learning resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part IV WIS Technical Specifications (WIS Tech Spec 2, 3, 4, and 5);</p>
-</li>
-<li>
-<p>Guide to the WMO Information System (WMO No. 1061);</p>
-</li>
-<li>
-<p>Weather Reporting (WMO No. 9), Volume C1;</p>
-</li>
-<li>
-<p>Exchanging Meteorological Data: Guidelines on Relationships in Commercial Meteorological Activities – WMO Policy and Practice (WMO No. 837).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Local resources</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Service level agreements (as used by their centre);</p>
-</li>
-<li>
-<p>FAQ documents (for the user);</p>
-</li>
-<li>
-<p>WIS software user guides;</p>
-</li>
-<li>
-<p>Guidelines for services available at WIS centre;</p>
-</li>
-<li>
-<p>Data policy and associated guidance material;</p>
-</li>
-<li>
-<p>First line support procedures and guides;</p>
-</li>
-<li>
-<p>User database (for contact information);</p>
-</li>
-<li>
-<p>Case tracking and customer management;</p>
-</li>
-<li>
-<p>WIS user management;</p>
-</li>
-<li>
-<p>WIS subscription management;</p>
-</li>
-<li>
-<p>Monitoring dashboard for WIS components.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_competency_7_manage_the_operational_service"><a class="anchor" href="#_competency_7_manage_the_operational_service"></a>A.7. Competency 7: manage the operational service</h3>
-<div class="sect3">
-<h4 id="_competency_description_7"><a class="anchor" href="#_competency_description_7"></a>A.7.1. Competency description</h4>
-<div class="paragraph">
-<p>Ensure the quality and continuity of the service.</p>
-</div>
-<div class="paragraph">
-<p>This is essentially a management role ensuring that the WIS system operates as required, now and in the future. Some of the skills required are generic management skills, rather than WIS specific, and would be taught or learnt elsewhere.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_components_7"><a class="anchor" href="#_performance_components_7"></a>A.7.2. Performance components</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Coordinate all WIS functions and activities of the centre;</p>
-</li>
-<li>
-<p>Ensure and demonstrate compliance with regulations and policies;</p>
-</li>
-<li>
-<p>Monitor and meet quality and service performance standards;</p>
-</li>
-<li>
-<p>Ensure service continuity through risk management and planning and implementation of service contingency, backup and restoration. Ensure data continuity in the event of system failure;</p>
-</li>
-<li>
-<p>Plan and coordinate the delivery of new functionalities.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_knowledge_and_skill_requirements_6"><a class="anchor" href="#_knowledge_and_skill_requirements_6"></a>A.7.3. Knowledge and skill requirements</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>General management skills;</p>
-</li>
-<li>
-<p>Overview of local and external WIS operations and associated service agreements;</p>
-</li>
-<li>
-<p>WIS regulations and policies;</p>
-</li>
-<li>
-<p>Functional specifications;</p>
-</li>
-<li>
-<p>Written English.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_outcomes_7"><a class="anchor" href="#_learning_outcomes_7"></a>A.7.4. Learning outcomes</h4>
-<div class="paragraph">
-<p>Staff will be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure that the WIS centre meets quality and service performance standards;</p>
-</li>
-<li>
-<p>Identify the challenges and issues to be addressed;</p>
-</li>
-<li>
-<p>Foster compliance with WIS framework.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Staff will learn:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Functions and responsibilities of the WIS centre;</p>
-</li>
-<li>
-<p>WIS quality and service performance standards;</p>
-</li>
-<li>
-<p>Methods to manage quality, risk and operational service;</p>
-</li>
-<li>
-<p>How to monitor quality and service performance standards;</p>
-</li>
-<li>
-<p>How to analyse, demonstrate and report quality and service performance at the WIS centre;</p>
-</li>
-<li>
-<p>How to maintain troubleshooting, backup and restoration procedures;</p>
-</li>
-<li>
-<p>How to plan and coordinate the delivery of new functionalities and improvements;</p>
-</li>
-<li>
-<p>How to integrate new technologies and developments;</p>
-</li>
-<li>
-<p>How to update the regulatory documents;</p>
-</li>
-<li>
-<p>How to maintain service agreements;</p>
-</li>
-<li>
-<p>How to plan monitoring resources;</p>
-</li>
-<li>
-<p>How to align budget restrictions with human resources demands.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_learning_activities_7"><a class="anchor" href="#_learning_activities_7"></a>A.7.5. Learning activities</h4>
-<div class="paragraph">
-<p>To learn how to perform the required tasks staff may:</p>
-</div>
-<div class="paragraph">
-<p>Follow quality and service performance standards;
-Analyse quality and service performance in the WIS centre;
-Demonstrate and report quality and service performance;
-Maintain troubleshooting, backup and restoration procedures;
-Plan and coordinate the delivery of new functionalities;
-Keep timely records, as required.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assessment_7"><a class="anchor" href="#_assessment_7"></a>A.7.6. Assessment</h4>
-<div class="paragraph">
-<p>Staff must be able to:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Demonstrate successful WIS service;</p>
-</li>
-<li>
-<p>Plan replacement and upgrade of equipment and applications to meet new functionalities and requirements.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_key_learning_resources_6"><a class="anchor" href="#_key_learning_resources_6"></a>A.7.7. Key learning resources</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>Technical Regulations (WMO No. 49), Volume I;</p>
-</li>
-<li>
-<p>Resolution 1 (Cg-Ext 2021) – WMO Unified Data Policy for the exchange of earth system data (weather, climate, hydrology, ocean, atmospheric composition, cryosphere, space weather) including guidelines on the relationships in commercial meteorological activities;</p>
-</li>
-<li>
-<p>Manual on the WMO Information System (WMO No. 1060), Part IV WIS Technical Specifications (WIS TechSpec 6);</p>
-</li>
-<li>
-<p>Guide to the WMO Information System (WMO No. 1061);</p>
-</li>
-<li>
-<p>WIS demonstration procedures and guidelines;</p>
-</li>
-<li>
-<p>Monitoring reports;</p>
-</li>
-<li>
-<p>Audit reports.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_recommended_practices_for_audit_and_certification_of_wis_centres"><a class="anchor" href="#_recommended_practices_for_audit_and_certification_of_wis_centres"></a>Annex B: Recommended practices for audit and certification of WIS Centres</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_background_2"><a class="anchor" href="#_background_2"></a>B.1. Background</h3>
-<div class="paragraph">
-<p>The Infrastructure Commission is responsible for certification of WIS centres’ compliance with the WIS technical specifications defined in the Manual on WIS. The INFCOM will maintain, within the structure of its SC-IMT on Information Management and Technology (SC-IMT), and the Expert Team on Audit and Certification (ET-AC) to coordinate audits and certification of WIS centres.</p>
-</div>
-<div class="paragraph">
-<p>Audits and certifications will be carried out in line with the principles established in the Technical Regulations (WMO-No. 49), Volume I: General Meteorological Standards and Recommended Practices, Part VII.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_auditing_and_certification"><a class="anchor" href="#_auditing_and_certification"></a>B.2. Auditing and certification</h3>
-<div class="paragraph">
-<p>Auditors and certifiers shall be or shall become members of ET-AC. New members must have relevant technical or auditing experience. They must be members (core or associate) of an SC-IMT expert team or have written commitment of the Permanent Representative of their country with WMO allowing them to participate as members of the ET-AC. New members will be mentored by a nominated existing expert. Note that regional diversity of members of ET-AC is essential. Access to ET-AC Workspace and online databases is restricted to ET-AC and the WMO Secretariat.</p>
-</div>
-<div class="sect3">
-<h4 id="_gisc_audits"><a class="anchor" href="#_gisc_audits"></a>B.2.1. GISC audits</h4>
-<div class="paragraph">
-<p>The Expert Team on Audit and Certification, on behalf of INFCOM, is responsible for auditing and certification of GISCs.</p>
-</div>
-<div class="paragraph">
-<p>A GISC should be audited by two experts, one of whom must have previous experience of auditing GISCs. Auditors should be from a different region than that of the GISC.</p>
-</div>
-<div class="paragraph">
-<p>Travel and per diem should be at the GISC’s expense and arranged through WMO.</p>
-</div>
-<div class="sect4">
-<h5 id="_scope_of_gisc_audits"><a class="anchor" href="#_scope_of_gisc_audits"></a>B.2.1.1. Scope of GISC audits</h5>
-<div class="paragraph">
-<p>Full audits will cover all aspects of WIS compliance and shall include site visits using practices inline with those of the ISO 9000 series standards.</p>
-</div>
-<div class="paragraph">
-<p>Interim audits will focus on a particular subset of topics. Actual elements to be focused on will be determined by the Standing Committee on Information Management and Technology (SC-IMT) or its delegated expert team. Centres will be told in advance on which subset of topics the interim audit will focus. Possible areas for review in interim audits include:</p>
-</div>
-<div class="paragraph">
-<p>a) GISC operations;
-b) Metadata management;
-c) Monitoring;
-d) Incident management
-e) Quality of service provided by the GISC;
-e) Coordination within its Area of Responsibility:
-  i) Management of the GISC Area of Responsibility;
-  ii) Capacity development;
-  iii) Participation in WIS coordination and planning mechanisms</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_dcpc_certification"><a class="anchor" href="#_dcpc_certification"></a>B.3. DCPC certification</h3>
-<div class="paragraph">
-<p>Data Collection or Production Centres are to be certified by the ET-AC. Where a DCPC is not using the infrastructure of its principal GISC, and its principal GISC is operational, it can be certified by ET-AC once the principal GISC has performed the necessary tests. However, if the principal GISC is not operational, the ET-CAC will arrange for a suitable GISC to perform the tests. Where a DCPC uses the infrastructure of its principal GISC, it is certified as a part of the GISC certification process.</p>
-</div>
-<div class="paragraph">
-<p>The certification of a DCPC requires only one ET-AC coordinator, who will ask a GISC to undertake tests with the DCPC. It is expected that the centre’s principal GISC will undertake those tests.</p>
-</div>
-<div class="sect3">
-<h4 id="_verification_of_compliance_of_ncs"><a class="anchor" href="#_verification_of_compliance_of_ncs"></a>B.3.1. Verification of compliance of NCs</h4>
-<div class="paragraph">
-<p>Compliance of NCs is the responsibility of the Permanent Representative with WMO of the Member accountable for the centre. Verification of compliance of an NC should be done by its principal GISC. The Expert Team on Audit and Certification will monitor the NC compliance process in consultation with NCs and GISCs.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_the_review_cycle"><a class="anchor" href="#_the_review_cycle"></a>B.4. The review cycle</h3>
-<div class="paragraph">
-<p>The review cycle should start from the date of INFCOM endorsement. Audits should take place within the calendar year in which the cycle ends, and their timing will need to be coordinated with the experts called upon to undertake them.</p>
-</div>
-<div class="paragraph">
-<p>The INFCOM endorsement date should be recorded in the WIS centre database. The date on which the centre became operational should also be recorded if known. Similarly, to an ISO 9001:2015 audit process, the GISC audit will follow the principle of alternating intermediate and full audits aligned with the INFCOM/EC four-year cycle:</p>
-</div>
-<div class="paragraph">
-<p>a) Intermediate audit (interim, four years): a mid-cycle review of performance and compliance to provide, if necessary, opportunities to introduce corrective actions well in advance of a full audit;
-b) Full audit (every second audit, i.e., every eight years): this audit will result in a recommendation for confirmation or cancellation of endorsement.</p>
-</div>
-<div class="sect3">
-<h4 id="_review_of_dcpcs"><a class="anchor" href="#_review_of_dcpcs"></a>B.4.1. Review of DCPCs</h4>
-<div class="paragraph">
-<p>The DCPC review cycle will be eight years. Reviews will cover all aspects of WIS compliance.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_review_of_ncs"><a class="anchor" href="#_review_of_ncs"></a>B.4.2. Review of NCs</h4>
-<div class="paragraph">
-<p>Review of NC compliance is the responsibility of the Permanent Representative with WMO of the Member responsible for the Centre in liaison with the NC and its principal GISC.</p>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ad_hoc_audits_or_reviews"><a class="anchor" href="#_ad_hoc_audits_or_reviews"></a>B.5. Ad hoc audits or reviews</h3>
-<div class="paragraph">
-<p>An ad hoc audit or review can be requested by the president of INFCOM due, for example, to non-conformance causing problems with WIS operations.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_audit_or_review_outcome"><a class="anchor" href="#_audit_or_review_outcome"></a>B.6. Audit or review outcome</h3>
-<div class="paragraph">
-<p>The outcome of the audit or review will be categorized as "endorsed", "endorsed with qualification" or "not endorsed". Audit or review recommendations will be provided to the president of INFCOM and to the Director of WIS.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_format_of_report"><a class="anchor" href="#_format_of_report"></a>B.7. Format of report</h3>
-<div class="paragraph">
-<p>The Expert Team on Audit and Certification will use a template for final reports, although the content will reflect the areas audited.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_public_notification_of_type_of_infcom_endorsement"><a class="anchor" href="#_public_notification_of_type_of_infcom_endorsement"></a>B.8. Public notification of type of INFCOM endorsement</h3>
-<div class="paragraph">
-<p>The endorsement of INFCOM is based on continued successful audit outcomes. Centre endorsements are published only as "INFCOM endorsed" with no public declaration of whether endorsement was with "qualifications".</p>
-</div>
-<div class="paragraph">
-<p>Details of reviews and audits of centres are confidential. Auditors will have access to the previous reports on a centre to perform their role.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_review_of_audits_with_qualification"><a class="anchor" href="#_review_of_audits_with_qualification"></a>B.9. Review of audits with qualification</h3>
-<div class="paragraph">
-<p>Global Information System Centres that were "endorsed with qualifications" have two years from the date of the audit to demonstrate that they have taken remedial action on the points of qualification.</p>
-</div>
-<div class="paragraph">
-<p>The Expert Team on Audit and Certification will investigate GISCs that were "endorsed with qualifications" and have not demonstrated that they have taken remedial action within two years of the date of audit. The Expert Team should report to INFCOM on progress in addressing the aspects that incurred the "qualification" and can recommend to INFCOM that it revokes its endorsement.</p>
-</div>
 </div>
 </div>
 </div>
@@ -4400,123 +1895,12 @@ b) Full audit (every second audit, i.e., every eight years): this audit will res
 <a href="#_footnoteref_5">5</a>. This is contrary to earlier practices in WIS where each GTS bulletin was considered a Dataset. This meant that the WIS Catalogue became overburdened with hundreds of thousands of records, each describing more-or-less the same thing. The result was a very poor search experience – always too many ‘hits’!
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. Data accessible via a WIS2 Global Cache will be "Core data" (as defined in the WMO Unified Data Policy) – consequently it must be provided without restriction on use.
-</div>
-<div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. A WIS2 Global Cache may be used ensure efficient and highly available access to data. See 8.4 Global Cache for more information.
-</div>
-<div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. Even if generally robust, the Internet, as opposed to private networks, such as dedicated lines or the RMDCN, has no end-to-end Service Level Agreement (SLA). Robustness is based factual experience and not contractual SLA.
-</div>
-<div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. Excluding the top two levels ("channel" and "version") – these are not considered part of the data classification scheme in the WMO Core Metadata Profile because they relate to data distribution mechanisms.
-</div>
-<div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. OpenMetrics is proposed as a draft standard within IETF.
-</div>
-<div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. <a href="https://openmetrics.io" class="bare">https://openmetrics.io</a>
-</div>
-<div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy</a>
-</div>
-<div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
-</div>
-<div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. <a href="https://wmo-im.github.io/wcmp2" class="bare">https://wmo-im.github.io/wcmp2</a>
-</div>
-<div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
-</div>
-<div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. <a href="https://wmo-im.github.io/wis2-notification-message" class="bare">https://wmo-im.github.io/wis2-notification-message</a>
-</div>
-<div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. <a href="https://github.com/wmo-im/wis2-metric-hierarchy" class="bare">https://github.com/wmo-im/wis2-metric-hierarchy</a>
-</div>
-<div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. <a href="https://www.w3.org/TR/webarch" class="bare">https://www.w3.org/TR/webarch</a>
-</div>
-<div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. <a href="https://www.ietf.org/rfc/rfc3339.txt" class="bare">https://www.ietf.org/rfc/rfc3339.txt</a>
-</div>
-<div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. <a href="https://www.ietf.org/rfc/rfc3986.txt" class="bare">https://www.ietf.org/rfc/rfc3986.txt</a>
-</div>
-<div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. <a href="https://www.ietf.org/rfc/rfc7946.txt" class="bare">https://www.ietf.org/rfc/rfc7946.txt</a>
-</div>
-<div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
-</div>
-<div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. <a href="https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html" class="bare">https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html</a>
-</div>
-<div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. <a href="https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html" class="bare">https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html</a>
-</div>
-<div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. <a href="https://openmetrics.io" class="bare">https://openmetrics.io</a>
-</div>
-<div class="footnote" id="_footnotedef_26">
-<a href="#_footnoteref_26">26</a>. <a href="https://library.wmo.int/index.php?lvl=notice_display&amp;id=20422" class="bare">https://library.wmo.int/index.php?lvl=notice_display&amp;id=20422</a>
-</div>
-<div class="footnote" id="_footnotedef_27">
-<a href="#_footnoteref_27">27</a>. <a href="https://library.wmo.int/index.php?lvl=notice_display&amp;id=21644" class="bare">https://library.wmo.int/index.php?lvl=notice_display&amp;id=21644</a>
-</div>
-<div class="footnote" id="_footnotedef_28">
-<a href="#_footnoteref_28">28</a>. <a href="https://www.w3.org/TR/dwbp" class="bare">https://www.w3.org/TR/dwbp</a>
-</div>
-<div class="footnote" id="_footnotedef_29">
-<a href="#_footnoteref_29">29</a>. <a href="https://www.w3.org/TR/sdw-bp" class="bare">https://www.w3.org/TR/sdw-bp</a>
-</div>
-<div class="footnote" id="_footnotedef_30">
-<a href="#_footnoteref_30">30</a>. <a href="https://www.ogc.org/blog-article/towards-a-cloud-native-ogc" class="bare">https://www.ogc.org/blog-article/towards-a-cloud-native-ogc</a>
-</div>
-<div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. <a href="https://www.ogc.org/blog-article/towards-a-cloud-native-geospatial-standards-baseline" class="bare">https://www.ogc.org/blog-article/towards-a-cloud-native-geospatial-standards-baseline</a>
-</div>
-<div class="footnote" id="_footnotedef_32">
-<a href="#_footnoteref_32">32</a>. <a href="https://spec.openapis.org/oas/v3.1.0" class="bare">https://spec.openapis.org/oas/v3.1.0</a>
-</div>
-<div class="footnote" id="_footnotedef_33">
-<a href="#_footnoteref_33">33</a>. <a href="https://ogcapi.ogc.org" class="bare">https://ogcapi.ogc.org</a>
-</div>
-<div class="footnote" id="_footnotedef_34">
-<a href="#_footnoteref_34">34</a>. <a href="https://docs.opengeospatial.org/is/17-069r4/17-069r4.html" class="bare">https://docs.opengeospatial.org/is/17-069r4/17-069r4.html</a>
-</div>
-<div class="footnote" id="_footnotedef_35">
-<a href="#_footnoteref_35">35</a>. <a href="http://docs.ogc.org/DRAFTS/19-087.html" class="bare">http://docs.ogc.org/DRAFTS/19-087.html</a>
-</div>
-<div class="footnote" id="_footnotedef_36">
-<a href="#_footnoteref_36">36</a>. <a href="https://docs.ogc.org/is/19-086r5/19-086r5.html" class="bare">https://docs.ogc.org/is/19-086r5/19-086r5.html</a>
-</div>
-<div class="footnote" id="_footnotedef_37">
-<a href="#_footnoteref_37">37</a>. <a href="https://schema.org" class="bare">https://schema.org</a>
-</div>
-<div class="footnote" id="_footnotedef_38">
-<a href="#_footnoteref_38">38</a>. <a href="https://stacspec.org" class="bare">https://stacspec.org</a>
-</div>
-<div class="footnote" id="_footnotedef_39">
-<a href="#_footnoteref_39">39</a>. <a href="https://docs.wis2box.wis.wmo.int" class="bare">https://docs.wis2box.wis.wmo.int</a>
-</div>
-<div class="footnote" id="_footnotedef_40">
-<a href="#_footnoteref_40">40</a>. <a href="https://mosquitto.org" class="bare">https://mosquitto.org</a>
-</div>
-<div class="footnote" id="_footnotedef_41">
-<a href="#_footnoteref_41">41</a>. <a href="https://www.rabbitmq.com/mqtt.html" class="bare">https://www.rabbitmq.com/mqtt.html</a>
-</div>
-<div class="footnote" id="_footnotedef_42">
-<a href="#_footnoteref_42">42</a>. <a href="https://prometheus.io" class="bare">https://prometheus.io</a>
-</div>
-<div class="footnote" id="_footnotedef_43">
-<a href="#_footnoteref_43">43</a>. <a href="https://grafana.com" class="bare">https://grafana.com</a>
+<a href="#_footnoteref_6">6</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-10-04 10:39:05 UTC
+Last updated 2023-10-19 16:06:23 UTC
 </div>
 </div>
 </body>
