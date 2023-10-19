@@ -1,22 +1,22 @@
-== Implementation and operation of a Global Service
+=== Implementation and operation of a Global Service
 
-=== Procedure for registration of a new Global Service
+==== Procedure for registration of a new Global Service
 
 During the initial stages of the WIS2 pilot phase an informal process is used to register interest in operating a Global Service. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
-=== Performance management and monitoring of a Global Service
+==== Performance management and monitoring of a Global Service
 
-==== Service levels, performance indicators, and fair-usage policies
-
-TODO: to be completed
-
-==== Provision of metrics
+===== Service levels, performance indicators, and fair-usage policies
 
 TODO: to be completed
 
-=== Global Broker
+===== Provision of metrics
 
-==== Technical considerations
+TODO: to be completed
+
+==== Global Broker
+
+===== Technical considerations
 
 * There will be multiple Global Broker instances to ensure highly available, low latency global provision of messages within WIS.
 * A Global Broker instance subscribes to messages from NC/DCPCs and other Global Brokers
@@ -35,7 +35,7 @@ TODO: to be completed
 
 TODO: to be completed
 
-==== Practices and procedures
+===== Practices and procedures
 
 The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 
@@ -44,9 +44,9 @@ The following procedures will be described here once validated through testing d
 
 TODO: to be completed
 
-=== Global Cache
+==== Global Cache
 
-==== Technical considerations
+===== Technical considerations
 
 * The Global Cache will contain copies of real-time and near real-time data designated as "core" within the WMO Unified Data Policy (Resolution 1).
 * During the initial stages of the WIS2 pilot phase Global Cache instances will provide open access to their cached content. Access control mechanisms may be added later.
@@ -63,7 +63,7 @@ TODO: to be completed
 
 TODO: to be completed
 
-==== Practices and procedures
+===== Practices and procedures
 
 The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 * Assigning a Global Cache to a NC or DCPC
@@ -71,9 +71,9 @@ The following procedures will be described here once validated through testing d
 
 TODO: to be completed
 
-=== Global Discovery Catalogue
+==== Global Discovery Catalogue
 
-==== Technical considerations
+===== Technical considerations
 
 * The Global Discovery Catalogue provides Data Consumers with a mechanism to discover the Datasets of interest, as well as, how to interact with and find out more information about those Datasets.
 * The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard.
@@ -91,7 +91,7 @@ TODO: to be completed
 
 TODO: to be completed
 
-==== Practices and procedures
+===== Practices and procedures
 
 The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 
@@ -102,9 +102,9 @@ The following procedures will be described here once validated through testing d
 
 TODO: to be completed
 
-=== Global Monitor
+==== Global Monitor
 
-==== Technical Considerations
+===== Technical Considerations
 * WIS2 standardises how system performance and data availability metrics are published from WIS nodes and Global Services.
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.
@@ -112,7 +112,7 @@ TODO: to be completed
 
 TODO: to be completed
 
-==== Practices and procedures 
+===== Practices and procedures 
 
 Procedures pertinent to the Global Monitor will be described here once validated through testing during the WIS2 pilot phase.
 

@@ -1,0 +1,23 @@
+=== Data publisher
+
+As a Data Publisher planning to operate a WIS node, you should read the following sections: TODO: fix crossrefs
+* 1.2: What is WIS2?
+* 1.3 Why are Datasets so important?
+* PART III Data Metadata flows
+* PART X Information Management
+
+==== How to publish Dataset discovery metadata to the Global Discovery Catalogue
+
+A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue.
+
+==== How to publish data notifications
+
+A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker.
+
+==== How to publish data to the Global Broker
+
+Data publishing is realized as a function of publishing data notifications (see 2.1.2 How to publish data notifications ).
+
+TODO: To be completed
+
+// include::sections/wis2node.adoc[]

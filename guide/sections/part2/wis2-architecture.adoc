@@ -1,0 +1,7 @@
+=== WIS2 Architecture
+
+// include::sections/data-and-metadata-flows.adoc[]
+
+// include::sections/real-time-data-exchange.adoc[]
+
+// include::sections/discovery-metadata.adoc[]

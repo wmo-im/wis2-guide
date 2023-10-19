@@ -1,0 +1,7 @@
+== PART I
+
+include::introduction.adoc[]
+
+include::data-consumer.adoc[]
+
+include::data-publisher.adoc[]

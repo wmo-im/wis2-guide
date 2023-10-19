@@ -33,32 +33,23 @@
 toc::[]
 <<<
 
+
 include::sections/preamble.adoc[]
 
-include::sections/introduction.adoc[]
+include::sections/part1/index.adoc[]
 
-include::sections/quickstarts.adoc[]
+include::sections/part2/index.adoc[]
 
-include::sections/data-and-metadata-flows.adoc[]
+include::sections/part3/index.adoc[]
 
-include::sections/real-time-data-exchange.adoc[]
+include::sections/part4/index.adoc[]
 
-include::sections/discovery-metadata.adoc[]
+include::sections/part5/index.adoc[]
 
-include::sections/wis-metrics.adoc[]
 
-include::sections/wis2node.adoc[]
 
-include::sections/global-services.adoc[]
+// include::sections/other-considerations.adoc[]
 
-include::sections/coordinating-wis.adoc[]
+// include::sections/references.adoc[]
 
-include::sections/information-management.adoc[]
-
-include::sections/other-considerations.adoc[]
-
-include::sections/references.adoc[]
-
-include::sections/annex-a-competencies.adoc[]
-
-include::sections/annex-b-audit-certification.adoc[]
+// include::sections/annex-b-audit-certification.adoc[]

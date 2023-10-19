@@ -1,6 +1,6 @@
-== Introduction of WIS2
+=== Introduction of WIS2
 
-=== Why WIS2?
+==== Why WIS2?
 
 The WMO Information System (WIS) provides high-performance and reliable data sharing for all WMO Programmes. WIS2 evolves the original solution that became operational in 2012 in response to technical advances, increases in data volumes, and increased diversity in the people and systems that seek to consume data generated, curated, and shared by WMO Programmes.
 
@@ -30,7 +30,7 @@ Four Technical Foundations are central to how WIS evolved to meet these business
 
 Underpinning these WIS2 Technical Foundations are the Principles of WIS2. These are described in Appendix A to the Manual on WIS (WMO No. 1060), Vol II. WIS2.
 
-=== What is WIS2?
+==== What is WIS2?
 
 WIS2 is a federated "system of systems". All WIS Centres will comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060) with regards to how they share data in support of WMO Programme objectives.
 
@@ -72,7 +72,7 @@ When describing the functions of WIS2 there are 3 roles to consider:
 
 More details on these aspects are provided in Manual on WIS (WMO No. 1060), Vol II. Part III. Functions of WIS. Section 3.2 (Functional Architecture of WIS) provides a simple overview of how WIS2 functions 
 
-=== Why are datasets so important?
+==== Why are datasets so important?
 
 The purpose of WIS is to enable sharing of data. "Datasets" provide the mechanism for us to describe what data we publish, or what data we’re interested in.
 
