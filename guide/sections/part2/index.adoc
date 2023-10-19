@@ -2,6 +2,8 @@
 
 include::wis2-architecture.adoc[]
 
+include::wis2node.adoc[]
+
 include::global-services.adoc[]
 
 include::operations.adoc[]

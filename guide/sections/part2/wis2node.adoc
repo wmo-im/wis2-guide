@@ -1,28 +1,28 @@
-== Implementation and operation of WIS2 Node
+=== Implementation and operation of WIS2 Node
 
-=== Practices and procedures
+==== Practices and procedures
 
-==== Registration and decommissioning of a WIS node
+===== Registration and decommissioning of a WIS node
 
 This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.
 
 TODO: To be completed
 
-==== Registration and removal of a Dataset
+===== Registration and removal of a Dataset
 
 This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
 
 TODO: to be completed
 
-==== Connecting with Global Services
+===== Connecting with Global Services
 
 This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.
 
 TODO: to be completed
 
-=== Publishing data, discovery metadata, and notification messages
+==== Publishing data, discovery metadata, and notification messages
 
-==== Discovery metadata
+===== Discovery metadata
 
 Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2
 
@@ -34,13 +34,13 @@ Discovery metadata must be published before data sharing through WIS begins.
 
 TODO: to be completed
 
-==== Notification messages
+===== Notification messages
 
 There is no requirement for an NC/DCPC to publish "data availability" notification messages relating to infrequently changing Datasets, such as a data archive, especially where the user community have no requirement to be instantly updated about changes to a Dataset (e.g., the addition of new records into a climate observation archive). Data Publishers should note that without providing notification messages their data will not be copied into the Global Cache. However, since the Global Cache only holds real-time (or near real-time) Datasets, this is not a concern for Data Publishers with infrequently changing Datasets.
 
 TODO: to be completed
 
-==== Data
+===== Data
 
 WIS2 provides the "plumbing" for data sharing within the WMO community, but it defines neither which data to share, nor how that data should be encoded. WIS Centres need to evaluate WMO Programme requirements and the WMO Unified Data Policy to determine which Datasets should be made available through WIS.
 
@@ -85,25 +85,25 @@ Finally, we’re increasingly concerned with providing access to very large Data
 
 TODO: to be completed
 
-===== Publication and topic selection
+====== Publication and topic selection
 
 When publishing a dataset, a data publisher selects a given topic according to the WIS Topic Hierarchy.  Given the multidisciplinary nature of some data, a data publisher must select a single topic for publication purposes, and always uses WCMP2 discovery metadata to provide a fulsome description of their dataset and its relevance to additional disciplines.
 
-=== Performance management
+==== Performance management
 
-==== Service levels and performance indicators
+===== Service levels and performance indicators
 
 This section describes the minimum performance criteria for operation of a WIS node.
 
 TODO: to be completed
 
-==== Provision of system performance metrics
+===== Provision of system performance metrics
 
 This section describes how a WIS node should provide metrics to the Global Monitor service and its primary GISC.
 
 TODO: to be completed
 
-=== WIS Node reference implementation: wis2box
+==== WIS Node reference implementation: wis2box
 
 Members may use whichever software components they consider most appropriate to comply with the WIS2 Technical Regulations.
 
