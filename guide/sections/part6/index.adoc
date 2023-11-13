@@ -1,7 +1,3 @@
 == PART VI
 
-include::https://raw.githubusercontent.com/wmo-im/wcmp2/main/standard/index.adoc[]
-
-include::https://raw.githubusercontent.com/wmo-im/wis2-notification-message/main/standard/index.adoc[]
-
-include::https://raw.githubusercontent.com/wmo-im/wis2-topic-hierarchy/main/standard/index.adoc[]
+include::competencies.adoc[]
