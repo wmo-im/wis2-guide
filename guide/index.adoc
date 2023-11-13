@@ -46,6 +46,7 @@ include::sections/part4/index.adoc[]
 
 include::sections/part5/index.adoc[]
 
+include::sections/part6/index.adoc[]
 
 
 // include::sections/other-considerations.adoc[]
