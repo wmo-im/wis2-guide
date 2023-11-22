@@ -88,7 +88,8 @@ TODO: to be completed
 * A Global Discovery Catalogue should applying faceting capability as specified in the cataloguing considerations of the WCMP2 specification as defined in OGC API - Records.
 * A Global Discovery Catalogue shall provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
 * A Global Discovery Catalogue shall periodically assess the discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement are shared with the originating NC or DCPC and their primary GISC.
-* A Global Discovery Catalogue shall generate and publish a zipfile of all WCMP2 records once a day to an HTTP accessible location to its `+metadata+` topic.  The link to the archive metadata shall additionally be made available as an archive link on the landing page of the GDC.
+* A Global Discovery Catalogue shall generate and store a zipfile of all WCMP2 records once a day, that shall be made be accessible via HTTP.
+* A Global Discovery Catalogue shall then publish a WIS2 Notification Message on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue)`.
 
 TODO: to be completed
 
