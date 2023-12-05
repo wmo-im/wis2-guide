@@ -71,7 +71,7 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 
 ==== Global Cache
 
-In WIS2 Global Caches provide access to WMO Core Data for Data Consumers. This allows for Data Providers to restrict access to their system and it mitigates the need for high bandwith and low latency access to data from the Data Providers. Global Caches work transparent for End Users in that they resend notification messages from Data Providers which are updated to point to the Global Caches data store for data, they copied from the original source. From a Data Consumer perspective they SHOUD subscribe to the notification messages from Global Caches instead of the notification messages from the Data Providers and follow the URLs from that messages which either point to a Cache holding the data, or - in case of recommended data or uncacheable content - point to the original source.
+In WIS2 Global Caches provide access to WMO Core Data for data consumers. This allows for data providers to restrict access to their systems to Global Services and it reduces the need for them to provide high bandwith and low latency access to their data. Global Caches work transparent for end users in that they resend notification messages from data providers which are updated to point to the Global Cache data store for data, they copied from the original source. Additionally, Global Caches also resend notification messages from data providers for data, that is not stored on the Global Cache, for instance recommended data. In the latter case, the notification messages resent are unchanged and point to the original source. Data consumers SHALL only subscribe to the notification messages from Global Caches instead of the notification messages from the data providers. When data consumers receive a notification message they SHOULD follow the URLs from that messages which either point to a Global Cache holding a copy of the data, or - in case of recommended data or uncacheable content - point to the original source.
 
 ===== Technical considerations
 
@@ -83,18 +83,16 @@ In WIS2 Global Caches provide access to WMO Core Data for Data Consumers. This a
 * Global Cache instances may attempt to download cacheable data objects from all originating centres with "cacheable" content. A Global Cache instance will also download data objects from other Global Cache instances. This ensures the instance has full global coverage, mitigating where direct download from an originating centre is not possible.
 * A Global Cache instance will operate independently of other Global Cache instances. Each Global Cache instance will hold a full copy of the cache – albeit that there may be small differences between Global Cache instances as "data availability" notification messages propagate through WIS to each Global Cache in turn. There is no formal ‘synchronisation’ between Global Cache instances.
 * A Global Cache will store a full set of discovery metadata records. This is not an additional metadata catalogue that Data Consumers can search and browse – it provides a complete set of discovery metadata records to support populating a Global Discovery Catalogue instance.
-* A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file. Apart from the URL it is transparent to the Data Consumers from which Global Cache they download the data. There is no need to download the same Data Object from multiple Global Caches.
+* A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file to which the URL points. Apart from the URL it is transparent to the Data Consumers from which Global Cache they download the data. There is no need to download the same Data Object from multiple Global Caches. The data id contained within the notification messages is used by Data Consumers and Global Services to detect such duplicates.
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-
-TODO: to be completed
 
 ===== Practices and procedures
 
 * A Global Cache SHALL subscribe to at least two different Global Brokers
 * A Global Cache SHALL subscribe at least to the topics *origin/a/wis2/+/data/#*, *cache/a/wis2/+/data/#*, */origin/a/wis2/+/metadata/#*, */cache/a/wis2/+/metadata/#*
-* A Global Cache SHALL retain the data they receive for a period of 24 hours. Different retention times might be added later. Metadata is retained until there is an update to the Metadata record with notification type "Delete".
-* For messages received on Topic data/core a Global Cache SHALL
-** If the message contains Cache: false
+* A Global Cache SHALL retain the data they receive for a period of 24 hours. Different retention times might be added later. Metadata is retained until there is an update to the metadata record with notification type "Delete".
+* For messages received on topic data/core a Global Cache SHALL
+** If the message contains the flag Cache: false
 *** Republish the unmodified message at topic */cache/a/wis2*
 ** else
 *** Maintain a list of data_ids already downloaded
@@ -103,8 +101,8 @@ TODO: to be completed
 **** Download only new or updated data from the href or extract the data from the message content
 **** If data is downloaded successfully,  move the data to the http(s) endpoint of the Global Cache
 **** Wait until the data becomes available at the endpoint
-**** Modify *only* the href and the topic of the received message. Leave all other fields untouched. This holds especially for the content field, the pubtime, the data_id and datetime
-**** Republish the message at topic */cache/a/wis2/*
+**** Modify *only* the href and the topic of the received message. Leave all other fields untouched. This holds especially for the content field, the pubtime, the data_id and the datetime values.
+**** Republish the modified message at topic */cache/a/wis2/*
 *** else
 **** Drop the messages for data already present on the Cache
 * A Global Cache SHALL provide the metrics defined in this Guide at an http(s) endpoint
@@ -163,7 +161,7 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 * The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.
 * The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
 
-The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+The Global Monitoring (Centers) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
 
 ===== Practices and procedures 
 
