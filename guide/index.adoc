@@ -33,8 +33,6 @@
 toc::[]
 <<<
 
-include::sections/preamble.adoc[]
-
 include::sections/introduction.adoc[]
 
 include::sections/quickstarts.adoc[]
