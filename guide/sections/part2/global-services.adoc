@@ -2,72 +2,80 @@
 
 ==== Procedure for registration of a new Global Service
 
-Successful operations of WIS will depend on having a set of Global Services running state of the art IT environment, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.
+Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.
 
-Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% or very close to this:
-* Three (3) Global Brokers - Each Global Broker MUST be connected to at least two (2) other Global Broker
-* Three (3) Global Caches - Each Global Cache MUST be connected to at least two (2) Global Broker and SHOULD be able to download the data from all WIS Nodes providing Core data
-* Two (2) Global Discovery Catalog
-* Two (2) Global Monitoring Center - Each Global Monitoring Center SHOULD fetch the metrics from all WIS Nodes and all other Global Service
+Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% (or very close):
+* Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
+* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS Nodes providing Core data
+* Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
+* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should fetch the metrics from all WIS Nodes and all other Global Service
 
-In addition to those, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service. 
-Running a Global Service is a significant commitment for a WIS Center.  To maintain a very high level of service of  WIS, each Global Service will have a key role to play.
-WMO Secretariat, based on the current situation of WIS (How many Global Brokers ? A need for additional Cache ?), will propose to the WIS Center the preferred solution to improve the overall level of service of WIS.
-WIS Center can decide to run the proposed service or may decide to run another one.
-The Manual on WIS, the Guide and other material available will help WIS Center in deciding the best way forward.
-When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Center so that the future Global Service can be included in WIS Operations.
-WMO Secretariat will include the new Global Service in the next fast track cycle of WIS Operation. When endorsed by the President of the Commission, the WIS Center will be included in the list of Global Service operators. 
-WIS Center MUST commit on running the Global Service for a minimum of four (4) years.
-WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operation.
+In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
+
+Running a Global Service is a significant commitment for a WIS Centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.
+
+WMO Secretariat, based on the current situation of WIS (How many Global Brokers ? A need for additional Cache ?), will propose to the WIS Centre the preferred solution to improve the overall level of service of WIS.
+
+A WIS Centre may decide to run the proposed service or may decide to run another one.
+
+The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.
+
+When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.
+
+WMO Secretariat will include the new Global Service in the next fast track cycle of WIS Operation. When endorsed by the President of the Infrastructure Commission, the WIS Centre will be included in the list of Global Service operators. 
+
+A WIS Centre must commit to running the Global Service for a minimum of four (4) years.
+
+WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.
 
 ==== Performance management and monitoring of a Global Service
 
 ===== Service levels, performance indicators, and fair-usage policies
-* Each WIS Center operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.
-* All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centers. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS. 
+* Each WIS Centre operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.
+* All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS. 
 * Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
-* A Global Broker :
+* A Global Broker:
 ** should support a minimum of 200 WIS Nodes or Global Services
 ** should support a minimum of 1000 subscribers. 
 ** should support processing of a minimum of 10000 messages per second
-* A Global Cache  :
+* A Global Cache:
 ** should support a mimimum of 100 GB of data in the cache
 ** should support a minimum of 1000 simultaneous downloads
 ** could limit the number of simultaneous connections from a user (known by its originating source IP) to 5
 ** could limit the bandwidth usage of the service to 1Gb/s
-* A Global Monitor : 
+* A Global Monitor: 
 ** should support a minimum of 50 metrics providers
 ** should support 200 simultaneous access to the dashboard
 ** could limit the bandwidth usage of the service to 100Mb/s
-* A Global Discovery Catalog :
+* A Global Discovery Catalogue:
 ** should support a minimum of 20000 metadata records
 ** should support a minimum of 50 requests per second to the API endpoint
 
 ===== Provision of metrics
 
-* In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be scraped by the Global Monitoring.
+In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by Global Monitoring Services.
 
 ==== Global Broker
 
 ===== Technical considerations
 
-* As detailed above, there will be at least three instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
-* A Global Broker instance subscribes to messages from WIS Centers, Global Caches and other Global Brokers. The Global Broker should aim at subscribing to all WIS Centers. If it is not possible, whatever the reason, the Global Broker should inform WMO Secretariat so that situation is recorded. 
-* Every WIS Center or Global Service must have at least subscriptions from two Global Brokers.
-* For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Broker.
+* As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
+* A Global Broker instance subscribes to messages from WIS Centres, Global Caches and other Global Brokers. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
+* Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.
+* For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.
 
 * A Global Broker is built around two software components:
-** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements. It must be noted that the open source version of Mosquitto can't be clustered and therefore should not be used as part of a Global Broker.
-** Additional features including anti-loop detection, message format compliance, validation of the published topic, provision of metric are required. 
+** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
+** Additional features including anti-loop detection, notification message format compliance, validation of the published topic, and provision of metrics are required. 
 
-* When getting a message from a WIS Center or Global Service broker, The metrics _wmo_wis2_gb_messages_received_total_ will be increased by 1.
-* A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metrics _wmo_wis2_gb_messages_no_metadata_total_ will be increased by 1.
-* A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics _wmo_wis2_gb_messages_invalid_total_ will be increased by 1.
+* When receiviong a message from a WIS Centre or Global Service broker, The metrics ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
+* A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metrics ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1.
+* A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics ``wmo_wis2_gb_messages_invalid_total`` will be increased by 1.
 * A Global Broker instance will republish a message only once. Using the message id as defined in WIS Notification Message, the Global Broker will record id of messages already published and will discard subsequent identitical (with the same message id) messages. This is the anti-loop feature of the Global Broker.
-* During the pre-operational phase (2024), instead of discarding the message in the two situations above, the processing will continue.
-* When publishing a message to the local broker, The metrics _wmo_wis2_gb_messages_published_total_ will be increased by 1. 
-* All aboved defined metrics will be made avalaible on a HTTPS endpoints that the Global Monitor will scrape regularly.
-* As a convention Global Broker centre-id will be tld-centre-name-globalbroker. 
+* During the pre-operational phase (2024), instead of discarding the message in the two situations above, processing will continue.
+* When publishing a message to the local broker, the metrics ``wmo_wis2_gb_messages_published_total`` will be increased by 1. 
+* All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.
+* As a convention Global Broker centre-id will be ``tld-centre-name-globalbroker``. 
 * The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.
 
 ==== Global Cache
