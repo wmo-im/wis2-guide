@@ -10,7 +10,7 @@ image::images/symbology-data-metadata-flows.png[Symbology used to describe data 
 Introducing the key components:
 
 * *MQ Broker*: Used to publish messages advertising the availability of new/updated/deleted discovery metadata and new Data Objects (e.g. data files that comprise the dataset). Implements MQTT 3.1.1 and/or MQTT 5.0.
-* *Data server*: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive Web service that exposes an API. Supported protocols are HTTPS and SFTP.   
+* *Data server*: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive API. Supported protocols are HTTPS and SFTP.   
 * *Catalogue*: Contains discovery metadata records describing the datasets published by the NC/DCPC. May be implemented as a "static catalogue" with JSON files published on a Web server enabling a user to browse the catalogue, or as a "dynamic catalogue" via an application that offers a search API.
 
 === Simple NC/DCPC data sharing
@@ -39,7 +39,7 @@ image::images/simple-nc-dcpc-data-sharing-data-distribution.png[Simple NC/DCPC d
 . Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
 . Data Consumer parses the messages to extract the URL for the new Data Object (*D*) and downloads the file.
 
-Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via a Web service API.  
+Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via an API.  
 
 === Message distribution via Global Broker
 

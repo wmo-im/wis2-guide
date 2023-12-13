@@ -109,34 +109,49 @@ TODO: to be completed
 
 ===== Technical considerations
 
-* The Global Discovery Catalogue provides Data Consumers with a mechanism to discover the Datasets of interest, as well as, how to interact with and find out more information about those Datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard.
-* The Global Discovery Catalogue advertises the availability of Datasets and how/where to access them or subscribe to updates, it does not advertise the availability of individual Data Objects that comprise a dataset (i.e., data files).
+* The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance class and its dependencies:
+  * Searchable Catalog (Deployment)
+  * Searchable Catalog - Sorting (Deployment)
+  * Searchable Catalog - Filtering (Deployment)
+  * JSON (Building Block)
+  * HTML (Building Block)
+* The Global Discovery Catalogue will make discovery metadata available via a collection identifier of `wis2-discovery-metadata`.
+* The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.
+* The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).
 * A single Global Discovery Catalogue instance is sufficient for WIS2.
 * Multiple Global Discovery Catalogue instances may be deployed for resilience.
-* Global Discovery Catalogue instances operate independently of each other – each Global Discovery Catalogue instance will hold all discovery metadata records. There is no need to synchronise between Global Discovery Catalogue instances.
-* A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance – receiving messages about availability of discovery metadata records via a Global Broker.
-* A Global Discovery Catalogue should connect to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance shall discard duplicate messages as needed.
-* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2), discarding non-compliant records and raising an alert.
-* A Global Discovery Catalogue will update discovery metadata records it receives to add links for subscription URLs at Global Broker instances.
-* A Global Discovery Catalogue should applying faceting capability as specified in the cataloguing considerations of the WCMP2 specification as defined in OGC API - Records.
-* A Global Discovery Catalogue shall provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
-* A Global Discovery Catalogue shall periodically assess the discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement are shared with the originating NC or DCPC and their primary GISC.
-* A Global Discovery Catalogue shall generate and store a zipfile of all WCMP2 records once a day, that shall be made be accessible via HTTP.
-* A Global Discovery Catalogue shall then publish a WIS2 Notification Message on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue)`.
+* Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronise between themselves.
+* A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.
+* A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.
+* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
+* A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).
+* A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
+* A Global Discovery Catalogue will remove discovery metadata that is marked for deletion as specified in the data notification message.
+* A Global Discovery Catalogue should apply faceting capability as specified in the cataloguing considerations of the WCMP2 specification, as defined in OGC API - Records.
+* A Global Discovery Catalogue will provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
+* A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.
+* A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
+* A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.
 
-TODO: to be completed
+===== Global Discovery Catalogue reference implementation: wis2-gdc
 
-===== Practices and procedures
+To provide a Global Discovery Catalogue, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
 
-The following procedures will be described here once validated through testing during the WIS2 pilot phase:
+To assist Members participation in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation is made available for download and use.  wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-* Alerting originating NC or DCPC about malformed or non-compliant discovery metadata records
-* Providing feedback to NC and DCPC about how to improve their discovery metadata
-* Removing discovery metadata for a Dataset on request
-* ‘Bootstrapping’ a Global Discovery Catalogue instance from the Global Cache
+wis2-gdc provides functionality required Global Discovery Catalogue, providing the following technical functions:
 
-TODO: to be completed
+* discovery metadata subscription and publication from the Global Broker
+* discovery metadata download the Global Cache
+* discovery metadata validation, ingest and publication
+* WCMP2 compliance
+* quality assessment (key performance indicators [KPIs])
+* OGC API - Records - Part 1: Core compliance
+* metrics reporting
+* implementation of metrics
+
+wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-gdc.
 
 ==== Global Monitor
 
