@@ -8,7 +8,7 @@ Depending on the nature of the Global Service, the following is considered to be
 * Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
 * Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS Nodes providing Core data
 * Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
-* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should fetch the metrics from all WIS Nodes and all other Global Service
+* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should scrape the metrics from all WIS Nodes and all other Global Service
 
 In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
@@ -142,7 +142,7 @@ TODO: to be completed
 
 ===== Technical Considerations
 * WIS standardises how system performance and data availability metrics are published from WIS nodes and Global Services.
-* For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be fetched by the Global Monitor
+* For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the 'health' (i.e., performance) of WIS2 Node as well as Global Service instances.
 * The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS system performance and data availability. The WIS Operations and Management team, in close collaboration with the Global Services will define the content of the dashboard. 
