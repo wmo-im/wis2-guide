@@ -1147,21 +1147,129 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>2.3.1. Procedure for registration of a new Global Service</h4>
 <div class="paragraph">
-<p>During the initial stages of the WIS2 pilot phase an informal process is used to register interest in operating a Global Service. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.</p>
+<p>Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.</p>
+</div>
+<div class="paragraph">
+<p>Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% (or very close):
+* Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
+* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS Nodes providing Core data
+* Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
+* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should scrape the metrics from all WIS Nodes and all other Global Service</p>
+</div>
+<div class="paragraph">
+<p>In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.</p>
+</div>
+<div class="paragraph">
+<p>Running a Global Service is a significant commitment for a WIS Centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.</p>
+</div>
+<div class="paragraph">
+<p>WMO Secretariat, based on the current situation of WIS (How many Global Brokers ? A need for additional Cache ?), will propose to the WIS Centre the preferred solution to improve the overall level of service of WIS.</p>
+</div>
+<div class="paragraph">
+<p>A WIS Centre may decide to run the proposed service or may decide to run another one.</p>
+</div>
+<div class="paragraph">
+<p>The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.</p>
+</div>
+<div class="paragraph">
+<p>When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.</p>
+</div>
+<div class="paragraph">
+<p>WMO Secretariat will include the new Global Service in the next fast track cycle of WIS Operation. When endorsed by the President of the Infrastructure Commission, the WIS Centre will be included in the list of Global Service operators.</p>
+</div>
+<div class="paragraph">
+<p>A WIS Centre must commit to running the Global Service for a minimum of four (4) years.</p>
+</div>
+<div class="paragraph">
+<p>WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>2.3.2. Performance management and monitoring of a Global Service</h4>
 <div class="sect4">
 <h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>2.3.2.1. Service levels, performance indicators, and fair-usage policies</h5>
-<div class="paragraph">
-<p>TODO: to be completed</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Each WIS Centre operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.</p>
+</li>
+<li>
+<p>All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.</p>
+</li>
+<li>
+<p>Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.</p>
+</li>
+<li>
+<p>A Global Broker:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>should support a minimum of 200 WIS Nodes or Global Services</p>
+</li>
+<li>
+<p>should support a minimum of 1000 subscribers.</p>
+</li>
+<li>
+<p>should support processing of a minimum of 10000 messages per second</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A Global Cache:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>should support a mimimum of 100 GB of data in the cache</p>
+</li>
+<li>
+<p>should support a minimum of 1000 simultaneous downloads</p>
+</li>
+<li>
+<p>could limit the number of simultaneous connections from a user (known by its originating source IP) to 5</p>
+</li>
+<li>
+<p>could limit the bandwidth usage of the service to 1Gb/s</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A Global Monitor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>should support a minimum of 50 metrics providers</p>
+</li>
+<li>
+<p>should support 200 simultaneous access to the dashboard</p>
+</li>
+<li>
+<p>could limit the bandwidth usage of the service to 100Mb/s</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>A Global Discovery Catalogue:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>should support a minimum of 20000 metadata records</p>
+</li>
+<li>
+<p>should support a minimum of 50 requests per second to the API endpoint</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>2.3.2.2. Provision of metrics</h5>
 <div class="paragraph">
-<p>TODO: to be completed</p>
+<p>In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by Global Monitoring Services.</p>
 </div>
 </div>
 </div>
@@ -1172,75 +1280,58 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>There will be multiple Global Broker instances to ensure highly available, low latency global provision of messages within WIS.</p>
+<p>As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.</p>
 </li>
 <li>
-<p>A Global Broker instance subscribes to messages from NC/DCPCs and other Global Brokers</p>
+<p>A Global Broker instance subscribes to messages from WIS Centres, Global Caches and other Global Brokers. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.</p>
 </li>
 <li>
-<p>A Global Broker instance will subscribe to messages from a subset of NC/DCPCs and republish them.</p>
+<p>Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.</p>
 </li>
 <li>
-<p>At least one Global Broker will subscribe to messages from every NC/DCPC.</p>
-</li>
-<li>
-<p>For full global coverage, a Global Broker instance will subscribe to messages from other Global Broker instances and republish them.</p>
-</li>
-<li>
-<p>A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".</p>
-</li>
-<li>
-<p>It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT.</p>
-</li>
-<li>
-<p>Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see WIS2 messages</p>
-</li>
-<li>
-<p>Standard topic hierarchy</p>
-<div class="ulist">
-<ul>
-<li>
-<p>A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert.</p>
+<p>For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.</p>
 </li>
 <li>
 <p>A Global Broker is built around two software components:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.</p>
+<p>An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.</p>
 </li>
 <li>
-<p>Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.</p>
+<p>Additional features including anti-loop detection, notification message format compliance, validation of the published topic, and provision of metrics are required.</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>2.3.3.2. Practices and procedures</h5>
-<div class="paragraph">
-<p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Assigning a Global Broker to a NC or DCPC</p>
 </li>
 <li>
-<p>Alerting originating NC or DCPC about malformed or non-compliant messages</p>
+<p>When receiviong a message from a WIS Centre or Global Service broker, The metrics <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metrics <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics <code>wmo_wis2_gb_messages_invalid_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>A Global Broker instance will republish a message only once. Using the message id as defined in WIS Notification Message, the Global Broker will record id of messages already published and will discard subsequent identitical (with the same message id) messages. This is the anti-loop feature of the Global Broker.</p>
+</li>
+<li>
+<p>During the pre-operational phase (2024), instead of discarding the message in the two situations above, processing will continue.</p>
+</li>
+<li>
+<p>When publishing a message to the local broker, the metrics <code>wmo_wis2_gb_messages_published_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.</p>
+</li>
+<li>
+<p>As a convention Global Broker centre-id will be <code>tld-centre-name-globalbroker</code>.</p>
+</li>
+<li>
+<p>The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
 </div>
 </div>
 </div>
@@ -1293,7 +1384,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_practices_and_procedures_3"><a class="anchor" href="#_practices_and_procedures_3"></a>2.3.4.2. Practices and procedures</h5>
+<h5 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>2.3.4.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 * Assigning a Global Cache to a NC or DCPC
@@ -1362,7 +1453,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect4">
-<h5 id="_practices_and_procedures_4"><a class="anchor" href="#_practices_and_procedures_4"></a>2.3.5.2. Practices and procedures</h5>
+<h5 id="_practices_and_procedures_3"><a class="anchor" href="#_practices_and_procedures_3"></a>2.3.5.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:</p>
 </div>
@@ -1394,30 +1485,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>WIS2 standardises how system performance and data availability metrics are published from WIS nodes and Global Services.</p>
+<p>WIS standardises how system performance and data availability metrics are published from WIS nodes and Global Services.</p>
+</li>
+<li>
+<p>For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor</p>
 </li>
 <li>
 <p>The Global Monitor will collect metrics as defined in the OpenMetrics standard.</p>
 </li>
 <li>
-<p>The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.</p>
+<p>The Global Monitor will monitor the 'health' (i.e., performance) of WIS2 Node as well as Global Service instances.</p>
 </li>
 <li>
-<p>The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.</p>
+<p>The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS system performance and data availability. The WIS Operations and Management team, in close collaboration with the Global Services will define the content of the dashboard.</p>
+</li>
+<li>
+<p>The Global Monitor, through the metrics provided, will be able to detect issues. In this case, Global Monitor will publish a Notification Message in the monitoring topic, as define by the WIS Operations and Monitoring team.
+TODO: to be completed</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_practices_and_procedures_5"><a class="anchor" href="#_practices_and_procedures_5"></a>2.3.6.2. Practices and procedures</h5>
-<div class="paragraph">
-<p>Procedures pertinent to the Global Monitor will be described here once validated through testing during the WIS2 pilot phase.</p>
-</div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
 </div>
 </div>
 </div>
@@ -1906,7 +1992,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-22 20:22:08 UTC
+Last updated 2023-12-14 18:49:36 UTC
 </div>
 </div>
 </body>
