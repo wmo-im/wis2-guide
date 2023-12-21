@@ -30,20 +30,58 @@ The cloud-based infrastructure allows easy portability of technical solutions, e
 
 It should be clear that hosting data and services on the cloud does not affect data ownership. Even in a cloud environment, organisations retain ownership of their data, software, configuration, and change management as if they were hosting their infrastructure. As a result, data authority and provenance stay with the organisation, and the cloud is simply a technical means to publish the data. 
 
-=== Why are datasets so important?
+==== Why are datasets so important?
 
-The purpose of WIS is to enable sharing of data. "Datasets" provide the mechanism for us to describe what data we publish, or what data we’re interested in.
+WMO enables the international exchange of observations and model data for all Earth-system disciplines. 
 
-Data comes in all shapes and sizes. Often, our data is continually updated (e.g., new observations from an automatic weather station). Sometimes it is very, very big (e.g., a set of climate predictions or a multi-decadal reanalysis). WIS2 aims to make it simple to talk about collections of data that share similar characteristics.
+The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) footnote:[WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021))], describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.  
 
-We call these collections of data "Datasets".
+WIS is the mechanism by which this Earth system data is exchanged. 
 
-A Dataset may comprise of thousands of individual files – like scene from an imaging satellite, or fields from a numerical weather prediction model. Or it may comprise huge numbers of records in a database – like a time-series of physical property values observed at numerous locations. 
+Common practice when working with data is to group them into "Datasets". All the data in a Dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a Dataset as a "collection of data, published or curated by a single agent, and available for access of download in one or more representations" footnote:[Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020 https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset]. 
 
-However, the data is stored, we describe the collection of files, records, whatever (!) as a Dataset. But there are some rules. The data in a Dataset must be consistent – it must have the same type (e.g., time-series at point locations), subject (e.g., observations of physical properties), and any spatiotemporal referencing so that people can structure sensible queries on the Dataset. A Dataset must also have a single usage or access policy, which implies a Dataset will be subject to a single governance regime and will likely have a single owner. Most importantly, the contents of a Dataset must be available from a single access point so that we can tell Data Consumers where they can download data from. We also need to use a single topic for publishing notifications about the availability of new data within a Dataset.
+Why is this important? The "single agent" (i.e., a single organisation) responsible for managing the collection ensures consistency among the data. For example, in a Dataset:
 
-It is up to Data Publishers to decide how they group data into Datasets. That said, we recommend that, subject to the consistency rules, Data Publishers should organise their data into as few Datasets as possible. For a Data Publisher this means fewer discovery metadata records to maintain. For a Data Consumer this means fewer topics to subscribe to, and lower barrier APIs and Web services to access.
+* All the data should be of the same type (e.g., observations from weather stations).
+* All the data should be have the same license and/or usage conditions.
+* All the data should be subject to the same quality management regime - which may mean that all the data is collected or created using the same processes.
+* All the data should be encoded in the same way (i.e., using the same data formats and vocabularies).
+* All the data should be accessible using the same protocols - ideally from a single location.
 
-A real-world example for an NMHS to package all synoptic observations for the entire country or territory into a single Dataset footnote:[Probably keep archived synoptic observations separate from those being collected in (near) real-time because they’re likely accessed through different Web-services.] footnote:[This is contrary to earlier practices in WIS where each GTS bulletin was considered a Dataset. This meant that the WIS Catalogue became overburdened with hundreds of thousands of records, each describing more-or-less the same thing. The result was a very poor search experience – always too many ‘hits’!]. Described with a single discovery metadata record. Accessible via a single Web-service.
+This consistency means that one can predict what data is in a Dataset, at least as far as the common characteristics, making it easier to write applications to process the data.
 
-Finally, note that the notification messages used to advertise the availability of new data themselves contain metadata (time, location, etc.). This allows for Data Consumers to decide whether or not they want to download a specific file or record.
+A Dataset might be published as an immutable resource (e.g., data collected from a research programme), or it might be routinely updated (e.g., every minute as new observations are collected from weather stations).
+
+A Dataset may be represented as a single, structured file or object (e.g., a CSV file where each row represents a data record) or as thousands of consistent files (e.g., output from a reanalysis model encoded as many thousands of GRIB files). Determining the best way to represent a Dataset is beyond the scope of this guide - there are many factors to consider! The key point here is that we consider the Dataset to be a single, identifiable resource irrespective of how it's represented.
+
+Because we group data into a single, conceptual resource (i.e., the Dataset) we can: 
+
+* Give this resource an identifier, and use this identifier to unambiguously refer to collections of data.
+* Make statements about the Dataset (i.e., metadata), and infer that these statements apply to the entire collection.
+
+All this means that the Dataset concept is central WIS:
+
+* We publish discovery metadata about Datasets, as specified in the WMO Core Metadata Profile footnote:[WMO Core Metadata Profile version 2]. 
+* We can search for Datasets that contain relevant data using the Global Discovery Catalogue. 
+* We can subscribe to notifications about updates about a Dataset via a Global Broker.
+* We can access the data that comprises a Dataset from a single location using a well described mechanism.  
+	
+It is up to the Data Publisher to decide how their data is grouped into Datasets - effectively, to decide what Datasets they publish to WIS. That said, we recommend that, subject to the consistency rules above, Data Publishers should organise their data into as few Datasets as possible. 
+
+For a Data Publisher, this means fewer discover metadata records to maintain. For a Data Consumer this means fewer topics to subscribe to and fewer places to access the data.
+
+There are some things that are fixed requirements for Datasets:
+
+. All data in the Dataset must be accessible from a single location.
+. All data in the Dataset must be subject to the same license or usage conditions.
+
+Here are some examples of Datasets:
+
+* The most recent 5-days of synoptic observations for an entire country or territory. Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.
+* Long-term record of observed water quality for a managed set of hydrological stations.
+* Output from the most recent 24-hours of operational numerical weather prediction model runs. 
+* Output from 6-months of experimental model runs. It's important to note that output from the operational and experimental should not be merged into the same dataset because they use different algorithms - it's very useful to be able to distinguish the provenance (or lineage) of data.
+* A multi-petabyte global reanalysis spanning 1950 to present day.
+* [more examples from other Earth system domains?]  
+
+In summary, Datasets are important because they're how data is managed in WIS. 
