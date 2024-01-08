@@ -496,7 +496,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets">2.4.1. How to search the Global Discovery Catalogue to find Datasets</a></li>
 <li><a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">2.4.2. How to subscribe to notifications about availability of new data</a></li>
 <li><a href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data">2.4.3. How to use a notification message to decide whether to download data</a></li>
-<li><a href="#_how_to_download_data_from_the_global_cache_and_wis_nodes">2.4.4. How to download data from the Global Cache and WIS nodes</a></li>
+<li><a href="#_how_to_download_data">2.4.4. How to download data</a></li>
 <li><a href="#_additional_sections_of_interest_to_a_data_consumer_todo_fix_crossref">2.4.5. Additional sections of interest to a Data Consumer (TODO: fix crossref)</a></li>
 </ul>
 </li>
@@ -547,7 +547,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_part_iv">5. PART IV</a>
 <ul class="sectlevel2">
-<li><a href="#_security">5.1. Security</a></li>
+<li><a href="#_security">5.1. Security</a>
+<ul class="sectlevel3">
+<li><a href="#_access_control">5.1.1. Access control</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_part_v">6. PART V</a>
@@ -746,31 +750,31 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="sect3">
 <h4 id="_how_to_search_the_global_discovery_catalogue_to_find_datasets"><a class="anchor" href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets"></a>2.4.1. How to search the Global Discovery Catalogue to find Datasets</h4>
 <div class="paragraph">
-<p>A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see PART V Discovery Metadata). A Data Consumer may discover a Dataset using keywords, topics, geographic area of interest, or date(s) associated with the Dataset. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing), from which a Data Consumer can assess and evaluate their interest in accessing/downloading the Dataset’s data.</p>
+<p>A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see PART V Discovery Metadata TODO: fix ref). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.</p>
 </div>
 <div class="paragraph">
-<p>A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature of the link (informational, direct download, API or Web service) so that the Data Consumer can interact with the data accordingly. For example, a Dataset record may include a link to subscribe to notifications (see 2.2.2 how to subscribe to notification about availability of new data) about the data, or a API or Web service, or an offline archive retrieval service.</p>
+<p>A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see <a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">How to subscribe to notifications about availability of new data</a>) about the data, or a API, or an offline archive retrieval service.</p>
 </div>
 <div class="paragraph">
-<p>TODO: To be completed</p>
+<p>The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <a href="#_global_discovery_catalogue">Global Discovery Catalogue</a>).</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_how_to_subscribe_to_notifications_about_availability_of_new_data"><a class="anchor" href="#_how_to_subscribe_to_notifications_about_availability_of_new_data"></a>2.4.2. How to subscribe to notifications about availability of new data</h4>
 <div class="paragraph">
-<p>A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy). A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.</p>
+<p>A Data Consumer can subscribe to data notifications by searching the Global Discovery Catalogue and subscribing to notifications associated with a given Dataset, or by browsing the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy TODO: crossref).  A Data Consumer can use the "canonical" link provided in a Data notification to directly download the associated data.</p>
 </div>
 <div class="paragraph">
-<p>Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker at Global Cache instances.</p>
+<p>A Data Consumer may also discover more about the Dataset associated with a particular data notification by using the notification&#8217;s metadata identifier as a key to search the Global Discovery Catalogue.</p>
+</div>
+<div class="paragraph">
+<p>Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker of Global Cache instances.</p>
 </div>
 <div class="paragraph">
 <p>Real-time and near real-time data designated as "Core" in the WMO Unified Data Policy (Resolution 1) will be available from the Global Cache. As per clause 3.2.13 from the Manual on WIS, Vol II. Data Consumers should access data from the Global Cache.</p>
 </div>
 <div class="paragraph">
-<p>When a Dataset is available from the Global Cache, its discovery metadata will include a link to subscribe to "data availability" messages from the Global Cache instances. Data Consumers will subscribe to these "Global Cache" topics and not to the topic that contains messages from the originating NC/DCPC.</p>
-</div>
-<div class="paragraph">
-<p>TODO: To be completed</p>
+<p>When a Dataset is available from the Global Cache, its Dataset record will include a link to subscribe to "data availability" messages from the Global Cache instances. Data Consumers will subscribe to these "Global Cache" topics and not to the topic that contains messages from the originating NC/DCPC.</p>
 </div>
 </div>
 <div class="sect3">
@@ -778,17 +782,11 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="paragraph">
 <p>Each Global Cache will publish a "data availability" message as the associated data object becomes available from that Global Cache instance. Each "data availability" message will refer to the same logical data object but hosted at a different location within WIS. Data Consumers need to consider their strategy for managing these duplicate messages. From a data perspective, it does not matter which Global Cache instance is used – they will all provide an identical copy of the data object published by the originating NC/DCPC. The simplest strategy is to accept the first "data availability" message and download from the Global Cache instance that the message refers to (i.e., using a URL for the data object at that Global Cache instance). Alternatively, a Data Consumer may have a preferred Global Cache instance, for example, that is located in the Region. Whichever Global Cache instance is chosen, Data Consumers will need to implement logic to discard duplicate "data availability" messages.</p>
 </div>
-<div class="paragraph">
-<p>TODO: To be completed</p>
-</div>
 </div>
 <div class="sect3">
-<h4 id="_how_to_download_data_from_the_global_cache_and_wis_nodes"><a class="anchor" href="#_how_to_download_data_from_the_global_cache_and_wis_nodes"></a>2.4.4. How to download data from the Global Cache and WIS nodes</h4>
+<h4 id="_how_to_download_data"><a class="anchor" href="#_how_to_download_data"></a>2.4.4. How to download data</h4>
 <div class="paragraph">
-<p>Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.</p>
-</div>
-<div class="paragraph">
-<p>TODO: To be completed</p>
+<p>Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.  For data subscriptions, data notification messages provide a "cannonical" link to download the associated data object.</p>
 </div>
 </div>
 <div class="sect3">
@@ -885,10 +883,10 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <p>Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2</p>
 </div>
 <div class="paragraph">
-<p>Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a Data Publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue/collection).</p>
+<p>Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a Data Publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API - Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue/collection).</p>
 </div>
 <div class="paragraph">
-<p>These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse.</p>
+<p>These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.</p>
 </div>
 <div class="paragraph">
 <p>Discovery metadata must be published before data sharing through WIS begins.</p>
@@ -1019,10 +1017,10 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="sect3">
 <h4 id="_wis_node_reference_implementation_wis2box"><a class="anchor" href="#_wis_node_reference_implementation_wis2box"></a>3.2.4. WIS Node reference implementation: wis2box</h4>
 <div class="paragraph">
-<p>Members may use whichever software components they consider most appropriate to comply with the WIS2 Technical Regulations.</p>
+<p>To provide a WIS Node, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.</p>
 </div>
 <div class="paragraph">
-<p>To assist Members participate in WIS2, a freely available, open-source Reference Implementation has been developed: "WIS2 in a box" (referred to as wis2box). It builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
+<p>To assist Members participation in WIS2, a free and open-source WIS Node Reference Implementation is made available for download and use.  WIS2 in a box (referred to as wis2box) builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
 </div>
 <div class="paragraph">
 <p>wis2box provides functionality required for both Data Publisher and Data Consumer roles. It provides the following technical functions:</p>
@@ -1030,39 +1028,48 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="ulist">
 <ul>
 <li>
-<p>Real-time or archive data and metadata publishing to WIS2 (Publish), including available data transformation and processing pipelines</p>
+<p>Configuration, generation and publication of data (real-time or archive) and metadata to WIS2, compliant to WIS2 Node requirements</p>
 </li>
 <li>
 <p>MQTT Message Broker and notification message publication (Subscribe)</p>
 </li>
 <li>
-<p>Object storage server providing raw data access (Download)</p>
+<p>HTTP object storage and raw data access (Download)</p>
 </li>
 <li>
-<p>OGC API server, providing dynamic APIs and Web services for discovery, access, visualization and processing functionality (APIs)</p>
+<p>Station metadata curation / editing tools (user interface)</p>
 </li>
 <li>
-<p>Discovery metadata curation / editing tools</p>
+<p>Discovery metadata curation / editing tools (user interface)</p>
 </li>
 <li>
-<p>Notification subscription and real-time download of data upon receipt of notifications.</p>
+<p>Data entry tools (user interfaces)</p>
+</li>
+<li>
+<p>OGC API server, providing dynamic APIs for discovery, access, visualization and processing functionality (APIs)</p>
+</li>
+<li>
+<p>Extensible data "pipelines", allowing for transformation, processing and publishing of additional data types</p>
 </li>
 <li>
 <p>Provision of system performance and data availability metrics</p>
 </li>
 <li>
-<p>The modular design of wis2box makes it simple to extend to meet additional requirements or integrate with existing data management systems.</p>
+<p>Access control for recommended data publication, as required</p>
 </li>
 <li>
-<p>wis2box already provides a useful set of functionality and will continue to evolve and develop throughout the WIS2 pilot phase and beyond.</p>
+<p>Subscription to notifications and and download of WIS data from Global Services</p>
+</li>
+<li>
+<p>Modular design, allowing for extending to meet additional requirements or integrate with existing data management systems</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Documentation is published in wis2box documentation.</p>
+<p>Project documentation can be found at <a href="https://docs.wis2box.wis.wmo.int" class="bare">https://docs.wis2box.wis.wmo.int</a></p>
 </div>
 <div class="paragraph">
-<p>The project in hosted in GitHub: <a href="https://github.com/wmo-im/wis2box" class="bare">https://github.com/wmo-im/wis2box</a></p>
+<p>wis2box is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: <a href="https://docs.wis2box.wis.wmo.int" class="bare">https://docs.wis2box.wis.wmo.int</a>.</p>
 </div>
 </div>
 </div>
@@ -1326,13 +1333,34 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="ulist">
 <ul>
 <li>
-<p>The Global Discovery Catalogue provides Data Consumers with a mechanism to discover the Datasets of interest, as well as, how to interact with and find out more information about those Datasets.</p>
+<p>The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.</p>
 </li>
 <li>
-<p>The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard.</p>
+<p>The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance class and its dependencies:</p>
 </li>
 <li>
-<p>The Global Discovery Catalogue advertises the availability of Datasets and how/where to access them or subscribe to updates, it does not advertise the availability of individual Data Objects that comprise a dataset (i.e., data files).</p>
+<p>Searchable Catalog (Deployment)</p>
+</li>
+<li>
+<p>Searchable Catalog - Sorting (Deployment)</p>
+</li>
+<li>
+<p>Searchable Catalog - Filtering (Deployment)</p>
+</li>
+<li>
+<p>JSON (Building Block)</p>
+</li>
+<li>
+<p>HTML (Building Block)</p>
+</li>
+<li>
+<p>The Global Discovery Catalogue will make discovery metadata available via a collection identifier of <code>wis2-discovery-metadata</code>.</p>
+</li>
+<li>
+<p>The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.</p>
+</li>
+<li>
+<p>The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).</p>
 </li>
 <li>
 <p>A single Global Discovery Catalogue instance is sufficient for WIS2.</p>
@@ -1341,64 +1369,85 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <p>Multiple Global Discovery Catalogue instances may be deployed for resilience.</p>
 </li>
 <li>
-<p>Global Discovery Catalogue instances operate independently of each other – each Global Discovery Catalogue instance will hold all discovery metadata records. There is no need to synchronise between Global Discovery Catalogue instances.</p>
+<p>Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronise between themselves.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance – receiving messages about availability of discovery metadata records via a Global Broker.</p>
+<p>A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue should connect to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance shall discard duplicate messages as needed.</p>
+<p>A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2), discarding non-compliant records and raising an alert.</p>
+<p>A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue will update discovery metadata records it receives to add links for subscription URLs at Global Broker instances.</p>
+<p>A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue should applying faceting capability as specified in the cataloguing considerations of the WCMP2 specification as defined in OGC API - Records.</p>
+<p>A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue shall provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.</p>
+<p>A Global Discovery Catalogue will remove discovery metadata that is marked for deletion as specified in the data notification message.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue shall periodically assess the discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement are shared with the originating NC or DCPC and their primary GISC.</p>
+<p>A Global Discovery Catalogue should apply faceting capability as specified in the cataloguing considerations of the WCMP2 specification, as defined in OGC API - Records.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue shall generate and store a zipfile of all WCMP2 records once a day, that shall be made be accessible via HTTP.</p>
+<p>A Global Discovery Catalogue will provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue shall then publish a WIS2 Notification Message on its centre-id&#8217;s metadata topic (i.e. <code>origin/a/wis2/centre-id/metadata</code>, where <code>centre-id</code> is the centre identifier of the Global Discovery Catalogue)`.</p>
+<p>A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id&#8217;s metadata topic (i.e. <code>origin/a/wis2/centre-id/metadata</code>, where <code>centre-id</code> is the centre identifier of the Global Discovery Catalogue).</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>TODO: to be completed</p>
-</div>
 </div>
 <div class="sect4">
-<h5 id="_practices_and_procedures_3"><a class="anchor" href="#_practices_and_procedures_3"></a>3.3.5.2. Practices and procedures</h5>
+<h5 id="_global_discovery_catalogue_reference_implementation_wis2_gdc"><a class="anchor" href="#_global_discovery_catalogue_reference_implementation_wis2_gdc"></a>3.3.5.2. Global Discovery Catalogue reference implementation: wis2-gdc</h5>
 <div class="paragraph">
-<p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:</p>
+<p>To provide a Global Discovery Catalogue, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.</p>
+</div>
+<div class="paragraph">
+<p>To assist Members participation in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation is made available for download and use.  wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
+</div>
+<div class="paragraph">
+<p>wis2-gdc provides functionality required Global Discovery Catalogue, providing the following technical functions:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Alerting originating NC or DCPC about malformed or non-compliant discovery metadata records</p>
+<p>discovery metadata subscription and publication from the Global Broker</p>
 </li>
 <li>
-<p>Providing feedback to NC and DCPC about how to improve their discovery metadata</p>
+<p>discovery metadata download the Global Cache</p>
 </li>
 <li>
-<p>Removing discovery metadata for a Dataset on request</p>
+<p>discovery metadata validation, ingest and publication</p>
 </li>
 <li>
-<p>‘Bootstrapping’ a Global Discovery Catalogue instance from the Global Cache</p>
+<p>WCMP2 compliance</p>
+</li>
+<li>
+<p>quality assessment (key performance indicators [KPIs])</p>
+</li>
+<li>
+<p>OGC API - Records - Part 1: Core compliance</p>
+</li>
+<li>
+<p>metrics reporting</p>
+</li>
+<li>
+<p>implementation of metrics</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>TODO: to be completed</p>
+<p>wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: <a href="https://github.com/wmo-im/wis2-gdc" class="bare">https://github.com/wmo-im/wis2-gdc</a>.</p>
 </div>
 </div>
 </div>
@@ -1880,6 +1929,13 @@ TODO: to be completed</p>
 <div class="paragraph">
 <p>This section will introduce some concepts on the measures a publisher or a global service can implement to decrease the risk of cyber attacks.</p>
 </div>
+<div class="sect3">
+<h4 id="_access_control"><a class="anchor" href="#_access_control"></a>5.1.1. Access control</h4>
+<div class="paragraph">
+<p>Access control (authentication and authorization) can be expressed in discovery metadata through security definitions in access links, and
+can be applied for data, APIs or other resource types (see WCMP2 Discovery Metadata TODO: crossref).</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1916,7 +1972,7 @@ TODO: to be completed</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-08 18:42:06 UTC
+Last updated 2024-01-08 18:47:44 UTC
 </div>
 </div>
 </body>
