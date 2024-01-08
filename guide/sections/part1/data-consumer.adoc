@@ -29,9 +29,3 @@ Each Global Cache will publish a "data availability" message as the associated d
 ==== How to download data
 
 Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.  For data subscriptions, data notification messages provide a "cannonical" link to download the associated data object.
-
-==== Additional sections of interest to a Data Consumer (TODO: fix crossref)
-
-* 1.2	 What is WIS2?
-* 1.3 	Why are Datasets so important?
-[To be completed]
