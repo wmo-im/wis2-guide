@@ -2,11 +2,15 @@
 
 WIS 2.0 is a federated system of systems based on Web-Architecture and open standards, comprising of many WIS2 Nodes for publishing data and Global Services that enable fault tolerant, highly available, low latency data distribution.
 
-National Centres (NC) and Data Collection and Production Centres (DCPC) operate WIS2 Nodes.   
+National Centres (NC), Data Collection and Production Centres (DCPC), and Global Information System Centres (GISC) are sll types of WIS Centre.
 
-In addition, Global Information System Centres (GISC) coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS 2.0 system.
+NCs and DCPCs operate WIS2 Nodes.   
 
-WIS2 Nodes, GISCs and Global Services are types of WIS Centre and comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060), Vol II.
+GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS 2.0 system. 
+
+A WIS Centre may also operate one or more Global Services.
+
+WIS Centres shall comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060), Vol I.2.
 
 ==== Roles in WIS 2.0
 
@@ -27,7 +31,7 @@ When describing the functions of WIS2 there are four roles to consider:
 
 . Global Service operator:
 * To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services – 
-  i) Global Discovery Catalogue: enables users (humans and software agents) to search all Datasets provided by Data Publishers and discover where and how to interact with those Datasets (e.g., subscribe to updates, access/download/visualize data, or access more detailed information about the Dataset).
+  i) Global Discovery Catalogue: enables users to search all Datasets provided by Data Publishers and discover where and how to interact with those Datasets (e.g., subscribe to updates, access/download/visualize data, or access more detailed information about the Dataset).
   ii) Global Broker: provides highly available messaging services where users may subscribe to notifications about all Datasets provided by Data Publishers.
   iii) Global Cache: provides highly available download service for cached copies of core data downloaded from Data Publishers’ Web-services.
   iv) Global Monitor: gathers and displays system performance, data availability, and other metrics from all WIS nodes and Global Services.
@@ -66,7 +70,8 @@ When describing the functions of WIS2 there are four roles to consider:
 * A Global Cache subscribes to notification messages via a Global Broker.
 * On receipt of a notification message, the Global Cache downloads from the WIS2 Node a copy data referenced in the notification message, makes this copy available on its data server, and publishes a new notification message advertising availability of this data at the Global Cache.
 * A Global Cache will subscribe to notification messages from other Global Caches enabling it to download and republish data it has not acquired directly from WIS2 Nodes. This ensures that each Global Cache holds data from every WIS2 Node.
-* A Global Cache will delete data from the cache once the retention period has expired. The retention period is 24-hours.
+* A Global Cache shall retain a copy of core data for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.
+* A Global Cache will delete data from the cache once the retention period has expired.
 * Data Consumers should download data from a Global Cache when available.
 
 . Global Discovery Catalogue:
