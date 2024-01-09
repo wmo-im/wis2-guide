@@ -509,27 +509,28 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_part_ii">3. PART II</a>
-<ul class="sectlevel2">
-<li><a href="#_wis2_architecture">3.1. WIS2 Architecture</a></li>
-<li><a href="#_implementation_and_operation_of_wis2_node">3.2. Implementation and operation of WIS2 Node</a>
 <ul class="sectlevel3">
-<li><a href="#_practices_and_procedures">3.2.1. Practices and procedures</a></li>
-<li><a href="#_publishing_data_discovery_metadata_and_notification_messages">3.2.2. Publishing data, discovery metadata, and notification messages</a></li>
-<li><a href="#_performance_management">3.2.3. Performance management</a></li>
-<li><a href="#_wis_node_reference_implementation_wis2box">3.2.4. WIS Node reference implementation: wis2box</a></li>
+<li><a href="#_roles_in_wis_2_0">3.1. Roles in WIS 2.0</a></li>
+<li><a href="#_components_of_wis_2_0">3.2. Components of WIS 2.0</a></li>
+<li><a href="#_implementation_and_operation_of_wis2_node">3.3. Implementation and operation of WIS2 Node</a>
+<ul class="sectlevel3">
+<li><a href="#_practices_and_procedures">3.3.1. Practices and procedures</a></li>
+<li><a href="#_publishing_data_discovery_metadata_and_notification_messages">3.3.2. Publishing data, discovery metadata, and notification messages</a></li>
+<li><a href="#_performance_management">3.3.3. Performance management</a></li>
+<li><a href="#_wis_node_reference_implementation_wis2box">3.3.4. WIS Node reference implementation: wis2box</a></li>
 </ul>
 </li>
-<li><a href="#_implementation_and_operation_of_a_global_service">3.3. Implementation and operation of a Global Service</a>
+<li><a href="#_implementation_and_operation_of_a_global_service">3.4. Implementation and operation of a Global Service</a>
 <ul class="sectlevel3">
-<li><a href="#_procedure_for_registration_of_a_new_global_service">3.3.1. Procedure for registration of a new Global Service</a></li>
-<li><a href="#_performance_management_and_monitoring_of_a_global_service">3.3.2. Performance management and monitoring of a Global Service</a></li>
-<li><a href="#_global_broker">3.3.3. Global Broker</a></li>
-<li><a href="#_global_cache">3.3.4. Global Cache</a></li>
-<li><a href="#_global_discovery_catalogue">3.3.5. Global Discovery Catalogue</a></li>
-<li><a href="#_global_monitor">3.3.6. Global Monitor</a></li>
+<li><a href="#_procedure_for_registration_of_a_new_global_service">3.4.1. Procedure for registration of a new Global Service</a></li>
+<li><a href="#_performance_management_and_monitoring_of_a_global_service">3.4.2. Performance management and monitoring of a Global Service</a></li>
+<li><a href="#_global_broker">3.4.3. Global Broker</a></li>
+<li><a href="#_global_cache">3.4.4. Global Cache</a></li>
+<li><a href="#_global_discovery_catalogue">3.4.5. Global Discovery Catalogue</a></li>
+<li><a href="#_global_monitor">3.4.6. Global Monitor</a></li>
 </ul>
 </li>
-<li><a href="#_operations">3.4. Operations</a></li>
+<li><a href="#_operations">3.5. Operations</a></li>
 </ul>
 </li>
 <li><a href="#_part_iii">4. PART III</a>
@@ -825,16 +826,281 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="sect1">
 <h2 id="_part_ii"><a class="anchor" href="#_part_ii"></a>3. PART II</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_wis2_architecture"><a class="anchor" href="#_wis2_architecture"></a>3.1. WIS2 Architecture</h3>
-
+<div class="paragraph">
+<p>===WIS 2.0 Architecture</p>
+</div>
+<div class="paragraph">
+<p>WIS 2.0 is a federated system of systems based on Web-Architecture and open standards, comprising of many WIS2 Nodes for publishing data and Global Services that enable fault tolerant, highly available, low latency data distribution.</p>
+</div>
+<div class="paragraph">
+<p>National Centres (NC), Data Collection and Production Centres (DCPC), and Global Information System Centres (GISC) are sll types of WIS Centre.</p>
+</div>
+<div class="paragraph">
+<p>NCs and DCPCs operate WIS2 Nodes.</p>
+</div>
+<div class="paragraph">
+<p>GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS 2.0 system.</p>
+</div>
+<div class="paragraph">
+<p>A WIS Centre may also operate one or more Global Services.</p>
+</div>
+<div class="paragraph">
+<p>WIS Centres shall comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060), Vol I.2.</p>
+</div>
+<div class="sect3">
+<h4 id="_roles_in_wis_2_0"><a class="anchor" href="#_roles_in_wis_2_0"></a>3.1. Roles in WIS 2.0</h4>
+<div class="paragraph">
+<p>When describing the functions of WIS2 there are four roles to consider:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Data Publisher:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This role is fulfilled by NC and DCPC.</p>
+</li>
+<li>
+<p>Data Publishers operate a "WIS node" to share their data within the WIS2 ecosystem.</p>
+</li>
+<li>
+<p>Data Publishers manage, curate, and provide access to one or more "Datasets".</p>
+</li>
+<li>
+<p>For each Dataset, a Data Publisher provides:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman">
+<li>
+<p>"Discovery metadata" to describe the Dataset, provide details on how it can be accessed, and under what conditions.</p>
+</li>
+<li>
+<p>An API or Web-service to access (or interact with) the Dataset.</p>
+</li>
+<li>
+<p>Notification messages advertising the availability of new data and metadata.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Coordinator:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This role is exclusive to GISCs.</p>
+</li>
+<li>
+<p>All GISCs supporting WMO Members in their AoR fulfil their data sharing obligations via WIS2.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Service operator:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services –</p>
+<div class="olist lowerroman">
+<ol class="lowerroman">
+<li>
+<p>Global Discovery Catalogue: enables users to search all Datasets provided by Data Publishers and discover where and how to interact with those Datasets (e.g., subscribe to updates, access/download/visualize data, or access more detailed information about the Dataset).</p>
+</li>
+<li>
+<p>Global Broker: provides highly available messaging services where users may subscribe to notifications about all Datasets provided by Data Publishers.</p>
+</li>
+<li>
+<p>Global Cache: provides highly available download service for cached copies of core data downloaded from Data Publishers’ Web-services.</p>
+</li>
+<li>
+<p>Global Monitor: gathers and displays system performance, data availability, and other metrics from all WIS nodes and Global Services.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Data Consumer:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This role represents anyone wanting to find, access, and use data from WIS2 – examples include (but are not limited to): NMHS, government agency, research institution, private sector organisation, etc.</p>
+</li>
+<li>
+<p>Searches or browses the Global Discovery Catalogue (or other search engine) to discover the Dataset(s) that meet their needs (i.e., "Datasets of interest").</p>
+</li>
+<li>
+<p>Subscribes via the Global Broker to receive notification messages about the availability of data or metadata associated with Datasets of interest.</p>
+</li>
+<li>
+<p>Determines whether the data or metadata referenced in notification messages is required.</p>
+</li>
+<li>
+<p>Downloads data from Global Cache or WIS2 Node.</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_components_of_wis_2_0"><a class="anchor" href="#_components_of_wis_2_0"></a>3.2. Components of WIS 2.0</h4>
+<div class="olist TODO: add refs to other parts of the Guide describing these components">
+<ol class="TODO: add refs to other parts of the Guide describing these components">
+<li>
+<p>WIS2 Node:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIS2 Nodes are central to WIS 2.0. These are operated by National Centres (NC) and Data Collection and Production Centres (DCPC) to publish their <strong>Core</strong> and <strong>Recommended</strong> data.</p>
+</li>
+<li>
+<p>WIS 2.0 adopts Web technologies and open standards enabling WIS2 Nodes to be implemented using freely-available software components and common industry practices.</p>
+</li>
+<li>
+<p>WIS2 Nodes publish data as files of a Web server or using an interactive Web service.</p>
+</li>
+<li>
+<p>WIS2 Nodes describe the data they publish using discovery metadata [TODO: ref. WIS Core Metadata Profile 2].</p>
+</li>
+<li>
+<p>WIS2 Nodes generate notification messages [TODO: ref. WIS2 Notification Message] advertising the availability of new data. These notification messages are published to a message broker. A standardised topic hierarchy [TODO: ref. WIS2 Topic Hierarchy] is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata.</p>
+</li>
+<li>
+<p>WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Broker:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIS2 incorporates several Global Brokers, ensuring highly resilient distribution of notification messages across the globe.</p>
+</li>
+<li>
+<p>A Global Broker subscribes to the message broker operated by each WIS2 Node and republishes notification messages.</p>
+</li>
+<li>
+<p>A Global broker subscribes to notifications from other Global Brokers to ensure it receives a copy of all notification messages.</p>
+</li>
+<li>
+<p>A Global Broker republishes notification messages from every WIS2 Node and Global Service.</p>
+</li>
+<li>
+<p>A Global Broker operates a highly available, high-performance message broker.</p>
+</li>
+<li>
+<p>A Global Broker uses the standardised topic hierarchy enabling a Data Consumer to easily find topics relevant to their needs.</p>
+</li>
+<li>
+<p>Data Consumers should subscribe to notifications from a Global Broker not directly to the message brokers operated by WIS2 Nodes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Cache:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIS2 incorporates several Global Caches, ensuring highly resilient distribution of data across the globe.</p>
+</li>
+<li>
+<p>A Global Cache provides a highly available data server from which a Data Consumer can download Core data, as specified in the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).</p>
+</li>
+<li>
+<p>A Global Cache subscribes to notification messages via a Global Broker.</p>
+</li>
+<li>
+<p>On receipt of a notification message, the Global Cache downloads from the WIS2 Node a copy data referenced in the notification message, makes this copy available on its data server, and publishes a new notification message advertising availability of this data at the Global Cache.</p>
+</li>
+<li>
+<p>A Global Cache will subscribe to notification messages from other Global Caches enabling it to download and republish data it has not acquired directly from WIS2 Nodes. This ensures that each Global Cache holds data from every WIS2 Node.</p>
+</li>
+<li>
+<p>A Global Cache shall retain a copy of core data for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.</p>
+</li>
+<li>
+<p>A Global Cache will delete data from the cache once the retention period has expired.</p>
+</li>
+<li>
+<p>Data Consumers should download data from a Global Cache when available.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Discovery Catalogue:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIS2 includes several Global Discovery Catalogues.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue enables a data consumer to search and browse descriptions of data published by each WIS2 Node. The data description (i.e., discovery metadata) provides sufficient information to determine the usefulness of data and how one may access it.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue subscribes to notification messages via a Global Broker about the availability of new (or updated) discovery metadata. It downloads a copy of the discovery metadata and updates the catalogue.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue will amend discovery metadata records to add details of where one can subscribe to updates about the Dataset at a Global Broker.</p>
+</li>
+<li>
+<p>A Global Discovery Catalogue makes its content available for indexing by search engines.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Global Monitor:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>WIS2 includes a Global Monitor service.</p>
+</li>
+<li>
+<p>The Global Monitor collects metrics from WIS2 components.</p>
+</li>
+<li>
+<p>The Global Monitor provides a dashboard that supports operational management of the WIS2 system.</p>
+</li>
+<li>
+<p>The Global Monitor tracks:</p>
+<div class="olist lowerroman">
+<ol class="lowerroman">
+<li>
+<p>What data is published by WIS2 Nodes.</p>
+</li>
+<li>
+<p>Whether data can be effectively accessed by Data Consumers.</p>
+</li>
+<li>
+<p>The performance of components in the WIS2 system.</p>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_and_operation_of_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_wis2_node"></a>3.2. Implementation and operation of WIS2 Node</h3>
+<h3 id="_implementation_and_operation_of_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_wis2_node"></a>3.3. Implementation and operation of WIS2 Node</h3>
 <div class="sect3">
-<h4 id="_practices_and_procedures"><a class="anchor" href="#_practices_and_procedures"></a>3.2.1. Practices and procedures</h4>
+<h4 id="_practices_and_procedures"><a class="anchor" href="#_practices_and_procedures"></a>3.3.1. Practices and procedures</h4>
 <div class="sect4">
-<h5 id="_registration_and_decommissioning_of_a_wis_node"><a class="anchor" href="#_registration_and_decommissioning_of_a_wis_node"></a>3.2.1.1. Registration and decommissioning of a WIS node</h5>
+<h5 id="_registration_and_decommissioning_of_a_wis_node"><a class="anchor" href="#_registration_and_decommissioning_of_a_wis_node"></a>3.3.1.1. Registration and decommissioning of a WIS node</h5>
 <div class="paragraph">
 <p>This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.</p>
 </div>
@@ -843,7 +1109,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>3.2.1.2. Registration and removal of a Dataset</h5>
+<h5 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>3.3.1.2. Registration and removal of a Dataset</h5>
 <div class="paragraph">
 <p>This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.</p>
 </div>
@@ -852,7 +1118,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_connecting_with_global_services"><a class="anchor" href="#_connecting_with_global_services"></a>3.2.1.3. Connecting with Global Services</h5>
+<h5 id="_connecting_with_global_services"><a class="anchor" href="#_connecting_with_global_services"></a>3.3.1.3. Connecting with Global Services</h5>
 <div class="paragraph">
 <p>This section describes the process by which a WIS node is registered with one or more Global Broker and Global Cache components.</p>
 </div>
@@ -862,9 +1128,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_publishing_data_discovery_metadata_and_notification_messages"><a class="anchor" href="#_publishing_data_discovery_metadata_and_notification_messages"></a>3.2.2. Publishing data, discovery metadata, and notification messages</h4>
+<h4 id="_publishing_data_discovery_metadata_and_notification_messages"><a class="anchor" href="#_publishing_data_discovery_metadata_and_notification_messages"></a>3.3.2. Publishing data, discovery metadata, and notification messages</h4>
 <div class="sect4">
-<h5 id="_discovery_metadata"><a class="anchor" href="#_discovery_metadata"></a>3.2.2.1. Discovery metadata</h5>
+<h5 id="_discovery_metadata"><a class="anchor" href="#_discovery_metadata"></a>3.3.2.1. Discovery metadata</h5>
 <div class="paragraph">
 <p>Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2</p>
 </div>
@@ -882,7 +1148,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_notification_messages"><a class="anchor" href="#_notification_messages"></a>3.2.2.2. Notification messages</h5>
+<h5 id="_notification_messages"><a class="anchor" href="#_notification_messages"></a>3.3.2.2. Notification messages</h5>
 <div class="paragraph">
 <p>There is no requirement for an NC/DCPC to publish "data availability" notification messages relating to infrequently changing Datasets, such as a data archive, especially where the user community have no requirement to be instantly updated about changes to a Dataset (e.g., the addition of new records into a climate observation archive). Data Publishers should note that without providing notification messages their data will not be copied into the Global Cache. However, since the Global Cache only holds real-time (or near real-time) Datasets, this is not a concern for Data Publishers with infrequently changing Datasets.</p>
 </div>
@@ -891,7 +1157,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_data"><a class="anchor" href="#_data"></a>3.2.2.3. Data</h5>
+<h5 id="_data"><a class="anchor" href="#_data"></a>3.3.2.3. Data</h5>
 <div class="paragraph">
 <p>WIS2 provides the "plumbing" for data sharing within the WMO community, but it defines neither which data to share, nor how that data should be encoded. WIS Centres need to evaluate WMO Programme requirements and the WMO Unified Data Policy to determine which Datasets should be made available through WIS.</p>
 </div>
@@ -980,9 +1246,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_performance_management"><a class="anchor" href="#_performance_management"></a>3.2.3. Performance management</h4>
+<h4 id="_performance_management"><a class="anchor" href="#_performance_management"></a>3.3.3. Performance management</h4>
 <div class="sect4">
-<h5 id="_service_levels_and_performance_indicators"><a class="anchor" href="#_service_levels_and_performance_indicators"></a>3.2.3.1. Service levels and performance indicators</h5>
+<h5 id="_service_levels_and_performance_indicators"><a class="anchor" href="#_service_levels_and_performance_indicators"></a>3.3.3.1. Service levels and performance indicators</h5>
 <div class="paragraph">
 <p>This section describes the minimum performance criteria for operation of a WIS node.</p>
 </div>
@@ -991,7 +1257,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_provision_of_system_performance_metrics"><a class="anchor" href="#_provision_of_system_performance_metrics"></a>3.2.3.2. Provision of system performance metrics</h5>
+<h5 id="_provision_of_system_performance_metrics"><a class="anchor" href="#_provision_of_system_performance_metrics"></a>3.3.3.2. Provision of system performance metrics</h5>
 <div class="paragraph">
 <p>This section describes how a WIS node should provide metrics to the Global Monitor service and its primary GISC.</p>
 </div>
@@ -1001,7 +1267,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wis_node_reference_implementation_wis2box"><a class="anchor" href="#_wis_node_reference_implementation_wis2box"></a>3.2.4. WIS Node reference implementation: wis2box</h4>
+<h4 id="_wis_node_reference_implementation_wis2box"><a class="anchor" href="#_wis_node_reference_implementation_wis2box"></a>3.3.4. WIS Node reference implementation: wis2box</h4>
 <div class="paragraph">
 <p>To provide a WIS Node, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.</p>
 </div>
@@ -1060,9 +1326,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_and_operation_of_a_global_service"><a class="anchor" href="#_implementation_and_operation_of_a_global_service"></a>3.3. Implementation and operation of a Global Service</h3>
+<h3 id="_implementation_and_operation_of_a_global_service"><a class="anchor" href="#_implementation_and_operation_of_a_global_service"></a>3.4. Implementation and operation of a Global Service</h3>
 <div class="sect3">
-<h4 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>3.3.1. Procedure for registration of a new Global Service</h4>
+<h4 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>3.4.1. Procedure for registration of a new Global Service</h4>
 <div class="paragraph">
 <p>Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.</p>
 </div>
@@ -1102,9 +1368,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>3.3.2. Performance management and monitoring of a Global Service</h4>
+<h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>3.4.2. Performance management and monitoring of a Global Service</h4>
 <div class="sect4">
-<h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>3.3.2.1. Service levels, performance indicators, and fair-usage policies</h5>
+<h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>3.4.2.1. Service levels, performance indicators, and fair-usage policies</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1184,16 +1450,16 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>3.3.2.2. Provision of metrics</h5>
+<h5 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>3.4.2.2. Provision of metrics</h5>
 <div class="paragraph">
 <p>In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by Global Monitoring Services.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_broker"><a class="anchor" href="#_global_broker"></a>3.3.3. Global Broker</h4>
+<h4 id="_global_broker"><a class="anchor" href="#_global_broker"></a>3.4.3. Global Broker</h4>
 <div class="sect4">
-<h5 id="_technical_considerations"><a class="anchor" href="#_technical_considerations"></a>3.3.3.1. Technical considerations</h5>
+<h5 id="_technical_considerations"><a class="anchor" href="#_technical_considerations"></a>3.4.3.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1253,9 +1519,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_cache"><a class="anchor" href="#_global_cache"></a>3.3.4. Global Cache</h4>
+<h4 id="_global_cache"><a class="anchor" href="#_global_cache"></a>3.4.4. Global Cache</h4>
 <div class="sect4">
-<h5 id="_technical_considerations_2"><a class="anchor" href="#_technical_considerations_2"></a>3.3.4.1. Technical considerations</h5>
+<h5 id="_technical_considerations_2"><a class="anchor" href="#_technical_considerations_2"></a>3.4.4.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1301,7 +1567,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>3.3.4.2. Practices and procedures</h5>
+<h5 id="_practices_and_procedures_2"><a class="anchor" href="#_practices_and_procedures_2"></a>3.4.4.2. Practices and procedures</h5>
 <div class="paragraph">
 <p>The following procedures will be described here once validated through testing during the WIS2 pilot phase:
 * Assigning a Global Cache to a NC or DCPC
@@ -1313,9 +1579,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_discovery_catalogue"><a class="anchor" href="#_global_discovery_catalogue"></a>3.3.5. Global Discovery Catalogue</h4>
+<h4 id="_global_discovery_catalogue"><a class="anchor" href="#_global_discovery_catalogue"></a>3.4.5. Global Discovery Catalogue</h4>
 <div class="sect4">
-<h5 id="_technical_considerations_3"><a class="anchor" href="#_technical_considerations_3"></a>3.3.5.1. Technical considerations</h5>
+<h5 id="_technical_considerations_3"><a class="anchor" href="#_technical_considerations_3"></a>3.4.5.1. Technical considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1394,7 +1660,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_global_discovery_catalogue_reference_implementation_wis2_gdc"><a class="anchor" href="#_global_discovery_catalogue_reference_implementation_wis2_gdc"></a>3.3.5.2. Global Discovery Catalogue reference implementation: wis2-gdc</h5>
+<h5 id="_global_discovery_catalogue_reference_implementation_wis2_gdc"><a class="anchor" href="#_global_discovery_catalogue_reference_implementation_wis2_gdc"></a>3.4.5.2. Global Discovery Catalogue reference implementation: wis2-gdc</h5>
 <div class="paragraph">
 <p>To provide a Global Discovery Catalogue, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.</p>
 </div>
@@ -1438,9 +1704,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_global_monitor"><a class="anchor" href="#_global_monitor"></a>3.3.6. Global Monitor</h4>
+<h4 id="_global_monitor"><a class="anchor" href="#_global_monitor"></a>3.4.6. Global Monitor</h4>
 <div class="sect4">
-<h5 id="_technical_considerations_4"><a class="anchor" href="#_technical_considerations_4"></a>3.3.6.1. Technical Considerations</h5>
+<h5 id="_technical_considerations_4"><a class="anchor" href="#_technical_considerations_4"></a>3.4.6.1. Technical Considerations</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1468,7 +1734,7 @@ TODO: to be completed</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_operations"><a class="anchor" href="#_operations"></a>3.4. Operations</h3>
+<h3 id="_operations"><a class="anchor" href="#_operations"></a>3.5. Operations</h3>
 
 </div>
 </div>
@@ -1958,7 +2224,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-08 19:05:58 UTC
+Last updated 2024-01-09 15:14:52 UTC
 </div>
 </div>
 </body>
