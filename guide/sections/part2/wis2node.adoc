@@ -1,4 +1,4 @@
-=== Implementation and operation of WIS2 Node
+=== Implementation and operation of a WIS2 Node
 
 ==== Practices and procedures
 
@@ -6,13 +6,29 @@
 
 This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.
 
-TODO: To be completed
+WMO Secretariat will operate a WIS2 registry (WR).
+
+The registration of a WIS2 Node involves the following steps:
+
+* Request hosting a WIS2 Node: A request for hosting a WIS2 node shall be put forward by the Permanent Representative of the country of the WIS2 node host centre, or, in the case of international organizations, by either the Permanent Representative (PR)of the country where the WIS2 node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
+* Assign a centre-id: The centre identifier (centre-id) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
+* Complete the WIS Registry: The WIS national focal point shall complete the WIS registry operated by the WMO Secretariat 
+* WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS 2.0 requirements. The assessment includes: 
+  - the verification of the compliance of the topic hierarchy (TH) used by the centre with the agreed topic hierarchy. 
+  - verification of compliance of the Notification Message with the specifications
+  - verification that the download link is using HTTPS which is a preference for WIS 2.0.
+
+Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 node, GISC notifies WMO and confirms that this centre-id can be added to WIS2.
+
+* Communicate details to the Global services: WMO Secretariat provides the WIS2 node details to the Global brokers to subscribe to the WIS2 node.
+
+A diagram of the process of registering a WIS2 node is presented in Annex. TODO: diagram?
 
 ===== Registration and removal of a Dataset
 
 This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
 
-TODO: to be completed
+A Data Producer publishes data via a WIS2 Node in accordance with the standard topic hierarchy by creating a dataset record, making it available for download, and publishing a notification of its availability (How to publish data notifications).  Global Brokers subscribed to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated Dataset record.
 
 ===== Connecting with Global Services
 

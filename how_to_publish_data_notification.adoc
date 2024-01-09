@@ -1,5 +1,0 @@
-== 1.3.1.	How to publish Dataset discovery metadata to the Global Discovery Catalogue
-A Data Producer publishes discovery metadata to the Global Discovery Catalogue by creating a discovery metadata record (see PART V Discovery Metadata), making it available for download, and publishing a notification of its availability (see §1.3.2 How to publish data notifications).  Global Discovery Catalogues subscribed to the relevant topic via a Global Broker, receive the notification message and then validate, ingest, and publish the associated Dataset discovery metadata record.
-
-== 1.3.2.	How to publish data notifications
-A Data Producer publishes data notifications by generating a notification message (see  Notification messages) via a WIS2 Node in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2 Nodes and then re-publish the data notification to any consumer with a corresponding subscription.
