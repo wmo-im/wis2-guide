@@ -30,7 +30,7 @@ The cloud-based infrastructure allows easy portability of technical solutions, e
 
 It should be clear that hosting data and services on the cloud does not affect data ownership. Even in a cloud environment, organisations retain ownership of their data, software, configuration, and change management as if they were hosting their infrastructure. As a result, data authority and provenance stay with the organisation, and the cloud is simply a technical means to publish the data. 
 
-==== Why are datasets so important?
+=== Why are datasets so important?
 
 WMO enables the international exchange of observations and model data for all Earth-system disciplines. 
 

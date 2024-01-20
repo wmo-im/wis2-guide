@@ -12,7 +12,7 @@ A WIS Centre may also operate one or more Global Services.
 
 WIS Centres shall comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060), Vol I.2.
 
-==== Roles in WIS 2.0
+=== Roles in WIS 2.0
 
 When describing the functions of WIS2 there are four roles to consider:
 
@@ -43,7 +43,29 @@ When describing the functions of WIS2 there are four roles to consider:
 * Determines whether the data or metadata referenced in notification messages is required.
 * Downloads data from Global Cache or WIS2 Node.
 
-==== Components of WIS 2.0
+=== Specifications of WIS 2.0
+
+Leveraging existing open standards, WIS 2.0 defines the following specifications in support of publish, subscribe, notification, and discovery:
+
+.WIS 2.0 Specifications
+|===
+|Specification|Granularity|Primary WIS 2.0 Component(s)
+
+|WMO Core Metadata Profile 2 (WCMP2)
+|datasets
+|Global Discovery Catalogue (GDC)
+
+|WIS 2.0 Topic Hierarchy (WTH)
+|dataset granules
+|Global Broker, WIS 2.0 Nodes
+
+|WIS 2.0 Notification Message
+|dataset metadata, dataset granules
+|Global Broker, WIS 2.0 Nodes
+
+|===
+
+=== Components of WIS 2.0
 
 [TODO: add refs to other parts of the Guide describing these components]
 
