@@ -110,10 +110,7 @@ In the following sections and for each Global Service, a set of metrics is defin
 
 ===== Metrics for Global Brokers
 
-[%header,format=csv]
-,===
-include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv[]
-,===
+The defined metrics for Global Brokers can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv
 
 ==== Global Cache
 
@@ -167,10 +164,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 
 ===== Metrics for Global Caches
 
-[%header,format=csv]
-,===
-include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv[]
-,===
+The defined metrics for Global Caches can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv
 
 ==== Global Discovery Catalogue
 
@@ -222,10 +216,7 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 
 ===== Metrics for Global Discovery Catalogues
 
-[%header,format=csv]
-,===
-include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv[]
-,===
+The defined metrics for Global Discovery Catalogues can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv
 
 ==== Global Monitor
 
