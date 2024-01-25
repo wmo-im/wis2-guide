@@ -1,4 +1,4 @@
-===WIS2 Architecture
+=== WIS2 Architecture
 
 WIS2 is a federated system of systems based on Web-Architecture and open standards, comprising of many WIS2 Nodes for publishing data and Global Services that enable fault tolerant, highly available, low latency data distribution.
 
