@@ -512,7 +512,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_roles_in_wis_2_0">3.1. Roles in WIS 2.0</a></li>
 <li><a href="#_components_of_wis_2_0">3.2. Components of WIS 2.0</a></li>
-<li><a href="#_implementation_and_operation_of_wis2_node">3.3. Implementation and operation of WIS2 Node</a>
+<li><a href="#_implementation_and_operation_of_a_wis2_node">3.3. Implementation and operation of a WIS2 Node</a>
 <ul class="sectlevel3">
 <li><a href="#_practices_and_procedures">3.3.1. Practices and procedures</a></li>
 <li><a href="#_publishing_data_discovery_metadata_and_notification_messages">3.3.2. Publishing data, discovery metadata, and notification messages</a></li>
@@ -806,13 +806,13 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="sect3">
 <h4 id="_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"><a class="anchor" href="#_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue"></a>2.5.1. How to publish Dataset discovery metadata to the Global Discovery Catalogue</h4>
 <div class="paragraph">
-<p>A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue.</p>
+<p>A Data Producer publishes discovery metadata to the Global Discovery Catalogue by creating a discovery metadata record (see TODO: ref Discovery Metadata), making it available for download, and publishing a notification of its availability (see TODO: ref How to publish data notifications).  Global Discovery Catalogues subscribed to the relevant topic via a Global Broker, receive the notification message and then validate, ingest, and publish the associated Dataset discovery metadata record.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_how_to_publish_data_notifications"><a class="anchor" href="#_how_to_publish_data_notifications"></a>2.5.2. How to publish data notifications</h4>
 <div class="paragraph">
-<p>A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker.</p>
+<p>A Data Producer publishes data notifications by generating a notification message (see  TODO: ref Notification messages) via a WIS2 Node in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2 Nodes and then re-publish the data notification to any consumer with a corresponding subscription.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1100,7 +1100,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 </div>
 </div>
 <div class="sect2">
-<h3 id="_implementation_and_operation_of_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_wis2_node"></a>3.3. Implementation and operation of WIS2 Node</h3>
+<h3 id="_implementation_and_operation_of_a_wis2_node"><a class="anchor" href="#_implementation_and_operation_of_a_wis2_node"></a>3.3. Implementation and operation of a WIS2 Node</h3>
 <div class="sect3">
 <h4 id="_practices_and_procedures"><a class="anchor" href="#_practices_and_procedures"></a>3.3.1. Practices and procedures</h4>
 <div class="sect4">
@@ -1108,6 +1108,54 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="paragraph">
 <p>Registration and decomissionig of WIS Nodes must be approved by the PR for the centre registering or decomissioning a WIS Node.</p>
 </div>
+<div class="paragraph">
+<p>WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.</p>
+</li>
+<li>
+<p>Assign a centre-id: The centre identifier (<code>centre-id</code>) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).</p>
+</li>
+<li>
+<p>Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat</p>
+</li>
+<li>
+<p>WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the agreed topic hierarchy.</p>
+</li>
+<li>
+<p>verification of compliance of the Notification Message with the specifications.</p>
+</li>
+<li>
+<p>verification that the download link is using HTTPS which is a preference for WIS2.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 Node, GISC notifies WMO and confirms that this centre identifier can be added to WIS2.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Communicate details to the Global services: WMO Secretariat provides the WIS2 Node details to the Global Brokers to subscribe to the WIS2 Node.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A diagram of the process of registering a WIS2 Node is presented in Annex. TODO: diagram?</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>3.3.1.2. Registration and removal of a dataset</h5>
 <div class="paragraph">
 <p>Procedure for PR Approved WIS Node Registration is to create a centre identifier based on naming convention <code>ab-domain-nodename</code>.  Where <code>ab</code> is the the IANA Top Level Domain (TLD) code, domain is the organization&#8217;s domain name for the main website, and nodename (optional) is descriptive of the purpose of the WIS Node (for example a node for a type of data or programme of the data e.g. climate, aviation, etc.) when the organization is hosting multiple WIS Nodes. A sample centre identifier is <code>ab-myorg-climate</code>.  In addition to the centre identifier the registering organization should also provide the broker endpoints.  Once centre identifier and broker endpoints are provided and entered into the WIS2 Node register, the WMO Secretariat will contact the GISC for the organization&#8217;s country and request the GISC to verify the correctness of the provided information.  The GISC will request the centre produce a test message with associated files for download.  The GISC should use a test MQTT client to verify the notification message is correct and the download links are functional.  The GISC notifies the Centre of the results of the checks and if all are good, requests the Centre to provide metadata when the dataset is ready.  When metadata is proivided the GISC informs the WMO Secretariat that the new centre identifier is ready and requests it be added to WIS2.</p>
 </div>
@@ -1117,9 +1165,9 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <div class="paragraph">
 <p>NC/DCPCs operators decomissioning a WIS Node shall ensure that obligations relating to data sharing within WIS continue to be met after the WIS Node is decommissioned, for example, by migrating these data sharing obligations to another WIS Node. In the case of DCPCs, this may mean the WIS Node responsibilities shift from one member to another and in the case these details should be included in the decomissioning notice to the WMO Serectariat.</p>
 </div>
+<div class="paragraph">
+<p>A Data Producer publishes data via a WIS2 Node in accordance with the WIS2 Topic Hierarchy by creating a discovery metadata record, making it available for download, and publishing a notification of its availability (see how to publish data notifications TODO CROSSREF).  Global Brokers then subscribe to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated dataset record.</p>
 </div>
-<div class="sect4">
-<h5 id="_registration_and_removal_of_a_dataset"><a class="anchor" href="#_registration_and_removal_of_a_dataset"></a>3.3.1.2. Registration and removal of a dataset</h5>
 <div class="paragraph">
 <p>All data shared in WIS2 must include metadata compliant with the metadata requriements described below.  Data providers must be approved by their PR (or designate such as the member&#8217;s WIS Focal Point) to ensure quality metadata will be provied along with the data.</p>
 </div>
@@ -1154,7 +1202,7 @@ WIS 2.0 encourages WMO centres to adopt cloud technologies where appropriate to 
 <p>These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.</p>
 </div>
 <div class="paragraph">
-<p>Discovery metadata must be published before data sharing through WIS begins.</p>
+<p>Discovery metadata must be published before data is published to WIS2.</p>
 </div>
 <div class="paragraph">
 <p>TODO: to be completed</p>
@@ -2559,7 +2607,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-25 02:11:23 UTC
+Last updated 2024-01-25 02:31:52 UTC
 </div>
 </div>
 </body>
