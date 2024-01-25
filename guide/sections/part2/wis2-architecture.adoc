@@ -10,7 +10,7 @@ GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) 
 
 A WIS Centre may also operate one or more Global Services.
 
-WIS Centres shall comply with the Technical Regulations defined in the Manual on WIS (WMO No. 1060), Vol I.2.
+WIS Centres shall comply with the Technical Regulations defined in the Manual on WMO Information System (WMO-No. 1060), Volume II.
 
 === Roles in WIS 2.0
 
