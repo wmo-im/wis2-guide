@@ -36,7 +36,7 @@ Discovery metadata shall be encoded according to the WMO Core Metadata Profile v
 
 Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a data publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API - Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue).   
 
-These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse.
+These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.
 
 Discovery metadata must be published before data sharing through WIS begins.
 
@@ -137,20 +137,25 @@ If contacted by the Global Montior via GISC for a performance issue, the WIS Nod
 
 ==== WIS Node reference implementation: wis2box
 
-Members may use whichever software components they consider most appropriate to comply with the WIS2 Technical Regulations.
+To provide a WIS Node, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
 
 To assist Members participate in WIS2, a free and open-source Reference Implementation is available for use.  WIS2 in a box (wis2box) implements the requirements of a WIS2 Node in as well as additional enhancements. wis2box builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
 wis2box provides functionality required for both data publisher and data consumer roles. It provides the following technical functions:
 
-* Real-time or archive data and metadata publishing to WIS2 (Publish), including available data transformation and processing pipelines
+* Configuration, generation and publication of data (real-time or archive) and metadata to WIS2, compliant to WIS2 Node requirements
 * MQTT Message Broker and notification message publication (Subscribe)
-* Object storage server providing raw data access (Download)
-* OGC API server, providing dynamic APIs and Web services for discovery, access, visualization and processing functionality (APIs)
-* Discovery metadata curation / editing tools
-* Notification subscription and real-time download of data upon receipt of notifications.
+* HTTP object storage and raw data access (Download)
+* Station metadata curation / editing tools (user interface)
+* Discovery metadata curation / editing tools (user interface)
+* Data entry tools (user interfaces)
+* OGC API server, providing dynamic APIs for discovery, access, visualization and processing functionality (APIs)
+* Extensible data "pipelines", allowing for transformation, processing and publishing of additional data types
 * Provision of system performance and data availability metrics 
-* The modular design of wis2box makes it simple to extend to meet additional requirements or integrate with existing data management systems.
-* wis2box already provides a useful set of functionality and will continue to evolve and develop throughout the WIS2 pilot phase and beyond.
+* Access control for recommended data publication, as required
+* Subscription to notifications and and download of WIS data from Global Services 
+* Modular design, allowing for extending to meet additional requirements or integrate with existing data management systems
 
-Documentation is published in wis2box documentation More information is available at https://docs.wis2box.wis.wmo.int
+Project documentation can be found at https://docs.wis2box.wis.wmo.int
+
+wis2box is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://docs.wis2box.wis.wmo.int.

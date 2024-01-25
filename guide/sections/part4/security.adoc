@@ -1,3 +1,8 @@
 === Security
 
 This section will introduce some concepts on the measures a publisher or a global service can implement to decrease the risk of cyber attacks.
+
+==== Access control
+
+Access control (authentication and authorization) can be expressed in discovery metadata through security definitions in access links, and
+can be applied for data, APIs or other resource types (see WCMP2 Discovery Metadata TODO: crossref).
