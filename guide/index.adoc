@@ -33,9 +33,6 @@
 toc::[]
 <<<
 
-
-include::sections/preamble.adoc[]
-
 include::sections/part1/index.adoc[]
 
 include::sections/part2/index.adoc[]

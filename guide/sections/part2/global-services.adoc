@@ -2,15 +2,19 @@
 
 ==== Procedure for registration of a new Global Service
 
-During the initial stages of the WIS2 pilot phase an informal process is used to register interest in operating a Global Service. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
+Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.
 
-==== Performance management and monitoring of a Global Service
+Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% (or very close):
+* Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
+* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS Nodes providing Core data
+* Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
+* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should scrape the metrics from all WIS Nodes and all other Global Service
 
-===== Service levels, performance indicators, and fair-usage policies
+In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
-TODO: to be completed
+Running a Global Service is a significant commitment for a WIS Centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.
 
-===== Provision of metrics
+WMO Secretariat, based on the current situation of WIS (How many Global Brokers ? A need for additional Cache ?), will propose to the WIS Centre the preferred solution to improve the overall level of service of WIS.
 
 The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.
 
@@ -32,9 +36,9 @@ where program is the name of the responsible WMO Program and name is the name of
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:wmo-wmh[https://github.com/wmo-im/wis2-metric-hierarchy]
 
-==== Global Broker
+The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.
 
-===== Technical considerations
+When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.
 
 * There will be multiple Global Broker instances to ensure highly available, low latency global provision of messages within WIS.
 * A Global Broker instance subscribes to messages from NC/DCPCs and other Global Brokers
@@ -50,17 +54,59 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 *** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
 *** Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.
 
+A WIS Centre must commit to running the Global Service for a minimum of four (4) years.
 
-TODO: to be completed
+WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.
 
-===== Practices and procedures
+==== Performance management and monitoring of a Global Service
 
-The following procedures will be described here once validated through testing during the WIS2 pilot phase:
+===== Service levels, performance indicators, and fair-usage policies
+* Each WIS Centre operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.
+* All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS. 
+* Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
+* A Global Broker:
+** should support a minimum of 200 WIS Nodes or Global Services
+** should support a minimum of 1000 subscribers. 
+** should support processing of a minimum of 10000 messages per second
+* A Global Cache:
+** should support a mimimum of 100 GB of data in the cache
+** should support a minimum of 1000 simultaneous downloads
+** could limit the number of simultaneous connections from a user (known by its originating source IP) to 5
+** could limit the bandwidth usage of the service to 1Gb/s
+* A Global Monitor: 
+** should support a minimum of 50 metrics providers
+** should support 200 simultaneous access to the dashboard
+** could limit the bandwidth usage of the service to 100Mb/s
+* A Global Discovery Catalogue:
+** should support a minimum of 20000 metadata records
+** should support a minimum of 50 requests per second to the API endpoint
 
-* Assigning a Global Broker to a NC or DCPC
-* Alerting originating NC or DCPC about malformed or non-compliant messages
+===== Provision of metrics
 
-TODO: to be completed
+In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by Global Monitoring Services.
+
+==== Global Broker
+
+===== Technical considerations
+
+* As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
+* A Global Broker instance subscribes to messages from WIS Centres, Global Caches and other Global Brokers. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
+* Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.
+* For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.
+
+* A Global Broker is built around two software components:
+** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
+** Additional features including anti-loop detection, notification message format compliance, validation of the published topic, and provision of metrics are required. 
+
+* When receiviong a message from a WIS Centre or Global Service broker, The metrics ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
+* A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metrics ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1.
+* A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics ``wmo_wis2_gb_messages_invalid_total`` will be increased by 1.
+* A Global Broker instance will republish a message only once. Using the message id as defined in WIS Notification Message, the Global Broker will record id of messages already published and will discard subsequent identitical (with the same message id) messages. This is the anti-loop feature of the Global Broker.
+* During the pre-operational phase (2024), instead of discarding the message in the two situations above, processing will continue.
+* When publishing a message to the local broker, the metrics ``wmo_wis2_gb_messages_published_total`` will be increased by 1. 
+* All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.
+* As a convention Global Broker centre-id will be ``tld-centre-name-globalbroker``. 
+* The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.
 
 ===== Metrics for Global Brokers
 
@@ -130,32 +176,49 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 
 ===== Technical considerations
 
-* The Global Discovery Catalogue provides Data Consumers with a mechanism to discover the Datasets of interest, as well as, how to interact with and find out more information about those Datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard.
-* The Global Discovery Catalogue advertises the availability of Datasets and how/where to access them or subscribe to updates, it does not advertise the availability of individual Data Objects that comprise a dataset (i.e., data files).
+* The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance class and its dependencies:
+  * Searchable Catalog (Deployment)
+  * Searchable Catalog - Sorting (Deployment)
+  * Searchable Catalog - Filtering (Deployment)
+  * JSON (Building Block)
+  * HTML (Building Block)
+* The Global Discovery Catalogue will make discovery metadata available via a collection identifier of `wis2-discovery-metadata`.
+* The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.
+* The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).
 * A single Global Discovery Catalogue instance is sufficient for WIS2.
 * Multiple Global Discovery Catalogue instances may be deployed for resilience.
-* Global Discovery Catalogue instances operate independently of each other – each Global Discovery Catalogue instance will hold all discovery metadata records. There is no need to synchronise between Global Discovery Catalogue instances.
-* A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance – receiving messages about availability of discovery metadata records via a Global Broker.
-* A Global Discovery Catalogue should connect to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance shall discard duplicate messages as needed.
-* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2), discarding non-compliant records and raising an alert.
-* A Global Discovery Catalogue will update discovery metadata records it receives to add links for subscription URLs at Global Broker instances.
-* A Global Discovery Catalogue should applying faceting capability as specified in the cataloguing considerations of the WCMP2 specification as defined in OGC API - Records.
-* A Global Discovery Catalogue shall provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
-* A Global Discovery Catalogue shall periodically assess the discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement are shared with the originating NC or DCPC and their primary GISC.
+* Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronise between themselves.
+* A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.
+* A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.
+* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
+* A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).
+* A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
+* A Global Discovery Catalogue will remove discovery metadata that is marked for deletion as specified in the data notification message.
+* A Global Discovery Catalogue should apply faceting capability as specified in the cataloguing considerations of the WCMP2 specification, as defined in OGC API - Records.
+* A Global Discovery Catalogue will provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
+* A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.
+* A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
+* A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.
 
-TODO: to be completed
+===== Global Discovery Catalogue reference implementation: wis2-gdc
 
-===== Practices and procedures
+To provide a Global Discovery Catalogue, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
 
-The following procedures will be described here once validated through testing during the WIS2 pilot phase:
+To assist Members participation in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation is made available for download and use.  wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-* Alerting originating NC or DCPC about malformed or non-compliant discovery metadata records
-* Providing feedback to NC and DCPC about how to improve their discovery metadata
-* Removing discovery metadata for a Dataset on request
-* ‘Bootstrapping’ a Global Discovery Catalogue instance from the Global Cache
+wis2-gdc provides functionality required Global Discovery Catalogue, providing the following technical functions:
 
-TODO: to be completed
+* discovery metadata subscription and publication from the Global Broker
+* discovery metadata download the Global Cache
+* discovery metadata validation, ingest and publication
+* WCMP2 compliance
+* quality assessment (key performance indicators [KPIs])
+* OGC API - Records - Part 1: Core compliance
+* metrics reporting
+* implementation of metrics
+
+wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-gdc.
 
 ===== Metrics for Global Discovery Catalogues
 
@@ -167,15 +230,10 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 ==== Global Monitor
 
 ===== Technical Considerations
-* WIS2 standardises how system performance and data availability metrics are published from WIS nodes and Global Services.
+* WIS standardises how system performance and data availability metrics are published from WIS nodes and Global Services.
+* For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.
 * The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
 
-The Global Monitoring (Centers) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
-
-===== Practices and procedures 
-
-Procedures pertinent to the Global Monitor will be described here once validated through testing during the WIS2 pilot phase.
-
-TODO: to be completed
+The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
