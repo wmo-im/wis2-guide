@@ -1,7 +1,7 @@
 :title: Draft guidance on technical specifications of WIS2
 :titletext: {title}
 :version: 2.0.0alpha1
-:date: 2023-05-22
+:date: {docdate}
 :copyright: Copyright © 2023 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
