@@ -6,29 +6,27 @@
 
 This section describes the process used to register or remove a WIS node within WIS2. During the initial part of the WIS2 pilot phase, a Member simply needs to notify the WMO Secretariat and primary GISC of the intent to register a new WIS node. The Secretariat and GISC will then assist in the registration. More formal procedures will be developed as the number of WIS nodes increases.
 
-WMO Secretariat will operate a WIS2 registry (WR).
+WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:
 
-The registration of a WIS2 Node involves the following steps:
+* Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
+* Assign a centre-id: The centre identifier (`centre-id`) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
+* Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat 
+* WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes: 
+  - the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the agreed topic hierarchy. 
+  - verification of compliance of the Notification Message with the specifications.
+  - verification that the download link is using HTTPS which is a preference for WIS2.
 
-* Request hosting a WIS2 Node: A request for hosting a WIS2 node shall be put forward by the Permanent Representative of the country of the WIS2 node host centre, or, in the case of international organizations, by either the Permanent Representative (PR)of the country where the WIS2 node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
-* Assign a centre-id: The centre identifier (centre-id) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
-* Complete the WIS Registry: The WIS national focal point shall complete the WIS registry operated by the WMO Secretariat 
-* WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS 2.0 requirements. The assessment includes: 
-  - the verification of the compliance of the topic hierarchy (TH) used by the centre with the agreed topic hierarchy. 
-  - verification of compliance of the Notification Message with the specifications
-  - verification that the download link is using HTTPS which is a preference for WIS 2.0.
+Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 Node, GISC notifies WMO and confirms that this centre identifier can be added to WIS2.
 
-Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 node, GISC notifies WMO and confirms that this centre-id can be added to WIS2.
+* Communicate details to the Global services: WMO Secretariat provides the WIS2 Node details to the Global brokers to subscribe to the WIS2 Node.
 
-* Communicate details to the Global services: WMO Secretariat provides the WIS2 node details to the Global brokers to subscribe to the WIS2 node.
+A diagram of the process of registering a WIS2 Node is presented in Annex. TODO: diagram?
 
-A diagram of the process of registering a WIS2 node is presented in Annex. TODO: diagram?
-
-===== Registration and removal of a Dataset
+===== Registration and removal of a dataset
 
 This section describes the process used to register a Dataset so that it may be discovered and shared within WIS2. In cases where a WIS Centre no longer wishes to share a Dataset via WIS, it must be removed as per the procedure described here.
 
-A Data Producer publishes data via a WIS2 Node in accordance with the standard topic hierarchy by creating a dataset record, making it available for download, and publishing a notification of its availability (How to publish data notifications).  Global Brokers subscribed to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated Dataset record.
+A Data Producer publishes data via a WIS2 Node in accordance with the WIS2 Topic Hierarchy by creating a discovery metadata record, making it available for download, and publishing a notification of its availability (see how to publish data notifications TODO CROSSREF).  Global Brokers then subscribe to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated dataset record.
 
 ===== Connecting with Global Services
 
@@ -40,13 +38,13 @@ TODO: to be completed
 
 ===== Discovery metadata
 
-Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2). See WCMP2
+Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2).
 
 Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a Data Publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue/collection).   
 
 These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse.
 
-Discovery metadata must be published before data sharing through WIS begins.
+Discovery metadata must be published before data is published to WIS2.
 
 TODO: to be completed
 
