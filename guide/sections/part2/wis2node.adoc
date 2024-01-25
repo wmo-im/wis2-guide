@@ -1,4 +1,4 @@
-=== Implementation and operation of WIS2 Node
+=== Implementation and operation of a WIS2 Node
 
 ==== Practices and procedures
 
@@ -6,13 +6,31 @@
 
 Registration and decomissionig of WIS Nodes must be approved by the PR for the centre registering or decomissioning a WIS Node.
 
+WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:
+
+* Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
+* Assign a centre-id: The centre identifier (`centre-id`) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
+* Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat 
+* WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes: 
+  - the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the agreed topic hierarchy. 
+  - verification of compliance of the Notification Message with the specifications.
+  - verification that the download link is using HTTPS which is a preference for WIS2.
+
+Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 Node, GISC notifies WMO and confirms that this centre identifier can be added to WIS2.
+
+* Communicate details to the Global services: WMO Secretariat provides the WIS2 Node details to the Global Brokers to subscribe to the WIS2 Node.
+
+A diagram of the process of registering a WIS2 Node is presented in Annex. TODO: diagram?
+
+===== Registration and removal of a dataset
+
 Procedure for PR Approved WIS Node Registration is to create a centre identifier based on naming convention `ab-domain-nodename`.  Where `ab` is the the IANA Top Level Domain (TLD) code, domain is the organization's domain name for the main website, and nodename (optional) is descriptive of the purpose of the WIS Node (for example a node for a type of data or programme of the data e.g. climate, aviation, etc.) when the organization is hosting multiple WIS Nodes. A sample centre identifier is `ab-myorg-climate`.  In addition to the centre identifier the registering organization should also provide the broker endpoints.  Once centre identifier and broker endpoints are provided and entered into the WIS2 Node register, the WMO Secretariat will contact the GISC for the organization's country and request the GISC to verify the correctness of the provided information.  The GISC will request the centre produce a test message with associated files for download.  The GISC should use a test MQTT client to verify the notification message is correct and the download links are functional.  The GISC notifies the Centre of the results of the checks and if all are good, requests the Centre to provide metadata when the dataset is ready.  When metadata is proivided the GISC informs the WMO Secretariat that the new centre identifier is ready and requests it be added to WIS2.
 
 In the case of NCs, the procedure for PR approved decomissioning of a WIS Node is the PR (or designate) will notify the WMO Secretariat of the decomissioning of the WIS Node. In the case of DCPCs, the sponsor (i.e., Regional Association or WMO Programme) is the Programme Chair or Regional Information Management Chair shall approve the decommissioning and notify the WMO Secretariat of the decomissioning of the WIS Node. Where possible, a 30 day notice period should be provided prior to the decomissioning and information on if the data from the Node will also be decomissioned or if it is available via another WIS Node or method.  The WMO Secretariat will notify the GISC for the country and the Global Service Providers of the date of the WIS Node decomissioning.  
 
 NC/DCPCs operators decomissioning a WIS Node shall ensure that obligations relating to data sharing within WIS continue to be met after the WIS Node is decommissioned, for example, by migrating these data sharing obligations to another WIS Node. In the case of DCPCs, this may mean the WIS Node responsibilities shift from one member to another and in the case these details should be included in the decomissioning notice to the WMO Serectariat.
 
-===== Registration and removal of a dataset
+A Data Producer publishes data via a WIS2 Node in accordance with the WIS2 Topic Hierarchy by creating a discovery metadata record, making it available for download, and publishing a notification of its availability (see how to publish data notifications TODO CROSSREF).  Global Brokers then subscribe to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated dataset record.
 
 All data shared in WIS2 must include metadata compliant with the metadata requriements described below.  Data providers must be approved by their PR (or designate such as the member's WIS Focal Point) to ensure quality metadata will be provied along with the data.
 
@@ -38,7 +56,7 @@ Discovery metadata may be published one of two ways. The simplest method is to e
 
 These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.
 
-Discovery metadata must be published before data sharing through WIS begins.
+Discovery metadata must be published before data is published to WIS2.
 
 TODO: to be completed
 
