@@ -33,7 +33,7 @@ WIS2 notification messages extend the GeoJSON format (RFC 7946), requiring the f
 
 Details of the WIS2 notification message format are available in WIS2 messages
 
-=== Standard topic hierarchy
+=== WIS2 Topic Hierarchy
 
 A ‘Pub/Sub’ message broker uses "topics" to organise messages. Messages are published to a specific topic, and consumers subscribe to the topics they are interested in so that the message broker sends them all relevant messages.
 
@@ -43,10 +43,10 @@ The standard topic structure enables notification messages to be grouped accordi
 
 The top-level of the standard topic structure "channel" is used to distinguish between notification messages from WIS Centres (channel = "origin") and notification messages from Global Cache services that host cached copies of data from the originating WIS Centre (channel = "cache"). This makes it simple for Data Consumers to comply with clause 3.2.13 from the Manual on WIS, Vol II:
 
-   3.2.13 Data consumers may access data from Global Caches or directly from a WIS node. Data consumers SHOULD access real-time and near real-time core data via Global Caches.
+   3.2.13 Data consumers may access data from Global Caches or directly from a WIS2 Node. Data consumers SHOULD access real-time and near real-time core data via Global Caches.
 
 There is a one-to-one mapping footnote:[Excluding the top two levels ("channel" and "version") – these are not considered part of the data classification scheme in the WMO Core Metadata Profile because they relate to data distribution mechanisms.] between the theme (i.e., keyword) used to describe a Dataset in discovery metadata and the topic used to publish notifications about that Dataset. 
 
-Details of the WIS2 Topic Hierarchy are available in WIS2 topic hierarchy. 
+Details of the WIS2 Topic Hierarchy are available in WIS2 Topic Hierarchy. 
 
 Note: the WIS2 Topic Hierarchy, particularly Earth System-Domain-Subcategory and below, is expected to evolve during the WIS2 pilot phase.

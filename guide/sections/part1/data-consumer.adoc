@@ -12,7 +12,7 @@ The Global Discovery Catalogue is accessible via an API and provides a low barri
 
 ==== How to subscribe to notifications about availability of new data
 
-A Data Consumer can subscribe to data notifications by searching the Global Discovery Catalogue and subscribing to notifications associated with a given Dataset, or by browsing the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy TODO: crossref).  A Data Consumer can use the "canonical" link provided in a Data notification to directly download the associated data.
+A Data Consumer can subscribe to data notifications by searching the Global Discovery Catalogue and subscribing to notifications associated with a given Dataset, or by browsing the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 Topic Hierarchy TODO: crossref).  A Data Consumer can use the "canonical" link provided in a Data notification to directly download the associated data.
 
 A Data Consumer may also discover more about the Dataset associated with a particular data notification by using the notification's metadata identifier as a key to search the Global Discovery Catalogue.
 

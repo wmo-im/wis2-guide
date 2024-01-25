@@ -8,13 +8,13 @@ The roles of centres with respect to the monitoring as well as the content and s
 
 === Roles
 
-==== Global Monitoring (GM)
+==== The Global Monitor
 
-The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+The Global Monitor is the entry point for users and provide the monitoring results. The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
 
 ==== Global Services
 
-The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue and so on expose monitoring metrics on their respective service to the Global Monitoring. See <<wis2-metric-hierarchy>> for further details.
+The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue and so on expose monitoring metrics on their respective service to the Global Monitor. See <<wis2-metric-hierarchy>> for further details.
 
 ==== WIS2 Nodes
 

@@ -6,9 +6,9 @@ Successful operations of WIS will depend on having a set of Global Services runn
 
 Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% (or very close):
 * Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
-* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS Nodes providing Core data
+* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
 * Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
-* Two (2) Global Monitoring Centres - Each Global Monitoring Centre should scrape the metrics from all WIS Nodes and all other Global Service
+* Two (2) Global Monitors - Each Global Monitor should scrape the metrics from all WIS2 Nodes and all other Global Service
 
 In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
@@ -20,7 +20,7 @@ The availability of data and performance of system components within WIS2 are ac
 
 WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualisation of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:cncf-openmetrics[https://openmetrics.io].
 
-The WIS2 Global Services, namely the Global Broker, Global Cache, Global Discovery Catalogue expose monitoring metrics on their respective service to the Global Monitoring. 
+The WIS2 Global Services, namely the Global Broker, Global Cache, and Global Discovery Catalogue expose monitoring metrics on their respective service to the Global Monitor. 
 
 There is no requirement on WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which in turn can provide metrics on the availability of WIS2 Nodes.
 
@@ -48,7 +48,7 @@ When decided, the WIS Focal Point will inform WMO Secretariat of its preference.
 * A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".
 * It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT. 
 * Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see <<standard-topic-hierarchy>>).
-* Standard topic hierarchy
+* WIS2 Topic Hierarchy
 ** A Global Broker will validate notification messages against the standard format (see <<notification-message-format-and-structure>>), discarding non-compliant messages and raising an alert.
 ** A Global Broker is built around two software components:
 *** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster)Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.
@@ -65,7 +65,7 @@ WMO Secretariat and other Global Services will make the required changes to incl
 * All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS. 
 * Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
 * A Global Broker:
-** should support a minimum of 200 WIS Nodes or Global Services
+** should support a minimum of 200 WIS2 Nodes or Global Services
 ** should support a minimum of 1000 subscribers. 
 ** should support processing of a minimum of 10000 messages per second
 * A Global Cache:
@@ -83,7 +83,7 @@ WMO Secretariat and other Global Services will make the required changes to incl
 
 ===== Provision of metrics
 
-In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by Global Monitoring Services.
+In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.
 
 ==== Global Broker
 
@@ -137,9 +137,9 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file to which the URL points. Apart from the URL it is transparent to the Data Consumers from which Global Cache they download the data. There is no need to download the same Data Object from multiple Global Caches. The data id contained within the notification messages is used by Data Consumers and Global Services to detect such duplicates.
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
 * The default behaviour for a Global Cache is to cache all data published under the ``data/core`` topic. A data publisher may indicate that data should not be cached by adding the ``properties.cache=false`` assertion in the WIS Notification Message.
-* A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and flag this with a report or log. The Global Cache operator should work with the originating WIS center and their GISC to remedy the issue.
+* A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and flag this with a report or log. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.
 * If data is not cached on a Global Cache (that is, if the data is flagged as ``cache=false`` or if there is a problem with the data set), the Global Cache shall still republish the WIS2 Notification Message to the ``cache/a/wis2`` topic. In this case the message should not be modified.
-* A Global Cache should operate with a fixed IP address so that WIS Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. Changes to the IP address or host name should be announced to the WMO Secretariat.
+* A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. Changes to the IP address or host name should be announced to the WMO Secretariat.
 * A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
 
 ===== Practices and procedures
@@ -230,10 +230,10 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 ==== Global Monitor
 
 ===== Technical Considerations
-* WIS standardises how system performance and data availability metrics are published from WIS nodes and Global Services.
+* WIS standardises how system performance and data availability metrics are published from WIS2 Nodes and Global Services.
 * For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.
 * The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
 
-The Global Monitoring (Centres) are the entry points for users and provide the monitoring results. The main task of the Global Monitoring is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+The Global Monitor is the entry point for users and provide the monitoring results. The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.

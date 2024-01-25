@@ -1,11 +1,11 @@
 == Quickstarts
 
-This section lists the sections in this technical guidance document that are essential for Data Publishers operating a WIS node (e.g., an NC or a DCPC) and Data Consumers to read before getting started.
+This section lists the sections in this technical guidance document that are essential for Data Publishers operating a WIS2 Node (e.g., an NC or a DCPC) and Data Consumers to read before getting started.
 Operators of GlSCs should have an in-depth understanding of how WIS2 functions and operates – not least so that they are able to effectively support the WIS Centres, Data Publishers, and Data Consumers in their Area of Responsibility (AoR). As such, all contents of this guidance document are relevant to GISCs.
 
 === Data publisher
 
-As a Data Publisher planning to operate a WIS node, you should read the following sections: TODO: fix crossrefs
+As a Data Publisher planning to operate a WIS2 Node, you should read the following sections: TODO: fix crossrefs
 * 1.2: What is WIS2?
 * 1.3 Why are Datasets so important?
 * PART III Data Metadata flows
@@ -13,11 +13,11 @@ As a Data Publisher planning to operate a WIS node, you should read the followin
 
 ==== How to publish Dataset discovery metadata to the Global Discovery Catalogue
 
-A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS Node broker in accordance to the standard topic hierarchy. Global Services subscribed to WIS Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue. 
+A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS2 Node broker in accordance to the WIS2 Topic Hierarchy. Global Services subscribed to WIS2 Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue. 
 
 ==== How to publish data notifications 
 
-A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the standard topic hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker. 
+A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the WIS2 Topic Hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker. 
 
 ==== How to publish data to the Global Broker
 
@@ -39,7 +39,7 @@ TODO: To be completed
 
 ==== How to subscribe to notifications about availability of new data
 
-A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them. Topic structures follow a standard scheme (see WIS2 messages Standard topic hierarchy). A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.
+A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them.  Topic structures follow the WIS2 Topic Hierarchy. A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.
 
 Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker at Global Cache instances. 
 
@@ -55,7 +55,7 @@ Each Global Cache will publish a "data availability" message as the associated d
 
 TODO: To be completed
 
-==== How to download data from the Global Cache and WIS nodes
+==== How to download data from the Global Cache and WIS2 Nodes
 
 Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.
 

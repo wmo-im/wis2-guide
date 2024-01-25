@@ -2,9 +2,9 @@
 
 ==== Practices and procedures
 
-===== Registration and decommissioning of a WIS Node
+===== Registration and decommissioning of a WIS2 Node
 
-Registration and decomissionig of WIS Nodes must be approved by the PR for the centre registering or decomissioning a WIS Node.
+Registration and decomissionig of WIS2 Nodes must be approved by the PR for the centre registering or decomissioning a WIS2 Node.
 
 WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:
 
@@ -12,7 +12,7 @@ WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node in
 * Assign a centre-id: The centre identifier (`centre-id`) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
 * Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat 
 * WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes: 
-  - the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the agreed topic hierarchy. 
+  - the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the WIS2 Topic Hierarchy. 
   - verification of compliance of the Notification Message with the specifications.
   - verification that the download link is using HTTPS which is a preference for WIS2.
 
@@ -24,11 +24,11 @@ A diagram of the process of registering a WIS2 Node is presented in Annex. TODO:
 
 ===== Registration and removal of a dataset
 
-Procedure for PR Approved WIS Node Registration is to create a centre identifier based on naming convention `ab-domain-nodename`.  Where `ab` is the the IANA Top Level Domain (TLD) code, domain is the organization's domain name for the main website, and nodename (optional) is descriptive of the purpose of the WIS Node (for example a node for a type of data or programme of the data e.g. climate, aviation, etc.) when the organization is hosting multiple WIS Nodes. A sample centre identifier is `ab-myorg-climate`.  In addition to the centre identifier the registering organization should also provide the broker endpoints.  Once centre identifier and broker endpoints are provided and entered into the WIS2 Node register, the WMO Secretariat will contact the GISC for the organization's country and request the GISC to verify the correctness of the provided information.  The GISC will request the centre produce a test message with associated files for download.  The GISC should use a test MQTT client to verify the notification message is correct and the download links are functional.  The GISC notifies the Centre of the results of the checks and if all are good, requests the Centre to provide metadata when the dataset is ready.  When metadata is proivided the GISC informs the WMO Secretariat that the new centre identifier is ready and requests it be added to WIS2.
+Procedure for PR Approved WIS2 Node Registration is to create a centre identifier based on naming convention `ab-domain-nodename`.  Where `ab` is the the IANA Top Level Domain (TLD) code, domain is the organization's domain name for the main website, and nodename (optional) is descriptive of the purpose of the WIS2 Node (for example a node for a type of data or programme of the data e.g. climate, aviation, etc.) when the organization is hosting multiple WIS2 Nodes. A sample centre identifier is `ab-myorg-climate`.  In addition to the centre identifier the registering organization should also provide the broker endpoints.  Once centre identifier and broker endpoints are provided and entered into the WIS2 Node register, the WMO Secretariat will contact the GISC for the organization's country and request the GISC to verify the correctness of the provided information.  The GISC will request the centre produce a test message with associated files for download.  The GISC should use a test MQTT client to verify the notification message is correct and the download links are functional.  The GISC notifies the Centre of the results of the checks and if all are good, requests the Centre to provide metadata when the dataset is ready.  When metadata is proivided the GISC informs the WMO Secretariat that the new centre identifier is ready and requests it be added to WIS2.
 
-In the case of NCs, the procedure for PR approved decomissioning of a WIS Node is the PR (or designate) will notify the WMO Secretariat of the decomissioning of the WIS Node. In the case of DCPCs, the sponsor (i.e., Regional Association or WMO Programme) is the Programme Chair or Regional Information Management Chair shall approve the decommissioning and notify the WMO Secretariat of the decomissioning of the WIS Node. Where possible, a 30 day notice period should be provided prior to the decomissioning and information on if the data from the Node will also be decomissioned or if it is available via another WIS Node or method.  The WMO Secretariat will notify the GISC for the country and the Global Service Providers of the date of the WIS Node decomissioning.  
+In the case of NCs, the procedure for PR approved decomissioning of a WIS2 Node is the PR (or designate) will notify the WMO Secretariat of the decomissioning of the WIS2 Node. In the case of DCPCs, the sponsor (i.e., Regional Association or WMO Programme) is the Programme Chair or Regional Information Management Chair shall approve the decommissioning and notify the WMO Secretariat of the decomissioning of the WIS2 Node. Where possible, a 30 day notice period should be provided prior to the decomissioning and information on if the data from the Node will also be decomissioned or if it is available via another WIS2 Node or method.  The WMO Secretariat will notify the GISC for the country and the Global Service Providers of the date of the WIS2 Node decomissioning.  
 
-NC/DCPCs operators decomissioning a WIS Node shall ensure that obligations relating to data sharing within WIS continue to be met after the WIS Node is decommissioned, for example, by migrating these data sharing obligations to another WIS Node. In the case of DCPCs, this may mean the WIS Node responsibilities shift from one member to another and in the case these details should be included in the decomissioning notice to the WMO Serectariat.
+NC/DCPCs operators decomissioning a WIS2 Node shall ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating these data sharing obligations to another WIS2 Node. In the case of DCPCs, this may mean the WIS2 Node responsibilities shift from one member to another and in the case these details should be included in the decomissioning notice to the WMO Serectariat.
 
 A Data Producer publishes data via a WIS2 Node in accordance with the WIS2 Topic Hierarchy by creating a discovery metadata record, making it available for download, and publishing a notification of its availability (see how to publish data notifications TODO CROSSREF).  Global Brokers then subscribe to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated dataset record.
 
@@ -40,7 +40,7 @@ In addition, the data publisher's affiliated GISC conduct a systematic review of
 
 ===== Connecting with Global Services
 
-Once a WIS Node has been verified by a GISC and endpoints and metadata are available, the WMO Secretariat provides the new centre identifier to the Global Brokers and requests they subscribe to the new broker endpoint.  The Global Broker will recieve the data based on their topic subscriptions.  The Global Caches download and cache the metadata (and data where applicable for core datasets).
+Once a WIS2 Node has been verified by a GISC and endpoints and metadata are available, the WMO Secretariat provides the new centre identifier to the Global Brokers and requests they subscribe to the new broker endpoint.  The Global Broker will recieve the data based on their topic subscriptions.  The Global Caches download and cache the metadata (and data where applicable for core datasets).
 
 Once a GISC, in partnership with a Global Data Catalogue, verifies the metadata for a new dataset, the WMO Secretariat will be notified of the availability of the new dataset.  The WMO Seretariat will then notify the Global Borkers and Global Caches of the addition of new data to the WIS system.
 
@@ -78,7 +78,7 @@ WIS2 does not require the use of specific file-naming conventions. Where communi
 
 Data publishers also have choices about how they publish data.
 
-As a minimum, data publishers may publish data objects (e.g., the atomic bits of data that comprise a dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see 4.3 Notification message format and structure, and WIS2 messages 4.4 Standard topic hierarchy).
+As a minimum, data publishers may publish data objects (e.g., the atomic bits of data that comprise a dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see 4.3 Notification message format and structure, and WIS2 messages 4.4 WIS2 Topic Hierarchy TODO: CROSSREF).
 
 A dataset (for example, a collection of climate model runs) may comprise thousands or more files. A data publisher may choose to provide users with a mechanism to browse through the set of files, enabling them to identify those which are relevant to them. Examples of such mechanisms include, but are not limited to:
 
@@ -149,13 +149,13 @@ A WIS2 Node must be able to:
 
 ===== Provision of system performance metrics
 
-WIS Nodes should provide annual performance metrics to their GISC.
+WIS2 Nodes should provide annual performance metrics to their GISC.
 
-If contacted by the Global Montior via GISC for a performance issue, the WIS Node should provide metrics to the GISC and Global Monitor when service is restored to indicate resolution of the issue.
+If contacted by the Global Montior via GISC for a performance issue, the WIS2 Node should provide metrics to the GISC and Global Monitor when service is restored to indicate resolution of the issue.
 
-==== WIS Node reference implementation: wis2box
+==== WIS2 Node reference implementation: wis2box
 
-To provide a WIS Node, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
+To provide a WIS2 Node, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
 
 To assist Members participate in WIS2, a free and open-source Reference Implementation is available for use.  WIS2 in a box (wis2box) implements the requirements of a WIS2 Node in as well as additional enhancements. wis2box builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
