@@ -1,2 +1,4 @@
 # wis2-guide
-WIS 2.0 Guide
+WIS2 Guide
+
+Working draft is made available at <https://wmo-im.github.io/wis2-guide>.
