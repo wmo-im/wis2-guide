@@ -1,5 +1,22 @@
 === Operations
 
+==== Interoperability with existing systems
+
+The WIS 2.0 priciples enable lowering the barrier to weather/climate/water data for WMO members.  Lowering the barrier is driven by **international standards**
+for data discovery, access, and visualization.  In addition to Member benefits, a by-product of utilizing standards is being able to provide
+the same data and access mechanisms to external systems at no extra cost of implementation.
+
+WIS 2.0 standards are based on industry standards (OGC, W3C, IETF) and allow for **broad** interoperabliilty.  This means that non-traditional users can also
+use data from WIS 2.0 data in the same manner, without the requirement for specialized software, tools, or applications.
+
+===== ICAO System Wide Information Management (SWIM)
+
+TODO: Jeremy
+
+====== The Ocean Data and Information System (ODIS)
+
+TODO: Tom
+
 // include::coordinating-wis.adoc[]
 
 // include::sections/wis-metrics.adoc[]
