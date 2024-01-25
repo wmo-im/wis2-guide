@@ -4,7 +4,7 @@
 
 ===== Registration and decommissioning of a WIS2 Node
 
-Registration and decomissionig of WIS2 Nodes must be approved by the PR for the centre registering or decomissioning a WIS2 Node.
+Registration and decomissioning of WIS2 Nodes must be approved by the PR for the centre registering or decomissioning a WIS2 Node.
 
 WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:
 
@@ -20,7 +20,9 @@ Upon completion of this verification, and confirmation that it satisfies all con
 
 * Communicate details to the Global services: WMO Secretariat provides the WIS2 Node details to the Global Brokers to subscribe to the WIS2 Node.
 
-A diagram of the process of registering a WIS2 Node is presented in Annex. TODO: diagram?
+A diagram of the process of registering a WIS2 Node is presented below.
+
+image::images/add-wis2node.png[Adding a WIS2 Node,link=images/add-wis2node.png]
 
 ===== Registration and removal of a dataset
 
