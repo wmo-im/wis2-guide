@@ -458,7 +458,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-25</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-26</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0alpha1</p></td>
@@ -1729,7 +1729,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <div class="ulist">
 <ul>
 <li>
-<p>An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.</p>
+<p>An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.</p>
 </li>
 <li>
 <p>Additional features including anti-loop detection, notification message format compliance, validation of the published topic, and provision of metrics are required.</p>
@@ -1738,10 +1738,10 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </div>
 </li>
 <li>
-<p>When receiviong a message from a WIS Centre or Global Service broker, The metrics <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
+<p>When receiviong a message from a WIS Centre or Global Service broker, The metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metrics <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1.</p>
+<p>A Global Broker will check if the topic received is valid (a metadata record must exist for a data under this topic), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics <code>wmo_wis2_gb_messages_invalid_total</code> will be increased by 1.</p>
@@ -1753,13 +1753,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>During the pre-operational phase (2024), instead of discarding the message in the two situations above, processing will continue.</p>
 </li>
 <li>
-<p>When publishing a message to the local broker, the metrics <code>wmo_wis2_gb_messages_published_total</code> will be increased by 1.</p>
+<p>When publishing a message to the local broker, the metric <code>wmo_wis2_gb_messages_published_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.</p>
 </li>
 <li>
-<p>As a convention Global Broker centre-id will be <code>tld-centre-name-globalbroker</code>.</p>
+<p>As a convention Global Broker centre-id will be <code>tld-centre-name-global-broker</code>.</p>
 </li>
 <li>
 <p>The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.</p>
@@ -1843,7 +1843,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>The default behaviour for a Global Cache is to cache all data published under the <code>data/core</code> topic. A data publisher may indicate that data should not be cached by adding the <code>properties.cache=false</code> assertion in the WIS Notification Message.</p>
 </li>
 <li>
-<p>A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the <code>cache</code> property is set to false and flag this with a report or log. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.</p>
+<p>A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the <code>cache</code> property is set to false and send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.</p>
 </li>
 <li>
 <p>If data is not cached on a Global Cache (that is, if the data is flagged as <code>cache=false</code> or if there is a problem with the data set), the Global Cache shall still republish the WIS2 Notification Message to the <code>cache/a/wis2</code> topic. In this case the message should not be modified.</p>
@@ -1853,6 +1853,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </li>
 <li>
 <p>A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.</p>
+</li>
+<li>
+<p>As a convention Global Cache centre-id will be <code>tld-centre-name-global-cache</code>.</p>
 </li>
 </ul>
 </div>
@@ -1916,6 +1919,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <li>
 <p>Republish the modified message at topic <code>/cache/a/wis2/</code></p>
 </li>
+<li>
+<p>The metric <code>wmo_wis2_gc_downloaded_total</code> will be increased by 1. The metric <code>wmo_wis2_gc_dataserver_last_download_timestamp_seconds</code> will be updated with the timestamp (in seconds) of the last successful download.</p>
+</li>
 </ul>
 </div>
 </li>
@@ -1936,10 +1942,16 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </div>
 </li>
 <li>
-<p>A Global Cache shall provide the metrics defined in this Guide at an http(s) endpoint</p>
+<p>If the Global Cache is not able to download the data the metric <code>wmo_wis2_gc_downloaded_error_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>A Global Cache shall provide the metric defined in this Guide at an http(s) endpoint</p>
 </li>
 <li>
 <p>A Global Cache should make sure that data is downloaded in parallel and downloads are not blocking each other</p>
+</li>
+<li>
+<p>The metric <code>wmo_wis2_gc_dataserver_status_flag</code> will reflect the status of the connection to the download endpoint of the Centre. It values will be 1 when the endpoint is up and 0 otherwise.</p>
 </li>
 </ul>
 </div>
@@ -2036,6 +2048,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <li>
 <p>A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.</p>
 </li>
+<li>
+<p>As a convention Global Discovery Catalogue centre-id will be <code>tld-centre-name-global-discovery-catalogue</code>.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -2116,6 +2131,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </li>
 <li>
 <p>The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.</p>
+</li>
+<li>
+<p>As a convention Global Monitor centre-id will be <code>tld-centre-name-global-monitor</code>.</p>
 </li>
 </ul>
 </div>
@@ -2648,7 +2666,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-25 07:14:02 UTC
+Last updated 2024-01-26 01:12:03 UTC
 </div>
 </div>
 </body>
