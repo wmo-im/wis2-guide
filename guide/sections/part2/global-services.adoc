@@ -15,7 +15,7 @@ In addition to the above, WIS architecture can accomodate adding (or removing) G
 
 Running a Global Service is a significant commitment for a WIS Centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.
 
-WMO Secretariat, based on the current situation of WIS (How many Global Brokers ? A need for additional Cache ?), will propose to the WIS Centre the preferred solution to improve the overall level of service of WIS.
+On receipt of an offer from a Member to operate a Global Service, WMO Secretariat will suggest which Global Service the Member may provide in order to improve WIS2. This suggestion will be based on the current situation of WIS2 (e.g., the number of existing Global Brokers, whether an additional Globlal Cache is needed, etc.).
 
 The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.
 
