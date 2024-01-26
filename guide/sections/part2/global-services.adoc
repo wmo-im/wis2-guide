@@ -107,7 +107,8 @@ In the following sections and for each Global Service, a set of metrics is defin
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1. 
 * All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention Global Broker centre-id will be ``tld-{centre-name}-global-broker``. 
-* The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.
+* A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
+
 
 ===== Metrics for Global Brokers
 
@@ -137,7 +138,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * The default behaviour for a Global Cache is to cache all data published under the ``data/+/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS Notification Message.
 * A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.
 * If core data is not cached on a Global Cache (that is, if the data is flagged as ``"cache": false`` or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the ``cache/a/wis2/...`` topic. In this case the message will not be modified.
-* A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. Changes to the IP address or host name should be announced to the WMO Secretariat.
+* A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
 * A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
 * As a convention Global Cache centre-id will be ``tld-{centre-name}-global-cache``. 
 
