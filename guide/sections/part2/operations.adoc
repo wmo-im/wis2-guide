@@ -141,7 +141,7 @@ Recommended Data:
 from OpenAPI regarding choice of security schemes for authenticated
 access - a choice of HTTP authentication, API keys, OAuth2 or OpenID
 Connect Discovery. For more information see
-https://swagger.io/docs/specification/authentication/[[.underline]#https://swagger.io/docs/specification/authentication/#].
+https://swagger.io/docs/specification/authentication/ - 
 WIS2 does not provide any guidance on use of Public Key
 Infrastructure (PKI).] applied at the WIS2 Node.
 * Are *not* cached within WIS2 by the Global Cachesfootnote:[Global
