@@ -11,8 +11,6 @@ use data from WIS2 data in the same manner, without the requirement for speciali
 
 ===== Publishing aviation weather data through WIS2 into ICAO SWIM
 
-====== Introduction
-
 Meteorological data is an essential input for public weather services
 and aviation services alike. WMO and the International Civil Aviation Organization (ICAO) specify the respective data
 sharing arrangements. WIS2 provides the mechanism for data exchange
@@ -79,22 +77,17 @@ Aeronautical Fixed Service (AFS) is also out of scope. During the WIS2 transitio
 Global Telecommunications System (GTS). Aviation weather data published
 via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gateways.
 
-====== WIS2 to SWIM Gateway
+===== WIS2 to SWIM Gateway
 
-The WIS2 to SWIM interoperability approach employs a Gateway
-component (figure 1).
+The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):
 
-image:vertopal_5d33385a4b834fa0aa9c694efbd01394/media/image1.png[A
-diagram of a computer data processing process Description automatically
-generated,width=601,height=161]
-
-{empty}[Figure 1: Schematic of interoperability approach]
+image:images/wis2-to-swim-temp.png[Schematic of interoperability approach]
 
 The Gateway operates as an "adapter" between WIS2 and SWIM, pulling
 the requisite aviation weather data from WIS2 and re-publishing it
 via a SWIM service.
 
-====== Data types and format
+===== Data types and format
 
 Initial SWIM services are expected to include, but are not limited to:
 
@@ -107,10 +100,10 @@ Specifications for these aviation data types are provided in ICAO
 manuals, and include IWXXM format (FM 205) as specified in Manual on
 Codes, Volume I.3 - International Codes (WMO-No. 306).
 
-====== Publishing aviation weather data via WIS2
+===== Publishing aviation weather data via WIS2
 
 For aviation weather data to be published via WIS2, the organisation
-responsible for this provision will need to operate a WIS Node and
+responsible for this provision will need to operate a WIS2 Node and
 comply with the pertinent Technical Regulations as specified in the
 Manual on WIS (WMO-No. 1060), Volume II. Onward distribution of aviation
 weather data by the Message Broker over SWIM will be handled by the
@@ -151,7 +144,7 @@ access - a choice of HTTP authentication, API keys, OAuth2 or OpenID
 Connect Discovery. For more information see
 https://swagger.io/docs/specification/authentication/[[.underline]#https://swagger.io/docs/specification/authentication/#].
 WIS2 does not provide any guidance on use of Public Key
-Infrastructure (PKI).] applied at the WIS Node.
+Infrastructure (PKI).] applied at the WIS2 Node.
 * Are *not* cached within WIS2 by the Global Cachesfootnote:[Global
 Caches enable highly available, low-latency distribution of Core Data.
 Given that Core Data is provided on a free and unrestricted basis,
@@ -179,19 +172,19 @@ Note that, in contrast to the GTS, WIS2 publishes data resources
 individually, each with an associated notification message. WIS2 does
 not group data resources into bulletins.
 
-The WIS Node should publish aviation weather data in IWXXM format.
+The WIS2 Node should publish aviation weather data in IWXXM format.
 
 The data resource is identified using a URL. The notification message
 refers to the data resource using the URLfootnote:[Where the data
 resource does not exceed 4Kb, it may additionally be embedded in the
 notification message.].
 
-For more details on the WIS Notification Message, see Manual on WIS
+For more details on the WIS2 Notification Message, see Manual on WIS
 (WMO-No. 1060), Volume II, Appendix F.
 
 The notification message must be published to the proper topic on the
 message broker. WIS2 defines a standard topic hierarchy to ensure
-that data is published consistently by all WIS Nodes. Notification
+that data is published consistently by all WIS2 Nodes. Notification
 messages for aviation data should be published on a specific topic
 allowing a data consumer, such as the Gateway, to subscribe only to
 aviation-specific notifications. See the example below:
@@ -212,26 +205,24 @@ As a minimum, the WIS2 Node should retain the aviation data for a
 duration that meets the needs of the Gateway. The retention period of at
 least 24 hours is recommended.
 
-====== Gateway implementation
+===== Gateway implementation
 
 The relationships between the Gateway component, WIS2 and SWIM are
 illustrated in figure 2 (below) footnote:[Note that figure 2 simplifies
 the transmission of discovery metadata from WIS2 Node to the Global
-Discovery Catalogue. In reality, the WIS Node publishes notification
+Discovery Catalogue. In reality, the WIS2 Node publishes notification
 messages advertising the availability of new discovery metadata resource
 at a given URL. These messages are republished by the Global Broker. The
 Global Discovery Catalogue subscribes to a Global Broker and downloads
 the discovery metadata from the WIS2 Node using the URL supplied in the
-message.].
+message].
 
-image:vertopal_5d33385a4b834fa0aa9c694efbd01394/media/image2.png[A
-computer screen shot of a computer Description automatically
-generated,width=601,height=205]
+These interactions are illustrated in the below figure:
 
-{empty}[Figure 2: interactions between the Gateway and components of WIS
-2.0 and SWIM]
+//image:images/wis2-to-swim-interaction-temp.png[interactions between the Gateway and components of WIS 2.0 and SWIM,width=601,height=205]
+image:images/wis2-to-swim-interaction-temp.png[interactions between the Gateway and components of WIS 2.0 and SWIM]
 
-======= Configuration
+====== Configuration
 
 Discovery metadata about the aviation weather datasets will provide
 useful information that can be used to configure the Gateway, e.g., the
@@ -240,16 +231,15 @@ needed for the aviation weather SWIM service.
 
 Discovery metadata can be downloaded from the Global Discovery Catalogue.
 
-======= Functions
+====== Functions
 
 The Gateway component implements the following functions:
-
 
 * Subscribe to the pertinent topic(s) for notifications about new
 aviation weather datafootnote:[WIS 2.0 recommends that one subscribes to
 notifications from a Global Broker. However, where both Gateway and WIS
 Node are operated by the same organisation, it may be advantageous to
-subscribe directly to the local message broker of WIS Node, e.g., to
+subscribe directly to the local message broker of WIS2 Node, e.g., to
 reduce latency.].
 * On receipt of notification messages about aviation weather data:
 [lowerroman]
@@ -285,12 +275,12 @@ publishing metrics and other operating information. Use of OpenMetrics
 by the Gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
-======= Operation
+====== Operation
 
 The Gateway may be operated at national or regional level depending on
 the organisational governance in place.
 
-====== SWIM service
+===== SWIM service
 
 The SWIM aviation weather information service comprises a Message Broker
 component which implements the AMQP 1.0 messaging standardfootnote:[AMQP

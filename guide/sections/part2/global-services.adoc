@@ -145,7 +145,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 ===== Practices and procedures
 
 * A Global Cache shall subscribe to at least two different Global Brokers
-* A Global Cache shall subscribe to the topics ``origin/a/wis2/core/data/#``, ``cache/a/wis2/core/data/#``, ``/origin/a/wis2/core/metadata/#``, ``/cache/a/wis2/core/metadata/#``.
+* A Global Cache shall subscribe to the topics `+origin/a/wis2/core/data/#+`, `+cache/a/wis2/core/data/#+`, `+/origin/a/wis2/core/metadata/#+`, `+/cache/a/wis2/core/metadata/#+`.
 * A Global Cache shall retain the data and metadata they receive for a minimum period of 24 hours. Requirements relating varying retention times for different types of data may be added later.
 * For messages received on topic data/core a Global Cache shall
 ** If the message contains the flag Cache: false
