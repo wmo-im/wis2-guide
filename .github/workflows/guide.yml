@@ -17,7 +17,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update -y \
-          && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
+          && sudo apt-get install -y pandoc \
+          && sudo gem install asciidoctor asciidoctor-pdf
       - name: checkout repository
         uses: actions/checkout@v3
       - name: build documentation
@@ -26,6 +27,7 @@ jobs:
           && cd guide \
           && asciidoctor --trace -o /tmp/wis2-guide/guide/${FILE_BASENAME}.html index.adoc \
           && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wis2-guide/guide/${FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wis2-guide/guide/${FILE_BASENAME}.pdf index.adoc \
           && cp images/*.png /tmp/wis2-guide/guide/images \
           && cd ..
       - name: checkout gh-pages branch
