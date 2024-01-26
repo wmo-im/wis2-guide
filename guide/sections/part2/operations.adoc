@@ -91,7 +91,6 @@ via a SWIM service.
 
 Initial SWIM services are expected to include, but are not limited to:
 
-[arabic]
 * Aerodrome Observation (METAR)
 * Aerodrome Forecast (TAF)
 * Quantitative Volcanic Ash Concentration Information (QVACI)
@@ -241,7 +240,6 @@ Node are operated by the same organisation, it may be advantageous to
 subscribe directly to the local message broker of WIS2 Node, e.g., to
 reduce latency.].
 * On receipt of notification messages about aviation weather data:
-[lowerroman]
 ** parse the notification message, discarding duplicate messages already
 processed previously;
 ** download the aviation weather data resource from the WIS2
