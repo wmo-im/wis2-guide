@@ -67,7 +67,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 === Components of WIS2
 
-[TODO: add refs to other parts of the Guide describing these components]
+// TODO: add refs to other parts of the Guide describing these components
 
 ==== WIS2 Node
 * WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection and Production Centres (DCPC) to publish their *Core* and *Recommended* data.
