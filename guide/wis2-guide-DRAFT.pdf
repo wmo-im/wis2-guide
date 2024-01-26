@@ -4,8 +4,8 @@
 << /Title (Draft guidance on technical specifications of WIS2)
 /Creator (Asciidoctor PDF 1.6.2, based on Prawn 2.4.0)
 /Producer (Asciidoctor PDF 1.6.2, based on Prawn 2.4.0)
-/ModDate (D:20240126014905+00'00')
-/CreationDate (D:20240126014908+00'00')
+/ModDate (D:20240126015227+00'00')
+/CreationDate (D:20240126015233+00'00')
 >>
 endobj
 2 0 obj
@@ -1740,7 +1740,7 @@ ET
 BT
 72.24 142.016 Td
 /F1.0 10.5 Tf
-[<322e372e312e20496e7465726f706572> 20.0195 <6162696c6974792077697468206578697374696e672073797374656d73>] TJ
+[<322e372e312e20496e7465726f706572> 20.0195 <6162696c69747920776974682065787465726e616c2073797374656d73>] TJ
 ET
 
 0.0 0.0 0.0 SCN
@@ -25165,7 +25165,7 @@ ET
 BT
 48.24 204.926 Td
 /F2.0 13 Tf
-[<322e372e312e20496e7465726f706572> 20.0195 <6162696c6974792077697468206578697374696e672073797374656d73>] TJ
+[<322e372e312e20496e7465726f706572> 20.0195 <6162696c69747920776974682065787465726e616c2073797374656d73>] TJ
 ET
 
 0.0 0.0 0.0 SCN
@@ -26344,7 +26344,7 @@ endobj
 endobj
 193 0 obj
 << /Limits [(_how_to_publish_data_to_the_global_broker) (_leveraging_open_standards)]
-/Names [(_how_to_publish_data_to_the_global_broker) 61 0 R (_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue) 57 0 R (_how_to_search_the_global_discovery_catalogue_to_find_datasets) 46 0 R (_how_to_subscribe_to_notifications_about_availability_of_new_data) 49 0 R (_how_to_use_a_notification_message_to_decide_whether_to_download_data) 52 0 R (_implementation_and_operation_of_a_global_service) 131 0 R (_implementation_and_operation_of_a_wis2_node) 93 0 R (_information_management) 267 0 R (_information_security) 316 0 R (_intended_audience) 271 0 R (_interoperability_with_existing_systems) 188 0 R (_introduction) 192 0 R (_introduction_2) 268 0 R (_introduction_of_wis2) 28 0 R (_leveraging_open_standards) 29 0 R]
+/Names [(_how_to_publish_data_to_the_global_broker) 61 0 R (_how_to_publish_dataset_discovery_metadata_to_the_global_discovery_catalogue) 57 0 R (_how_to_search_the_global_discovery_catalogue_to_find_datasets) 46 0 R (_how_to_subscribe_to_notifications_about_availability_of_new_data) 49 0 R (_how_to_use_a_notification_message_to_decide_whether_to_download_data) 52 0 R (_implementation_and_operation_of_a_global_service) 131 0 R (_implementation_and_operation_of_a_wis2_node) 93 0 R (_information_management) 267 0 R (_information_security) 316 0 R (_intended_audience) 271 0 R (_interoperability_with_external_systems) 188 0 R (_introduction) 192 0 R (_introduction_2) 268 0 R (_introduction_of_wis2) 28 0 R (_leveraging_open_standards) 29 0 R]
 >>
 endobj
 194 0 obj
@@ -37228,15 +37228,15 @@ endobj
 endobj
 395 0 obj
 << /Border [0 0 0]
-/Dest (_interoperability_with_existing_systems)
+/Dest (_interoperability_with_external_systems)
 /Subtype /Link
-/Rect [72.24 138.95 289.5793 153.23]
+/Rect [72.24 138.95 292.2148 153.23]
 /Type /Annot
 >>
 endobj
 396 0 obj
 << /Border [0 0 0]
-/Dest (_interoperability_with_existing_systems)
+/Dest (_interoperability_with_external_systems)
 /Subtype /Link
 /Rect [535.301 138.95 547.04 153.23]
 /Type /Annot
@@ -37742,7 +37742,7 @@ endobj
 >>
 endobj
 455 0 obj
-<< /Title <feff0032002e0037002e0031002e00200049006e007400650072006f007000650072006100620069006c006900740079002000770069007400680020006500780069007300740069006e0067002000730079007300740065006d0073>
+<< /Title <feff0032002e0037002e0031002e00200049006e007400650072006f007000650072006100620069006c00690074007900200077006900740068002000650078007400650072006e0061006c002000730079007300740065006d0073>
 /Parent 454 0 R
 /Count 0
 /Dest [181 0 R /XYZ 0 223.61 null]
