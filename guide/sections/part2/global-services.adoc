@@ -109,6 +109,7 @@ In the following sections and for each Global Service, a set of metrics is defin
 * As a convention Global Broker centre-id will be ``tld-{centre-name}-global-broker``. 
 * A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
 
+
 ===== Metrics for Global Brokers
 
 The defined metrics for Global Brokers can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv
