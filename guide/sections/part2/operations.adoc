@@ -77,7 +77,7 @@ Aeronautical Fixed Service (AFS) is also out of scope. During the WIS2 transitio
 Global Telecommunications System (GTS). Aviation weather data published
 via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gateways.
 
-===== WIS2 to SWIM Gateway
+====== WIS2 to SWIM Gateway
 
 The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):
 
@@ -87,7 +87,7 @@ The Gateway operates as an "adapter" between WIS2 and SWIM, pulling
 the requisite aviation weather data from WIS2 and re-publishing it
 via a SWIM service.
 
-===== Data types and format
+====== Data types and format
 
 Initial SWIM services are expected to include, but are not limited to:
 
@@ -100,7 +100,7 @@ Specifications for these aviation data types are provided in ICAO
 manuals, and include IWXXM format (FM 205) as specified in Manual on
 Codes, Volume I.3 - International Codes (WMO-No. 306).
 
-===== Publishing aviation weather data via WIS2
+====== Publishing aviation weather data via WIS2
 
 For aviation weather data to be published via WIS2, the organisation
 responsible for this provision will need to operate a WIS2 Node and
@@ -205,7 +205,7 @@ As a minimum, the WIS2 Node should retain the aviation data for a
 duration that meets the needs of the Gateway. The retention period of at
 least 24 hours is recommended.
 
-===== Gateway implementation
+====== Gateway implementation
 
 The relationships between the Gateway component, WIS2 and SWIM are
 illustrated in figure 2 (below) footnote:[Note that figure 2 simplifies
@@ -221,7 +221,7 @@ These interactions are illustrated in the below figure:
 
 image:images/wis2-to-swim-interaction-temp.png[interactions between the Gateway and components of WIS 2.0 and SWIM]
 
-====== Configuration
+======= Configuration
 
 Discovery metadata about the aviation weather datasets will provide
 useful information that can be used to configure the Gateway, e.g., the
@@ -230,7 +230,7 @@ needed for the aviation weather SWIM service.
 
 Discovery metadata can be downloaded from the Global Discovery Catalogue.
 
-====== Functions
+======= Functions
 
 The Gateway component implements the following functions:
 
@@ -274,12 +274,12 @@ publishing metrics and other operating information. Use of OpenMetrics
 by the Gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
-====== Operation
+======= Operation
 
 The Gateway may be operated at national or regional level depending on
 the organisational governance in place.
 
-===== SWIM service
+====== SWIM service
 
 The SWIM aviation weather information service comprises a Message Broker
 component which implements the AMQP 1.0 messaging standardfootnote:[AMQP
