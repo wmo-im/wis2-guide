@@ -1602,6 +1602,23 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>On receipt of an offer from a Member to operate a Global Service, WMO Secretariat will suggest which Global Service the Member may provide in order to improve WIS2. This suggestion will be based on the current situation of WIS2 (e.g., the number of existing Global Brokers, whether an additional Global Cache is needed, etc.).</p>
 </div>
 <div class="paragraph">
+<p>The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.</p>
+</div>
+<div class="paragraph">
+<p>When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.</p>
+</div>
+<div class="paragraph">
+<p>A WIS Centre must commit to running the Global Service for a minimum of four (4) years.</p>
+</div>
+<div class="paragraph">
+<p>WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>2.7.2. Performance management and monitoring of a Global Service</h4>
+<div class="sect4">
+<h5 id="_monitoring_and_metrics_for_wis2_operations"><a class="anchor" href="#_monitoring_and_metrics_for_wis2_operations"></a>2.7.2.1. Monitoring and metrics for WIS2 operations</h5>
+<div class="paragraph">
 <p>The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.</p>
 </div>
 <div class="paragraph">
@@ -1637,74 +1654,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <div class="paragraph">
 <p>The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy <sup class="footnote" id="_footnote_wmo-wmh">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup></p>
 </div>
-<div class="paragraph">
-<p>The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.</p>
 </div>
-<div class="paragraph">
-<p>When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>There will be multiple Global Broker instances to ensure highly available, low latency global provision of messages within WIS.</p>
-</li>
-<li>
-<p>A Global Broker instance subscribes to messages from NC/DCPCs and other Global Brokers</p>
-</li>
-<li>
-<p>A Global Broker instance will subscribe to messages from a subset of NC/DCPCs and republish them.</p>
-</li>
-<li>
-<p>At least one Global Broker will subscribe to messages from every NC/DCPC.</p>
-</li>
-<li>
-<p>For full global coverage, a Global Broker instance will subscribe to messages from other Global Broker instances and republish them.</p>
-</li>
-<li>
-<p>A Global Broker instance will republish a message only once – noting that a particular message may be received multiple times (e.g., from different sources). Discarding duplicate messages is referred to as "anti-loop".</p>
-</li>
-<li>
-<p>It is not required that a Global Broker instance republishes messages from all other Global Brokers (e.g., establishing ‘fully meshed’ connection). However, it is essential that messages propagate through WIS efficiently and effectively, from originating NC/DCPC to Data Consumers in all Regions. Consequently, it is recommended that topological distance between every Global Broker shall not exceed 3 "hops"  (i.e., a message received at a Global Broker shall be republished by no more than 3 other Global Brokers on its route from the originating NC/DCPC). Connectivity between Global Brokers will be recommended by Experts from INFCOM/SC-IMT.</p>
-</li>
-<li>
-<p>Global Brokers use distinct "channels" to keep messages from originating NC/DCPC separate from messages originating from Global Cache instances. This is implemented in using the top-level ("channel") of the topic structure (see <a href="#standard-topic-hierarchy">[standard-topic-hierarchy]</a>).</p>
-</li>
-<li>
-<p>WIS2 Topic Hierarchy</p>
-<div class="ulist">
-<ul>
-<li>
-<p>A Global Broker will validate notification messages against the standard format (see <a href="#notification-message-format-and-structure">[notification-message-format-and-structure]</a>), discarding non-compliant messages and raising an alert.</p>
-</li>
-<li>
-<p>A Global Broker is built around two software components:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup (cluster). Tools such as EMQX, HiveMQ, VerneMQ are compliant with these requirements.</p>
-</li>
-<li>
-<p>Additional features (anti-loop, message format compliance,…) are required. An open source implementation will be made available during the pilot phase.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A WIS Centre must commit to running the Global Service for a minimum of four (4) years.</p>
-</div>
-<div class="paragraph">
-<p>WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_performance_management_and_monitoring_of_a_global_service"></a>2.7.2. Performance management and monitoring of a Global Service</h4>
 <div class="sect4">
-<h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>2.7.2.1. Service levels, performance indicators, and fair-usage policies</h5>
+<h5 id="_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_service_levels_performance_indicators_and_fair_usage_policies"></a>2.7.2.2. Service levels, performance indicators, and fair-usage policies</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1784,7 +1736,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </div>
 </div>
 <div class="sect4">
-<h5 id="_provision_of_metrics"><a class="anchor" href="#_provision_of_metrics"></a>2.7.2.2. Provision of metrics</h5>
+<h5 id="_metrics_for_global_services"><a class="anchor" href="#_metrics_for_global_services"></a>2.7.2.3. Metrics for Global Services</h5>
 <div class="paragraph">
 <p>In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.</p>
 </div>
@@ -3147,7 +3099,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 06:32:44 UTC
+Last updated 2024-01-26 06:52:46 UTC
 </div>
 </div>
 </body>
