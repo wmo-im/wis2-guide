@@ -514,7 +514,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_roles_in_wis2">2.2. Roles in WIS2</a></li>
 <li><a href="#_specifications_of_wis2">2.3. Specifications of WIS2</a></li>
 <li><a href="#_components_of_wis2">2.4. Components of WIS2</a></li>
-<li><a href="#_publish_subscribe_protocol_configuration_mqtt">2.5. Publish-Subscribe protocol configuration (MQTT)</a></li>
+<li><a href="#_protocols_configuration">2.5. Protocols configuration</a>
+<ul class="sectlevel3">
+<li><a href="#_publish_subscribe_protocol_mqtt">2.5.1. Publish-Subscribe protocol (MQTT)</a></li>
+<li><a href="#_download_protocol_http">2.5.2. Download protocol (HTTP)</a></li>
+</ul>
+</li>
 <li><a href="#_implementation_and_operation_of_a_wis2_node">2.6. Implementation and operation of a WIS2 Node</a>
 <ul class="sectlevel3">
 <li><a href="#_practices_and_procedures">2.6.1. Practices and procedures</a></li>
@@ -1138,7 +1143,9 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </div>
 </div>
 <div class="sect2">
-<h3 id="_publish_subscribe_protocol_configuration_mqtt"><a class="anchor" href="#_publish_subscribe_protocol_configuration_mqtt"></a>2.5. Publish-Subscribe protocol configuration (MQTT)</h3>
+<h3 id="_protocols_configuration"><a class="anchor" href="#_protocols_configuration"></a>2.5. Protocols configuration</h3>
+<div class="sect3">
+<h4 id="_publish_subscribe_protocol_mqtt"><a class="anchor" href="#_publish_subscribe_protocol_mqtt"></a>2.5.1. Publish-Subscribe protocol (MQTT)</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1177,9 +1184,26 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.</p>
 </li>
 <li>
-<p>The standard TCP ports to be used are 8883 for MQTT and 443 for Secure Web Socket (WSS).</p>
+<p>The standard TCP ports to be used are 8883 for Secure MQTT (MQTTS) and 443 for Secure Web Socket (WSS).</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_download_protocol_http"><a class="anchor" href="#_download_protocol_http"></a>2.5.2. Download protocol (HTTP)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>The HTTP protocol is to be used for all WIS2 download workflow.</p>
+</li>
+<li>
+<p>To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.</p>
+</li>
+<li>
+<p>The standard TCP port to be used is 443 for Secure HTTP (HTTPS).</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -3119,7 +3143,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 05:08:11 UTC
+Last updated 2024-01-26 05:29:13 UTC
 </div>
 </div>
 </body>
