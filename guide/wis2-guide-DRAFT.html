@@ -1803,12 +1803,6 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_metrics_for_global_brokers"><a class="anchor" href="#_metrics_for_global_brokers"></a>2.7.3.2. Metrics for Global Brokers</h5>
-<div class="paragraph">
-<p>The defined metrics for Global Brokers can be found here <a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv</a></p>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="_global_cache_2"><a class="anchor" href="#_global_cache_2"></a>2.7.4. Global Cache</h4>
@@ -1842,10 +1836,10 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>A Global Cache instance will host data objects copied from NC/DCPCs.</p>
 </li>
 <li>
-<p>A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see <a href="#notification-message-format-and-structure">[notification-message-format-and-structure]</a>).</p>
+<p>A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see [TODO CROSSREF] <a href="#notification-message-format-and-structure">[notification-message-format-and-structure]</a>).</p>
 </li>
 <li>
-<p>A Global Cache instance will use the standard topic structure in their local message brokers (see <a href="#standard-topic-hierarchy">[standard-topic-hierarchy]</a>).</p>
+<p>A Global Cache instance will use the standard topic structure in their local message brokers (see [TODO CROSSREF] <a href="#standard-topic-hierarchy">[standard-topic-hierarchy]</a>).</p>
 </li>
 <li>
 <p>A Global Cache instance will publish on topic <code>cache/a/wis2/&#8230;&#8203;</code>.</p>
@@ -1988,12 +1982,6 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_metrics_for_global_caches"><a class="anchor" href="#_metrics_for_global_caches"></a>2.7.4.3. Metrics for Global Caches</h5>
-<div class="paragraph">
-<p>The defined metrics for Global Caches can be found here <a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv</a></p>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="_global_discovery_catalogue_2"><a class="anchor" href="#_global_discovery_catalogue_2"></a>2.7.5. Global Discovery Catalogue</h4>
@@ -2005,7 +1993,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.</p>
 </li>
 <li>
-<p>The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance classes and their dependencies:</p>
+<p>The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>, adhering to the following conformance classes and their dependencies:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -2112,7 +2100,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>WCMP2 compliance</p>
 </li>
 <li>
-<p>quality assessment (key performance indicators [KPIs])</p>
+<p>quality assessment (key performance indicators [TODO CROSSREF - WCMP2 KPIs])</p>
 </li>
 <li>
 <p>OGC API - Records - Part 1: Core compliance</p>
@@ -2127,12 +2115,6 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </div>
 <div class="paragraph">
 <p>wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: <a href="https://github.com/wmo-im/wis2-gdc" class="bare">https://github.com/wmo-im/wis2-gdc</a>.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_metrics_for_global_discovery_catalogues"><a class="anchor" href="#_metrics_for_global_discovery_catalogues"></a>2.7.5.3. Metrics for Global Discovery Catalogues</h5>
-<div class="paragraph">
-<p>The defined metrics for Global Discovery Catalogues can be found here <a href="https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv" class="bare">https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv</a></p>
 </div>
 </div>
 </div>
@@ -2231,7 +2213,7 @@ resources (i.e., data) is available therein</p></td>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Technical protocols: MQTT, HTTP</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Technical protocols:
-AMQP<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p></td>
+AMQP<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p></td>
 </tr>
 </tbody>
 </table>
@@ -2371,12 +2353,12 @@ and prediction efforts.</p>
 <p>May be subject to conditions on use and re-use.</p>
 </li>
 <li>
-<p>May have access controls<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>.
+<p>May have access controls<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>.
 WIS2 does not provide any guidance on use of Public Key
 Infrastructure (PKI).] applied at the WIS2 Node.</p>
 </li>
 <li>
-<p>Are <strong>not</strong> cached within WIS2 by the Global Caches<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>.</p>
+<p>Are <strong>not</strong> cached within WIS2 by the Global Caches<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>.</p>
 </li>
 </ul>
 </div>
@@ -2426,7 +2408,7 @@ not group data resources into bulletins.</p>
 </div>
 <div class="paragraph">
 <p>The data resource is identified using a URL. The notification message
-refers to the data resource using the URL<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>.</p>
+refers to the data resource using the URL<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>For more details on the WIS2 Notification Message, see Manual on WIS
@@ -2464,7 +2446,7 @@ least 24 hours is recommended.</p>
 <h6 id="_gateway_implementation"><a class="anchor" href="#_gateway_implementation"></a>Gateway implementation</h6>
 <div class="paragraph">
 <p>The relationships between the Gateway component, WIS2 and SWIM are
-illustrated in figure 2 (below) <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
+illustrated in figure 2 (below) <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>These interactions are illustrated in the below figure:</p>
@@ -2494,7 +2476,7 @@ needed for the aviation weather SWIM service.</p>
 <ul>
 <li>
 <p>Subscribe to the pertinent topic(s) for notifications about new
-aviation weather data<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>.</p>
+aviation weather data<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup>.</p>
 </li>
 <li>
 <p>On receipt of notification messages about aviation weather data:</p>
@@ -2506,12 +2488,12 @@ processed previously;</p>
 </li>
 <li>
 <p>download the aviation weather data resource from the WIS2
-Node<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup> using the URL in the message - the
+Node<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> using the URL in the message - the
 resource should be in IWXXM format;</p>
 </li>
 <li>
 <p>create a new "data message" as per the SWIM specifications, including
-the unique identifier extracted from the data resource<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>, and embedding the aviation weather data resource
+the unique identifier extracted from the data resource<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup>, and embedding the aviation weather data resource
 within the data message;</p>
 </li>
 <li>
@@ -2531,7 +2513,7 @@ SWIM service.</p>
 <div class="paragraph">
 <p>The Gateway should implement logging and error handling as necessary to
 enable reliable operations. WIS2 uses the OpenMetrics
-standard<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> for
+standard<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup> for
 publishing metrics and other operating information. Use of OpenMetrics
 by the Gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.</p>
@@ -2548,7 +2530,7 @@ the organisational governance in place.</p>
 <h6 id="_swim_service"><a class="anchor" href="#_swim_service"></a>SWIM service</h6>
 <div class="paragraph">
 <p>The SWIM aviation weather information service comprises a Message Broker
-component which implements the AMQP 1.0 messaging standard<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup>.</p>
+component which implements the AMQP 1.0 messaging standard<sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>The Message Broker publishes the data messages provided by the Gateway.</p>
@@ -2759,7 +2741,7 @@ authorized sources such as a Gateway.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
+<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup></p>
 </div>
 </div>
 <div class="sect4">
@@ -3064,42 +3046,45 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 <a href="#_footnoteref_10">10</a>. It is also technically possible to filter recommended data by using a wildcard subscription such as <code>origin/a/wis2/+/data/core/#</code>. However, avoiding wildcard subscription is generally considered good practice as it limits the burden of the broker operated by Global Brokers.
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. AMQP 1.0 is proposed in the draft PANS-IM
+<a href="#_footnoteref_11">11</a>. OGC-API Records - Part 1 <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. WIS2 follows the recommendations from OpenAPI regarding choice of security schemes for authenticated access - a choice of HTTP authentication, API keys, OAuth2 or OpenID Connect Discovery. For more information see <a href="https://swagger.io/docs/specification/authentication/" class="bare">https://swagger.io/docs/specification/authentication/</a><span class="[.underline"><a href="https://swagger.io/docs/specification/authentication/" class="bare">https://swagger.io/docs/specification/authentication/</a></span>
+<a href="#_footnoteref_12">12</a>. AMQP 1.0 is proposed in the draft PANS-IM
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. Global Caches enable highly available, low-latency distribution of Core Data. Given that Core Data is provided on a free and unrestricted basis, Global Caches <strong>do not</strong> implement any data access control.
+<a href="#_footnoteref_13">13</a>. WIS2 follows the recommendations from OpenAPI regarding choice of security schemes for authenticated access - a choice of HTTP authentication, API keys, OAuth2 or OpenID Connect Discovery. For more information see <a href="https://swagger.io/docs/specification/authentication/" class="bare">https://swagger.io/docs/specification/authentication/</a><span class="[.underline"><a href="https://swagger.io/docs/specification/authentication/" class="bare">https://swagger.io/docs/specification/authentication/</a></span>
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. Where the data resource does not exceed 4Kb, it may additionally be embedded in the notification message.
+<a href="#_footnoteref_14">14</a>. Global Caches enable highly available, low-latency distribution of Core Data. Given that Core Data is provided on a free and unrestricted basis, Global Caches <strong>do not</strong> implement any data access control.
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. Note that figure 2 simplifies the transmission of discovery metadata from WIS2 Node to the Global Discovery Catalogue. In reality, the WIS2 Node publishes notification messages advertising the availability of new discovery metadata resource at a given URL. These messages are republished by the Global Broker. The Global Discovery Catalogue subscribes to a Global Broker and downloads the discovery metadata from the WIS2 Node using the URL supplied in the message
+<a href="#_footnoteref_15">15</a>. Where the data resource does not exceed 4Kb, it may additionally be embedded in the notification message.
 </div>
 <div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. WIS 2.0 recommends that one subscribes to notifications from a Global Broker. However, where both Gateway and WIS Node are operated by the same organisation, it may be advantageous to subscribe directly to the local message broker of WIS2 Node, e.g., to reduce latency.
+<a href="#_footnoteref_16">16</a>. Note that figure 2 simplifies the transmission of discovery metadata from WIS2 Node to the Global Discovery Catalogue. In reality, the WIS2 Node publishes notification messages advertising the availability of new discovery metadata resource at a given URL. These messages are republished by the Global Broker. The Global Discovery Catalogue subscribes to a Global Broker and downloads the discovery metadata from the WIS2 Node using the URL supplied in the message
 </div>
 <div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. The WIS2 Node may control access to data - the Gateway will need to be implemented accordingly.
+<a href="#_footnoteref_17">17</a>. WIS 2.0 recommends that one subscribes to notifications from a Global Broker. However, where both Gateway and WIS Node are operated by the same organisation, it may be advantageous to subscribe directly to the local message broker of WIS2 Node, e.g., to reduce latency.
 </div>
 <div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. In case a unique identifier is required for proper passing of an aviation weather message to the Gateway, one can use the GTS abbreviated heading (TTAAii CCCC YYGGgg) in the COLLECT envelop (available in IWXXM messages having a corresponding TAC message), or content in attribute <code>gml:identifier</code> (available in newer IWXXM messages like WAFS SIGWX Forecast and QVACI), for such purpose. There is currently no agreed definition for unique identifier of IWXXM METAR and TAF reports of individual aerodrome.
+<a href="#_footnoteref_18">18</a>. The WIS2 Node may control access to data - the Gateway will need to be implemented accordingly.
 </div>
 <div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. OpenMetrics - see <a href="https://openmetrics.io"><span class="underline">https://openmetrics.io</span></a>
+<a href="#_footnoteref_19">19</a>. In case a unique identifier is required for proper passing of an aviation weather message to the Gateway, one can use the GTS abbreviated heading (TTAAii CCCC YYGGgg) in the COLLECT envelop (available in IWXXM messages having a corresponding TAC message), or content in attribute <code>gml:identifier</code> (available in newer IWXXM messages like WAFS SIGWX Forecast and QVACI), for such purpose. There is currently no agreed definition for unique identifier of IWXXM METAR and TAF reports of individual aerodrome.
 </div>
 <div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. AMQP 1.0 - see <a href="https://www.amqp.org/resources/specifications" class="bare">https://www.amqp.org/resources/specifications</a>
+<a href="#_footnoteref_20">20</a>. OpenMetrics - see <a href="https://openmetrics.io"><span class="underline">https://openmetrics.io</span></a>
 </div>
 <div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
+<a href="#_footnoteref_21">21</a>. AMQP 1.0 - see <a href="https://www.amqp.org/resources/specifications" class="bare">https://www.amqp.org/resources/specifications</a>
+</div>
+<div class="footnote" id="_footnotedef_22">
+<a href="#_footnoteref_22">22</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 06:52:46 UTC
+Last updated 2024-01-26 07:13:05 UTC
 </div>
 </div>
 </body>
