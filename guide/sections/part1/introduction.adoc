@@ -77,11 +77,10 @@ There are some things that are fixed requirements for Datasets:
 
 Here are some examples of Datasets:
 
-* The most recent 5-days of synoptic observations for an entire country or territory. Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.
+* The most recent 5-days of synoptic observations for an entire country or territoryfootnote:[Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.]. 
 * Long-term record of observed water quality for a managed set of hydrological stations.
 * Output from the most recent 24-hours of operational numerical weather prediction model runs. 
 * Output from 6-months of experimental model runs. It's important to note that output from the operational and experimental should not be merged into the same dataset because they use different algorithms - it's very useful to be able to distinguish the provenance (or lineage) of data.
 * A multi-petabyte global reanalysis spanning 1950 to present day.
-* [more examples from other Earth system domains?]  
 
 In summary, Datasets are important because they're how data is managed in WIS. 
