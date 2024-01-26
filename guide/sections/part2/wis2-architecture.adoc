@@ -121,6 +121,6 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 ** Message retention: false
 ** Quality of Service (QoS) of 1
 ** A maximum of 2000 messages to be held in a queue per client
-* All WIS2 Components (WIS2 Node, Global Cache, Global Discovery Catalogue, Global Brokers) are to use use a username and password based mechanism.
+*  In order to permit authentication and authorization for users, WIS2 Node, Global Cache, Global Discovery Catalogue and Global Brokers shall use a user and password based mechanism.
 * To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.
 * The standard TCP ports to be used are 8883 for MQTT and 443 for Secure Web Socket (WSS).
