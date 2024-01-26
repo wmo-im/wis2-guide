@@ -77,8 +77,7 @@ ICAO and/or recommended practices are updated.
 Finally, note that provision of aviation weather data via the
 Aeronautical Fixed Service (AFS) is also out of scope. During the WIS2 transition phase (2025-2030), this provision will continue via the
 Global Telecommunications System (GTS). Aviation weather data published
-via WIS2  will automatically be published to the GTS via the WIS2 
-WIS2-to-GTS Gateways.
+via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gateways.
 
 ====== WIS2 to SWIM Gateway
 
@@ -141,7 +140,7 @@ These Datasets should be considered as "*Recommended Data*", as
 described in the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).
 The Recommended Data category of the policy is intended to cover data
 that should be exchanged by Members to support Earth system monitoring
-and prediction efforts. 
+and prediction efforts.
 
 Recommended Data:
 

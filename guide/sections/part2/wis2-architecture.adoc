@@ -111,3 +111,16 @@ Leveraging existing open standards, WIS2 defines the following specifications in
   i) What data is published by WIS2 Nodes.
   ii) Whether data can be effectively accessed by Data Consumers.
   iii) The performance of components in the WIS2 system.
+
+=== Publish-Subscribe protocol configuration (MQTT)
+
+* The MQTT protocol is to be used for all WIS2 Publish-Subscribe workflow (publication and subscription).
+* MQTT v3.1.1 and v5.0 are the chosen protocols for the WIS2 Notification Messages publication and subscription.
+** To connect to Global Brokers, MQTT v5.0 is preferred as it provides additional features such as the ability to used shared subscription.
+* The following parameters are to be used for all MQTT client/server connectivity and subscription:
+** Message retention: false
+** Quality of Service (QoS) of 1
+** A maximum of 2000 messages to be held in a queue per client
+* All WIS2 Components (WIS2 Node, Global Cache, Global Discovery Catalogue, Global Brokers) are to use use a username and password based mechanism.
+* To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.
+* The standard TCP ports to be used are 8883 for MQTT and 443 for Secure Web Socket (WSS).
