@@ -4,7 +4,6 @@ on:
   push:
     branches:
     - main
-    - 'guide/**'
 
 env:
   FILE_BASENAME: wis2-guide-DRAFT
