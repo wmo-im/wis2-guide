@@ -107,7 +107,7 @@ In the following sections and for each Global Service, a set of metrics is defin
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1. 
 * All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention Global Broker centre-id will be ``tld-centre-name-global-broker``. 
-* The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.
+* A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. WMO Secretariat will be informed of the changes to the IP address or host name.
 
 ===== Metrics for Global Brokers
 
