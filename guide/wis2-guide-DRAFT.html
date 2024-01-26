@@ -2328,9 +2328,8 @@ Aeronautical Fixed Service (AFS) is also out of scope. During the WIS2 transitio
 Global Telecommunications System (GTS). Aviation weather data published
 via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gateways.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_wis2_to_swim_gateway"><a class="anchor" href="#_wis2_to_swim_gateway"></a>2.8.1.2. WIS2 to SWIM Gateway</h5>
+<div class="sect5">
+<h6 id="_wis2_to_swim_gateway"><a class="anchor" href="#_wis2_to_swim_gateway"></a>WIS2 to SWIM Gateway</h6>
 <div class="paragraph">
 <p>The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):</p>
 </div>
@@ -2343,8 +2342,8 @@ the requisite aviation weather data from WIS2 and re-publishing it
 via a SWIM service.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_data_types_and_format"><a class="anchor" href="#_data_types_and_format"></a>2.8.1.3. Data types and format</h5>
+<div class="sect5">
+<h6 id="_data_types_and_format"><a class="anchor" href="#_data_types_and_format"></a>Data types and format</h6>
 <div class="paragraph">
 <p>Initial SWIM services are expected to include, but are not limited to:</p>
 </div>
@@ -2367,8 +2366,8 @@ manuals, and include IWXXM format (FM 205) as specified in Manual on
 Codes, Volume I.3 - International Codes (WMO-No. 306).</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_publishing_aviation_weather_data_via_wis2"><a class="anchor" href="#_publishing_aviation_weather_data_via_wis2"></a>2.8.1.4. Publishing aviation weather data via WIS2</h5>
+<div class="sect5">
+<h6 id="_publishing_aviation_weather_data_via_wis2"><a class="anchor" href="#_publishing_aviation_weather_data_via_wis2"></a>Publishing aviation weather data via WIS2</h6>
 <div class="paragraph">
 <p>For aviation weather data to be published via WIS2, the organisation
 responsible for this provision will need to operate a WIS2 Node and
@@ -2505,8 +2504,8 @@ duration that meets the needs of the Gateway. The retention period of at
 least 24 hours is recommended.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_gateway_implementation"><a class="anchor" href="#_gateway_implementation"></a>2.8.1.5. Gateway implementation</h5>
+<div class="sect5">
+<h6 id="_gateway_implementation"><a class="anchor" href="#_gateway_implementation"></a>Gateway implementation</h6>
 <div class="paragraph">
 <p>The relationships between the Gateway component, WIS2 and SWIM are
 illustrated in figure 2 (below) <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.</p>
@@ -2517,8 +2516,9 @@ illustrated in figure 2 (below) <sup class="footnote">[<a id="_footnoteref_15" c
 <div class="paragraph">
 <p><span class="image"><img src="images/wis2-to-swim-interaction-temp.png" alt="interactions between the Gateway and components of WIS 2.0 and SWIM"></span></p>
 </div>
-<div class="sect5">
-<h6 id="_configuration"><a class="anchor" href="#_configuration"></a>Configuration</h6>
+<div class="paragraph">
+<p><strong>Configuration</strong></p>
+</div>
 <div class="paragraph">
 <p>Discovery metadata about the aviation weather datasets will provide
 useful information that can be used to configure the Gateway, e.g., the
@@ -2528,9 +2528,9 @@ needed for the aviation weather SWIM service.</p>
 <div class="paragraph">
 <p>Discovery metadata can be downloaded from the Global Discovery Catalogue.</p>
 </div>
+<div class="paragraph">
+<p><strong>Functions</strong></p>
 </div>
-<div class="sect5">
-<h6 id="_functions"><a class="anchor" href="#_functions"></a>Functions</h6>
 <div class="paragraph">
 <p>The Gateway component implements the following functions:</p>
 </div>
@@ -2580,17 +2580,16 @@ publishing metrics and other operating information. Use of OpenMetrics
 by the Gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.</p>
 </div>
+<div class="paragraph">
+<p><strong>Operation</strong></p>
 </div>
-<div class="sect5">
-<h6 id="_operation"><a class="anchor" href="#_operation"></a>Operation</h6>
 <div class="paragraph">
 <p>The Gateway may be operated at national or regional level depending on
 the organisational governance in place.</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_swim_service"><a class="anchor" href="#_swim_service"></a>2.8.1.6. SWIM service</h5>
+<div class="sect5">
+<h6 id="_swim_service"><a class="anchor" href="#_swim_service"></a>SWIM service</h6>
 <div class="paragraph">
 <p>The SWIM aviation weather information service comprises a Message Broker
 component which implements the AMQP 1.0 messaging standard<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup>.</p>
@@ -2603,8 +2602,9 @@ component which implements the AMQP 1.0 messaging standard<sup class="footnote">
 authorized sources such as a Gateway.</p>
 </div>
 </div>
+</div>
 <div class="sect4">
-<h5 id="_the_ocean_data_and_information_system_odis"><a class="anchor" href="#_the_ocean_data_and_information_system_odis"></a>2.8.1.7. The Ocean Data and Information System (ODIS)</h5>
+<h5 id="_the_ocean_data_and_information_system_odis"><a class="anchor" href="#_the_ocean_data_and_information_system_odis"></a>2.8.1.2. The Ocean Data and Information System (ODIS)</h5>
 <div class="paragraph">
 <p>TODO: Tom</p>
 </div>
@@ -3143,7 +3143,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 05:45:48 UTC
+Last updated 2024-01-26 06:13:13 UTC
 </div>
 </div>
 </body>
