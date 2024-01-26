@@ -1845,7 +1845,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>As a convention Global Broker centre-id will be <code>tld-{centre-name}-global-broker</code>.</p>
 </li>
 <li>
-<p>The figure xxx provides an illustration of the workflow followed by a Global Broker when getting a message.</p>
+<p>A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.</p>
 </li>
 </ul>
 </div>
@@ -1925,7 +1925,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>If core data is not cached on a Global Cache (that is, if the data is flagged as <code>"cache": false</code> or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the <code>cache/a/wis2/&#8230;&#8203;</code> topic. In this case the message will not be modified.</p>
 </li>
 <li>
-<p>A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. Changes to the IP address or host name should be announced to the WMO Secretariat.</p>
+<p>A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.</p>
 </li>
 <li>
 <p>A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.</p>
@@ -3143,7 +3143,7 @@ can be applied for data, APIs or other resource types (see WCMP2 Discovery Metad
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 05:29:13 UTC
+Last updated 2024-01-26 05:32:54 UTC
 </div>
 </div>
 </body>
