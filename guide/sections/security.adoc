@@ -1,0 +1,4 @@
+Refers to:
+
+https://library.wmo.int/records/item/51145-guide-to-information-technology-security (WMO-No.1115)
+Annex F of Guide to WMO Information System (WMO-No. 1061) volume I
