@@ -97,11 +97,6 @@ In the following sections and for each Global Service, a set of metrics is defin
 * As a convention Global Broker centre-id will be ``tld-{centre-name}-global-broker``. 
 * A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
 
-
-===== Metrics for Global Brokers
-
-The defined metrics for Global Brokers can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gb.csv
-
 ==== Global Cache
 
 In WIS2 Global Caches provide access to WMO Core Data for data consumers. This allows for data providers to restrict access to their systems to Global Services and it reduces the need for them to provide high bandwith and low latency access to their data. Global Caches work transparent for end users in that they resend notification messages from data providers which are updated to point to the Global Cache data store for data, they copied from the original source. Additionally, Global Caches also resend notification messages from data providers for Core Data, that is not stored on the Global Cache, for instance if the originator indicates that a certain data set should not be cached in the notification message. In the latter case, the notification messages that a Global Cache resends are unchanged and point to the original source. Data consumers should subscribe to the notification messages from Global Caches instead of the notification messages from the data providers for WMO Core Data. When data consumers receive a notification message they should follow the URLs from that messages which either point to a Global Cache holding a copy of the data, or - in case of uncached content - point to the original source.
@@ -114,8 +109,8 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 ** A Cache management implementing the features needed to connect with the WIS ecosystem, receive data from WIS2 nodes and other Global Caches, store the data to the data server and manage the content of the cache (i.e. expiration of data, deduplication, etc)
 * The Global Cache will aim at containing copies of real-time and near real-time data designated as "core" within the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).
 * A Global Cache instance will host data objects copied from NC/DCPCs.
-* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see <<notification-message-format-and-structure>>).
-* A Global Cache instance will use the standard topic structure in their local message brokers (see <<standard-topic-hierarchy>>).
+* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see [TODO CROSSREF] <<notification-message-format-and-structure>>).
+* A Global Cache instance will use the standard topic structure in their local message brokers (see [TODO CROSSREF] <<standard-topic-hierarchy>>).
 * A Global Cache instance will publish on topic ``cache/a/wis2/...``.
 * There will be multiple Global Cache instances to ensure highly available, low latency global provision of real-time and near real-time "core" data within WIS2.
 * There will be multiple Global Cache instances may attempt to download cacheable data objects from all originating centres with "cacheable" content. A Global Cache instance will also download data objects from other Global Cache instances. This ensures the instance has full global coverage, mitigating where direct download from an originating centre is not possible.
@@ -129,7 +124,6 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
 * A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
 * As a convention Global Cache centre-id will be ``tld-{centre-name}-global-cache``. 
-
 
 ===== Practices and procedures
 
@@ -160,16 +154,12 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 
 * The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. It values will be 1 when the endpoint is up and 0 otherwise.
 
-===== Metrics for Global Caches
-
-The defined metrics for Global Caches can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gc.csv
-
 ==== Global Discovery Catalogue
 
 ===== Technical considerations
 
 * The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance classes and their dependencies:
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html], adhering to the following conformance classes and their dependencies:
 ** Searchable Catalog (Deployment)
 ** Searchable Catalog - Sorting (Deployment)
 ** Searchable Catalog - Filtering (Deployment)
@@ -208,16 +198,12 @@ wis2-gdc provides functionality required Global Discovery Catalogue, providing t
 * discovery metadata download the Global Cache
 * discovery metadata validation, ingest and publication
 * WCMP2 compliance
-* quality assessment (key performance indicators [KPIs])
+* quality assessment (key performance indicators [TODO CROSSREF - WCMP2 KPIs])
 * OGC API - Records - Part 1: Core compliance
 * metrics reporting
 * implementation of metrics
 
 wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-gdc.
-
-===== Metrics for Global Discovery Catalogues
-
-The defined metrics for Global Discovery Catalogues can be found here https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/metric-hierarchy/gdc.csv
 
 ==== Global Monitor
 
