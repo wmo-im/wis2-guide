@@ -69,7 +69,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 [TODO: add refs to other parts of the Guide describing these components]
 
-. WIS2 Node:
+==== WIS2 Node
 * WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection and Production Centres (DCPC) to publish their *Core* and *Recommended* data.
 * WIS2 adopts Web technologies and open standards enabling WIS2 Nodes to be implemented using freely-available software components and common industry practices.
 * WIS2 Nodes publish data as files of a Web server or using an interactive Web service.
@@ -77,7 +77,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 * WIS2 Nodes generate notification messages [TODO: ref. WIS2 Notification Message] advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata.
 * WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.
  
-. Global Broker:
+==== Global Broker
 * WIS2 incorporates several Global Brokers, ensuring highly resilient distribution of notification messages across the globe.
 * A Global Broker subscribes to the message broker operated by each WIS2 Node and republishes notification messages. 
 * A Global broker subscribes to notifications from other Global Brokers to ensure it receives a copy of all notification messages. 
@@ -86,7 +86,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 * A Global Broker uses the WIS2 Topic Hierarchy enabling a Data Consumer to easily find topics relevant to their needs.
 * Data Consumers should subscribe to notifications from a Global Broker not directly to the message brokers operated by WIS2 Nodes.
 
-. Global Cache:
+==== Global Cache
 * WIS2 incorporates several Global Caches, ensuring highly resilient distribution of data across the globe.
 * A Global Cache provides a highly available data server from which a Data Consumer can download Core data, as specified in the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).
 * A Global Cache subscribes to notification messages via a Global Broker.
@@ -96,14 +96,14 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 * A Global Cache will delete data from the cache once the retention period has expired.
 * Data Consumers should download data from a Global Cache when available.
 
-. Global Discovery Catalogue:
+==== Global Discovery Catalogue
 * WIS2 includes several Global Discovery Catalogues.
 * A Global Discovery Catalogue enables a data consumer to search and browse descriptions of data published by each WIS2 Node. The data description (i.e., discovery metadata) provides sufficient information to determine the usefulness of data and how one may access it.
 * A Global Discovery Catalogue subscribes to notification messages via a Global Broker about the availability of new (or updated) discovery metadata. It downloads a copy of the discovery metadata and updates the catalogue.
 * A Global Discovery Catalogue will amend discovery metadata records to add details of where one can subscribe to updates about the Dataset at a Global Broker.
 * A Global Discovery Catalogue makes its content available for indexing by search engines.
 
-. Global Monitor:
+==== Global Monitor
 * WIS2 includes a Global Monitor service.
 * The Global Monitor collects metrics from WIS2 components.
 * The Global Monitor provides a dashboard that supports operational management of the WIS2 system. 
