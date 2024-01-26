@@ -221,7 +221,7 @@ These interactions are illustrated in the below figure:
 
 image:images/wis2-to-swim-interaction-temp.png[interactions between the Gateway and components of WIS 2.0 and SWIM]
 
-======= Configuration
+**Configuration**
 
 Discovery metadata about the aviation weather datasets will provide
 useful information that can be used to configure the Gateway, e.g., the
@@ -230,7 +230,7 @@ needed for the aviation weather SWIM service.
 
 Discovery metadata can be downloaded from the Global Discovery Catalogue.
 
-======= Functions
+**Functions**
 
 The Gateway component implements the following functions:
 
@@ -274,7 +274,7 @@ publishing metrics and other operating information. Use of OpenMetrics
 by the Gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
-======= Operation
+**Operation**
 
 The Gateway may be operated at national or regional level depending on
 the organisational governance in place.
