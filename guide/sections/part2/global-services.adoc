@@ -4,11 +4,12 @@
 
 Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.
 
-Depending on the nature of the Global Service, the following is considered to be the minimum of centres operating a Global Service, so that collectively, the level of service is 100% (or very close):
-* Three (3) Global Brokers - Each Global Broker connected to at least two (2) other Global Broker
-* Three (3) Global Caches - Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
-* Two (2) Global Discovery Catalogues - Each Global Discovery Catalogue connected to at least one (1) Global Broker
-* Two (2) Global Monitors - Each Global Monitor should scrape the metrics from all WIS2 Nodes and all other Global Service
+Depending on the nature of the Global Service, the following is considered to be the minimum capability of Global Service operation, so that collectively, the level of service is 100% (or very close):
+
+* Three (3) Global Brokers: Each Global Broker connected to at least two (2) other Global Brokers
+* Three (3) Global Caches: Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
+* Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue connected to at least one (1) Global Broker
+* Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all WIS2 Nodes and all other Global Services
 
 In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
@@ -178,13 +179,13 @@ The defined metrics for Global Caches can be found here https://raw.githubuserco
 ===== Technical considerations
 
 * The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance class and its dependencies:
-  * Searchable Catalog (Deployment)
-  * Searchable Catalog - Sorting (Deployment)
-  * Searchable Catalog - Filtering (Deployment)
-  * JSON (Building Block)
-  * HTML (Building Block)
-* The Global Discovery Catalogue will make discovery metadata available via a collection identifier of `wis2-discovery-metadata`.
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard, adhering to the following conformance classes and their dependencies:
+** Searchable Catalog (Deployment)
+** Searchable Catalog - Sorting (Deployment)
+** Searchable Catalog - Filtering (Deployment)
+** JSON (Building Block)
+** HTML (Building Block)
+* The Global Discovery Catalogue will make discovery metadata available via the collection identifier of `wis2-discovery-metadata`.
 * The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.
 * The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).
 * A single Global Discovery Catalogue instance is sufficient for WIS2.
@@ -192,6 +193,7 @@ The defined metrics for Global Caches can be found here https://raw.githubuserco
 * Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronise between themselves.
 * A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.
 * A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.
+* A Global Discovery Catalogue will validate that a discovery metadata record identifier's `centre-id` token (see WCMP2 TODO CROSSREF) matches against the `centre-id` level (see WTH TODO CROSSREF) of the topic from which it was published, to ensure that discovery metadata is published by the authoritative orgnanization.
 * A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
 * A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).
 * A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
