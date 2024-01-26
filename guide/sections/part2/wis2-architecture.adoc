@@ -125,7 +125,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 ** A maximum of 2000 messages to be held in a queue per client
 * In order to permit authentication and authorization for users, WIS2 Node, Global Cache, Global Discovery Catalogue and Global Brokers shall use a user and password based mechanism.
 * To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.
-* The standard TCP ports to be used are 8883 for Secure MQTT(MQTTS) and 443 for Secure Web Socket (WSS).
+* The standard TCP ports to be used are 8883 for Secure MQTT (MQTTS) and 443 for Secure Web Socket (WSS).
 
 ==== Download protocol (HTTP)
 
