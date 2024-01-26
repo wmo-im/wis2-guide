@@ -2,7 +2,7 @@
 :titletext: {title}
 :version: 2.0.0alpha1
 :date: {docdate}
-:copyright: Copyright © 2023 World Meteorological Organization (WMO)
+:copyright: Copyright © 2024 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
 :lang: en
