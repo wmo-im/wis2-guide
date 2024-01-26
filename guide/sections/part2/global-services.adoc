@@ -207,7 +207,7 @@ include::https://raw.githubusercontent.com/wmo-im/wis2-metric-hierarchy/main/met
 * A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
 * A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.
-* As a convention Global Discovery Catalogue centre-id will be ``tld-centre-name-global-discovery-catalog``. 
+* As a convention Global Discovery Catalogue centre-id will be ``tld-centre-name-global-discovery-catalogue``. 
 
 
 ===== Global Discovery Catalogue reference implementation: wis2-gdc
