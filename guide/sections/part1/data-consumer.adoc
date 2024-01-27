@@ -1,6 +1,6 @@
 === Data consumer
 
-As a Data Consumer wanting to use data published via WIS2 you should read the guidance presented here. In addition, a list of references to useful sections in this guidance document is provided where Data Consumers can gain a better understanding of how WIS2 works.
+As a Data Consumer wanting to use data published via WIS2 you should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
 ==== How to search the Global Discovery Catalogue to find Datasets
 
@@ -49,3 +49,16 @@ When using data from WIS2, data consumers:
 * Shall respect the conditions of use applicable to the data as expressed in the WMO data policy, rights statements, or licenses. 
 * Should attribute the source of the data.
  
+==== Further reading for data consumers
+
+ (TODO CROSSREF for the referenced sections)
+
+As a Data Publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
+* 1.1. Introduction to WIS2
+* 2.1. WIS2 Architecture
+* 2.2. Roles in WIS2
+* 2.4. Components of WIS2
+
+The following specifications are useful for further reading:
+* WMO Core Metadata Profile 2 (WCMP2) specification
+* WIS2 Notification Message (WNM) specification

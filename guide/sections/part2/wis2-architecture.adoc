@@ -2,7 +2,7 @@
 
 WIS2 is a federated system of systems based on Web-Architecture and open standards, comprising of many WIS2 Nodes for publishing data and Global Services that enable fault tolerant, highly available, low latency data distribution.
 
-National Centres (NC), Data Collection and Production Centres (DCPC), and Global Information System Centres (GISC) are sll types of WIS Centre.
+National Centres (NC), Data Collection or Production Centres (DCPC), and Global Information System Centres (GISC) are sll types of WIS Centre.
 
 NCs and DCPCs operate WIS2 Nodes.
 
@@ -16,7 +16,14 @@ WIS Centres shall comply with the Technical Regulations defined in the Manual on
 
 When describing the functions of WIS2 there are four roles to consider:
 
-. Data Publisher:
+. Data Publisher
+. Global Coordinator
+. Global Service Operator
+. Data Consumer
+
+These roles are outlined below.
+
+==== Data Publisher
 * This role is fulfilled by NC and DCPC.
 * Data Publishers operate a WIS2 Node to share their data within the WIS2 ecosystem.
 * Data Publishers manage, curate, and provide access to one or more "Datasets".
@@ -25,18 +32,18 @@ When describing the functions of WIS2 there are four roles to consider:
   ii) An API or Web-service to access (or interact with) the Dataset.
   iii) Notification messages advertising the availability of new data and metadata.
 
-. Global Coordinator:
+==== Global Coordinator 
 * This role is exclusive to GISCs.
 * All GISCs supporting WMO Members in their AoR fulfil their data sharing obligations via WIS2.
 
-. Global Service operator:
-* To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services
+==== Global Service operator
+* To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services: 
   i) Global Discovery Catalogue: enables users to search all Datasets provided by Data Publishers and discover where and how to interact with those Datasets (e.g., subscribe to updates, access/download/visualize data, or access more detailed information about the Dataset).
   ii) Global Broker: provides highly available messaging services where users may subscribe to notifications about all Datasets provided by Data Publishers.
   iii) Global Cache: provides highly available download service for cached copies of core data downloaded from Data Publishers’ Web-services.
   iv) Global Monitor: gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
 
-. Data Consumer:
+==== Data Consumer
 * This role represents anyone wanting to find, access, and use data from WIS2 – examples include (but are not limited to): NMHS, government agency, research institution, private sector organisation, etc.
 * Searches or browses the Global Discovery Catalogue (or other search engine) to discover the Dataset(s) that meet their needs (i.e., "Datasets of interest").
 * Subscribes via the Global Broker to receive notification messages about the availability of data or metadata associated with Datasets of interest.
@@ -70,7 +77,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 // TODO: add refs to other parts of the Guide describing these components
 
 ==== WIS2 Node
-* WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection and Production Centres (DCPC) to publish their *Core* and *Recommended* data.
+* WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection or Production Centres (DCPC) to publish their *Core* and *Recommended* data.
 * WIS2 adopts Web technologies and open standards enabling WIS2 Nodes to be implemented using freely-available software components and common industry practices.
 * WIS2 Nodes publish data as files of a Web server or using an interactive Web service.
 * WIS2 Nodes describe the data they publish using discovery metadata [TODO: ref. WIS Core Metadata Profile 2].

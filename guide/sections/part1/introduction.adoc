@@ -1,4 +1,4 @@
-=== Introduction of WIS2
+=== Introduction to WIS2
 
 Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO members.
 
