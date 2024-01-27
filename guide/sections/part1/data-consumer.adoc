@@ -6,9 +6,9 @@ As a Data Consumer wanting to use data published via WIS2 you should read the gu
 
 A Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue to locate a Dataset of interest. Discovery metadata follows a standard scheme (see PART V Discovery Metadata TODO: fix ref). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.
 
-A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see <<_how_to_subscribe_to_notifications_about_availability_of_new_data>>) about the data, or a API, or an offline archive retrieval service.
+A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see (TODO CROSSREF) <<_how_to_subscribe_to_notifications_about_availability_of_new_data>>) about the data, or a API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <<_global_discovery_catalogue>>).
+The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see (TODO CROSSREF) <<_global_discovery_catalogue>>).
 
 ==== How to subscribe to notifications about availability of new data
 
@@ -28,4 +28,24 @@ Each Global Cache will publish a "data availability" message as the associated d
 
 ==== How to download data
 
-Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.  For data subscriptions, data notification messages provide a "cannonical" link to download the associated data object.
+Dataset links are made available through Dataset discovery metadata (via the Global Discovery Catalogue) as well as data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include web and/or desktop applications, custom tooling, or other approaches.  For data subscriptions, data notification messages provide a "canonical" link to download the associated data object.
+
+==== How to use data
+
+Data is shared on WIS2 in accordance with the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)). This data policy describes two categories of data: *Core* and *Recommended*:
+
+* Core data is considered essential for provision of services for the protection of life and 
+property and for the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.
+* Recommended data is exchanged on WIS2 in support of Earth system monitoring and prediction efforts. Recommended data _may_ by provided with conditions on use and/or subject to a license.
+
+Furthermore, the WMO Unified Data Policy encourages attribution of the source of the data in all cases. In this way, credit is given to those who have expended effort and resources in collecting, curating, generating, or processing the data. Attribution provides visibility of who is using data which, for many organizations, provides necessary evidence to justify continued provision of and updates to the data.
+
+Details of the applicable WMO data policy plus any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.
+
+The WMO Core Metadata Profile 2 specification, section 7.1.17. Properties / WMO data policy (TODO CROSSREF - WCMP2/7.1.17) provides details on how data policy, rights, and/or licenses are described in the discovery metadata.
+
+When using data from WIS2, data consumers:
+
+* Shall respect the conditions of use applicable to the data as expressed in the WMO data policy, rights statements, or licenses. 
+* Should attribute the source of the data.
+ 
