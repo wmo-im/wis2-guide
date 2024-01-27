@@ -208,7 +208,7 @@ least 24 hours is recommended.
 ====== Gateway implementation
 
 The relationships between the Gateway component, WIS2 and SWIM are
-illustrated in figure 2 (below) footnote:[Note that figure 2 simplifies
+illustrated in the figure belowfootnote:[Note that figure simplifies
 the transmission of discovery metadata from WIS2 Node to the Global
 Discovery Catalogue. In reality, the WIS2 Node publishes notification
 messages advertising the availability of new discovery metadata resource
