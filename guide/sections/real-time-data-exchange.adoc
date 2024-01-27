@@ -2,7 +2,7 @@
 
 === What's wrong with the GTS?
 
-The Global Telecommunication System (GTS) has been the mainstay of real-time data exchange within the WMO community since the 1970s. It has evolved over during that time, but its architecture impedes the free flow of information. 
+The Global Telecommunication System (GTS) has been the mainstay of real-time data exchange within the WMO community since the 1970s. It has evolved over during that time, but its architecture impedes the free flow of information.
 
 Being "on the GTS" requires operation of a message switching system (MSS) and update of the Routing Tables that control the flow of data between MSS. Once data is published on the GTS, anyone with a MSS can use the data they receive – or forward that data to other MSS. Each hop from MSS to MSS introduces delays and introduces a risk of data loss. Data publishers must trust recipients to respect terms and conditions in their data licenses. More fundamentally, updates to Routing Tables and MSS requires manual intervention – a model that simply will not scale to support the ever-growing community of consumers that need weather, water, and climate data.
 
@@ -45,8 +45,8 @@ The top-level of the standard topic structure "channel" is used to distinguish b
 
    3.2.13 Data consumers may access data from Global Caches or directly from a WIS2 Node. Data consumers SHOULD access real-time and near real-time core data via Global Caches.
 
-There is a one-to-one mapping footnote:[Excluding the top two levels ("channel" and "version") – these are not considered part of the data classification scheme in the WMO Core Metadata Profile because they relate to data distribution mechanisms.] between the theme (i.e., keyword) used to describe a Dataset in discovery metadata and the topic used to publish notifications about that Dataset. 
+There is a one-to-one mapping footnote:[Excluding the top two levels ("channel" and "version") – these are not considered part of the data classification scheme in the WMO Core Metadata Profile because they relate to data distribution mechanisms.] between the theme (i.e., keyword) used to describe a Dataset in discovery metadata and the topic used to publish notifications about that Dataset.
 
-Details of the WIS2 Topic Hierarchy are available in WIS2 Topic Hierarchy. 
+Details of the WIS2 Topic Hierarchy are available in WIS2 Topic Hierarchy.
 
 Note: the WIS2 Topic Hierarchy, particularly Earth System-Domain-Subcategory and below, is expected to evolve during the WIS2 pilot phase.

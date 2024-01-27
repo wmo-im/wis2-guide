@@ -13,11 +13,11 @@ As a Data Publisher planning to operate a WIS2 Node, you should read the followi
 
 ==== How to publish Dataset discovery metadata to the Global Discovery Catalogue
 
-A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS2 Node broker in accordance to the WIS2 Topic Hierarchy. Global Services subscribed to WIS2 Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue. 
+A Data Producer publishes discovery metadata to the Global Discovery Catalogue by generating a discovery metadata record (see PART V Discovery Metadata) and publishing it via a WIS2 Node broker in accordance to the WIS2 Topic Hierarchy. Global Services subscribed to WIS2 Nodes then validate, ingest and publish the Dataset discovery metadata record to the Global Discovery Catalogue.
 
-==== How to publish data notifications 
+==== How to publish data notifications
 
-A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the WIS2 Topic Hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker. 
+A Data Producer publishes data notifications by generating a notification message (see 7.2.2 Notification_messages) via a WIS2 Node broker in accordance with the WIS2 Topic Hierarchy. Global Brokers subscribe to WIS2Nodes and then re-publish the data notification. If applicable, Global Cache ingests the associated file or data for re-publication to the Global Broker.
 
 ==== How to publish data to the Global Broker
 
@@ -41,11 +41,11 @@ TODO: To be completed
 
 A Data Consumer may browse the topics provided by a Global Broker to locate a Dataset of interest to them.  Topic structures follow the WIS2 Topic Hierarchy. A Data Consumer may discover more about the Dataset associated with a particular topic by using the topic-name as a key to search the Global Discovery Catalogue.
 
-Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker at Global Cache instances. 
+Data Consumers should subscribe to receive "data availability" messages from Global Brokers. Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating NC/DCPC – but note that the NC/DCPC may not provide public access to its local message broker. Data Consumers should not subscribe to the local message broker at Global Cache instances.
 
-Real-time and near real-time data designated as "Core" in the WMO Unified Data Policy (Resolution 1) will be available from the Global Cache. As per clause 3.2.13 from the Manual on WIS, Vol II. Data Consumers should access data from the Global Cache. 
+Real-time and near real-time data designated as "Core" in the WMO Unified Data Policy (Resolution 1) will be available from the Global Cache. As per clause 3.2.13 from the Manual on WIS, Vol II. Data Consumers should access data from the Global Cache.
 
-When a Dataset is available from the Global Cache, its discovery metadata will include a link to subscribe to "data availability" messages from the Global Cache instances. Data Consumers will subscribe to these "Global Cache" topics and not to the topic that contains messages from the originating NC/DCPC.  
+When a Dataset is available from the Global Cache, its discovery metadata will include a link to subscribe to "data availability" messages from the Global Cache instances. Data Consumers will subscribe to these "Global Cache" topics and not to the topic that contains messages from the originating NC/DCPC.
 
 TODO: To be completed
 

@@ -81,7 +81,8 @@ via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gat
 
 The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):
 
-image:images/wis2-to-swim-temp.png[Schematic of interoperability approach]
+.Schematic of interoperability approach
+image::images/wis2-to-swim-temp.png[Schematic of interoperability approach]
 
 The Gateway operates as an "adapter" between WIS2 and SWIM, pulling
 the requisite aviation weather data from WIS2 and re-publishing it
@@ -141,7 +142,7 @@ Recommended Data:
 from OpenAPI regarding choice of security schemes for authenticated
 access - a choice of HTTP authentication, API keys, OAuth2 or OpenID
 Connect Discovery. For more information see
-https://swagger.io/docs/specification/authentication/ - 
+https://swagger.io/docs/specification/authentication/ -
 WIS2 does not provide any guidance on use of Public Key
 Infrastructure (PKI).] applied at the WIS2 Node.
 * Are *not* cached within WIS2 by the Global Cachesfootnote:[Global
@@ -218,7 +219,8 @@ message].
 
 These interactions are illustrated in the below figure:
 
-image:images/wis2-to-swim-interaction-temp.png[interactions between the Gateway and components of WIS 2.0 and SWIM]
+.Interactions between the Gateway and components of WIS2 and SWIM
+image::images/wis2-to-swim-interaction-temp.png[Interactions between the Gateway and components of WIS2 and SWIM]
 
 **Configuration**
 
@@ -234,7 +236,7 @@ Discovery metadata can be downloaded from the Global Discovery Catalogue.
 The Gateway component implements the following functions:
 
 * Subscribe to the pertinent topic(s) for notifications about new
-aviation weather datafootnote:[WIS 2.0 recommends that one subscribes to
+aviation weather datafootnote:[WIS2 recommends that one subscribes to
 notifications from a Global Broker. However, where both Gateway and WIS
 Node are operated by the same organisation, it may be advantageous to
 subscribe directly to the local message broker of WIS2 Node, e.g., to

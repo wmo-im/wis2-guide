@@ -4,9 +4,9 @@ WIS2 is a federated system of systems based on Web-Architecture and open standar
 
 National Centres (NC), Data Collection and Production Centres (DCPC), and Global Information System Centres (GISC) are sll types of WIS Centre.
 
-NCs and DCPCs operate WIS2 Nodes.   
+NCs and DCPCs operate WIS2 Nodes.
 
-GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS2 system. 
+GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS2 system.
 
 A WIS Centre may also operate one or more Global Services.
 
@@ -16,21 +16,21 @@ WIS Centres shall comply with the Technical Regulations defined in the Manual on
 
 When describing the functions of WIS2 there are four roles to consider:
 
-. Data Publisher: 
+. Data Publisher:
 * This role is fulfilled by NC and DCPC.
 * Data Publishers operate a WIS2 Node to share their data within the WIS2 ecosystem.
 * Data Publishers manage, curate, and provide access to one or more "Datasets".
-* For each Dataset, a Data Publisher provides: 
+* For each Dataset, a Data Publisher provides:
   i) "Discovery metadata" to describe the Dataset, provide details on how it can be accessed, and under what conditions.
   ii) An API or Web-service to access (or interact with) the Dataset.
   iii) Notification messages advertising the availability of new data and metadata.
 
-. Global Coordinator: 
+. Global Coordinator:
 * This role is exclusive to GISCs.
 * All GISCs supporting WMO Members in their AoR fulfil their data sharing obligations via WIS2.
 
 . Global Service operator:
-* To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services – 
+* To ensure highly available global data exchange, a WIS Centre may operate one or more Global Services
   i) Global Discovery Catalogue: enables users to search all Datasets provided by Data Publishers and discover where and how to interact with those Datasets (e.g., subscribe to updates, access/download/visualize data, or access more detailed information about the Dataset).
   ii) Global Broker: provides highly available messaging services where users may subscribe to notifications about all Datasets provided by Data Publishers.
   iii) Global Cache: provides highly available download service for cached copies of core data downloaded from Data Publishers’ Web-services.
@@ -76,11 +76,11 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 * WIS2 Nodes describe the data they publish using discovery metadata [TODO: ref. WIS Core Metadata Profile 2].
 * WIS2 Nodes generate notification messages [TODO: ref. WIS2 Notification Message] advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata.
 * WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.
- 
+
 ==== Global Broker
 * WIS2 incorporates several Global Brokers, ensuring highly resilient distribution of notification messages across the globe.
-* A Global Broker subscribes to the message broker operated by each WIS2 Node and republishes notification messages. 
-* A Global broker subscribes to notifications from other Global Brokers to ensure it receives a copy of all notification messages. 
+* A Global Broker subscribes to the message broker operated by each WIS2 Node and republishes notification messages.
+* A Global broker subscribes to notifications from other Global Brokers to ensure it receives a copy of all notification messages.
 * A Global Broker republishes notification messages from every WIS2 Node and Global Service.
 * A Global Broker operates a highly available, high-performance message broker.
 * A Global Broker uses the WIS2 Topic Hierarchy enabling a Data Consumer to easily find topics relevant to their needs.
@@ -106,8 +106,8 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 ==== Global Monitor
 * WIS2 includes a Global Monitor service.
 * The Global Monitor collects metrics from WIS2 components.
-* The Global Monitor provides a dashboard that supports operational management of the WIS2 system. 
-* The Global Monitor tracks: 
+* The Global Monitor provides a dashboard that supports operational management of the WIS2 system.
+* The Global Monitor tracks:
   i) What data is published by WIS2 Nodes.
   ii) Whether data can be effectively accessed by Data Consumers.
   iii) The performance of components in the WIS2 system.
