@@ -82,7 +82,7 @@ In the following sections and for each Global Service, a set of metrics is defin
 * A Global Broker instance subscribes to messages from WIS Centres and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
 * Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.
 * For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.
-* When subscribing to messages from WIS Centres and other Global Services, a Global Broker must authenticate using the valid credentials provided by WMO Secretariat. 
+* When subscribing to messages from WIS Centres and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.
 
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
