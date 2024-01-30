@@ -1744,13 +1744,16 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.</p>
 </li>
 <li>
-<p>A Global Broker instance subscribes to messages from WIS Centres, Global Caches and other Global Brokers. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.</p>
+<p>A Global Broker instance subscribes to messages from WIS Centres and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.</p>
 </li>
 <li>
 <p>Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.</p>
 </li>
 <li>
 <p>For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.</p>
+</li>
+<li>
+<p>When subscribing to messages from WIS Centres and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.</p>
 </li>
 <li>
 <p>A Global Broker is built around two software components:</p>
@@ -3091,7 +3094,7 @@ authorized sources such as a Gateway.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-30 18:18:22 UTC
+Last updated 2024-01-30 18:22:06 UTC
 </div>
 </div>
 </body>
