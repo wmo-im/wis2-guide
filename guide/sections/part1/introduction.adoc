@@ -1,10 +1,10 @@
 === Introduction of WIS2
 
-Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO members. 
+Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO members.
 
 In 2007, the WMO Information System (WIS) entered into operations to complement the GTS, providing a searchable catalogue and a global cache to enable additional discovery, access and retrieval. The success of WIS was limited as the system only partially met the requirement of providing simple access to WMO data. Today's technology developed for the Internet of Things (IoT) opens the possibility of creating a WIS2 able to stand to its expectations of delivering an increasing number and volume of real-time data to WMO Centres in a reliable and cost effective way.
 
-WIS2 has been designed to meet the shortfalls of the current WIS and GTS, support the WMO’s Unified Data Policy and the Global Basic Observing Network (GBON), and meet the demand for high data volume, variety, velocity and veracity. 
+WIS2 has been designed to meet the shortfalls of the current WIS and GTS, support the WMO’s Unified Data Policy and the Global Basic Observing Network (GBON), and meet the demand for high data volume, variety, velocity and veracity.
 
 WIS2 technical framework is based around three foundational pillars: leveraging open standards, simpler data exchange and cloud-ready solutions.
 
@@ -14,31 +14,31 @@ WIS2 leverages open standards to take advantage of the ecosystem of technologies
 
 ==== Simpler data exchange
 
-WIS2 prioritises public telecommunication networks, unlike private networks for GTS links. As a result, using the Internet will enable the best choice for a local connection, using commonly available and well-understood technology. 
+WIS2 prioritises public telecommunication networks, unlike private networks for GTS links. As a result, using the Internet will enable the best choice for a local connection, using commonly available and well-understood technology.
 
 WIS2 aims to improve the discovery, access and utilisation of weather, climate and water data by adopting Web technologies proven to provide a truly collaborative platform for a more participatory approach. Data exchange using the Web also facilitates easy access mechanisms. Browsers and search engines allow Web users to discover data without specialised software. The Web also enables additional data access platforms, e.g. desktop GIS, mobile applications, forecaster workstations, etc.
 The Web provides access control and security mechanisms that can be utilised to freely share the core data per the WMO Unified Data Policy and protect the data with more restrictive licensing constraints. Web technologies also allow for authentication and authorisation for the provider to retain control of who can access published resources and to request users to accept a license specifying the terms and conditions for using the data as a condition for providing access to them.
 
-WIS2 uses a "publish-subscribe" pattern where users subscribe to a topic to receive new data in real time. The mechanism is similar to WhatsApp and other messaging applications. It is a reliable and straightforward way to allow the user to choose her data of interest and to receive them reliably. 
+WIS2 uses a "publish-subscribe" pattern where users subscribe to a topic to receive new data in real time. The mechanism is similar to WhatsApp and other messaging applications. It is a reliable and straightforward way to allow the user to choose her data of interest and to receive them reliably.
 
 ==== Cloud-ready solutions
 
-The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members. 
-WIS2 encourages WMO centres to adopt cloud technologies where appropriate to meet their users' needs. Whilst WMO technical regulations will not mandate cloud services, WIS2 will promote a gradual adoption of cloud technologies that provide the most effective solution. 
+The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members.
+WIS2 encourages WMO centres to adopt cloud technologies where appropriate to meet their users' needs. Whilst WMO technical regulations will not mandate cloud services, WIS2 will promote a gradual adoption of cloud technologies that provide the most effective solution.
 
 The cloud-based infrastructure allows easy portability of technical solutions, ensuring that a system implemented by a specific country can be packaged and deployed easily in other countries with similar needs. In addition, using cloud technologies allows WIS2 to deploy infrastructure and systems efficiently with minimum effort for the NMHSs by shipping ready-made services and implementing consistent data processing and exchange techniques.
 
-It should be clear that hosting data and services on the cloud does not affect data ownership. Even in a cloud environment, organisations retain ownership of their data, software, configuration, and change management as if they were hosting their infrastructure. As a result, data authority and provenance stay with the organisation, and the cloud is simply a technical means to publish the data. 
+It should be clear that hosting data and services on the cloud does not affect data ownership. Even in a cloud environment, organisations retain ownership of their data, software, configuration, and change management as if they were hosting their infrastructure. As a result, data authority and provenance stay with the organisation, and the cloud is simply a technical means to publish the data.
 
 ==== Why are datasets so important?
 
-WMO enables the international exchange of observations and model data for all Earth-system disciplines. 
+WMO enables the international exchange of observations and model data for all Earth-system disciplines.
 
-The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) footnote:[WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021))], describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.  
+The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) footnote:[WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021))], describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.
 
-WIS is the mechanism by which this Earth system data is exchanged. 
+WIS is the mechanism by which this Earth system data is exchanged.
 
-Common practice when working with data is to group them into "Datasets". All the data in a Dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a Dataset as a "collection of data, published or curated by a single agent, and available for access of download in one or more representations" footnote:[Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020 https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset]. 
+Common practice when working with data is to group them into "Datasets". All the data in a Dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a Dataset as a "collection of data, published or curated by a single agent, and available for access of download in one or more representations" footnote:[Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020 https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset].
 
 Why is this important? The "single agent" (i.e., a single organisation) responsible for managing the collection ensures consistency among the data. For example, in a Dataset:
 
@@ -54,19 +54,19 @@ A Dataset might be published as an immutable resource (e.g., data collected from
 
 A Dataset may be represented as a single, structured file or object (e.g., a CSV file where each row represents a data record) or as thousands of consistent files (e.g., output from a reanalysis model encoded as many thousands of GRIB files). Determining the best way to represent a Dataset is beyond the scope of this guide - there are many factors to consider! The key point here is that we consider the Dataset to be a single, identifiable resource irrespective of how it's represented.
 
-Because we group data into a single, conceptual resource (i.e., the Dataset) we can: 
+Because we group data into a single, conceptual resource (i.e., the Dataset) we can:
 
 * Give this resource an identifier, and use this identifier to unambiguously refer to collections of data.
 * Make statements about the Dataset (i.e., metadata), and infer that these statements apply to the entire collection.
 
 All this means that the Dataset concept is central WIS:
 
-* We publish discovery metadata about Datasets, as specified in the WMO Core Metadata Profile footnote:[WMO Core Metadata Profile version 2]. 
-* We can search for Datasets that contain relevant data using the Global Discovery Catalogue. 
+* We publish discovery metadata about Datasets, as specified in the WMO Core Metadata Profile footnote:[WMO Core Metadata Profile version 2].
+* We can search for Datasets that contain relevant data using the Global Discovery Catalogue.
 * We can subscribe to notifications about updates about a Dataset via a Global Broker.
-* We can access the data that comprises a Dataset from a single location using a well described mechanism.  
+* We can access the data that comprises a Dataset from a single location using a well described mechanism.
 	
-It is up to the Data Publisher to decide how their data is grouped into Datasets - effectively, to decide what Datasets they publish to WIS. That said, we recommend that, subject to the consistency rules above, Data Publishers should organise their data into as few Datasets as possible. 
+It is up to the Data Publisher to decide how their data is grouped into Datasets - effectively, to decide what Datasets they publish to WIS. That said, we recommend that, subject to the consistency rules above, Data Publishers should organise their data into as few Datasets as possible.
 
 For a Data Publisher, this means fewer discover metadata records to maintain. For a Data Consumer this means fewer topics to subscribe to and fewer places to access the data.
 
@@ -77,10 +77,10 @@ There are some things that are fixed requirements for Datasets:
 
 Here are some examples of Datasets:
 
-* The most recent 5-days of synoptic observations for an entire country or territoryfootnote:[Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.]. 
+* The most recent 5-days of synoptic observations for an entire country or territoryfootnote:[Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.].
 * Long-term record of observed water quality for a managed set of hydrological stations.
-* Output from the most recent 24-hours of operational numerical weather prediction model runs. 
+* Output from the most recent 24-hours of operational numerical weather prediction model runs.
 * Output from 6-months of experimental model runs. It's important to note that output from the operational and experimental should not be merged into the same dataset because they use different algorithms - it's very useful to be able to distinguish the provenance (or lineage) of data.
 * A multi-petabyte global reanalysis spanning 1950 to present day.
 
-In summary, Datasets are important because they're how data is managed in WIS. 
+In summary, Datasets are important because they're how data is managed in WIS.

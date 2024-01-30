@@ -10,12 +10,12 @@ image::images/symbology-data-metadata-flows.png[Symbology used to describe data 
 Introducing the key components:
 
 * *MQ Broker*: Used to publish messages advertising the availability of new/updated/deleted discovery metadata and new Data Objects (e.g. data files that comprise the dataset). Implements MQTT 3.1.1 and/or MQTT 5.0.
-* *Data server*: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive API. Supported protocols are HTTPS and SFTP.   
+* *Data server*: Provides mechanism for Data Consumers to download datasets or part thereof. May be implemented by publishing Data Objects (files) to a Web server or FTP server. Or as an interactive API. Supported protocols are HTTPS and SFTP.
 * *Catalogue*: Contains discovery metadata records describing the datasets published by the NC/DCPC. May be implemented as a "static catalogue" with JSON files published on a Web server enabling a user to browse the catalogue, or as a "dynamic catalogue" via an application that offers a search API.
 
 === Simple NC/DCPC data sharing
 
-Here we introduce the key concepts of publishing discovery metadata, notification messages, and data. For simplicity, the WIS2 Global Services are not shown here.  
+Here we introduce the key concepts of publishing discovery metadata, notification messages, and data. For simplicity, the WIS2 Global Services are not shown here.
 
 Figure 3 illustrates metadata publication and discovery by a Data Consumer.
 
@@ -39,7 +39,7 @@ image::images/simple-nc-dcpc-data-sharing-data-distribution.png[Simple NC/DCPC d
 . Message (*m^D^*) indicating availability of new data are pushed to the subscriber.
 . Data Consumer parses the messages to extract the URL for the new Data Object (*D*) and downloads the file.
 
-Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via an API.  
+Note: In this example, the dataset is published as files that can be downloaded – but the same pattern can be used to advertise new data that is made available via an API.
 
 === Message distribution via Global Broker
 
@@ -47,7 +47,7 @@ Here we add the Global Broker service.
 
 Note that the Global Broker operates two "channels": one for messages originating from NC or DCPCs, the second for messages from Global Cache instances. These are designated "O" and "GC" accordingly.
 Figure 5 illustrates how messages are published from the NC/DCPC to the Global Broker.
- 
+
 .Message distribution via Global Broker - publishing messages from NC/DCPC
 image::images/message-distribution-via-gb-publishing-from-nc-dcpc.png[Message distribution via Global Broker - publishing messages from NC/DCPC]
 
@@ -59,7 +59,7 @@ image::images/message-distribution-via-gb-publishing-from-nc-dcpc.png[Message di
 . Message (*m^D^*) is validated against the agreed message format (insert reference). If the message is not compliant, it is discarded.
 
 Figure 6 illustrates how messages are propagated to other Global Broker instances.
- 
+
 .Message distribution via Global Broker – publishing messages from other Global Brokers
 image::images/message-distribution-via-gb-publishing-from-other-gb.png[Message distribution via Global Broker – publishing messages from other Global Broker]
 

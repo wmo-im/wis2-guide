@@ -1,6 +1,6 @@
 === Security
 
-For this initial version of the Guide to WIS 2.0, existing guidance on informtion technology security (aka. _cybersecurity_) remains largely in force. Please refer to:
+For this initial version of the Guide to WIS2, existing guidance on informtion technology security (aka. _cybersecurity_) remains largely in force. Please refer to
 
 * _Guide to Information Technology Security_ (WMO-No. 1115)footnote:[_Guide to Information Technology Security_ (WMO-No. 1115): https://library.wmo.int/records/item/51145-guide-to-information-technology-security]
 * _Guide to the WMO Information System_ (WMO-No. 1061), Vol Ifootnote:[_Guide to the WMO Information System_ (WMO-No. 1061), Vol I: https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system], Appendix E - Annex To Paragraph 7.8 (ICT Service Incident Management), and Appendix F - WIS IT Security Incident Response Process
