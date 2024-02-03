@@ -454,7 +454,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-30</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-03</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0alpha1</p></td>
@@ -1889,13 +1889,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>A Global Cache shall subscribe to the topics <code>origin/a/wis2/#</code>, <code>cache/a/wis2/#</code>.</p>
 </li>
 <li>
-<p>A Global Cache shall ignore all messages received on the topics <code>origin/a/wis2//data/recommended/<mark>` and `+cache/a/wis2//data/recommended/</mark>` footnote:[It is also technically possible to filter recommended data by using a wildcard subscription such as `+origin/a/wis2//data/core/#+</code>. However, avoiding wildcard subscription is generally considered good practice as it limits the burden of the broker operated by Global Brokers.</p>
+<p>A Global Cache shall ignore all messages received on the topics <code>origin/a/wis2//data/recommended/<mark>` and `+cache/a/wis2//data/recommended/</mark>` footnote:[It is also technically possible to filter recommended data by using a wildcard subscription such as `+origin/a/wis2//data/core/#+</code>. However, avoiding wildcard subscription is generally considered good practice as it limits the burden of the broker operated by Global Brokers.]</p>
 </li>
 <li>
 <p>A Global Cache shall retain the data and metadata they receive for a minimum period of 24 hours. Requirements relating varying retention times for different types of data may be added later.</p>
 </li>
 <li>
-<p>For messages received on topic <code>origin/a//data/core/<mark>` or `+cache/a//data/core/</mark>+</code> a Global Cache shall:</p>
+<p>For messages received on topic <code>origin/a//data/core/<mark>` or `+cache/a//data/core/</mark>+</code>, a Global Cache shall:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -3094,7 +3094,7 @@ authorized sources such as a Gateway.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-30 18:22:06 UTC
+Last updated 2024-02-03 14:18:26 UTC
 </div>
 </div>
 </body>
