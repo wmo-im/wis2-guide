@@ -2,80 +2,185 @@
 
 As a Data Publisher with authoritative Earth system data that you want to share with the WMO community you should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
+(TODO - MAYBE; add Guidance on "coarser resource publication with interactive links" - see WNM issue #41)
+(TODO - MAYBE; add Guidance on linking to external provenance objects - see WCMP2 issue #161)
+(TODO - MAYBE; add Guidance on referencing WIGOS stations and observing networks - see WCMP2 issue #19)
+
 ==== How to get started
 
-The first thing you need to do is consider your data and how it can be conceptually grouped into one or more datasets (see section 1.1.4. Why are datasets so important? (TODO CROSSREF)).
+The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see section 1.1.4. Why are datasets so important? (TODO CROSSREF)), and whether it is *Core* or *Recommended* data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).
 
-If your data relates to your country or territory, you need to publish it through a National Centre (NC). If your data relates to a region, programme, or other specialized function within WMO, you need to publish it through a Data Collection or Production Centre (DCPC). The functional requirements for NC and DCPC are described in the _Manual on the WMO Information System_ (WMO-No. 1060), Vol II - Part III Functions of WIS.
+Next, you need to consider where it is published. If your data relates to your country or territory, you need to publish it through a National Centre (NC). If your data relates to a region, programme, or other specialized function within WMO, you need to publish it through a Data Collection or Production Centre (DCPC). The functional requirements for NC and DCPC are described in the _Manual on the WMO Information System_ (WMO-No. 1060), Vol II - Part III Functions of WIS.
 
-All NCs and DCPCs are affiliated with a Global Information System Centre (GISC) that has a responsibility to help establish efficient and effective data sharing on the WIS.
+All NCs and DCPCs are affiliated with a Global Information System Centre (GISC) that has a responsibility to help establish efficient and effective data sharing on the WIS. Your GISC will be able to help you in getting your data onto WIS2.
 
 You may be able to identify an existing NC or DCPC that can publish your data. Alternative, you need to establish a new NC or DCPC. The main difference is that an NC is designated by a Member, whereas a DCPC is designated by a WMO or related international programme and/or a regional association.
 
 Both NC and DCPC require operation of a WIS2 Node (see section 2.4.1. WIS2 Node (TODO CROSSREF)). The procedure for registering a new WIS2 Node is provided in Section 2.6.1.1. Registration and decommissioning of a WIS2 Node (TODO CROSSREF). 
 
-Once you have determined the scope of your datasets and have a WIS2 Node ready for data publication, you are ready to progress to the next step: providing discovery metadata.
-
+Once you have determined the scope of your datasets, the data policy which applies, and have a WIS2 Node ready for data publication, you are ready to progress to the next step: providing discovery metadata.
 
 ==== How to provide discovery metadata to WIS2
 
 Discovery metadata is the mechanism by which you tell potential consumers about your data, how it may be accessed, and any conditions you may place on the use of the data.
 
-Each dataset you want to publish must have an associated discovery metadata record. This record is encoded as GeoJSON (RFC 7946footnote:[RFC 7946 - The GeoJSON Format https://datatracker.ietf.org/doc/html/rfc7946]) must conform to the WMO Core Metadata Profile 2 (WCMP2) specification (TODO CROSSREF).
+Each dataset you want to publish must have an associated discovery metadata record. This record is encoded as GeoJSON (RFC 7946footnote:[RFC 7946 - The GeoJSON Format https://www.rfc-editor.org/rfc/rfc7946]) must conform to the WMO Core Metadata Profile 2 (WCMP2) specification (TODO CROSSREF).
 
 Copies of all discovery metadata records from WIS2 are held at the Global Discovery Catalogues, where data consumers can search and browse to find data that is of interest to them. 
 
-Depending on local arrangements, your GISC may be able to help you transfer your discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, you will need to publish the discovery metadata record(s) yourselffootnote:[In future, WIS2 may provide metadata publication services (e.g., through a WIS2 metadata management portal) to assist with this task. However, such a service is not available at this time.] (see section 2.6.2. Publishing data, discovery metadata, and notification messages (TODO CROSSREF)).
+Depending on local arrangements, your GISC may be able to help you transfer your discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, you will need to publish the discovery metadata record(s) yourselffootnote:[In future, WIS2 may provide metadata publication services (e.g., through a WIS2 metadata management portal) to assist with this task. However, such a service is not available at this time.] using one of two ways:
+
+* The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server where it can be accessed with a URL. 
+* Alternatively, you may operate a local metadata catalogue through which discovery metadata records can be shared using an API (e.g., OGC API - Recordsfootnote:[OGC API - Records - Part 1: Core https://docs.ogc.org/DRAFTS/20-004.html]). Each discovery metadata record can be accessed with a unique URL via the API (e.g., as an item which is part of thediscovery metadata catalogue).
+
+In both cases, a notification message needs to be published on a message broker that tells WIS2 there is new discovery metadata to upload and that it is accessed at the specified URLfootnote:[Both data and metadata publication use the same notification message mechanism to advertise the availability of a new resource.]. The notification messages shall conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF). Furthermore, the notification message must be published on topic that conforms to the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF). For example, metadata published by Deutscher Wetterdienst would use the follow topic:
+
+``origin/a/wis2/de-dwd/metadata/core/wcmp2``
+
+These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.
 
 Upon receipt of a new discovery metadata record, a Global Discovery Catalogue (see section 2.4.4. Global Discovery Catalogue (TODO CROSSREF)) will validate, assess, ingest, and publish the record. Validation ensures that your discovery metadata record complies with the specification. Assessment examines your discovery metadata record against good practice (TODO CROSSREF WCMP2 KPIs). The Global Discovery Catalogue will notify you if your discovery metadata record fails validation and provide recommendations for improvements for you to consider. 
 
 Discovery metadata must be published in the Global Discovery Catalogues before you begin publishing data.
 
-More detail on publishing discovery metadata is provided elsewhere in this Guide (see section 2.6.2. Publishing data, discovery metadata, and notification messages (TODO CROSSREF)).
-
 ==== How to provide data to WIS2
 
 WIS2 is based on the Web architecturefootnote:[Architecture of the World Wide Web https://www.w3.org/TR/webarch/]. As such it is _resource oriented_. Datasets are resources; the "granules" of data grouped in a dataset are resources; the discovery metadata records that describe datasets are resources. In Web architecture, every resource has a unique identifier (e.g., a URIfootnote:[RFC3986 Uniform Resource Identifier (URI) - Generic Syntax https://www.rfc-editor.org/rfc/rfc3986]), and the unique identifier can be used to resolve the resource identified and interact with it (e.g., to download a representation of the resource over an open standard protocol such as HTTP).
 
-Simply, you provide data (and metadata) to WIS2 by assigning it a unique identifier, in this case a URLfootnote:[The term "Uniform Resource Locator" (URL) refers to the subset of URIs that, in addition to identifying a resource, provide a means of locating the resource by describing its primary access mechanism (e.g., its network "location"). RFC3986], and making it available via a data server - most typically a Web server using the HTTP protocolfootnote:[WIS2 recommends use of HTTP secure (HTTPS) wherein the communication protocol is encrypted using Transport Layer Security (TLS)]. It's up to the data server to decide what to provide when resolving the identifier: the URL of a data granule may resolve as a representation encoded in a given data format, whereas the URL of a dataset may resolve as a description of the dataset (i.e., metadata) that includes links to access the data from which the set is comprised - either individual files (i.e., the data granules) or an interactive API that enables a user to request just the parts of the dataset they need by specifying query parameters. 
+Simply, you provide data (and metadata) to WIS2 by assigning it a unique identifier, in this case a URLfootnote:[The term "Uniform Resource Locator" (URL) refers to the subset of URIs that, in addition to identifying a resource, provide a means of locating the resource by describing its primary access mechanism (e.g., its network "location"). RFC 3986], and making it available via a data server - most typically a Web server using the HTTP protocolfootnote:[WIS2 strongly prefers secure versions of protocols (e.g., HTTPS) wherein the communication protocol is encrypted using Transport Layer Security (TLS)]. It's up to the data server to decide what to provide when resolving the identifier: the URL of a data granule may resolve as a representation encoded in a given data format, whereas the URL of a dataset may resolve as a description of the dataset (i.e., metadata) that includes links to access the data from which the set is comprised - either individual files (i.e., the data granules) or an interactive API that enables a user to request just the parts of the dataset they need by specifying query parameters.
 
-Note that WIS2 ensures highly available, rapid access to a subset of data via a collection of Global Caches (see section 2.4.3. Global Cache (TODO CROSSREF)).
+The following sections cover specific considerations relating to publishing data to WIS2.
 
-More detail on data publishing is provided elsewhere in this Guide (see section 2.6.2. Publishing data, discovery metadata, and notification messages (TODO CROSSREF)).
+===== Data formats and encodings
 
-==== How to provide data in (near) real-time
+Whether providing data as files or through interactive APIs you need to decide which encodings (aka. _data formats_) to use. WMO Technical Regulations may require that data is encoded in particular formats. For example, synoptic observations should be encoded in BUFR. The _Manual on Codes_ (WMO-No. 306) provides details of data formats formally approved for use in WMO. However, Technical Regulations don’t cover all data sharing requirements. In such cases, you should select data formats that are open, non-proprietary, and widely adopted and understood in their target user community. In this context, ‘open’ means that anyone can use the format without needing a license to do so – either to encode data in that format or write software that understands the format.
+
+===== Providing data as files
+
+The simplest way to publish data through WIS2 is to persist your data as files and publish those files on a Web sserver. All these files need to be organised somehow – perhaps a flat structure or grouped into collections that resemble folders or directory structures.
+
+To make your data usable, your users need to be able to find the specific file (or files) they need.
+
+Naming conventions for files and/or directories are useful - but only when you understand the scheme. Assuming that your users understand your naming convention will be a barrier to widespread re-use; many users will simply treat the filename as an opaque string. Where communities commonly use file-naming conventions (e.g., with embedded metadata), these should only be used when adequate documentation is provided to users.
+
+WIS2 does not require the use of specific naming conventions.
+
+Another mechanism to consider is complementing the collections (i.e., directories or folders in which files are grouped) with information that describes their content. Then users,both humans and software agents, can browse the structure and find what they need. Examples of this approach include:
+
+* Web Accessible Folders (WAF) and "readme" files: a Web-based folder structure listing the data object files by name, where each folder contains a formated "readme" file describing the folder contents.
+* SpatioTemporal Asset Catalog (STAC)footnote:[Spatio Temporal Asset Catalogue (STAC) https://stacspec.org/en]: a community standard based on GeoJSON to describe geospatial data files which can be easily indexed, browsed, and accessed. Free and open source tools tools present STAC records (one for each data object file) through a Web-based, browse-able user interface.
+
+When publishing collections of data it is tempting to package content into zip or SIPfootnote:[See https://www.iasa-web.org/tc04/submission-information-package-sip or end of https://www.eumetsat.int/formats] resources - perhaps even packaging the entire collection, complete with folders, into a single resource. Similarly, WMO formats such as GRIB and BUFR allow multiple data objects (e.g., fields or observations) to be packed into a single file. Only having to download a single resource is convenient for many users, but the downside is that the user must download the entire resource and then unpack/decompress it. The convenience of downloading fewer resources needs to be balanced against the cost of forcing users to download data they may not need. Whatever your choice, you should be guided by common practice in your domain - i.e., only zip, SIP, or pack if your users expect it.
+
+===== Providing interactive access to data with APIs
+
+Interactive data access aims to support efficient data workflows by enabling client applications to request only the data that they need. The advantage with interactive data access is that it provides more flexibility. Data publishers can offer an API structured around how users want to work with the data rather than force them to work with the structure that is convenient for you as a data publisher.  
+
+But it is more complex to implement. You need a server running software that can: 
+
+. Interpret a user's request; 
+. Extract the data from wherever it is stored;
+. iii.	Package that data up and send it back to the user.
+
+Importantly, when considering use of interactive APIs to serve your data you need to plan for costs: every request to an interactive API requires computational resources to process.
+
+Based on the experience of data publishers who have been using Web APIs to serve their communities, this Guide makes the following recommendations about interactive APIs:
+
+* First, interactive APIs should be self-describing. A Data Consumer should not need to know, apriori, how to make requests from a API. They should be able to discover this information from the API endpoint itself – even if this is just a link to a documentation page they need to read.
+* Second, APIs should comply with OpenAPIfootnote:[OpenAPI Specification https://swagger.io/specification/] version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the API.
+* Third, the Open Geospatial Consortium (OGC) have developed a suite of APIsfootnote:[Open Geospatial Consortium OGC API https://ogcapi.ogc.org/] (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI. Among these, OGC API – Environmental Data Retrieval (EDR)footnote:[OGC API - Environmental Data Retrieval (EDR) https://ogcapi.ogc.org/edr], OGC API – Featuresfootnote:[OGC API - Features https://ogcapi.ogc.org/features], and OGC API - Coveragesfootnote:[OGC API - Coverages https://ogcapi.ogc.org/coverages] are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and proprietary) that support them. We recommend that data publishers assess these open-standard API specifications to determine their suitability to for publishing their datasets using APIs.
+
+Finally, you should consider versioning your API to avoid breaking changes when adding new features. A common approach is add a _version number_ prefix into the API path; e.g., ``/v1/service/{rest-of-path}`` or ``/service/v1/{rest-of-path}``.
+
+More guidance on use of interactive APIs in WIS2 is anticipated in future versions of this Guide.
+
+===== Providing data in (near) real-time
 
 WIS2 is designed to support the data sharing needs of all WMO programmes. Among these, the World Weather Watch footnote:[WMO World Weather Watch https://wmo.int/world-weather-watch] drives specific needs for the rapid exchange of data to support weather forecasting.
 
-To enable real-time data sharingfootnote:[In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.], WIS2 uses notification messages to advertise the availability of a new resource - data or discovery metadata - and how to access that resource. Notification messages are published to a queue on a message broker and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific _topic_, such as dataset.
+To enable real-time data sharingfootnote:[In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.], WIS2 uses notification messages to advertise the availability of a new resource - data or discovery metadata - and how to access that resource. Notification messages are published to a queue on a message broker in your WIS2 Nodefootnote:[WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers which subscribe to message brokers of WIS2 Nodes and republish notification messages (see section 2.4.2. Global Broker (TODO CROSSREF)).] using the MQTT protocol and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific _topic_, such as dataset.
 
 For example, when a new temperature profile from a radio sonde deployment is added to a dataset of upper-air data measurements, a notification message would be published that includes the URL used to access the new temperature profile data. Everyone subscribing to notification messages about the upper-air measurement dataset would receive the notification message, identify the URL and download the new temperature profile data.
 
-Note that WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers (see section 2.4.2. Global Broker (TODO CROSSREF)).
+Optionally, data may be embedded in a notification message using a ``content`` object _in addition_ to publishing via the data server. Embedded data must be encoded as ``UTF-8``, ``Base64``, or ``gzip``, and must not exceed 4096 bytes in length once encoded.
 
 Notification messages are encoded as GeoJSON (RFC 7946) and must conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF).
 
-To ensure that data consumers can easily find the topics they want to subscribe to, data publishers must publish to a standard topic hierarchy, as specified in the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF).
+The URL used in the notification message should refer only to the newly added data object rather (e.g., the new temperature profile) than the entire dataset. However, the WIS2 Notification Message specification allows for multiple URLs to be provided. If you are providing your data through an interactive API, you might provide a "canonical" link (designated with link relation: ``"rel": "canonical"``footnote:[IANA Link Relations https://www.iana.org/assignments/link-relations/link-relations.xhtml]), and an additional link providing the URL for the root of the Web service from where one can interact with or query the entire Dataset.
 
-If your data needs to be shared in real-time, you must publish notification messages to a message broker using an authorized topic. It is recommended that you include the dataset identifier in the notification message (see WMO Core Metadata Profile 2 (WCMP2) specification, section 7.1.3. Identifier (TODO CROSSREF)). This allows data consumers receiving the notification to cross reference with information provided in the discovery metadata for the dataset, such as the conditions of use specified in the data policy, rights, or license.
+You should include the dataset identifier in the notification message (``metadata_id`` property). This allows data consumers receiving the notification to cross reference with information provided in the discovery metadata for the dataset, such as the conditions of use specified in the data policy, rights, or license.
 
-Furthermore, the discovery metadata assocated with your dataset must include links to where one can subscribe to that topic on a message broker. The Global Discovery Catalogue will reject discovery metadata records containing links to topics outside the official topic-hierarchy. The Global Broker will only republish notification messages on topics specified in your discovery metadata records.
+Furthermore, if you have implemented controlled access to your data (e.g., the use of an API key), you should include a security object in the download link that provides the pertinent information (e.g., the access control mechanism used, and where/how a Data Consumer would need to register to request access). 
 
-(TODO - using the Experimental topic)
+To ensure that data consumers can easily find the topics they want to subscribe to, data publishers must publish to an authorized topic, as specified in the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF).
 
-If your data seems to relate to more than one topic, select the most appropriate one. The topic-hierarchy is not a knowledge organisation system - it is only used to ensure uniqueness of topics for publishing notification messages. Discovery metadata is used to describe a dataset; each dataset is mapped to one, and only one, topic.
+If your data seems to relate to more than one topic, select the most appropriate one. The topic-hierarchy is not a knowledge organisation system - it is only used to ensure uniqueness of topics for publishing notification messages. Discovery metadata is used to describe a dataset and its relevance to additional disciplines; each dataset is mapped to one, and only one, topic.
 
-More detail on publishing notification messages is provided elsewhere in this Guide (see section 2.6.2. Publishing data, discovery metadata, and notification messages (TODO CROSSREF)).
+If the WIS2 Topic Hierarchy does not include a topic appropriate for your data, your should publish on an _experimental_ topic. This allows for data exchange to be established while the formalities are consideredfootnote:[The "experimental" topic is necessary for the WIS2 pre-operational phase and future pre-operational data exchange in test mode.]. Experimental topics are provided for each Earth-system discipline at level 8 in the topic hierarchy (e.g., ``origin/a/wis2/{centre-id}/data/{earth-system-discipline}/experimental/``). Data publishers can can extend the experimental branch with sub-topics as they deem appropriate. Experimental topics are subject to change and will be removed once they are no longer needed. For more information, see WIS2 Topic Hierarchy section 7.1.2 Publishing guidelines (TODO CROSSREF).
 
-==== FAIR
+Whatever topic you choose, the discovery metadata you provided to the Global Discovery Catalogue must include subscription links using that topicfootnote:[The Global Discovery Catalogue will reject discovery metadata records containing links to topics outside the official topic-hierarchy.]. The Global Broker will only republish notification messages on topics specified in your discovery metadata records.
 
-(TODO)
+===== Considerations when providing Core data in WIS2
+
+Core data, as specified in the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)) is considered essential for provision of services for the protection of life and property and for the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.
+
+WIS2 ensures highly available, rapid access to _most_ Core data via a collection of Global Caches (see section 2.4.3. Global Cache (TODO CROSSREF)). Global Caches subscribe to notification messages about the availability of new Core data published at WIS2 Nodes, download a copy of that data and re-publish it on a high-performance data server, discarding it after the retention period expires - normally 24-hoursfootnote:[A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of Core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.]. Global Caches do not provide any sophisticated APIs - they publish notification messages advertising the availability of data on their cache and allow users to download data via HTTPS using the URL in the notification message.
+
+The URL included in a notification message that is used to access Core data from a WIS2 Node, or the "canonical" URL if multiple URLs are provided, must:
+
+. Refer to an individual data object; and
+. Be directly resolvable, i.e., the data object can downloaded simply by resolving the given URL without further action.
+
+A Global Cache will download and cache the data object accessed via this URL.  
+
+The Global Caches are designed to support Members efficiently share real-time and near real-time data; they take on the task of making sure that Core data is available to all and cover the costs of delivering data to a global community.
+
+Unfortunately, Global Caches cannot republish _all_ Core data: there is a limit to how much data they can afford to serve. Currently, a Global Cache expected to cache about 100GB of data each day.
+
+If frequent updates to your dataset are very large (e.g., weather prediction models or remote sensing observations) you will need to share the burden of distributing your data with the Global Cache operators. You should work with your GISC to determine the highest priority elements of your Core datasets that will be republished by the Global Caches.
+
+For Core data that is not to be cached, you must set the ``cache`` property in the notification message to ``false``footnote:[Default value for the ``cache`` property is ``true``; omission of the property will result in the data object being cached.]. 
+
+You must ensure that Core data that is not cached is publicly accessible from your WIS2 Node; i.e., with no access control mechanisms in place.
+
+A Global Cache operator may choose to disregard your cache preference - for example, if they feel that the content you are providing is large enough to impede provision of caching services for other Membersfootnote:[Excessive data volume isn't the only reason they may refuse to cache content. Other reasons include: too many small files, unreliable download from a WIS2 Node, etc.]. In such cases, the Global Cache operator will log this behaviour. In collaboration with the Global Cache operators, your GISC will work with you to resolve concerns. 
+
+Finally, please note that Global Caches are under no obligation to cache data published on _experimental_ topics. For such data, the ``cache`` property should be set to ``false``.
+
+===== Implementing access control
+
+Recommended data, as defined in the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)), is exchanged on WIS2 in support of Earth system monitoring and prediction efforts and _may_ by provided with conditions on use. This means that you may control access to Recommended data.
+
+Access control should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI security schemes https://swagger.io/docs/specification/authentication/].
+
+Where access control is implemented, you should include a ``security`` object in download links provided in discovery metadata and notification messages that provide the user with pertinent information about the access control mechanism used and where/how they might register to request access. 
+
+Recommended data is never cached by the Global Caches.
+
+Use of Core data must always be free and unrestricted. However, you may need to leverage existing systems with built-in access control when implementing the download service for your WIS2 Node. 
+
+Example 1: API key. Your data server requires a valid API key to be included in download requests. The URLs used notification messages should include a valid API key.footnote:[A specific API key should be used for data publication via WIS2 so that usage can be tracked.]footnote:[Given that users are encouraged to download Core data from the Global Cache, there will likely be only a few accesses using the WIS2 account's API key. If the usage quota for the WIS2 account is exceeded (i.e., further data access is blocked) then this should encourage users to download via the Global Cache as mandated in the _Manual on WIS_ (WMO-No. 1060).]
+
+Example 2: Pre-signed URLs. Your data server uses a cloud-based object store that requires credentials to be provided when downloading data. The URLs used in notification message should be _pre-signed_ with the data publisher's credentials and valid for the cache retention period (e.g., 24-hours).footnote:[Working with presigned URLs on Amazon S3 https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html] 
+
+In both cases, the URL provided in a notification message can be directly resolved without a user, or Global Cache, needing to take additional action such as providing credentials or authenticating. 
+
+Finally, note that if you are only publishing Core data, you may be able to entirely rely on the Global Caches to distribute your data. In such cases, your WIS2 Node may use IP-filtering to allow access only from Global Services. For more details, see section 2.6 Implementation and operation of a WIS2 Node.
+
+===== Providing access to data archives
+
+There is no requirement for a WIS2 Node to publish notification messages about newly available data - the mechanism is available if needed (e.g., for real-time data exchange). Data archives published through WIS2 do not need to provide notification messages for data unless the user community have expressed a need to be rapidly notified about changes (e.g., the addition of new records into a climate observation archive).
+
+However, notification messages must still be used to share discovery metadata with WIS2. Given that provision of metadata and subsequent updates is likely to be infrequent, it may be sufficient to "hand-craft" a notification message and publish it locally on an MQTT brokerfootnote:[MQTT broker managed services are available online, often with a free (no cost) starter plan sufficient for infrequent publications of notifications about metadata. These provide a viable alternative to implementing an MQTT broker instance yourself.] or with help from a GISC. See above for more details on publishing discovery metadata to WIS2.
+
+Note that some data archives are categorised as Core data; for example, Essential Climate Variables. Core data may be distributed via the Global Caches. However, given that these provide only short-term hosting of data (e.g., 24-hours), Global Caches are not an appropriate mechanism to provide access to archives of Core data. The archive must be accessed directly via the WIS2 Node.  
 
 ==== Further reading for data publishers
 
 (TODO CROSSREF for the referenced sections)
 
 As a Data Publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
+
 * 1.1. Introduction to WIS2
 * 2.1. WIS2 Architecture
 * 2.2. Roles in WIS2
@@ -83,6 +188,7 @@ As a Data Publisher planning to operate a WIS2 Node, as a minimum you should rea
 * 2.6. Implementation and operation of WIS2 Node
 
 The following sections are useful for further reading:
+
 * 3.1. Information management
 * 4.1. Security
 * 5.1. Competencies
@@ -90,6 +196,7 @@ The following sections are useful for further reading:
 Note that sections _4.1. Security_ and _5.1. Competencies_ reference content originally published for WIS1. These remain largely applicable and will be updated subsequent releases of this Guide. 
 
 If you are publishing aviation weather data via WIS2 for onward transmission through ICAO SWIM you should also read:
+
 * 2.8.1.1. Publishing aviation weather data through WIS2 into ICAO SWIM
 
 

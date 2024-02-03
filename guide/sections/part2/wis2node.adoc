@@ -52,88 +52,17 @@ Once a GISC, in partnership with a Global Data Catalogue, verifies the metadata 
 
 ===== Discovery metadata
 
-Discovery metadata shall be encoded according to the WMO Core Metadata Profile version 2 (WCMP2).
 
-Discovery metadata may be published one of two ways. The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server. The URL of this file is included in the notification message advertising the availability of new metadata. Alternatively, a data publisher may choose to host a local catalogue themselves, enabling them to share discovery metadata records through an API (e.g., OGC API - Records). In this case, the URL used in the notification message will refer to the API endpoint identifying the specific discovery metadata record (e.g., an item as part of their discovery metadata catalogue).
-
-These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.
-
-Discovery metadata must be published before data is published to WIS2.
-
-TODO: to be completed
+TODO: REMOVE SECTION
 
 ===== Notification messages
 
-There is no requirement for an NC/DCPC to publish "data availability" notification messages relating to infrequently changing datasets, such as a data archive, especially where the user community have no requirement to be instantly updated about changes to a dataset (e.g., the addition of new records into a climate observation archive). Data publishers should note that without providing notification messages their data will not be copied into the Global Cache. However, since the Global Cache only holds real-time (or near real-time) datasets, this is not a concern for data publishers with infrequently changing datasets.
 
-TODO: to be completed
+TODO: REMOVE SECTION
 
 ===== Data
 
-WIS2 provides the "plumbing" for data sharing within the WMO community, but it defines neither which data to share, nor how that data should be encoded. WIS Centres need to evaluate WMO Programme requirements and the WMO Unified Data Policy to determine which datasets should be made available through WIS.
-
-WMO Technical Regulations may require that data is encoded in particular formats. For example: synoptic observations should be encoded in BUFR. The Manual on Codes (WMO No. 306) provides details of data formats formally approved for use in WMO.
-
-However, Technical Regulations don’t cover all data sharing requirements. In such cases, data publishers should select data formats that are widely adopted and understood in their target user community.
-
-WIS2 does not require the use of specific file-naming conventions. Where communities commonly use file-naming conventions (e.g., with embedded metadata), data publishers should ensure that adequate documentation is provided to users. data publishers cannot assume that users will understand (or respect) their file-naming rules – many Data Consumers will simply treat the filename as an opaque string.
-
-Data publishers also have choices about how they publish data.
-
-As a minimum, data publishers may publish data objects (e.g., the atomic bits of data that comprise a dataset) as files using a Web server (HTTP protocol) or FTP server (FTP protocol), using secure communications (e.g., HTTPS/SFTP). As each data object is published, a notification message should also be published to a topic in a message broker (see 4.3 Notification message format and structure, and WIS2 messages 4.4 WIS2 Topic Hierarchy TODO: CROSSREF).
-
-A dataset (for example, a collection of climate model runs) may comprise thousands or more files. A data publisher may choose to provide users with a mechanism to browse through the set of files, enabling them to identify those which are relevant to them. Examples of such mechanisms include, but are not limited to:
-
-* Web Accessible Folders (WAF): a Web-based folder structure listing the data object files by name
-* SpatioTemporal Asset Catalog (STAC): a community standard based on GeoJSON to describe geospatial data files which can be easily indexed, browsed, and accessed. Free and open sourcr tools  tools present STAC records (one for each data object file) through a Web-based, browse-able user interface
-
-WAFs and STAC are provided to illustrate options. There is no requirement for a data publisher to provide any such browse-able user interface to their data.
-
-Increasingly, interactive Web APIs are being used to provide access to datasets. Although requiring a little more sophistication to implement, a Web API provides significant advantages:
-
-* Data Consumers can select and download only the parts of a dataset that they need – providing them will a smaller dataset subset to work with and reducing the burden on the data publisher’s network infrastructure.
-* Data Consumers are insulated from the complexities of how a data publisher chooses to persist their data. The Web API can provide access to datasets in a way that is easy for users to understand.
-* A Web API may allow Data Consumers to download data in their preferred file format or encoding.
-
-WIS-TECHSPEC-2 states:
-
-    4.3.3 URLs provided for accessing core data, as defined in WMO Unified Data Policy (Res. 1), and discovery metadata shall be directly resolvable, i.e., data or discovery metadata can be downloaded simply by resolving the given URL without further action, such as populating elements of an API, is required.
-
-When using a Web API to publish "core" data, the URL included in the data availability notification message must be directly resolvable, i.e., the Data Consumer must not be required to complete any additional fields in the API request. This can be achieved by identifying the data object in the URL. A Data Consumer or a Global Cache instance can simply resolve the URL to download the data object regardless of the manner in which it is made available.
-
-WIS2 seeks to leverage the experience of data publishers who have been using Web APIs to serve their communities.
-
-First, interactive Web APIs should be self-describing. A Data Consumer should not need to know, apriori, how to make requests from a Web API. They should be able to discover this information from the Web API endpoint itself – even if this is just a link to a documentation page they need to read.
-
-Second, we recommend that Web APIs are compliant with OpenAPI version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Effectively, OpenAPI provides metadata that describes the Web API endpoint. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the Web API.
-
-Third, the Open Geospatial Consortium (OGC) have developed a suite of APIs (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI v3. Among these, OGC API – Environmental Data Retrieval (EDR), OGC API – Features, and OGC API - Coverages are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and proprietary) that support them. We recommend that data publishers assess these open-standard API specifications to determine their suitability to for publishing their datasets using APIs.
-
-Finally, we are increasingly concerned with providing access to very large datasets. The OGC has published a series of informative blogs on the subject of cloud-native geospatial data sharing. These are listed among in section 11.4.2 Informative References TODO PROPER CROSSREF.
-
-====== Publication and topic selection
-
-When publishing a dataset, a data publisher selects a given topic according to the WIS Topic Hierarchy.  Given the multidisciplinary nature of some data, a data publisher must select a single topic for publication purposes, and always uses WCMP2 discovery metadata to provide a fulsome description of their dataset and its relevance to additional disciplines.
-
-Metadata is the method by which datasets are ultimately made available in the WIS2 system.  The goal is for data providers who have PR authorization to have a lightweight method to provide their datasets to WIS.  With this goal in mind, there are several acceptable methods to publish metadata:
-
-- Option 1: deploy a WIS2 node
-- Option 2: a MQTT broker and HTTP server
-- Option 3: a bilateral agreemnt for another organization to publish metadata publication on behalf of the data provider (potential organizations providing this service are GISCs and NMHS or potentional through a WIS2 portal in the future).
-
-For infrequently updated datasets the following process should be followed:
-
-- Publish initial metadata
-- Publish update metadata
-- Data update notification: normal notification message with `property.cache=false`
-
-===== Use of the "experimental" topic
-
-The "experimental" topic is necessary for the WIS2 pre-operational phase and future pre-operational data exchange in test mode.
-
-The experimental topic sits under domain (level 8), e.g. ...weather/experimental. Data publishers can can extend the experimental branch with sub-topics as they deem appropriate.
-
-Data consumers must not assume that experimental topics will be durable (i.e., they may change or be removed).
+TODO: REMOVE SECTION
 
 ==== Performance management
 
