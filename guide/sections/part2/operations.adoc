@@ -105,8 +105,7 @@ provided by a separate operational unit, or there may be a requirement to easily
 distinguish between data for SWIM and any other meteorological data.
 
 Where a new WIS2 Node is needed, the responsible organisation must
-register a ``centre-id`` for the WIS2 Node. For more information on
-``centre-id``, see Manual on WIS (WMO-No. 1060), Volume II, Appendix E.
+establish a new WIS2 Node and register it with WMO Secretariat. For more information, see section 2.6.x Registration and decommissioning of a WIS2 Node (TODO CROSSREF).
 
 Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it shall be packaged into
@@ -189,7 +188,7 @@ origin/a/wis2/{centre-id}/data/recommended/weather/aviation/qvaci
 ----
 
 For more details of the WIS Topic Hierarchy, see Manual on WIS (WMO-No.
-1060), Volume II, Appendix E.
+1060), Volume II, Appendix E (TODO CROSSREF).
 
 WIS Global Brokers subscribe to the local message brokers of WIS2 Nodes
 and republish notification messages for global distribution.
