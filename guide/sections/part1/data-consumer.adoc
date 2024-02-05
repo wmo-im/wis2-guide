@@ -26,7 +26,7 @@ WIS2 uses Global Caches to distribute Core data, as defined in the WMO Unified D
 
 Notifications from WIS2 Nodes and Global Caches are published on different topics: The root topic used by WIS2 Nodes is ``origin``, while the root topic used by Global Caches is ``cache``. Other than the root, the topic hierarchy is identical. For example, for synoptic weather observations published by Environment Canada:
 
-* Environment Canada's WIS2 Node publishes to: ``origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``
+* Environment and Climate Change Canada, Meteorological Service of Canada's WIS2 Node publishes to: ``origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``
 * Global Caches publish to: ``cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``
 
 As per clause 3.2.13 from the Manual on WIS, Vol II, Data Consumers should access data from the Global Cache. Consequently, they need to subscribe to the ``cache/#`` topic hierachy to receive the notifications from Global Caches, each of which provides a link (i.e., URL) to download from the respective Global Cache's data server. 
