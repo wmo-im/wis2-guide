@@ -44,7 +44,7 @@ This is usually a simple choice for a Member. However, overseas territories requ
 
 *Token 2* is a descriptive name for the centre and this may contain dashes (but not other special characters).
  
-The descriptive name should be something recognisable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK's NMS is the Met Office (http://www.metoffice.gov.uk), so “metoffice” is better than “ukmo”footnote:[The “.gov” part of the domain name is superfluous for the purposes of WIS. There is nothing preventing its use, but it doesn’t add any value.]. Using the 4-letter GTS centre identifiers (*CCCC*) is not recommended because people unfamiliar with the GTS do not understand them.
+The descriptive name should be something recognisable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK's NMS is the Met Office (http://www.metoffice.gov.uk), so “metoffice” is better than “ukmo”footnote:[The “.gov” part of the domain name is superfluous for the purposes of WIS2. There is nothing preventing its use, but it doesn’t add any value.]. Using the 4-letter GTS centre identifiers (*CCCC*) is not recommended because people unfamiliar with the GTS do not understand them.
 
 The Centre Identifier specification says that larger organisations operating multiple centres may wish to register separate centre-ids for each centre. This is good practice. Keeping with the UK example, Met Office operates a NMC, 9 DCPCs and some WIS2 functions, so it’s important to split them out. For example:
 
@@ -68,7 +68,7 @@ If your WIS2 Node is only publishing Core datafootnote:[In some cases, WIS2 Node
 
 During registration, the WMO Secretariat will provide host names and IP addresses of the Global Services to enable configuration of access control.
 
-Access controls may be implemented for Recommended data. You should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI security schemes https://swagger.io/docs/specification/authentication/].
+Access controls may be implemented for Recommended data. You should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object].
 
 ==== Performance management
 
