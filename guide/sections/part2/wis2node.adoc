@@ -4,65 +4,71 @@
 
 ===== Registration and decommissioning of a WIS2 Node
 
-Registration and decomissioning of WIS2 Nodes must be approved by the PR for the centre registering or decomissioning a WIS2 Node.
+Registration and decomissioning of WIS2 Nodes must be approved by the Permanent Representative to WMO (PR) for the country or territory in which the WIS Centre resides. Where the WIS2 Node is part of a Data Collection or Production Centre (DCPC), the sponsoring WMO Programme or Regional Association shall be consulted.
 
-WMO Secretariat will operate a WIS2 register. The registration of a WIS2 Node involves the following steps:
+WMO Secretariat will operate a WIS2 register. 
 
-* Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
-* Assign a centre-id: The centre identifier (`centre-id`) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Topic Hierarchy Manual on WIS Vol II).
-* Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat
-* WIS2 Node assessment: the principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes:
-  - the verification of the compliance of the WIS2 Topic Hierarchy (WTH) used by the centre with the WIS2 Topic Hierarchy.
-  - verification of compliance of the Notification Message with the specifications.
-  - verification that the download link is using HTTPS which is a preference for WIS2.
+The registration of a WIS2 Node involves the following steps:
 
-Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 Node, GISC notifies WMO and confirms that this centre identifier can be added to WIS2.
-
+* Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country or territory where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
+* Assign a centre-id: The centre identifier (``centre-id``) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF)). See below for guidance on assigning a centre identifier.
+* Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat.
+* Provide Global Service details: The WMO Secretariat provides connection details for the Global Services (e.g., IP addresses) so that the WIS2 Node can be configured to provide the access. 
+* WIS2 Node assessment: The principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. The assessment includes:
+  - verification of the compliance of the topics used by the centre with the WIS2 Topic Hierarchy (WTH) specification.
+  - verification of compliance of notification messages with the WIS2 Notification Message (WNM) specification.
+  - verification that the data server is correctly configured and properly functioning.
+  - verification that the message broker is correctly configured and properly functioning.
+* Add new centre to WIS2: Upon completion of this verification, and confirmation that it satisfies all conditions for operating a WIS2 Node, GISC notifies WMO Secretariat and confirms that this WIS2 Node can be added to WIS2.
 * Communicate details to the Global services: WMO Secretariat provides the WIS2 Node details to the Global Brokers to subscribe to the WIS2 Node.
 
 A diagram of the process of registering a WIS2 Node is presented below.
 
 image::images/add-wis2node.png[Adding a WIS2 Node,link=images/add-wis2node.png]
 
-===== Registration and removal of a dataset
+Once a WIS2 Node has been registered and connected with the Global Services, it can procede to register the datasets it will publish via WIS2. To register a dataset, the authorized WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues and Global Brokers automatically subscribes to the topics provided in the discovery metadata record. For more information, see section 1.3.x How to provide discovery metadata to WIS2 (TODO CROSSREF).
 
-Procedure for PR Approved WIS2 Node Registration is to create a centre identifier based on naming convention `ab-domain-nodename`.  Where `ab` is the the IANA Top Level Domain (TLD) code, domain is the organization's domain name for the main website, and nodename (optional) is descriptive of the purpose of the WIS2 Node (for example a node for a type of data or programme of the data e.g. climate, aviation, etc.) when the organization is hosting multiple WIS2 Nodes. A sample centre identifier is `ab-myorg-climate`.  In addition to the centre identifier the registering organization should also provide the broker endpoints.  Once centre identifier and broker endpoints are provided and entered into the WIS2 Node register, the WMO Secretariat will contact the GISC for the organization's country and request the GISC to verify the correctness of the provided information.  The GISC will request the centre produce a test message with associated files for download.  The GISC should use a test MQTT client to verify the notification message is correct and the download links are functional.  The GISC notifies the Centre of the results of the checks and if all are good, requests the Centre to provide metadata when the dataset is ready.  When metadata is proivided the GISC informs the WMO Secretariat that the new centre identifier is ready and requests it be added to WIS2.
+Once the dataset has successfully been registered, the WIS2 Node can procede to exchange data - see section 1.3.x How to provide data in WIS2 (TODO CROSSREF).
 
-In the case of NCs, the procedure for PR approved decomissioning of a WIS2 Node is the PR (or designate) will notify the WMO Secretariat of the decomissioning of the WIS2 Node. In the case of DCPCs, the sponsor (i.e., Regional Association or WMO Programme) is the Programme Chair or Regional Information Management Chair shall approve the decommissioning and notify the WMO Secretariat of the decomissioning of the WIS2 Node. Where possible, a 30 day notice period should be provided prior to the decomissioning and information on if the data from the Node will also be decomissioned or if it is available via another WIS2 Node or method.  The WMO Secretariat will notify the GISC for the country and the Global Service Providers of the date of the WIS2 Node decomissioning.
+When decommissioning a WIS2 Node operators must ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating these data sharing obligations to another WIS2 Node. In the case of a DCPC, this may mean the responsibilities are transferred to another Member.
 
-NC/DCPCs operators decomissioning a WIS2 Node shall ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating these data sharing obligations to another WIS2 Node. In the case of DCPCs, this may mean the WIS2 Node responsibilities shift from one member to another and in the case these details should be included in the decomissioning notice to the WMO Serectariat.
+===== Guidance on assigning a Centre Identifier for a WIS2 Node
 
-A Data Producer publishes data via a WIS2 Node in accordance with the WIS2 Topic Hierarchy by creating a discovery metadata record, making it available for download, and publishing a notification of its availability (see how to publish data notifications TODO CROSSREF).  Global Brokers then subscribe to the relevant topic, receive the notification message, and then validate, ingest, and publish the associated dataset record.
+The Centre Identifier (``centre-id``) is used in WIS2 to uniquely identify a participating WIS2 Node. The Centre Identifier must conform to the specification given in the WIS2 Topic Hierarchy (WTH), section 7.1.6 Centre identification (TODO CROSSREF).
 
-All data shared in WIS2 must include metadata compliant with the metadata requriements described below.  Data providers must be approved by their PR (or designate such as the member's WIS Focal Point) to ensure quality metadata will be provied along with the data.
+The Centre Identifier comprises two dash-separated tokens.
 
-An organization ready to publish a new dataset should contact the WMO Secretariat with the approval of their PR (or designate) to The WMO Secretariat.  The WMO Secretariat will contact the GISC for the organizaiton with the new (meta)data.  The GISC will work with a Global Discovery Catalogue to verify the metadata.  the GDC will publish a report indicating errors and/or potential improvements (based on discovery metadata KPIs). The GISC should work with the data publisher to remedy issues and incporate suggestions for improvement.
+*Token 1* is a _Top Level Domain_ (TLD) defined by IANAfootnote:[IANA Top Level Domains https://data.iana.org/TLD].
 
-In addition, the data publisher's affiliated GISC conduct a systematic review of what's being published to make sure everything is functional.
+This is usually a simple choice for a Member. However, overseas territories require some thought. The recommended approach depends on the governance of the overseas territory. Take some French examples. La Reunion is a proper French “department” – it’s considered part of France, it uses the Euro. Here, we would use the “fr” TLD. New Caledonia is a French overseas territory with top-level-domain of “nc”. It has separate, devolved governance. The recommendation is to use “nc”. All that said, it’s a national decision which TLD to use.
 
-===== Connecting with Global Services
+*Token 2* is a descriptive name for the centre and this may contain dashes (but not other special characters).
+ 
+The descriptive name should be something recognisable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK's NMS is the Met Office (http://www.metoffice.gov.uk), so “metoffice” is better than “ukmo”footnote:[The “.gov” part of the domain name is superfluous for the purposes of WIS. There is nothing preventing its use, but it doesn’t add any value.]. Using the 4-letter GTS centre identifiers (*CCCC*) is not recommended because people unfamiliar with the GTS do not understand them.
 
-Once a WIS2 Node has been verified by a GISC and endpoints and metadata are available, the WMO Secretariat provides the new centre identifier to the Global Brokers and requests they subscribe to the new broker endpoint.  The Global Broker will recieve the data based on their topic subscriptions.  The Global Caches download and cache the metadata (and data where applicable for core datasets).
+The Centre Identifier specification says that larger organisations operating multiple centres may wish to register separate centre-ids for each centre. This is good practice. Keeping with the UK example, Met Office operates a NMC, 9 DCPCs and some WIS2 functions, so it’s important to split them out. For example:
 
-Once a GISC, in partnership with a Global Data Catalogue, verifies the metadata for a new dataset, the WMO Secretariat will be notified of the availability of the new dataset.  The WMO Seretariat will then notify the Global Borkers and Global Caches of the addition of new data to the WIS system.
+* ``uk-metoffice-nmc``
+* ``uk-metoffice-vaac``
+* ``uk-metoffice-globalcache``  
+ 
+Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are long-term durable. Appending ```-test`` may be used to designate test WIS Nodes.
+ 
+Appending “-test” may be used to designate test WIS Nodes. I don’t think we need that right now, because the whole of WIS2 is in test mode.
 
+===== Authentication, authorization, and access control for a WIS2 Node
 
-==== Publishing data, discovery metadata, and notification messages
+When configuring your WIS2 Node you need to consider how it will accessed by other components in WIS2 - Global Services and Data Consumers.
 
+Global Brokers must authenticate when they connect to the MQTT message broker in your WIS2 Node. Simple username and password credentials are usedfootnote:[The default connection credentials for a WIS2 Node message broker are username ``everyone`` and password ``everyone``. WIS2 Node operators should choose credentials that meet their local policies (e.g., password complexity).]. When registering your WIS2 Node with the WMO Secretariat, you will need to provide these credentials. The WMO Secretariat will share these credentials with the Global Service operators and store them in the WIS register. You should not consider these credentials as confidential or secret.
 
-===== Discovery metadata
+Given that Global Brokers will re-publish notification messages provided by your WIS2 Node, you may decide to restrict access to the MQTT message broker. Global Brokers operate using a fixed IP address which allows you to permit them access using IP filteringfootnote:[In WIS2 we use IP addresses to determine the origin of connections and therefore confer trust to remote systems. It is well documented that IP addresses can be hi-jacked and that there are alternative, more sophisticated, mechanisms available for reliably determining the origin of connections requests, such as Public Key Infrastructure (PKI). However, the complexities of such implementation would introduce a barrier to Member's participation in WIS2. IP addresses are considered to provide an adequate level of trust for the purposes of WIS2: distributing publicly accessible data and messages.]. You must ensure that your MQTT message broker is accessible for more than one Global Broker to provide resilient transmission of notification messages to WIS2.
 
+If your WIS2 Node is only publishing Core datafootnote:[In some cases, WIS2 Nodes will need to serve Core data directly (see section 1.3.x Considerations when providing Core data in WIS2 (TODO CROSSREF)). In these situations, the WIS2 Node data server must remain publicly accessible.], you may also restrict access to your data server - instead, relying on the Global Caches to distribute your data. Similarly, Global Caches also operate on fixed IP addresses allowing connections from them to be easily identified. Again, you must ensure that access is given to more than one Global Broker to ensure resilience.
 
-TODO: REMOVE SECTION
+During registration, the WMO Secretariat will provide host names and IP addresses of the Global Services to enable configuration of access control.
 
-===== Notification messages
-
-
-TODO: REMOVE SECTION
-
-===== Data
-
-TODO: REMOVE SECTION
+Access controls may be implemented for Recommended data. You should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI security schemes https://swagger.io/docs/specification/authentication/].
 
 ==== Performance management
 
