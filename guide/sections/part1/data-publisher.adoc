@@ -102,7 +102,7 @@ To enable real-time data sharingfootnote:[In the context of WIS2, real-time impl
 
 For example, when a new temperature profile from a radio sonde deployment is added to a dataset of upper-air data measurements, a notification message would be published that includes the URL used to access the new temperature profile data. Everyone subscribing to notification messages about the upper-air measurement dataset would receive the notification message, identify the URL and download the new temperature profile data.
 
-Optionally, data may be embedded in a notification message using a ``content`` object _in addition_ to publishing via the data server. Embedded data must be encoded as ``UTF-8``, ``Base64``, or ``gzip``, and must not exceed 4096 bytes in length once encoded.
+Optionally, data may be embedded in a notification message using a ``content`` object _in addition_ to publishing via the data server. Inline data must be encoded as ``UTF-8``, ``Base64``, or ``gzip``, and must not exceed 4096 bytes in length once encoded.
 
 Notification messages are encoded as GeoJSON (RFC 7946) and must conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF).
 
