@@ -31,11 +31,11 @@ Copies of all discovery metadata records from WIS2 are held at the Global Discov
 Depending on local arrangements, your GISC may be able to help you transfer your discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, you will need to publish the discovery metadata record(s) yourselffootnote:[In future, WIS2 may provide metadata publication services (e.g., through a WIS2 metadata management portal) to assist with this task. However, such a service is not available at this time.] using one of two ways:
 
 * The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server where it can be accessed with a URL. 
-* Alternatively, you may operate a local metadata catalogue through which discovery metadata records can be shared using an API (e.g., OGC API - Recordsfootnote:[OGC API - Records - Part 1: Core https://docs.ogc.org/DRAFTS/20-004.html]). Each discovery metadata record can be accessed with a unique URL via the API (e.g., as an item which is part of thediscovery metadata catalogue).
+* Alternatively, you may operate a local metadata catalogue through which discovery metadata records can be shared using an API (e.g., OGC API - Recordsfootnote:[OGC API - Records - Part 1: Core https://docs.ogc.org/DRAFTS/20-004.html]). Each discovery metadata record can be accessed with a unique URL via the API (e.g., as an item which is part of the discovery metadata catalogue).
 
-In both cases, a notification message needs to be published on a message broker that tells WIS2 there is new discovery metadata to upload and that it is accessed at the specified URLfootnote:[Both data and metadata publication use the same notification message mechanism to advertise the availability of a new resource.]. The notification messages shall conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF). Furthermore, the notification message must be published on topic that conforms to the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF). For example, metadata published by Deutscher Wetterdienst would use the follow topic:
+In both cases, a notification message needs to be published on a message broker that tells WIS2 there is new discovery metadata to upload and that it is accessed at the specified URLfootnote:[Both data and metadata publication use the same notification message mechanism to advertise the availability of a new resource.]. The notification messages shall conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF). Furthermore, the notification message must be published on topic that conforms to the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF). For example, metadata published by Deutscher Wetterdienst would use the following topic:
 
-``origin/a/wis2/de-dwd/metadata/core/wcmp2``
+``origin/a/wis2/de-dwd/metadata/core``
 
 These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.
 
@@ -61,13 +61,13 @@ The simplest way to publish data through WIS2 is to persist your data as files a
 
 To make your data usable, your users need to be able to find the specific file (or files) they need.
 
-Naming conventions for files and/or directories are useful - but only when you understand the scheme. Assuming that your users understand your naming convention will be a barrier to widespread re-use; many users will simply treat the filename as an opaque string. Where communities commonly use file-naming conventions (e.g., with embedded metadata), these should only be used when adequate documentation is provided to users.
+Naming conventions for files and/or directories are useful - but only when the scheme is understood. Assuming that your users understand your naming convention will be a barrier to widespread re-use; many users will simply treat the filename as an opaque string. Where communities commonly use file-naming conventions (e.g., with embedded metadata), these should only be used when adequate documentation is provided to users.
 
 WIS2 does not require the use of specific naming conventions.
 
 Another mechanism to consider is complementing the collections (i.e., directories or folders in which files are grouped) with information that describes their content. Then users,both humans and software agents, can browse the structure and find what they need. Examples of this approach include:
 
-* Web Accessible Folders (WAF) and "readme" files: a Web-based folder structure listing the data object files by name, where each folder contains a formated "readme" file describing the folder contents.
+* Web Accessible Folders (WAF) and "README" files: a Web-based folder structure listing the data object files by name, where each folder contains a formated "README" file describing the folder contents.
 * SpatioTemporal Asset Catalog (STAC)footnote:[Spatio Temporal Asset Catalogue (STAC) https://stacspec.org/en]: a community standard based on GeoJSON to describe geospatial data files which can be easily indexed, browsed, and accessed. Free and open source tools tools present STAC records (one for each data object file) through a Web-based, browse-able user interface.
 
 When publishing collections of data it is tempting to package content into zip or SIPfootnote:[See https://www.iasa-web.org/tc04/submission-information-package-sip or end of https://www.eumetsat.int/formats] resources - perhaps even packaging the entire collection, complete with folders, into a single resource. Similarly, WMO formats such as GRIB and BUFR allow multiple data objects (e.g., fields or observations) to be packed into a single file. Only having to download a single resource is convenient for many users, but the downside is that the user must download the entire resource and then unpack/decompress it. The convenience of downloading fewer resources needs to be balanced against the cost of forcing users to download data they may not need. Whatever your choice, you should be guided by common practice in your domain - i.e., only zip, SIP, or pack if your users expect it.
@@ -87,7 +87,7 @@ Importantly, when considering use of interactive APIs to serve your data you nee
 Based on the experience of data publishers who have been using Web APIs to serve their communities, this Guide makes the following recommendations about interactive APIs:
 
 * First, interactive APIs should be self-describing. A Data Consumer should not need to know, apriori, how to make requests from a API. They should be able to discover this information from the API endpoint itself – even if this is just a link to a documentation page they need to read.
-* Second, APIs should comply with OpenAPIfootnote:[OpenAPI Specification https://swagger.io/specification/] version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the API.
+* Second, APIs should comply with OpenAPIfootnote:[OpenAPI Specification https://spec.openapis.org/oas/v3.1.0] version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the API.
 * Third, the Open Geospatial Consortium (OGC) have developed a suite of APIsfootnote:[Open Geospatial Consortium OGC API https://ogcapi.ogc.org/] (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI. Among these, OGC API – Environmental Data Retrieval (EDR)footnote:[OGC API - Environmental Data Retrieval (EDR) https://ogcapi.ogc.org/edr], OGC API – Featuresfootnote:[OGC API - Features https://ogcapi.ogc.org/features], and OGC API - Coveragesfootnote:[OGC API - Coverages https://ogcapi.ogc.org/coverages] are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and proprietary) that support them. We recommend that data publishers assess these open-standard API specifications to determine their suitability to for publishing their datasets using APIs.
 
 Finally, you should consider versioning your API to avoid breaking changes when adding new features. A common approach is add a _version number_ prefix into the API path; e.g., ``/v1/service/{rest-of-path}`` or ``/service/v1/{rest-of-path}``.
@@ -151,7 +151,7 @@ Finally, please note that Global Caches are under no obligation to cache data pu
 
 Recommended data, as defined in the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)), is exchanged on WIS2 in support of Earth system monitoring and prediction efforts and _may_ by provided with conditions on use. This means that you may control access to Recommended data.
 
-Access control should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI security schemes https://swagger.io/docs/specification/authentication/].
+Access control should use only the "security schemes" for authentication and authorization specified in OpenAPIfootnote:[OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object].
 
 Where access control is implemented, you should include a ``security`` object in download links provided in discovery metadata and notification messages that provide the user with pertinent information about the access control mechanism used and where/how they might register to request access. 
 
