@@ -284,8 +284,52 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 
 ===== The Ocean Data and Information System (ODIS)
 
-TODO: Tom
+The Ocean Data and Information System (ODIS) is a federation of 
+independent data systems coordinated by the International Oceanographic 
+Data and Information Exchange (IODE) of IOC-UNESCO. This federation 
+includes continental-scale data systems as well as those of small 
+organisations. ODIS partners use Web architectural approaches to share 
+metadata describing their holdings, services, and other capacities. In 
+brief, IODE publishes guidelines on how to share metadata as linked open 
+data, serialised in JSON-LD using schema.orgfootnote:[https://schema.org]
+semantics. ODIS nodes use these guidelines to publish their metadata 
+catalogues on the Web. This allows all systems with Web connectivity to 
+harvest and merge these catalogues, creating a global map of the ocean 
+datascape. IODE harvests all metadata shared by ODIS partners, combines 
+it as a knowledge graph, and processes this to export derivative 
+products (e.g. diagnostic reports and cloud-optimised data products). 
+The Ocean InfoHub (OIH) system is IODE's reference implementation of a 
+discovery system leveraging ODIS. The ODIS architecture and tools are
+Free and Open Source (FOSS), with regular releases published for the
+community.
 
-// include::coordinating-wis.adoc[]
+To reach beyond the oceans domain, ODIS works with other data systems and 
+federations, such as WIS2, to define sustainable data and metadata exchanges 
+and - where needed - translators/converters. The resources needed to 
+convert between such systems are developed in the open and in close
+collaboration with staff from those systems. These exchanges include
+ETL functions, to ensure that the bilateral exchange is mutually beneficial.
 
-// include::sections/wis-metrics.adoc[]
+====== Cross system interoperability
+
+Given the strong support for standards and inteoperability by both WIS2
+and ODIS, data and metadata exchange is realized using Web architectural
+principles and approaches. The ability to discover ODIS data on WIS2 (as well
+as the inverse) is a goal in extending the reach of both systems and data
+beyond their primary communities of interest.
+
+The WIS2 Global Discovery Catalogue will provide discovery metadata records
+using the OGC API - Records standard. This will include schema.org and JSON-LD
+annotations on WCMP2 discovery metadata in the GDC, to enable cross-pollination
+and federation.
+
+ODIS dataset records will be made available using the WCMP2 standard and provided
+as objects available via HTTP for ingest, validation and publication to the GDC as a
+federated catalogue.  ODIS data will be published as recommended data as per the WMO
+Data Policy.
+
+.WIS2 and ODIS metadata and catalogue interoperability
+image::images/wis2-odis-metadata-discovery-interop.png[WIS2 and ODIS metadata and catalogue interoperability]
+
+As a result, federated discovery will be realized between both systems, allowing for
+use and reuse of data in an authoritative manner, closest to the source of the data.
