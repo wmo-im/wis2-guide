@@ -454,7 +454,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-05</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-06</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0alpha1</p></td>
@@ -2883,7 +2883,64 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 <div class="sect4">
 <h5 id="_the_ocean_data_and_information_system_odis"><a class="anchor" href="#_the_ocean_data_and_information_system_odis"></a>2.8.1.2. The Ocean Data and Information System (ODIS)</h5>
 <div class="paragraph">
-<p>TODO: Tom</p>
+<p>The Ocean Data and Information System (ODIS) is a federation of
+independent data systems coordinated by the International Oceanographic
+Data and Information Exchange (IODE) of IOC-UNESCO. This federation
+includes continental-scale data systems as well as those of small
+organisations. ODIS partners use Web architectural approaches to share
+metadata describing their holdings, services, and other capacities. In
+brief, IODE publishes guidelines on how to share metadata as linked open
+data, serialised in JSON-LD using schema.org<sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnotedef_61" title="View footnote.">61</a>]</sup>
+semantics. ODIS nodes use these guidelines to publish their metadata
+catalogues on the Web. This allows all systems with Web connectivity to
+harvest and merge these catalogues, creating a global map of the ocean
+datascape. IODE harvests all metadata shared by ODIS partners, combines
+it as a knowledge graph, and processes this to export derivative
+products (e.g. diagnostic reports and cloud-optimised data products).
+The Ocean InfoHub (OIH) system is IODE&#8217;s reference implementation of a
+discovery system leveraging ODIS. The ODIS architecture and tools are
+Free and Open Source (FOSS), with regular releases published for the
+community.</p>
+</div>
+<div class="paragraph">
+<p>To reach beyond the oceans domain, ODIS works with other data systems and
+federations, such as WIS2, to define sustainable data and metadata exchanges
+and - where needed - translators/converters. The resources needed to
+convert between such systems are developed in the open and in close
+collaboration with staff from those systems. These exchanges include
+ETL functions, to ensure that the bilateral exchange is mutually beneficial.</p>
+</div>
+<div class="sect5">
+<h6 id="_cross_system_interoperability"><a class="anchor" href="#_cross_system_interoperability"></a>Cross system interoperability</h6>
+<div class="paragraph">
+<p>Given the strong support for standards and inteoperability by both WIS2
+and ODIS, data and metadata exchange is realized using Web architectural
+principles and approaches. The ability to discover ODIS data on WIS2 (as well
+as the inverse) is a goal in extending the reach of both systems and data
+beyond their primary communities of interest.</p>
+</div>
+<div class="paragraph">
+<p>The WIS2 Global Discovery Catalogue will provide discovery metadata records
+using the OGC API - Records standard. This will include schema.org and JSON-LD
+annotations on WCMP2 discovery metadata in the GDC, to enable cross-pollination
+and federation.</p>
+</div>
+<div class="paragraph">
+<p>ODIS dataset records will be made available using the WCMP2 standard and provided
+as objects available via HTTP for ingest, validation and publication to the GDC as a
+federated catalogue.  ODIS data will be published as recommended data as per the WMO
+Data Policy.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/wis2-odis-metadata-discovery-interop.png" alt="WIS2 and ODIS metadata and catalogue interoperability">
+</div>
+<div class="title">Figure 3. WIS2 and ODIS metadata and catalogue interoperability</div>
+</div>
+<div class="paragraph">
+<p>As a result, federated discovery will be realized between both systems, allowing for
+use and reuse of data in an authoritative manner, closest to the source of the data.</p>
+</div>
 </div>
 </div>
 </div>
@@ -3080,7 +3137,7 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 </ul>
 </div>
 <div class="paragraph">
-<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnotedef_61" title="View footnote.">61</a>]</sup></p>
+<p>Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnotedef_62" title="View footnote.">62</a>]</sup></p>
 </div>
 </div>
 <div class="sect4">
@@ -3335,10 +3392,10 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 <div class="ulist">
 <ul>
 <li>
-<p><em>Guide to Information Technology Security</em> (WMO-No. 1115)<sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnotedef_62" title="View footnote.">62</a>]</sup></p>
+<p><em>Guide to Information Technology Security</em> (WMO-No. 1115)<sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnotedef_63" title="View footnote.">63</a>]</sup></p>
 </li>
 <li>
-<p><em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I<sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnotedef_63" title="View footnote.">63</a>]</sup>, Appendix E - Annex To Paragraph 7.8 (ICT Service Incident Management), and Appendix F - WIS IT Security Incident Response Process</p>
+<p><em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I<sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup>, Appendix E - Annex To Paragraph 7.8 (ICT Service Incident Management), and Appendix F - WIS IT Security Incident Response Process</p>
 </li>
 </ul>
 </div>
@@ -3351,7 +3408,7 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 <div class="sect2">
 <h3 id="_competencies"><a class="anchor" href="#_competencies"></a>5.1. Competencies</h3>
 <div class="paragraph">
-<p>For this initial version of the Guide to WIS2, existing guidance on competencies remains largely applicable. Please refer to <em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I, Appendix A - WMO Information System Training And Learning Guide<sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnotedef_64" title="View footnote.">64</a>]</sup>.</p>
+<p>For this initial version of the Guide to WIS2, existing guidance on competencies remains largely applicable. Please refer to <em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I, Appendix A - WMO Information System Training And Learning Guide<sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnotedef_65" title="View footnote.">65</a>]</sup>.</p>
 </div>
 </div>
 </div>
@@ -3540,21 +3597,24 @@ authorized sources such as a Gateway and should validate incoming messages as ae
 <a href="#_footnoteref_60">60</a>. AMQP 1.0: <a href="https://www.amqp.org/resources/specifications" class="bare">https://www.amqp.org/resources/specifications</a>
 </div>
 <div class="footnote" id="_footnotedef_61">
-<a href="#_footnoteref_61">61</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
+<a href="#_footnoteref_61">61</a>. <a href="https://schema.org" class="bare">https://schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_62">
-<a href="#_footnoteref_62">62</a>. <em>Guide to Information Technology Security</em> (WMO-No. 1115): <a href="https://library.wmo.int/records/item/51145-guide-to-information-technology-security" class="bare">https://library.wmo.int/records/item/51145-guide-to-information-technology-security</a>
+<a href="#_footnoteref_62">62</a>. <a href="https://go-fair.org" class="bare">https://go-fair.org</a>
 </div>
 <div class="footnote" id="_footnotedef_63">
-<a href="#_footnoteref_63">63</a>. <em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I: <a href="https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system" class="bare">https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system</a>
+<a href="#_footnoteref_63">63</a>. <em>Guide to Information Technology Security</em> (WMO-No. 1115): <a href="https://library.wmo.int/records/item/51145-guide-to-information-technology-security" class="bare">https://library.wmo.int/records/item/51145-guide-to-information-technology-security</a>
 </div>
 <div class="footnote" id="_footnotedef_64">
 <a href="#_footnoteref_64">64</a>. <em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I: <a href="https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system" class="bare">https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system</a>
 </div>
+<div class="footnote" id="_footnotedef_65">
+<a href="#_footnoteref_65">65</a>. <em>Guide to the WMO Information System</em> (WMO-No. 1061), Vol I: <a href="https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system" class="bare">https://library.wmo.int/records/item/28988-guide-to-the-wmo-information-system</a>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-05 16:56:51 UTC
+Last updated 2024-02-06 17:20:52 UTC
 </div>
 </div>
 </body>
