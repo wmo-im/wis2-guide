@@ -640,13 +640,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>WMO enables the international exchange of observations and model data for all Earth-system disciplines.</p>
 </div>
 <div class="paragraph">
-<p>The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>, describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.</p>
+<p>The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.</p>
 </div>
 <div class="paragraph">
 <p>WIS is the mechanism by which this Earth system data is exchanged.</p>
 </div>
 <div class="paragraph">
-<p>Common practice when working with data is to group them into "Datasets". All the data in a Dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a Dataset as a "collection of data, published or curated by a single agent, and available for access of download in one or more representations" <sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>.</p>
+<p>Common practice when working with data is to group them into "Datasets". All the data in a Dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a Dataset as a "collection of data, published or curated by a single agent, and available for access of download in one or more representations" <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>Why is this important? The "single agent" (i.e., a single organisation) responsible for managing the collection ensures consistency among the data. For example, in a Dataset:</p>
@@ -698,13 +698,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <div class="ulist">
 <ul>
 <li>
-<p>We publish discovery metadata about Datasets, as specified in the WMO Core Metadata Profile <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>.</p>
+<p>We publish discovery metadata about Datasets, as specified in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2.</p>
 </li>
 <li>
-<p>We can search for Datasets that contain relevant data using the Global Discovery Catalogue.</p>
+<p>We can search for Datasets that contain relevant data using the Global Discovery Catalogue (see <a href="#_global_discovery_catalogue">Global Discovery Catalogue</a>).</p>
 </li>
 <li>
-<p>We can subscribe to notifications about updates about a Dataset via a Global Broker.</p>
+<p>We can subscribe to notifications about updates about a Dataset via a Global Broker (see <a href="#_global_broker">Global Broker</a>).</p>
 </li>
 <li>
 <p>We can access the data that comprises a Dataset from a single location using a well described mechanism.</p>
@@ -736,7 +736,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <div class="ulist">
 <ul>
 <li>
-<p>The most recent 5-days of synoptic observations for an entire country or territory<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>.</p>
+<p>The most recent 5-days of synoptic observations for an entire country or territory<sup class="footnote">[<a id="_footnoteref_4" class="footnote" href="#_footnotedef_4" title="View footnote.">4</a>]</sup>.</p>
 </li>
 <li>
 <p>Long-term record of observed water quality for a managed set of hydrological stations.</p>
@@ -765,13 +765,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <div class="sect3">
 <h4 id="_how_to_search_the_global_discovery_catalogue_to_find_datasets"><a class="anchor" href="#_how_to_search_the_global_discovery_catalogue_to_find_datasets"></a>1.2.1. How to search the Global Discovery Catalogue to find Datasets</h4>
 <div class="paragraph">
-<p>The first step to using data published via WIS2 is to determine which Dataset or Datasets contains the data that is needed. To do this, a Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see PART V Discovery Metadata TODO: fix ref). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.</p>
+<p>The first step to using data published via WIS2 is to determine which Dataset or Datasets contains the data that is needed. To do this, a Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.</p>
 </div>
 <div class="paragraph">
-<p>A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see (TODO CROSSREF) <a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">How to subscribe to notifications about availability of new data</a>) about the data, or a API, or an offline archive retrieval service.</p>
+<p>A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see <a href="#_how_to_subscribe_to_notifications_about_availability_of_new_data">How to subscribe to notifications about availability of new data</a>) about the data, or a API, or an offline archive retrieval service.</p>
 </div>
 <div class="paragraph">
-<p>The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see (TODO CROSSREF) <a href="#_global_discovery_catalogue">Global Discovery Catalogue</a>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing Data Consumers with an alternative means to search for WIS2 data.</p>
+<p>The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <a href="#_global_discovery_catalogue">Global Discovery Catalogue</a>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing Data Consumers with an alternative means to search for WIS2 data.</p>
 </div>
 </div>
 <div class="sect3">
@@ -786,7 +786,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating WIS2 Node. However, note that a WIS2 Node is not required to provide public access to its local message broker.</p>
 </div>
 <div class="paragraph">
-<p>A Dataset in WIS2 is associated with a unique <em>topic</em>. Notifications about updates to a Dataset are published to the associated topic. Topics are organized according to a standard scheme (see WIS2 Topic Hierarchy TODO: crossref).</p>
+<p>A Dataset in WIS2 is associated with a unique <em>topic</em>. Notifications about updates to a Dataset are published to the associated topic. Topics are organized according to a standard scheme (see the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy).</p>
 </div>
 <div class="paragraph">
 <p>A Data Consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, or by browsing the topic hierarchy on a message broker.</p>
@@ -808,13 +808,13 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 </ul>
 </div>
 <div class="paragraph">
-<p>As per clause 3.2.13 from the Manual on WIS, Vol II, Data Consumers should access data from the Global Cache. Consequently, they need to subscribe to the <code>cache/#</code> topic hierachy to receive the notifications from Global Caches, each of which provides a link (i.e., URL) to download from the respective Global Cache&#8217;s data server.</p>
+<p>As per clause 3.2.13 of the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Data Consumers should access data from the Global Cache. Consequently, they need to subscribe to the <code>cache/#</code> topic hierachy to receive the notifications from Global Caches, each of which provides a link (i.e., URL) to download from the respective Global Cache&#8217;s data server.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_how_to_use_a_notification_message_to_decide_whether_to_download_data"><a class="anchor" href="#_how_to_use_a_notification_message_to_decide_whether_to_download_data"></a>1.2.3. How to use a notification message to decide whether to download data</h4>
 <div class="paragraph">
-<p>On receipt of a notification message, a Data Consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. See the WIS2 Notification Message (WNM) specification (TODO CROSSREF) for details.</p>
+<p>On receipt of a notification message, a Data Consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. For details of the specification, see the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.</p>
 </div>
 <div class="paragraph">
 <p>In many cases, Data Consumers will use a software application to determine whether or not to download the data. This section provides insight about what happens.</p>
@@ -841,7 +841,7 @@ WIS2 encourages WMO centres to adopt cloud technologies where appropriate to mee
 <p>Links to where data can be accessed are made available through Dataset discovery metadata (via the Global Discovery Catalogue) and/or data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the Data Consumer. This could include Web and/or desktop applications, custom tooling, or other approaches.</p>
 </div>
 <div class="paragraph">
-<p>A discovery metadata record or notification message may provide more than one download links. The preferred link will be identified as "canonical" (link relation: <code>"rel": "canonical"</code><sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>).</p>
+<p>A discovery metadata record or notification message may provide more than one download links. The preferred link will be identified as "canonical" (link relation: <code>"rel": "canonical"</code><sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>).</p>
 </div>
 <div class="paragraph">
 <p>Where data is provided through an interactive Web service, a canonical link that provides a URL where one can directly download a data object may be complemented with an additional link providing the URL for the root of the Web service from where one can interact with or query the entire Dataset.</p>
@@ -873,7 +873,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Details of the applicable WMO data policy plus any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.</p>
 </div>
 <div class="paragraph">
-<p>The WMO Core Metadata Profile 2 specification, section 7.1.17. Properties / WMO data policy (TODO CROSSREF - WCMP2/7.1.17) provides details on how data policy, rights, and/or licenses are described in the discovery metadata.</p>
+<p>The <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2, section 7.1.17. Properties / WMO data policy provides details on how data policy, rights, and/or licenses are described in the discovery metadata.</p>
 </div>
 <div class="paragraph">
 <p>When using data from WIS2, data consumers:</p>
@@ -891,40 +891,38 @@ property and for the well-being of all nations. Core data is provided on a free 
 </div>
 <div class="sect3">
 <h4 id="_further_reading_for_data_consumers"><a class="anchor" href="#_further_reading_for_data_consumers"></a>1.2.6. Further reading for data consumers</h4>
-<div class="literalblock">
-<div class="content">
-<pre>(TODO CROSSREF for the referenced sections)</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>As a Data Publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>1.1. Introduction to WIS2</p>
+<p><a href="#_introduction_to_wis2">Introduction to WIS2</a></p>
 </li>
 <li>
-<p>2.1. WIS2 Architecture</p>
+<p><a href="#_wis2_architecture">WIS2 Architecture</a></p>
 </li>
 <li>
-<p>2.2. Roles in WIS2</p>
+<p><a href="#_roles_in_wis2">Roles in WIS2</a></p>
 </li>
 <li>
-<p>2.4. Components of WIS2</p>
+<p><a href="#_components_of_wis2">Components of WIS2</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The following specifications are useful for further reading:</p>
+<p>The following specifications in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II are useful for further reading:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>WMO Core Metadata Profile 2 (WCMP2) specification</p>
+<p>Appendix D: WIS2 Topic Hierarchy</p>
 </li>
 <li>
-<p>WIS2 Notification Message (WNM) specification</p>
+<p>Appendix E: WIS2 Notification Message</p>
+</li>
+<li>
+<p>Appendix F: WMO Core Metadata Profile 2</p>
 </li>
 </ul>
 </div>
@@ -935,18 +933,28 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="paragraph">
 <p>As a Data Publisher with authoritative Earth system data that you want to share with the WMO community you should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.</p>
 </div>
-<div class="paragraph">
-<p>(TODO - MAYBE; add Guidance on "coarser resource publication with interactive links" - see WNM issue #41)
-(TODO - MAYBE; add Guidance on linking to external provenance objects - see WCMP2 issue #161)
-(TODO - MAYBE; add Guidance on referencing WIGOS stations and observing networks - see WCMP2 issue #19)</p>
+<div class="literalblock">
+<div class="content">
+<pre>(TODO - MAYBE; add Guidance on "coarser resource publication with interactive links" - see WNM issue #41)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>(TODO - MAYBE; add Guidance on linking to external provenance objects - see WCMP2 issue #161)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>(TODO - MAYBE; add Guidance on referencing WIGOS stations and observing networks - see WCMP2 issue #19)</pre>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_how_to_get_started"><a class="anchor" href="#_how_to_get_started"></a>1.3.1. How to get started</h4>
 <div class="paragraph">
-<p>The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see section 1.1.4. Why are datasets so important? (TODO CROSSREF)), and whether it is <strong>Core</strong> or <strong>Recommended</strong> data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).</p>
+<p>The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see <a href="#_why_are_datasets_so_important?">[_why_are_datasets_so_important?]</a>), and whether it is <strong>Core</strong> or <strong>Recommended</strong> data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).</p>
 </div>
 <div class="paragraph">
-<p>Next, you need to consider where it is published. If your data relates to your country or territory, you need to publish it through a National Centre (NC). If your data relates to a region, programme, or other specialized function within WMO, you need to publish it through a Data Collection or Production Centre (DCPC). The functional requirements for NC and DCPC are described in the <em>Manual on the WMO Information System</em> (WMO-No. 1060), Vol II - Part III Functions of WIS.</p>
+<p>Next, you need to consider where it is published. If your data relates to your country or territory, you need to publish it through a National Centre (NC). If your data relates to a region, programme, or other specialized function within WMO, you need to publish it through a Data Collection or Production Centre (DCPC). The functional requirements for NC and DCPC are described in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II - Part III Functions of WIS.</p>
 </div>
 <div class="paragraph">
 <p>All NCs and DCPCs are affiliated with a Global Information System Centre (GISC) that has a responsibility to help establish efficient and effective data sharing on the WIS. Your GISC will be able to help you in getting your data onto WIS2.</p>
@@ -955,7 +963,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>You may be able to identify an existing NC or DCPC that can publish your data. Alternative, you need to establish a new NC or DCPC. The main difference is that an NC is designated by a Member, whereas a DCPC is designated by a WMO or related international programme and/or a regional association.</p>
 </div>
 <div class="paragraph">
-<p>Both NC and DCPC require operation of a WIS2 Node (see section 2.4.1. WIS2 Node (TODO CROSSREF)). The procedure for registering a new WIS2 Node is provided in Section 2.6.1.1. Registration and decommissioning of a WIS2 Node (TODO CROSSREF).</p>
+<p>Both NC and DCPC require operation of a WIS2 Node (see <a href="#_wis2_node">WIS2 Node</a>). The procedure for registering a new WIS2 Node is provided in <a href="#_registration_and_decommissioning_of_a_wis2_node">Registration and decommissioning of a WIS2 Node</a>.</p>
 </div>
 <div class="paragraph">
 <p>Once you have determined the scope of your datasets, the data policy which applies, and have a WIS2 Node ready for data publication, you are ready to progress to the next step: providing discovery metadata.</p>
@@ -967,13 +975,13 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Discovery metadata is the mechanism by which you tell potential consumers about your data, how it may be accessed, and any conditions you may place on the use of the data.</p>
 </div>
 <div class="paragraph">
-<p>Each dataset you want to publish must have an associated discovery metadata record. This record is encoded as GeoJSON (RFC 7946<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>) must conform to the WMO Core Metadata Profile 2 (WCMP2) specification (TODO CROSSREF).</p>
+<p>Each dataset you want to publish must have an associated discovery metadata record. This record is encoded as GeoJSON (RFC 7946<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>) must conform to the specification given in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2.</p>
 </div>
 <div class="paragraph">
 <p>Copies of all discovery metadata records from WIS2 are held at the Global Discovery Catalogues, where data consumers can search and browse to find data that is of interest to them.</p>
 </div>
 <div class="paragraph">
-<p>Depending on local arrangements, your GISC may be able to help you transfer your discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, you will need to publish the discovery metadata record(s) yourself<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup> using one of two ways:</p>
+<p>Depending on local arrangements, your GISC may be able to help you transfer your discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, you will need to publish the discovery metadata record(s) yourself<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup> using one of two ways:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -981,21 +989,18 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server where it can be accessed with a URL.</p>
 </li>
 <li>
-<p>Alternatively, you may operate a local metadata catalogue through which discovery metadata records can be shared using an API (e.g., OGC API - Records<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>). Each discovery metadata record can be accessed with a unique URL via the API (e.g., as an item which is part of the discovery metadata catalogue).</p>
+<p>Alternatively, you may operate a local metadata catalogue through which discovery metadata records can be shared using an API (e.g., OGC API - Records<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>). Each discovery metadata record can be accessed with a unique URL via the API (e.g., as an item which is part of the discovery metadata catalogue).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In both cases, a notification message needs to be published on a message broker that tells WIS2 there is new discovery metadata to upload and that it is accessed at the specified URL<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>. The notification messages shall conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF). Furthermore, the notification message must be published on topic that conforms to the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF). For example, metadata published by Deutscher Wetterdienst would use the following topic:</p>
-</div>
-<div class="paragraph">
-<p><code>origin/a/wis2/de-dwd/metadata/core</code></p>
+<p>In both cases, a notification message needs to be published on a message broker that tells WIS2 there is new discovery metadata to upload and that it is accessed at the specified URL<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>. The notification messages shall conform to the specification given in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message. Furthermore, the notification message must be published on topic that conforms to the specification given in <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy. For example, metadata published by Deutscher Wetterdienst would use the following topic: <code>origin/a/wis2/de-dwd/metadata/core</code></p>
 </div>
 <div class="paragraph">
 <p>These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where Data Consumers can search and browse for datasets of interest.</p>
 </div>
 <div class="paragraph">
-<p>Upon receipt of a new discovery metadata record, a Global Discovery Catalogue (see section 2.4.4. Global Discovery Catalogue (TODO CROSSREF)) will validate, assess, ingest, and publish the record. Validation ensures that your discovery metadata record complies with the specification. Assessment examines your discovery metadata record against good practice (TODO CROSSREF WCMP2 KPIs). The Global Discovery Catalogue will notify you if your discovery metadata record fails validation and provide recommendations for improvements for you to consider.</p>
+<p>Upon receipt of a new discovery metadata record, a Global Discovery Catalogue (see <a href="#_global_discovery_catalogue">Global Discovery Catalogue</a>) will validate, assess, ingest, and publish the record. Validation ensures that your discovery metadata record complies with the specification. Assessment examines your discovery metadata record against good practice. The Global Discovery Catalogue will notify you if your discovery metadata record fails validation and provide recommendations for improvements for you to consider.</p>
 </div>
 <div class="paragraph">
 <p>Discovery metadata must be published in the Global Discovery Catalogues before you begin publishing data.</p>
@@ -1004,10 +1009,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="sect3">
 <h4 id="_how_to_provide_data_to_wis2"><a class="anchor" href="#_how_to_provide_data_to_wis2"></a>1.3.3. How to provide data to WIS2</h4>
 <div class="paragraph">
-<p>WIS2 is based on the Web architecture<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>. As such it is <em>resource oriented</em>. Datasets are resources; the "granules" of data grouped in a dataset are resources; the discovery metadata records that describe datasets are resources. In Web architecture, every resource has a unique identifier (e.g., a URI<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>), and the unique identifier can be used to resolve the resource identified and interact with it (e.g., to download a representation of the resource over an open standard protocol such as HTTP).</p>
+<p>WIS2 is based on the Web architecture<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>. As such it is <em>resource oriented</em>. Datasets are resources; the "granules" of data grouped in a dataset are resources; the discovery metadata records that describe datasets are resources. In Web architecture, every resource has a unique identifier (e.g., a URI<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>), and the unique identifier can be used to resolve the resource identified and interact with it (e.g., to download a representation of the resource over an open standard protocol such as HTTP).</p>
 </div>
 <div class="paragraph">
-<p>Simply, you provide data (and metadata) to WIS2 by assigning it a unique identifier, in this case a URL<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>, and making it available via a data server - most typically a Web server using the HTTP protocol<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>. It&#8217;s up to the data server to decide what to provide when resolving the identifier: the URL of a data granule may resolve as a representation encoded in a given data format, whereas the URL of a dataset may resolve as a description of the dataset (i.e., metadata) that includes links to access the data from which the set is comprised - either individual files (i.e., the data granules) or an interactive API that enables a user to request just the parts of the dataset they need by specifying query parameters.</p>
+<p>Simply, you provide data (and metadata) to WIS2 by assigning it a unique identifier, in this case a URL<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup>, and making it available via a data server - most typically a Web server using the HTTP protocol<sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup>. It&#8217;s up to the data server to decide what to provide when resolving the identifier: the URL of a data granule may resolve as a representation encoded in a given data format, whereas the URL of a dataset may resolve as a description of the dataset (i.e., metadata) that includes links to access the data from which the set is comprised - either individual files (i.e., the data granules) or an interactive API that enables a user to request just the parts of the dataset they need by specifying query parameters.</p>
 </div>
 <div class="paragraph">
 <p>The following sections cover specific considerations relating to publishing data to WIS2.</p>
@@ -1041,12 +1046,12 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Web Accessible Folders (WAF) and "README" files: a Web-based folder structure listing the data object files by name, where each folder contains a formated "README" file describing the folder contents.</p>
 </li>
 <li>
-<p>SpatioTemporal Asset Catalog (STAC)<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup>: a community standard based on GeoJSON to describe geospatial data files which can be easily indexed, browsed, and accessed. Free and open source tools tools present STAC records (one for each data object file) through a Web-based, browse-able user interface.</p>
+<p>SpatioTemporal Asset Catalog (STAC)<sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup>: a community standard based on GeoJSON to describe geospatial data files which can be easily indexed, browsed, and accessed. Free and open source tools tools present STAC records (one for each data object file) through a Web-based, browse-able user interface.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>When publishing collections of data it is tempting to package content into zip or SIP<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup> resources - perhaps even packaging the entire collection, complete with folders, into a single resource. Similarly, WMO formats such as GRIB and BUFR allow multiple data objects (e.g., fields or observations) to be packed into a single file. Only having to download a single resource is convenient for many users, but the downside is that the user must download the entire resource and then unpack/decompress it. The convenience of downloading fewer resources needs to be balanced against the cost of forcing users to download data they may not need. Whatever your choice, you should be guided by common practice in your domain - i.e., only zip, SIP, or pack if your users expect it.</p>
+<p>When publishing collections of data it is tempting to package content into zip or SIP<sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup> resources - perhaps even packaging the entire collection, complete with folders, into a single resource. Similarly, WMO formats such as GRIB and BUFR allow multiple data objects (e.g., fields or observations) to be packed into a single file. Only having to download a single resource is convenient for many users, but the downside is that the user must download the entire resource and then unpack/decompress it. The convenience of downloading fewer resources needs to be balanced against the cost of forcing users to download data they may not need. Whatever your choice, you should be guided by common practice in your domain - i.e., only zip, SIP, or pack if your users expect it.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1066,7 +1071,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Extract the data from wherever it is stored;</p>
 </li>
 <li>
-<p>iii.	Package that data up and send it back to the user.</p>
+<p>Package that data up and send it back to the user.</p>
 </li>
 </ol>
 </div>
@@ -1082,10 +1087,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>First, interactive APIs should be self-describing. A Data Consumer should not need to know, apriori, how to make requests from a API. They should be able to discover this information from the API endpoint itself – even if this is just a link to a documentation page they need to read.</p>
 </li>
 <li>
-<p>Second, APIs should comply with OpenAPI<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup> version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the API.</p>
+<p>Second, APIs should comply with OpenAPI<sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup> version 3 or later. OpenAPI provides a standardised mechanism to describe the API. Tooling (free and, commercial, etc.) is widely available that can read this metadata and automatically generate client applications to query the API.</p>
 </li>
 <li>
-<p>Third, the Open Geospatial Consortium (OGC) have developed a suite of APIs<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup> (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI. Among these, OGC API – Environmental Data Retrieval (EDR)<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup>, OGC API – Features<sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup>, and OGC API - Coverages<sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and proprietary) that support them. We recommend that data publishers assess these open-standard API specifications to determine their suitability to for publishing their datasets using APIs.</p>
+<p>Third, the Open Geospatial Consortium (OGC) have developed a suite of APIs<sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup> (called "OGC APIs") that are designed specifically to provide APIs for geospatial data workflows (discovery, vizualisation, access, processing/exploitation) – all of which build on OpenAPI. Among these, OGC API – Environmental Data Retrieval (EDR)<sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>, OGC API – Features<sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup>, and OGC API - Coverages<sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup> are considered particularly useful. Because these are open standards, there is an ever-growing suite of software implementations (both free and proprietary) that support them. We recommend that data publishers assess these open-standard API specifications to determine their suitability to for publishing their datasets using APIs.</p>
 </li>
 </ul>
 </div>
@@ -1099,10 +1104,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="sect4">
 <h5 id="_providing_data_in_near_real_time"><a class="anchor" href="#_providing_data_in_near_real_time"></a>1.3.3.4. Providing data in (near) real-time</h5>
 <div class="paragraph">
-<p>WIS2 is designed to support the data sharing needs of all WMO programmes. Among these, the World Weather Watch <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup> drives specific needs for the rapid exchange of data to support weather forecasting.</p>
+<p>WIS2 is designed to support the data sharing needs of all WMO programmes. Among these, the World Weather Watch <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup> drives specific needs for the rapid exchange of data to support weather forecasting.</p>
 </div>
 <div class="paragraph">
-<p>To enable real-time data sharing<sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>, WIS2 uses notification messages to advertise the availability of a new resource - data or discovery metadata - and how to access that resource. Notification messages are published to a queue on a message broker in your WIS2 Node<sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup> using the MQTT protocol and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific <em>topic</em>, such as dataset.</p>
+<p>To enable real-time data sharing<sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>, WIS2 uses notification messages to advertise the availability of a new resource - data or discovery metadata - and how to access that resource. Notification messages are published to a queue on a message broker in your WIS2 Node<sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup> using the MQTT protocol and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific <em>topic</em>, such as dataset.</p>
 </div>
 <div class="paragraph">
 <p>For example, when a new temperature profile from a radio sonde deployment is added to a dataset of upper-air data measurements, a notification message would be published that includes the URL used to access the new temperature profile data. Everyone subscribing to notification messages about the upper-air measurement dataset would receive the notification message, identify the URL and download the new temperature profile data.</p>
@@ -1111,10 +1116,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Optionally, data may be embedded in a notification message using a <code>content</code> object <em>in addition</em> to publishing via the data server. Inline data must be encoded as <code>UTF-8</code>, <code>Base64</code>, or <code>gzip</code>, and must not exceed 4096 bytes in length once encoded.</p>
 </div>
 <div class="paragraph">
-<p>Notification messages are encoded as GeoJSON (RFC 7946) and must conform to the WIS2 Notification Message (WNM) specification (TODO CROSSREF).</p>
+<p>Notification messages are encoded as GeoJSON (RFC 7946) and must conform to the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.</p>
 </div>
 <div class="paragraph">
-<p>The URL used in the notification message should refer only to the newly added data object rather (e.g., the new temperature profile) than the entire dataset. However, the WIS2 Notification Message specification allows for multiple URLs to be provided. If you are providing your data through an interactive API, you might provide a "canonical" link (designated with link relation: <code>"rel": "canonical"</code><sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>), and an additional link providing the URL for the root of the Web service from where one can interact with or query the entire Dataset.</p>
+<p>The URL used in the notification message should refer only to the newly added data object rather (e.g., the new temperature profile) than the entire dataset. However, the WIS2 Notification Message specification allows for multiple URLs to be provided. If you are providing your data through an interactive API, you might provide a "canonical" link (designated with link relation: <code>"rel": "canonical"</code><sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>), and an additional link providing the URL for the root of the Web service from where one can interact with or query the entire Dataset.</p>
 </div>
 <div class="paragraph">
 <p>You should include the dataset identifier in the notification message (<code>metadata_id</code> property). This allows data consumers receiving the notification to cross reference with information provided in the discovery metadata for the dataset, such as the conditions of use specified in the data policy, rights, or license.</p>
@@ -1123,16 +1128,16 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Furthermore, if you have implemented controlled access to your data (e.g., the use of an API key), you should include a security object in the download link that provides the pertinent information (e.g., the access control mechanism used, and where/how a Data Consumer would need to register to request access).</p>
 </div>
 <div class="paragraph">
-<p>To ensure that data consumers can easily find the topics they want to subscribe to, data publishers must publish to an authorized topic, as specified in the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF).</p>
+<p>To ensure that data consumers can easily find the topics they want to subscribe to, data publishers must publish to an authorized topic, as specified in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy.</p>
 </div>
 <div class="paragraph">
 <p>If your data seems to relate to more than one topic, select the most appropriate one. The topic-hierarchy is not a knowledge organisation system - it is only used to ensure uniqueness of topics for publishing notification messages. Discovery metadata is used to describe a dataset and its relevance to additional disciplines; each dataset is mapped to one, and only one, topic.</p>
 </div>
 <div class="paragraph">
-<p>If the WIS2 Topic Hierarchy does not include a topic appropriate for your data, your should publish on an <em>experimental</em> topic. This allows for data exchange to be established while the formalities are considered<sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>. Experimental topics are provided for each Earth-system discipline at level 8 in the topic hierarchy (e.g., <code>origin/a/wis2/{centre-id}/data/{earth-system-discipline}/experimental/</code>). Data publishers can can extend the experimental branch with sub-topics as they deem appropriate. Experimental topics are subject to change and will be removed once they are no longer needed. For more information, see WIS2 Topic Hierarchy section 7.1.2 Publishing guidelines (TODO CROSSREF).</p>
+<p>If the WIS2 Topic Hierarchy does not include a topic appropriate for your data, your should publish on an <em>experimental</em> topic. This allows for data exchange to be established while the formalities are considered<sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>. Experimental topics are provided for each Earth-system discipline at level 8 in the topic hierarchy (e.g., <code>origin/a/wis2/{centre-id}/data/{earth-system-discipline}/experimental/</code>). Data publishers can can extend the experimental branch with sub-topics as they deem appropriate. Experimental topics are subject to change and will be removed once they are no longer needed. For more information, see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy, section 7.1.2 Publishing guidelines.</p>
 </div>
 <div class="paragraph">
-<p>Whatever topic you choose, the discovery metadata you provided to the Global Discovery Catalogue must include subscription links using that topic<sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>. The Global Broker will only republish notification messages on topics specified in your discovery metadata records.</p>
+<p>Whatever topic you choose, the discovery metadata you provided to the Global Discovery Catalogue must include subscription links using that topic<sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>. The Global Broker will only republish notification messages on topics specified in your discovery metadata records.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1141,7 +1146,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Core data, as specified in the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)) is considered essential for provision of services for the protection of life and property and for the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.</p>
 </div>
 <div class="paragraph">
-<p>WIS2 ensures highly available, rapid access to <em>most</em> Core data via a collection of Global Caches (see section 2.4.3. Global Cache (TODO CROSSREF)). Global Caches subscribe to notification messages about the availability of new Core data published at WIS2 Nodes, download a copy of that data and re-publish it on a high-performance data server, discarding it after the retention period expires - normally 24-hours<sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>. Global Caches do not provide any sophisticated APIs - they publish notification messages advertising the availability of data on their cache and allow users to download data via HTTPS using the URL in the notification message.</p>
+<p>WIS2 ensures highly available, rapid access to <em>most</em> Core data via a collection of Global Caches (see <a href="#_global_cache">Global Cache</a>). Global Caches subscribe to notification messages about the availability of new Core data published at WIS2 Nodes, download a copy of that data and re-publish it on a high-performance data server, discarding it after the retention period expires - normally 24-hours<sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>. Global Caches do not provide any sophisticated APIs - they publish notification messages advertising the availability of data on their cache and allow users to download data via HTTPS using the URL in the notification message.</p>
 </div>
 <div class="paragraph">
 <p>The URL included in a notification message that is used to access Core data from a WIS2 Node, or the "canonical" URL if multiple URLs are provided, must:</p>
@@ -1169,13 +1174,13 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>If frequent updates to your dataset are very large (e.g., weather prediction models or remote sensing observations) you will need to share the burden of distributing your data with the Global Cache operators. You should work with your GISC to determine the highest priority elements of your Core datasets that will be republished by the Global Caches.</p>
 </div>
 <div class="paragraph">
-<p>For Core data that is not to be cached, you must set the <code>cache</code> property in the notification message to <code>false</code><sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.</p>
+<p>For Core data that is not to be cached, you must set the <code>cache</code> property in the notification message to <code>false</code><sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>You must ensure that Core data that is not cached is publicly accessible from your WIS2 Node; i.e., with no access control mechanisms in place.</p>
 </div>
 <div class="paragraph">
-<p>A Global Cache operator may choose to disregard your cache preference - for example, if they feel that the content you are providing is large enough to impede provision of caching services for other Members<sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup>. In such cases, the Global Cache operator will log this behaviour. In collaboration with the Global Cache operators, your GISC will work with you to resolve concerns.</p>
+<p>A Global Cache operator may choose to disregard your cache preference - for example, if they feel that the content you are providing is large enough to impede provision of caching services for other Members<sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>. In such cases, the Global Cache operator will log this behaviour. In collaboration with the Global Cache operators, your GISC will work with you to resolve concerns.</p>
 </div>
 <div class="paragraph">
 <p>Finally, please note that Global Caches are under no obligation to cache data published on <em>experimental</em> topics. For such data, the <code>cache</code> property should be set to <code>false</code>.</p>
@@ -1187,7 +1192,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Recommended data, as defined in the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)), is exchanged on WIS2 in support of Earth system monitoring and prediction efforts and <em>may</em> by provided with conditions on use. This means that you may control access to Recommended data.</p>
 </div>
 <div class="paragraph">
-<p>Access control should use only the "security schemes" for authentication and authorization specified in OpenAPI<sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>.</p>
+<p>Access control should use only the "security schemes" for authentication and authorization specified in OpenAPI<sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>Where access control is implemented, you should include a <code>security</code> object in download links provided in discovery metadata and notification messages that provide the user with pertinent information about the access control mechanism used and where/how they might register to request access.</p>
@@ -1199,10 +1204,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Use of Core data must always be free and unrestricted. However, you may need to leverage existing systems with built-in access control when implementing the download service for your WIS2 Node.</p>
 </div>
 <div class="paragraph">
-<p>Example 1: API key. Your data server requires a valid API key to be included in download requests. The URLs used notification messages should include a valid API key.<sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup><sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup></p>
+<p>Example 1: API key. Your data server requires a valid API key to be included in download requests. The URLs used notification messages should include a valid API key.<sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup><sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
 </div>
 <div class="paragraph">
-<p>Example 2: Pre-signed URLs. Your data server uses a cloud-based object store that requires credentials to be provided when downloading data. The URLs used in notification message should be <em>pre-signed</em> with the data publisher&#8217;s credentials and valid for the cache retention period (e.g., 24-hours).<sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup></p>
+<p>Example 2: Pre-signed URLs. Your data server uses a cloud-based object store that requires credentials to be provided when downloading data. The URLs used in notification message should be <em>pre-signed</em> with the data publisher&#8217;s credentials and valid for the cache retention period (e.g., 24-hours).<sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>In both cases, the URL provided in a notification message can be directly resolved without a user, or Global Cache, needing to take additional action such as providing credentials or authenticating.</p>
@@ -1217,7 +1222,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>There is no requirement for a WIS2 Node to publish notification messages about newly available data - the mechanism is available if needed (e.g., for real-time data exchange). Data archives published through WIS2 do not need to provide notification messages for data unless the user community have expressed a need to be rapidly notified about changes (e.g., the addition of new records into a climate observation archive).</p>
 </div>
 <div class="paragraph">
-<p>However, notification messages must still be used to share discovery metadata with WIS2. Given that provision of metadata and subsequent updates is likely to be infrequent, it may be sufficient to "hand-craft" a notification message and publish it locally on an MQTT broker<sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup> or with help from a GISC. See above for more details on publishing discovery metadata to WIS2.</p>
+<p>However, notification messages must still be used to share discovery metadata with WIS2. Given that provision of metadata and subsequent updates is likely to be infrequent, it may be sufficient to "hand-craft" a notification message and publish it locally on an MQTT broker<sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup> or with help from a GISC. See above for more details on publishing discovery metadata to WIS2.</p>
 </div>
 <div class="paragraph">
 <p>Note that some data archives are categorised as Core data; for example, Essential Climate Variables. Core data may be distributed via the Global Caches. However, given that these provide only short-term hosting of data (e.g., 24-hours), Global Caches are not an appropriate mechanism to provide access to archives of Core data. The archive must be accessed directly via the WIS2 Node.</p>
@@ -1227,27 +1232,24 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="sect3">
 <h4 id="_further_reading_for_data_publishers"><a class="anchor" href="#_further_reading_for_data_publishers"></a>1.3.4. Further reading for data publishers</h4>
 <div class="paragraph">
-<p>(TODO CROSSREF for the referenced sections)</p>
-</div>
-<div class="paragraph">
 <p>As a Data Publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>1.1. Introduction to WIS2</p>
+<p><a href="#_introduction_to_wis2">Introduction to WIS2</a></p>
 </li>
 <li>
-<p>2.1. WIS2 Architecture</p>
+<p><a href="#_wis2_architecture">WIS2 Architecture</a></p>
 </li>
 <li>
-<p>2.2. Roles in WIS2</p>
+<p><a href="#_roles_in_wis2">Roles in WIS2</a></p>
 </li>
 <li>
-<p>2.4. Components of WIS2</p>
+<p><a href="#_components_of_wis2">Components of WIS2</a></p>
 </li>
 <li>
-<p>2.6. Implementation and operation of WIS2 Node</p>
+<p><a href="#_implementation_and_operation_of_a_wis2_node">Implementation and operation of a WIS2 Node</a></p>
 </li>
 </ul>
 </div>
@@ -1257,13 +1259,13 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="ulist">
 <ul>
 <li>
-<p>3.1. Information management</p>
+<p><a href="#_information_management">Information management</a></p>
 </li>
 <li>
-<p>4.1. Security</p>
+<p><a href="#_security">Security</a></p>
 </li>
 <li>
-<p>5.1. Competencies</p>
+<p><a href="#_competencies">Competencies</a></p>
 </li>
 </ul>
 </div>
@@ -1276,7 +1278,23 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="ulist">
 <ul>
 <li>
-<p>2.8.1.1. Publishing aviation weather data through WIS2 into ICAO SWIM</p>
+<p><a href="#_publishing_aviation_weather_data_through_wis2_into_icao_swim">[_publishing_aviation_weather_data_through_wis2_into_icao_swim]</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, you should also review the specifications in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Appendix D: WIS2 Topic Hierarchy</p>
+</li>
+<li>
+<p>Appendix E: WIS2 Notification Message</p>
+</li>
+<li>
+<p>Appendix F: WMO Core Metadata Profile 2</p>
 </li>
 </ul>
 </div>
@@ -1305,7 +1323,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>A WIS Centre may also operate one or more Global Services.</p>
 </div>
 <div class="paragraph">
-<p>WIS Centres shall comply with the Technical Regulations defined in the Manual on WMO Information System (WMO-No. 1060), Volume II.</p>
+<p>WIS Centres shall comply with the Technical Regulations defined in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1463,6 +1481,9 @@ property and for the well-being of all nations. Core data is provided on a free 
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Please refer to the <em>Manual on WIS</em> (WMO-No. 1060), Volume II for details.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_components_of_wis2"><a class="anchor" href="#_components_of_wis2"></a>2.4. Components of WIS2</h3>
@@ -1480,10 +1501,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>WIS2 Nodes publish data as files of a Web server or using an interactive Web service.</p>
 </li>
 <li>
-<p>WIS2 Nodes describe the data they publish using discovery metadata [TODO: ref. WIS Core Metadata Profile 2].</p>
+<p>WIS2 Nodes describe the data they publish using discovery metadata. See the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2.</p>
 </li>
 <li>
-<p>WIS2 Nodes generate notification messages [TODO: ref. WIS2 Notification Message] advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata.</p>
+<p>WIS2 Nodes generate notification messages advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy  is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata. See the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy and Appendix E: WIS2 Notification Message.</p>
 </li>
 <li>
 <p>WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.</p>
@@ -1612,7 +1633,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="ulist">
 <ul>
 <li>
-<p>The MQTT protocol is to be used for all WIS2 Publish-Subscribe workflow (publication and subscription).</p>
+<p>The MQTT protocol<sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup> is to be used for all WIS2 Publish-Subscribe workflow (publication and subscription).</p>
 </li>
 <li>
 <p>MQTT v3.1.1 and v5.0 are the chosen protocols for the WIS2 Notification Messages publication and subscription.</p>
@@ -1657,7 +1678,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="ulist">
 <ul>
 <li>
-<p>The HTTP protocol is to be used for all WIS2 download workflow.</p>
+<p>The HTTP protocol (RFC 7231<sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup>) is to be used for all WIS2 download workflow.</p>
 </li>
 <li>
 <p>To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.</p>
@@ -1679,7 +1700,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Registration and decomissioning of WIS2 Nodes must be approved by the Permanent Representative to WMO (PR) for the country or territory in which the WIS Centre resides. Where the WIS2 Node is part of a Data Collection or Production Centre (DCPC), the sponsoring WMO Programme or Regional Association shall be consulted.</p>
 </div>
 <div class="paragraph">
-<p>WMO Secretariat will operate a WIS2 register.</p>
+<p>WMO Secretariat will operate a WIS2 register as an authoritative list of WIS2 Nodes and Global Services.</p>
 </div>
 <div class="paragraph">
 <p>The registration of a WIS2 Node involves the following steps:</p>
@@ -1690,7 +1711,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the Permanent Representative of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country or territory where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.</p>
 </li>
 <li>
-<p>Assign a centre-id: The centre identifier (<code>centre-id</code>) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the WIS2 Topic Hierarchy (WTH) specification (TODO CROSSREF)). See below for guidance on assigning a centre identifier.</p>
+<p>Assign a centre-id: The centre identifier (<code>centre-id</code>) is an acronym as specified by the member and endorsed by the PR of the country and WMO. It is a single identifier comprised of a top level domain (TLD) and centre name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy). See below for guidance on assigning a centre identifier (<a href="#_guidance_on_assigning_a_centre_identifier_for_a_wis2_n ode">[_guidance_on_assigning_a_centre_identifier_for_a_wis2_n ode]</a>).</p>
 </li>
 <li>
 <p>Complete the WIS2 Register: The WIS National Focal Point shall complete the WIS2 Register operated by the WMO Secretariat.</p>
@@ -1734,10 +1755,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 </div>
 </div>
 <div class="paragraph">
-<p>Once a WIS2 Node has been registered and connected with the Global Services, it can procede to register the datasets it will publish via WIS2. To register a dataset, the authorized WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues and Global Brokers automatically subscribes to the topics provided in the discovery metadata record. For more information, see section 1.3.x How to provide discovery metadata to WIS2 (TODO CROSSREF).</p>
+<p>Once a WIS2 Node has been registered and connected with the Global Services, it can procede to register the datasets it will publish via WIS2. To register a dataset, the authorized WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues and Global Brokers automatically subscribes to the topics provided in the discovery metadata record. For more information, see <a href="#_how_to_provide_discovery_metadata_to_wis2">How to provide discovery metadata to WIS2</a>.</p>
 </div>
 <div class="paragraph">
-<p>Once the dataset has successfully been registered, the WIS2 Node can procede to exchange data - see section 1.3.x How to provide data in WIS2 (TODO CROSSREF).</p>
+<p>Once the dataset has successfully been registered, the WIS2 Node can procede to exchange data - see <a href="#_how_to_provide_data_in_wis2">[_how_to_provide_data_in_wis2]</a>.</p>
 </div>
 <div class="paragraph">
 <p>When decommissioning a WIS2 Node operators must ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating these data sharing obligations to another WIS2 Node. In the case of a DCPC, this may mean the responsibilities are transferred to another Member.</p>
@@ -1746,7 +1767,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="sect4">
 <h5 id="_guidance_on_assigning_a_centre_identifier_for_a_wis2_node"><a class="anchor" href="#_guidance_on_assigning_a_centre_identifier_for_a_wis2_node"></a>2.6.1.2. Guidance on assigning a Centre Identifier for a WIS2 Node</h5>
 <div class="paragraph">
-<p>The Centre Identifier (<code>centre-id</code>) is used in WIS2 to uniquely identify a participating WIS2 Node. The Centre Identifier must conform to the specification given in the WIS2 Topic Hierarchy (WTH), section 7.1.6 Centre identification (TODO CROSSREF).</p>
+<p>The Centre Identifier (<code>centre-id</code>) is used in WIS2 to uniquely identify a participating WIS2 Node. The Centre Identifier must conform to the specification given in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy, section 7.1.6 Centre identification.</p>
 </div>
 <div class="paragraph">
 <p>The Centre Identifier comprises two dash-separated tokens.</p>
@@ -1755,16 +1776,16 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p><strong>Token 1</strong> is a <em>Top Level Domain</em> (TLD) defined by IANA<sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup>.</p>
 </div>
 <div class="paragraph">
-<p>This is usually a simple choice for a Member. However, overseas territories require some thought. The recommended approach depends on the governance of the overseas territory. Take some French examples. La Reunion is a proper French “department” – it’s considered part of France, it uses the Euro. Here, we would use the “fr” TLD. New Caledonia is a French overseas territory with top-level-domain of “nc”. It has separate, devolved governance. The recommendation is to use “nc”. All that said, it’s a national decision which TLD to use.</p>
+<p>This is usually a simple choice for a Member. However, overseas territories require some thought. The recommended approach depends on the governance of the overseas territory. Take some French examples. Réunion is a French Department – it’s considered part of France, it uses the Euro. Here, we would use the “fr” TLD. New Caledonia is a French overseas territory with top-level-domain of “nc”. It has separate, devolved governance. The recommendation is to use “nc”. All that said, it’s a national decision which TLD to use.</p>
 </div>
 <div class="paragraph">
 <p><strong>Token 2</strong> is a descriptive name for the centre and this may contain dashes (but not other special characters).</p>
 </div>
 <div class="paragraph">
-<p>The descriptive name should be something recognisable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK&#8217;s NMS is the Met Office (<a href="http://www.metoffice.gov.uk" class="bare">http://www.metoffice.gov.uk</a>), so “metoffice” is better than “ukmo”<sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup>. Using the 4-letter GTS centre identifiers (<strong>CCCC</strong>) is not recommended because people unfamiliar with the GTS do not understand them.</p>
+<p>The descriptive name should be something recognisable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK&#8217;s National Meteorological Service is the Met Office (<a href="http://www.metoffice.gov.uk" class="bare">http://www.metoffice.gov.uk</a>), so “metoffice” is better than “ukmo”<sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup>. Using the 4-letter GTS centre identifiers (<strong>CCCC</strong>) is not recommended because people unfamiliar with the GTS do not understand them.</p>
 </div>
 <div class="paragraph">
-<p>The Centre Identifier specification says that larger organisations operating multiple centres may wish to register separate centre-ids for each centre. This is good practice. Keeping with the UK example, Met Office operates a NMC, 9 DCPCs and some WIS2 functions, so it’s important to split them out. For example:</p>
+<p>The Centre Identifier specification says that larger organisations operating multiple centres may wish to register separate centre-ids for each centre. This is good practice. Keeping with the UK example, Met Office operates a National Meteorological Centre (NMC), 9 DCPCs (e.g., a Volcanic Ash Advisory Centre) and a WIS2 Global Service, so it’s important to split them out. For example:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1775,7 +1796,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p><code>uk-metoffice-vaac</code></p>
 </li>
 <li>
-<p><code>uk-metoffice-globalcache</code></p>
+<p><code>uk-metoffice-global-cache</code></p>
 </li>
 </ul>
 </div>
@@ -1783,16 +1804,16 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are long-term durable. Appending <code>`-test</code> may be used to designate test WIS Nodes.</p>
 </div>
 <div class="paragraph">
-<p>Appending “-test” may be used to designate test WIS Nodes. I don’t think we need that right now, because the whole of WIS2 is in test mode.</p>
+<p>Appending “-test” may be used to designate test WIS Nodes.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_authentication_authorization_and_access_control_for_a_wis2_node"><a class="anchor" href="#_authentication_authorization_and_access_control_for_a_wis2_node"></a>2.6.1.3. Authentication, authorization, and access control for a WIS2 Node</h5>
 <div class="paragraph">
-<p>When configuring your WIS2 Node you need to consider how it will accessed by other components in WIS2 - Global Services and Data Consumers.</p>
+<p>When configuring your WIS2 Node you need to consider how it will accessed by Global Services and Data Consumers.</p>
 </div>
 <div class="paragraph">
-<p>Global Brokers must authenticate when they connect to the MQTT message broker in your WIS2 Node. Simple username and password credentials are used<sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup>. When registering your WIS2 Node with the WMO Secretariat, you will need to provide these credentials. The WMO Secretariat will share these credentials with the Global Service operators and store them in the WIS register. You should not consider these credentials as confidential or secret.</p>
+<p>Global Brokers must authenticate when they connect to the MQTT message broker in your WIS2 Node. Username and password credentials are used<sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup>. When registering your WIS2 Node with the WMO Secretariat, you will need to provide these credentials. The WMO Secretariat will share these credentials with the Global Service operators and store them in the WIS register. You should not consider these credentials as confidential or secret.</p>
 </div>
 <div class="paragraph">
 <p>Given that Global Brokers will re-publish notification messages provided by your WIS2 Node, you may decide to restrict access to the MQTT message broker. Global Brokers operate using a fixed IP address which allows you to permit them access using IP filtering<sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup>. You must ensure that your MQTT message broker is accessible for more than one Global Broker to provide resilient transmission of notification messages to WIS2.</p>
@@ -1919,7 +1940,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="sect3">
 <h4 id="_procedure_for_registration_of_a_new_global_service"><a class="anchor" href="#_procedure_for_registration_of_a_new_global_service"></a>2.7.1. Procedure for registration of a new Global Service</h4>
 <div class="paragraph">
-<p>Successful operations of WIS will depend on having a set of Global Services running state of the art IT environments, with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.</p>
+<p>Successful operations of WIS will depend on having a set of Global Services running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.</p>
 </div>
 <div class="paragraph">
 <p>Depending on the nature of the Global Service, the following is considered to be the minimum capability of Global Service operation, so that collectively, the level of service is 100% (or very close):</p>
@@ -1950,7 +1971,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>On receipt of an offer from a Member to operate a Global Service, WMO Secretariat will suggest which Global Service the Member may provide in order to improve WIS2. This suggestion will be based on the current situation of WIS2 (e.g., the number of existing Global Brokers, whether an additional Global Cache is needed, etc.).</p>
 </div>
 <div class="paragraph">
-<p>The Manual on WIS, the Guide and other material available will help WIS Centres in deciding the best way forward.</p>
+<p>The <em>Manual on WIS</em> (WMO-No. 1060), Volume II, the Guide and other material available will help WIS Centres in deciding the best way forward.</p>
 </div>
 <div class="paragraph">
 <p>When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.</p>
@@ -2125,7 +2146,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 </div>
 </li>
 <li>
-<p>When receiviong a message from a WIS Centre or Global Service broker, The metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
+<p>When receiving a message from a WIS Centre or Global Service broker, The metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker will check if the topic on which the message is received is valid (in particular, a discovery metadata record must exist with a corresponding topic in order that data can be made available using this topic). If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. Global Broker should not request Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
@@ -2134,7 +2155,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>During the pre-operational phase (2024), Global Broker will not discard the message but will send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC.</p>
 </li>
 <li>
-<p>A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metrics <code>wmo_wis2_gb_messages_invalid_total</code> will be increased by 1.</p>
+<p>A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_messages_invalid_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker instance will republish a message only once. Using the message id as defined in WIS Notification Message, the Global Broker will record id of messages already published and will discard subsequent identitical (with the same message id) messages. This is the anti-loop feature of the Global Broker.</p>
@@ -2187,10 +2208,11 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>A Global Cache instance will host data objects copied from NC/DCPCs.</p>
 </li>
 <li>
-<p>A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see TODO CROSSREF <a href="#notification-message-format-and-structure">[notification-message-format-and-structure]</a>).</p>
+<p>A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message).</p>
 </li>
 <li>
-<p>A Global Cache instance will use the standard topic structure in their local message brokers (see TODO CROSSREF <a href="#standard-topic-hierarchy">[standard-topic-hierarchy]</a>).</p>
+<p>A Global Cache instance will use the standard topic structure in their local message brokers (see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy
+).</p>
 </li>
 <li>
 <p>A Global Cache instance will publish on topic <code>cache/a/wis2/&#8230;&#8203;</code>.</p>
@@ -2387,10 +2409,10 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue will validate that a discovery metadata record identifier&#8217;s <code>centre-id</code> token (see WCMP2 TODO CROSSREF) matches against the <code>centre-id</code> level (see WTH TODO CROSSREF) of the topic from which it was published, to ensure that discovery metadata is published by the authoritative orgnanization.</p>
+<p>A Global Discovery Catalogue will validate that a discovery metadata record identifier&#8217;s <code>centre-id</code> token (see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2) matches against the <code>centre-id</code> level of the topic from which it was published (see <em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy), to ensure that discovery metadata is published by the authoritative orgnanization.</p>
 </li>
 <li>
-<p>A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile version 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.</p>
+<p>A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.</p>
 </li>
 <li>
 <p>A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).</p>
@@ -2526,7 +2548,7 @@ exchange. However, there are differences in both approach and
 implementation.</p>
 </div>
 <div class="paragraph">
-<p>Specifications for WIS2 are defined in the Manual on WIS (WMO-No.
+<p>Specifications for WIS2 are defined in the <em>Manual on WIS</em> (WMO-No.
 1060), Volume II, and further elaborated in this Guide. Specifications
 for SWIM will be defined in the Procedures for Air Navigation Services –
 Information Management (PANS-IM) (ICAO Doc. 10199)<sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnotedef_48" title="View footnote.">48</a>]</sup>.</p>
@@ -2642,7 +2664,7 @@ is to be used for encoding aeronautical meteorological information in SWIM.</p>
 <p>For meteorological data to be published from WIS2 to SWIM, the organisation
 responsible for this provision will need to operate a WIS2 Node and
 comply with the pertinent Technical Regulations as specified in the
-Manual on WIS (WMO-No. 1060), Volume II. Onward distribution of the
+<em>Manual on WIS</em> (WMO-No. 1060), Volume II. Onward distribution of the
 data by the Message Broker over SWIM will be handled by the
 respective Information Service Provider in accordance with ICAO
 Standards and Recommended Practices (SARPs).</p>
@@ -2656,7 +2678,7 @@ distinguish between data for SWIM and any other meteorological data.</p>
 </div>
 <div class="paragraph">
 <p>Where a new WIS2 Node is needed, the responsible organisation must
-establish a new WIS2 Node and register it with WMO Secretariat. For more information, see section 2.6.x Registration and decommissioning of a WIS2 Node (TODO CROSSREF).</p>
+establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <a href="#registration_and_decommissioning_of_a_wis2_node">[registration_and_decommissioning_of_a_wis2_node]</a>.</p>
 </div>
 <div class="paragraph">
 <p>Datasets are a central concept in WIS2. Where
@@ -2721,7 +2743,7 @@ and prediction efforts.</p>
 </div>
 <div class="paragraph">
 <p>For more information on the WMO Core Metadata Profile version 2, see the
-Manual on WIS (WMO-No. 1060), Volume II, Appendix F (TODO CROSSREF).</p>
+<em>Manual on WIS</em> (WMO-No. 1060), Volume II, Appendix F.</p>
 </div>
 <div class="paragraph">
 <p>On receipt of new data, the WIS2 Node will:</p>
@@ -2747,8 +2769,8 @@ not group data resources into bulletins.</p>
 refers to the data resource using this URL<sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnotedef_54" title="View footnote.">54</a>]</sup>.</p>
 </div>
 <div class="paragraph">
-<p>For more details on the WIS2 Notification Message, see the Manual on WIS
-(WMO-No. 1060), Volume II, Appendix F (TODO CROSSREF).</p>
+<p>For more details on the WIS2 Notification Message, see the <em>Manual on WIS</em>
+(WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.</p>
 </div>
 <div class="paragraph">
 <p>The notification message must be published to the proper topic on the
@@ -2765,8 +2787,8 @@ aviation-specific notifications. See the example below:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>For more details of the WIS Topic Hierarchy, see Manual on WIS (WMO-No.
-1060), Volume II, Appendix E (TODO CROSSREF).</p>
+<p>For more details of the WIS Topic Hierarchy, see the <em>Manual on WIS</em> (WMO-No.
+1060), Volume II, Appendix D: WIS2 Topic Hierarchy.</p>
 </div>
 <div class="paragraph">
 <p>WIS Global Brokers subscribe to the local message brokers of WIS2 Nodes
@@ -2969,7 +2991,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.</p>
 </div>
 <div class="paragraph">
-<p>The principles of information management are described in Section 6.2. Section 6.3 describes the information management lifecycle through the identification of five focus areas. These are:</p>
+<p>The <a href="#_principles_of_information_management">Principles of information management</a> are described below. Five focus areas are described in <a href="#_the_information_management_lifecycle">The information management lifecycle</a>. These are:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3033,7 +3055,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>An information asset is information that has value. This value may be related to the cost of generating and collecting the information, a value associated with the immediate use or a value associated with the longer term preservation and subsequent reuse of the information.</p>
 </li>
 <li>
-<p>10.2.1.2	This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information.</p>
+<p>This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information.</p>
 </li>
 </ul>
 </div>
@@ -3065,7 +3087,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>WMO Centres should regularly assess information to ensure that it is fit for its purpose and that processes, procedures, and documentation are adequate.</p>
 </li>
 <li>
-<p>Processes should be consistent with the general provisions and principles of quality management as described in the WMO Technical Regulations (WMO-No. 49).</p>
+<p>Processes should be consistent with the general provisions and principles of quality management as described in the <em>WMO Technical Regulations</em> (WMO-No. 49).</p>
 </li>
 </ul>
 </div>
@@ -3129,7 +3151,10 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>In order to maximize the economic benefits of an information asset it should be made as widely available and as accessible as possible.</p>
 </li>
 <li>
-<p>The WMO Unified Data Policy encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. The WMO encourages the free and unrestricted exchange of information in all circumstances.10.2.7.3	The publisher should provide an explicit and well-defined license for each information item or dataset as part of the associated metadata.</p>
+<p>The WMO Unified Data Policy encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. The WMO encourages the free and unrestricted exchange of information in all circumstances.</p>
+</li>
+<li>
+<p>The publisher should provide an explicit and well-defined license for each information item or dataset as part of the associated metadata.</p>
 </li>
 <li>
 <p>The Findable, Accessible, Interoperable and Reusable (FAIR) data principles promote open data with the ultimate goal of optimizing reuse of data. These principles should be followed where possible.</p>
@@ -3276,7 +3301,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>The formats used to store and exchange information should be standardized to ensure its usability, both in the short and long term. It is essential that the information can be accessed many years after archival if required. To ensure this usability, the format and version information should be recorded in the metadata record for the information and should be included in the information where the format allows.</p>
 </div>
 <div class="paragraph">
-<p>Information exchanged on the WMO Information System and between WMO centres is standardized through the use the formats specified in the WMO Manual on Codes (WMO-No. 306, Volume I.2) and the Manual on the WMO Information System (WMO-No. 1060). This includes the GRIB and BUFR formats for numerical weather prediction products and observational data and the WIS Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, the WIGOS Metadata Data Representation, is also defined in the WMO Manual on Codes (WMO-No. 306, Volume I.3).</p>
+<p>Information exchanged on the WMO Information System and between WMO centres is standardized through the use the formats specified in the <em>Manual on Codes</em> (WMO-No. 306), Volume I.2 and the <em>Manual on WIS</em> (WMO-No. 1060), Volume II. This includes the GRIB and BUFR formats for numerical weather prediction products and observational data and the WIS Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, the WIGOS Metadata Data Representation, is also defined in the <em>Manual on Codes</em> (WMO-No. 306), Volume I.3.</p>
 </div>
 <div class="paragraph">
 <p>These formats have been developed within the WMO community to enable the efficient exchange of information between WMO centres and for the information to be interoperable between centres and systems. The formats, including detailed technical information, have also published openly through the WMO manuals, enabling use of the formats and information by other communities, promoting reuse of the information.</p>
@@ -3291,10 +3316,10 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>To maximize the benefits and return on investment in the acquisition and generation of information there needs to be a clear method as to how the information will be published, exchanged and accessed by users.</p>
 </div>
 <div class="paragraph">
-<p>Information is published on the WMO Information System through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the Web and via a Web Application Programming Interface (API). The metadata records should include information on how to access the described datasets and services (see also 10.3.3.3.4) and how to subscribe to receive updates and new data.</p>
+<p>Information is published on the WMO Information System through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the Web and via a Web Application Programming Interface (API). The metadata records should include information on how to access the described datasets and services (see also <a href="#_representation_and_metadata">Representation and metadata</a>) and how to subscribe to receive updates and new data.</p>
 </div>
 <div class="paragraph">
-<p>Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the Manual on the WMO Information System (WMO-No. 1060). Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.</p>
+<p>Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II. Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.</p>
 </div>
 <div class="paragraph">
 <p>Note: Further information on the Key Performance indicators can be found on the WMO Community Website at <a href="https://community.wmo.int/activity-areas/wis/wis-metadata-kpis" class="bare">https://community.wmo.int/activity-areas/wis/wis-metadata-kpis</a></p>
@@ -3317,7 +3342,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Provision of suitable information within the discovery metadata (See 10.3.3.4), enabling users to discover and access the information and to assess whether it meets their requirements. This should include licensing information.</p>
+<p>Provision of suitable information within the discovery metadata, enabling users to discover and access the information and to assess whether it meets their requirements. This should include licensing information.</p>
 </li>
 <li>
 <p>Provision of user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.</p>
@@ -3325,13 +3350,13 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </ol>
 </div>
 <div class="paragraph">
-<p>For common types of information the guides may be generic or link to standard documentation. Information on the observations available from the WMO Integrated Global Observing System is provided within the Manual and Guide to the WMO Integrated Global Observing system, WMO-No. 1160 and WMO-No. 1165 respectively. This includes information on the expected uses and quality of the data, either directly or through links within. Similarly, information on the data and products available through the Global Data Processing and Forecasting System is provided in the Manual on the Global Data Processing and Forecasting System (WMO-No. 485).</p>
+<p>For common types of information the guides may be generic or link to standard documentation. Information on the observations available from the WMO Integrated Global Observing System is provided within the <em>Manual on the WMO Integrated Global Observing System</em> (WMO-No. 1160) and the <em>Guide to the WMO Integrated Global Observing system</em> (WMO-No. 1165) respectively. This includes information on the expected uses and quality of the data, either directly or through links within. Similarly, information on the data and products available through the Global Data Processing and Forecasting System is provided in the <em>Manual on the Global Data Processing and Forecasting System</em> (WMO-No. 485), Volume II.</p>
 </div>
 <div class="paragraph">
-<p>For non-standard and specialist products targeted user guides may be more appropriate. These should include a plain text summary for the non-technical user and should also be accessible and retrievable via a link within the discovery metadata. Any user guide should be in addition to the technical documentation described under Planning, information creation and acquisition (see 10.3.3.1).</p>
+<p>For non-standard and specialist products targeted user guides may be more appropriate. These should include a plain text summary for the non-technical user and should also be accessible and retrievable via a link within the discovery metadata. Any user guide should be in addition to the technical documentation described under <a href="#_planning">_information_creation_and_acquisition</a>.</p>
 </div>
 <div class="paragraph">
-<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see 10.3.3.4.6). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended to allow users to subscribe to receive updates directly.</p>
+<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <a href="#_publication_and_exchange_of_information">Publication and exchange of information</a>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended to allow users to subscribe to receive updates directly.</p>
 </div>
 <div class="paragraph">
 <p>The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.</p>
@@ -3343,7 +3368,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>The type of storage used should be appropriate to the type of information stored. Core information exchanged operationally should be stored and made available via high-availability and low latency media and services. For some operation critical information, such as hazard warnings, there is a requirement for the end-to-end global distribution of the information to be completed in two minutes. For other operational data there is a requirement for the global exchange to be completed in 15 minutes.</p>
 </div>
 <div class="paragraph">
-<p>The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WIS Technical Specifications listed in the Manual on the WMO Information System (WMO-No. 1060).</p>
+<p>The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WI2S Technical Specifications listed in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II.</p>
 </div>
 <div class="paragraph">
 <p>Backup policies and data recovery plans should be documented as part of the information management plan. These should be implemented either before or when the information is created or acquired and should include both the information and the associated metadata. The backup and recovery process should be routinely tested. Specific guidance on the expectations and requirements for WMO centres is provided under the operational guidance in Part VII of this Guide.</p>
@@ -3352,7 +3377,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <p>Business rules governing the access to and modification of the information should be clearly documented in the information management plan. This must include the clear specification of roles and responsibilities of those managing the information. Information on who can authorize the archival and disposal of the information and the processes for doing so should be included. The roles associated with an information resource are standardized as part of the WIS Core Metadata Profile, see Part V of this Guide for further information.</p>
 </div>
 <div class="paragraph">
-<p>The archival and long-term preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. The WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and the Marine Climate Data System (see Manual on Marine Meteorological Services, WMO-No. 558), as well as the WMO World Data Centres and those defined in the Manual on the WMO Information System (WMO-No. 1060) and those defined in the Manual on the Global Data Processing and Forecasting System (WMO-No. 485).</p>
+<p>The archival and long-term preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. The WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and the Marine Climate Data System (see <em>Manual on Marine Meteorological Services</em> (WMO-No. 558), Volume II, as well as the WMO World Data Centres and those defined in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II and those defined in the <em>Manual on the Global Data Processing and Forecasting System</em> (WMO-No. 485), Volume II.</p>
 </div>
 <div class="paragraph">
 <p>Earth system information, especially observational data, are often irreplaceable. Other information, whilst technically replaceable, is often costly to produce and therefore not easily replaceable. This includes output from numerical models and simulations. Before an information resource is marked for disposal careful consideration must be given to whether long term archival or disposal is more appropriate. This consideration must follow a clearly defined process documented in the information management plan.</p>
@@ -3368,13 +3393,13 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <div class="sect4">
 <h5 id="_technology_and_technology_migration"><a class="anchor" href="#_technology_and_technology_migration"></a>3.1.4.1. Technology and technology migration</h5>
 <div class="paragraph">
-<p>Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the WMO Guide to Emerging Data Issues (WMO-No. 1239).</p>
+<p>Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the <em>WMO Guidelines on Emerging Data Issues</em> (WMO-No. 1239).</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_information_security"><a class="anchor" href="#_information_security"></a>3.1.4.2. Information security</h5>
 <div class="paragraph">
-<p>Further information on information security and best practices can be found in the WMO Guide to Information Technology Security (WMO-No. 1115).</p>
+<p>Further information on information security and best practices can be found in the <em>Guide to Information Technology Security</em> (WMO-No. 1115).</p>
 </div>
 </div>
 </div>
@@ -3423,106 +3448,106 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_2">2</a>. <a href="https://community.wmo.int/governance/commission-membership/infcom" class="bare">https://community.wmo.int/governance/commission-membership/infcom</a>
 </div>
 <div class="footnote" id="_footnotedef_3">
-<a href="#_footnoteref_3">3</a>. WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021))
+<a href="#_footnoteref_3">3</a>. Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020 <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset" class="bare">https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset</a>
 </div>
 <div class="footnote" id="_footnotedef_4">
-<a href="#_footnoteref_4">4</a>. Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020 <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset" class="bare">https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset</a>
+<a href="#_footnoteref_4">4</a>. Why 5-days in this example? Because the system used to publish the data in this example only retains data for 5-days.
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. WMO Core Metadata Profile version 2
+<a href="#_footnoteref_5">5</a>. IANA Link Relations <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.
+<a href="#_footnoteref_6">6</a>. RFC 7946 - The GeoJSON Format: <a href="https://datatracker.ietf.org/doc/html/rfc7946" class="bare">https://datatracker.ietf.org/doc/html/rfc7946</a>
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. IANA Link Relations <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
+<a href="#_footnoteref_7">7</a>. In future, WIS2 may provide metadata publication services (e.g., through a WIS2 metadata management portal) to assist with this task. However, such a service is not available at this time.
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. RFC 7946 - The GeoJSON Format <a href="https://www.rfc-editor.org/rfc/rfc7946" class="bare">https://www.rfc-editor.org/rfc/rfc7946</a>
+<a href="#_footnoteref_8">8</a>. OGC API - Records - Part 1: Core <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
 </div>
 <div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. In future, WIS2 may provide metadata publication services (e.g., through a WIS2 metadata management portal) to assist with this task. However, such a service is not available at this time.
+<a href="#_footnoteref_9">9</a>. Both data and metadata publication use the same notification message mechanism to advertise the availability of a new resource.
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. OGC API - Records - Part 1: Core <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
+<a href="#_footnoteref_10">10</a>. Architecture of the World Wide Web <a href="https://www.w3.org/TR/webarch/" class="bare">https://www.w3.org/TR/webarch/</a>
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. Both data and metadata publication use the same notification message mechanism to advertise the availability of a new resource.
+<a href="#_footnoteref_11">11</a>. RFC 3986 - Uniform Resource Identifier (URI) - Generic Syntax: <a href="https://datatracker.ietf.org/doc/html/rfc3986" class="bare">https://datatracker.ietf.org/doc/html/rfc3986</a>
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. Architecture of the World Wide Web <a href="https://www.w3.org/TR/webarch/" class="bare">https://www.w3.org/TR/webarch/</a>
+<a href="#_footnoteref_12">12</a>. The term "Uniform Resource Locator" (URL) refers to the subset of URIs that, in addition to identifying a resource, provide a means of locating the resource by describing its primary access mechanism (e.g., its network "location"). RFC 3986
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. RFC3986 Uniform Resource Identifier (URI) - Generic Syntax <a href="https://www.rfc-editor.org/rfc/rfc3986" class="bare">https://www.rfc-editor.org/rfc/rfc3986</a>
+<a href="#_footnoteref_13">13</a>. WIS2 strongly prefers secure versions of protocols (e.g., HTTPS) wherein the communication protocol is encrypted using Transport Layer Security (TLS)
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. The term "Uniform Resource Locator" (URL) refers to the subset of URIs that, in addition to identifying a resource, provide a means of locating the resource by describing its primary access mechanism (e.g., its network "location"). RFC 3986
+<a href="#_footnoteref_14">14</a>. Spatio Temporal Asset Catalogue (STAC) <a href="https://stacspec.org/en" class="bare">https://stacspec.org/en</a>
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. WIS2 strongly prefers secure versions of protocols (e.g., HTTPS) wherein the communication protocol is encrypted using Transport Layer Security (TLS)
+<a href="#_footnoteref_15">15</a>. See <a href="https://www.iasa-web.org/tc04/submission-information-package-sip" class="bare">https://www.iasa-web.org/tc04/submission-information-package-sip</a> or end of <a href="https://www.eumetsat.int/formats" class="bare">https://www.eumetsat.int/formats</a>
 </div>
 <div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. Spatio Temporal Asset Catalogue (STAC) <a href="https://stacspec.org/en" class="bare">https://stacspec.org/en</a>
+<a href="#_footnoteref_16">16</a>. OpenAPI Specification <a href="https://spec.openapis.org/oas/v3.1.0" class="bare">https://spec.openapis.org/oas/v3.1.0</a>
 </div>
 <div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. See <a href="https://www.iasa-web.org/tc04/submission-information-package-sip" class="bare">https://www.iasa-web.org/tc04/submission-information-package-sip</a> or end of <a href="https://www.eumetsat.int/formats" class="bare">https://www.eumetsat.int/formats</a>
+<a href="#_footnoteref_17">17</a>. Open Geospatial Consortium OGC API <a href="https://ogcapi.ogc.org/" class="bare">https://ogcapi.ogc.org/</a>
 </div>
 <div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. OpenAPI Specification <a href="https://spec.openapis.org/oas/v3.1.0" class="bare">https://spec.openapis.org/oas/v3.1.0</a>
+<a href="#_footnoteref_18">18</a>. OGC API - Environmental Data Retrieval (EDR) <a href="https://ogcapi.ogc.org/edr" class="bare">https://ogcapi.ogc.org/edr</a>
 </div>
 <div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. Open Geospatial Consortium OGC API <a href="https://ogcapi.ogc.org/" class="bare">https://ogcapi.ogc.org/</a>
+<a href="#_footnoteref_19">19</a>. OGC API - Features <a href="https://ogcapi.ogc.org/features" class="bare">https://ogcapi.ogc.org/features</a>
 </div>
 <div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. OGC API - Environmental Data Retrieval (EDR) <a href="https://ogcapi.ogc.org/edr" class="bare">https://ogcapi.ogc.org/edr</a>
+<a href="#_footnoteref_20">20</a>. OGC API - Coverages <a href="https://ogcapi.ogc.org/coverages" class="bare">https://ogcapi.ogc.org/coverages</a>
 </div>
 <div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. OGC API - Features <a href="https://ogcapi.ogc.org/features" class="bare">https://ogcapi.ogc.org/features</a>
+<a href="#_footnoteref_21">21</a>. WMO World Weather Watch <a href="https://wmo.int/world-weather-watch" class="bare">https://wmo.int/world-weather-watch</a>
 </div>
 <div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. OGC API - Coverages <a href="https://ogcapi.ogc.org/coverages" class="bare">https://ogcapi.ogc.org/coverages</a>
+<a href="#_footnoteref_22">22</a>. In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.
 </div>
 <div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. WMO World Weather Watch <a href="https://wmo.int/world-weather-watch" class="bare">https://wmo.int/world-weather-watch</a>
+<a href="#_footnoteref_23">23</a>. WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers which subscribe to message brokers of WIS2 Nodes and republish notification messages (see <a href="#_global_broker">Global Broker</a>).
 </div>
 <div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.
+<a href="#_footnoteref_24">24</a>. IANA Link Relations <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
 </div>
 <div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers which subscribe to message brokers of WIS2 Nodes and republish notification messages (see section 2.4.2. Global Broker (TODO CROSSREF)).
+<a href="#_footnoteref_25">25</a>. The "experimental" topic is necessary for the WIS2 pre-operational phase and future pre-operational data exchange in test mode.
 </div>
 <div class="footnote" id="_footnotedef_26">
-<a href="#_footnoteref_26">26</a>. IANA Link Relations <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
+<a href="#_footnoteref_26">26</a>. The Global Discovery Catalogue will reject discovery metadata records containing links to topics outside the official topic-hierarchy.
 </div>
 <div class="footnote" id="_footnotedef_27">
-<a href="#_footnoteref_27">27</a>. The "experimental" topic is necessary for the WIS2 pre-operational phase and future pre-operational data exchange in test mode.
+<a href="#_footnoteref_27">27</a>. A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of Core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.
 </div>
 <div class="footnote" id="_footnotedef_28">
-<a href="#_footnoteref_28">28</a>. The Global Discovery Catalogue will reject discovery metadata records containing links to topics outside the official topic-hierarchy.
+<a href="#_footnoteref_28">28</a>. Default value for the <code>cache</code> property is <code>true</code>; omission of the property will result in the data object being cached.
 </div>
 <div class="footnote" id="_footnotedef_29">
-<a href="#_footnoteref_29">29</a>. A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of Core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.
+<a href="#_footnoteref_29">29</a>. Excessive data volume isn&#8217;t the only reason they may refuse to cache content. Other reasons include: too many small files, unreliable download from a WIS2 Node, etc.
 </div>
 <div class="footnote" id="_footnotedef_30">
-<a href="#_footnoteref_30">30</a>. Default value for the <code>cache</code> property is <code>true</code>; omission of the property will result in the data object being cached.
+<a href="#_footnoteref_30">30</a>. OpenAPI Security Scheme Object: <a href="https://spec.openapis.org/oas/v3.1.0#security-scheme-object" class="bare">https://spec.openapis.org/oas/v3.1.0#security-scheme-object</a>
 </div>
 <div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. Excessive data volume isn&#8217;t the only reason they may refuse to cache content. Other reasons include: too many small files, unreliable download from a WIS2 Node, etc.
+<a href="#_footnoteref_31">31</a>. A specific API key should be used for data publication via WIS2 so that usage can be tracked.
 </div>
 <div class="footnote" id="_footnotedef_32">
-<a href="#_footnoteref_32">32</a>. OpenAPI Security Scheme Object: <a href="https://spec.openapis.org/oas/v3.1.0#security-scheme-object" class="bare">https://spec.openapis.org/oas/v3.1.0#security-scheme-object</a>
+<a href="#_footnoteref_32">32</a>. Given that users are encouraged to download Core data from the Global Cache, there will likely be only a few accesses using the WIS2 account&#8217;s API key. If the usage quota for the WIS2 account is exceeded (i.e., further data access is blocked) then this should encourage users to download via the Global Cache as mandated in the <em>Manual on WIS</em> (WMO-No. 1060), Volume II.
 </div>
 <div class="footnote" id="_footnotedef_33">
-<a href="#_footnoteref_33">33</a>. A specific API key should be used for data publication via WIS2 so that usage can be tracked.
+<a href="#_footnoteref_33">33</a>. Working with presigned URLs on Amazon S3 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html" class="bare">https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html</a>
 </div>
 <div class="footnote" id="_footnotedef_34">
-<a href="#_footnoteref_34">34</a>. Given that users are encouraged to download Core data from the Global Cache, there will likely be only a few accesses using the WIS2 account&#8217;s API key. If the usage quota for the WIS2 account is exceeded (i.e., further data access is blocked) then this should encourage users to download via the Global Cache as mandated in the <em>Manual on WIS</em> (WMO-No. 1060).
+<a href="#_footnoteref_34">34</a>. MQTT broker managed services are available online, often with a free (no cost) starter plan sufficient for infrequent publications of notifications about metadata. These provide a viable alternative to implementing an MQTT broker instance yourself.
 </div>
 <div class="footnote" id="_footnotedef_35">
-<a href="#_footnoteref_35">35</a>. Working with presigned URLs on Amazon S3 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html" class="bare">https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html</a>
+<a href="#_footnoteref_35">35</a>. MQTT Specifications: <a href="https://mqtt.org/mqtt-specification/" class="bare">https://mqtt.org/mqtt-specification/</a>
 </div>
 <div class="footnote" id="_footnotedef_36">
-<a href="#_footnoteref_36">36</a>. MQTT broker managed services are available online, often with a free (no cost) starter plan sufficient for infrequent publications of notifications about metadata. These provide a viable alternative to implementing an MQTT broker instance yourself.
+<a href="#_footnoteref_36">36</a>. TFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): <a href="https://datatracker.ietf.org/doc/html/rfc7231" class="bare">https://datatracker.ietf.org/doc/html/rfc7231</a>
 </div>
 <div class="footnote" id="_footnotedef_37">
 <a href="#_footnoteref_37">37</a>. IANA Top Level Domains <a href="https://data.iana.org/TLD" class="bare">https://data.iana.org/TLD</a>
@@ -3537,7 +3562,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_40">40</a>. In WIS2 we use IP addresses to determine the origin of connections and therefore confer trust to remote systems. It is well documented that IP addresses can be hi-jacked and that there are alternative, more sophisticated, mechanisms available for reliably determining the origin of connections requests, such as Public Key Infrastructure (PKI). However, the complexities of such implementation would introduce a barrier to Member&#8217;s participation in WIS2. IP addresses are considered to provide an adequate level of trust for the purposes of WIS2: distributing publicly accessible data and messages.
 </div>
 <div class="footnote" id="_footnotedef_41">
-<a href="#_footnoteref_41">41</a>. In some cases, WIS2 Nodes will need to serve Core data directly (see section 1.3.x Considerations when providing Core data in WIS2 (TODO CROSSREF)). In these situations, the WIS2 Node data server must remain publicly accessible.
+<a href="#_footnoteref_41">41</a>. In some cases, WIS2 Nodes will need to serve Core data directly (see <a href="#_considerations_when_providing_core_data_in_wis2">Considerations when providing Core data in WIS2</a>). In these situations, the WIS2 Node data server must remain publicly accessible.
 </div>
 <div class="footnote" id="_footnotedef_42">
 <a href="#_footnoteref_42">42</a>. OpenAPI Security Scheme Object: <a href="https://spec.openapis.org/oas/v3.1.0#security-scheme-object" class="bare">https://spec.openapis.org/oas/v3.1.0#security-scheme-object</a>
@@ -3564,7 +3589,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_49">49</a>. AMQP 1.0 is proposed in the draft PANS-IM
 </div>
 <div class="footnote" id="_footnotedef_50">
-<a href="#_footnoteref_50">50</a>. IWXXM (FM205) is defined in the Manual on Codes (WMO-No. 306), Volume I.3 – International Codes
+<a href="#_footnoteref_50">50</a>. IWXXM (FM205) is defined in the <em>Manual on Codes</em> (WMO-No. 306), Volume I.3 – International Codes
 </div>
 <div class="footnote" id="_footnotedef_51">
 <a href="#_footnoteref_51">51</a>. WIS2 follows the recommendations from OpenAPI regarding choice of security schemes for authenticated access - a choice of HTTP authentication, API keys, OAuth2 or OpenID Connect Discovery. For more information see OpenAPI Security Scheme Object: <a href="https://spec.openapis.org/oas/v3.1.0#security-scheme-object" class="bare">https://spec.openapis.org/oas/v3.1.0#security-scheme-object</a>
@@ -3614,7 +3639,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-06 17:20:52 UTC
+Last updated 2024-02-06 17:25:52 UTC
 </div>
 </div>
 </body>
