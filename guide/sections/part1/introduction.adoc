@@ -34,7 +34,7 @@ It should be clear that hosting data and services on the cloud does not affect d
 
 WMO enables the international exchange of observations and model data for all Earth-system disciplines.
 
-The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) footnote:[WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021))], describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.
+The WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)) describes the Earth system data that are necessary for efforts to monitor, understand and predict the weather and climate - including the hydrological cycle, the atmospheric environment and space weather.
 
 WIS is the mechanism by which this Earth system data is exchanged.
 
@@ -61,9 +61,9 @@ Because we group data into a single, conceptual resource (i.e., the Dataset) we 
 
 All this means that the Dataset concept is central WIS:
 
-* We publish discovery metadata about Datasets, as specified in the WMO Core Metadata Profile footnote:[WMO Core Metadata Profile version 2].
-* We can search for Datasets that contain relevant data using the Global Discovery Catalogue.
-* We can subscribe to notifications about updates about a Dataset via a Global Broker.
+* We publish discovery metadata about Datasets, as specified in the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2.
+* We can search for Datasets that contain relevant data using the Global Discovery Catalogue (see <<_global_discovery_catalogue>>).
+* We can subscribe to notifications about updates about a Dataset via a Global Broker (see <<_global_broker>>).
 * We can access the data that comprises a Dataset from a single location using a well described mechanism.
 	
 It is up to the Data Publisher to decide how their data is grouped into Datasets - effectively, to decide what Datasets they publish to WIS. That said, we recommend that, subject to the consistency rules above, Data Publishers should organise their data into as few Datasets as possible.
@@ -77,7 +77,7 @@ There are some things that are fixed requirements for Datasets:
 
 Here are some examples of Datasets:
 
-* The most recent 5-days of synoptic observations for an entire country or territoryfootnote:[Why 5-days in this example? Because only 5-days of observations is retained in the system used to publish the data.].
+* The most recent 5-days of synoptic observations for an entire country or territoryfootnote:[Why 5-days in this example? Because the system used to publish the data in this example only retains data for 5-days.].
 * Long-term record of observed water quality for a managed set of hydrological stations.
 * Output from the most recent 24-hours of operational numerical weather prediction model runs.
 * Output from 6-months of experimental model runs. It's important to note that output from the operational and experimental should not be merged into the same dataset because they use different algorithms - it's very useful to be able to distinguish the provenance (or lineage) of data.

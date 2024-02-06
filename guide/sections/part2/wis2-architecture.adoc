@@ -10,7 +10,7 @@ GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) 
 
 A WIS Centre may also operate one or more Global Services.
 
-WIS Centres shall comply with the Technical Regulations defined in the Manual on WMO Information System (WMO-No. 1060), Volume II.
+WIS Centres shall comply with the Technical Regulations defined in the _Manual on WIS_ (WMO-No. 1060), Volume II.
 
 === Roles in WIS2
 
@@ -72,6 +72,8 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 |===
 
+Please refer to the _Manual on WIS_ (WMO-No. 1060), Volume II for details.
+
 === Components of WIS2
 
 // TODO: add refs to other parts of the Guide describing these components
@@ -80,8 +82,8 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 * WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection or Production Centres (DCPC) to publish their *Core* and *Recommended* data.
 * WIS2 adopts Web technologies and open standards enabling WIS2 Nodes to be implemented using freely-available software components and common industry practices.
 * WIS2 Nodes publish data as files of a Web server or using an interactive Web service.
-* WIS2 Nodes describe the data they publish using discovery metadata [TODO: ref. WIS Core Metadata Profile 2].
-* WIS2 Nodes generate notification messages [TODO: ref. WIS2 Notification Message] advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata.
+* WIS2 Nodes describe the data they publish using discovery metadata. See the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2.
+* WIS2 Nodes generate notification messages advertising the availability of new data. These notification messages are published to a message broker. The WIS2 Topic Hierarchy  is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the Data Consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata. See the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy and Appendix E: WIS2 Notification Message.
 * WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.
 
 ==== Global Broker
@@ -123,7 +125,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 ==== Publish-Subscribe protocol (MQTT)
 
-* The MQTT protocol is to be used for all WIS2 Publish-Subscribe workflow (publication and subscription).
+* The MQTT protocolfootnote:[MQTT Specifications: https://mqtt.org/mqtt-specification/] is to be used for all WIS2 Publish-Subscribe workflow (publication and subscription).
 * MQTT v3.1.1 and v5.0 are the chosen protocols for the WIS2 Notification Messages publication and subscription.
 ** To connect to Global Brokers, MQTT v5.0 is preferred as it provides additional features such as the ability to used shared subscription.
 * The following parameters are to be used for all MQTT client/server connectivity and subscription:
@@ -136,6 +138,6 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 ==== Download protocol (HTTP)
 
-* The HTTP protocol is to be used for all WIS2 download workflow.
+* The HTTP protocol (RFC 7231footnote:[TFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): https://datatracker.ietf.org/doc/html/rfc7231]) is to be used for all WIS2 download workflow.
 * To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.
 * The standard TCP port to be used is 443 for Secure HTTP (HTTPS).
