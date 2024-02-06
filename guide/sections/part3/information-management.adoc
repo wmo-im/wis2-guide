@@ -12,7 +12,7 @@ Note: The term "information" is used in a general sense and includes data and pr
 
 High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.
 
-The principles of information management are described in Section 6.2. Section 6.3 describes the information management lifecycle through the identification of five focus areas. These are:
+The <<_principles_of_information_management>> are described below. Five focus areas are described in <<_the_information_management_lifecycle>>. These are:
 
 . Planning, information creation and acquisition. Creation of information using internal and external data sources and the acquisition of information from various sources.
 . Representation and metadata. Standards to represent metadata, data and information are of primary importance to enable interoperability and long-term usability of the information.
@@ -38,7 +38,7 @@ Effective management of information is essential for WMO Centres to deliver oper
 
 ===== Principle 1: Information is a valued asset
 * An information asset is information that has value. This value may be related to the cost of generating and collecting the information, a value associated with the immediate use or a value associated with the longer term preservation and subsequent reuse of the information.
-* 10.2.1.2	This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information.
+* This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information.
 
 ===== Principle 2: Information must be managed
 
@@ -50,7 +50,7 @@ Effective management of information is essential for WMO Centres to deliver oper
 
 * Information should be developed and managed in accordance with its function and use for internal and external users.
 * WMO Centres should regularly assess information to ensure that it is fit for its purpose and that processes, procedures, and documentation are adequate.
-* Processes should be consistent with the general provisions and principles of quality management as described in the WMO Technical Regulations (WMO-No. 49).
+* Processes should be consistent with the general provisions and principles of quality management as described in the _WMO Technical Regulations_ (WMO-No. 49).
 
 ===== Principle 4: Information must be standardized and interoperable
 
@@ -74,7 +74,8 @@ Effective management of information is essential for WMO Centres to deliver oper
 ===== Principle 7: Information should be reusable
 
 * In order to maximize the economic benefits of an information asset it should be made as widely available and as accessible as possible.
-* The WMO Unified Data Policy encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. The WMO encourages the free and unrestricted exchange of information in all circumstances.10.2.7.3	The publisher should provide an explicit and well-defined license for each information item or dataset as part of the associated metadata.
+* The WMO Unified Data Policy encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. The WMO encourages the free and unrestricted exchange of information in all circumstances.
+* The publisher should provide an explicit and well-defined license for each information item or dataset as part of the associated metadata.
 * The Findable, Accessible, Interoperable and Reusable (FAIR) data principles promote open data with the ultimate goal of optimizing reuse of data. These principles should be followed where possible.
 
 Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR footnote:[https://go-fair.org]
@@ -141,7 +142,7 @@ To ensure traceability and reproducibility the information and documents at this
 
 The formats used to store and exchange information should be standardized to ensure its usability, both in the short and long term. It is essential that the information can be accessed many years after archival if required. To ensure this usability, the format and version information should be recorded in the metadata record for the information and should be included in the information where the format allows.
 
-Information exchanged on the WMO Information System and between WMO centres is standardized through the use the formats specified in the WMO Manual on Codes (WMO-No. 306, Volume I.2) and the Manual on the WMO Information System (WMO-No. 1060). This includes the GRIB and BUFR formats for numerical weather prediction products and observational data and the WIS Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, the WIGOS Metadata Data Representation, is also defined in the WMO Manual on Codes (WMO-No. 306, Volume I.3).
+Information exchanged on the WMO Information System and between WMO centres is standardized through the use the formats specified in the _Manual on Codes_ (WMO-No. 306), Volume I.2 and the _Manual on WIS_ (WMO-No. 1060), Volume II. This includes the GRIB and BUFR formats for numerical weather prediction products and observational data and the WIS Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, the WIGOS Metadata Data Representation, is also defined in the _Manual on Codes_ (WMO-No. 306), Volume I.3.
 
 These formats have been developed within the WMO community to enable the efficient exchange of information between WMO centres and for the information to be interoperable between centres and systems. The formats, including detailed technical information, have also published openly through the WMO manuals, enabling use of the formats and information by other communities, promoting reuse of the information.
 
@@ -151,9 +152,9 @@ The WMO formats specified in the manuals are subject to strong governance proces
 
 To maximize the benefits and return on investment in the acquisition and generation of information there needs to be a clear method as to how the information will be published, exchanged and accessed by users.
 
-Information is published on the WMO Information System through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the Web and via a Web Application Programming Interface (API). The metadata records should include information on how to access the described datasets and services (see also 10.3.3.3.4) and how to subscribe to receive updates and new data.
+Information is published on the WMO Information System through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the Web and via a Web Application Programming Interface (API). The metadata records should include information on how to access the described datasets and services (see also <<_representation_and_metadata>>) and how to subscribe to receive updates and new data.
 
-Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the Manual on the WMO Information System (WMO-No. 1060). Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.
+Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the _Manual on WIS_ (WMO-No. 1060), Volume II. Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.
 
 Note: Further information on the Key Performance indicators can be found on the WMO Community Website at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis
 
@@ -167,14 +168,14 @@ Note: The newsletter is available from: https://community.wmo.int/news/operation
 
 For information to have value it must inform users, aid knowledge discovery and have impact through informed decision making. Ensuring that the user can make effective use of the information is an important step in the information management lifecycle. This takes two forms:
 
-. Provision of suitable information within the discovery metadata (See 10.3.3.4), enabling users to discover and access the information and to assess whether it meets their requirements. This should include licensing information.
+. Provision of suitable information within the discovery metadata, enabling users to discover and access the information and to assess whether it meets their requirements. This should include licensing information.
 . Provision of user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.
 
-For common types of information the guides may be generic or link to standard documentation. Information on the observations available from the WMO Integrated Global Observing System is provided within the Manual and Guide to the WMO Integrated Global Observing system, WMO-No. 1160 and WMO-No. 1165 respectively. This includes information on the expected uses and quality of the data, either directly or through links within. Similarly, information on the data and products available through the Global Data Processing and Forecasting System is provided in the Manual on the Global Data Processing and Forecasting System (WMO-No. 485).
+For common types of information the guides may be generic or link to standard documentation. Information on the observations available from the WMO Integrated Global Observing System is provided within the _Manual on the WMO Integrated Global Observing System_ (WMO-No. 1160) and the _Guide to the WMO Integrated Global Observing system_ (WMO-No. 1165) respectively. This includes information on the expected uses and quality of the data, either directly or through links within. Similarly, information on the data and products available through the Global Data Processing and Forecasting System is provided in the _Manual on the Global Data Processing and Forecasting System_ (WMO-No. 485), Volume II.
 
-For non-standard and specialist products targeted user guides may be more appropriate. These should include a plain text summary for the non-technical user and should also be accessible and retrievable via a link within the discovery metadata. Any user guide should be in addition to the technical documentation described under Planning, information creation and acquisition (see 10.3.3.1).
+For non-standard and specialist products targeted user guides may be more appropriate. These should include a plain text summary for the non-technical user and should also be accessible and retrievable via a link within the discovery metadata. Any user guide should be in addition to the technical documentation described under <<_planning,_information_creation_and_acquisition>>.
 
-Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see 10.3.3.4.6). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended to allow users to subscribe to receive updates directly.
+Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <<_publication_and_exchange_of_information>>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended to allow users to subscribe to receive updates directly.
 
 The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.
 
@@ -182,13 +183,13 @@ The discovery metadata should include a valid point of contact, enabling users t
 
 The type of storage used should be appropriate to the type of information stored. Core information exchanged operationally should be stored and made available via high-availability and low latency media and services. For some operation critical information, such as hazard warnings, there is a requirement for the end-to-end global distribution of the information to be completed in two minutes. For other operational data there is a requirement for the global exchange to be completed in 15 minutes.
 
-The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WIS Technical Specifications listed in the Manual on the WMO Information System (WMO-No. 1060).
+The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WI2S Technical Specifications listed in the _Manual on WIS_ (WMO-No. 1060), Volume II.
 
 Backup policies and data recovery plans should be documented as part of the information management plan. These should be implemented either before or when the information is created or acquired and should include both the information and the associated metadata. The backup and recovery process should be routinely tested. Specific guidance on the expectations and requirements for WMO centres is provided under the operational guidance in Part VII of this Guide.
 
 Business rules governing the access to and modification of the information should be clearly documented in the information management plan. This must include the clear specification of roles and responsibilities of those managing the information. Information on who can authorize the archival and disposal of the information and the processes for doing so should be included. The roles associated with an information resource are standardized as part of the WIS Core Metadata Profile, see Part V of this Guide for further information.
 
-The archival and long-term preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. The WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and the Marine Climate Data System (see Manual on Marine Meteorological Services, WMO-No. 558), as well as the WMO World Data Centres and those defined in the Manual on the WMO Information System (WMO-No. 1060) and those defined in the Manual on the Global Data Processing and Forecasting System (WMO-No. 485).
+The archival and long-term preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. The WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and the Marine Climate Data System (see _Manual on Marine Meteorological Services_ (WMO-No. 558), Volume II, as well as the WMO World Data Centres and those defined in the _Manual on WIS_ (WMO-No. 1060), Volume II and those defined in the _Manual on the Global Data Processing and Forecasting System_ (WMO-No. 485), Volume II.
 
 Earth system information, especially observational data, are often irreplaceable. Other information, whilst technically replaceable, is often costly to produce and therefore not easily replaceable. This includes output from numerical models and simulations. Before an information resource is marked for disposal careful consideration must be given to whether long term archival or disposal is more appropriate. This consideration must follow a clearly defined process documented in the information management plan.
 
@@ -198,8 +199,8 @@ When an information resource is marked for disposal the reasons for disposal, in
 
 ===== Technology and technology migration
 
-Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the WMO Guide to Emerging Data Issues (WMO-No. 1239).
+Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the _WMO Guidelines on Emerging Data Issues_ (WMO-No. 1239).
 
 ===== Information security
 
-Further information on information security and best practices can be found in the WMO Guide to Information Technology Security (WMO-No. 1115).
+Further information on information security and best practices can be found in the _Guide to Information Technology Security_ (WMO-No. 1115).

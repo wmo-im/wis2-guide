@@ -4,11 +4,11 @@ As a Data Consumer wanting to use data published via WIS2 you should read the gu
 
 ==== How to search the Global Discovery Catalogue to find Datasets
 
-The first step to using data published via WIS2 is to determine which Dataset or Datasets contains the data that is needed. To do this, a Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see PART V Discovery Metadata TODO: fix ref). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.
+The first step to using data published via WIS2 is to determine which Dataset or Datasets contains the data that is needed. To do this, a Data Consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2). A Data Consumer may discover a Dataset using keywords, geographic area of interest, temporal information, or free text.  Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a Data Consumer can assess and evaluate their interest in accessing/downloading data associated with the Dataset record.
 
-A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see (TODO CROSSREF) <<_how_to_subscribe_to_notifications_about_availability_of_new_data>>) about the data, or a API, or an offline archive retrieval service.
+A key component of Dataset records in the Global Discovery Catalogue is that of "actionable" links.  A Dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the Data Consumer can interact with the data accordingly.  For example, a Dataset record may include a link to subscribe to notifications (see <<_how_to_subscribe_to_notifications_about_availability_of_new_data>>) about the data, or a API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see (TODO CROSSREF) <<_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing Data Consumers with an alternative means to search for WIS2 data.  
+The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <<_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing Data Consumers with an alternative means to search for WIS2 data.  
 
 ==== How to subscribe to notifications about availability of new data
 
@@ -18,7 +18,7 @@ In WIS2, notifications are re-published by Global Brokers to ensure resilient di
 
 Exceptionally, a Data Consumer may choose to subscribe directly to the local message broker at the originating WIS2 Node. However, note that a WIS2 Node is not required to provide public access to its local message broker.
 
-A Dataset in WIS2 is associated with a unique _topic_. Notifications about updates to a Dataset are published to the associated topic. Topics are organized according to a standard scheme (see WIS2 Topic Hierarchy TODO: crossref).
+A Dataset in WIS2 is associated with a unique _topic_. Notifications about updates to a Dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy).
 
 A Data Consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, or by browsing the topic hierarchy on a message broker.
 
@@ -29,11 +29,11 @@ Notifications from WIS2 Nodes and Global Caches are published on different topic
 * Environment and Climate Change Canada, Meteorological Service of Canada's WIS2 Node publishes to: ``origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``
 * Global Caches publish to: ``cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``
 
-As per clause 3.2.13 from the Manual on WIS, Vol II, Data Consumers should access data from the Global Cache. Consequently, they need to subscribe to the ``cache/#`` topic hierachy to receive the notifications from Global Caches, each of which provides a link (i.e., URL) to download from the respective Global Cache's data server. 
+As per clause 3.2.13 of the _Manual on WIS_ (WMO-No. 1060), Volume II, Data Consumers should access data from the Global Cache. Consequently, they need to subscribe to the ``cache/#`` topic hierachy to receive the notifications from Global Caches, each of which provides a link (i.e., URL) to download from the respective Global Cache's data server. 
 
 ==== How to use a notification message to decide whether to download data
 
-On receipt of a notification message, a Data Consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. See the WIS2 Notification Message (WNM) specification (TODO CROSSREF) for details.
+On receipt of a notification message, a Data Consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. For details of the specification, see the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.
 
 In many cases, Data Consumers will use a software application to determine whether or not to download the data. This section provides insight about what happens. 
 
@@ -69,7 +69,7 @@ Furthermore, the WMO Unified Data Policy encourages attribution of the source of
 
 Details of the applicable WMO data policy plus any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.
 
-The WMO Core Metadata Profile 2 specification, section 7.1.17. Properties / WMO data policy (TODO CROSSREF - WCMP2/7.1.17) provides details on how data policy, rights, and/or licenses are described in the discovery metadata.
+The _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2, section 7.1.17. Properties / WMO data policy provides details on how data policy, rights, and/or licenses are described in the discovery metadata.
 
 When using data from WIS2, data consumers:
 
@@ -78,16 +78,15 @@ When using data from WIS2, data consumers:
  
 ==== Further reading for data consumers
 
- (TODO CROSSREF for the referenced sections)
-
 As a Data Publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
 
-* 1.1. Introduction to WIS2
-* 2.1. WIS2 Architecture
-* 2.2. Roles in WIS2
-* 2.4. Components of WIS2
+* <<_introduction_to_wis2>>
+* <<_wis2_architecture>>
+* <<_roles_in_wis2>>
+* <<_components_of_wis2>>
 
-The following specifications are useful for further reading:
+The following specifications in the _Manual on WIS_ (WMO-No. 1060), Volume II are useful for further reading:
 
-* WMO Core Metadata Profile 2 (WCMP2) specification
-* WIS2 Notification Message (WNM) specification
+* Appendix D: WIS2 Topic Hierarchy
+* Appendix E: WIS2 Notification Message
+* Appendix F: WMO Core Metadata Profile 2

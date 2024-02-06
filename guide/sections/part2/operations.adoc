@@ -21,7 +21,7 @@ Both WIS2 and SWIM support the similar outcomes relating to data
 exchange. However, there are differences in both approach and
 implementation.
 
-Specifications for WIS2 are defined in the Manual on WIS (WMO-No.
+Specifications for WIS2 are defined in the _Manual on WIS_ (WMO-No.
 1060), Volume II, and further elaborated in this Guide. Specifications
 for SWIM will be defined in the Procedures for Air Navigation Services –
 Information Management (PANS-IM) (ICAO Doc. 10199)footnote:[The PANS-IM is expected to available on ICAO NET by July 2024 and become applicable in November 2024. Information provided in herein is based on best understanding of draft proposals from ICAO.].
@@ -85,7 +85,7 @@ to SWIM.
 ====== Data types and format
 
 Specifications for aeronautical meteorological information are provided in ICAO
-Annex 3 and other relevant guidance materials. IWXXM format (FM 205)footnote:[IWXXM (FM205) is defined in the Manual on Codes (WMO-No. 306), Volume I.3 – International Codes] 
+Annex 3 and other relevant guidance materials. IWXXM format (FM 205)footnote:[IWXXM (FM205) is defined in the _Manual on Codes_ (WMO-No. 306), Volume I.3 – International Codes] 
 is to be used for encoding aeronautical meteorological information in SWIM.
 
 ====== Publishing meteorological data via WIS2
@@ -93,7 +93,7 @@ is to be used for encoding aeronautical meteorological information in SWIM.
 For meteorological data to be published from WIS2 to SWIM, the organisation
 responsible for this provision will need to operate a WIS2 Node and
 comply with the pertinent Technical Regulations as specified in the
-Manual on WIS (WMO-No. 1060), Volume II. Onward distribution of the
+_Manual on WIS_ (WMO-No. 1060), Volume II. Onward distribution of the
 data by the Message Broker over SWIM will be handled by the
 respective Information Service Provider in accordance with ICAO
 Standards and Recommended Practices (SARPs).
@@ -105,7 +105,7 @@ provided by a separate operational unit, or there may be a requirement to easily
 distinguish between data for SWIM and any other meteorological data.
 
 Where a new WIS2 Node is needed, the responsible organisation must
-establish a new WIS2 Node and register it with WMO Secretariat. For more information, see section 2.6.x Registration and decommissioning of a WIS2 Node (TODO CROSSREF).
+establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <<registration_and_decommissioning_of_a_wis2_node>>.
 
 Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it shall be packaged into
@@ -154,7 +154,7 @@ The responsible organisation must publish discovery metadata for each dataset. N
  
 
 For more information on the WMO Core Metadata Profile version 2, see the
-Manual on WIS (WMO-No. 1060), Volume II, Appendix F (TODO CROSSREF).
+_Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F.
 
 On receipt of new data, the WIS2 Node will:
 
@@ -171,8 +171,8 @@ refers to the data resource using this URLfootnote:[Where the data
 resource does not exceed 4Kb, it may additionally be embedded in the
 notification message.].
 
-For more details on the WIS2 Notification Message, see the Manual on WIS
-(WMO-No. 1060), Volume II, Appendix F (TODO CROSSREF).
+For more details on the WIS2 Notification Message, see the _Manual on WIS_
+(WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.
 
 The notification message must be published to the proper topic on the
 message broker. WIS2 defines a standard topic hierarchy to ensure
@@ -187,8 +187,8 @@ aviation-specific notifications. See the example below:
 origin/a/wis2/{centre-id}/data/recommended/weather/aviation/qvaci
 ----
 
-For more details of the WIS Topic Hierarchy, see Manual on WIS (WMO-No.
-1060), Volume II, Appendix E (TODO CROSSREF).
+For more details of the WIS Topic Hierarchy, see the _Manual on WIS_ (WMO-No.
+1060), Volume II, Appendix D: WIS2 Topic Hierarchy.
 
 WIS Global Brokers subscribe to the local message brokers of WIS2 Nodes
 and republish notification messages for global distribution.
