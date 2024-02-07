@@ -2,12 +2,6 @@
 
 As a Data Publisher with authoritative Earth system data that you want to share with the WMO community you should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
- (TODO - MAYBE; add Guidance on "coarser resource publication with interactive links" - see WNM issue #41)
-
- (TODO - MAYBE; add Guidance on linking to external provenance objects - see WCMP2 issue #161)
-
- (TODO - MAYBE; add Guidance on referencing WIGOS stations and observing networks - see WCMP2 issue #19)
-
 ==== How to get started
 
 The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see <<_why_are_datasets_so_important?>>), and whether it is *Core* or *Recommended* data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).
