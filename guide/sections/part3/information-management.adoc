@@ -156,8 +156,6 @@ Information is published on the WMO Information System through the creation of d
 
 Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the _Manual on WIS_ (WMO-No. 1060), Volume II. Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.
 
-Note: Further information on the Key Performance indicators can be found on the WMO Community Website at https://community.wmo.int/activity-areas/wis/wis-metadata-kpis
-
 The Web standards and protocols used should be adequately documented to enable users to find and retrieve the information. This should be possible both manually and automatically via machine-to-machine interfaces and should be standardized between centres.
 
 Updates to the information exchanged on the WIS, including the publication of new information or the cessation of previously exchanged information, is published in the WMO Operational Newsletter.
