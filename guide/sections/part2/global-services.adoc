@@ -200,7 +200,7 @@ wis2-gdc provides functionality required Global Discovery Catalogue, providing t
 * discovery metadata download the Global Cache
 * discovery metadata validation, ingest and publication
 * WCMP2 compliance
-* quality assessment (key performance indicators TODO CROSSREF - WCMP2 KPIs)
+* quality assessment (KPIs)
 * OGC API - Records - Part 1: Core compliance
 * metrics reporting
 * implementation of metrics
