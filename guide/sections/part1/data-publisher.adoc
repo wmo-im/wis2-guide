@@ -47,7 +47,7 @@ The following sections cover specific considerations relating to publishing data
 
 ===== Data formats and encodings
 
-Whether providing data as files or through interactive APIs you need to decide which encodings (aka. _data formats_) to use. WMO Technical Regulations may require that data is encoded in particular formats. For example, synoptic observations should be encoded in BUFR. The _Manual on Codes_ (WMO-No. 306) provides details of data formats formally approved for use in WMO. However, Technical Regulations don’t cover all data sharing requirements. In such cases, you should select data formats that are open, non-proprietary, and widely adopted and understood in their target user community. In this context, ‘open’ means that anyone can use the format without needing a license to do so – either to encode data in that format or write software that understands the format.
+Whether providing data as files or through interactive APIs you need to decide which encodings (aka. _data formats_) to use. WMO Technical Regulations may require that data is encoded in particular formats. For example, synoptic observations must be encoded in BUFR. The _Manual on Codes_ (WMO-No. 306) provides details of data formats formally approved for use in WMO. However, Technical Regulations don’t cover all data sharing requirements. In such cases, you should select data formats that are open, non-proprietary, and widely adopted and understood in their target user community. In this context, ‘open’ means that anyone can use the format without needing a license to do so – either to encode data in that format or write software that understands the format.
 
 ===== Providing data as files
 

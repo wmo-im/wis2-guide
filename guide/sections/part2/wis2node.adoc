@@ -84,9 +84,7 @@ A WIS2 Node must be able to:
   * Receive metadata publication errors from the Global Data Catalogue
   * Provide metadata with topics to Global Brokers
 
-===== Provision of system performance metrics
-
-WIS2 Nodes should provide annual performance metrics to their GISC.
+===== System performance metrics
 
 If contacted by the Global Montior via GISC for a performance issue, the WIS2 Node should provide metrics to the GISC and Global Monitor when service is restored to indicate resolution of the issue.
 

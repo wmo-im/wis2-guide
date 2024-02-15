@@ -65,7 +65,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 
 Furthermore, the WMO Unified Data Policy encourages attribution of the source of the data in all cases. In this way, credit is given to those who have expended effort and resources in collecting, curating, generating, or processing the data. Attribution provides visibility of who is using data which, for many organizations, provides necessary evidence to justify continued provision of and updates to the data.
 
-Details of the applicable WMO data policy plus any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.
+Details of the applicable WMO data policy and any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.
 
 The _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2, section 7.1.17. Properties / WMO data policy provides details on how data policy, rights, and/or licenses are described in the discovery metadata.
 
