@@ -1,5 +1,0 @@
-== Metadata
-
-include https://github.com/wmo-im/wcmp2
-include https://github.com/wmo-im/wis2-notification-message
-include https://github.com/wmo-im/wis2-topic-hierarchy
