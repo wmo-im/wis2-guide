@@ -41,7 +41,7 @@ consumer discovers a service (or service provider) and determines what
 resources (i.e., information) is available therein
 
 |Technical protocols: MQTT, HTTP |Technical protocols:
-AMQPfootnote:[AMQP 1.0 is proposed in the draft PANS-IM]
+AMQPfootnote:[AMQP 1.0 is one of the protocols proposed in the draft PANS-IM]
 |===
 
 An organisation (e.g., the National Meteorological Service) that is
@@ -51,9 +51,9 @@ capability on behalf of a group of countries or territories.
 
 This section of the Guide outlines how such an organisation may efficiently fulfil the requirements in providing required data/information to the two systems. It proposes an
 interoperability approach between WIS2 and SWIM where meteorological
-data published via WIS2 is automatically propagated to SWIM.
+data published via WIS2 can be automatically propagated to SWIM.
 
-This Guide covers only how data from WIS2 is published into SWIM.
+This Guide covers only how data from WIS2 can be published into SWIM.
 Consumption of information from SWIM services is not in scope.
 
 This Guide also does not cover implementation details of the SWIM
@@ -75,10 +75,10 @@ Aeronautical Fixed Service (AFS) is also out of scope as they are solely defined
 
 The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):
 
-.Schematic of interoperability approach
+.Schematic of an interoperability approach
 image::images/wis2-to-swim-temp.png[Schematic of interoperability approach]
 
-The Gateway operates as an "adapter" between WIS2 and SWIM, pulling
+The Gateway can operate as an "adapter" between WIS2 and SWIM by pulling
 the requisite meteorological data from WIS2 and re-publishing it
 to SWIM.
 
@@ -94,7 +94,7 @@ For meteorological data to be published from WIS2 to SWIM, the organisation
 responsible for this provision will need to operate a WIS2 Node and
 comply with the pertinent Technical Regulations as specified in the
 _Manual on WIS_ (WMO-No. 1060), Volume II. Onward distribution of the
-data by the Message Broker over SWIM will be handled by the
+data by the Message Broker over SWIM can be handled by the
 respective Information Service Provider in accordance with ICAO
 Standards and Recommended Practices (SARPs).
 
@@ -105,11 +105,11 @@ provided by a separate operational unit, or there may be a requirement to easily
 distinguish between data for SWIM and any other meteorological data.
 
 Where a new WIS2 Node is needed, the responsible organisation must
-establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <<registration_and_decommissioning_of_a_wis2_node>>.
+establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <<Implementation and operation of a WIS2 Node>>.
 
 Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it shall be packaged into
-“Datasets”. The data should be grouped at the country / territory
+“datasets”. The data should be grouped at the country / territory
 level; i.e., datasets should be published for a given country /
 territory, one for each datatype (e.g.,
 aerodrome observation, aerodrome forecast and quantitative volcanic ash
@@ -134,9 +134,7 @@ Caches enable highly available, low-latency distribution of Core Data.
 Given that Core Data is provided on a free and unrestricted basis,
 Global Caches *do not* implement any data access control.].
 
-The WMO Unified Data Policy requires transparency on the conditions of use for Recommended Data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated.
-
-The responsible organisation must publish discovery metadata for each dataset. Note that:
+The WMO Unified Data Policy requires transparency on the conditions of use for Recommended Data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset as describe below.
 
 * The attribute ``wmo:dataPolicy`` should be set to ``recommended``.
 * Information about conditions of use should be specified using a ``rights`` property (see example below) and/or a ``link`` object with relation ``license``.
@@ -199,7 +197,7 @@ least 24 hours is recommended.
 
 ====== Gateway implementation
 
-The relationships between the Gateway component, WIS2 and SWIM are
+The potential interactions between the Gateway component, WIS2 and SWIM are
 illustrated in the figure belowfootnote:[Note that the figure simplifies
 the transmission of discovery metadata from WIS2 Node to the Global
 Discovery Catalogue. In reality, the WIS2 Node publishes notification
@@ -207,9 +205,7 @@ messages advertising the availability of new discovery metadata resource
 at a given URL. These messages are republished by the Global Broker. The
 Global Discovery Catalogue subscribes to a Global Broker and downloads
 the discovery metadata from the WIS2 Node using the URL supplied in the
-message].
-
-These interactions are illustrated in the below figure:
+message.]
 
 .Interactions between the Gateway and components of WIS2 and SWIM
 image::images/wis2-to-swim-interaction-temp.png[Interactions between the Gateway and components of WIS2 and SWIM]
@@ -273,7 +269,7 @@ the organisational governance in place.
 
 ====== SWIM service
 
-The SWIM aviation weather information service comprises a Message Broker
+The SWIM aviation weather information service may comprise of a Message Broker
 component which implements the AMQP 1.0 messaging standardfootnote:[AMQP
 1.0: https://www.amqp.org/resources/specifications].
 
