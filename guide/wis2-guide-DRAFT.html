@@ -2578,10 +2578,10 @@ capability on behalf of a group of countries or territories.</p>
 <div class="paragraph">
 <p>This section of the Guide outlines how such an organisation may efficiently fulfil the requirements in providing required data/information to the two systems. It proposes an
 interoperability approach between WIS2 and SWIM where meteorological
-data published via WIS2 is automatically propagated to SWIM.</p>
+data published via WIS2 can be automatically propagated to SWIM.</p>
 </div>
 <div class="paragraph">
-<p>This Guide covers only how data from WIS2 is published into SWIM.
+<p>This Guide covers only how data from WIS2 can be published into SWIM.
 Consumption of information from SWIM services is not in scope.</p>
 </div>
 <div class="paragraph">
@@ -2624,10 +2624,10 @@ Aeronautical Fixed Service (AFS) is also out of scope as they are solely defined
 <div class="content">
 <img src="images/wis2-to-swim-temp.png" alt="Schematic of interoperability approach">
 </div>
-<div class="title">Figure 1. Schematic of interoperability approach</div>
+<div class="title">Figure 1. Schematic of an interoperability approach</div>
 </div>
 <div class="paragraph">
-<p>The Gateway operates as an "adapter" between WIS2 and SWIM, pulling
+<p>The Gateway can operate as an "adapter" between WIS2 and SWIM by pulling
 the requisite meteorological data from WIS2 and re-publishing it
 to SWIM.</p>
 </div>
@@ -2647,7 +2647,7 @@ is to be used for encoding aeronautical meteorological information in SWIM.</p>
 responsible for this provision will need to operate a WIS2 Node and
 comply with the pertinent Technical Regulations as specified in the
 <em>Manual on WIS</em> (WMO-No. 1060), Volume II. Onward distribution of the
-data by the Message Broker over SWIM will be handled by the
+data by the Message Broker over SWIM can be handled by the
 respective Information Service Provider in accordance with ICAO
 Standards and Recommended Practices (SARPs).</p>
 </div>
@@ -2660,12 +2660,12 @@ distinguish between data for SWIM and any other meteorological data.</p>
 </div>
 <div class="paragraph">
 <p>Where a new WIS2 Node is needed, the responsible organisation must
-establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <a href="#registration_and_decommissioning_of_a_wis2_node">[registration_and_decommissioning_of_a_wis2_node]</a>.</p>
+establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <a href="#_implementation_and_operation_of_a_wis2_node">Implementation and operation of a WIS2 Node</a>.</p>
 </div>
 <div class="paragraph">
 <p>Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it shall be packaged into
-“Datasets”. The data should be grouped at the country / territory
+“datasets”. The data should be grouped at the country / territory
 level; i.e., datasets should be published for a given country /
 territory, one for each datatype (e.g.,
 aerodrome observation, aerodrome forecast and quantitative volcanic ash
@@ -2695,10 +2695,7 @@ and prediction efforts.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>The WMO Unified Data Policy requires transparency on the conditions of use for Recommended Data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated.</p>
-</div>
-<div class="paragraph">
-<p>The responsible organisation must publish discovery metadata for each dataset. Note that:</p>
+<p>The WMO Unified Data Policy requires transparency on the conditions of use for Recommended Data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset as describe below.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2785,11 +2782,8 @@ least 24 hours is recommended.</p>
 <div class="sect5">
 <h6 id="_gateway_implementation"><a class="anchor" href="#_gateway_implementation"></a>Gateway implementation</h6>
 <div class="paragraph">
-<p>The relationships between the Gateway component, WIS2 and SWIM are
-illustrated in the figure below<sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnotedef_57" title="View footnote.">57</a>]</sup>.</p>
-</div>
-<div class="paragraph">
-<p>These interactions are illustrated in the below figure:</p>
+<p>The potential interactions between the Gateway component, WIS2 and SWIM are
+illustrated in the figure below<sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnotedef_57" title="View footnote.">57</a>]</sup></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2872,7 +2866,7 @@ the organisational governance in place.</p>
 <div class="sect5">
 <h6 id="_swim_service"><a class="anchor" href="#_swim_service"></a>SWIM service</h6>
 <div class="paragraph">
-<p>The SWIM aviation weather information service comprises a Message Broker
+<p>The SWIM aviation weather information service may comprise of a Message Broker
 component which implements the AMQP 1.0 messaging standard<sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnotedef_62" title="View footnote.">62</a>]</sup>.</p>
 </div>
 <div class="paragraph">
@@ -3571,7 +3565,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_50">50</a>. The PANS-IM is expected to available on ICAO NET by July 2024 and become applicable in November 2024. Information provided in herein is based on best understanding of draft proposals from ICAO.
 </div>
 <div class="footnote" id="_footnotedef_51">
-<a href="#_footnoteref_51">51</a>. AMQP 1.0 is proposed in the draft PANS-IM
+<a href="#_footnoteref_51">51</a>. AMQP 1.0 is one of the protocols proposed in the draft PANS-IM
 </div>
 <div class="footnote" id="_footnotedef_52">
 <a href="#_footnoteref_52">52</a>. IWXXM (FM205) is defined in the <em>Manual on Codes</em> (WMO-No. 306), Volume I.3 – International Codes
@@ -3589,7 +3583,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_56">56</a>. Where the data resource does not exceed 4Kb, it may additionally be embedded in the notification message.
 </div>
 <div class="footnote" id="_footnotedef_57">
-<a href="#_footnoteref_57">57</a>. Note that the figure simplifies the transmission of discovery metadata from WIS2 Node to the Global Discovery Catalogue. In reality, the WIS2 Node publishes notification messages advertising the availability of new discovery metadata resource at a given URL. These messages are republished by the Global Broker. The Global Discovery Catalogue subscribes to a Global Broker and downloads the discovery metadata from the WIS2 Node using the URL supplied in the message
+<a href="#_footnoteref_57">57</a>. Note that the figure simplifies the transmission of discovery metadata from WIS2 Node to the Global Discovery Catalogue. In reality, the WIS2 Node publishes notification messages advertising the availability of new discovery metadata resource at a given URL. These messages are republished by the Global Broker. The Global Discovery Catalogue subscribes to a Global Broker and downloads the discovery metadata from the WIS2 Node using the URL supplied in the message.
 </div>
 <div class="footnote" id="_footnotedef_58">
 <a href="#_footnoteref_58">58</a>. WIS2 recommends that one subscribes to notifications from a Global Broker. However, where both Gateway and WIS Node are operated by the same organisation, it may be advantageous to subscribe directly to the local message broker of WIS2 Node, e.g., to reduce latency.
@@ -3624,7 +3618,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-15 02:01:50 UTC
+Last updated 2024-02-15 02:02:04 UTC
 </div>
 </div>
 </body>
