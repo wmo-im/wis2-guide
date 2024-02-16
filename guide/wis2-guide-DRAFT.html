@@ -1952,7 +1952,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue connected to at least one (1) Global Broker</p>
 </li>
 <li>
-<p>Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all WIS2 Nodes and all other Global Services</p>
+<p>Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all other Global Services</p>
 </li>
 </ul>
 </div>
@@ -2116,16 +2116,16 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.</p>
 </li>
 <li>
-<p>A Global Broker instance subscribes to messages from WIS Centres and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.</p>
+<p>A Global Broker instance subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.</p>
 </li>
 <li>
-<p>Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.</p>
+<p>Every WIS2 Node or Global Service must have subscriptions from at least two Global Brokers.</p>
 </li>
 <li>
 <p>For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.</p>
 </li>
 <li>
-<p>When subscribing to messages from WIS Centres and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.</p>
+<p>When subscribing to messages from WIS2 Node and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.</p>
 </li>
 <li>
 <p>A Global Broker is built around two software components:</p>
@@ -2231,13 +2231,13 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.</p>
 </li>
 <li>
-<p>The default behaviour for a Global Cache is to cache all data published under the <code>data/+/core</code> topic. A data publisher may indicate that data should not be cached by adding the <code>"cache": false</code> assertion in the WIS Notification Message.</p>
+<p>The default behaviour for a Global Cache is to cache all data published under the <code>origin/a/wis2/data/+/core</code> topic. A data publisher may indicate that data should not be cached by adding the <code>"cache": false</code> assertion in the WIS Notification Message.</p>
 </li>
 <li>
-<p>A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the <code>cache</code> property is set to false and send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.</p>
+<p>A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the <code>cache</code> property is set to false and send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and their GISC to remedy the issue.</p>
 </li>
 <li>
-<p>If core data is not cached on a Global Cache (that is, if the data is flagged as <code>"cache": false</code> or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the <code>cache/a/wis2/&#8230;&#8203;</code> topic. In this case the message will not be modified.</p>
+<p>If core data is not cached on a Global Cache (that is, if the data is flagged as <code>"cache": false</code> or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the <code>cache/a/wis2/&#8230;&#8203;</code> topic. In this case the message id will be changed and the rest of the message will not be modified.</p>
 </li>
 <li>
 <p>A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.</p>
@@ -2273,7 +2273,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <div class="ulist">
 <ul>
 <li>
-<p>Republish the unmodified message at topic <code>cache/a/wis2/&#8230;&#8203;</code> matching <code>+/a/wis2/&#8230;&#8203;</code> where the original message has been received.</p>
+<p>Republish the message at topic <code>cache/a/wis2/&#8230;&#8203;</code> matching <code>+/a/wis2/&#8230;&#8203;</code> where the original message has been received after having updated the id of the message.</p>
 </li>
 </ul>
 </div>
@@ -2311,7 +2311,7 @@ property and for the well-being of all nations. Core data is provided on a free 
 <p>Republish the modified message to topic <code>cache/a/wis2/&#8230;&#8203;</code> matching the <code>+/a/wis2/&#8230;&#8203;</code> where the original message has been received.</p>
 </li>
 <li>
-<p>The metric <code>wmo_wis2_gc_downloaded_total</code> will be increased by 1. The metric <code>wmo_wis2_gc_dataserver_last_download_timestamp_seconds</code> will be updated with the timestamp (in seconds) of the last successful download.</p>
+<p>The metric <code>wmo_wis2_gc_downloaded_total</code> will be increased by 1. The metric <code>wmo_wis2_gc_dataserver_last_download_timestamp_seconds</code> will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node or Global Cache.</p>
 </li>
 </ul>
 </div>
@@ -2506,11 +2506,13 @@ property and for the well-being of all nations. Core data is provided on a free 
 </li>
 <li>
 <p>As a convention Global Monitor centre-id will be <code>tld-{centre-name}-global-monitor</code>.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.</pre>
+</div>
+</div>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The Global Monitor is the entry point for users and provide the monitoring results. The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.</p>
 </div>
 </div>
 </div>
@@ -3631,7 +3633,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-16 12:12:22 UTC
+Last updated 2024-02-16 12:14:23 UTC
 </div>
 </div>
 </body>
