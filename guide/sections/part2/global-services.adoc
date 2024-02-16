@@ -146,7 +146,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 **** Wait until the data becomes available at the endpoint.
 **** Modify the message identifier and the canonical link's ``href`` of the received message. Leave all other fields untouched.
 **** Republish the modified message to topic ``cache/a/wis2/...`` matching the ``+/a/wis2/...`` where the original message has been received.
-**** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1. The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node og Global Cache.
+**** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1. The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node or Global Cache.
 *** else
 **** Drop the messages for data already present on the Cache.
 
