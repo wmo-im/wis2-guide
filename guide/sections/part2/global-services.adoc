@@ -9,7 +9,7 @@ Depending on the nature of the Global Service, the following is considered to be
 * Three (3) Global Brokers: Each Global Broker connected to at least two (2) other Global Brokers
 * Three (3) Global Caches: Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
 * Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue connected to at least one (1) Global Broker
-* Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all WIS2 Nodes and all other Global Services
+* Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all other Global Services
 
 In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
@@ -79,10 +79,10 @@ In the following sections and for each Global Service, a set of metrics is defin
 ===== Technical considerations
 
 * As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
-* A Global Broker instance subscribes to messages from WIS Centres and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
-* Every WIS Centre or Global Service must have subscriptions from at least two Global Brokers.
+* A Global Broker instance subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
+* Every WIS2 Node or Global Service must have subscriptions from at least two Global Brokers.
 * For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.
-* When subscribing to messages from WIS Centres and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.
+* When subscribing to messages from WIS2 Node and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.
 
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
@@ -120,9 +120,9 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Cache will temporarily cache all resources published on the ``metadata`` topic. A Global Discovery Catalogue will subscribe to notifications about publication of new or updated metadata, download the metadata record from the Global Cache and insert it into the catalogue. A Global Discovery Catalogue will also publish a metadata record archive each day containing the complete content of the catalogue and advertise its availability with a notification message. This resource will also be cached by a Global Cache.
 * A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file to which the URL points. Apart from the URL it is transparent to the Data Consumers from which Global Cache they download the data. There is no need to download the same Data Object from multiple Global Caches. The data id contained within the notification messages is used by Data Consumers and Global Services to detect such duplicates.
 * There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-* The default behaviour for a Global Cache is to cache all data published under the ``data/+/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS Notification Message.
-* A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS centre and their GISC to remedy the issue.
-* If core data is not cached on a Global Cache (that is, if the data is flagged as ``"cache": false`` or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the ``cache/a/wis2/...`` topic. In this case the message will not be modified.
+* The default behaviour for a Global Cache is to cache all data published under the ``origin/a/wis2/data/+/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS Notification Message.
+* A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and their GISC to remedy the issue.
+* If core data is not cached on a Global Cache (that is, if the data is flagged as ``"cache": false`` or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the ``cache/a/wis2/...`` topic. In this case the message id will be changed and the rest of the message will not be modified.
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
 * A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
 * As a convention Global Cache centre-id will be ``tld-{centre-name}-global-cache``.
@@ -135,7 +135,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Cache shall retain the data and metadata they receive for a minimum period of 24 hours. Requirements relating varying retention times for different types of data may be added later.
 * For messages received on topic ``++origin/a/+/data/core/#++`` or ``++cache/a/+/data/core/#++``, a Global Cache shall:
 ** If the message contains the property ``"properties.cache": false``
-*** Republish the unmodified message at topic ``cache/a/wis2/...`` matching ``+/a/wis2/...`` where the original message has been received.
+*** Republish the message at topic ``cache/a/wis2/...`` matching ``+/a/wis2/...`` where the original message has been received after having updated the id of the message.
 ** else
 *** Maintain a list of data_ids already downloaded.
 *** Verify if the message points to new or updated data by comparing the pubtime value of the notification message with the list of data_ids.
@@ -146,7 +146,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 **** Wait until the data becomes available at the endpoint.
 **** Modify the message identifier and the canonical link's ``href`` of the received message. Leave all other fields untouched.
 **** Republish the modified message to topic ``cache/a/wis2/...`` matching the ``+/a/wis2/...`` where the original message has been received.
-**** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1. The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download.
+**** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1. The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node og Global Cache.
 *** else
 **** Drop the messages for data already present on the Cache.
 
@@ -217,4 +217,4 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 * The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
 * As a convention Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
 
-The Global Monitor is the entry point for users and provide the monitoring results. The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+ The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
