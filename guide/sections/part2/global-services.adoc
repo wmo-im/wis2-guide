@@ -10,6 +10,7 @@ Depending on the nature of the Global Service, the following is considered to be
 * Three (3) Global Caches: Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
 * Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue connected to at least one (1) Global Broker
 * Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all other Global Services
+* One (1) Global Replay: Each Global Replay connected to at least one (1) Global Broker
 
 In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
@@ -155,6 +156,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Cache should make sure that data is downloaded in parallel and downloads are not blocking each other
 
 * The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. It values will be 1 when the endpoint is up and 0 otherwise.
+* The metric ``wmo_wis2_gc_last_metadata`` will reflect the datetime (in RFC3339 format) of the last metadata resource processed by a given centre.
 
 ==== Global Discovery Catalogue
 
@@ -167,6 +169,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 ** Searchable Catalog - Filtering (Deployment)
 ** JSON (Building Block)
 ** HTML (Building Block)
+* A Global Discovery Catalogue shall subscribe to the topic ``++origin/a/wis2/+/metadata/#++``.
 * The Global Discovery Catalogue will make discovery metadata available via the collection identifier of `wis2-discovery-metadata`.
 * The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.
 * The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).
@@ -185,6 +188,7 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 * A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
 * A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.
+* A Global Discovery Catalogue may query a Global Replay for metadata messages published and process those messages to insert/update/delete WCMP2 records, for downtimes of less than 24 hours.
 * As a convention Global Discovery Catalogue centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
 
@@ -194,10 +198,10 @@ To provide a Global Discovery Catalogue, members may use whichever software comp
 
 To assist Members participation in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation is made available for download and use.  wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-wis2-gdc provides functionality required Global Discovery Catalogue, providing the following technical functions:
+wis2-gdc provides functionality required for the Global Discovery Catalogue, providing the following technical functions:
 
 * discovery metadata subscription and publication from the Global Broker
-* discovery metadata download the Global Cache
+* discovery metadata download from the Global Cache
 * discovery metadata validation, ingest and publication
 * WCMP2 compliance
 * quality assessment (KPIs)
@@ -218,3 +222,38 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 * As a convention Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
 
  The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
+
+==== Global Replay
+
+===== Technical considerations
+
+* The Global Replay provides Global Services and Data Consumers with a mechanism to search and query for notification messages of interest.
+* The Global Discovery Catalogue implements the OGC API – Features – Part 1: Core standardfootnote:[OGC-API Features - Part 1 TODO ADD LINK], adhering to the following conform    ance classes and their dependencies.
+** TODO: add Requirements classes
+** JSON (Building Block)
+* A Global Replay shall subscribe to the topics `+origin/a/wis2/#+` and `+cache/a/wis2/#+`.
+* The Global Replay will make notification messages available via the collectio identifier of `wis2-notification-messages`.
+* A single Global Replay instance is sufficient for WIS2.
+* Multiple Global Replay instances may be deployed for resilience.
+* Global Replay instances operate independently of each other; each Global Replay instance will hold notification messages according to the required retention period.  Global Replays do not need to synchronise between themselves.
+* A Global Replay is populated with notification messages from a Global Broker instance.
+* A Global Replay should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Replay instance will discard duplicate messages as needed.
+* A Global Replay will validate notification messages against the WIS Notification Message (WNM).  Valid WIS Notification Messages will be ingested into the index.  Invalid or malformed notification messages will be discarded. TODO should we validate WNM? or moot point?validate
+* A Global Replay will add a property called ``properties.topic`` to identify the topic from the which the notification message was published.
+* A Global Replay will remove notification messages after the required retention period.
+* As a convention Global Replay centre-id will be ``tld-{centre-name}-global-replay``.
+
+===== Global Replay reference implementation: wis2-grep
+
+To provide a Global Replay, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
+
+To assist Members participation in WIS2, a free and open-source Global Replay Reference Implementation is made available for download and use.  wis2-grep builds on mature and robust free and open-source software components that are widely adopted for operational use.
+
+wis2-grep provides functionality required for the Global Replay, providing the following technical functions:
+
+* notification messages subscription and publication from the Global Broker
+* notification message validation, ingest and publication (TODO: should we validate or not?)
+* WNM compliance (TODO: should we validate or not?)
+* OGC API - Features - Part 1: Core compliance
+
+wis2-grep is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-grep.
