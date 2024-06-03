@@ -2,7 +2,7 @@
 
 ==== Interoperability with external systems
 
-The WIS2 priciples enable lowering the barrier to weather/climate/water data for WMO members.  Lowering the barrier is driven by **international standards**
+The WIS2 principles enable lowering the barrier to weather/climate/water data for WMO members.  Lowering the barrier is driven by **international standards**
 for data discovery, access, and visualization.  In addition to Member benefits, a by-product of utilizing standards is being able to provide
 the same data and access mechanisms to external systems at no extra cost of implementation.
 
