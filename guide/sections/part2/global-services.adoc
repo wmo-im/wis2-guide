@@ -52,7 +52,7 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 ===== Service levels, performance indicators, and fair-usage policies
 * Each WIS Centre operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.
 * All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.
-* Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
+* Each Global Service should aim at achieving at least 99.5% availability of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
 * A Global Broker:
 ** should support a minimum of 200 WIS2 Nodes or Global Services
 ** should support a minimum of 1000 subscribers.
