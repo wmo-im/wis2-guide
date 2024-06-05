@@ -52,9 +52,9 @@ The Centre Identifier specification says that larger organisations operating mul
 * ``uk-metoffice-vaac``
 * ``uk-metoffice-global-cache``  
  
-Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are long-term durable. Appending ```-test`` may be used to designate test WIS Nodes.
- 
-Appending “-test” may be used to designate test WIS Nodes.
+Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are long-term durable.
+
+Appending ``-test`` may be used to designate test WIS Nodes.
 
 ===== Authentication, authorization, and access control for a WIS2 Node
 
