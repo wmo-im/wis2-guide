@@ -1,16 +1,16 @@
-=== Data consumer
+=== 1.2 Data consumer
 
 As a data consumer wanting to use data published via WIS2 you should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
-==== How to search the Global Discovery Catalogue to find Datasets
+==== 1.2.1 How to search the Global Discovery Catalogue to find Datasets
 
 The first step to using data published via WIS2 is to determine which dataset or datasets contains the data that is needed. To do this, a data consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see Manual on WIS, Volume II – Appendix F: WMO Core Metadata Profile). A data consumer may discover a dataset using keywords, geographic area of interest, temporal information, or free text. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a data consumer can assess and evaluate their interest in accessing/downloading data associated with the dataset record.
 
-A key component of dataset records in the Global Discovery Catalogue is that of "actionable" links. A dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications (see 1.2.2 How to subscribe to notifications about availability of new data) about the data, or an API, or an offline archive retrieval service.
+A key component of dataset records in the Global Discovery Catalogue is that of "actionable" links. A dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications (see <<1.2.2 How to subscribe to notifications about availability of new data>>) about the data, or an API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see 2.4.4 Global Discovery Catalogue). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
+The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <<2.4.4 Global Discovery Catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
 
-==== How to subscribe to notifications about availability of new data
+==== 1.2.2 How to subscribe to notifications about availability of new data
 
 WIS2 provides notifications about updates to Datasets; for example, when a new observation record from an automatic weather station is added to a Dataset of surface observations. Notifications are published on message brokers. Where Data Consumers need to use data rapidly once it has been published (e.g., for input to a weather prediction model), they should subscribe to one or more Global Broker to get notifications messages using MQTT protocolfootnote:[Subscribing to notifications about newly available data means that you don't need to continually to poll the data server to check for updates.]
 
@@ -29,7 +29,7 @@ Notifications from WIS2 Nodes and Global Caches are published on different topic
 
 As per clause 3.2.13 of the Manual on WIS, Volume II, data consumers should access core data from the Global Caches. Consequently, they need to subscribe to the cache topic hierarchy to receive the notifications from Global Caches, each of which provides a link (that is, URL) to download from the respective Global Cache’s data server.
 
-==== How to use a notification message to decide whether to download data
+==== 1.2.3 How to use a notification message to decide whether to download data
 
 On receipt of a notification message, a data consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. For details of the specification, see the Manual on WIS, Volume II – Appendix E: WIS2 Notification Message.
 
@@ -45,17 +45,17 @@ A notification message also provides a small amount of metadata about the data o
 
 The notification message should also include the metadata identifier for the dataset to which the data object belongs. A data consumer can use the metadata identifier to search the Global Discovery Catalogue and discover more about the data – in particular, whether there are any conditions on the use of this data.
 
-==== How to download data
+==== 1.2.4 How to download data
 
 Links to where data can be accessed are made available through dataset discovery metadata (via the Global Discovery Catalogue) and/or data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the data consumer. This could include web and/or desktop applications, custom tooling, or other approaches.
 
-A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" ).
+A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" ).``footnote:[IANA Link Relations https://www.iana.org/assignments/link-relations/link-relations.xhtml]).
 
 Where data is provided through an interactive web service, a canonical link that provides a URL where one can directly download a data object may be complemented with an additional link providing the URL for the root of the web service from where one can interact with or query the entire dataset.
 
 If a download link implements access control (for example, the data consumer needs to take some additional action(s) to download the data object), the download link will contain a security object that provides the pertinent information (such as the access control mechanism used and where/how a data consumer would need to register to request access).
 
-==== How to use data
+==== 1.2.5 How to use data
 
 Data is shared on WIS2 in accordance with Resolution 1 (Cg-Ext(2021)). This data policy describes two categories of data: core and recommended.
 
@@ -73,7 +73,7 @@ When using data from WIS2, data consumers:
 * Shall respect the conditions of use applicable to the data as expressed in the WMO data policy, rights statements, or licenses.
 * Should attribute the source of the data.
  
-==== Further reading for data consumers
+==== 1.2.6 Further reading for data consumers
 
 As a data publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
 

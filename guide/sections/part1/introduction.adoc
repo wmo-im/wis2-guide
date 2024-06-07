@@ -1,5 +1,5 @@
 = PART I
-== 1.1 Introduction to WIS2
+=== 1.1 Introduction to WIS2
 
 Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO Members.
 
@@ -9,11 +9,11 @@ WIS2 has been designed to meet the shortfalls of the current WIS and GTS, suppor
 
 WIS2 technical framework is based around three foundational pillars: leveraging open standards, simpler data exchange and cloud-ready solutions.
 
-=== 1.1.1 Leveraging open standards
+==== 1.1.1 Leveraging open standards
 
 WIS2 leverages open standards to take advantage of the ecosystem of technologies available on the market and avoid building bespoke solutions that can force National Meteorological and Hydrological Services (NMHSs) to procure costly systems and equipment. In today’s standards development ecosystem, standards bodies work closely together to minimize overlap and build on one another’s areas of expertise. For example, the World Wide Web Consortium provides the framework of web standards, which the Open Geospatial Consortium and other standards bodies leverage. WIS2 leverages open standards with industry adoption and wider, stable and robust implementations, thus extending the reach of WMO data sharing and lowering the barrier to access by Members.
 
-=== 1.1.2 Simpler data exchange
+==== 1.1.2 Simpler data exchange
 
 WIS2 prioritizes public telecommunication networks, unlike private networks for GTS links. As a result, using the Internet will enable the best choice for a local connection, using commonly available and well-understood technology.
 
@@ -23,9 +23,9 @@ The Web provides access control and security mechanisms that can be utilized to 
 
 WIS2 uses a "publish-subscribe" pattern where users subscribe to a topic to receive new data in real-time. The mechanism is similar to WhatsApp and other messaging applications. It is a reliable and straightforward way to allow the user to choose her data of interest and to receive them reliably.
 
-=== 1.1.3 Cloud-ready solutions
+==== 1.1.3 Cloud-ready solutions
 
-The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members. 
+The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members.
 
 WIS2 encourages WMO centres to adopt cloud technologies where appropriate to meet their users' needs. While WMO technical regulations will not mandate cloud services, WIS2 will promote a gradual adoption of cloud technologies that provide the most effective solution.
 
@@ -33,7 +33,7 @@ The cloud-based infrastructure allows easy portability of technical solutions, e
 
 It should be clear that hosting data and services on the cloud does not affect data ownership. Even in a cloud environment, organizations retain ownership of their data, software, configuration and change management as if they were hosting their infrastructure. As a result, data authority and provenance stay with the organization, and the cloud is simply a technical means to publish the data.
 
-=== 1.1.4 Why are datasets so important?
+==== 1.1.4 Why are datasets so important?
 
 WMO enables the international exchange of observations and model data for all Earth system disciplines.
 
