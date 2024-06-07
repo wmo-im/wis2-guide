@@ -17,13 +17,17 @@ WIS2 leverages open standards to take advantage of the ecosystem of technologies
 
 WIS2 prioritizes public telecommunication networks, unlike private networks for GTS links. As a result, using the Internet will enable the best choice for a local connection, using commonly available and well-understood technology.
 
-WIS2 aims to improve the discovery, access and utilization of weather, climate and water data by adopting web technologies proven to provide a truly collaborative platform for a more participatory approach. Data exchange using the Web also facilitates easy access mechanisms. Browsers and search engines allow web users to discover data without specialized software. The Web also enables additional data access platforms, such as desktop Geographical Information Systems (GIS), mobile applications and forecaster workstations. The Web provides access control and security mechanisms that can be utilized to freely share core data as defined by Resolution 1 (Cg-Ext(2021)) and protect the data with more restrictive licensing constraints. Web technologies also allow for authentication and authorization for the provider to retain control of who can access published resources and to request users to accept a license specifying the terms and conditions for using the data as a condition for providing access to them.
+WIS2 aims to improve the discovery, access and utilization of weather, climate and water data by adopting web technologies proven to provide a truly collaborative platform for a more participatory approach. Data exchange using the Web also facilitates easy access mechanisms. Browsers and search engines allow web users to discover data without specialized software. The Web also enables additional data access platforms, such as desktop Geographical Information Systems (GIS), mobile applications and forecaster workstations. 
+
+The Web provides access control and security mechanisms that can be utilized to freely share core data as defined by Resolution 1 (Cg-Ext(2021)) and protect the data with more restrictive licensing constraints. Web technologies also allow for authentication and authorization for the provider to retain control of who can access published resources and to request users to accept a license specifying the terms and conditions for using the data as a condition for providing access to them.
 
 WIS2 uses a "publish-subscribe" pattern where users subscribe to a topic to receive new data in real-time. The mechanism is similar to WhatsApp and other messaging applications. It is a reliable and straightforward way to allow the user to choose her data of interest and to receive them reliably.
 
 === 1.1.3 Cloud-ready solutions
 
-The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members. WIS2 encourages WMO centres to adopt cloud technologies where appropriate to meet their users' needs. While WMO technical regulations will not mandate cloud services, WIS2 will promote a gradual adoption of cloud technologies that provide the most effective solution.
+The cloud provides reliable platforms for data sharing and processing. It reduces the need for expensive local IT infrastructure, which constitutes a barrier to developing effective and reliable data processing workflows for some WMO Members. 
+
+WIS2 encourages WMO centres to adopt cloud technologies where appropriate to meet their users' needs. While WMO technical regulations will not mandate cloud services, WIS2 will promote a gradual adoption of cloud technologies that provide the most effective solution.
 
 The cloud-based infrastructure allows easy portability of technical solutions, ensuring that a system implemented by a specific country can be packaged and deployed easily in other countries with similar needs. In addition, using cloud technologies allows WIS2 to deploy infrastructure and systems efficiently with minimum effort for the NMHSs by shipping ready-made services and implementing consistent data processing and exchange techniques.
 
@@ -43,7 +47,6 @@ Why is this important? The "single agent" (such as a single organization) respon
 
 * All the data should be of the same type (for example, observations from weather stations);
 * All the data should have the same license and/or usage conditions;
-
 * All the data should be subject to the same quality management regime – which may mean that all the data is collected or created using the same processes;
 * All the data should be encoded in the same way (such as using the same data formats and vocabularies);
 * All the data should be accessible using the same protocols – ideally from a single location.
