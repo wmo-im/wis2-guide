@@ -1,4 +1,4 @@
-:title: Draft guidance on technical specifications of WIS2
+:title: Guide to the WMO Information System Volume II (DRAFT)
 :titletext: {title}
 :version: 2024.dev
 :date: {docdate}

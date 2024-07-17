@@ -1,204 +1,203 @@
-=== Information management
+=== 3.1 Information management
 
-==== Introduction
+==== 3.1.1 Introduction
 
-===== Background
+===== 3.1.1.1 Background
 
-The efficient and effective provision of services relying on meteorological, climatological, hydrological and oceanographic information depends on a reliable information infrastructure. This infrastructure should be guided by community best practices and standards, including recommendations and requirements on sourcing, securing, managing, archiving, exchanging, and providing easy access to information. These terms and activities can be grouped under the term "information management" and this part of the Guide aims to provide high-level guidance on those activities. This is done by identifying and describing the fundamental principles of good information management and by highlighting the different stages of the information management lifecycle.
+The efficient and effective provision of services relying on meteorological, climatological, hydrological and oceanographic information depends on a reliable information infrastructure. This infrastructure should be guided by community best practices and standards, including recommendations and requirements on sourcing, securing, managing, archiving, exchanging and providing easy access to information. This part of the Guide aims to provide high-level guidance on these activities, which can be grouped under the term “information management”. This is done by identifying and describing the fundamental principles of good information management and by highlighting the different stages of the information management life cycle.
 
-Note: The term "information" is used in a general sense and includes data and products.
+_Note: The term "information" is used in a general sense and includes data and products._
 
-===== Scope
+===== 3.1.1.2 Scope
 
-High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.
+High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as the specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.
 
-The <<_principles_of_information_management>> are described below. Five focus areas are described in <<_the_information_management_lifecycle>>. These are:
+The <<_principles_of_information_management>> are described below. Five focus areas are described in <<_the_information_management_life_cycle>>. These are: 
 
-. Planning, information creation and acquisition. Creation of information using internal and external data sources and the acquisition of information from various sources.
-. Representation and metadata. Standards to represent metadata, data and information are of primary importance to enable interoperability and long-term usability of the information.
-. Publication and exchange of information. The creation and publication of discovery metadata in a standardized format enabling users to discover, access and retrieve the information.
-. Usage and communication. Publication of guidance material on the use of published information, including on the limitations and suitability of the information and any licensing terms.
-. Storage, archival and disposal. Policies and procedures for business continuity and disaster recovery, as well as retention and disposal.
+1. Planning, information creation and acquisition. The creation of information using internal and external data sources and the acquisition of information from various sources.
+2. Representation and metadata. The use of standards to represent metadata, data and information; This is of primary importance to enable the interoperability and longterm usability of the information.
+3. Publication and exchange of information. The creation and publication of discovery metadata in a standardized format enabling users to discover, access and retrieve the information.
+4. Usage and communication. The publication of guidance material on the use of published information, including on the limitations and suitability of the information and any licensing terms.
+5. Storage, archival and disposal. The policies and procedures for business continuity and disaster recovery, as well as retention and disposal.
 
-===== Intended audience
+===== 3.1.1.3 Intended audience
 
-This guidance is primarily aimed at personnel within WMO centres, with responsibility for planning and undertaking the creation or acquisition, stewardship, exchange and provision of information related to the Earth system.
+This guidance is primarily aimed at personnel within WMO centres, who are responsible for planning and undertaking the creation or acquisition, stewardship, exchange and provision of information related to the Earth system.
 
-Specifically, the guidance has five main target audiences across the information lifecycle:
+Specifically, the guidance has five main target audiences across the information life cycle:
 
-. Information producers or creators (those who produce or acquire the information - they need to ensure the scientific quality of the underpinning information).
-. Information managers (those who manage information).
-. Information providers or publishers (those who publish the information - they are responsible for the provision of the information, and for ensuring that appropriate access is enabled, licensing agreements are in place, etc.).
-. Service providers (those who disseminate the information - they are responsible for ensuring information availability and maintaining capability for easy and secure access to the information).
-. Information consumers (those who utilize the information - they need to understand the restrictions, rights, responsibilities and limitations associated with the information together with the suitability for intended usage or purpose).
+1. Information producers or creators (those who produce or acquire the information) - they need to ensure the scientific quality of the underpinning information;
+2. Information managers (those who manage information);
+3. Information providers or publishers (those who publish the information) - they are responsible for the provision of the information, and for ensuring that appropriate access is enabled, licensing agreements are in place, and so forth;
+4. Service providers (those who disseminate the information) - they are responsible for ensuring information availability and maintaining capability for easy and secure access to the information;
+5. Information consumers (those who utilize the information) - they need to understand the restrictions, rights, responsibilities and limitations associated with the information together with the suitability for the intended usage or purpose.
 
-==== Principles of information management
+==== 3.1.2 Principles of information management
 
-Effective management of information is essential for WMO Centres to deliver operational services and information that is authoritative, seamless, secure and timely. The principles below underpin this management across the full information lifecycle and provide a framework for information management. The principles are independent of information type and are largely independent of technology, they are therefore expected to remain stable over time.
+The effective management of information is essential for WMO centres to deliver operational services and information that is authoritative, seamless, secure and timely. The principles below underpin and provide a framework for information management across the full information life cycle. These principles are independent of the information type and are largely independent of technology; they are therefore expected to remain stable over time life cycle.
 
-===== Principle 1: Information is a valued asset
-* An information asset is information that has value. This value may be related to the cost of generating and collecting the information, a value associated with the immediate use or a value associated with the longer term preservation and subsequent reuse of the information.
-* This value should be recognizable and quantifiable and the asset should have an identifiable lifecycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full lifecycle of the information.
+===== 3.1.2.1  Principle 1: Information is a valued asset
+* An information asset is information that has value. This value may be related to the cost of generating and collecting the information, it may be associated with the immediate use of the information, or it may be associated with the longer -term preservation and subsequent reuse of the information.
+* This value should be recognizable and quantifiable and the asset should have an identifiable life cycle. Risks associated with, and to, an information asset should also be identified. As such, information management must be considered an integral part of a WMO centre’s responsibilities and needs to be adequately resourced over the full life cycle of the information.
 
-===== Principle 2: Information must be managed
+===== 3.1.2.2 Principle 2: Information must be managed
 
-* An information asset must be managed throughout its lifecycle, from creation to use to eventual disposal, in a way that makes it valuable, maximizes its benefits and reflects its value in time and its different uses.
-* Information managers must consider the entire information lifecycle, from identifying needs and business cases to creating, quality assurance, maintenance, reuse, archiving, and disposal. Careful consideration must be given to disposal, ensuring that information is destroyed only when it has ceased to be useful for all categories of users.
+* An information asset must be managed throughout its life cycle, from creation to use to eventual disposal, in a way that makes it valuable, maximizes its benefits and reflects its value in time and its different uses.
+* Information managers must consider the entire information life cycle, from identifying needs and business cases to creation, quality assurance, maintenance, reuse, archival and disposal. Careful consideration must be given to disposal, ensuring that information is destroyed only when it has ceased to be useful for all categories of users.
 * Professionally qualified and adequately skilled staff with clear roles and responsibilities should apply a sound custodianship framework concerning security, confidentiality and other statutory requirements of different types of information.
 
-===== Principle 3: Information must be fit for purpose
+===== 3.1.2.3 Principle 3: Information must be fit for purpose
 
 * Information should be developed and managed in accordance with its function and use for internal and external users.
-* WMO Centres should regularly assess information to ensure that it is fit for its purpose and that processes, procedures, and documentation are adequate.
+* WMO centres should regularly assess information to ensure that it is fit for its purpose and that the related processes, procedures and documentation are adequate.
 * Processes should be consistent with the general provisions and principles of quality management as described in the _WMO Technical Regulations_ (WMO-No. 49).
 
-===== Principle 4: Information must be standardized and interoperable
+===== 3.1.2.4 Principle 4: Information must be standardized and interoperable
 
-* Information must be stored and exchanged in standardized formats to ensure wide usability in the short and long term. It is essential for long-term archiving that information is stored in a form that can be understood and used after several decades.
+* Information must be stored and exchanged in standardized formats to ensure wide usability in the short and longterm. It is essential for longterm archiving that information be stored in a form that can be understood and used after several decades.
 * Standardization is essential for structured information such as dataset definitions and metadata to support interoperability.
-* Interoperability is essential for users to utilize information through different systems and software. Open standards help ensure interoperability with their openness and wide adoption across various communities.
+* Interoperability is essential for users to be able to utilize information through different systems and software. Open standards help ensure interoperability with their openness and wide adoption across various communities.
 * Which standards to use depends on the user community and organizational policies. Interoperability requirements should be considered when selecting the standard for internal use and broader dissemination.
 * The use of closed and proprietary standards is strongly discouraged.
 
-===== Principle 5: Information must be well documented
+===== 3.1.2.5 Principle 5: Information must be well documented
 
-* WMO centres should comprehensively document information processes, policies, and procedures to facilitate broad and long-term use.
-* WMO centres should keep documentation up to date to ensure full traceability of processes along the information lifecycle, particularly for its creation.
+* WMO centres should comprehensively document information processes, policies, and procedures to facilitate broad and longterm use.
+* WMO centres should keep documentation up to date to ensure full traceability of processes along the information life cycle, particularly for its creation.
 * Previous versions of the documentation should be retained, versioned, archived and made readily available for future use. In addition, versions should be assigned a unique and persistent identifier for future unambiguous identification.
 
-===== Principle 6: Information must be discoverable, accessible and retrievable
+===== 3.1.2.6 Principle 6: Information must be discoverable, accessible and retrievable
 
-* Information should be easy to find through the Web, and for this purpose, the publisher should share discovery metadata with a catalogue service. The catalogue service should include a Web Application Programming Interface (API) to be used by other applications in order to offer user-tailored search portals.
+* Information should be easy to find through the web, and for this purpose, the publisher should share discovery metadata with a catalogue service. The catalogue service should include a web application programming interface (API) to be used by other applications in order to offer user-tailored search portals.
 * For information to be easily retrievable once discovered, it should be accessible using standard data exchange protocols.
 
-===== Principle 7: Information should be reusable
+===== 3.1.2.7 Principle 7: Information should be reusable
 
 * In order to maximize the economic benefits of an information asset it should be made as widely available and as accessible as possible.
-* The WMO Unified Data Policy encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. The WMO encourages the free and unrestricted exchange of information in all circumstances.
-* The publisher should provide an explicit and well-defined license for each information item or dataset as part of the associated metadata.
-* The Findable, Accessible, Interoperable and Reusable (FAIR) data principles promote open data with the ultimate goal of optimizing reuse of data. These principles should be followed where possible.
+* Resolution 1 (Cg-Ext(2021)) encourages the reuse of data and information through the open and unrestricted exchange of core WMO data. WMO encourages the free and unrestricted exchange of information in all circumstances.
+* The publisher should provide an explicit and well-defined licence for each information item or dataset as part of the associated metadata.
+* The Findable, Accessible, Interoperable and Reusable (FAIR) data principles promote open data with the ultimate goal of optimizing the reuse of data. These principles should be followed where possible.
 
-Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR footnote:[https://go-fair.org]
+_Note: Information on the FAIR data principles can be found at: FAIR Principles - GO FAIR_footnote:[https://go-fair.org]
 
-===== Principle 8: Information management is subject to accountability and governance.
+===== 3.1.2.8 Principle 8: Information management is subject to accountability and governance.
 
-* Information management processes must be governed as the information moves through its lifecycle. All information must have a designated owner, steward, curator and custodian. These roles may be invested in the same person but should be clearly defined at the time of creation. A WMO centre with responsibility for managing information must ascertain:
-* information management practices, procedures and protocols, including well-defined roles, responsibilities and restrictions on managing the information;
-* definition and enforcement of appropriate retention policy, taking into account stakeholder needs and variations in value over the information lifecycle;
-* licensing and defining and enforcing any access restrictions.
-* The designated owner should have budget and decision-making authority about preservation and data usage, including passing ownership to another authority.
+* The implementation of general information management practices, procedures and protocols, including well-defined roles, responsibilities and restrictions on managing the information;
+* The definition and enforcement of appropriate retention policy, taking into account stakeholder needs and variations in value over the information life cycle;
+* The establishment of licensing and the definition and enforcement of any access restrictions.
+* The designated owner should have budget and decision-making authority with respect to preservation and data usage, including the authority to pass ownership to another entity.
 
-==== The information management lifecycle
+==== 3.1.3 The information management life cycle
 
-===== Overview
+===== 3.1.3.1 Overview
 
-All information should be subject to a well defined and documented lifecycle. The governance of this process is often referred to as the information management lifecycle and this process helps organizations manage information throughout its full lifecycle, from planning, creation and acquisition through usage and exchange to archival and disposal.
+All information should be subject to a well -defined and documented life cycle. The governance of this process is often referred to as the information management life cycle; it helps organizations manage information from planning, creation and acquisition through usage and exchange to archival and disposal.
 
-The following sections describe two overarching themes, governance and documentation, that apply to all stages of the information lifecycle and then provides high level guidance split into 5 aspects:
+The following sections describe two overarching themes, governance and documentation, which apply to all stages of the information life cycle; these sections provide high -level guidance and are split into five aspects:
 
-* Planning, creation and acquisition
-* Representation and metadata
-* Publication and exchange
-* Usage and communication
-* Storage, archival and disposal
+* Planning, creation and acquisition;
+* Representation and metadata;
+* Publication and exchange;
+* Usage and communication;
+* Storage, archival and disposal.
 
-Governance covers the rules that apply to managing information in a secure and transparent manner, documentation covers the act of recording the reasons for, and detail of, all operations in the information management process.
+Governance covers the rules that apply to managing information in a secure and transparent manner; documentation covers the act of recording the reasons for, and details of, all operations in the information management process.
 
-===== Overarching requirements
+===== 3.1.3.2 Overarching requirements
 
-====== Governance
+====== 3.1.3.2.1 Governance
 
 * Information management governance defines a set of organizational procedures, policies and processes for the management of information. This includes defining accountabilities and compliance mechanisms.
-* Effective governance helps ensure that all aspects of the information management process are conducted in a rigorous, standardized and transparent manner and that the information are secure, accessible and usable.
+* Effective governance helps ensure that all aspects of the information management process are conducted in a rigorous, standardized and transparent manner and that the information is secure, accessible and usable.
 * WMO centres should establish a board or leadership group to develop and regularly review such a governance structure and ensure compliance with its requirements.
 
-====== Documentation
+====== 3.1.3.2.2 Documentation
 
-* Documentation describing the who, what, why, when, where and how various actions are undertaken in the management of information is required to ensure the traceability and integrity of the information and to ensure operations can continue if key staff leave.
-* This documentation is required for all aspects of the information lifecycle and should be clear, well communicated, regularly updated, and easy to find. Guidance to the documentation should be provided to new staff taking on responsibilities for information management and be a key component of training.
+* Documentation describing the who, what, why, when, where and how with respect to the various actions that are undertaken in the management of information is required to ensure the traceability and integrity of the information and to ensure operations can continue if key staff leave.
+* This documentation is required for all aspects of the information life cycle and should be clear, well -communicated, regularly updated and easy to find. Guidance relating to the documentation should be provided to new staff taking on responsibilities for information management and be a key component of training.
 
-===== Aspects of the information management lifecycle
+===== 3.1.3.3 Aspects of the information management life cycle
 
-====== Planning, information creation and acquisition
+====== 3.1.3.3.1 Planning, information creation and acquisition
 
-Before the creation or acquisition of new information a business case and information management plan should be developed, covering both the input information sources and any derived information. The plans should include:
+Before the creation or acquisition of new information a business case and an information management plan should be developed, covering both the input information sources and any derived information. The plans should include:
 
-* Why the information is required
-* How it will be collected or created
-* How it will be stored
-* Whether it will be exchanged with other users and under what policy
-* Where it should be submitted for long term archival
-* Key roles and responsibilities associated with the management of the information
+* Why the information is required;
+* How it will be collected or created;
+* How it will be stored;
+* Whether it will be exchanged with other users and under what policy;
+* Where it should be submitted for longterm archival;
+* Key roles and responsibilities associated with the management of the information.
 
 For externally sourced data the plans should include where the information has come from and what the licensing terms are.
 
-Once information has been acquired it should be checked to ensure that the contents and format are as expected. This may be done using a compliance checker or validation service. Once these checks have been performed the information content should also undergo quality control checks using well documented procedures to identify any issues. A record of the checks should be kept and any issues detected should be documented and feedback to the originators. It is also important to subscribe to updates from originators so any issues identified externally can be taken into account.
+Once information has been acquired it should be checked to ensure that the contents and format are as expected. This may be done using a compliance checker or validation service. Once these checks have been performed the information content should also undergo quality control checks using well documented procedures to identify any issues. A record of the checks should be kept and any issues detected should be documented and sent back to the originators. It is also important to subscribe to updates from originators so any issues identified externally can be taken into account.
 
-Information created rather than acquired should undergo the same processes as the acquired information. The information created should undergo quality control and the resulting files checked against the specified format requirements. The results of the processes and checks should be documented.
+Information created rather than acquired should undergo the same processes as the acquired information. Information created should undergo quality control and the resulting files should be checked against the specified format requirements. The results of the processes and checks should be documented.
 
 To ensure traceability and reproducibility the information and documents at this, and subsequent stages, should be version controlled and clearly labelled with version information. Similarly, software, or computer code, used to generate or process information should be version controlled with the version information recorded in the documentation and metadata. Where possible, software should be maintained within a code repository.
 
-====== Representation and metadata
+====== 3.1.3.3.2 Representation and metadata
 
-The formats used to store and exchange information should be standardized to ensure its usability, both in the short and long term. It is essential that the information can be accessed many years after archival if required. To ensure this usability, the format and version information should be recorded in the metadata record for the information and should be included in the information where the format allows.
+The formats used to store and exchange information should be standardized to ensure its usability in both the short and the longterm. It is essential that the information be accessible many years after archival if required. To ensure this usability, the format and version of the information should be recorded in the information metadata record and included within the information itself where the format allows.
 
-Information exchanged on the WMO Information System and between WMO centres is standardized through the use the formats specified in the _Manual on Codes_ (WMO-No. 306), Volume I.2 and the _Manual on WIS_ (WMO-No. 1060), Volume II. This includes the GRIB and BUFR formats for numerical weather prediction products and observational data and the WIS Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, the WIGOS Metadata Data Representation, is also defined in the _Manual on Codes_ (WMO-No. 306), Volume I.3.
+Information exchanged on the WIS and between WMO centres is standardized through the use of the formats specified in the _Manual on Codes_ (WMO-No. 306), Volume I.2 and the _Manual on WIS_, Volume II. These include the GRIB and BUFR formats for numerical weather prediction products and observational data and the WMO Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, WIGOS Metadata Data Representation, is defined in the https://library.wmo.int/records/item/35769-manual-on-codes-volume-i-3-international-codes?offset=2[_Manual on Codes_] (WMO-No. 306), Volume I.3.
 
-These formats have been developed within the WMO community to enable the efficient exchange of information between WMO centres and for the information to be interoperable between centres and systems. The formats, including detailed technical information, have also published openly through the WMO manuals, enabling use of the formats and information by other communities, promoting reuse of the information.
+These formats have been developed within the WMO community to enable the efficient exchange of information between WMO centres and to enable the information to be interoperable between centres and systems. The formats, including detailed technical information, have also been published openly through the WMO manuals, permitting other communities to use the formats and the information and promoting the reuse of the information.
 
 The WMO formats specified in the manuals are subject to strong governance processes, and changes to the formats can be traced through the versions of the manuals. The code tables and controlled vocabularies are also maintained in a code repository. To enable future reuse, the technical information, including detailed format specifications, should be archived alongside information for future access. This includes any controlled vocabulary, such as BUFR tables or WIGOS metadata code lists, associated with the format.
 
-====== Publication and exchange of information
+====== 3.1.3.3.3 Publication and exchange of information
 
 To maximize the benefits and return on investment in the acquisition and generation of information there needs to be a clear method as to how the information will be published, exchanged and accessed by users.
 
-Information is published on the WMO Information System through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the Web and via a Web Application Programming Interface (API). The metadata records should include information on how to access the described datasets and services (see also <<_representation_and_metadata>>) and how to subscribe to receive updates and new data.
+Information is published on WIS through the creation of discovery metadata records. These records are publicly searchable and retrievable via WMO cataloguing services, providing access to the records via the web and via a web application programming interface (API). The metadata records should include information on how to access the described datasets and services (see _Manual on WIS_, Volume II – Appendix F: WMO Core Metadata Profile) and how to subscribe to receive updates and new data.
 
-Guidance on the creation of these discovery metadata records is included in Part V of this Guide. Technical regulations are provided in the _Manual on WIS_ (WMO-No. 1060), Volume II. Before exchange and publication the metadata should be assessed using the WMO Core Metadata Profile Key Performance Indicators to ensure usable and high quality metadata in addition to metadata that conforms with the technical standard.
+Technical regulations are provided in the _Manual on WIS_, Volume II. Before exchange and publication, the metadata should be assessed using the WMO Core Metadata Profile KPIs to ensure usable and high -quality metadata in addition to metadata that conforms to the technical standard.
 
-The Web standards and protocols used should be adequately documented to enable users to find and retrieve the information. This should be possible both manually and automatically via machine-to-machine interfaces and should be standardized between centres.
+The web standards and protocols used should be adequately documented to enable users to find and retrieve the information. This should be possible both manually and automatically via machine-to-machine interfaces and should be standardized between centres.
 
-Updates to the information exchanged on the WIS, including the publication of new information or the cessation of previously exchanged information, is published in the WMO Operational Newsletter.
+Updates to the information exchanged on WIS, including the publication of new information or the cessation of previously exchanged information, is published in the WMO Operational Newsletter.
 
-Note: The newsletter is available from: https://community.wmo.int/news/operational-newsletter
+_Note: The newsletter is available from: https://community.wmo.int/news/operational-newsletter_
 
-====== Usage and communication
+====== 3.1.3.3.4 Usage and communication
 
-For information to have value it must inform users, aid knowledge discovery and have impact through informed decision making. Ensuring that the user can make effective use of the information is an important step in the information management lifecycle. This takes two forms:
+For information to have value, it must inform users, aid knowledge discovery and have an impact through informed decision -making. Ensuring that the user can make effective use of the information is an important step in the information management life cycle. This is accomplished in two ways:
 
-. Provision of suitable information within the discovery metadata, enabling users to discover and access the information and to assess whether it meets their requirements. This should include licensing information.
-. Provision of user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.
+1.	By providing suitable information within the discovery metadata, enabling users to discover and access the information - including licensing information - and to assess whether it meets their requirements;
+2.	By providing user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.
 
-For common types of information the guides may be generic or link to standard documentation. Information on the observations available from the WMO Integrated Global Observing System is provided within the _Manual on the WMO Integrated Global Observing System_ (WMO-No. 1160) and the _Guide to the WMO Integrated Global Observing system_ (WMO-No. 1165) respectively. This includes information on the expected uses and quality of the data, either directly or through links within. Similarly, information on the data and products available through the Global Data Processing and Forecasting System is provided in the _Manual on the WMO Integrated Processing and Prediction System_ (formerly _Manual on the Global Data Processing and Forecasting System_) (WMO-No. 485).
+For common types of information, the guides may be generic or link to standard documentation. Information on the observations available from the WIGOS is provided within the https://library.wmo.int/idurl/4/55063[_Manual on the WMO Integrated Global Observing System_] (WMO-No. 1160) and the https://library.wmo.int/idurl/4/55696[_Guide to the WMO Integrated Global Observing System_] (WMO-No. 1165). This includes information on the expected uses and quality of the data. Similarly, information on the data and products available through the WMO Integrated Processing and Prediction System is provided in the https://library.wmo.int/idurl/4/35703[_Manual on the WMO Integrated Processing and Prediction System_] (formerly Manual on the Global Data Processing and Forecasting System) (WMO-No. 485).
 
-For non-standard and specialist products targeted user guides may be more appropriate. These should include a plain text summary for the non-technical user and should also be accessible and retrievable via a link within the discovery metadata. Any user guide should be in addition to the technical documentation described under <<_planning,_information_creation_and_acquisition>>.
+For non-standard and specialist products targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described under <<_3.1.3.3.1_planning_information_creation_and_acquisition>>.
 
-Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <<_publication_and_exchange_of_information>>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended to allow users to subscribe to receive updates directly.
+Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <<_3.1.3.3.3_publication_and_exchange_of_information>>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.
 
 The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.
 
-====== Storage, archival and disposal
+====== 3.1.3.3.5 Storage, archival and disposal
 
 The type of storage used should be appropriate to the type of information stored. Core information exchanged operationally should be stored and made available via high-availability and low latency media and services. For some operation critical information, such as hazard warnings, there is a requirement for the end-to-end global distribution of the information to be completed in two minutes. For other operational data there is a requirement for the global exchange to be completed in 15 minutes.
 
-The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WI2S Technical Specifications listed in the _Manual on WIS_ (WMO-No. 1060), Volume II.
+The storage requirements for non-operational services and information may be different but the guidance provided in this section applies equally. Further information on the performance requirements is provided within the WI2S technical specifications listed in the _Manual on WIS_, Volume II.
 
-Backup policies and data recovery plans should be documented as part of the information management plan. These should be implemented either before or when the information is created or acquired and should include both the information and the associated metadata. The backup and recovery process should be routinely tested. Specific guidance on the expectations and requirements for WMO centres is provided under the operational guidance in Part VII of this Guide.
+Backup policies and data recovery plans should be documented as part of the information management plan. They should be implemented either before or when the information is created or acquired and should include both the information and the associated metadata. The backup and recovery process should be routinely tested.
 
-Business rules governing the access to and modification of the information should be clearly documented in the information management plan. This must include the clear specification of roles and responsibilities of those managing the information. Information on who can authorize the archival and disposal of the information and the processes for doing so should be included. The roles associated with an information resource are standardized as part of the WIS Core Metadata Profile, see Part V of this Guide for further information.
+Business rules governing access to, and modification of the information should be clearly documented in the information management plan. These must include the clear specification of the roles and responsibilities of those managing the information. Information on who can authorize the archival and disposal of the information and the processes for doing so should be included. The roles associated with an information resource are standardized as part of the WMO Core Metadata Profile.
 
-The archival and long-term preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. The WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and the Marine Climate Data System (see _Manual on Marine Meteorological Services_ (WMO-No. 558), Volume II, as well as the WMO World Data Centres and those defined in the _Manual on WIS_ (WMO-No. 1060), Volume II and those defined in the _Manual on the WMO Integrated Processing and Prediction System_ (formerly _Manual on the Global Data Processing and Forecasting System_) (WMO-No. 485).
+The archival and longterm preservation of an information resource should be identified and included in the information management plan. This may be at a national data centre and/or a WMO centre. WMO centres are recommended for globally exchanged core data and include those centres contributing to the Global Atmosphere Watch, the Global Climate Observing System and Marine Climate Data System (see https://library.wmo.int/idurl/4/41592[_Manual on Marine Meteorological Services_] (WMO-No. 558), Volume II, as well as the WMO World Data Centres and those defined in the _Manual on WIS_, Volume II and those defined in the _Manual on the WMO Integrated Processing and Prediction System_ (formerly _Manual on the Global Data Processing and Forecasting System_) (WMO-No. 485).
 
-Earth system information, especially observational data, are often irreplaceable. Other information, whilst technically replaceable, is often costly to produce and therefore not easily replaceable. This includes output from numerical models and simulations. Before an information resource is marked for disposal careful consideration must be given to whether long term archival or disposal is more appropriate. This consideration must follow a clearly defined process documented in the information management plan.
+Earth system information, especially observational data, is often irreplaceable. Other information, while technically replaceable, is often costly to produce and therefore not easily replaceable. This includes outputs from numerical models and simulations. Before an information resource is marked for disposal careful consideration must be given to whether longterm archival or disposal is more appropriate. This consideration must follow a clearly defined process documented in the information management plan.
 
-When an information resource is marked for disposal the reasons for disposal, including the outcome of the consultation with stakeholders and users, must clearly be documented. The disposal must be authorized by the identified owner and custodian of the information. The information on the disposal must be included in the metadata associated with the information resource. The metadata must be retained for future reference.
+When an information resource is marked for disposal the reasons for disposal, including the outcome of the consultation with stakeholders and users, must clearly be documented. The disposal must be authorized by the identified owner and custodian of the information. Information relating to the disposal must be included in the metadata associated with the information resource. The metadata must be retained for future reference.
 
-==== Other considerations
+==== 3.1.4 Other considerations
 
-===== Technology and technology migration
+===== 3.1.4.1 echnology and technology migration
 
-Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the _WMO Guidelines on Emerging Data Issues_ (WMO-No. 1239).
+Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the https://library.wmo.int/idurl/4/56904[_WMO Guidelines on Emerging Data Issues_] (WMO-No. 1239).
 
-===== Information security
+===== 3.1.4.2 Information security
 
-Further information on information security and best practices can be found in the _Guide to Information Technology Security_ (WMO-No. 1115).
+Further information on information security and best practices can be found in the https://library.wmo.int/idurl/4/51145[_Guide to Information Technology Security_] (WMO-No. 1115).

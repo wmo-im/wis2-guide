@@ -1,55 +1,49 @@
-=== Operations
+=== 2.8 Operations
 
-==== Interoperability with external systems
+==== 2.8.1 Interoperability with external systems
 
-The WIS2 principles enable lowering the barrier to weather/climate/water data for WMO members.  Lowering the barrier is driven by **international standards**
+The WIS2 principles enable lowering the barrier to weather/climate/water data for WMO Members.  Lowering the barrier is driven by international standards
 for data discovery, access, and visualization.  In addition to Member benefits, a by-product of utilizing standards is being able to provide
 the same data and access mechanisms to external systems at no extra cost of implementation.
 
-WIS2 standards are based on industry standards (OGC, W3C, IETF) and allow for **broad** interoperabliilty.  This means that non-traditional users can also
+WIS2 standards are based on industry standards (OGC, W3C, IETF) and allow for broad interoperablility.  This means that non-traditional users can also
 use data from WIS2 data in the same manner, without the requirement for specialized software, tools, or applications.
 
-===== Publishing meteorological data through WIS2 into ICAO SWIM
+===== 2.8.1.1 Publishing meteorological data through WIS2 into ICAO SWIM
 
 Meteorological data is an essential input for public weather services
 and aviation services alike. WIS2 provides the mechanism for data exchange
-in WMO, while SWIM (System Wide Information Management) is the ICAO
-initiative to harmonize the provision of aeronautical, meteorological and flight
-information to support air traffic management (ATM).
+in WMO, while SWIM is the ICAO initiative to harmonize the provision of aeronautical, meteorological and flight information to support air traffic management (ATM).
 
-Both WIS2 and SWIM support the similar outcomes relating to data
+Both WIS2 and SWIM support similar outcomes relating to data
 exchange. However, there are differences in both approach and
 implementation.
 
-Specifications for WIS2 are defined in the _Manual on WIS_ (WMO-No.
-1060), Volume II, and further elaborated in this Guide. Specifications
-for SWIM will be defined in the Procedures for Air Navigation Services –
-Information Management (PANS-IM) (ICAO Doc. 10199)footnote:[The PANS-IM is expected to available on ICAO NET by July 2024 and become applicable in November 2024. Information provided in herein is based on best understanding of draft proposals from ICAO.].
+Specifications for WIS2 are defined in the _Manual on WIS_, Volume II, and further elaborated in this Guide. Specifications for SWIM will be defined in the Procedures for Air Navigation Services –Information Management (PANS-IM) (ICAO Doc. 10199)footnote:[The PANS-IM is expected to available on ICAO NET by July 2024 and become applicable in November 2024. Information provided in herein is based on best understanding of draft proposals from ICAO.].
 
-During the WIS2 transition phase (2025-2030), meteorological data published
-via WIS2 will automatically be published to the GTS via the WIS2 WIS2-to-GTS Gateways.
+During the WIS2 transition phase (2025-2033), meteorological data published
+via WIS2 will automatically be published to the GTS via the WIS2-to-GTS Gateways.
 
 |===
 |*WIS2* |*SWIM*
 |Earth-system scope: weather, climate, hydrology, atmospheric
-composition, cryosphere, ocean and space weather data |Air traffic
-management scope: aeronautical, meteorological and flight information
+composition, cryosphere, ocean and space weather data |ATM scope: aeronautical, meteorological and flight information
 
 |Data centric - a consumer discovers data and then determines the
 services through which that data may be accessed |Service centric - a
 consumer discovers a service (or service provider) and determines what
-resources (i.e., information) is available therein
+resources (that is, information) is available therein
 
 |Technical protocols: MQTT, HTTP |Technical protocols:
 AMQPfootnote:[AMQP 1.0 is one of the protocols proposed in the draft PANS-IM]
 |===
 
-An organisation (e.g., the National Meteorological Service) that is
+An organization (for example, the National Meteorological Service) that is
 responsible for providing meteorological data to WIS2 may be designated by the ICAO Contracting State as a responsible entity to provide aeronautical meteorological information into SWIM.
-Where requirements dictate, the organisation may provide regional
+Where requirements dictate, the organization may provide regional
 capability on behalf of a group of countries or territories.
 
-This section of the Guide outlines how such an organisation may efficiently fulfil the requirements in providing required data/information to the two systems. It proposes an
+This section of the Guide outlines how such an organization may efficiently fulfil the requirements in providing required data/information to the two systems. It proposes an
 interoperability approach between WIS2 and SWIM where meteorological
 data published via WIS2 can be automatically propagated to SWIM.
 
@@ -63,7 +57,7 @@ service - including, but not limited to:
 * Specification of the SWIM data message.
 * AMQP message broker configuration.
 * Operation, logging and monitoring.
-* Cybersecurity considerations for provision of SWIM services.
+* Cybersecurity considerations for the provision of SWIM services.
 
 This Guide will be updated as more information is made available from
 ICAO and/or recommended practices are updated.
@@ -71,73 +65,70 @@ ICAO and/or recommended practices are updated.
 Finally, it should be noted that the provision of aeronautical meteorological information and its exchange via the ICAO
 Aeronautical Fixed Service (AFS) is also out of scope as they are solely defined under the ICAO regulatory framework.
 
-====== WIS2 to SWIM Gateway
+====== 2.8.1.1.1 WIS2 to SWIM gateway
 
-The WIS2 to SWIM interoperability approach employs a Gateway component (as per the figure below):
+The WIS2 to SWIM interoperability approach employs a gateway component (as per the figure below):
 
 .Schematic of an interoperability approach
 image::images/wis2-to-swim-temp.png[Schematic of interoperability approach]
 
-The Gateway can operate as an "adapter" between WIS2 and SWIM by pulling
+The gateway can operate as an "adapter" between WIS2 and SWIM by pulling
 the requisite meteorological data from WIS2 and re-publishing it
 to SWIM.
 
-====== Data types and format
+====== 2.8.1.1.2 Data types and format
 
 Specifications for aeronautical meteorological information are provided in ICAO
-Annex 3 and other relevant guidance materials. IWXXM format (FM 205)footnote:[IWXXM (FM205) is defined in the _Manual on Codes_ (WMO-No. 306), Volume I.3 – International Codes] 
-is to be used for encoding aeronautical meteorological information in SWIM.
+Annex 3 and other relevant guidance materials. The ICAO Meteorological Information Exchange Model (IWXXM) format (FM 205)footnote:[IWXXM (FM205) is defined in the _Manual on Codes_ (WMO-No. 306), Volume I.3 – International Codes] is to be used for encoding aeronautical meteorological information in SWIM.
 
-====== Publishing meteorological data via WIS2
-
-For meteorological data to be published from WIS2 to SWIM, the organisation
+====== 2.8.1.1.3 Publishing meteorological data via WIS2
+For meteorological data to be published from WIS2 to SWIM, the organization
 responsible for this provision will need to operate a WIS2 Node and
-comply with the pertinent Technical Regulations as specified in the
-_Manual on WIS_ (WMO-No. 1060), Volume II. Onward distribution of the
+comply with the pertinent technical regulations as specified in the
+_Manual on WIS_, Volume II. Onward distribution of the
 data by the Message Broker over SWIM can be handled by the
 respective Information Service Provider in accordance with ICAO
 Standards and Recommended Practices (SARPs).
 
-The responsible organisation should consider whether this
+The responsible organization should consider whether this
 data should be published via an existing WIS2 Node, or whether a separate
 WIS2 Node should be established. For example, the data may be
 provided by a separate operational unit, or there may be a requirement to easily
 distinguish between data for SWIM and any other meteorological data.
 
-Where a new WIS2 Node is needed, the responsible organisation must
-establish a new WIS2 Node and register it with WMO Secretariat. For more information, see <<Implementation and operation of a WIS2 Node>>.
+Where a new WIS2 Node is needed, the responsible organization must
+establish a new WIS2 Node and register it with the WMO Secretariat. For more information, see <<2.6_implementation_and_operation_of_a_wis2_node>>.
 
 Datasets are a central concept in WIS2. Where
-meteorological data is published via WIS2, it shall be packaged into
-“datasets”. The data should be grouped at the country / territory
-level; i.e., datasets should be published for a given country /
-territory, one for each datatype (e.g.,
+meteorological data is published via WIS2, it will be packaged into
+“datasets”. The data should be grouped at the country/territory
+level; (for instance, datasets should be published for a given country/territory), one for each datatype (for example,
 aerodrome observation, aerodrome forecast and quantitative volcanic ash
 concentration information).
 
-For the purposes of publishing through WIS2, Datasets containing aeronautical meteorological information should be considered as "*Recommended Data*", as
-described in the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).
-The Recommended Data category of the policy is intended to cover data
+For the purposes of publishing through WIS2, datasets containing aeronautical meteorological information should be considered as "recommended data", as
+described in Resolution 1 (Cg-Ext(2021)).
+The recommended data category of the policy is intended to cover data
 that should be exchanged by Members to support Earth system monitoring
 and prediction efforts.
 
-Recommended Data:
+Recommended data:
 
-* May be subject to conditions on use and re-use.
+* May be subject to conditions on use and reuse.
 * May have access controlsfootnote:[WIS2 follows the recommendations
 from OpenAPI regarding choice of security schemes for authenticated
 access - a choice of HTTP authentication, API keys, OAuth2 or OpenID
 Connect Discovery. For more information see
 OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object]footnote:[WIS2 does not provide any guidance on use of Public Key Infrastructure (PKI).] applied at the WIS2 Node.
-* Are *not* cached within WIS2 by the Global Cachesfootnote:[Global
-Caches enable highly available, low-latency distribution of Core Data.
-Given that Core Data is provided on a free and unrestricted basis,
-Global Caches *do not* implement any data access control.].
+* Are not cached within WIS2 by the Global Cachesfootnote:[Global
+Caches enable highly available, low-latency distribution of core data.
+Given that core data is provided on a free and unrestricted basis,
+Global Caches do not implement any data access control.].
 
-The WMO Unified Data Policy requires transparency on the conditions of use for Recommended Data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset as describe below.
+Resolution 1 (Cg-Ext(2021)) requires transparency on the conditions of use for recommended data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset as described below.
 
 * The attribute ``wmo:dataPolicy`` should be set to ``recommended``.
-* Information about conditions of use should be specified using a ``rights`` property (see example below) and/or a ``link`` object with relation ``license``.
+* Information about conditions of use should be specified using a ``rights`` property (see example below) and/or a ``link`` object with a relation ``license``.
 * Information about access control should be specified using a ``security`` object in the ``link`` object describing the data access details.
 
 .Example expression of conditions relating to the use of aeronautical meteorological information:
@@ -150,14 +141,13 @@ The WMO Unified Data Policy requires transparency on the conditions of use for R
 }
 ----
  
-
 For more information on the WMO Core Metadata Profile version 2, see the
-_Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F.
+_Manual on WIS_, Volume II, Appendix F.
 
 On receipt of new data, the WIS2 Node will:
 
-. Publish the data as a resource via a Web server (or Web service).
-. Publish a WIS2 Notification Message to a local message broker that
+1. Publish the data as a resource via a Web server (or Web service).
+2. Publish a WIS2 Notification Message to a local message broker that
 advertises the availability of the data resource.
 
 Note that, in contrast to the GTS, WIS2 publishes data resources
@@ -166,41 +156,39 @@ not group data resources into bulletins.
 
 The data resource is identified using a URL. The notification message
 refers to the data resource using this URLfootnote:[Where the data
-resource does not exceed 4Kb, it may additionally be embedded in the
+resource does not exceed 4 Kb, it may additionally be embedded in the
 notification message.].
 
-For more details on the WIS2 Notification Message, see the _Manual on WIS_
-(WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message.
+For more details on the WIS2 Notification Message, see the _Manual on WIS_, Volume II, Appendix E: WIS2 Notification Message.
 
 The notification message must be published to the proper topic on the
-message broker. WIS2 defines a standard topic hierarchy to ensure
+Message Broker. WIS2 defines a standard topic hierarchy to ensure
 that data is published consistently by all WIS2 Nodes. Notification
 messages for aviation data should be published on a specific topic
 allowing a data consumer, such as the Gateway, to subscribe only to
 aviation-specific notifications. See the example below:
 
-.Example Topic used to publish notifications about Quantitative Volcanic Ash Concentration Information
+.Example topic used to publish notifications about Quantitative Volcanic Ash Concentration Information
 [source,text]
 ----
 origin/a/wis2/{centre-id}/data/recommended/weather/aviation/qvaci
 ----
 
-For more details of the WIS Topic Hierarchy, see the _Manual on WIS_ (WMO-No.
-1060), Volume II, Appendix D: WIS2 Topic Hierarchy.
+For more details of the WIS Topic Hierarchy, see the _Manual on WIS_, Volume II, Appendix D: WIS2 Topic Hierarchy.
 
 WIS Global Brokers subscribe to the local message brokers of WIS2 Nodes
 and republish notification messages for global distribution.
 
 As a minimum, the WIS2 Node should retain the aviation data for a
-duration that meets the needs of the Gateway. The retention period of at
+duration that meets the needs of the gateway. A retention period of at
 least 24 hours is recommended.
 
-====== Gateway implementation
+====== 2.8.1.4 Gateway implementation
 
-The potential interactions between the Gateway component, WIS2 and SWIM are
+The potential interactions between the gateway component, WIS2 and SWIM are
 illustrated in the figure belowfootnote:[Note that the figure simplifies
 the transmission of discovery metadata from WIS2 Node to the Global
-Discovery Catalogue. In reality, the WIS2 Node publishes notification
+Discovery Catalogue. The WIS2 Node publishes notification
 messages advertising the availability of new discovery metadata resource
 at a given URL. These messages are republished by the Global Broker. The
 Global Discovery Catalogue subscribes to a Global Broker and downloads
@@ -208,12 +196,12 @@ the discovery metadata from the WIS2 Node using the URL supplied in the
 message.]
 
 .Interactions between the Gateway and components of WIS2 and SWIM
-image::images/wis2-to-swim-interaction-temp.png[Interactions between the Gateway and components of WIS2 and SWIM]
+image::images/wis2-to-swim-interaction-temp.png[Interactions between the gateway and components of WIS2 and SWIM]
 
 **Configuration**
 
 Dataset discovery metadata will provide
-useful information that can be used to configure the Gateway, e.g., the
+useful information that can be used to configure the Gateway, for example, the
 topic(s) to subscribe to plus various other information that may be
 needed for the SWIM service.
 
@@ -225,18 +213,18 @@ The Gateway component implements the following functions:
 
 * Subscribe to the pertinent topic(s) for notifications about new
 aeronautical meteorological informationfootnote:[WIS2 recommends that one subscribes to
-notifications from a Global Broker. However, where both Gateway and WIS
-Node are operated by the same organisation, it may be advantageous to
-subscribe directly to the local message broker of WIS2 Node, e.g., to
+notifications from a Global Broker. However, where both gateway and WIS2
+Node are operated by the same organization, it may be advantageous to
+subscribe directly to the local message broker of WIS2 Node, for example, to
 reduce latency.].
 * On receipt of notification messages about newly available data:
-** parse the notification message, discarding duplicate messages already
+** Parse the notification message, discarding duplicate messages already
 processed previously;
-** download the data resource from the WIS2
+** Download the data resource from the WIS2
 Nodefootnote:[The WIS2 Node may control access to data - the Gateway will
 need to be implemented accordingly.] using the URL in the message - the
 resource should be in IWXXM format;
-** create a new "data message" as per the SWIM specifications, including
+** Create a new "data message" as per the SWIM specifications, including
 the unique identifier extracted from the data resourcefootnote:[In case
 a unique identifier is required for proper passing of an aviation
 weather message to the Gateway, one can use the GTS abbreviated heading
@@ -247,27 +235,27 @@ Forecast and QVACI), for such purpose. There is currently no agreed
 definition for unique identifier of IWXXM METAR and TAF reports of
 individual aerodrome.], and embedding the aviation weather data resource
 within the data message;
-** publish the data message to the appropriate topic on the SWIM Message
+** Publish the data message to the appropriate topic on the SWIM Message
 Broker component of the SWIM service.
 
 The choice of protocol for publishing to the SWIM Message Broker should
 be based on bilateral agreement between operators of the Gateway and
 SWIM service.
 
-The Gateway should implement logging and error handling as necessary to
+The gateway should implement logging and error handling as necessary to
 enable reliable operations. WIS2 uses the OpenMetrics
 standardfootnote:[OpenMetrics:
 https://openmetrics.io] for
 publishing metrics and other operating information. Use of OpenMetrics
-by the Gateway would enable monitoring and performance reporting to be
+by the gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
 **Operation**
 
-The Gateway may be operated at national or regional level depending on
-the organisational governance in place.
+The gateway may be operated at national or regional level depending on
+the organizational governance in place.
 
-====== SWIM service
+====== 2.8.1.1.5 SWIM service
 
 The SWIM aviation weather information service may comprise of a Message Broker
 component which implements the AMQP 1.0 messaging standardfootnote:[AMQP
@@ -278,38 +266,38 @@ The Message Broker publishes the data messages provided by the Gateway.
 The Message Broker must ensure that data messages are provided only by
 authorized sources such as a Gateway and should validate incoming messages as aeronautical meteorological information.
 
-===== The Ocean Data and Information System (ODIS)
+===== 2.8.1.2 The Ocean Data and Information System
 
 The Ocean Data and Information System (ODIS) is a federation of 
 independent data systems coordinated by the International Oceanographic 
 Data and Information Exchange (IODE) of IOC-UNESCO. This federation 
 includes continental-scale data systems as well as those of small 
-organisations. ODIS partners use Web architectural approaches to share 
+organizations. ODIS partners use web architectural approaches to share 
 metadata describing their holdings, services, and other capacities. In 
 brief, IODE publishes guidelines on how to share metadata as linked open 
-data, serialised in JSON-LD using schema.orgfootnote:[https://schema.org]
+data, serialized in JSON-LD using schema.orgfootnote:[https://schema.org]
 semantics. ODIS nodes use these guidelines to publish their metadata 
-catalogues on the Web. This allows all systems with Web connectivity to 
+catalogues on the Web. This allows all systems with web connectivity to 
 harvest and merge these catalogues, creating a global map of the ocean 
-datascape. IODE harvests all metadata shared by ODIS partners, combines 
+data. IODE harvests all metadata shared by ODIS partners, combines 
 it as a knowledge graph, and processes this to export derivative 
-products (e.g. diagnostic reports and cloud-optimised data products). 
+products (for example, diagnostic reports and cloud-optimised data products). 
 The Ocean InfoHub (OIH) system is IODE's reference implementation of a 
 discovery system leveraging ODIS. The ODIS architecture and tools are
-Free and Open Source (FOSS), with regular releases published for the
+free and open-source (FOSS), with regular releases published for the
 community.
 
 To reach beyond the oceans domain, ODIS works with other data systems and 
 federations, such as WIS2, to define sustainable data and metadata exchanges 
-and - where needed - translators/converters. The resources needed to 
+and - where needed - translators or converters. The resources needed to 
 convert between such systems are developed in the open and in close
 collaboration with staff from those systems. These exchanges include
-ETL functions, to ensure that the bilateral exchange is mutually beneficial.
+extract transform load (ETL) functions, to ensure that the bilateral exchange is mutually beneficial.
 
-====== Cross system interoperability
+====== 2.8.1.2.1 Cross system interoperability
 
-Given the strong support for standards and inteoperability by both WIS2
-and ODIS, data and metadata exchange is realized using Web architectural
+Given the strong support for standards and interoperability by both WIS2
+and ODIS, data and metadata exchange is realized using web architectural
 principles and approaches. The ability to discover ODIS data on WIS2 (as well
 as the inverse) is a goal in extending the reach of both systems and data
 beyond their primary communities of interest.
@@ -321,8 +309,7 @@ and federation.
 
 ODIS dataset records will be made available using the WCMP2 standard and provided
 as objects available via HTTP for ingest, validation and publication to the GDC as a
-federated catalogue.  ODIS data will be published as recommended data as per the WMO
-Data Policy.
+federated catalogue.  ODIS data will be published as recommended data as per Resolution 1 (Cg-Ext(2021)).
 
 .WIS2 and ODIS metadata and catalogue interoperability
 image::images/wis2-odis-metadata-discovery-interop.png[WIS2 and ODIS metadata and catalogue interoperability]
