@@ -1,3 +1,3 @@
-=== Competencies
+=== 5.1 Competencies
 
-For this initial version of the _Guide to WIS2_, Volum II, existing guidance on competencies remains largely applicable. Please refer to _Guide to the WMO Information System_ (WMO-No. 1061), Vol I, Appendix A - WIS training and lLearning guide.
+For this initial version of the _Guide to WIS_, Volume II, existing guidance on competencies remains largely applicable. Please refer to _Guide to the WMO Information System_ (WMO-No. 1061), Volume I, Appendix A - WIS training and learning guide.

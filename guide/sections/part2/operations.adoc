@@ -22,7 +22,7 @@ implementation.
 Specifications for WIS2 are defined in the _Manual on WIS_, Volume II, and further elaborated in this Guide. Specifications for SWIM will be defined in the Procedures for Air Navigation Services –Information Management (PANS-IM) (ICAO Doc. 10199)footnote:[The PANS-IM is expected to available on ICAO NET by July 2024 and become applicable in November 2024. Information provided in herein is based on best understanding of draft proposals from ICAO.].
 
 During the WIS2 transition phase (2025-2033), meteorological data published
-via WIS2 will automatically be published to the GTS via the WIS2-to-GTS Gateways.
+via WIS2 will automatically be published to the GTS via the WIS2-to-GTS gateways.
 
 |===
 |*WIS2* |*SWIM*
@@ -165,7 +165,7 @@ The notification message must be published to the proper topic on the
 Message Broker. WIS2 defines a standard topic hierarchy to ensure
 that data is published consistently by all WIS2 Nodes. Notification
 messages for aviation data should be published on a specific topic
-allowing a data consumer, such as the Gateway, to subscribe only to
+allowing a data consumer, such as the gateway, to subscribe only to
 aviation-specific notifications. See the example below:
 
 .Example topic used to publish notifications about Quantitative Volcanic Ash Concentration Information
@@ -183,7 +183,7 @@ As a minimum, the WIS2 Node should retain the aviation data for a
 duration that meets the needs of the gateway. A retention period of at
 least 24 hours is recommended.
 
-====== 2.8.1.4 Gateway implementation
+====== 2.8.1.4 gateway implementation
 
 The potential interactions between the gateway component, WIS2 and SWIM are
 illustrated in the figure belowfootnote:[Note that the figure simplifies
@@ -195,13 +195,13 @@ Global Discovery Catalogue subscribes to a Global Broker and downloads
 the discovery metadata from the WIS2 Node using the URL supplied in the
 message.]
 
-.Interactions between the Gateway and components of WIS2 and SWIM
+.Interactions between the gateway and components of WIS2 and SWIM
 image::images/wis2-to-swim-interaction-temp.png[Interactions between the gateway and components of WIS2 and SWIM]
 
 **Configuration**
 
 Dataset discovery metadata will provide
-useful information that can be used to configure the Gateway, for example, the
+useful information that can be used to configure the gateway, for example, the
 topic(s) to subscribe to plus various other information that may be
 needed for the SWIM service.
 
@@ -209,7 +209,7 @@ Discovery metadata can be downloaded from the Global Discovery Catalogue.
 
 **Functions**
 
-The Gateway component implements the following functions:
+The gateway component implements the following functions:
 
 * Subscribe to the pertinent topic(s) for notifications about new
 aeronautical meteorological informationfootnote:[WIS2 recommends that one subscribes to
@@ -221,13 +221,13 @@ reduce latency.].
 ** Parse the notification message, discarding duplicate messages already
 processed previously;
 ** Download the data resource from the WIS2
-Nodefootnote:[The WIS2 Node may control access to data - the Gateway will
+Nodefootnote:[The WIS2 Node may control access to data - the gateway will
 need to be implemented accordingly.] using the URL in the message - the
 resource should be in IWXXM format;
 ** Create a new "data message" as per the SWIM specifications, including
 the unique identifier extracted from the data resourcefootnote:[In case
 a unique identifier is required for proper passing of an aviation
-weather message to the Gateway, one can use the GTS abbreviated heading
+weather message to the gateway, one can use the GTS abbreviated heading
 (TTAAii CCCC YYGGgg) in the COLLECT envelop (available in IWXXM messages
 having a corresponding TAC message), or content in attribute
 ``gml:identifier`` (available in newer IWXXM messages like WAFS SIGWX
@@ -239,7 +239,7 @@ within the data message;
 Broker component of the SWIM service.
 
 The choice of protocol for publishing to the SWIM Message Broker should
-be based on bilateral agreement between operators of the Gateway and
+be based on bilateral agreement between operators of the gateway and
 SWIM service.
 
 The gateway should implement logging and error handling as necessary to
@@ -261,10 +261,10 @@ The SWIM aviation weather information service may comprise of a Message Broker
 component which implements the AMQP 1.0 messaging standardfootnote:[AMQP
 1.0: https://www.amqp.org/resources/specifications].
 
-The Message Broker publishes the data messages provided by the Gateway.
+The Message Broker publishes the data messages provided by the gateway.
 
 The Message Broker must ensure that data messages are provided only by
-authorized sources such as a Gateway and should validate incoming messages as aeronautical meteorological information.
+authorized sources such as a gateway and should validate incoming messages as aeronautical meteorological information.
 
 ===== 2.8.1.2 The Ocean Data and Information System
 
