@@ -97,7 +97,7 @@ provided by a separate operational unit, or there may be a requirement to easily
 distinguish between data for SWIM and any other meteorological data.
 
 Where a new WIS2 Node is needed, the responsible organization must
-establish a new WIS2 Node and register it with the WMO Secretariat. For more information, see <<2.6_implementation_and_operation_of_a_wis2_node>>.
+establish a new WIS2 Node and register it with the WMO Secretariat. For more information, see <<_2.6_implementation_and_operation_of_a_wis2_node>>.
 
 Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it will be packaged into
