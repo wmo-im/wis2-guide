@@ -1,3 +1,5 @@
+:sectnums!:
+
 == PART I
 
 include::introduction.adoc[]

@@ -30,7 +30,7 @@ The WMO Secretariat and other Global Services will make the required changes to 
 
 The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.
 
-WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualization of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:cncf-openmetrics[https://openmetrics.io].
+WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualization of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:[cncf-openmetrics[https://openmetrics.io]].
 
 The WIS2 Global Services, namely the Global Broker, Global Cache, and Global Discovery Catalogue expose monitoring metrics on their respective service to the Global Monitor.
 

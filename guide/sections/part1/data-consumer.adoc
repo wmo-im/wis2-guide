@@ -20,7 +20,7 @@ A dataset in WIS2 is associated with a unique _topic_. Notifications about updat
 
 A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, using an Internet search enginefootnote:[Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in the Global Discovery Catalogues.], or by browsing the topic hierarchy on a Message Broker.
 
-WIS2 uses Global Caches to distribute core data, as defined in Resolution 1 (Cg-Ext (2021)) . Each Global Cache republishes core data on its own highly available data server and publishes a new notification message advertising the availability of that data from the Global Cache location.
+WIS2 uses Global Caches to distribute core data, as defined in the Unified Data Policy (Resolution 1 (Cg-Ext (2021))). Each Global Cache republishes core data on its own highly available data server and publishes a new notification message advertising the availability of that data from the Global Cache location.
 
 Notifications from WIS2 Nodes and Global Caches are published on different topics: The root topic used by WIS2 Nodes is ``origin``, while the root topic used by Global Caches is ``cache``. Other than the root, the topic hierarchy is identical. For example, for synoptic weather observations published by Environment Canada:
 
@@ -58,12 +58,12 @@ If a download link implements access control (for example, the data consumer nee
 
 ==== 1.2.5 How to use data
 
-Data is shared on WIS2 in accordance with Resolution 1 (Cg-Ext (2021)). This data policy describes two categories of data: core and recommended.
+Data is shared on WIS2 in accordance with the Unified Data Policy (Resolution 1 (Cg-Ext (2021))). This data policy describes two categories of data: core and recommended.
 
 * Core data is considered essential for the provision of services for the protection of life and property and the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.
 * Recommended data is exchanged on WIS2 in support of Earth system monitoring and prediction efforts. Recommended data _may_ be provided with conditions on use and/or subject to a license.
 
-Furthermore, Resolution 1 (Cg-Ext(2021))  encourages attribution of the source of the data in all cases. In this way, credit is given to those who have expended effort and resources in collecting, curating, generating, or processing the data. Attribution provides visibility of who is using data which, for many organizations, provides necessary evidence to justify continued provision of and updates to the data.
+Furthermore, the Unified Data Policy (Resolution 1 (Cg-Ext (2021))) encourages attribution of the source of the data in all cases. In this way, credit is given to those who have expended effort and resources in collecting, curating, generating, or processing the data. Attribution provides visibility of who is using data which, for many organizations, provides necessary evidence to justify continued provision of and updates to the data.
 
 Details of the applicable WMO data policy and any rights or licenses associated with data are provided in the discovery metadata that accompanies the data. Discovery metadata records are available from the Global Discovery Catalogue.
 

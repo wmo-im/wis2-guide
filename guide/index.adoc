@@ -1,4 +1,4 @@
-:title: Guide to the WMO Information System Volume II (DRAFT)
+:title: Guide to the WMO Information System Volume II (DRAFT) - WMO Information System 2.0
 :titletext: {title}
 :version: 2024.dev
 :date: {docdate}
@@ -32,7 +32,6 @@
 <<<
 toc::[]
 <<<
-
 include::sections/introduction.adoc[]
 
 include::sections/part1/index.adoc[]
