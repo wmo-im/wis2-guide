@@ -3,8 +3,8 @@
 ==== 2.6.1 Practices and procedures
 
 ===== 2.6.1.1 Registration and decommissioning of a WIS2 Node
-#### REVIEW CONTENT!!!!
-Registration and decommissioning of WIS2 Nodes must be approved by the Permanent Representative (PR) to WMO for the country or territory in which the WIS centre resides. The WIS National Focal Point can register a WIS2 Node on behalf of the PR for an official NC or DCPC listed in the Manual on WIS, Volume I. Where the WIS2 Node is part of a DCPC, the sponsoring WMO Programme or Regional Association shall be consulted.
+
+Registration and decommissioning of WIS2 Nodes must be approved by the Permanent Representative (PR) with WMO for the country or territory in which the WIS centre resides. The WIS National Focal Point can register a WIS2 Node on behalf of the PR for an official NC or DCPC listed in the Manual on WIS, Volume I. Where the WIS2 Node is part of a DCPC, the sponsoring WMO Programme or Regional Association shall be consulted.
 
 A WIS2 Node can be registered to exchange data concerning a WMO project or campaign, for a limited time. The National Focal Point can register such a project-related WIS2 Node in coordination with the Secretariat.
 
@@ -86,7 +86,7 @@ A WIS2 Node must be able to:
   * Publish data for consumer access
   * Publish data embedded in a message (such as, Common Alerting Protocol (CAP) warnings)
   * Receive metadata publication errors from the Global Data Catalogue
-  * Provide notifications with topics to Global Brokers //REVIEW THIS CHANGE
+  * Provide metadata with topics to Global Brokers
 
 ===== 2.6.2.2 System performance metrics
 

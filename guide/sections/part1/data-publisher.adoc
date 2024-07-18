@@ -127,9 +127,9 @@ The URL included in a notification message that is used to access core data from
 
 A Global Cache will download and cache the data object accessed via this URL.  
 
-The Global Caches are designed to support Members efficiently share real-time and near real-time data; they take on the task of making sure that core data is available to all and cover the costs of delivering data to a global community.
+The Global Caches are designed to support Members efficiently share real-time and near real-time data; they take on the task of making sure that core data is available to all on a free and unrestricted basis, as required by the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
 
-Unfortunately, Global Caches cannot republish _all_ core data: there is a limit to how much data they can afford to serve. Currently, a Global Cache is expected to cache about 100 GB of data each day.
+Unfortunately, Global Caches cannot republish _all_ core data: there is a limit to how much data they can afford to serve. Currently, a Global Cache is expected to cache about 100 GB of core data each day.
 
 If frequent updates to your dataset are very large (for example, weather prediction models or remote sensing observations) you will need to share the burden of distributing your data with the Global Cache operators. You should work with your GISC to determine the highest priority elements of your Core datasets that will be republished by the Global Caches.
 
