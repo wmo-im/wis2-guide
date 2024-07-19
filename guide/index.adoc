@@ -9,10 +9,7 @@
 :toc:
 :toc-placement!:
 :toclevels: 3
-:sectnums:
-:sectnumlevels: 4
 :sectanchors:
-:sectnum-start: 2
 
 = {title}
 
