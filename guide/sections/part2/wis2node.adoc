@@ -15,7 +15,7 @@ The registration of a WIS2 Node involves the following steps:
 * Request hosting a WIS2 Node: A request for hosting a WIS2 Node shall be put forward by the WIS National Focal Point (NFP) of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the Permanent Representative (PR) of the country or territory where the WIS2 Node host centre is located or the president of the relevant organization in case of WMO partner or programme designated as DCPC.
 
 * Assign a centre-id: The centre identifier (centre-id) is an acronym as proposed by the Member and endorsed by the WMO Secretariat. It is a single identifier comprised of a top -level domain (TLD) and centre -name, and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Manual on WIS, Volume II – Appendix D: WIS2 Topic Hierarchy). See below for guidance on assigning a centre identifier 
-(<<_2.6.1.2_guidance_on_assigning_a_centre_identifier_for_a_wis2_node>>).
+(<<_2_6_1_2_guidance_on_assigning_a_centre_identifier_for_a_wis2_node>>).
 
 * Complete the WIS2 register: The WIS NFP shall complete the WIS2 register operated by the WMO Secretariat.
 * Provide Global Service details: The WMO Secretariat provides connection details for the Global Services (such as, IP addresses) so that the WIS2 Node can be configured to provide the access. 
@@ -31,10 +31,10 @@ A diagram of the process of registering a WIS2 Node is presented below.
 
 image::images/add-wis2node.png[Adding a WIS2 Node,link=images/add-wis2node.png]
 
-Once a WIS2 Node has been registered and connected with Global Services, it can proceed to register the datasets it will publish via WIS2. To register a dataset, the authorized WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues and Global Brokers automatically subscribes to the topics provided in the discovery metadata record. For more information, see <<_1.3.2_how_to_provide_discovery_metadata_to_wis2>>.
+Once a WIS2 Node has been registered and connected with Global Services, it can proceed to register the datasets it will publish via WIS2. To register a dataset, the authorized WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues and Global Brokers automatically subscribes to the topics provided in the discovery metadata record. For more information, see <<_1_3_2_how_to_provide_discovery_metadata_to_wis2>>.
 
 Once the dataset has successfully been registered, the WIS2 Node can proceed to exchange data - see 
-<<_1.3.3_how_to_provide_data_in_wis2>>.
+<<_1_3_3_how_to_provide_data_in_wis2>>.
 
 When decommissioning a WIS2 Node operators must ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating these data sharing obligations to another WIS2 Node. In the case of a DCPC, this may mean the responsibilities are transferred to another Member.
 
@@ -68,7 +68,7 @@ Global Brokers must authenticate when they connect to the MQTT Message Broker in
 
 Given that Global Brokers will republish notification messages provided by your WIS2 Node, you may decide to restrict access to the MQTT Message Broker. Global Brokers operate using a fixed IP address which allows you to permit them access using IP filteringfootnote:[In WIS2 the IP addresses are used to determine the origin of connections and therefore confer trust to remote systems. It is well documented that IP addresses can be hi-jacked and that there are alternative, more sophisticated, mechanisms available for reliably determining the origin of connections requests, such as Public Key Infrastructure (PKI). However, the complexities of such implementation would introduce a barrier to Member's participation in WIS2. IP addresses are considered to provide an adequate level of trust for the purposes of WIS2: distributing publicly accessible data and messages.]. You must ensure that your MQTT Message Broker is accessible for more than one Global Broker to provide resilient transmission of notification messages to WIS2.
 
-If your WIS2 Node is only publishing core datafootnote:[In some cases, WIS2 Nodes will need to serve core data directly (see <<_1.3.3.5_considerations_when_providing_core_data_in_wis2>>). In these situations, the WIS2 Node data server must remain publicly accessible.], you may also restrict access to your data server - instead, relying on the Global Caches to distribute your data. Similarly, Global Caches also operate on fixed IP addresses allowing connections from them to be easily identified. Again, you must ensure that access is given to more than one Global Broker to ensure resilience.
+If your WIS2 Node is only publishing core datafootnote:[In some cases, WIS2 Nodes will need to serve core data directly (see <<_1_3_3_5_considerations_when_providing_core_data_in_wis2>>). In these situations, the WIS2 Node data server must remain publicly accessible.], you may also restrict access to your data server - instead, relying on the Global Caches to distribute your data. Similarly, Global Caches also operate on fixed IP addresses allowing connections from them to be easily identified. Again, you must ensure that access is given to more than one Global Broker to ensure resilience.
 
 During registration, the WMO Secretariat will provide host names and IP addresses of the Global Services to enable configuration of access control.
 

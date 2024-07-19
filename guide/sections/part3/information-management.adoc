@@ -12,7 +12,7 @@ _Note: The term "information" is used in a general sense and includes data and p
 
 High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as the specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.
 
-The <<_principles_of_information_management>> are described below. Five focus areas are described in <<_the_information_management_life_cycle>>. These are: 
+The principles of information management are described below. Five focus areas are described in <<_3_1_3_the_information_management_life_cycle>>. These are: 
 
 1. Planning, information creation and acquisition. The creation of information using internal and external data sources and the acquisition of information from various sources.
 2. Representation and metadata. The use of standards to represent metadata, data and information; This is of primary importance to enable the interoperability and longterm usability of the information.
@@ -170,9 +170,9 @@ For information to have value, it must inform users, aid knowledge discovery and
 
 For common types of information, the guides may be generic or link to standard documentation. Information on the observations available from the WIGOS is provided within the https://library.wmo.int/idurl/4/55063[_Manual on the WMO Integrated Global Observing System_] (WMO-No. 1160) and the https://library.wmo.int/idurl/4/55696[_Guide to the WMO Integrated Global Observing System_] (WMO-No. 1165). This includes information on the expected uses and quality of the data. Similarly, information on the data and products available through the WMO Integrated Processing and Prediction System is provided in the https://library.wmo.int/idurl/4/35703[_Manual on the WMO Integrated Processing and Prediction System_] (formerly Manual on the Global Data Processing and Forecasting System) (WMO-No. 485).
 
-For non-standard and specialist products targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described under <<_3.1.3.3.1_planning_information_creation_and_acquisition>>.
+For non-standard and specialist products targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described under <<_3_1_3_3_1_planning_information_creation_and_acquisition>>.
 
-Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <<_3.1.3.3.3_publication_and_exchange_of_information>>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.
+Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <<_3_1_3_3_3_publication_and_exchange_of_information>>). Other communication methods may also be used but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.
 
 The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.
 

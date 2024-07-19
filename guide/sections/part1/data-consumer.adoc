@@ -6,9 +6,9 @@ As a data consumer wanting to use data published via WIS2 you should read the gu
 
 The first step to using data published via WIS2 is to determine which dataset or datasets contains the data that is needed. To do this, a data consumer may browse discovery metadata provided by the Global Discovery Catalogue. Discovery metadata follows a standard scheme (see _Manual on WIS_, Volume II – Appendix F: WMO Core Metadata Profile). A data consumer may discover a dataset using keywords, geographic area of interest, temporal information, or free text. Matching search results from the Global Discovery Catalogue provide high-level information (title, description, keywords, spatiotemporal extents, data policy, licensing, contact information), from which a data consumer can assess and evaluate their interest in accessing/downloading data associated with the dataset record.
 
-A key component of dataset records in the Global Discovery Catalogue is that of "actionable" links. A dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications (see <<_1.2.2_how_to_subscribe_to_notifications_about_the_availability_of_new_data>>) about the data, or an API, or an offline archive retrieval service.
+A key component of dataset records in the Global Discovery Catalogue is that of "actionable" links. A dataset record provides one to many links that clearly identify the nature and purpose of the link (informational, direct download, API, subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications (see <<_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data>>) about the data, or an API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <<_2.2.4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
+The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <<_2_2_4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
 
 ==== 1.2.2 How to subscribe to notifications about the availability of new data
 
@@ -78,10 +78,10 @@ When using data from WIS2, data consumers:
 
 As a data publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
 
-* <<_introduction_to_wis2>>
-* <<_wis2_architecture>>
-* <<_roles_in_wis2>>
-* <<_components_of_wis2>>
+* <<_1_1_introduction_to_wis2>>
+* <<_2_1_wis2_architecture>>
+* <<_2_2_roles_in_wis2>>
+* <<_2_4_components_of_wis2>>
 
 The following specifications in the _Manual on WIS_, Volume II are useful for further reading:
 

@@ -58,8 +58,8 @@ Because we group data into a single, conceptual resource (that is, the dataset) 
 
 The dataset concept is central to WIS:
 * We publish discovery metadata about datasets, as specified in the _Manual on WIS_, Volume II – Appendix F: WMO Core Metadata Profile;
-* We can search for datasets that contain relevant data using the Global Discovery Catalogue (see <<_2.4.4_global_discovery_catalogue>>);
-* We can subscribe to notifications about updates about a dataset via a Global Broker (see <<_2.4.2_global_broker>>);
+* We can search for datasets that contain relevant data using the Global Discovery Catalogue (see <<_2_4_4_global_discovery_catalogue>>);
+* We can subscribe to notifications about updates about a dataset via a Global Broker (see <<_2_4_2_global_broker>>);
 * We can access the data that comprises a dataset from a single location using a well -described mechanism.
 
 It is up to the data publisher to decide how their data is grouped into datasets – effectively, to decide what datasets they publish to WIS. That said, we recommend that, subject to the consistency rules above, data publishers should organize their data into as few datasets as possible.

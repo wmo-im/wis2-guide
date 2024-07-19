@@ -4,7 +4,7 @@ As a data publisher with authoritative Earth system data that you want to share 
 
 ==== How to get started
 
-The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see <<_1.1.4_why_are_datasets_so_important?>>), and whether it is core or recommended data, as per Resolution 1 (Cg-Ext 2021)).
+The first thing you need to do is consider your data, how it can be conceptually grouped into one or more datasets (see <<_1_1_4_why_are_datasets_so_important?>>), and whether it is core or recommended data, as per Resolution 1 (Cg-Ext 2021)).
 
 Next, you need to consider where it is published. If your data relates to your country or territory, you need to publish it through a National Centre (NC). If your data relates to a region, programme, or other specialized function within WMO, you need to publish it through a Data Collection or Production Centre (DCPC). The functional requirements for NC and DCPC are described in the _Manual on WIS_, Volume II - Part III Functions of WIS.
 
@@ -12,7 +12,7 @@ All NCs and DCPCs are affiliated with a Global Information System Centre (GISC) 
 
 You may be able to identify an existing NC or DCPC that can publish your data. Alternatively, you may need to establish a new NC or DCPC. The main difference is that an NC is designated by a Member, whereas a DCPC is designated by a WMO or related international programme and/or a regional association.
 
-Both NC and DCPC require the operation of a WIS2 Node (see <<_2.4.2_wis2_node>>). The procedure for registering a new WIS2 Node is provided in <<_Registration_and_decommissioning_of_a_wis2_node>>. 
+Both NC and DCPC require the operation of a WIS2 Node (see <<_2_4_2_wis2_node>>). The procedure for registering a new WIS2 Node is provided in <<_2_6_1_1_registration_and_decommissioning_of_a_wis2_node>>. 
 
 Once you have determined the scope of your datasets, the data policy that applies, and have a WIS2 Node ready for data publication, you are ready to progress to the next step: providing discovery metadata.
 
@@ -33,7 +33,7 @@ In both cases, a notification message needs to be published on a Message Broker 
 
 These discovery metadata records are then propagated through the Global Service components into to the Global Discovery Catalogue where data consumers can search and browse for datasets of interest.
 
-Upon receipt of a new discovery metadata record, a Global Discovery Catalogue (see <<_2.4.4_global_discovery_catalogue>>) will validate, assess, ingest, and publish the record. Validation ensures that your discovery metadata record complies with the specification. The assessment examines your discovery metadata record against good practice. The Global Discovery Catalogue will notify you if your discovery metadata record fails validation and provide recommendations for improvements for you to consider. 
+Upon receipt of a new discovery metadata record, a Global Discovery Catalogue (see <<_2_4_4_global_discovery_catalogue>>) will validate, assess, ingest, and publish the record. Validation ensures that your discovery metadata record complies with the specification. The assessment examines your discovery metadata record against good practice. The Global Discovery Catalogue will notify you if your discovery metadata record fails validation and provide recommendations for improvements for you to consider. 
 
 Discovery metadata must be published in the Global Discovery Catalogues before you begin publishing data.
 
@@ -92,7 +92,7 @@ More guidance on the use of interactive APIs in WIS2 is anticipated in future ve
 
 WIS2 is designed to support the data sharing needs of all WMO disciplines and domains. Among these, the World Weather Watch footnote:[WMO World Weather Watch https://wmo.int/world-weather-watch] drives specific needs for the rapid exchange of data to support weather forecasting.
 
-To enable real-time data sharingfootnote:[In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.], WIS2 uses notification messages to advertise the availability of a new resource, either data or discovery metadata, and how to access that resource. Notification messages are published to a queue on a Message Broker in your WIS2 Nodefootnote:[WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers which subscribe to message brokers of WIS2 Nodes and republish notification messages (see <<_2.4.2_Global_Broker>>).] using the MQTT protocol and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific _topic_, such as dataset.
+To enable real-time data sharingfootnote:[In the context of WIS2, real-time implies anything from a few seconds to a few minutes - not the milliseconds required by some applications.], WIS2 uses notification messages to advertise the availability of a new resource, either data or discovery metadata, and how to access that resource. Notification messages are published to a queue on a Message Broker in your WIS2 Nodefootnote:[WIS2 ensures rapid global distribution of notification messages using a network of Global Brokers which subscribe to message brokers of WIS2 Nodes and republish notification messages (see <<_2_4_2_Global_Broker>>).] using the MQTT protocol and immediately delivered to everyone subscribing to that queue. A queue is associated with a specific _topic_, such as dataset.
 
 For example, when a new temperature profile from a radio sonde deployment is added to a dataset of upper-air data measurements, a notification message will be published that includes the URL used to access the new temperature profile data. Everyone subscribing to notification messages about the upper-air measurement dataset would receive the notification message, identify the URL and download the new temperature profile data.
 
@@ -118,7 +118,7 @@ Whatever topic is used, the discovery metadata provided to the Global Discovery 
 
 Core data, as specified in Resolution 1 (Cg-Ext 2021) is considered essential for the provision of services for the protection of life and property and for the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.
 
-WIS2 ensures highly available, rapid access to _most_ core data via a collection of Global Caches (see <<_2.4.3_global_cache>>). Global Caches subscribe to notification messages about the availability of new core data published at WIS2 Nodes, download a copy of that data and republish it on a high-performance data server and then discard it after the retention period expires (normally after 24-hoursfootnote:[A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.]). Global Caches do not provide sophisticated APIs. They publish notification messages advertising the availability of data on their caches and allow users to download data via HTTPS using the URL in the notification message.
+WIS2 ensures highly available, rapid access to _most_ core data via a collection of Global Caches (see <<_2_4_3_global_cache>>). Global Caches subscribe to notification messages about the availability of new core data published at WIS2 Nodes, download a copy of that data and republish it on a high-performance data server and then discard it after the retention period expires (normally after 24-hoursfootnote:[A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.]). Global Caches do not provide sophisticated APIs. They publish notification messages advertising the availability of data on their caches and allow users to download data via HTTPS using the URL in the notification message.
 
 The URL included in a notification message that is used to access core data from a WIS2 Node, or the "canonical" URL if multiple URLs are provided, must:
 
@@ -173,22 +173,22 @@ Note that some data archives are categorized as core data; for example, Essentia
 
 As a data publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
 
-* <<_1.1_introduction_to_wis2>>
-* <<_2.1_wis2_architecture>>
-* <<_2.2_roles_in_wis2>>
-* <<_2.4_components_of_wis2>>
-* <<_2.6_implementation_and_operation_of_a_wis2_node>>
+* <<_1_1_introduction_to_wis2>>
+* <<_2_1_wis2_architecture>>
+* <<_2_2_roles_in_wis2>>
+* <<_2_4_components_of_wis2>>
+* <<_2_6_implementation_and_operation_of_a_wis2_node>>
 
 The following sections are useful for further reading:
 
-* <<_3.1_information_management>>
-* <<_4.1_security>>
-* <<_5.1_competencies>>
+* <<_3_1_information_management>>
+* <<_4_1_security>>
+* <<_5_1_competencies>>
 
 Note that sections _4.1. Security_ and _5.1. Competencies_ reference content originally published for WIS1. These remain largely applicable and will be updated in subsequent releases of this Guide. 
 
 If you are publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), you should also read: 
-* <<_2.8.8.1_publishing_aviation_weather_data_through_wis2_into_icao_swim>>.
+* <<_2_8_8_1_publishing_aviation_weather_data_through_wis2_into_icao_swim>>.
 
 Finally, you should also review the specifications in the _Manual on WIS_, Volume II:
 
