@@ -166,8 +166,8 @@ _Note: The newsletter is available from: https://community.wmo.int/news/operatio
 
 For information to have value, it must inform users, aid knowledge discovery and have an impact through informed decision -making. Ensuring that the user can make effective use of the information is an important step in the information management life cycle. This is accomplished in two ways:
 
-1.	By providing suitable information within the discovery metadata, enabling users to discover and access the information - including licensing information - and to assess whether it meets their requirements;
-2.	By providing user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.
+1. By providing suitable information within the discovery metadata, enabling users to discover and access the information - including licensing information - and to assess whether it meets their requirements;
+2. By providing user guides and documentation on the suitability of the information for different uses, including any technical caveats or restrictions on the use of the information.
 
 For common types of information, the guides may be generic or link to standard documentation. Information on the observations available from the WIGOS is provided within the https://library.wmo.int/idurl/4/55063[_Manual on the WMO Integrated Global Observing System_] (WMO-No. 1160) and the https://library.wmo.int/idurl/4/55696[_Guide to the WMO Integrated Global Observing System_] (WMO-No. 1165). This includes information on the expected uses and quality of the data. Similarly, information on the data and products available through the WMO Integrated Processing and Prediction System is provided in the https://library.wmo.int/idurl/4/35703[_Manual on the WMO Integrated Processing and Prediction System_] (formerly Manual on the Global Data Processing and Forecasting System) (WMO-No. 485).
 
