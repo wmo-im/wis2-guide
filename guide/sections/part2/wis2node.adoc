@@ -4,7 +4,7 @@
 
 ===== 2.6.1.1 Registration and decommissioning of a WIS2 Node
 
-Registration and decommissioning of WIS2 Nodes must be approved by the Permanent Representative (PR) with WMO for the country or territory in which the WIS centre resides. The WIS National Focal Point can register a WIS2 Node on behalf of the PR for an official NC or DCPC listed in the Manual on WIS, Volume I. Where the WIS2 Node is part of a DCPC, the sponsoring WMO Programme or Regional Association shall be consulted.
+Registration and decommissioning of WIS2 Nodes must be approved by the Permanent Representative (PR) with WMO for the country or territory in which the WIS centre resides. The WIS National Focal Point can register a WIS2 Node on behalf of the PR for an official NC or DCPC listed in the _Manual on WIS_, Volume I. Where the WIS2 Node is part of a DCPC, the sponsoring WMO Programme or Regional Association shall be consulted.
 
 A WIS2 Node can be registered to exchange data concerning a WMO project or campaign, for a limited time. The National Focal Point can register such a project-related WIS2 Node in coordination with the Secretariat.
 
@@ -40,9 +40,9 @@ When decommissioning a WIS2 Node operators must ensure that obligations relating
 
 ===== 2.6.1.2 Guidance on assigning a centre identifier for a WIS2 Node
 
-The centre identifier (``centre-id``) is used in WIS2 to uniquely identify a participating WIS2 Node. The centre identifier must conform to the specification given in the _Manual on WIS_, Volume II, Appendix D: WIS2 Topic Hierarchy, section 7.1.6 Centre identification.
+The centre identifier (``centre-id``) is used in WIS2 to uniquely identify a participating WIS2 Node. The ``centre-id`` must conform to the specification given in the _Manual on WIS_, Volume II - Appendix D: WIS2 Topic Hierarchy, section 7.1.6 Centre identification.
 
-The centre identifier comprises two dash-separated tokens.
+The ``centre-id`` comprises two dash-separated tokens.
 
 *Token 1* is a _Top Level Domain_ (TLD) defined by the Internet Assigned Numbers Authority (IANA)footnote:[IANA Top Level Domains https://data.iana.org/TLD].
 
@@ -50,7 +50,7 @@ This is usually a simple choice for a Member. However, overseas territories requ
 
 *Token 2* is a descriptive name for the centre and this may contain dashes (but not other special characters).
  
-The descriptive name should be something recognizable - not only by our community, but by other users too. Basing things on the Web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK's National Meteorological Service is the Met Office (http://www.metoffice.gov.uk), so “metoffice” is better than “ukmo”footnote:[The “.gov” part of the domain name is superfluous for the purposes of WIS2. There is nothing preventing its use, but it does not add any value.]. Using the 4-letter GTS centre identifiers (CCCC) is not recommended because people unfamiliar with the GTS do not understand them.
+The descriptive name should be something recognizable - not only by our community, but by other users too. Basing things on the web domain name is likely to ensure that centre identifiers remain unique within a particular country/territory. A UK example this time: the UK's National Meteorological Service is the Met Office (http://www.metoffice.gov.uk), so “metoffice” is better than “ukmo”footnote:[The “.gov” part of the domain name is superfluous for the purposes of WIS2. There is nothing preventing its use, but it does not add any value.]. Using the 4-letter GTS centre identifiers (CCCC) is not recommended because people unfamiliar with the GTS do not understand them.
 
 The centre identifier specification says that larger organizations operating multiple centres may wish to register separate centre-ids for each centre. This is good practice. Keeping with the UK example, Met Office operates a National Meteorological Centre (NMC), 9 DCPCs (for example, a Volcanic Ash Advisory Centre) and a WIS2 Global Service, so it is important to split them out. For example:
 

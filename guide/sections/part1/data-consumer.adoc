@@ -16,7 +16,7 @@ WIS2 provides notifications about updates to datasets; for example, when a new o
 
 In WIS2, notifications are republished by Global Brokers to ensure resilient distribution. Consequently, there will be multiple places where one can subscribe. Data consumers requiring real-time notifications must subscribe to Global Brokers. A data consumer should subscribe to more than one Global Broker, thereby ensuring that notifications continue to be received if a Global Broker instance fails.
 
-A dataset in WIS2 is associated with a unique _topic_. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy).
+A dataset in WIS2 is associated with a unique _topic_. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_, Volume II - Appendix D: WIS2 Topic Hierarchy).
 
 A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, using an Internet search enginefootnote:[Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in the Global Discovery Catalogues.], or by browsing the topic hierarchy on a Message Broker.
 
@@ -31,7 +31,7 @@ As per clause 3.2.13 of the _Manual on WIS_, Volume II, data consumers should ac
 
 ==== 1.2.3 How to use a notification message to decide whether to download data
 
-On receipt of a notification message, a data consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. For details of the specification, see the _Manual on WIS_, Volume II, Appendix E: WIS2 Notification Message.
+On receipt of a notification message, a data consumer needs to decide whether to download the newly available data. The content of the notification message provides the information needed to make this decision. For details of the specification, see the _Manual on WIS_, Volume II - Appendix E: WIS2 Notification Message.
 
 In many cases, data consumers will use a software application to determine whether or not to download the data. This section provides insight about what happens. 
 

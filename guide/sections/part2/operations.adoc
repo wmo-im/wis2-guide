@@ -6,7 +6,7 @@ The WIS2 principles enable lowering the barrier to weather/climate/water data fo
 for data discovery, access, and visualization.  In addition to Member benefits, a by-product of utilizing standards is being able to provide
 the same data and access mechanisms to external systems at no extra cost of implementation.
 
-WIS2 standards are based on industry standards (OGC, W3C, IETF) and allow for broad interoperablility.  This means that non-traditional users can also
+WIS2 standards are based on industry standards (OGC, W3C, IETF) and allow for broad interoperability.  This means that non-traditional users can also
 use data from WIS2 data in the same manner, without the requirement for specialized software, tools, or applications.
 
 ===== 2.8.1.1 Publishing meteorological data through WIS2 into ICAO SWIM
@@ -183,7 +183,7 @@ As a minimum, the WIS2 Node should retain the aviation data for a
 duration that meets the needs of the gateway. A retention period of at
 least 24 hours is recommended.
 
-====== 2.8.1.4 gateway implementation
+====== 2.8.1.1.4 Gateway implementation
 
 The potential interactions between the gateway component, WIS2 and SWIM are
 illustrated in the figure belowfootnote:[Note that the figure simplifies
@@ -281,10 +281,10 @@ catalogues on the Web. This allows all systems with web connectivity to
 harvest and merge these catalogues, creating a global map of the ocean 
 data. IODE harvests all metadata shared by ODIS partners, combines 
 it as a knowledge graph, and processes this to export derivative 
-products (for example, diagnostic reports and cloud-optimised data products). 
+products (for example, diagnostic reports and cloud-optimized data products). 
 The Ocean InfoHub (OIH) system is IODE's reference implementation of a 
 discovery system leveraging ODIS. The ODIS architecture and tools are
-free and open-source (FOSS), with regular releases published for the
+free and open-source software (FOSS), with regular releases published for the
 community.
 
 To reach beyond the oceans domain, ODIS works with other data systems and 
@@ -309,7 +309,7 @@ and federation.
 
 ODIS dataset records will be made available using the WCMP2 standard and provided
 as objects available via HTTP for ingest, validation and publication to the GDC as a
-federated catalogue.  ODIS data will be published as recommended data as per Resolution 1 (Cg-Ext(2021)).
+federated catalogue.  ODIS data will be published as recommended data as per the Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
 
 .WIS2 and ODIS metadata and catalogue interoperability
 image::images/wis2-odis-metadata-discovery-interop.png[WIS2 and ODIS metadata and catalogue interoperability]
