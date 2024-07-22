@@ -1,4 +1,4 @@
-:title: Draft guidance on technical specifications of WIS2
+:title: Guide to the WMO Information System Volume II (DRAFT) - WMO Information System 2.0
 :titletext: {title}
 :version: 2024.dev
 :date: {docdate}
@@ -9,11 +9,7 @@
 :toc:
 :toc-placement!:
 :toclevels: 3
-:sectnums:
-:sectnumlevels: 4
 :sectanchors:
-:sectnum-start: 2
-
 = {title}
 
 <<<
@@ -32,7 +28,6 @@
 <<<
 toc::[]
 <<<
-
 include::sections/introduction.adoc[]
 
 include::sections/part1/index.adoc[]
