@@ -151,7 +151,8 @@ In WIS2 Global Caches provide access to WMO core data for data consumers. This a
 * A Global Cache shall provide the metric defined in this Guide at an HTTP endpoint
 * A Global Cache should make sure that data is downloaded in parallel and downloads are not blocking each other
 
-* The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. Its' value will be 1 when the endpoint is up and 0 otherwise.
+* The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. Its value will be 1 when the endpoint is up and 0 otherwise.
+* The metric ``wmo_wis2_gc_last_metadata`` will reflect the datetime (in RFC3339 format) of the last metadata resource processed by a given centre.
 
 ==== 2.7.5 Global Discovery Catalogue
 
@@ -190,10 +191,10 @@ To provide a Global Discovery Catalogue, Members may use whichever software comp
 
 To assist Members' participation in WIS2, a free and open-source Global Discovery Catalogue reference implementation is made available for download and use. The wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-The wis2-gdc provides the functionality required Global Discovery Catalogue, providing the following technical functions:
+The wis2-gdc provides the functionality required for the Global Discovery Catalogue, providing the following technical functions:
 
 * Discovery metadata subscription and publication from the Global Broker
-* Discovery metadata download the Global Cache
+* Discovery metadata download from the Global Cache
 * Discovery metadata validation, ingest and publication
 * WCMP2 compliance
 * Quality assessment (KPIs)
