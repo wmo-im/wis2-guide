@@ -76,7 +76,7 @@ When using data from WIS2, data consumers:
  
 ==== 1.2.6 Further reading for data consumers
 
-As a data publisher planning to operate a WIS2 Node, as a minimum you should read the following sections:
+As a data consumer wanting to use data published via WIS2, as a minimum you should read the following sections:
 
 * <<_1_1_introduction_to_wis2>>
 * <<_2_1_wis2_architecture>>
