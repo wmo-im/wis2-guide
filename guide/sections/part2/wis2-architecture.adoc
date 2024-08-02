@@ -124,7 +124,7 @@ Please refer to the _Manual on WIS_, Volume II for details.
 
 ==== 2.4.6 Global Replay
 * WIS2 may include a Global Replay.
-* A Global Replay enables Global Services and data consumers to search and query notification messages published by the Global Broker.
+* A Global Replay enables Global Services and data consumers to search, query and subscribe to notification messages published by the Global Broker.
 * A Global Replay subscribes to notification messages via a Global Broker about the availability of new notification messages. It downloads a copy of the notification message and updates its local index.
 * A Global Replay shall retain copies of notification messages for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.
 * A Global Replay will delete notification messages from its local index once the retention period has expired.

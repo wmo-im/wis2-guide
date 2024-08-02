@@ -223,12 +223,17 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 
 ===== Technical considerations
 
-* The Global Replay provides Global Services and Data Consumers with a mechanism to search and query for notification messages of interest.
+* The Global Replay provides Global Services and data consumers with a mechanism to search, query and subscribe to notification messages of interest.
 * The Global Discovery Catalogue implements the OGC API – Features – Part 1: Core standardfootnote:[https://docs.ogc.org/is/17-069r4/17-069r4.html], adhering to the following conformance classes and their dependencies.
 ** Core
 ** GeoJSON
+* The Global Replay implements the OGC API – Processes - Part 1: Core standardfootnote:[https://docs.ogc.org/is/18-062r2/18-062r2.html], adhering to the following conformance classes and their dependencies.
+** Core
+** OGC Process Description
+** JSON
 * A Global Replay shall subscribe to the topics `+origin/a/wis2/#+` and `+cache/a/wis2/#+`.
-* The Global Replay will make notification messages available via the collection identifiers `wis2-notification-messages-cache` and `wis2-notification-messages-cache`.
+* The Global Replay will make notification messages available via the collection identifier `wis2-notification-messages`.
+* The Global Replay will provide a process to allow for users to subscribe to messages with various criteria (spatial and / or temporal extent, topic selection).
 * A single Global Replay instance is sufficient for WIS2.
 * Multiple Global Replay instances may be deployed for resilience.
 * Global Replay instances operate independently of each other; each Global Replay instance will hold notification messages according to the required retention period.  Global Replays do not need to synchronise between themselves.
@@ -248,6 +253,8 @@ wis2-grep provides functionality required for the Global Replay, providing the f
 
 * notification messages subscription from the Global Broker
 * notification message ingest and API publication
+* user defined subscription for MQTT message replay
 * OGC API - Features - Part 1: Core compliance
+* OGC API - Processes - Part 1: Core compliance
 
 wis2-grep is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-grep.
