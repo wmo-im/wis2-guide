@@ -189,9 +189,9 @@ In WIS2 Global Caches provide access to WMO core data for data consumers. This a
 
 To provide a Global Discovery Catalogue, Members may use whichever software components they consider most appropriate to comply with WIS2 technical regulations.
 
-To assist Members' participation in WIS2, a free and open-source Global Discovery Catalogue reference implementation is made available for download and use. The wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
+To assist Members' participation in WIS2, a free and open-source Global Discovery Catalogue reference implementation is made available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-The wis2-gdc provides the functionality required for the Global Discovery Catalogue, providing the following technical functions:
+wis2-gdc provides the functionality required for the Global Discovery Catalogue, providing the following technical functions:
 
 * Discovery metadata subscription and publication from the Global Broker
 * Discovery metadata download from the Global Cache
@@ -202,7 +202,7 @@ The wis2-gdc provides the functionality required for the Global Discovery Catalo
 * Metrics reporting
 * Implementation of metrics
 
-The wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub.footnote:[https://github.com/wmo-im/wis2-gdc]
+wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub.footnote:[https://github.com/wmo-im/wis2-gdc]
 
 ==== 2.7.6 Global Monitor
 
