@@ -1654,7 +1654,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.</p>
 </li>
 <li>
-<p>The standard TCP port to be used is 443 for Secure HTTP (HTTPS).</p>
+<p>The standard Transmission Control Protocol (TCP) port to be used is 443 for Secure HTTP (HTTPS).</p>
 </li>
 </ul>
 </div>
@@ -2315,7 +2315,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>A Global Cache should make sure that data is downloaded in parallel and downloads are not blocking each other</p>
 </li>
 <li>
-<p>The metric <code>wmo_wis2_gc_dataserver_status_flag</code> will reflect the status of the connection to the download endpoint of the Centre. Its' value will be 1 when the endpoint is up and 0 otherwise.</p>
+<p>The metric <code>wmo_wis2_gc_dataserver_status_flag</code> will reflect the status of the connection to the download endpoint of the centre. Its value will be 1 when the endpoint is up and 0 otherwise.</p>
+</li>
+<li>
+<p>The metric <code>wmo_wis2_gc_last_metadata</code> will reflect the datetime (in RFC3339 format) of the last metadata resource processed by a given centre.</p>
 </li>
 </ul>
 </div>
@@ -2421,7 +2424,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>To assist Members' participation in WIS2, a free and open-source Global Discovery Catalogue reference implementation is made available for download and use. The wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
 </div>
 <div class="paragraph">
-<p>The wis2-gdc provides the functionality required Global Discovery Catalogue, providing the following technical functions:</p>
+<p>The wis2-gdc provides the functionality required for the Global Discovery Catalogue, providing the following technical functions:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2429,7 +2432,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Discovery metadata subscription and publication from the Global Broker</p>
 </li>
 <li>
-<p>Discovery metadata download the Global Cache</p>
+<p>Discovery metadata download from the Global Cache</p>
 </li>
 <li>
 <p>Discovery metadata validation, ingest and publication</p>
@@ -3507,7 +3510,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 <a href="#_footnoteref_37">37</a>. MQTT Specifications: <a href="https://mqtt.org/mqtt-specification/" class="bare">https://mqtt.org/mqtt-specification/</a>
 </div>
 <div class="footnote" id="_footnotedef_38">
-<a href="#_footnoteref_38">38</a>. TFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): <a href="https://datatracker.ietf.org/doc/html/rfc7231" class="bare">https://datatracker.ietf.org/doc/html/rfc7231</a>
+<a href="#_footnoteref_38">38</a>. RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): <a href="https://datatracker.ietf.org/doc/html/rfc7231" class="bare">https://datatracker.ietf.org/doc/html/rfc7231</a>
 </div>
 <div class="footnote" id="_footnotedef_39">
 <a href="#_footnoteref_39">39</a>. IANA Top Level Domains <a href="https://data.iana.org/TLD" class="bare">https://data.iana.org/TLD</a>
@@ -3593,7 +3596,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-02 09:47:11 UTC
+Last updated 2024-08-02 09:54:47 UTC
 </div>
 </div>
 </body>
