@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-08-02</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-08-05</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2024.dev</p></td>
@@ -2375,6 +2375,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li>
 <p>A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The subscription topic shall be <code>cache/a/wis2//metadata/#+</code>.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.</p>
@@ -3596,7 +3603,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-02 10:55:09 UTC
+Last updated 2024-08-05 10:45:52 UTC
 </div>
 </div>
 </body>
