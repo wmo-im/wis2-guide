@@ -224,10 +224,10 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 ===== Technical considerations
 
 * The Global Replay provides Global Services and data consumers with a mechanism to search, query and subscribe to notification messages of interest.
-* The Global Discovery Catalogue implements the OGC API – Features – Part 1: Core standardfootnote:[https://docs.ogc.org/is/17-069r4/17-069r4.html], adhering to the following conformance classes and their dependencies.
+* The Global Replay implements the OGC API – Features – Part 1: Core standardfootnote:[https://docs.ogc.org/is/17-069r4/17-069r4.html], adhering to the following conformance classes and their dependencies:
 ** Core
 ** GeoJSON
-* The Global Replay implements the OGC API – Processes - Part 1: Core standardfootnote:[https://docs.ogc.org/is/18-062r2/18-062r2.html], adhering to the following conformance classes and their dependencies.
+* The Global Replay implements the OGC API – Processes - Part 1: Core standardfootnote:[https://docs.ogc.org/is/18-062r2/18-062r2.html], adhering to the following conformance classes and their dependencies:
 ** Core
 ** OGC Process Description
 ** JSON
