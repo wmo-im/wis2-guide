@@ -8,7 +8,7 @@ Registration and decommissioning of WIS2 Nodes must be approved by the Permanent
 
 A WIS2 Node can be registered to exchange data concerning a WMO project or campaign, for a limited time. The National Focal Point can register such a project-related WIS2 Node in coordination with the Secretariat.
 
-A WIS2 Node can act as a regional publication facility on behalf of other centres.  Data or metadata publication by a regional publication facility will use the centre identifier of the data publisher.
+A WIS2 Node can act as a publication facility on behalf of other centres. This is a Data Collection role, as defined in the Manual on WIS. Data or metadata publication by a Data Collection role will use the centre identifiers of the data producers.
 
 WMO Secretariat will operate a WIS2 register as an authoritative list of WIS2 Nodes and Global Services. 
 
