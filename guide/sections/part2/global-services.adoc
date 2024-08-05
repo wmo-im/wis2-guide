@@ -239,7 +239,7 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 * Global Replay instances operate independently of each other; each Global Replay instance will hold notification messages according to the required retention period.  Global Replays do not need to synchronise between themselves.
 * A Global Replay is populated with notification messages from a Global Broker instance.
 * A Global Replay should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Replay instance will discard duplicate messages as needed.
-* A Global Replay will validate notification messages against the WIS Notification Message (WNM).  Valid WIS Notification Messages will be ingested into the index.  Invalid or malformed notification messages will be discarded.
+* A Global Replay can validate notification messages against the WIS Notification Message (WNM).  Valid WIS Notification Messages will be ingested into the index.  Invalid or malformed notification messages will be discarded.
 * A Global Replay will remove notification messages after the required retention period.
 * As a convention Global Replay centre-id will be ``tld-{centre-name}-global-replay``.
 
