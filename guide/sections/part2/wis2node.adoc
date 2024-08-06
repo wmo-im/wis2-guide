@@ -8,6 +8,8 @@ Registration and decommissioning of WIS2 Nodes must be approved by the Permanent
 
 A WIS2 Node can be registered to exchange data concerning a WMO project or campaign, for a limited time. The National Focal Point can register such a project-related WIS2 Node in coordination with the Secretariat.
 
+A WIS2 Node can act as a publication facility on behalf of other centres. This is a Data Collection or Production Centre (DCPC) role, as defined in the Manual on WIS. Data or metadata publication by a DCPC will use the centre identifiers of the data producers.
+
 WMO Secretariat will operate a WIS2 register as an authoritative list of WIS2 Nodes and Global Services. 
 
 The registration of a WIS2 Node involves the following steps:
@@ -58,7 +60,7 @@ The centre identifier specification says that larger organizations operating mul
 * ``uk-metoffice-vaac``
 * ``uk-metoffice-global-cache``  
  
-Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are longterm durable. Appending ```-test`` may be used to designate test WIS2 Nodes.
+Using a system name in the centre-id is not a good idea because these may change over time. Functional designations are longterm durable. Appending ``-test`` may be used to designate test WIS2 Nodes.
 
 ===== 2.6.1.3 Authentication, authorization, and access control for a WIS2 Node
 
