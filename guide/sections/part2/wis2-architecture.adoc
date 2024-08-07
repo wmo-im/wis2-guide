@@ -138,6 +138,6 @@ Please refer to the _Manual on WIS_, Volume II for details.
 
 ==== 2.5.2 Download protocol (HTTP)
 
-* The HTTP protocol (RFC 7231footnote:[TFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): https://datatracker.ietf.org/doc/html/rfc7231]) is to be used for all WIS2 download workflows.
+* The HTTP protocol (RFC 7231footnote:[RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): https://datatracker.ietf.org/doc/html/rfc7231]) is to be used for all WIS2 download workflows.
 * To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.
-* The standard TCP port to be used is 443 for Secure HTTP (HTTPS).
+* The standard Transmission Control Protocol (TCP) port to be used is 443 for Secure HTTP (HTTPS).
