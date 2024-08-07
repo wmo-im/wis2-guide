@@ -1,37 +1,36 @@
-=== Implementation and operation of a Global Service
+=== 2.7 Implementation and operation of a Global Service
 
-==== Procedure for registration of a new Global Service
+==== 2.7.1 Procedure for registration of a new Global Service
+Successful operations of WIS will depend on having a set of Global Services running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide the data they need for their duties.
 
-Successful operations of WIS will depend on having a set of Global Services running well-managed IT environments with a very high level of reliability so that all WIS Users and WIS2 Nodes will be able to access and provide data they need for their duties.
+Depending on the nature of the Global Service, the following is the minimum capability of Global Service operation, so that collectively, the level of service is 100% (or very close):
 
-Depending on the nature of the Global Service, the following is considered to be the minimum capability of Global Service operation, so that collectively, the level of service is 100% (or very close):
-
-* Three (3) Global Brokers: Each Global Broker connected to at least two (2) other Global Brokers
-* Three (3) Global Caches: Each Global Cache connected to at least two (2) Global Broker and should be able to download the data from all WIS2 Nodes providing Core data
-* Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue connected to at least one (1) Global Broker
+* Three (3) Global Brokers: Each Global Broker is connected to at least two (2) other Global Brokers
+* Three (3) Global Caches: Each Global Cache is connected to at least two (2) Global Brokers and should be able to download the data from all WIS2 Nodes providing core data
+* Two (2) Global Discovery Catalogues: Each Global Discovery Catalogue is connected to at least one (1) Global Broker
 * Two (2) Global Monitors: Each Global Monitor should scrape the metrics from all other Global Services
 
-In addition to the above, WIS architecture can accomodate adding (or removing) Global Services. Candidate WIS Centres should inform their WIS Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
+In addition to the above, WIS architecture can accommodate adding (or removing) Global Services. Candidate WIS centres should inform their WIS National Focal Point and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
-Running a Global Service is a significant commitment for a WIS Centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.
+Running a Global Service is a significant commitment for a WIS centre.  To maintain a very high level of service of WIS, each Global Service will have a key role to play.
 
-On receipt of an offer from a Member to operate a Global Service, WMO Secretariat will suggest which Global Service the Member may provide in order to improve WIS2. This suggestion will be based on the current situation of WIS2 (e.g., the number of existing Global Brokers, whether an additional Global Cache is needed, etc.).
+On receipt of an offer from a Member to operate a Global Service, the WMO Secretariat will suggest which Global Service the Member may provide to improve WIS2. This suggestion will be based on the current situation of WIS2 (such as, the number of existing Global Brokers, whether an additional Global Cache is needed, and so forth).
 
-The _Manual on WIS_ (WMO-No. 1060), Volume II, the Guide and other material available will help WIS Centres in deciding the best way forward.
+The _Manual on WIS_, Volume II, this Guide and other material available will help WIS centres in deciding the best way forward.
 
-When decided, the WIS Focal Point will inform WMO Secretariat of its preference. Depending on the type of Global Service, WMO Secretariat will provide a checklist to the WIS Centre so that the future Global Service can be included in WIS Operations.
+When decided, the WIS National Focal Point will inform the WMO Secretariat of its preference. Depending on the type of Global Service, the WMO Secretariat will provide a checklist to the WIS centre so that the future Global Service can be included in WIS operations.
 
-A WIS Centre must commit to running the Global Service for a minimum of four (4) years.
+A WIS centre must commit to running the Global Service for a minimum of four years.
 
-WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS Operations.
+The WMO Secretariat and other Global Services will make the required changes to include the new Global Service in WIS operations.
 
-==== Performance management and monitoring of a Global Service
+==== 2.7.2 Performance management and monitoring of a Global Service
 
-===== Monitoring and metrics for WIS2 operations
+===== 2.7.2.1 Monitoring and metrics for WIS2 operations
 
 The availability of data and performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive response to incidents and effective capacity planning for future operations.
 
-WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualisation of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:cncf-openmetrics[https://openmetrics.io].
+WIS2 requires that metrics are provided using OpenMetrics – the de-facto standard footnote:[OpenMetrics is proposed as a draft standard within IETF.] for transmitting cloud-native metrics at scale. Widely adopted, many commercial and open-source software components already come preconfigured to provide performance metrics using the OpenMetrics standard. Tools such as Prometheus and Grafana provide aggregation and visualization of metrics provided in this form, making it simple to generate performance insights. The OpenMetrics standard can be found at openmetrics.io footnote:[cncf-openmetrics[https://openmetrics.io]].
 
 The WIS2 Global Services, namely the Global Broker, Global Cache, and Global Discovery Catalogue expose monitoring metrics on their respective service to the Global Monitor.
 
@@ -41,7 +40,7 @@ Metrics for the WIS2 monitoring should follow the naming convention:
 
   wmo_<program>_<name>
 
-where program is the name of the responsible WMO Program and name is the name of the metric. Examples for WIS2 metrics can look like
+Where program is the name of the responsible WMO Programme and name is the name of the metric. Examples for WIS2 metrics can look like:
 
   wmo_wis2_gc_downloaded_total
 
@@ -49,94 +48,92 @@ where program is the name of the responsible WMO Program and name is the name of
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:wmo-wmh[https://github.com/wmo-im/wis2-metric-hierarchy]
 
-===== Service levels, performance indicators, and fair-usage policies
-* Each WIS Centre operating a WIS2 Node will be responsible in achieving the highest possible level of service based on their resources and capabilities.
-* All Global Services, and in particular Global Brokers and Global Caches, are collectively responsible in making the WIS a reliable and efficient mean to exchange data required for the operations of all WIS Centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.
-* Each Global Service should aim at achieving at least 99.5% availibility of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
+===== 2.7.2.2 Service levels, performance indicators, and fair-usage policies
+* Each WIS centre operating a WIS2 Node will be responsible for achieving the highest possible level of service based on their resources and capabilities.
+* All Global Services, in particular Global Brokers and Global Caches, are collectively responsible for making the WIS a reliable and efficient means to exchange data required for the operations of all WIS centres. The agreed architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.
+* Each Global Service should aim at achieving at least 99.5% availability of the service they propose. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating the Global Service.
 * A Global Broker:
-** should support a minimum of 200 WIS2 Nodes or Global Services
-** should support a minimum of 1000 subscribers.
-** should support processing of a minimum of 10000 messages per second
+** Should support a minimum of 200 WIS2 Nodes or Global Services
+** Should support a minimum of 1000 subscribers.
+** Should support processing of a minimum of 10000 messages per second
 * A Global Cache:
-** should support a mimimum of 100 GB of data in the cache
-** should support a minimum of 1000 simultaneous downloads
-** could limit the number of simultaneous connections from a user (known by its originating source IP) to 5
-** could limit the bandwidth usage of the service to 1Gb/s
+** Should support a minimum of 100 GB of data in the cache
+** Should support a minimum of 1000 simultaneous downloads
+** Could limit the number of simultaneous connections from a user (known by its originating source IP) to 5
+** Could limit the bandwidth usage of the service to 1 Gb/s
 * A Global Monitor:
-** should support a minimum of 50 metrics providers
-** should support 200 simultaneous access to the dashboard
-** could limit the bandwidth usage of the service to 100Mb/s
+** Should support a minimum of 50 metrics providers
+** Should support 200 simultaneous access to the dashboard
+** Could limit the bandwidth usage of the service to 100 Mb/s
 * A Global Discovery Catalogue:
-** should support a minimum of 20000 metadata records
-** should support a minimum of 50 requests per second to the API endpoint
+** Should support a minimum of 20000 metadata records
+** Should support a minimum of 50 requests per second to the API endpoint
 
-===== Metrics for Global Services
+===== 2.7.2.3 Metrics for Global Services
 
 In the following sections and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.
 
-==== Global Broker
+==== 2.7.3 Global Broker
 
-===== Technical considerations
+===== 2.7.3.1 Technical considerations
 
-* As detailed above, there will be at least three (3) instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
-* A Global Broker instance subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim at subscribing to all WIS Centres. If this is not possible, for whatever reason, the Global Broker should inform WMO Secretariat so that situation is documented.
+* As detailed above, there will be at least three instances of Global Broker to ensure highly available, low latency global provision of messages within WIS.
+* A Global Broker instance subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim at subscribing to all WIS centres. If this is not possible, for whatever reason, the Global Broker should inform the WMO Secretariat so that the situation is documented.
 * Every WIS2 Node or Global Service must have subscriptions from at least two Global Brokers.
-* For full global coverage, a Global Broker instance will subscribe to messages from at least two (2) other Global Brokers.
-* When subscribing to messages from WIS2 Node and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS Centre and available at WMO Secretariat.
+* For full global coverage, a Global Broker instance will subscribe to messages from at least two other Global Brokers.
+* When subscribing to messages from WIS2 Nodes and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS centre and available at WMO Secretariat.
 
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly-available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. It must be noted that the open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
 ** Additional features including anti-loop detection, notification message format compliance, validation of the published topic, and provision of metrics are required.
 
-* When receiving a message from a WIS Centre or Global Service broker, The metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
-* A Global Broker will check if the topic on which the message is received is valid (in particular, a discovery metadata record must exist with a corresponding topic in order that data can be made available using this topic). If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. Global Broker should not request Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
+* When receiving a message from a WIS centre or Global Service broker, The metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
+* A Global Broker will check if the topic on which the message is received is valid (in particular, a discovery metadata record must exist with a corresponding topic so that data can be made available using this topic). If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. Global Broker should not request Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
 * During the pre-operational phase (2024), Global Broker will not discard the message but will send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC.
-* A Global Broker will validate notification messages against the standard format (see Notification message format and structure), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_messages_invalid_total`` will be increased by 1.
-* A Global Broker instance will republish a message only once. Using the message id as defined in WIS Notification Message, the Global Broker will record id of messages already published and will discard subsequent identitical (with the same message id) messages. This is the anti-loop feature of the Global Broker.
+* A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E: WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_messages_invalid_total`` will be increased by 1.
+* A Global Broker instance will republish a message only once. Using the message id as defined in the WIS2 Notification Message, the Global Broker will record the id of messages already published and will discard subsequent identical (with the same message id) messages. This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
-* All aboved defined metrics will be made avalaible on HTTPS endpoints that the Global Monitor will ingest from regularly.
+* All above defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention Global Broker centre-id will be ``tld-{centre-name}-global-broker``.
-* A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
+* A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
 
-==== Global Cache
+==== 2.7.4 Global Cache
 
-In WIS2 Global Caches provide access to WMO Core Data for data consumers. This allows for data providers to restrict access to their systems to Global Services and it reduces the need for them to provide high bandwith and low latency access to their data. Global Caches work transparent for end users in that they resend notification messages from data providers which are updated to point to the Global Cache data store for data, they copied from the original source. Additionally, Global Caches also resend notification messages from data providers for Core Data, that is not stored on the Global Cache, for instance if the originator indicates that a certain data set should not be cached in the notification message. In the latter case, the notification messages that a Global Cache resends are unchanged and point to the original source. Data consumers should subscribe to the notification messages from Global Caches instead of the notification messages from the data providers for WMO Core Data. When data consumers receive a notification message they should follow the URLs from that messages which either point to a Global Cache holding a copy of the data, or - in case of uncached content - point to the original source.
+In WIS2 Global Caches provide access to WMO core data for data consumers. This allows for data providers to restrict access to their systems to Global Services and it reduces the need for them to provide high bandwidth and low latency access to their data. Global Caches work transparent for end users in that they resend notification messages from data providers which are updated to point to the Global Cache data store for data, they copied from the original source. Additionally, Global Caches also resend notification messages from data providers for core data, that is not stored on the Global Cache, for instance if the originator indicates that a certain dataset should not be cached in the notification message. In the latter case, the notification messages that a Global Cache resends are unchanged and point to the original source. Data consumers should subscribe to the notification messages from Global Caches instead of the notification messages from the data providers for WMO core data. When data consumers receive a notification message they should follow the URLs from that message which either point to a Global Cache holding a copy of the data, or - in case of uncached content - point to the original source.
 
-===== Technical considerations
+===== 2.7.4.1 Technical considerations
 
 * A Global Cache is built around three software components:
 ** A highly available data server allowing data consumers to download cache resources with high bandwidth and low latency.
-** A message broker implementing both MQTTv3.1.1 and MQTTv5 for publishing notification messages about resources that are available from the Global Cache
-** A Cache management implementing the features needed to connect with the WIS ecosystem, receive data from WIS2 nodes and other Global Caches, store the data to the data server and manage the content of the cache (i.e. expiration of data, deduplication, etc)
-* The Global Cache will aim at containing copies of real-time and near real-time data designated as "core" within the WMO Unified Data Policy, Resolution 1 (Cg-Ext(2021)).
+** A Message Broker implementing both MQTTv3.1.1 and MQTTv5 for publishing notification messages about resources that are available from the Global Cache
+** A cache management implementing the features needed to connect with the WIS ecosystem, receive data from WIS2 Nodes and other Global Caches, store the data to the data server and manage the content of the cache (such as, expiration of data, deduplication, and so forth).
+* The Global Cache will aim at containing copies of real-time and near real-time data designated as "core" within the Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
 * A Global Cache instance will host data objects copied from NC/DCPCs.
-* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix E: WIS2 Notification Message).
-* A Global Cache instance will use the standard topic structure in their local message brokers (see _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy
-).
+* A Global Cache instance will publish notification messages advertising availability of the data objects it holds. The notification messages will follow the standard structure (see _Manual on WIS_, Volume II -Appendix E: WIS2 Notification Message).
+* A Global Cache instance will use the standard topic structure in their local message brokers (see _Manual on WIS_, Volume II -Appendix D: WIS2 Topic Hierarchy).
 * A Global Cache instance will publish on topic ``cache/a/wis2/...``.
 * There will be multiple Global Cache instances to ensure highly available, low latency global provision of real-time and near real-time "core" data within WIS2.
-* There will be multiple Global Cache instances may attempt to download cacheable data objects from all originating centres with "cacheable" content. A Global Cache instance will also download data objects from other Global Cache instances. This ensures the instance has full global coverage, mitigating where direct download from an originating centre is not possible.
-* A Global Cache instance will operate independently of other Global Cache instances. Each Global Cache instance will hold a full copy of the cache – albeit that there may be small differences between Global Cache instances as "data availability" notification messages propagate through WIS to each Global Cache in turn. There is no formal ‘synchronisation’ between Global Cache instances.
-* A Global Cache will temporarily cache all resources published on the ``metadata`` topic. A Global Discovery Catalogue will subscribe to notifications about publication of new or updated metadata, download the metadata record from the Global Cache and insert it into the catalogue. A Global Discovery Catalogue will also publish a metadata record archive each day containing the complete content of the catalogue and advertise its availability with a notification message. This resource will also be cached by a Global Cache.
-* A Global Cache is designed to support real-time distribution of content. Data Consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file to which the URL points. Apart from the URL it is transparent to the Data Consumers from which Global Cache they download the data. There is no need to download the same Data Object from multiple Global Caches. The data id contained within the notification messages is used by Data Consumers and Global Services to detect such duplicates.
-* There is no requirement for a Global Cache to provide a "browse-able" interface to the files in its repository allowing Data Consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (e.g., implemented as a "Web Accessible Folder", or WAF) along with adequate documentation for Data Consumers to understand how the capability works.
-* The default behaviour for a Global Cache is to cache all data published under the ``origin/a/wis2/data/+/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS Notification Message.
+* There will be multiple Global Cache instances that may attempt to download cacheable data objects from all originating centres with "cacheable" content. A Global Cache instance will also download data objects from other Global Cache instances. This ensures the instance has full global coverage, mitigating where direct download from an originating centre is not possible.
+* A Global Cache instance will operate independently of other Global Cache instances. Each Global Cache instance will hold a full copy of the cache – albeit that there may be small differences between Global Cache instances as "data availability" notification messages propagate through WIS to each Global Cache in turn. There is no formal ‘synchronization’ between Global Cache instances.
+* A Global Cache will temporarily cache all resources published on the ``metadata`` topic. A Global Discovery Catalogue will subscribe to notifications about the publication of new or updated metadata, download the metadata record from the Global Cache and insert it into the catalogue. A Global Discovery Catalogue will also publish a metadata record archive each day containing the complete content of the catalogue and advertise its availability with a notification message. This resource will also be cached by a Global Cache.
+* A Global Cache is designed to support real-time distribution of content. Data consumers access data objects from a Global Cache instance by resolving the URL in a "data availability" notification message and downloading the file to which the URL points. Apart from the URL it is transparent to the data consumers from which Global Cache they download the data. There is no need to download the same data object from multiple Global Caches. The data id contained within the notification messages is used by data consumers and Global Services to detect such duplicates.
+* There is no requirement for a Global Cache to provide a "browseable" interface to the files in its repository allowing data consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (for example, implemented as a WAF) along with adequate documentation for data consumers to understand how the capability works.
+* The default behaviour for a Global Cache is to cache all data published under the ``origin/a/wis2/data/+/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS2 Notification Message.
 * A Global Cache may decide not to cache data. For example, if the data is considered too large, or a WIS2 Node publishes an excessive number of small files. Where a Global Cache decides not to cache data it should behave as though the ``cache`` property is set to false and send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and their GISC to remedy the issue.
 * If core data is not cached on a Global Cache (that is, if the data is flagged as ``"cache": false`` or if the Global Cache decides not to cache this data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the ``cache/a/wis2/...`` topic. In this case the message id will be changed and the rest of the message will not be modified.
-* A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or host name, and any subsequent changes.
-* A Global Cache should validate the integrity of the resources it caches and only accept data which matches the integrity value from the WIS Notification Message. If the WIS Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
+* A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a public resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
+* A Global Cache should validate the integrity of the resources it caches and only accept data that matches the integrity value from the WIS2 Notification Message. If the WIS2 Notification Message does not contain an integrity value, a Global Cache should accept the data as valid. In this case a Global Cache may add an integrity value to the message it republishes.
 * As a convention Global Cache centre-id will be ``tld-{centre-name}-global-cache``.
 
-===== Practices and procedures
-
+===== 2.7.4.2 Practices and procedures
 
 * A Global Cache shall subscribe to the topics `+origin/a/wis2/#+`, `+cache/a/wis2/#+`.
 * A Global Cache shall ignore all messages received on the topics ``++origin/a/wis2/+/data/recommended/#++`` and ``++cache/a/wis2/+/data/recommended/#++`` footnote:[It is also technically possible to filter recommended data by using a wildcard subscription such as ``++origin/a/wis2/+/data/core/#++``. However, avoiding wildcard subscription is generally considered good practice as it limits the burden of the broker operated by Global Brokers.]
-* A Global Cache shall retain the data and metadata they receive for a minimum period of 24 hours. Requirements relating varying retention times for different types of data may be added later.
+* A Global Cache shall retain the data and metadata they receive for a minimum period of 24 hours. Requirements relating to varying retention times for different types of data may be added later.
 * For messages received on topic ``++origin/a/+/data/core/#++`` or ``++cache/a/+/data/core/#++``, a Global Cache shall:
 ** If the message contains the property ``"properties.cache": false``
 *** Republish the message at topic ``cache/a/wis2/...`` matching ``+/a/wis2/...`` where the original message has been received after having updated the id of the message.
-** else
+** Else
 *** Maintain a list of data_ids already downloaded.
 *** Verify if the message points to new or updated data by comparing the pubtime value of the notification message with the list of data_ids.
 *** If the message is new or updated
@@ -147,20 +144,20 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 **** Modify the message identifier and the canonical link's ``href`` of the received message. Leave all other fields untouched.
 **** Republish the modified message to topic ``cache/a/wis2/...`` matching the ``+/a/wis2/...`` where the original message has been received.
 **** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1. The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node or Global Cache.
-*** else
-**** Drop the messages for data already present on the Cache.
+*** Else
+**** Drop the messages for data already present on the Global Cache.
 
 * If the Global Cache is not able to download the data the metric ``wmo_wis2_gc_downloaded_error_total`` will be increased by 1.
-* A Global Cache shall provide the metric defined in this Guide at an http(s) endpoint
+* A Global Cache shall provide the metric defined in this Guide at an HTTP endpoint
 * A Global Cache should make sure that data is downloaded in parallel and downloads are not blocking each other
 
-* The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. It values will be 1 when the endpoint is up and 0 otherwise.
+* The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the Centre. Its' value will be 1 when the endpoint is up and 0 otherwise.
 
-==== Global Discovery Catalogue
+==== 2.7.5 Global Discovery Catalogue
 
-===== Technical considerations
+===== 2.7.5.1 Technical considerations
 
-* The Global Discovery Catalogue provides Data Consumers with a mechanism to discover and search for Datasets of interest, as well as how to interact with and find out more information about those Datasets.
+* The Global Discovery Catalogue provides data consumers with a mechanism to discover and search for datasets of interest, as well as how to interact with and find out more information about those datasets.
 * The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html], adhering to the following conformance classes and their dependencies:
 ** Searchable Catalog (Deployment)
 ** Searchable Catalog - Sorting (Deployment)
@@ -168,53 +165,52 @@ In WIS2 Global Caches provide access to WMO Core Data for data consumers. This a
 ** JSON (Building Block)
 ** HTML (Building Block)
 * The Global Discovery Catalogue will make discovery metadata available via the collection identifier of `wis2-discovery-metadata`.
-* The Global Discovery Catalogue advertises the availability of Datasets and how to access them or subscribe to updates.
-* The Global Discovery Catalogue does not advertise or list the availability of individual Data Objects that comprise a Dataset (i.e. data files).
+* The Global Discovery Catalogue advertises the availability of datasets and how to access them or subscribe to updates.
+* The Global Discovery Catalogue does not advertise or list the availability of individual data objects that comprise a dataset (that is, data files).
 * A single Global Discovery Catalogue instance is sufficient for WIS2.
 * Multiple Global Discovery Catalogue instances may be deployed for resilience.
-* Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronise between themselves.
+* Global Discovery Catalogue instances operate independently of each other; each Global Discovery Catalogue instance will hold all discovery metadata records.  Global Discovery Catalogues do not need to synchronize between themselves.
 * A Global Discovery Catalogue is populated with discovery metadata records from a Global Cache instance, receiving messages about the availability of discovery metadata records via a Global Broker.
 * A Global Discovery Catalogue should connect and subscribe to more than one Global Broker instance to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue instance will discard duplicate messages as needed.
-* A Global Discovery Catalogue will validate that a discovery metadata record identifier's `centre-id` token (see _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix F: WMO Core Metadata Profile 2) matches against the `centre-id` level of the topic from which it was published (see _Manual on WIS_ (WMO-No. 1060), Volume II, Appendix D: WIS2 Topic Hierarchy), to ensure that discovery metadata is published by the authoritative orgnanization.
-* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile 2 (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
+* A Global Discovery Catalogue will validate that a discovery metadata record identifier's `centre-id` token (see _Manual on WIS_, Volume II -Appendix F: WMO Core Metadata Profile) matches against the `centre-id` level of the topic from which it was published (see _Manual on WIS_, Volume II -Appendix D: WIS2 Topic Hierarchy), to ensure that discovery metadata is published by the authoritative organization.
+* A Global Discovery Catalogue will validate discovery metadata records against the WMO Core Metadata Profile (WCMP2).  Valid WCMP2 records will be ingested into the catalogue.  Invalid or malformed records will be discarded and reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
 * A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin) with their equivalent links for subscription at Global Broker instances (cache).
 * A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
 * A Global Discovery Catalogue will remove discovery metadata that is marked for deletion as specified in the data notification message.
 * A Global Discovery Catalogue should apply faceting capability as specified in the cataloguing considerations of the WCMP2 specification, as defined in OGC API - Records.
-* A Global Discovery Catalogue will provide human-readable Web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, Data Consumers should also be able to discover WIS content via third party search engines.
-* A Global Discovery Catalogue will generate and store a zipfile of all WCMP2 records once a day, that will be made be accessible via HTTP.
-* A Global Discovery Catalogue will publish a WIS2 Notification Message of its zipfile of all WCMP2 records on its centre-id's +metadata+ topic (i.e. `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
-* A Global Discovery Catalogue may initialize itself (cold start) from a zipfile of all WCMP2 records published.
+* A Global Discovery Catalogue will provide human-readable web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, data consumers should also be able to discover WIS content via third party search engines.
+* A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day, that will be made be accessible via HTTP.
+* A Global Discovery Catalogue will publish a WIS2 Notification Message of its zip file of all WCMP2 records on its centre-id's +metadata+ topic (for example, `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
+* A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention Global Discovery Catalogue centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
+===== 2.7.5.2 Global Discovery Catalogue reference implementation: wis2-gdc
 
-===== Global Discovery Catalogue reference implementation: wis2-gdc
+To provide a Global Discovery Catalogue, Members may use whichever software components they consider most appropriate to comply with WIS2 technical regulations.
 
-To provide a Global Discovery Catalogue, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
+To assist Members' participation in WIS2, a free and open-source Global Discovery Catalogue reference implementation is made available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
-To assist Members participation in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation is made available for download and use.  wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
+wis2-gdc provides the functionality required for the Global Discovery Catalogue, providing the following technical functions:
 
-wis2-gdc provides functionality required Global Discovery Catalogue, providing the following technical functions:
-
-* discovery metadata subscription and publication from the Global Broker
-* discovery metadata download the Global Cache
-* discovery metadata validation, ingest and publication
+* Discovery metadata subscription and publication from the Global Broker
+* Discovery metadata download the Global Cache
+* Discovery metadata validation, ingest and publication
 * WCMP2 compliance
-* quality assessment (KPIs)
+* Quality assessment (KPIs)
 * OGC API - Records - Part 1: Core compliance
-* metrics reporting
-* implementation of metrics
+* Metrics reporting
+* Implementation of metrics
 
-wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-gdc.
+wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub.footnote:[https://github.com/wmo-im/wis2-gdc]
 
-==== Global Monitor
+==== 2.7.6 Global Monitor
 
-===== Technical Considerations
-* WIS standardises how system performance and data availability metrics are published from WIS2 Nodes and Global Services.
-* For each type of Global Service, a set of standard metrics have been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor
+===== 2.7.6.1 Technical considerations
+* WIS standardizes how system performance and data availability metrics are published from WIS2 Nodes and Global Services.
+* For each type of Global Service, a set of standard metrics has been defined. Global Services will implement those metrics and provide an endpoint for those metrics to be scraped by the Global Monitor
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
-* The Global Monitor will monitor the 'health' (i.e., performance) of components at NC/DCPC as well as Global Service instances.
-* The Global Monitor will provide a Web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
+* The Global Monitor will monitor the 'health' (namely, performance) of components at NC/DCPC as well as Global Service instances.
+* The Global Monitor will provide a web-based ‘dashboard’ that displays the WIS2 system performance and data availability.
 * As a convention Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
 
  The main task of the Global Monitor is to regularly query the provided metrics from the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
