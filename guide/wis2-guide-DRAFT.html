@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-08-06</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-08-20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2024.dev</p></td>
@@ -2121,13 +2121,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>When receiving a message from a WIS centre or Global Service broker, The metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>A Global Broker will check if the topic on which the message is received is valid (in particular, a discovery metadata record must exist with a corresponding topic so that data can be made available using this topic). If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. Global Broker should not request Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
+<p>A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. Global Broker should not request information from the Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
+</li>
+<li>
+<p>A Global Broker will check if the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_invalid_topic_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>During the pre-operational phase (2024), Global Broker will not discard the message but will send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC.</p>
 </li>
 <li>
-<p>A Global Broker will validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E: WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_messages_invalid_total</code> will be increased by 1.</p>
+<p>A Global Broker will validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E: WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_invalid_format_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker instance will republish a message only once. Using the message id as defined in the WIS2 Notification Message, the Global Broker will record the id of messages already published and will discard subsequent identical (with the same message id) messages. This is the anti-loop feature of the Global Broker.</p>
@@ -3606,7 +3609,7 @@ use and reuse of data in an authoritative manner, closest to the source of the d
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-08-06 15:26:58 UTC
+Last updated 2024-08-20 09:57:09 UTC
 </div>
 </div>
 </body>
