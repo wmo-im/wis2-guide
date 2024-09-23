@@ -182,7 +182,7 @@ In WIS2 Global Caches provide access to WMO core data for data consumers. This a
 * A Global Discovery Catalogue will remove discovery metadata that is marked for deletion as specified in the data notification message.
 * A Global Discovery Catalogue should apply faceting capability as specified in the cataloguing considerations of the WCMP2 specification, as defined in OGC API - Records.
 * A Global Discovery Catalogue will provide human-readable web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index the content of the Global Discovery Catalogue. Consequently, data consumers should also be able to discover WIS content via third party search engines.
-* A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day, that will be made be accessible via HTTP.
+* A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day, that will be made be accessible via HTTP. The zipfile, when unzipped, will have a directory named after the centre-id of the Global Discovery Catalogue containing all WCMP2 records.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zip file of all WCMP2 records on its centre-id's +metadata+ topic (for example, `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention Global Discovery Catalogue centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
