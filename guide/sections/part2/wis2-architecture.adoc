@@ -1,12 +1,12 @@
 === 2.1 WIS2 architecture
 
-WIS2 is a federated system of systems based on web-architecture and open standards, comprising of many WIS2 Nodes for publishing data and Global Services that enable fault tolerant, highly available, low latency data distribution.
+WIS2 is a federated system of systems based on web architecture and open standards, comprising many WIS2 Nodes, for publishing data and Global Services that enable fault tolerant, highly available, low-latency data distribution.
 
-National Centres (NC), Data Collection or Production Centres (DCPC), and Global Information System Centres (GISC) are all types of WIS centre.
+NCs, DCPCs, and GISCs are all types of WIS centres.
 
 NCs and DCPCs operate WIS2 Nodes.
 
-GISCs coordinate the operation of WIS within their Area of Responsibility (AoR) and ensure the smooth operation of the WIS2 system.
+GISCs coordinate the operation of WIS within their area of responsibility (AoR) and ensure the smooth operation of the WIS2 system.
 
 A WIS centre may also operate one or more Global Services.
 
@@ -16,51 +16,51 @@ WIS centres shall comply with the technical regulations defined in the _Manual o
 
 When describing the functions of WIS2 there are four roles to consider:
 
-. Data publisher
-. Global coordinator
-. Global Service operator
-. Data consumer
+. Data publisher;
+. Global coordinator;
+. Global Service operator;
+. Data consumer.
 
 These roles are outlined below.
 
 ==== 2.2.1 Data publisher
-* This role is fulfilled by NC and DCPC.
+* This role is fulfilled by NCs and DCPCs.
 * Data publishers operate a WIS2 Node to share their data within the WIS2 ecosystem.
 * Data publishers manage, curate, and provide access to one or more datasets.
 * For each dataset, a data publisher provides:
-  i) "Discovery metadata" to describe the dataset, provide details on how it can be accessed, and under what conditions.
-  ii) An API or web-service to access (or interact with) the dataset.
+  i) Discovery metadata to describe the dataset and provide details on how it can be accessed and under what conditions;
+  ii) An API or web service to access or interact with the dataset;
   iii) Notification messages advertising the availability of new data and metadata.
 
 ==== 2.2.2 Global coordinator 
 * This role is exclusive to GISCs.
-* All GISCs supporting WMO Members in their AoR fulfill their data sharing obligations via WIS2.
+* All GISCs supporting WMO Members in their AoR fulfil their data sharing obligations via WIS2.
 
 ==== 2.2.3 Global Service operator
 * To ensure highly available global data exchange, a WIS centre may operate one or more Global Services: 
-  i) Global Discovery Catalogue: enables users to search all datasets provided by data publishers and discover where and how to interact with those datasets (for example, subscribe to updates, access/download/visualize data, or access more detailed information about the dataset).
-  ii) Global Broker: provides highly available messaging services where users may subscribe to notifications about all datasets provided by data publishers.
-  iii) Global Cache: provides highly available download service for cached copies of core data downloaded from data publishers’ web-services.
-  iv) Global Monitor: gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
+  i)	The Global Discovery Catalogue enables users to search all datasets provided by data publishers and discover where and how to interact with those datasets (for example, to subscribe to updates, to access/download/visualize data, to access more detailed information about the dataset);
+  ii)	A Global Broker provides highly available messaging services through which users may subscribe to notifications about all datasets provided by data publishers;
+  iii)	A Global Cache provides a highly available download service for cached copies of core data downloaded from data publishers’ web services;
+  iv)	A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
 
 ==== 2.2.4 Data consumer
-* This role represents anyone wanting to find, access, and use data from WIS2 – examples include (but are not limited to): NMHS, Government agencies, research institutions, private sector organizations, and so on.
-* Searches or browses the Global Discovery Catalogue (or other search engine) to discover the dataset(s) that meet their needs (namely, "datasets of interest").
-* Subscribes via the Global Broker to receive notification messages about the availability of data or metadata associated with datasets of interest.
-* Determines whether the data or metadata referenced in notification messages is required.
-* Downloads data from Global Cache or WIS2 Node.
+* This role represents anyone wanting to find, access, and use data from WIS2. Examples include NMHSs, government agencies, research institutions, private sector organizations, and so forth.
+* Data consumers search or browse a Global Discovery Catalogue (or another search engine) to discover the datasets that meet their needs ("datasets of interest").
+*	Data consumers subscribe via a Global Broker to receive notification messages about the availability of data or metadata associated with their datasets of interest.
+*	Data consumers determine whether the data or metadata referenced in the notification messages are required.
+*	Data consumers download data from a Global Cache or WIS2 Node.
 
 === 2.3 Specifications of WIS2
 
 Leveraging existing open standards, WIS2 defines the following specifications in support of publication, subscription, notification and discovery:
 
-.WIS2 Specifications
+.WIS2 specifications
 |===
 |Specification|Granularity|Primary WIS2 Component(s)
 
 |WMO Core Metadata Profile 2 (WCMP2)
 |Datasets
-|Global Discovery Catalogue (GDC)
+|Global Discovery Catalogue
 
 |WIS2 Topic Hierarchy (WTH)
 |Dataset granules
@@ -72,44 +72,44 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 |===
 
-Please refer to the _Manual on WIS_, Volume II for details.
+Refer to the _Manual on WIS_, Volume II for details.
 
 === 2.4 Components of WIS2
 
 // TODO: add refs to other parts of the Guide describing these components
 
 ==== 2.4.1 WIS2 Node
-* WIS2 Nodes are central to WIS2. These are operated by National Centres (NC) and Data Collection or Production Centres (DCPC) to publish their core and recommended data.
-* WIS2 adopts web technologies and open standards enabling WIS2 Nodes to be implemented using freely-available software components and common industry practices.
-* WIS2 Nodes publish data as files of a web server or using an interactive web service.
-* WIS2 Nodes describe the data they publish using discovery metadata. See the _Manual on WIS_, Volume II, Appendix F: WMO Core Metadata Profile.
-* WIS2 Nodes generate notification messages advertising the availability of new data. These notification messages are published to a Message Broker. The WIS2 Topic Hierarchy  is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the data consumer where to download data from. Notification messages are also used to advertise the availability of discovery metadata. See the _Manual on WIS_, Volume II - Appendix D: WIS2 Topic Hierarchy and Appendix E: WIS2 Notification Message.
-* WIS2 Nodes may implement controlled access for the data they publish. Global Services will operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.
+* WIS2 Nodes are central to WIS2. They are operated by NCs and DCPCs to publish their core and recommended data.
+* WIS2 adopts web technologies and open standards, enabling WIS2 Nodes to be implemented using freely available software components and common industry practices.
+* WIS2 Nodes publish data as files on a web server or using an interactive web service.
+* WIS2 Nodes describe the data they publish using discovery metadata. See the _Manual on WIS_, Volume II, Appendix F. WMO Core Metadata Profile (Version 2).
+* WIS2 Nodes generate notification messages advertising the availability of new data. These notification messages are published to a Message Broker. The WIS2 Topic Hierarchy is used to ensure that all WIS2 Nodes publish to consistent topics. The information in the notification message tells the data consumer the location from which to download the data. Notification messages are also used to inform data consumers of the availability of discovery metadata. See the Manual on WIS, Volume II, Appendix D. WIS2 Topic Hierarchy and Appendix E. WIS2 Notification Message.
+* WIS2 Nodes may control access to the data they publish. Global Services operate with fixed IP addresses, enabling WIS2 Nodes to easily distinguish their requests.
 
 ==== 2.4.2 Global Broker
-* WIS2 incorporates several Global Brokers, ensuring highly resilient distribution of notification messages across the globe.
+* WIS2 incorporates several Global Brokers, ensuring the highly resilient distribution of notification messages across the globe.
 * A Global Broker subscribes to the Message Broker operated by each WIS2 Node and republishes notification messages.
-* A Global Broker subscribes to notifications from other Global Brokers to ensure it receives a copy of all notification messages.
+* A Global Broker subscribes to notifications from other Global Brokers to ensure that it receives a copy of all notification messages.
 * A Global Broker republishes notification messages from every WIS2 Node and Global Service.
 * A Global Broker operates a highly available, high-performance Message Broker.
-* A Global Broker uses the WIS2 Topic Hierarchy enabling a data consumer to easily find topics relevant to their needs.
-* Data consumers should subscribe to notifications from a Global Broker not directly to the Message Brokers operated by WIS2 Nodes.
+* A Global Broker uses the WIS2 Topic Hierarchy, enabling data consumers to easily find topics relevant to their needs.
+* Data consumers should subscribe to notifications from a Global Broker, not directly from the Message Brokers operated by WIS2 Nodes.
 
 ==== 2.4.3 Global Cache
-* WIS2 incorporates several Global Caches, ensuring highly resilient distribution of data across the globe.
-* A Global Cache provides a highly available data server from which a data consumer can download core data, as specified in Resolution 1 (Cg-Ext(2021)).
+* WIS2 incorporates several Global Caches, ensuring the highly resilient distribution of data across the globe.
+* A Global Cache provides a highly available data server, from which a data consumer can download core data, as specified in Resolution 1 (Cg-Ext(2021)).
 * A Global Cache subscribes to notification messages via a Global Broker.
-* On receipt of a notification message, the Global Cache downloads from the WIS2 Node a copy of data referenced in the notification message, makes this copy available on its data server, and publishes a new notification message advertising the availability of this data at the Global Cache.
-* A Global Cache will subscribe to notification messages from other Global Caches enabling it to download and republish data it has not acquired directly from WIS2 Nodes. This ensures that each Global Cache holds data from every WIS2 Node.
-* A Global Cache shall retain a copy of core data for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.
+* Upon receiving a notification message, the Global Cache downloads a copy of the data referenced in the message from the WIS2 Node, makes these data available on its server, and publishes a new notification message informing data consumers that they can now access these data on its server. 
+* A Global Cache will subscribe to notification messages from other Global Caches, enabling it to download and republish data that it has not acquired directly from WIS2 Nodes. This ensures that each Global Cache holds data from every WIS2 Node.
+* A Global Cache shall retain a copy of the core data for a duration compatible with the real-time or near-real-time schedule of the data and not less than 24 hours.
 * A Global Cache will delete data from the cache once the retention period has expired.
-* Data consumers should download data from a Global Cache when available.
+* Data consumers should download data from a Global Cache when those data are available.
 
 ==== 2.4.4 Global Discovery Catalogue
 * WIS2 includes several Global Discovery Catalogues.
-* A Global Discovery Catalogue enables a data consumer to search and browse descriptions of data published by each WIS2 Node. The data description (that is, discovery metadata) provides sufficient information to determine the usefulness of data and how one may access it.
-* A Global Discovery Catalogue subscribes to notification messages via a Global Broker about the availability of new (or updated) discovery metadata. It downloads a copy of the discovery metadata and updates the catalogue.
-* A Global Discovery Catalogue will amend discovery metadata records to add details of where one can subscribe to updates about the dataset at a Global Broker.
+* A Global Discovery Catalogue enables a data consumer to search and browse descriptions of data published by each WIS2 Node. The data description (discovery metadata) provides sufficient information to determine the usefulness of the data and how it may be accessed.
+* A Global Discovery Catalogue subscribes to notification messages about the availability of new (or updated) discovery metadata via a Global Broker. It downloads a copy of the discovery metadata and updates the catalogue.
+* A Global Discovery Catalogue amends discovery metadata records to add details of where one can subscribe to updates about the dataset at a Global Broker.
 * A Global Discovery Catalogue makes its content available for indexing by search engines.
 
 ==== 2.4.5 Global Monitor
@@ -117,21 +117,21 @@ Please refer to the _Manual on WIS_, Volume II for details.
 * The Global Monitor collects metrics from WIS2 components.
 * The Global Monitor provides a dashboard that supports the operational management of the WIS2 system.
 * The Global Monitor tracks:
-  i) What data is published by WIS2 Nodes.
-  ii) Whether data can be effectively accessed by data consumers.
+  i) What data is published by WIS2 Nodes;
+  ii) Whether the data can be effectively accessed by data consumers;
   iii) The performance of components in the WIS2 system.
 
-=== 2.5 Protocols configuration
+=== 2.5 Protocol configuration
 
 ==== 2.5.1 Publish-subscribe protocol (MQTT)
 
 * The MQTT protocolfootnote:[MQTT Specifications: https://mqtt.org/mqtt-specification/] is to be used for all WIS2 publish-subscribe workflows (publication and subscription).
-* MQTT v3.1.1 and v5.0 are the chosen protocols for the WIS2 Notification Messages publication and subscription.
-** To connect to Global Brokers, MQTT v5.0 is preferred as it provides additional features such as the ability to use shared subscriptions.
-* The following parameters are to be used for all MQTT client/server connectivity and subscription:
-** Message retention: false
-** Quality of Service (QoS) of 1
-** A maximum of 2000 messages to be held in a queue per client
+* MQTT v3.1.1 and v5.0 are the chosen protocols for the publication of and subscription to WIS2 notification messages.
+** MQTT v5.0 is preferred for connecting to Global Brokers as it provides additional features such as the ability to use shared subscriptions.
+* The following parameters are to be used for all MQTT client/server connections and subscriptions:
+** Message retention: false;
+** Quality of Service (QoS) of 1;
+** A maximum of 2000 messages to be held in a queue per client.
 * In order to permit authentication and authorization for users, WIS2 Node, Global Cache, Global Discovery Catalogue and Global Brokers shall use a user and password based mechanism.
 * To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.
 * The standard Transmission Control Protocol (TCP) ports to be used are 8883 for Secure MQTT (MQTTS) and 443 for Secure Web Socket (WSS).
@@ -140,4 +140,4 @@ Please refer to the _Manual on WIS_, Volume II for details.
 
 * The HTTP protocol (RFC 7231footnote:[RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): https://datatracker.ietf.org/doc/html/rfc7231]) is to be used for all WIS2 download workflows.
 * To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.
-* The standard Transmission Control Protocol (TCP) port to be used is 443 for Secure HTTP (HTTPS).
+* The standard TCP port to be used is 443 for Secure HTTP (HTTPS).
