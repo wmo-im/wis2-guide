@@ -8,26 +8,28 @@ The first step to using data published via WIS2 is to determine which dataset or
 
 A key component of dataset records in the Global Discovery Catalogue is "actionable" links. A dataset record provides one or more links, each clearly identifying its nature and purpose (informational, direct download, application programming interface (API), subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications about the data(see <<_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data>>), or an API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low barrier mechanism (see <<_2_2_4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
+The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <<_2_2_4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
 
 ==== 1.2.2 How to subscribe to notifications about the availability of new data
 
-WIS2 provides notifications about updates to datasets; for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. If data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocolfootnote:[Subscribing to notifications about newly available data means that you don't need to continually to poll the data server to check for updates.].
+WIS2 provides notifications about updates to datasets; for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. If data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocol. 
+
+Subscribing to notifications about newly available data ensures that the data consumer does not have to continually to poll the data server to check for updates.
 
 In WIS2, notifications are republished by Global Brokers to ensure resilient distribution. Consequently, there will be multiple places where one can subscribe. Data consumers requiring real-time notifications must subscribe to Global Brokers. A data consumer should subscribe to more than one Global Broker, thereby ensuring that notifications continue to be received if a Global Broker instance fails.
 
-A dataset in WIS2 is associated with a unique _topic_. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_, Volume II - Appendix D. WIS2 Topic Hierarchy).
+A dataset in WIS2 is associated with a unique topic. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_, Volume II - Appendix D. WIS2 Topic Hierarchy).
 
-A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, by using an Internet search engine,footnote:[Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in the Global Discovery Catalogues.], or by browsing the topic hierarchy on a Message Broker.
+A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, by using an Internet search engine,footnote:[Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in Global Discovery Catalogues.], or by browsing the topic hierarchy on a Message Broker.
 
 WIS2 uses Global Caches to distribute core data, as defined in the Unified Data Policy (Resolution 1 (Cg-Ext (2021))). Each Global Cache republishes core data on its own highly available data server and publishes a new notification message advertising the availability of those data from the Global Cache location.
 
 Notifications from WIS2 Nodes and Global Caches are published on different topics: The root topic used by WIS2 Nodes is ``origin``, while the root topic used by Global Caches is ``cache``. Other than the root, the topic hierarchy is identical. For example, for synoptic weather observations published by Environment Canada:
 
-* Environment and Climate Change Canada, Meteorological Service of Canada's WIS2 Node publishes to: ``origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``;
+* Environment and Climate Change Canada, Meteorological Service of Canada's WIS2 Node, publishes to: ``origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``;
 * Global Caches publish to: ``cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop``.
 
-As per clause 3.2.13 of the _Manual on WIS_, Volume II, data consumers should access core data from the Global Caches. In order to access these data, they need to subscribe to the ``cache`` topic hierarchy. They will then receive the relevant notifications from the Global Caches, each of which will contain a link (URL) enabling them to download the relevant data from the data server of the corresponding Global Cache. 
+As per clause 3.2.13 of the _Manual on WIS_, Volume II, data consumers should access core data from the Global Caches. In order to access these data, they must subscribe to the ``cache`` topic hierarchy. They will then receive the relevant notifications from the Global Caches, each of which will contain a link (URL) enabling them to download the relevant data from the data server of the corresponding Global Cache. 
 
 ==== 1.2.3 How to use a notification message to decide whether to download data
 
@@ -35,13 +37,13 @@ On receipt of a notification message, a data consumer needs to decide whether to
 
 In many cases, data consumers will use a software application to determine whether or not to download the data. The present section explains this process. 
 
-When subscribing to multiple Global Brokers, the data consumers will receive multiple copies of a notification message. Each notification message has a unique identifier, defined using the ``id`` property. Duplicate messages should be discarded.
+When subscribing to multiple Global Brokers, data consumers will receive multiple copies of a notification message. Each notification message has a unique identifier, defined using the ``id`` property. Duplicate messages should be discarded.
 
 Core data are available from both a WIS2 Node and the Global Caches, each of which will publish a different notification message advertising an alternative location from which the data may be downloaded. Because these are different messages, they will have different identifiers. However, each of these messages refers to the same data object, which is uniquely identified in the notification message using the data_id property. Notification messages from different sources can easily be compared to determine whether they refer to the same data. By subscribing to the cache root topic, data consumers will only receive notifications about data available from the Global Caches. The origin root topic should be used when subscribing to notifications about recommended data. Data consumers should not subscribe to the origin root topic for notifications about core data because the notification messages provided on these topics will refer to data published directly on the WIS2 Nodes (referred to as the "origin").
 
 Data consumers need to consider their strategy for managing these duplicate messages. From a data perspective, it does not matter which Global Cache instance is used – they will all provide an identical copy of the data object published by the originating WIS2 Node. The simplest strategy is to accept the first notification message and download the data from the Global Cache instance that the message refers to by using a URL for the data object at that Global Cache instance. Alternatively, data consumers may have a preferred Global Cache instance, for example, one that is located in their region. Whichever Global Cache instance is chosen, data consumers will need to implement logic to discard duplicate notification messages based on ``id`` and duplicate data objects based on ``data_id``.
 
-A notification message also provides a small amount of metadata about the data object it references, such as location and time. Data consumers can use these metadata to decide whether the data object referenced in the message should be downloaded. This is known as client-side filtering.
+A notification message also provides a small amount of metadata about the data object it references, such as location or time. Data consumers can use these metadata to decide whether the data object referenced in the message should be downloaded. This is known as client-side filtering.
 
 The notification message should also include the metadata identifier for the dataset to which the data object belongs. A data consumer can use the metadata identifier to search the Global Discovery Catalogue and discover more about the data - in particular, whether there are any conditions on the use of those data.
 
@@ -60,7 +62,7 @@ If a download link implements access control (for example, the data consumer nee
 
 Data are shared on WIS2 in accordance with the Unified Data Policy (Resolution 1 (Cg-Ext (2021))). This data policy describes two categories of data: core and recommended.
 
-* Core data are considered essential for the provision of services for the protection of life and property and the well-being of all nations. Core data are provided on a free and unrestricted basis, without charge and with no conditions on use.
+* Core data are considered essential for the provision of services for the protection of life and property and the well-being of all nations. Core data are provided on a free and unrestricted basis.
 * Recommended data are exchanged on WIS2 in support of Earth system monitoring and prediction efforts. Recommended data _may_ be provided with conditions on use and/or subject to a license.
 
 The Unified Data Policy (Resolution 1 (Cg-Ext (2021))) encourages attribution of the source of the data in all cases. This ensures that, credit is given to those who have expended effort and resources in collecting, curating, generating, or processing the data. Attribution provides visibility into who is using the data, which, for many organizations, serves as crucial evidence to justify the continued provision and updating of the data.
@@ -81,10 +83,10 @@ Data consumers wanting to use data published via WIS2 should, at a minimum, read
 * <<_1_1_introduction_to_wis2>>
 * <<_2_1_wis2_architecture>>
 * <<_2_2_roles_in_wis2>>
-* <<_2_4_components_of_wis2>>
+* <<_2_4_wis2_components>>
 
-The following specifications in the _Manual on WIS_, Volume II also provide useful information:
+The following sections in the _Manual on WIS_, Volume II also provide useful information:
 
-* Appendix D. WIS2 Topic Hierarchy
-* Appendix E. WIS2 Notification Message
-* Appendix F. WMO Core Metadata Profile (Version 2)
+* Appendix D. WIS2 Topic Hierarchy;
+* Appendix E. WIS2 Notification Message;
+* Appendix F. WMO Core Metadata Profile (Version 2).
