@@ -51,7 +51,7 @@ Whether providing data as files or through interactive APIs, data publishers nee
 
 ===== 1.3.3.2 Providing data as files
 
-The simplest way to publish data through WIS2 is to persist your data as files and publish those files on a web server. All these files need to be organized in some manner, for example, in a flat structure or grouped into collections that resemble folders or directory structures.
+The simplest way to publish data through WIS2 is to persist the data as files and publish those files on a web server. All these files need to be organized in some manner, for example, in a flat structure or grouped into collections that resemble folders or directory structures.
 
 To ensure that the data are usable, users need to be able to find the specific file (or files) they need.
 
@@ -100,7 +100,7 @@ Optionally, data may be embedded in a notification message using a content objec
 
 Notification messages are encoded as GeoJSON (RFC 7946) and must conform to the _Manual on WIS_, Volume II, Appendix E. WIS2 Notification Message.
 
-The URL used in the notification message should refer only to the newly added data object (for example, the new temperature profile), rather than the entire dataset. However, the WIS2 Notification Message specification allows for multiple URLs to be provided. When providing data through an interactive API, it may be useful to provide a "canonical" link (designated with link relation: ``"rel": "canonical"``footnote:[IANA Link Relations https://www.iana.org/assignments/link-relations/link-relations.xhtml]) and an additional link with the URL for the root of the web service from which the entire dataset can be accessed or queried.
+The URL used in the notification message should refer only to the newly added data object (for example, the new temperature profile), rather than the entire dataset. However, the WIS2 Notification Message specification allows for multiple URLs to be provided. When providing data through an interactive API, it may be useful to provide a "canonical" link (designated by link relation: ``"rel": "canonical"``footnote:[IANA Link Relations https://www.iana.org/assignments/link-relations/link-relations.xhtml]) and an additional link with the URL for the root of the web service from which the entire dataset can be accessed or queried.
 
 The dataset identifier should be included in the notification message (``metadata_id`` property). This allows data consumers receiving the notification to cross reference it with information provided in the discovery metadata for the dataset, for example the conditions of use specified in the data policy, rights, or license.
 
@@ -118,7 +118,7 @@ Whatever topic is used, the discovery metadata provided to the Global Discovery 
 
 Core data, as specified in the Unified Data Policy (Resolution 1 (Cg-Ext(2021))) are considered essential for the provision of services for the protection of life and property and for the well-being of all nations. Core data is provided on a free and unrestricted basis, without charge and with no conditions on use.
 
-WIS2 ensures highly available, rapid access to _most_ core data via a collection of Global Caches (see <<_2_4_3_global_cache>>). Global Caches subscribe to notification messages about the availability of new core data published at WIS2 Nodes, download a copy of that data and republish it on a high-performance data server and then discard it after the retention period expires (normally after 24-hours.footnote:[A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.]) Global Caches do not provide sophisticated APIs. They publish notification messages advertising the availability of data on their caches and allow users to download data via HTTPS using the URL in the notification message.
+WIS2 ensures highly available, rapid access to _most_ core data via a collection of Global Caches (see <<_2_4_3_global_cache>>). Global Caches subscribe to notification messages about the availability of new core data published from WIS2 Nodes, download a copy of that data and republish it on a high-performance data server and then discard it after the retention period expires (normally after 24 hours.footnote:[A Global Cache provides short-term hosting of data. Consequently, it is not an appropriate mechanism to provide access to archives of core data, such as Essential Climate Variables. Providers of such archive data must be prepared to serve such data directly from their WIS2 Node.]) Global Caches do not provide sophisticated APIs. They publish notification messages advertising the availability of data on their caches and allow users to download data via HTTPS using the URL in the notification message.
 
 The URL included in a notification message that is used to access core data from a WIS2 Node, or the "canonical" URL, if multiple URLs are provided, must:
 
@@ -137,7 +137,7 @@ Core data that are not to be cached must have the cache property in the notifica
 
 Data publishers must ensure that core data that are not cached are publicly accessible from their WIS2 Node, that is, with no access control mechanisms in place.
 
-Global Cache operators may choose to disregard a cache preference, for example, if they feel that the content being providing is large enough to impede the provision of caching services for other Members.footnote:[Excessive data volume is not the only reason they may refuse to cache content. Other reasons include: too many small files, unreliable download from a WIS2 Node, etc.] In such cases, the Global Cache operator will log this behaviour. In collaboration with the Global Cache operators, your GISC will work with you to resolve concerns. 
+Global Cache operators may choose to disregard a cache preference, for example, if they feel that the content being providing is large enough to impede the provision of caching services for other Members.footnote:[Excessive data volume is not the only reason they may refuse to cache content. Other reasons include: too many small files, unreliable download from a WIS2 Node, etc.] In such cases, the Global Cache operator will log this behaviour. Global Cache operators will collaborate with data publishers and their GISCs to resolve any concerns. 
 
 Finally, note that Global Caches are under no obligation to cache data published on _experimental_ topics. For such data, the ``cache`` property should be set to ``false``.
 
@@ -163,7 +163,7 @@ Finally, note that if only core data are being published, it may be possible to 
 
 ===== 1.3.3.7 Providing access to data archives
 
-There is no requirement for a WIS2 Node to publish notification messages about newly available data; however, the mechanism is available if needed (for instance, for real-time data exchange). Data archives published through WIS2 do not need to provide notification messages for data unless the user community has expressed a need to be rapidly notified about changes (for example, the addition of new records into a climate observation archive).
+There is no requirement for a WIS2 Node to publish notification messages about newly available data; however, the mechanism is available if needed (for instance, for real-time data exchange). Data archives published via WIS2 do not need to provide notification messages for data unless the user community has expressed a need to be rapidly notified about changes (for example, the addition of new records to a climate observation archive).
 
 However, notification messages must still be used to share discovery metadata with WIS2. Given that the provision of metadata and subsequent updates are likely to be infrequent, it may be sufficient to "handcraft" notification messages as needed and publish them locally on an MQTT brokerfootnote:[MQTT broker managed services are available online, often with a free (no cost) starter plan sufficient for infrequent publications of notifications about metadata. These provide a viable alternative to implementing an MQTT broker instance yourself.] or with the help of a GISC. See above for more details on publishing discovery metadata to WIS2.
 
