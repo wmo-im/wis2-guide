@@ -14,7 +14,7 @@ WIS centres shall comply with the technical regulations defined in the _Manual o
 
 === 2.2 Roles in WIS2
 
-When describing the functions of WIS2 there are four roles to consider:
+When describing the functions of WIS2, there are four roles to consider:
 
 . Data publisher;
 . Global coordinator;
@@ -50,7 +50,7 @@ These roles are outlined below.
 *	Data consumers determine whether the data or metadata referenced in the notification messages are required.
 *	Data consumers download data from a Global Cache or WIS2 Node.
 
-=== 2.3 Specifications of WIS2
+=== 2.3 WIS2 Specifications
 
 Leveraging existing open standards, WIS2 defines the following specifications in support of publication, subscription, notification and discovery:
 
@@ -132,7 +132,7 @@ Refer to the _Manual on WIS_, Volume II for details.
 ** Message retention: false;
 ** Quality of Service (QoS) of 1;
 ** A maximum of 2000 messages to be held in a queue per client.
-* In order to permit authentication and authorization for users, WIS2 Node, Global Cache, Global Discovery Catalogue and Global Brokers shall use a user and password based mechanism.
+* To enable user authentication and authorization, WIS2 Nodes, Global Caches, Global Discovery Catalogues and Global Brokers shall use a user and password based mechanism.
 * To improve the overall level of security of WIS2, the secure version of the MQTT protocol is preferred. If used, the certificate must be valid.
 * The standard Transmission Control Protocol (TCP) ports to be used are 8883 for Secure MQTT (MQTTS) and 443 for Secure Web Socket (WSS).
 
