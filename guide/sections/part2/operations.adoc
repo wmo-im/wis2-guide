@@ -43,7 +43,7 @@ responsible for providing meteorological data to WIS2 may be designated by the I
 Where requirements dictate, the organization may provide regional
 capability on behalf of a group of countries or territories.
 
-This section of the Guide outlines how such an organization may efficiently fulfil the requirements in providing required data/information to the two systems. It proposes an
+This section of the Guide outlines how such an organization may efficiently provide the required data/information to the two systems. It proposes an
 interoperability approach between WIS2 and SWIM where meteorological
 data published via WIS2 can be automatically propagated to SWIM.
 
@@ -115,17 +115,17 @@ and prediction efforts.
 Recommended data:
 
 * May be subject to conditions on use and reuse;
-* May have access controlsfootnote:[WIS2 follows the recommendations
-from OpenAPI regarding choice of security schemes for authenticated
-access - a choice of HTTP authentication, API keys, OAuth2 or OpenID
-Connect Discovery. For more information see
-OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object], footnote:[WIS2 does not provide any guidance on use of Public Key Infrastructure (PKI).] applied at the WIS2 Node;
+* May have access controlsfootnote:[WIS2 follows OpenAPI recommendations
+regarding the security schemes for authenticated
+access - either HTTP authentication, API keys, OAuth2 or OpenID
+Connect Discovery. For more information, see
+OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object.], footnote:[WIS2 does not provide any guidance on use of Public Key Infrastructure (PKI).] applied at the WIS2 Node;
 * Are not cached within WIS2 by the Global Caches.footnote:[Global
-Caches enable highly available, low-latency distribution of core data.
+Caches enable the highly available, low-latency distribution of core data.
 Given that core data is provided on a free and unrestricted basis,
 Global Caches do not implement any data access control.]
 
-Resolution 1 (Cg-Ext(2021)) requires transparency on the conditions of use for recommended data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset as described below.
+Resolution 1 (Cg-Ext(2021)) requires transparency on the conditions of use for recommended data. Conditions regarding the use of aeronautical meteorological information are specified in ICAO Annex 3 and, optionally, by the ICAO Contracting State. Such conditions of use should be explicitly stated in the discovery metadata for each dataset, as described below.
 
 * The attribute ``wmo:dataPolicy`` should be set to ``recommended``.
 * Information about conditions of use should be specified using the ``rights`` property (see the example below) and/or a ``link`` object with a relation ``license``.
@@ -155,7 +155,7 @@ not group data resources into bulletins.
 
 The data resource is identified using a URL. The notification message
 refers to the data resource using this URL.footnote:[Where the data
-resource does not exceed 4 Kb, it may additionally be embedded in the
+resource does not exceed 4 Kb, it may be embedded in the
 notification message.]
 
 For more details on the WIS2 Notification Message, see the _Manual on WIS_, Volume II, Appendix E. WIS2 Notification Message.
@@ -186,9 +186,9 @@ least 24 hours is recommended.
 
 The potential interactions between the gateway component, WIS2 and SWIM are
 illustrated in Figure 3.footnote:[Note that the figure simplifies
-the transmission of discovery metadata from WIS2 Node to the Global
+the transmission of discovery metadata from the WIS2 Node to the Global
 Discovery Catalogue. The WIS2 Node publishes notification
-messages advertising the availability of new discovery metadata resource
+messages advertising the availability of a new discovery metadata resource
 at a given URL. These messages are republished by the Global Broker. The
 Global Discovery Catalogue subscribes to a Global Broker and downloads
 the discovery metadata from the WIS2 Node using the URL supplied in the
@@ -211,10 +211,10 @@ Discovery metadata can be downloaded from the Global Discovery Catalogue.
 The gateway component implements the following functions:
 
 * Subscribe to the pertinent topic(s) for notifications about new
-aeronautical meteorological information;footnote:[WIS2 recommends that one subscribes to
-notifications from a Global Broker. However, where both gateway and WIS2
+aeronautical meteorological information;footnote:[WIS2 recommends subscribing to
+notifications from a Global Broker. However, where both a gateway component and a WIS2
 Node are operated by the same organization, it may be advantageous to
-subscribe directly to the local message broker of WIS2 Node, for example, to
+subscribe directly to the local Message Broker of WIS2 Node, for example, to
 reduce latency.]
 * On receipt of notification messages about newly available data:
 ** Parse the notification message, discarding duplicate messages already
@@ -225,13 +225,13 @@ resource should be in IWXXM format;
 ** Create a new data message as per the SWIM specifications, including
 the unique identifier extracted from the data resource,footnote:[In case
 a unique identifier is required for proper passing of an aviation
-weather message to the gateway, one can use the GTS abbreviated heading
-(TTAAii CCCC YYGGgg) in the COLLECT envelop (available in IWXXM messages
-having a corresponding TAC message), or content in attribute
-``gml:identifier`` (available in newer IWXXM messages like WAFS SIGWX
-Forecast and QVACI), for such purpose. There is currently no agreed
-definition for unique identifier of IWXXM METAR and TAF reports of
-individual aerodrome.] and embed the aviation weather data resource
+weather message to the gateway, the GTS abbreviated heading
+(TTAAii CCCC YYGGgg) in the COLLECT envelop can be used (available in IWXXM messages
+that have a corresponding TAC message). Alternatively, content in the attribute
+``gml:identifier`` (available in newer IWXXM messages such as WAFS SIGWX
+Forecast and QVACI), may also serve this purpose. There is currently no agreed
+definition for a unique identifier for IWXXM METAR and TAF reports for
+individual aerodromes.] and embed the aviation weather data resource
 within the data message;
 ** Publish the data message to the appropriate topic on the SWIM Message
 Broker component of the SWIM service.
@@ -242,14 +242,14 @@ the SWIM service.
 
 The gateway should implement logging and error handling as necessary to
 enable reliable operations. WIS2 uses the OpenMetrics
-standardfootnote:[OpenMetrics:
-https://openmetrics.io] to publish metrics and other operating information. The use of OpenMetrics
+standardfootnote:[See OpenMetrics:
+https://openmetrics.io.] to publish metrics and other operating information. The use of OpenMetrics
 by the gateway would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
 **Operation**
 
-The gateway may be operated at national or regional level depending on
+The gateway may be operated at the national or regional level depending on
 the organizational governance in place.
 
 ====== 2.8.1.1.5 SWIM service
@@ -261,23 +261,23 @@ component which implements the Advanced Message Queuing Protocol (AMQP) 1.0 mess
 The Message Broker publishes the data messages provided by the gateway.
 
 The Message Broker must ensure that data messages are provided only by
-authorized sources such as a gateway and should validate incoming messages as aeronautical meteorological information.
+authorized sources, such as a gateway, and should validate incoming messages as aeronautical meteorological information.
 
 ===== 2.8.1.2 The Ocean Data and Information System
 
 The Ocean Data and Information System (ODIS) is a federation of 
-independent data systems coordinated by the International Oceanographic 
+independent data systems, coordinated by the International Oceanographic 
 Data and Information Exchange (IODE) of  the Intergovernmental Oceanographic Commission of the United Nations Educational, Scientific and Cultural Organization (IOC-UNESCO). This federation 
-includes continental-scale data systems as well as those of small 
+includes continental-scale data systems, as well as those of small 
 organizations. ODIS partners use web architectural approaches to share 
 metadata describing their holdings, services, and other capacities. In 
 brief, IODE publishes guidelines on how to share metadata as linked open 
-data, serialized in JSON-LD using schema.orgfootnote:[https://schema.org]
+data, serialized in JSON-LD using schema.orgfootnote:[See https://schema.org.]
 semantics. ODIS nodes use these guidelines to publish their metadata 
 catalogues on the Web. This allows all systems with web connectivity to 
 harvest and merge these catalogues, creating a global map of the ocean 
 data. IODE harvests all metadata shared by ODIS partners, combines 
-it as a knowledge graph, and processes this to export derivative 
+these metadata and creates a knowledge graph, and processes these metadata to export derivative 
 products (for example, diagnostic reports and cloud-optimized data products). 
 The Ocean InfoHub (OIH) system is IODE's reference implementation of a 
 discovery system leveraging ODIS. ODIS architecture and tools are

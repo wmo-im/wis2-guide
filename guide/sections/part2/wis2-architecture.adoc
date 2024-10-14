@@ -125,7 +125,7 @@ Refer to the _Manual on WIS_, Volume II for details.
 
 ==== 2.5.1 Publish-subscribe protocol (MQTT)
 
-* The MQTT protocolfootnote:[MQTT Specifications: https://mqtt.org/mqtt-specification/] is to be used for all WIS2 publish-subscribe workflows (publication and subscription).
+* The MQTT protocolfootnote:[See MQTT Specifications: https://mqtt.org/mqtt-specification/.] is to be used for all WIS2 publish-subscribe workflows (publication and subscription).
 * MQTT v3.1.1 and v5.0 are the chosen protocols for the publication of and subscription to WIS2 notification messages.
 ** MQTT v5.0 is preferred for connecting to Global Brokers as it provides additional features such as the ability to use shared subscriptions.
 * The following parameters are to be used for all MQTT client/server connections and subscriptions:
@@ -138,6 +138,6 @@ Refer to the _Manual on WIS_, Volume II for details.
 
 ==== 2.5.2 Download protocol (HTTP)
 
-* The HTTP protocol (RFC 7231footnote:[RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): https://datatracker.ietf.org/doc/html/rfc7231]) is to be used for all WIS2 download workflows.
+* The HTTP protocol (RFC 7231footnote:[See RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content: https://datatracker.ietf.org/doc/html/rfc7231.]) is to be used for all WIS2 download workflows.
 * To improve the overall level of security of WIS2, the secure version of the HTTP protocol is preferred. If used, the certificate must be valid.
 * The standard TCP port to be used is 443 for Secure HTTP (HTTPS).

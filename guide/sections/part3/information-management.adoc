@@ -197,7 +197,7 @@ When an information resource is marked for disposal the reasons for disposal, in
 
 ===== 3.1.4.1 Technology and technology migration
 
-Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete and must be aware of emerging data issues. This topic is discussed further in the https://library.wmo.int/idurl/4/56904[_WMO Guidelines on Emerging Data Issues_] (WMO-No. 1239).
+Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete, and they must be aware of emerging data issues. This topic is discussed further in the https://library.wmo.int/idurl/4/56904[_WMO Guidelines on Emerging Data Issues_] (WMO-No. 1239).
 
 ===== 3.1.4.2 Information security
 
