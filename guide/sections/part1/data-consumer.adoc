@@ -12,11 +12,9 @@ The Global Discovery Catalogue is accessible via an API and provides a low-barri
 
 ==== 1.2.2 How to subscribe to notifications about the availability of new data
 
-WIS2 provides notifications about updates to datasets; for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. If data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocol. 
+WIS2 provides notifications about updates to datasets; for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. If data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocol.footnote[Subscribing to notifications about newly available data ensures that the data consumer does not need to continually to poll the data server to check for updates.]
 
-Subscribing to notifications about newly available data ensures that the data consumer does not have to continually to poll the data server to check for updates.
-
-In WIS2, notifications are republished by Global Brokers to ensure resilient distribution. Consequently, there will be multiple places where one can subscribe. Data consumers requiring real-time notifications must subscribe to Global Brokers. A data consumer should subscribe to more than one Global Broker, thereby ensuring that notifications continue to be received if a Global Broker instance fails.
+In WIS2, notifications are republished by Global Brokers to ensure resilient distribution. Consequently, there will be multiple places where one can subscribe. Data consumers requiring real-time notifications must subscribe to Global Brokers. Data consumers should subscribe to more than one Global Broker, thereby ensuring that notifications continue to be received if a Global Broker instance fails.
 
 A dataset in WIS2 is associated with a unique topic. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the _Manual on WIS_, Volume II - Appendix D. WIS2 Topic Hierarchy).
 

@@ -14,7 +14,7 @@ The WMO Secretariat will maintain a WIS2 register  with an authoritative list of
 
 The registration of a WIS2 Node involves the following steps:
 
-* Request to host a WIS2 Node: A request to host a WIS2 Node shall be put forward by the WIS NFP of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the PR of the country or territory where the centre is located or the president of the relevant organization, if the WMO partner or programme is designated as a DCPC.
+* Request to host a WIS2 Node: A request to host a WIS2 Node shall be put forward by the WIS NFP of the country of the WIS2 Node host centre, or, in the case of international organizations, by either the PR with WMO of the country or territory where the centre is located or the president of the relevant organization, if the WMO partner or programme is designated as a DCPC.
 
 * Assign a centre identifier (“centre-id”): The centre-id is an acronym proposed by the Member and endorsed by the WMO Secretariat. It is a single identifier consisting of a top-level domain (TLD) and a centre name and represents the data publisher, distributor or issuing centre of a given dataset or data product/granule (see the Manual on WIS, Volume II – Appendix D. WIS2 Topic Hierarchy). See guidance on assigning a centre identifier 
 (<<_2_6_1_2_guidance_on_assigning_a_centre_identifier_for_a_wis2_node>>).
@@ -68,7 +68,7 @@ When configuring a WIS2 Node, it is necessary to consider how it will be accesse
 
 Global Brokers must authenticate when they connect to the MQTT Message Broker in the WIS2 Node. Username and password credentials are used.footnote:[The default connection credentials for a WIS2 Node Message Broker are username ``everyone`` and password ``everyone`` WIS2 Node operators should choose credentials that meet their local policies (for example, password complexity).]. When registering the WIS2 Node with the WMO Secretariat, these credentials must be provided. The WMO Secretariat will share the credentials with the Global Service operators and store them in the WIS register. These credentials should not be considered confidential or secret.
 
-Given that Global Brokers republish notification messages provided by the WIS2 Node, you may decide to restrict access to the MQTT Message Broker. Global Brokers operate using a fixed IP address which allows you to permit them access using IP filtering.footnote:[In WIS2, IP addresses are used to determine the origin of connections and confer trust to remote systems. It is well documented that IP addresses can be hijacked and that more sophisticated mechanisms, such as Public Key Infrastructure (PKI), are available for reliably determining the origin of connection requests. However, the complexities of implementing such mechanisms create barriers to Member participation in WIS2. For the purposes of WIS2, which involves distributing publicly accessible data and messages, IP addresses are considered to provide an adequate level of trust.] MQTT Message Brokers must be accessible by more than one Global Broker to ensure resilient transmission of notification messages to WIS2.
+Given that Global Brokers republish notification messages provided by the WIS2 Node, access to the MQTT Message Broker may be restricted. Global Brokers operate using a fixed IP address, which allows access to be granted using IP filtering.footnote:[In WIS2, IP addresses are used to determine the origin of connections and confer trust to remote systems. It is well documented that IP addresses can be hijacked and that more sophisticated mechanisms, such as Public Key Infrastructure (PKI), are available for reliably determining the origin of connection requests. However, the complexities of implementing such mechanisms create barriers to Member participation in WIS2. For the purposes of WIS2, which involves distributing publicly accessible data and messages, IP addresses are considered to provide an adequate level of trust.] MQTT Message Brokers must be accessible by more than one Global Broker to ensure resilient transmission of notification messages to WIS2.
 
 If your WIS2 Node only publishes core data,footnote:[In some cases, WIS2 Nodes will need to serve core data directly (see <<_1_3_3_5_considerations_when_providing_core_data_in_wis2>>). In these situations, the WIS2 Node data server must remain publicly accessible.] access to the data server may also be restricted, with the distribution of data handled by Global Caches. Global Caches also operate on fixed IP addresses, allowing their connections to be easily identified. Again, access must be granted to more than one Global Broker to ensure resilience.
 
@@ -96,7 +96,7 @@ If contacted by a Global Monitor for a performance issue via a GISC, the WIS2 No
 
 When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
-To assist Members, a free and open-source reference implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built on mature and robust free open-source software components that are widely adopted for operational use.
+To assist Members, a free and open-source reference implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.
 
 wis2box provides the functionality required for both data publisher and data consumer roles, as well as the following technical functions:
 
@@ -111,8 +111,8 @@ wis2box provides the functionality required for both data publisher and data con
 * Provision of system performance and data availability metrics;
 * Access control for publication of recommended data, as required;
 * Subscription to notifications and download of WIS data from Global Services;
-* Modular design, allowing for extending to meet additional requirements or integration with existing data management systems.
+* Modular design, which allows for extensibility to meet additional requirements or integration with existing data management systems.
 
 The project documentation can be found at https://docs.wis2box.wis.wmo.int.
 
-The wis2box is managed as a free and open source project.  The source code, issue tracking and discussions are hosted openly on GitHub: https://docs.wis2box.wis.wmo.int.
+wis2box is managed as a free and open source project.  The source code, issue tracking and discussions are hosted openly on GitHub: https://github.com/wmo-im/wis2box.

@@ -2,7 +2,7 @@
 
 Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO Members.
 
-In 2007, the WMO Information System (WIS) entered operation to complement the GTS, providing a searchable catalogue and a Global Cache to enable additional discovery, access and retrieval of data. The success of WIS was limited, as the system only partially met the requirement of providing simple access to WMO data. Today’s technology developed for the Internet of Things (IoT) opens the possibility of creating a WIS2 that is able to deliver an increasing number and volume of real-time data to WMO centres in a reliable and cost -effective way.
+In 2007, the WMO Information System (WIS) entered operation to complement GTS, providing a searchable catalogue and a Global Cache to enable additional discovery, access and retrieval of data. The success of WIS was limited, as the system only partially met the requirement of providing simple access to WMO data. Today’s technology developed for the Internet of Things (IoT) opens the possibility of creating a WIS2 that is able to deliver an increasing number and volume of real-time data to WMO centres in a reliable and cost -effective way.
 
 WIS2 has been designed to meet the shortfalls of the current WIS and GTS, support Resolution 1 (Cg-Ext(2021)) – WMO Unified Policy for the International Exchange of Earth System Data (https://library.wmo.int/idurl/4/57850[_World Meteorological Congress: Abridged Final Report of the Extraordinary Session_] (WMO-No. 1281)), support the Global Basic Observing Network (GBON) and meet the demand for high data volume, variety, velocity and veracity.
 

@@ -165,7 +165,7 @@ Message Broker. WIS2 defines a standard topic hierarchy to ensure
 that data are published consistently by all WIS2 Nodes. Notification
 messages for aviation data should be published on a specific topic
 allowing a data consumer, such as the gateway, to subscribe only to
-aviation-specific notifications. See the example below:
+aviation-specific notifications. See the example below.
 
 .Example topic used to publish notifications about quantitative volcanic ash concentration information:
 [source,text]
@@ -194,7 +194,7 @@ Global Discovery Catalogue subscribes to a Global Broker and downloads
 the discovery metadata from the WIS2 Node using the URL supplied in the
 message.]
 
-.Interactions between the gateway and components of WIS2 and SWIM
+.Interactions between the gateway component and WIS2 and SWIM components
 image::images/wis2-to-swim-interaction-temp.png[Figure 3. Interactions between the gateway and components of WIS2 and SWIM]
 
 **Configuration**
@@ -240,7 +240,7 @@ The choice of protocol for publishing to the SWIM Message Broker should
 be based on a bilateral agreement between operators of the gateway and
 the SWIM service.
 
-The gateway should implement logging and error handling as necessary to
+The gateway component should implement logging and error handling as necessary to
 enable reliable operations. WIS2 uses the OpenMetrics
 standardfootnote:[See OpenMetrics:
 https://openmetrics.io.] to publish metrics and other operating information. The use of OpenMetrics
@@ -249,7 +249,7 @@ easily integrated into the WIS2 system.
 
 **Operation**
 
-The gateway may be operated at the national or regional level depending on
+The gateway component may be operated at the national or regional level depending on
 the organizational governance in place.
 
 ====== 2.8.1.1.5 SWIM service
@@ -299,8 +299,8 @@ principles and approaches. The ability to discover ODIS data on WIS2 (and the re
 beyond their primary communities of interest.
 
 WIS2 Global Discovery Catalogues will provide discovery metadata records
-using the OGC API - Records standard. This will include schema.org and JSON-LD
-annotations on WCMP2 discovery metadata in the GDC, to enable cross-pollination
+using the OGC API - Records standard. The Global Discovery Catalogues will include schema.org and JSON-LD
+annotations on WCMP2 discovery metadata to enable cross-pollination
 and federation.
 
 ODIS dataset records will be made available using the WCMP2 standard and provided
@@ -310,5 +310,4 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 .WIS2 and ODIS metadata and catalogue interoperability
 image::images/wis2-odis-metadata-discovery-interop.png[Figure 4. WIS2 and ODIS metadata and catalogue interoperability]
 
-As a result, federated discovery will be realized between both systems, allowing for
-use and reuse of data in an authoritative manner, closest to the source of the data.
+As a result, federated discovery will be realized between both systems, users will be able to access the data from as close as possible to their source, and the data will be able to be used and reused in an authoritative manner. 
