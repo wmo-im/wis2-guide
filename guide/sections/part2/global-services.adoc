@@ -36,11 +36,11 @@ WIS2 Global Services (Global Brokers, Global Caches, and Global Discovery Catalo
 
 There is no requirement for WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which can then provide metrics on the availability of WIS2 Nodes.
 
-Metrics for WIS2 monitoring should follow the naming convention wmo_<program>_<name>, where <program> is the name of the responsible WMO programme and <name> is the name of the metric. Examples of WIS2 metrics include:
+Metrics for WIS2 monitoring should follow the naming convention ``wmo_<program>_<name>``, where ``<program>`` is the name of the responsible WMO programme and ``<name>`` is the name of the metric. Examples of WIS2 metrics include:
 
-  wmo_wis2_gc_downloaded_total, and
+  ``wmo_wis2_gc_downloaded_total``, and
 
-  wmo_wis2_gb_messages_invalid_total.
+  ``wmo_wis2_gb_messages_invalid_total``.
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:[See https://github.com/wmo-im/wis2-metric-hierarchy.]
 
@@ -81,14 +81,14 @@ In the following sections, and for each Global Service, a set of metrics is defi
 
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. The open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
-** Additional required features, including anti-loop detection, notification message format compliance, validation of the published topic, and metrics provision.
+** Additional features, including anti-loop detection, notification message format compliance, validation of the published topic, and metrics provision.
 
 * When receiving a message from a WIS centre or a Global Service broker, the metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
 * A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
 * A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_invalid_topic_total`` will be increased by 1.
 * During the pre-operational phase (2024), a Global Broker will not discard the message but instead will send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC.
 * A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
-* A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message), of messages already published and will discard subsequent identical messages (those with the same message id). This is the anti-loop feature of the Global Broker.
+* A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message), of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
 * All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention, the Global Broker centre-id will be ``tld-{centre-name}-global-broker``.
@@ -110,7 +110,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Cache will use the standard topic structure in its local Message Brokers (see _Manual on WIS_, Volume II - Appendix D. WIS2 Topic Hierarchy).
 * A Global Cache will publish to the topic ``cache/a/wis2/...``.
 * There will be multiple Global Cache to ensure the highly available, low-latency global provision of real-time and near-real-time core data within WIS2.
-* There will be multiple Global Caches that may attempt to download cacheable data objects from all originating centres with cacheable content. A Global Cache will also download data objects from other Global Caches. This will ensure that each Global Cache has full global coverage, even when direct download from an originating centre is not possible
+* There will be multiple Global Caches that may attempt to download cacheable data objects from all originating centres with cacheable content. A Global Cache will also download data objects from other Global Caches. This will ensure that each Global Cache has full global coverage, even when direct download from an originating centre is not possible.
 * Global Caches will operate independently of one another. Each Global Cache will hold a full copy of the cache – although there may be small differences between the various Global Caches as data availability notification messages propagate through WIS to each one. There is no formal synchronization between Global Caches.
 * A Global Cache will temporarily cache all resources published on the ``metadata`` topic. A Global Discovery Catalogue will subscribe to notifications about the publication of new or updated metadata, download the metadata record from the Global Cache and insert it into the catalogue. A Global Discovery Catalogue will also publish a metadata record archive each day containing the complete content of the catalogue and advertise its availability with a notification message. This resource will also be cached by a Global Cache.
 * A Global Cache is designed to support real-time content distribution. Data consumers access data objects from a Global Cache instance by resolving the URL in a data availability notification message and downloading the file to which the URL points. Only by checking the URL, is it transparent to the data consumers from which Global Cache they are downloading the data. There is no need to download the same data object from multiple Global Caches. The data id contained within notification messages is used by data consumers and Global Services to detect such duplicates.
@@ -211,4 +211,4 @@ wis2-gdc is managed as a free and open source project.  Source code, issue track
 * The Global Monitor will monitor the "health" (that is, the performance) of components at NCs/DCPCs, as well as Global Services.
 * The Global Monitor will provide a web-based dashboard that displays the WIS2 system performance and data availability.
 * As a convention, the Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
-* The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in an appropriate format. 
+* The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation. 

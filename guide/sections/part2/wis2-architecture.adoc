@@ -50,7 +50,7 @@ These roles are outlined below.
 *	Data consumers determine whether the data or metadata referenced in the notification messages are required.
 *	Data consumers download data from a Global Cache or WIS2 Node.
 
-=== 2.3 WIS2 Specifications
+=== 2.3 WIS2 specifications
 
 Leveraging existing open standards, WIS2 defines the following specifications in support of publication, subscription, notification and discovery:
 

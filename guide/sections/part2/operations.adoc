@@ -68,7 +68,7 @@ Aeronautical Fixed Service (AFS) are defined solely under the ICAO regulatory fr
 The WIS2 to SWIM interoperability approach employs a gateway component (as per Figure 2):
 
 .Schematic of an interoperability approach
-image::images/wis2-to-swim-temp.png[Figure 2. Schematic of interoperability approach]
+image::images/wis2-to-swim-temp.png[Schematic of interoperability approach]
 
 The gateway component can operate as an "adapter" between WIS2 and SWIM by pulling
 the requisite meteorological data from WIS2 and re-publishing it
@@ -101,8 +101,8 @@ Datasets are a central concept in WIS2. Where
 meteorological data is published via WIS2, it will be packaged into
 datasets. The data should be grouped at the country/territory
 level (for instance, datasets should be published for a given country/territory), one for each datatype (for example,
-aerodrome observation, aerodrome forecast,quantitative volcanic ash
-concentration, and so forth).
+aerodrome observation, aerodrome forecast, quantitative volcanic ash
+concentration information, and so forth).
 
 For the purposes of publishing through WIS2, datasets containing aeronautical meteorological information should be considered as recommended data, as
 described in Resolution 1 (Cg-Ext(2021)).
