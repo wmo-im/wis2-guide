@@ -36,7 +36,7 @@ Resolution 1 (Cg-Ext(2021)) describes the Earth system data that are necessary f
 
 WIS2 is the mechanism by which these Earth system data are exchanged.
 
-A common practice when working with data is to group them into datasets. All the data in a dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a dataset as a "collection of data, published or curated by a single agent, and available for access or download in one or more representations".footnote:[See _Data Catalog Vocabulary (DCAT) - Version 2, W3C Recommendation 04 February 2020_ https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset]
+A common practice when working with data is to group them into datasets. All the data in a dataset share some common characteristics. The Data Catalog Vocabulary (DCAT) defines a dataset as a "collection of data, published or curated by a single agent, and available for access or download in one or more representations".footnote:[See _Data Catalog Vocabulary (DCAT) – Version 3, W3C Recommendation 22 August 2024_ https://www.w3.org/TR/vocab-dcat-3/#Class:Dataset]
 
 Why is this important? The "single agent" (such as an organization) responsible for managing the collection ensures consistency among the data. For example, in a dataset:
 
@@ -73,7 +73,7 @@ There are some things that are fixed requirements for datasets:
 
 Some examples of datasets include:
 
-* The most recent five days of synoptic observations for an entire country or territory; footnote:[Why 5-days in this example? Because the system used to publish the data in this example only retains data for 5-days]
+* The most recent five days of synoptic observations for an entire country or territory; footnote:[In this example, the system used to publish the data only retains the data for five days. Other systems  may retain the data for a longer or shorter period of time.]
 * A long-term record of observed water quality for a managed set of hydrological stations;
 * The output from the most recent 24 hours of operational numerical weather prediction model runs;
 * The output from six months of experimental model runs. It is important to note that the output from operational and experimental model runs should not be merged into the same dataset because they use different algorithms - it is very useful to be able to distinguish the provenance (or lineage) of data; 

@@ -2,9 +2,7 @@
 
 ==== 2.8.1 Interoperability with external systems
 
-The WIS2 principles enable lowering the barrier to weather/climate/water data for WMO Members.  Lowering the barrier is driven by international standards
-for data discovery, access, and visualization.  In addition to Member benefits, a by-product of utilizing standards is being able to provide
-the same data and access mechanisms to external systems at no extra cost of implementation.
+Driven by international standards for data discovery, access, and visualization, the WIS2 principles help lower the barrier for WMO Members to weather, climate, and water data. An additional benefit of adopting these standards is that Members are able to provide the same data and access mechanisms to external systems at no extra cost for implementation.  
 
 WIS2 standards are based on industry standards (OGC, W3C, IETF) and allow for broad interoperability.  This means that non-traditional users can also
 use data from WIS2 data in the same manner, without the requirement for specialized software, tools, or applications.
@@ -72,7 +70,7 @@ The WIS2 to SWIM interoperability approach employs a gateway component (as per F
 .Schematic of an interoperability approach
 image::images/wis2-to-swim-temp.png[Figure 2. Schematic of interoperability approach]
 
-The gateway can operate as an "adapter" between WIS2 and SWIM by pulling
+The gateway component can operate as an "adapter" between WIS2 and SWIM by pulling
 the requisite meteorological data from WIS2 and re-publishing it
 to SWIM.
 
@@ -195,12 +193,12 @@ the discovery metadata from the WIS2 Node using the URL supplied in the
 message.]
 
 .Interactions between the gateway component and WIS2 and SWIM components
-image::images/wis2-to-swim-interaction-temp.png[Figure 3. Interactions between the gateway and components of WIS2 and SWIM]
+image::images/wis2-to-swim-interaction-temp.png[Interactions between the gateway component and the WIS2 and SWIM components]
 
 **Configuration**
 
 Dataset discovery metadata will provide
-useful information that can be used to configure the gateway, for example, the
+useful information that can be used to configure the gateway component, for example, the
 topic(s) to subscribe to plus additional information that may be
 needed for the SWIM service.
 
@@ -225,7 +223,7 @@ resource should be in IWXXM format;
 ** Create a new data message as per the SWIM specifications, including
 the unique identifier extracted from the data resource,footnote:[In case
 a unique identifier is required for proper passing of an aviation
-weather message to the gateway, the GTS abbreviated heading
+weather message to the gateway component, the GTS abbreviated heading
 (TTAAii CCCC YYGGgg) in the COLLECT envelop can be used (available in IWXXM messages
 that have a corresponding TAC message). Alternatively, content in the attribute
 ``gml:identifier`` (available in newer IWXXM messages such as WAFS SIGWX
@@ -237,14 +235,14 @@ within the data message;
 Broker component of the SWIM service.
 
 The choice of protocol for publishing to the SWIM Message Broker should
-be based on a bilateral agreement between operators of the gateway and
+be based on a bilateral agreement between operators of the gateway component and
 the SWIM service.
 
 The gateway component should implement logging and error handling as necessary to
 enable reliable operations. WIS2 uses the OpenMetrics
 standardfootnote:[See OpenMetrics:
 https://openmetrics.io.] to publish metrics and other operating information. The use of OpenMetrics
-by the gateway would enable monitoring and performance reporting to be
+by the gateway component would enable monitoring and performance reporting to be
 easily integrated into the WIS2 system.
 
 **Operation**
@@ -258,12 +256,12 @@ The SWIM aviation weather information service may include of a Message Broker
 component which implements the Advanced Message Queuing Protocol (AMQP) 1.0 messaging standard.footnote:[See AMQP
 1.0: https://www.amqp.org/resources/specifications.]
 
-The Message Broker publishes the data messages provided by the gateway.
+The Message Broker publishes the data messages provided by the gateway component.
 
 The Message Broker must ensure that data messages are provided only by
 authorized sources, such as a gateway, and should validate incoming messages as aeronautical meteorological information.
 
-===== 2.8.1.2 The Ocean Data and Information System
+===== 2.8.1.2 Ocean Data and Information System
 
 The Ocean Data and Information System (ODIS) is a federation of 
 independent data systems, coordinated by the International Oceanographic 
@@ -305,8 +303,9 @@ and federation.
 
 ODIS dataset records will be made available using the WCMP2 standard and provided
 as objects available via HTTP for ingest, validation and publication to the Global Discovery Catalogues as a
-federated catalogue.  ODIS data will be published as recommended data as per the Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
+federated catalogue.  ODIS data will be published as recommended data as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
 (See Figure 4)
+
 .WIS2 and ODIS metadata and catalogue interoperability
 image::images/wis2-odis-metadata-discovery-interop.png[Figure 4. WIS2 and ODIS metadata and catalogue interoperability]
 

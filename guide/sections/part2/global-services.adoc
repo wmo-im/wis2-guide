@@ -96,7 +96,7 @@ In the following sections, and for each Global Service, a set of metrics is defi
 
 ==== 2.7.4 Global Cache
 
-In WIS2, Global Caches provide access to WMO core data for data consumers. This allows data providers to restrict access to their systems to Global Services, and it reduces the need for them to provide high bandwidth and low latency access to their data. Global Caches operate in a way that is transparent to end users in that they resend notification messages from data providers. These messages are updated to point to the Global Cache data store copies of the original data. Global Caches also resend notification messages from data providers for core data that are not stored in the Global Cache, such as when the originator specifies in the notification message that a certain dataset should not be cached. In these cases, the notification messages remain unchanged and point to the original source. Data consumers should subscribe to the notification messages from Global Caches instead of the notification messages from data providers for WMO core data. When data consumers receive a notification message, they should follow the URLs from that message, which either point to a Global Cache which has a copy of the data, or – in case of uncached content – point to the original source.
+In WIS2, Global Caches provide access to WMO core data for data consumers. This allows data providers to restrict access to their systems to Global Services, and it reduces the need for them to provide high bandwidth and low latency access to their data. Global Caches operate in a way that is transparent to end users in that they resend notification messages from data providers. These messages are updated to point to copies of the original data held in the Global Cache data store. Global Caches also resend notification messages from data providers for core data that are not stored in the Global Cache, such as when the originator specifies in the notification message that a certain dataset should not be cached. In these cases, the notification messages remain unchanged and point to the original source. Data consumers should subscribe to the notification messages from Global Caches instead of the notification messages from data providers for WMO core data. When data consumers receive a notification message, they should follow the URLs from that message, which either point to a Global Cache which has a copy of the data, or – in case of uncached content – point to the original source.
 
 ===== 2.7.4.1 Technical considerations
 
@@ -104,7 +104,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ** A highly available data server allowing data consumers to download cache resources with high bandwidth and low latency;
 ** A Message Broker implementing both MQTTv3.1.1 and MQTTv5 to publish notification messages about resources that are available from the Global Cache;
 ** A cache management system implementing the features needed to connect to the WIS ecosystem, receive data from WIS2 Nodes and other Global Caches, store the data on the data server and manage the content of the cache (expiration of data, deduplication, and so forth).
-* A Global Cache will aim to contain copies of real-time and near real-time data designated as "core" within the Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
+* A Global Cache will aim to contain copies of real-time and near real-time data designated as "core" within the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))).
 * A Global Cache will host data objects copied from NCs/DCPCs.
 * A Global Cache will publish notification messages advertising the availability of the data objects it holds. The notification messages will follow the standard structure (see _Manual on WIS_, Volume II -Appendix E. WIS2 Notification Message).
 * A Global Cache will use the standard topic structure in its local Message Brokers (see _Manual on WIS_, Volume II - Appendix D. WIS2 Topic Hierarchy).
@@ -131,8 +131,8 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ** If the message contains the property ``"properties.cache": false``,
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
 ** Else
-*** Maintain a list of data_ids that have already been downloaded;
-*** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of data_ids;
+*** Maintain a list of ``data_id`` values that have already been downloaded;
+*** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
 *** If the message is new or updated:
 **** Download only new or updated data from the ``href`` or extract the data from the message content;
 **** If the message contains an integrity value for the data, verify the integrity of the data;
