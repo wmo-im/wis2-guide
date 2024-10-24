@@ -25,7 +25,7 @@ via WIS2 will automatically be published to GTS via the WIS2-to-GTS gateways.
 |===
 |*WIS2* |*SWIM*
 |Earth system scope: Weather, climate, hydrology, atmospheric
-composition, cryosphere, ocean and space weather data |ATM scope: Aeronautical, meteorological and flight information
+composition, cryosphere, ocean and space weather data. |ATM scope: Aeronautical, meteorological and flight information.
 
 |Data centric: A consumer discovers data and then determines the
 services through which those data may be accessed. |Service centric: A
@@ -117,7 +117,7 @@ Recommended data:
 regarding the security schemes for authenticated
 access - either HTTP authentication, API keys, OAuth2 or OpenID
 Connect Discovery. For more information, see
-OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object.], footnote:[WIS2 does not provide any guidance on use of Public Key Infrastructure (PKI).] applied at the WIS2 Node;
+OpenAPI Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object.]footnote:[WIS2 does not provide any guidance on use of Public Key Infrastructure (PKI).] applied at the WIS2 Node;
 * Are not cached within WIS2 by the Global Caches.footnote:[Global
 Caches enable the highly available, low-latency distribution of core data.
 Given that core data is provided on a free and unrestricted basis,
@@ -221,7 +221,7 @@ processed;
 Nodefootnote:[The WIS2 Node may control access to data. If this is the case, the gateway component will need to be implemented accordingly] using the URL in the message - the
 resource should be in IWXXM format;
 ** Create a new data message as per the SWIM specifications, including
-the unique identifier extracted from the data resource,footnote:[In case
+the unique identifier extracted from the data resourcefootnote:[In case
 a unique identifier is required for proper passing of an aviation
 weather message to the gateway component, the GTS abbreviated heading
 (TTAAii CCCC YYGGgg) in the COLLECT envelop can be used (available in IWXXM messages
@@ -229,7 +229,7 @@ that have a corresponding TAC message). Alternatively, content in the attribute
 ``gml:identifier`` (available in newer IWXXM messages such as WAFS SIGWX
 Forecast and QVACI), may also serve this purpose. There is currently no agreed
 definition for a unique identifier for IWXXM METAR and TAF reports for
-individual aerodromes.] and embed the aviation weather data resource
+individual aerodromes.], and embed the aviation weather data resource
 within the data message;
 ** Publish the data message to the appropriate topic on the SWIM Message
 Broker component of the SWIM service.
