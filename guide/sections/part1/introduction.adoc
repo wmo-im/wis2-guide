@@ -50,7 +50,7 @@ This consistency means that it is possible to predict the contents of a dataset,
 
 A dataset may be published as an immutable resource (such as data collected from a research programme), or it may be routinely updated (for example, every minute, as new observations are collected from weather stations).
 
-A dataset may be represented as a single, structured file or object (for example, a CSV file in which each row represents a data record) or as thousands of consistent files (for example, output from a reanalysis model encoded as many thousands of General Regularly-distributed Information in Binary form (GRIB) files). Determining the best way to represent a dataset is beyond the scope of this Guide – there are many factors to consider. The key point here is that the dataset is considered a single, identifiable resource, irrespective of how it is represented.
+A dataset may be represented as a single, structured file or object (for example, a CSV file in which each row represents a data record) or as thousands of consistent files (for example, output from a reanalysis model encoded as many thousands of General Regularly-distributed Information in Binary form (GRIB) files). Determining the best way to represent a dataset is beyond the scope of this Guide – there are many factors to consider. The key point here is that the dataset is considered a single, identifiable resource irrespective of how it is represented.
 
 Because data are grouped into a single, conceptual resource (that is, the dataset) it is possible to:
 * Assign this resource an identifier and use this identifier to unambiguously refer to collections of data;
@@ -73,7 +73,7 @@ There are some things that are fixed requirements for datasets:
 
 Some examples of datasets include:
 
-* The most recent five days of synoptic observations for an entire country or territory; footnote:[In this example, the system used to publish the data only retains the data for five days. Other systems  may retain the data for a longer or shorter period of time.]
+* The most recent five days of synoptic observations for an entire country or territory; footnote:[In this example, the system used to publish the data only retains the data for five days. Other systems may retain the data for a longer or shorter period of time.]
 * A long-term record of observed water quality for a managed set of hydrological stations;
 * The output from the most recent 24 hours of operational numerical weather prediction model runs;
 * The output from six months of experimental model runs. It is important to note that the output from operational and experimental model runs should not be merged into the same dataset because they use different algorithms - it is very useful to be able to distinguish the provenance (or lineage) of data; 
