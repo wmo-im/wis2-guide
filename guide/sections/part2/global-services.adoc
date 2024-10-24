@@ -18,7 +18,7 @@ On receipt of an offer from a Member to operate a Global Service, the WMO Secret
 
 The _Manual on WIS_, Volume II, the present Guide, and other available materials will help WIS centres decide how to proceed.
 
-When a decision on how to proceed has been made  , the WIS NFP   will inform the WMO Secretariat of its   preference. Depending on the type of Global Service, the WMO Secretariat will provide a checklist to the WIS centre so that the future Global Service can be included in WIS operations.
+When a decision on how to proceed has been made, the WIS NFP will inform the WMO Secretariat of its preference. Depending on the type of Global Service, the WMO Secretariat will provide a checklist to the WIS centre so that the future Global Service can be included in WIS operations.
 
 A WIS centre must commit to running the Global Service for a minimum of four years.
 
@@ -88,7 +88,7 @@ In the following sections, and for each Global Service, a set of metrics is defi
 * A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_invalid_topic_total`` will be increased by 1.
 * During the pre-operational phase (2024), a Global Broker will not discard the message but instead will send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC.
 * A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
-* A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message), of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
+* A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
 * All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention, the Global Broker centre-id will be ``tld-{centre-name}-global-broker``.
@@ -156,7 +156,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ===== 2.7.5.1 Technical considerations
 
 * The Global Discovery Catalogue provides data consumers with a mechanism for discovering and searching for datasets of interest as well as learning how to interact with and find out more information about those datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standard,footnote:[See OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html.] adhering to the following conformance classes and their dependencies:
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[See OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html.], adhering to the following conformance classes and their dependencies:
 ** Searchable Catalog (Deployment);
 ** Searchable Catalog - Sorting (Deployment);
 ** Searchable Catalog - Filtering (Deployment);
@@ -172,7 +172,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ** The subscription topic shall be ``++cache/a/wis2/+/metadata/#++``.
 * A Global Discovery Catalogue should connect to and subscribe to more than one Global Broker to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue will discard duplicate messages as needed.
 * A Global Discovery Catalogue will verify that a discovery metadata record identifier’s centre-id token (see Manual on WIS, Volume II – Appendix F. WMO Core Metadata Profile (Version 2)) matches the centre-id level of the topic from which it was published (see Manual on WIS, Volume II – Appendix D. WIS2 Topic Hierarchy) to ensure that discovery metadata are published by the authoritative organization.
-* •	A Global Discovery Catalogue will validate discovery metadata records against the WCMP2. Valid WCMP2 records will be ingested into the catalogue. Invalid or malformed records will be discarded and reported to the Global Monitor against the centre-id associated with the discovery metadata record.
+* A Global Discovery Catalogue will validate discovery metadata records against the WCMP2. Valid WCMP2 records will be ingested into the catalogue. Invalid or malformed records will be discarded and reported to the Global Monitor against the centre-id associated with the discovery metadata record.
 * A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin), with their equivalent links for subscription at Global Brokers (cache).
 * A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
 * A Global Discovery Catalogue will remove discovery metadata that are marked for deletion as specified in the data notification message.
@@ -200,7 +200,7 @@ wis2-gdc provides the functionality required for the Global Discovery Catalogue,
 * Metrics reporting;
 * Implementation of metrics.
 
-wis2-gdc is managed as a free and open source project.  Source code, issue tracking and discussions are hosted openly on GitHub: https://github.com/wmo-im/wis2-gdc.
+wis2-gdc is managed as a free and open source project. Source code, issue tracking and discussions are hosted openly on GitHub: https://github.com/wmo-im/wis2-gdc.
 
 ==== 2.7.6 Global Monitor
 
