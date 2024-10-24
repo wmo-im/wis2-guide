@@ -54,7 +54,7 @@ The effective management of information is essential for WMO centres to deliver 
 
 ===== 3.1.2.4 Principle 4: Information must be standardized and interoperable
 
-* Information must be stored and exchanged in standardized formats to ensure wide usability in the short and long term. It is essential for long-term archiving that information be stored in a form that can be understood and used after several decades.
+* Information must be stored and exchanged in standardized formats to ensure wide usability in the short and long-term. It is essential for long-term archiving that information be stored in a form that can be understood and used after several decades.
 * Standardization is essential for structured information such as dataset definitions and metadata to support interoperability.
 * Interoperability is essential for users to be able to utilize information through different systems and software. Open standards help ensure interoperability with their openness and wide adoption across various communities.
 * Which standards to use depends on the user community and organizational policies. Interoperability requirements should be considered when selecting the standard for internal use and broader dissemination.
@@ -140,7 +140,7 @@ To ensure traceability and reproducibility, the information and documents at thi
 
 ====== 3.1.3.3.2 Representation and metadata
 
-The formats used to store and exchange information should be standardized to ensure its usability in both the short and the long term. It is essential that the information be accessible many years after archival if required. To ensure this usability, the format and version of the information should be recorded in the information metadata record and included within the information itself where the format allows.
+The formats used to store and exchange information should be standardized to ensure its usability in both the short and the long-term. It is essential that the information be accessible many years after archival if required. To ensure this usability, the format and version of the information should be recorded in the information metadata record and included within the information itself where the format allows.
 
 Information exchanged on WIS and between WMO centres is standardized through the use of the formats specified in the _Manual on Codes_ (WMO-No. 306), Volume I.2 and the _Manual on WIS_, Volume II. These include the GRIB and BUFR formats for numerical weather prediction products and observational data and the WMO Core Metadata Profile for discovery, access and retrieval metadata. The format for the exchange of station and instrumental metadata, WMO Integrated Global Observing System (WIGOS) Metadata Data Representation, is defined in the https://library.wmo.int/idurl/4/35769[_Manual on Codes_] (WMO-No. 306), Volume I.3.
 
