@@ -1,6 +1,6 @@
 === 4.1 Security
 
-For this initial version of the Guide to WIS, Volume II, existing guidance on information technology security (also known as cybersecurity) remains largely applicable. Please refer to:
+For this initial version of the Guide to WIS, Volume II, existing guidance on information technology security (also known as "cybersecurity") remains largely applicable. Please refer to:
 
-* _Guide to Information Technology Security_ (WMO-No. 1115)
-* https://library.wmo.int/idurl/4/28988[_Guide to the WMO Information System_] (WMO-No. 1061), Vol I, Appendix E - Annex To Paragraph 7.8 (ICT Service Incident Management), and Appendix F - WIS IT Security Incident Response Process
+* _Guide to Information Technology Security_ (WMO-No. 1115);
+* https://library.wmo.int/idurl/4/28988[_Guide to the WMO Information System_] (WMO-No. 1061), Volume I, Appendix E. Annex To Paragraph 7.8, 1. ICT Service Incident Management; and Appendix F.WIS IT Security Incident Response Process.
