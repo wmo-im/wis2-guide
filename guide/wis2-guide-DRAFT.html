@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-25</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-28</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2024.dev</p></td>
@@ -478,14 +478,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle" class="title">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_introduction">Introduction</a>
+<li><a href="#_purpose_of_this_guide">Purpose of this Guide</a></li>
+<li><a href="#_part_i_introduction">PART I. Introduction</a>
 <ul class="sectlevel2">
-<li><a href="#_purpose">Purpose</a></li>
-</ul>
-</li>
-<li><a href="#_part_i">PART I</a>
-<ul class="sectlevel2">
-<li><a href="#_1_1_introduction_to_wis2">1.1 Introduction to WIS2</a>
+<li><a href="#_1_1_background">1.1 Background</a>
 <ul class="sectlevel3">
 <li><a href="#_1_1_1_leveraging_open_standards">1.1.1 Leveraging open standards</a></li>
 <li><a href="#_1_1_2_simpler_data_exchange">1.1.2 Simpler data exchange</a></li>
@@ -493,7 +489,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_1_1_4_why_are_datasets_so_important">1.1.4 Why are datasets so important?</a></li>
 </ul>
 </li>
-<li><a href="#_1_2_data_consumer">1.2 Data consumer</a>
+<li><a href="#_1_2_information_for_the_data_consumer">1.2 Information for the data consumer</a>
 <ul class="sectlevel3">
 <li><a href="#_1_2_1_how_to_search_the_global_discovery_catalogue_to_find_datasets">1.2.1 How to search the Global Discovery Catalogue to find datasets</a></li>
 <li><a href="#_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data">1.2.2 How to subscribe to notifications about the availability of new data</a></li>
@@ -503,7 +499,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_1_2_6_further_reading_for_data_consumers">1.2.6 Further reading for data consumers</a></li>
 </ul>
 </li>
-<li><a href="#_1_3_data_publisher">1.3 Data publisher</a>
+<li><a href="#_1_3_information_for_the_data_publisher">1.3 Information for the data publisher</a>
 <ul class="sectlevel3">
 <li><a href="#_1_3_1_how_to_get_started">1.3.1 How to get started</a></li>
 <li><a href="#_1_3_2_how_to_provide_discovery_metadata_to_wis2">1.3.2 How to provide discovery metadata to WIS2</a></li>
@@ -513,7 +509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_part_ii">PART II</a>
+<li><a href="#_part_ii_architecture_implementation_and_operations">PART II. Architecture, implementation and operations</a>
 <ul class="sectlevel2">
 <li><a href="#_2_1_wis2_architecture">2.1 WIS2 architecture</a></li>
 <li><a href="#_2_2_roles_in_wis2">2.2 Roles in WIS2</a>
@@ -525,7 +521,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_2_3_wis2_specifications">2.3 WIS2 specifications</a></li>
-<li><a href="#_2_4_components_of_wis2">2.4 Components of WIS2</a>
+<li><a href="#_2_4_wis2_components">2.4 WIS2 Components</a>
 <ul class="sectlevel3">
 <li><a href="#_2_4_1_wis2_node">2.4.1 WIS2 Node</a></li>
 <li><a href="#_2_4_2_global_broker">2.4.2 Global Broker</a></li>
@@ -564,49 +560,39 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_part_iii">PART III</a>
+<li><a href="#_part_iii_information_management">PART III. Information management</a>
 <ul class="sectlevel2">
-<li><a href="#_3_1_information_management">3.1 Information management</a>
+<li><a href="#_3_1_introduction">3.1 Introduction</a>
 <ul class="sectlevel3">
-<li><a href="#_3_1_1_introduction">3.1.1 Introduction</a></li>
-<li><a href="#_3_1_2_principles_of_information_management">3.1.2 Principles of information management</a></li>
-<li><a href="#_3_1_3_the_information_management_life_cycle">3.1.3 The information management life cycle</a></li>
-<li><a href="#_3_1_4_other_considerations">3.1.4 Other considerations</a></li>
+<li><a href="#_3_1_1_background">3.1.1 Background</a></li>
+<li><a href="#_3_1_2_scope">3.1.2 Scope</a></li>
+<li><a href="#_3_2_principles_of_information_management">3.2 Principles of information management</a></li>
+<li><a href="#_3_3_the_information_management_life_cycle">3.3 The information management life cycle</a></li>
+<li><a href="#_3_4_other_considerations">3.4 Other considerations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#_part_iv">PART IV</a>
-<ul class="sectlevel2">
-<li><a href="#_4_1_security">4.1 Security</a></li>
-</ul>
-</li>
-<li><a href="#_part_v">PART V</a>
-<ul class="sectlevel2">
-<li><a href="#_5_1_competencies">5.1 Competencies</a></li>
-</ul>
-</li>
+<li><a href="#_part_iv_security">PART IV. Security</a></li>
+<li><a href="#_part_v_competencies">PART V. Competencies</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<h2 id="_purpose_of_this_guide"><a class="anchor" href="#_purpose_of_this_guide"></a>Purpose of this Guide</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_purpose"><a class="anchor" href="#_purpose"></a>Purpose</h3>
 <div class="paragraph">
 <p>In conjunction with the <a href="https://library.wmo.int/idurl/4/68731"><em>Manual on the WMO Information System</em></a> (WMO-No. 1060), Volume II – WMO Information System 2.0 (<em>Manual on WIS</em>, Volume II), the present <em>Guide to the WMO Information System</em> (WMO-No. 1061), Volume II – WMO Information System 2.0 <em>(Guide to WIS</em>, Volume II) is designed to ensure adequate uniformity and standardization in the data, information and communication practices, procedures and specifications employed by WMO Members in the operation of the WMO Information System 2.0 (WIS2) as it supports the mission of the Organization. The <em>Manual on WIS</em>, Volume II contains standard and recommended practices, procedures and specifications. The <em>Guide to WIS</em>, Volume II contains additional information concerning practices, procedures and specifications that Members are invited to follow or implement in establishing and conducting their arrangements in compliance with the WMO technical regulations and in developing meteorological and hydrological services.</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="_part_i"><a class="anchor" href="#_part_i"></a>PART I</h2>
+<h2 id="_part_i_introduction"><a class="anchor" href="#_part_i_introduction"></a>PART I. Introduction</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_1_1_introduction_to_wis2"><a class="anchor" href="#_1_1_introduction_to_wis2"></a>1.1 Introduction to WIS2</h3>
+<h3 id="_1_1_background"><a class="anchor" href="#_1_1_background"></a>1.1 Background</h3>
 <div class="paragraph">
 <p>Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO Members.</p>
 </div>
@@ -695,16 +681,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>A dataset may be represented as a single, structured file or object (for example, a CSV file in which each row represents a data record) or as thousands of consistent files (for example, output from a reanalysis model encoded as many thousands of General Regularly-distributed Information in Binary form (GRIB) files). Determining the best way to represent a dataset is beyond the scope of this Guide – there are many factors to consider. The key point here is that the dataset is considered a single, identifiable resource irrespective of how it is represented.</p>
 </div>
 <div class="paragraph">
-<p>Because data are grouped into a single, conceptual resource (that is, the dataset) it is possible to:
-* Assign this resource an identifier and use this identifier to unambiguously refer to collections of data;
-* Make statements about the dataset (that is, metadata) and infer that these statements apply to the entire collection.</p>
+<p>Because data are grouped into a single, conceptual resource (that is, the dataset) it is possible to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Assign this resource an identifier and use this identifier to unambiguously refer to collections of data;</p>
+</li>
+<li>
+<p>Make statements about the dataset (that is, metadata) and infer that these statements apply to the entire collection.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>The dataset concept is central to WIS2:
-* Discovery metadata about datasets are published, as specified in the <em>Manual on WIS</em>, Volume II – Appendix F. WMO Core Metadata Profile (Version 2);
-* Data consumers can search for datasets that contain relevant data using the Global Discovery Catalogue (see <a href="#_2_4_4_global_discovery_catalogue">2.4.4 Global Discovery Catalogue</a>);
-* Data consumers can subscribe to notifications about updates to a dataset via a Global Broker (see <a href="#_2_4_2_global_broker">2.4.2 Global Broker</a>);
-* Data consumers can access the data that comprise a dataset from a single location using a well-described mechanism.</p>
+<p>The dataset concept is central to WIS2:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Discovery metadata about datasets are published, as specified in the <em>Manual on WIS</em>, Volume II – Appendix F. WMO Core Metadata Profile (Version 2);</p>
+</li>
+<li>
+<p>Data consumers can search for datasets that contain relevant data using the Global Discovery Catalogue (see <a href="#_2_4_4_global_discovery_catalogue">2.4.4 Global Discovery Catalogue</a>);</p>
+</li>
+<li>
+<p>Data consumers can subscribe to notifications about updates to a dataset via a Global Broker (see <a href="#_2_4_2_global_broker">2.4.2 Global Broker</a>);</p>
+</li>
+<li>
+<p>Data consumers can access the data that comprise a dataset from a single location using a well-described mechanism.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>It is up to data publishers to decide how their data are grouped into datasets – effectively, to decide what datasets they publish to WIS2. That said, it is recommended that, subject to the consistency rules above, data publishers should organize their data into as few datasets as possible.</p>
@@ -753,7 +759,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_2_data_consumer"><a class="anchor" href="#_1_2_data_consumer"></a>1.2 Data consumer</h3>
+<h3 id="_1_2_information_for_the_data_consumer"><a class="anchor" href="#_1_2_information_for_the_data_consumer"></a>1.2 Information for the data consumer</h3>
 <div class="paragraph">
 <p>Data consumers wanting to use data published via WIS2 should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.</p>
 </div>
@@ -766,7 +772,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>A key component of dataset records in the Global Discovery Catalogue is "actionable" links. A dataset record provides one or more links, each clearly identifying its nature and purpose (informational, direct download, application programming interface (API), subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications about the data(see <a href="#_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data">1.2.2 How to subscribe to notifications about the availability of new data</a>), or an API, or an offline archive retrieval service.</p>
 </div>
 <div class="paragraph">
-<p>The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <a href="#_2_2_4_global_discovery_catalogue">[_2_2_4_global_discovery_catalogue]</a>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.</p>
+<p>The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <a href="#_2_4_4_global_discovery_catalogue">2.4.4 Global Discovery Catalogue</a>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.</p>
 </div>
 </div>
 <div class="sect3">
@@ -888,7 +894,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_1_1_introduction_to_wis2">1.1 Introduction to WIS2</a></p>
+<p><a href="#_part_i_introduction">PART I. Introduction</a></p>
 </li>
 <li>
 <p><a href="#_2_1_wis2_architecture">2.1 WIS2 architecture</a></p>
@@ -897,7 +903,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="#_2_2_roles_in_wis2">2.2 Roles in WIS2</a></p>
 </li>
 <li>
-<p><a href="#_2_4_wis2_components">[_2_4_wis2_components]</a></p>
+<p><a href="#_2_4_wis2_components">2.4 WIS2 Components</a></p>
 </li>
 </ul>
 </div>
@@ -920,14 +926,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_1_3_data_publisher"><a class="anchor" href="#_1_3_data_publisher"></a>1.3 Data publisher</h3>
+<h3 id="_1_3_information_for_the_data_publisher"><a class="anchor" href="#_1_3_information_for_the_data_publisher"></a>1.3 Information for the data publisher</h3>
 <div class="paragraph">
 <p>Data publishers wanting to share authoritative Earth system data with the WMO community should read the guidance presented here. A list of references to informative material in this Guide and elsewhere is provided at the end of this section.</p>
 </div>
 <div class="sect3">
 <h4 id="_1_3_1_how_to_get_started"><a class="anchor" href="#_1_3_1_how_to_get_started"></a>1.3.1 How to get started</h4>
 <div class="paragraph">
-<p>The first step is to consider the data, how they can be conceptually grouped into one or more datasets (see <a href="#_1_1_4_why_are_datasets_so_important?">[_1_1_4_why_are_datasets_so_important?]</a>), and whether they are core or recommended data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))) .</p>
+<p>The first step is to consider the data, how they can be conceptually grouped into one or more datasets (see <a href="#_1_1_4_why_are_datasets_so_important">1.1.4 Why are datasets so important?</a>), and whether they are core or recommended data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))) .</p>
 </div>
 <div class="paragraph">
 <p>Next, it is important to consider where the data are published. If the data relate to a specific country or territory, they should be published through a National Centre (NC). If they relate to a region, programme, or other specialized function within WMO, they should be published through a Data Collection or Production Centre (DCPC). The functional requirements for NCs and DCPCs are described in the <em>Manual on WIS</em>, Volume II - Part III Functions of WIS.</p>
@@ -939,7 +945,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>It may be possible to identify an existing NC or DCPC that can publish the data. Alternatively, it may be necessary to establish a new NC or DCPC. The main distinction between these two centres is that an NC is designated by a Member, whereas a DCPC is designated by a WMO or related international programme and/or a regional association.</p>
 </div>
 <div class="paragraph">
-<p>Both NCs and DCPCs require the operation of a WIS2 Node (see <a href="#_2_4_2_wis2_node">[_2_4_2_wis2_node]</a>). The procedure for registering a new WIS2 Node is provided in <a href="#_2_6_1_1_registration_and_decommissioning_of_a_wis2_node">2.6.1.1 Registration and decommissioning of a WIS2 Node</a>.</p>
+<p>Both NCs and DCPCs require the operation of a WIS2 Node (see <a href="#_2_4_1_wis2_node">2.4.1 WIS2 Node</a>). The procedure for registering a new WIS2 Node is provided in <a href="#_2_6_1_1_registration_and_decommissioning_of_a_wis2_node">2.6.1.1 Registration and decommissioning of a WIS2 Node</a>.</p>
 </div>
 <div class="paragraph">
 <p>Once the scope of the datasets has been determined, the applicable data policy has been identified, and a WIS2 Node is ready for data publication, the process can proceed to the next step: providing discovery metadata.</p>
@@ -1213,7 +1219,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_1_1_introduction_to_wis2">1.1 Introduction to WIS2</a></p>
+<p><a href="#_part_i_introduction">PART I. Introduction</a></p>
 </li>
 <li>
 <p><a href="#_2_1_wis2_architecture">2.1 WIS2 architecture</a></p>
@@ -1222,7 +1228,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="#_2_2_roles_in_wis2">2.2 Roles in WIS2</a></p>
 </li>
 <li>
-<p><a href="#_2_4_components_of_wis2">2.4 Components of WIS2</a></p>
+<p><a href="#_2_4_wis2_components">2.4 WIS2 Components</a></p>
 </li>
 <li>
 <p><a href="#_2_6_implementation_and_operation_of_a_wis2_node">2.6 Implementation and operation of a WIS2 Node</a></p>
@@ -1235,21 +1241,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_3_1_information_management">3.1 Information management</a></p>
+<p><a href="#_part_iii_information_management">PART III. Information management</a></p>
 </li>
 <li>
-<p><a href="#_4_1_security">4.1 Security</a></p>
+<p><a href="#_part_iv_security">PART IV. Security</a></p>
 </li>
 <li>
-<p><a href="#_5_1_competencies">5.1 Competencies</a></p>
+<p><a href="#_part_v_competencies">PART V. Competencies</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Note that <em>4.1. Security</em> and <em>5.1. Competencies</em> reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide.</p>
+<p>Note that <em>PART IV. Security</em> and <em>PART V. Competencies</em> reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide.</p>
 </div>
 <div class="paragraph">
-<p>Data publishers publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), should also read <a href="#_2_8_8_1_publishing_aviation_weather_data_through_wis2_into_icao_swim">[_2_8_8_1_publishing_aviation_weather_data_through_wis2_into_icao_swim]</a>.</p>
+<p>Data publishers publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), should also read <a href="#_2_8_1_1_publishing_meteorological_data_through_wis2_into_icao_swim">2.8.1.1 Publishing meteorological data through WIS2 into ICAO SWIM</a>.</p>
 </div>
 <div class="paragraph">
 <p>Finally, data publishers should also review the specifications in the <em>Manual on WIS</em>, Volume II:</p>
@@ -1272,7 +1278,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_part_ii"><a class="anchor" href="#_part_ii"></a>PART II</h2>
+<h2 id="_part_ii_architecture_implementation_and_operations"><a class="anchor" href="#_part_ii_architecture_implementation_and_operations"></a>PART II. Architecture, implementation and operations</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_2_1_wis2_architecture"><a class="anchor" href="#_2_1_wis2_architecture"></a>2.1 WIS2 architecture</h3>
@@ -1455,7 +1461,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_4_components_of_wis2"><a class="anchor" href="#_2_4_components_of_wis2"></a>2.4 Components of WIS2</h3>
+<h3 id="_2_4_wis2_components"><a class="anchor" href="#_2_4_wis2_components"></a>2.4 WIS2 Components</h3>
 <div class="sect3">
 <h4 id="_2_4_1_wis2_node"><a class="anchor" href="#_2_4_1_wis2_node"></a>2.4.1 WIS2 Node</h4>
 <div class="ulist">
@@ -1735,7 +1741,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="paragraph">
 <p>Once the dataset has been successfully registered, the WIS2 Node can proceed to exchange data - see
-<a href="#_1_3_3_how_to_provide_data_in_wis2">[_1_3_3_how_to_provide_data_in_wis2]</a>.</p>
+<a href="#_1_3_3_how_to_provide_data_to_wis2">1.3.3 How to provide data to WIS2</a>.</p>
 </div>
 <div class="paragraph">
 <p>When decommissioning a WIS2 Node, operators must ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating the data sharing obligations to another WIS2 Node. In the case of a DCPC, this may mean transferring the responsibilities to another Member.</p>
@@ -1808,13 +1814,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="_2_6_2_1_service_levels_and_performance_indicators"><a class="anchor" href="#_2_6_2_1_service_levels_and_performance_indicators"></a>2.6.2.1 Service levels and performance indicators</h5>
 <div class="paragraph">
-<p>A WIS2 Node must be able to publish datasets and compliant discovery metadata. This entails:
-  * Publishing metadata to the Global Data Catalogue;
-  * Publishing core data to the Global Cache;
-  * Publishing data for consumer access;
-  * Publishing data embedded in a message (for example, Common Alerting Protocol (CAP) warnings);
-  * Receiving metadata publication errors from the Global Data Catalogue;
-  * Providing metadata with topics to Global Brokers.</p>
+<p>A WIS2 Node must be able to publish datasets and compliant discovery metadata. This entails:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Publishing metadata to the Global Data Catalogue;</p>
+</li>
+<li>
+<p>Publishing core data to the Global Cache;</p>
+</li>
+<li>
+<p>Publishing data for consumer access;</p>
+</li>
+<li>
+<p>Publishing data embedded in a message (for example, Common Alerting Protocol (CAP) warnings);</p>
+</li>
+<li>
+<p>Receiving metadata publication errors from the Global Data Catalogue;</p>
+</li>
+<li>
+<p>Providing metadata with topics to Global Brokers.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
@@ -2900,14 +2922,12 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect1">
-<h2 id="_part_iii"><a class="anchor" href="#_part_iii"></a>PART III</h2>
+<h2 id="_part_iii_information_management"><a class="anchor" href="#_part_iii_information_management"></a>PART III. Information management</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_3_1_information_management"><a class="anchor" href="#_3_1_information_management"></a>3.1 Information management</h3>
+<h3 id="_3_1_introduction"><a class="anchor" href="#_3_1_introduction"></a>3.1 Introduction</h3>
 <div class="sect3">
-<h4 id="_3_1_1_introduction"><a class="anchor" href="#_3_1_1_introduction"></a>3.1.1 Introduction</h4>
-<div class="sect4">
-<h5 id="_3_1_1_1_background"><a class="anchor" href="#_3_1_1_1_background"></a>3.1.1.1 Background</h5>
+<h4 id="_3_1_1_background"><a class="anchor" href="#_3_1_1_background"></a>3.1.1 Background</h4>
 <div class="paragraph">
 <p>The efficient and effective provision of services relying on meteorological, climatological, hydrological and oceanographic information depends on a reliable information infrastructure. This infrastructure should be guided by community best practices and standards, including recommendations and requirements on sourcing, securing, managing, archiving, exchanging and providing easy access to information. This part of the Guide aims to provide high-level guidance on these activities, which can be grouped under the term “information management”. This is done by identifying and describing the fundamental principles of good information management and by highlighting the different stages of the information management life cycle.</p>
 </div>
@@ -2915,13 +2935,13 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <p><em>Note: The term "information" is used in a general sense and includes data and products.</em></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_3_1_1_2_scope"><a class="anchor" href="#_3_1_1_2_scope"></a>3.1.1.2 Scope</h5>
+<div class="sect3">
+<h4 id="_3_1_2_scope"><a class="anchor" href="#_3_1_2_scope"></a>3.1.2 Scope</h4>
 <div class="paragraph">
 <p>High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as the specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.</p>
 </div>
 <div class="paragraph">
-<p>The principles of information management are described below. Section <a href="#_3_1_3_the_information_management_life_cycle">3.1.3 The information management life cycle</a> describes five focus areas.</p>
+<p>The principles of information management are described below. Section <a href="#_3_3_the_information_management_life_cycle">3.3 The information management life cycle</a> describes five focus areas.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2942,9 +2962,8 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </li>
 </ol>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_3_1_1_3_intended_audience"><a class="anchor" href="#_3_1_1_3_intended_audience"></a>3.1.1.3 Intended audience</h5>
+<h5 id="_3_1_3_intended_audience"><a class="anchor" href="#_3_1_3_intended_audience"></a>3.1.3 Intended audience</h5>
 <div class="paragraph">
 <p>This guidance is primarily aimed at personnel within WMO centres, who are responsible for planning and undertaking the creation or acquisition, stewardship, exchange and provision of information related to the Earth system.</p>
 </div>
@@ -2973,12 +2992,12 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_2_principles_of_information_management"><a class="anchor" href="#_3_1_2_principles_of_information_management"></a>3.1.2 Principles of information management</h4>
+<h4 id="_3_2_principles_of_information_management"><a class="anchor" href="#_3_2_principles_of_information_management"></a>3.2 Principles of information management</h4>
 <div class="paragraph">
 <p>The effective management of information is essential for WMO centres to deliver operational services and information that is authoritative, seamless, secure and timely. The principles below underpin and provide a framework for information management across the full information life cycle. These principles are independent of the information type and are largely independent of technology; they are therefore expected to remain stable over time.</p>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_1_principle_1_information_is_a_valued_asset"><a class="anchor" href="#_3_1_2_1_principle_1_information_is_a_valued_asset"></a>3.1.2.1  Principle 1: Information is a valued asset</h5>
+<h5 id="_3_2_1_principle_1_information_is_a_valued_asset"><a class="anchor" href="#_3_2_1_principle_1_information_is_a_valued_asset"></a>3.2.1  Principle 1: Information is a valued asset</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2991,7 +3010,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_2_principle_2_information_must_be_managed"><a class="anchor" href="#_3_1_2_2_principle_2_information_must_be_managed"></a>3.1.2.2 Principle 2: Information must be managed</h5>
+<h5 id="_3_2_2_principle_2_information_must_be_managed"><a class="anchor" href="#_3_2_2_principle_2_information_must_be_managed"></a>3.2.2 Principle 2: Information must be managed</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3007,7 +3026,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_3_principle_3_information_must_be_fit_for_purpose"><a class="anchor" href="#_3_1_2_3_principle_3_information_must_be_fit_for_purpose"></a>3.1.2.3 Principle 3: Information must be fit for purpose</h5>
+<h5 id="_3_2_3_principle_3_information_must_be_fit_for_purpose"><a class="anchor" href="#_3_2_3_principle_3_information_must_be_fit_for_purpose"></a>3.2.3 Principle 3: Information must be fit for purpose</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3023,7 +3042,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_4_principle_4_information_must_be_standardized_and_interoperable"><a class="anchor" href="#_3_1_2_4_principle_4_information_must_be_standardized_and_interoperable"></a>3.1.2.4 Principle 4: Information must be standardized and interoperable</h5>
+<h5 id="_3_2_4_principle_4_information_must_be_standardized_and_interoperable"><a class="anchor" href="#_3_2_4_principle_4_information_must_be_standardized_and_interoperable"></a>3.2.4 Principle 4: Information must be standardized and interoperable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3045,7 +3064,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_5_principle_5_information_must_be_well_documented"><a class="anchor" href="#_3_1_2_5_principle_5_information_must_be_well_documented"></a>3.1.2.5 Principle 5: Information must be well documented</h5>
+<h5 id="_3_2_5_principle_5_information_must_be_well_documented"><a class="anchor" href="#_3_2_5_principle_5_information_must_be_well_documented"></a>3.2.5 Principle 5: Information must be well documented</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3061,7 +3080,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_6_principle_6_information_must_be_discoverable_accessible_and_retrievable"><a class="anchor" href="#_3_1_2_6_principle_6_information_must_be_discoverable_accessible_and_retrievable"></a>3.1.2.6 Principle 6: Information must be discoverable, accessible and retrievable</h5>
+<h5 id="_3_2_6_principle_6_information_must_be_discoverable_accessible_and_retrievable"><a class="anchor" href="#_3_2_6_principle_6_information_must_be_discoverable_accessible_and_retrievable"></a>3.2.6 Principle 6: Information must be discoverable, accessible and retrievable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3074,7 +3093,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_7_principle_7_information_should_be_reusable"><a class="anchor" href="#_3_1_2_7_principle_7_information_should_be_reusable"></a>3.1.2.7 Principle 7: Information should be reusable</h5>
+<h5 id="_3_2_7_principle_7_information_should_be_reusable"><a class="anchor" href="#_3_2_7_principle_7_information_should_be_reusable"></a>3.2.7 Principle 7: Information should be reusable</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3096,7 +3115,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_2_8_principle_8_information_management_is_subject_to_accountability_and_governance"><a class="anchor" href="#_3_1_2_8_principle_8_information_management_is_subject_to_accountability_and_governance"></a>3.1.2.8 Principle 8: Information management is subject to accountability and governance</h5>
+<h5 id="_3_2_8_principle_8_information_management_is_subject_to_accountability_and_governance"><a class="anchor" href="#_3_2_8_principle_8_information_management_is_subject_to_accountability_and_governance"></a>3.2.8 Principle 8: Information management is subject to accountability and governance</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -3123,9 +3142,9 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_3_the_information_management_life_cycle"><a class="anchor" href="#_3_1_3_the_information_management_life_cycle"></a>3.1.3 The information management life cycle</h4>
+<h4 id="_3_3_the_information_management_life_cycle"><a class="anchor" href="#_3_3_the_information_management_life_cycle"></a>3.3 The information management life cycle</h4>
 <div class="sect4">
-<h5 id="_3_1_3_1_overview"><a class="anchor" href="#_3_1_3_1_overview"></a>3.1.3.1 Overview</h5>
+<h5 id="_3_3_1_overview"><a class="anchor" href="#_3_3_1_overview"></a>3.3.1 Overview</h5>
 <div class="paragraph">
 <p>All information should be subject to a well -defined and documented life cycle. The governance of this process is often referred to as the information management life cycle; it helps organizations manage information from planning, creation and acquisition through usage and exchange to archival and disposal.</p>
 </div>
@@ -3156,9 +3175,9 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_3_2_overarching_requirements"><a class="anchor" href="#_3_1_3_2_overarching_requirements"></a>3.1.3.2 Overarching requirements</h5>
+<h5 id="_3_3_2_overarching_requirements"><a class="anchor" href="#_3_3_2_overarching_requirements"></a>3.3.2 Overarching requirements</h5>
 <div class="sect5">
-<h6 id="_3_1_3_2_1_governance"><a class="anchor" href="#_3_1_3_2_1_governance"></a>3.1.3.2.1 Governance</h6>
+<h6 id="_3_3_2_1_governance"><a class="anchor" href="#_3_3_2_1_governance"></a>3.3.2.1 Governance</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -3174,7 +3193,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect5">
-<h6 id="_3_1_3_2_2_documentation"><a class="anchor" href="#_3_1_3_2_2_documentation"></a>3.1.3.2.2 Documentation</h6>
+<h6 id="_3_3_2_2_documentation"><a class="anchor" href="#_3_3_2_2_documentation"></a>3.3.2.2 Documentation</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -3188,9 +3207,9 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_3_3_aspects_of_the_information_management_life_cycle"><a class="anchor" href="#_3_1_3_3_aspects_of_the_information_management_life_cycle"></a>3.1.3.3 Aspects of the information management life cycle</h5>
+<h5 id="_3_3_3_aspects_of_the_information_management_life_cycle"><a class="anchor" href="#_3_3_3_aspects_of_the_information_management_life_cycle"></a>3.3.3 Aspects of the information management life cycle</h5>
 <div class="sect5">
-<h6 id="_3_1_3_3_1_planning_information_creation_and_acquisition"><a class="anchor" href="#_3_1_3_3_1_planning_information_creation_and_acquisition"></a>3.1.3.3.1 Planning, information creation and acquisition</h6>
+<h6 id="_3_3_3_1_planning_information_creation_and_acquisition"><a class="anchor" href="#_3_3_3_1_planning_information_creation_and_acquisition"></a>3.3.3.1 Planning, information creation and acquisition</h6>
 <div class="paragraph">
 <p>Before the creation or acquisition of new information a business case plan and an information management plan should be developed, covering both the input information sources and any derived information. The plans should include:</p>
 </div>
@@ -3230,7 +3249,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect5">
-<h6 id="_3_1_3_3_2_representation_and_metadata"><a class="anchor" href="#_3_1_3_3_2_representation_and_metadata"></a>3.1.3.3.2 Representation and metadata</h6>
+<h6 id="_3_3_3_2_representation_and_metadata"><a class="anchor" href="#_3_3_3_2_representation_and_metadata"></a>3.3.3.2 Representation and metadata</h6>
 <div class="paragraph">
 <p>The formats used to store and exchange information should be standardized to ensure its usability in both the short and the long-term. It is essential that the information be accessible many years after archival if required. To ensure this usability, the format and version of the information should be recorded in the information metadata record and included within the information itself where the format allows.</p>
 </div>
@@ -3245,7 +3264,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect5">
-<h6 id="_3_1_3_3_3_publication_and_exchange_of_information"><a class="anchor" href="#_3_1_3_3_3_publication_and_exchange_of_information"></a>3.1.3.3.3 Publication and exchange of information</h6>
+<h6 id="_3_3_3_3_publication_and_exchange_of_information"><a class="anchor" href="#_3_3_3_3_publication_and_exchange_of_information"></a>3.3.3.3 Publication and exchange of information</h6>
 <div class="paragraph">
 <p>To maximize the benefits and return on investment in the acquisition and generation of information, there needs to be a clear method as to how the information will be published, exchanged and accessed by users.</p>
 </div>
@@ -3266,7 +3285,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect5">
-<h6 id="_3_1_3_3_4_usage_and_communication"><a class="anchor" href="#_3_1_3_3_4_usage_and_communication"></a>3.1.3.3.4 Usage and communication</h6>
+<h6 id="_3_3_3_4_usage_and_communication"><a class="anchor" href="#_3_3_3_4_usage_and_communication"></a>3.3.3.4 Usage and communication</h6>
 <div class="paragraph">
 <p>For information to have value, it must inform users, aid knowledge discovery and have an impact through informed decision -making. Ensuring that the user can make effective use of the information is an important step in the information management life cycle. This is accomplished in two ways:</p>
 </div>
@@ -3284,17 +3303,17 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <p>For common types of information, the guides may be generic or link to standard documentation. Information on the observations available from WIGOS is provided in the <a href="https://library.wmo.int/idurl/4/55063"><em>Manual on the WMO Integrated Global Observing System</em></a> (WMO-No. 1160) and the <a href="https://library.wmo.int/idurl/4/55696"><em>Guide to the WMO Integrated Global Observing System</em></a> (WMO-No. 1165). This includes information on the expected uses and quality of the data. Similarly, information on the data and products available through the WMO Integrated Processing and Prediction System is provided in the <a href="https://library.wmo.int/idurl/4/35703"><em>Manual on the WMO Integrated Processing and Prediction System</em></a> (formerly the Manual on the Global Data Processing and Forecasting System) (WMO-No. 485).</p>
 </div>
 <div class="paragraph">
-<p>For non-standard and specialist products, targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described in <a href="#_3_1_3_3_1_planning_information_creation_and_acquisition">3.1.3.3.1 Planning, information creation and acquisition</a>.</p>
+<p>For non-standard and specialist products, targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described in <a href="#_3_3_3_1_planning_information_creation_and_acquisition">3.3.3.1 Planning, information creation and acquisition</a>.</p>
 </div>
 <div class="paragraph">
-<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <a href="#_3_1_3_3_3_publication_and_exchange_of_information">3.1.3.3.3 Publication and exchange of information</a>). Other communication methods may also be used, but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.</p>
+<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <a href="#_3_3_3_3_publication_and_exchange_of_information">3.3.3.3 Publication and exchange of information</a>). Other communication methods may also be used, but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.</p>
 </div>
 <div class="paragraph">
 <p>The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_3_1_3_3_5_storage_archival_and_disposal"><a class="anchor" href="#_3_1_3_3_5_storage_archival_and_disposal"></a>3.1.3.3.5 Storage, archival and disposal</h6>
+<h6 id="_3_3_3_5_storage_archival_and_disposal"><a class="anchor" href="#_3_3_3_5_storage_archival_and_disposal"></a>3.3.3.5 Storage, archival and disposal</h6>
 <div class="paragraph">
 <p>The type of storage used should be appropriate to the type of information stored. Core information exchanged operationally should be stored and made available via high-availability and low-latency media and services. For some operation-critical information, such as hazard warnings, there is a requirement for the end-to-end global distribution of the information to be completed in two minutes. For other operational data, there is a requirement for the global exchange to be completed in 15 minutes.</p>
 </div>
@@ -3320,15 +3339,15 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_3_1_4_other_considerations"><a class="anchor" href="#_3_1_4_other_considerations"></a>3.1.4 Other considerations</h4>
+<h4 id="_3_4_other_considerations"><a class="anchor" href="#_3_4_other_considerations"></a>3.4 Other considerations</h4>
 <div class="sect4">
-<h5 id="_3_1_4_1_technology_and_technology_migration"><a class="anchor" href="#_3_1_4_1_technology_and_technology_migration"></a>3.1.4.1 Technology and technology migration</h5>
+<h5 id="_3_4_1_technology_and_technology_migration"><a class="anchor" href="#_3_4_1_technology_and_technology_migration"></a>3.4.1 Technology and technology migration</h5>
 <div class="paragraph">
 <p>Information managers must be aware of the need to ensure that the technologies, hardware and software used do not become obsolete, and they must be aware of emerging data issues. This topic is discussed further in the <a href="https://library.wmo.int/idurl/4/56904"><em>WMO Guidelines on Emerging Data Issues</em></a> (WMO-No. 1239).</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_3_1_4_2_information_security"><a class="anchor" href="#_3_1_4_2_information_security"></a>3.1.4.2 Information security</h5>
+<h5 id="_3_4_2_information_security"><a class="anchor" href="#_3_4_2_information_security"></a>3.4.2 Information security</h5>
 <div class="paragraph">
 <p>Further information on information security and best practices can be found in the <a href="https://library.wmo.int/idurl/4/51145"><em>Guide to Information Technology Security</em></a> (WMO-No. 1115).</p>
 </div>
@@ -3338,10 +3357,8 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 <div class="sect1">
-<h2 id="_part_iv"><a class="anchor" href="#_part_iv"></a>PART IV</h2>
+<h2 id="_part_iv_security"><a class="anchor" href="#_part_iv_security"></a>PART IV. Security</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_4_1_security"><a class="anchor" href="#_4_1_security"></a>4.1 Security</h3>
 <div class="paragraph">
 <p>For this initial version of the Guide to WIS, Volume II, existing guidance on information technology security (also known as "cybersecurity") remains largely applicable. Please refer to:</p>
 </div>
@@ -3357,15 +3374,11 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
-<h2 id="_part_v"><a class="anchor" href="#_part_v"></a>PART V</h2>
+<h2 id="_part_v_competencies"><a class="anchor" href="#_part_v_competencies"></a>PART V. Competencies</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_5_1_competencies"><a class="anchor" href="#_5_1_competencies"></a>5.1 Competencies</h3>
 <div class="paragraph">
 <p>For this initial version of the <em>Guide to WIS</em>, Volume II, existing guidance on competencies remains largely applicable. Please refer to <em>Guide to the WMO Information System</em> (WMO-No. 1061), Volume I, Appendix A. WMO Information System Training and Learning Guide.</p>
-</div>
 </div>
 </div>
 </div>
@@ -3567,7 +3580,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-25 08:24:37 UTC
+Last updated 2024-10-28 15:39:00 UTC
 </div>
 </div>
 </body>
