@@ -1,5 +1,5 @@
 
-== PART I
+== PART I. Introduction
 
 include::introduction.adoc[]
 

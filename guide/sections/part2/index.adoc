@@ -1,4 +1,4 @@
-== PART II
+== PART II. Architecture, implementation and operations
 
 include::wis2-architecture.adoc[]
 
