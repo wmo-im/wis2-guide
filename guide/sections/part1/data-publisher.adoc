@@ -1,10 +1,10 @@
-=== 1.3 Data publisher
+=== 1.3 Information for the data publisher
 
 Data publishers wanting to share authoritative Earth system data with the WMO community should read the guidance presented here. A list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
 ==== 1.3.1 How to get started
 
-The first step is to consider the data, how they can be conceptually grouped into one or more datasets (see <<_1_1_4_why_are_datasets_so_important?>>), and whether they are core or recommended data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))) .
+The first step is to consider the data, how they can be conceptually grouped into one or more datasets (see <<_1_1_4_why_are_datasets_so_important>>), and whether they are core or recommended data, as per the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021))) .
 
 Next, it is important to consider where the data are published. If the data relate to a specific country or territory, they should be published through a National Centre (NC). If they relate to a region, programme, or other specialized function within WMO, they should be published through a Data Collection or Production Centre (DCPC). The functional requirements for NCs and DCPCs are described in the _Manual on WIS_, Volume II - Part III Functions of WIS.
 
@@ -12,7 +12,7 @@ All NCs and DCPCs are affiliated with a Global Information System Centre (GISC),
 
 It may be possible to identify an existing NC or DCPC that can publish the data. Alternatively, it may be necessary to establish a new NC or DCPC. The main distinction between these two centres is that an NC is designated by a Member, whereas a DCPC is designated by a WMO or related international programme and/or a regional association.
 
-Both NCs and DCPCs require the operation of a WIS2 Node (see <<_2_4_2_wis2_node>>). The procedure for registering a new WIS2 Node is provided in <<_2_6_1_1_registration_and_decommissioning_of_a_wis2_node>>. 
+Both NCs and DCPCs require the operation of a WIS2 Node (see <<_2_4_1_wis2_node>>). The procedure for registering a new WIS2 Node is provided in <<_2_6_1_1_registration_and_decommissioning_of_a_wis2_node>>. 
 
 Once the scope of the datasets has been determined, the applicable data policy has been identified, and a WIS2 Node is ready for data publication, the process can proceed to the next step: providing discovery metadata.
 
@@ -173,21 +173,21 @@ Note that some data archives, for example, Essential Climate Variables, are cate
 
 Data publishers planning to operate WIS2 Nodes, at a minimum, should read the following sections:
 
-* <<_1_1_introduction_to_wis2>>
+* <<_part_i_introduction>>
 * <<_2_1_wis2_architecture>>
 * <<_2_2_roles_in_wis2>>
-* <<_2_4_components_of_wis2>>
+* <<_2_4_wis2_components>>
 * <<_2_6_implementation_and_operation_of_a_wis2_node>>
 
 The following sections are recommended for further reading:
 
-* <<_3_1_information_management>>
-* <<_4_1_security>>
-* <<_5_1_competencies>>
+* <<_part_iii_information_management>>
+* <<_part_iv_security>>
+* <<_part_v_competencies>>
 
-Note that _4.1. Security_ and _5.1. Competencies_ reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide. 
+Note that _PART IV. Security_ and _PART V. Competencies_ reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide. 
 
-Data publishers publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), should also read <<_2_8_8_1_publishing_aviation_weather_data_through_wis2_into_icao_swim>>.
+Data publishers publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), should also read <<_2_8_1_1_publishing_meteorological_data_through_wis2_into_icao_swim>>.
 
 Finally, data publishers should also review the specifications in the _Manual on WIS_, Volume II:
 

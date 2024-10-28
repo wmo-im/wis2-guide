@@ -1,4 +1,4 @@
-=== 1.2 Data consumer
+=== 1.2 Information for the data consumer
 
 Data consumers wanting to use data published via WIS2 should read the guidance presented here. In addition, a list of references to informative material in this Guide and elsewhere is provided at the end of this section.
 
@@ -8,7 +8,7 @@ The first step to using data published via WIS2 is to determine which dataset or
 
 A key component of dataset records in the Global Discovery Catalogue is "actionable" links. A dataset record provides one or more links, each clearly identifying its nature and purpose (informational, direct download, application programming interface (API), subscription) so that the data consumer can interact with the data accordingly. For example, a dataset record may include a link to subscribe to notifications about the data(see <<_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data>>), or an API, or an offline archive retrieval service.
 
-The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <<_2_2_4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
+The Global Discovery Catalogue is accessible via an API and provides a low-barrier mechanism (see <<_2_4_4_global_discovery_catalogue>>). Internet search engines are able to index the discovery metadata in the Global Discovery Catalogue, thereby providing data consumers with an alternative means to search for WIS2 data.  
 
 ==== 1.2.2 How to subscribe to notifications about the availability of new data
 
@@ -78,7 +78,7 @@ When using data from WIS2, data consumers:
 
 Data consumers wanting to use data published via WIS2 should, at a minimum, read the following sections:
 
-* <<_1_1_introduction_to_wis2>>
+* <<_part_i_introduction>>
 * <<_2_1_wis2_architecture>>
 * <<_2_2_roles_in_wis2>>
 * <<_2_4_wis2_components>>

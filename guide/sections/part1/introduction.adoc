@@ -1,4 +1,4 @@
-=== 1.1 Introduction to WIS2
+=== 1.1 Background
 
 Since the Global Telecommunication System (GTS) entered operational life in 1971, it has been a reliable real-time exchange mechanism of essential data for WMO Members.
 
@@ -53,10 +53,12 @@ A dataset may be published as an immutable resource (such as data collected from
 A dataset may be represented as a single, structured file or object (for example, a CSV file in which each row represents a data record) or as thousands of consistent files (for example, output from a reanalysis model encoded as many thousands of General Regularly-distributed Information in Binary form (GRIB) files). Determining the best way to represent a dataset is beyond the scope of this Guide – there are many factors to consider. The key point here is that the dataset is considered a single, identifiable resource irrespective of how it is represented.
 
 Because data are grouped into a single, conceptual resource (that is, the dataset) it is possible to:
+
 * Assign this resource an identifier and use this identifier to unambiguously refer to collections of data;
 * Make statements about the dataset (that is, metadata) and infer that these statements apply to the entire collection.
 
 The dataset concept is central to WIS2:
+
 * Discovery metadata about datasets are published, as specified in the _Manual on WIS_, Volume II – Appendix F. WMO Core Metadata Profile (Version 2);
 * Data consumers can search for datasets that contain relevant data using the Global Discovery Catalogue (see <<_2_4_4_global_discovery_catalogue>>);
 * Data consumers can subscribe to notifications about updates to a dataset via a Global Broker (see <<_2_4_2_global_broker>>);

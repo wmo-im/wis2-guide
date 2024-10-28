@@ -1,4 +1,3 @@
-=== 4.1 Security
 
 For this initial version of the Guide to WIS, Volume II, existing guidance on information technology security (also known as "cybersecurity") remains largely applicable. Please refer to:
 

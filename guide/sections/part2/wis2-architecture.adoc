@@ -74,7 +74,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 Refer to the _Manual on WIS_, Volume II for details.
 
-=== 2.4 Components of WIS2
+=== 2.4 WIS2 Components
 
 // TODO: add refs to other parts of the Guide describing these components
 

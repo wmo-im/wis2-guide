@@ -36,7 +36,7 @@ image::images/add-wis2node.png[Adding a WIS2 Node,link=images/add-wis2node.png]
 Once a WIS2 Node has been registered and connected to the Global Services, it can proceed to register the datasets it will publish via WIS2. To register a dataset, the WIS2 Node publishes discovery metadata about the new dataset. Validation of the discovery metadata is completed by the Global Discovery Catalogues, and the Global Brokers automatically subscribe to the topics provided in the discovery metadata record. For more information, see <<_1_3_2_how_to_provide_discovery_metadata_to_wis2>>.
 
 Once the dataset has been successfully registered, the WIS2 Node can proceed to exchange data - see 
-<<_1_3_3_how_to_provide_data_in_wis2>>.
+<<_1_3_3_how_to_provide_data_to_wis2>>.
 
 When decommissioning a WIS2 Node, operators must ensure that obligations relating to data sharing within WIS continue to be met after the WIS2 Node is decommissioned, for example, by migrating the data sharing obligations to another WIS2 Node. In the case of a DCPC, this may mean transferring the responsibilities to another Member.
 
@@ -81,6 +81,7 @@ Access controls may be implemented for recommended data. Only the security schem
 ===== 2.6.2.1 Service levels and performance indicators
 
 A WIS2 Node must be able to publish datasets and compliant discovery metadata. This entails:
+
   * Publishing metadata to the Global Data Catalogue;
   * Publishing core data to the Global Cache;
   * Publishing data for consumer access;
