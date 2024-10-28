@@ -149,7 +149,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Cache should make sure that data are downloaded in parallel and that downloads are not blocking each other.
 
 * The metric ``wmo_wis2_gc_dataserver_status_flag`` will reflect the status of the connection to the download endpoint of the centre. Its value will be 1 when the endpoint is up and 0 otherwise.
-* The metric ``wmo_wis2_gc_last_metadata_timestamp_seconds`` will reflect the datetime (as a timestamp, the number of seconds since the epoch) of the last metadata resource processed by a given centre.
+* The metric ``wmo_wis2_gc_last_metadata_timestamp_seconds`` will reflect the datetime (as a timestamp, the number of seconds since the UNIX epoch) of the last metadata resource processed by a given centre.
 
 ==== 2.7.5 Global Discovery Catalogue
 
