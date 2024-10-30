@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-30</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2024.dev</p></td>
@@ -2108,7 +2108,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </li>
 <li>
-<p>When receiving a message from a WIS centre or a Global Service broker, the metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
+<p>When receiving a message from a local WIS centre broker or a Global Service broker, the metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
@@ -2314,7 +2314,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The metric <code>wmo_wis2_gc_dataserver_status_flag</code> will reflect the status of the connection to the download endpoint of the centre. Its value will be 1 when the endpoint is up and 0 otherwise.</p>
 </li>
 <li>
-<p>The metric <code>wmo_wis2_gc_last_metadata</code> will reflect the datetime (in RFC3339 format) of the last metadata resource processed by a given centre.</p>
+<p>The metric <code>wmo_wis2_gc_last_metadata_timestamp_seconds</code> will reflect the datetime (as a timestamp, the number of seconds since the UNIX epoch) of the last metadata resource processed by a given centre.</p>
 </li>
 </ul>
 </div>
@@ -3580,7 +3580,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-28 15:39:00 UTC
+Last updated 2024-10-30 10:54:03 UTC
 </div>
 </div>
 </body>
