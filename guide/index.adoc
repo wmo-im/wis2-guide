@@ -1,6 +1,6 @@
-:title: Guide to the WMO Information System Volume II (DRAFT) - WMO Information System 2.0
+:title: Guide to the WMO Information System Volume II (APPROVED) - WMO Information System 2.0
 :titletext: {title}
-:version: 2024.dev
+:version: 1.0.0
 :date: {docdate}
 :copyright: Copyright © 2024 World Meteorological Organization (WMO)
 :doctype: book

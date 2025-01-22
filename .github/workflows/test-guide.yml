@@ -6,7 +6,7 @@ on:
       - '**.adoc'   
       
 env:
-  FILE_BASENAME: wis2-guide-DRAFT
+  FILE_BASENAME: wis2-guide-APPROVED
 
 jobs:
   build-wis2-guide:
