@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-01-22</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2025-02-04</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0</p></td>
@@ -1116,7 +1116,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>If the data seem to relate to more than one topic, the most appropriate one should be selected. The topic hierarchy is not a knowledge organization system – it is used solely to ensure the uniqueness of topics for publishing notification messages. Discovery metadata is used to describe a dataset and its relevance to additional disciplines; each dataset is mapped to one, and only one, topic.</p>
 </div>
 <div class="paragraph">
-<p>If the WIS2 Topic Hierarchy does not include a topic appropriate for the data, the data should be published on an experimental topic. This will allow data exchange to be established while the formalities are being considered.<sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup> Experimental topics are provided for each Earth system discipline at level eight in the topic hierarchy (for example, <code>origin/a/wis2/{centre-id}/data/{earth-system-discipline}/experimental/</code>). Data publishers can extend the experimental branch with subtopics they deem appropriate. Experimental topics are subject to change and will be removed once they are no longer needed. For more information, see <em>Manual on WIS</em>, Volume II, Appendix D. WIS2 Topic Hierarchy, section 1.2 Publishing guidelines.</p>
+<p>If the WIS2 Topic Hierarchy does not include a topic appropriate for the data, the data should be published on an experimental topic. This will allow data exchange to be established while the formalities are being considered.<sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup> Experimental topics are provided for each Earth system discipline at level eight in the topic hierarchy (for example, <code>origin/a/wis2/{centre-id}/data/{earth-system-discipline}/experimental/</code>). Data publishers can extend the experimental branch with subtopics they deem appropriate. Experimental topics are subject to change and will be removed once they are no longer needed. For more information, see <em>Manual on WIS</em>, Volume II, Appendix D. WIS2 Topic Hierarchy, section 1.2 Publishing.</p>
 </div>
 <div class="paragraph">
 <p>Whatever topic is used, the discovery metadata provided to the Global Discovery Catalogue must include subscription links using that topic.<sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup> The Global Broker will only republish notification messages on topics specified in the discovery metadata records.</p>
@@ -2203,7 +2203,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The default behaviour for a Global Cache is to cache all data published under the <code>origin/a/wis2/data/+/core</code> topic. A data publisher may indicate that data should not be cached by adding the <code>"cache": false</code> assertion in the WIS2 Notification Message.</p>
 </li>
 <li>
-<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and send a message on the monitor topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.</p>
+<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.</p>
 </li>
 <li>
 <p>If core data are not cached on a Global Cache (that is, if the data are flagged as <code>"cache": false</code> or if the Global Cache decides not to cache these data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the <code>cache/a/wis2/&#8230;&#8203;</code> topic. In this case, the message id will be changed, and the rest of the message will not be modified.</p>
@@ -3580,7 +3580,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-01-22 12:18:02 UTC
+Last updated 2025-02-04 15:44:10 UTC
 </div>
 </div>
 </body>
