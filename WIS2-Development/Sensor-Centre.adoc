@@ -1,1 +1,157 @@
+= Sensor Centres in WIS 2.0
+:toc: macro
+:sectnums: all
+:version: 0.1
+:author: Rémy Giraud
+:email: remy@giraud.me
+:revnumber: 0.1
+:revdate: 16.02.2025
 
+<<<
+
+Introduction::
+
+
+The documentation _Sensor Centres in WIS 2.0_ explains the *concept* of Sensor Centres in WIS2.0 and gives some examples of such tools, that are currently available 
+or could be added, if volunteers WIS Members are willing to work on this.
+
+As describe in the Manual of WIS, Volume II, WIS 2.0 as a collective IT system needs monitoring. Unlike typical integrated IT systems under 
+a single management authority, it was not possible to us a tool like Zabbix, which is by nature fairly intrusive toward the system it monitors. 
+Therefore, a solution where each component of the system provides information on its behaviour was preferred.
+
+It has been decided to use openmetrics, and primarily two additional open source tools that can collect (prometheurs) and visualize (grafana) the metrics.
+
+At the moment, and for three Global Services (Broker, Cache and Discovery Catalogue), a set of metrics have been defined.
+Each instance of those Global Services must provide the agreed metrics.
+
+Then, the Global Monitor collect the metrics and present a set of Grafana Dashboard.
+
+This monitoring architecture is by design, extendable.
+
+When new metrics are defined, it is possible to collect them and to visualize them.
+
+To go beyond the metrics defined for the Global Services, the concept of Sensor Centre has been introduced.
+
+A Sensor Centre relies on WIS 2.0 Global Services and potentially WIS2 Nodes. It can implement further processing on any part of the WIS 2.0 architecture
+
+. receiving Notification Messages
+. downloading files
+. processing the content of the files
+. ...
+
+the result of this processing is a specific set of _new_ metrics, that will be in turn collected either by Global Monitor 
+or by additional monitoring systems for statistical analysis, visualization,...
+
+It must be noted though that WIS 2.0 ecosystem *does not* provide any Sensor Centre. 
+
+It provides the tooling to implemented Sensor Centre by taking advantages of the monitoring solution of WIS 2.0. It is the responsibility of 
+a communiy relying on WIS 2.0 for its data exchange to implement and to eventually deploy Sensor Centre(s) to monitor whatever seems appropriate to monitor its operations.
+
+The rest of this document provide examples for two Sensor Centre. The conclusion provides basic guidelines for adding other kinds of Sensor Centre.
+
+Comparing the behaviour of Global Cache(s)::
+
+In WIS 2.0 each Global Cache is independent of the other Global Caches. According to the specification of WIS 2.0, Global Cache (see https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html#_2_7_4_1_technical_considerations ) :
+
+`Global Caches will operate independently of one another. Each Global Cache will hold a full copy of the cache – although there may be small differences between the various Global Caches as data availability notification messages propagate through WIS to each one. There is no formal synchronization between Global Caches.`
+
+it is therefore interesting to verify, for example:
+
+. what is the average delay to cache the data made available by WIS2 Node
+. are all files published as _core data_ (and with `cache: true` in the Notification Message) by WIS2 Nodes are effectively available in all Global Caches
+. are files missed by some Global Cache or more critically by all Global Caches
+
+Such metrics would provide useful information to identify problems, to help Global Caches to fix them, to define KPI that could be used to objectively measure the effective performance of the Cache.
+
+It could also be used to detect anomalies from the WIS2 node, such as the reuse too frequently of the same `data_id`.
+
+It is agreed to call this type of Sensor Centre: sensor-global-cache.
+The full centre-id will therefore be 2 letter country code - name of the centre - sensor-global-cache
+
+For such a centre operated by Météo-France the centre-id would be fr-meteofrance-sensor-global-cache
+
+A list of metrics has been defined for this Sensor Centre (see https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/sgc.csv):
+
+[cols="3*", options="header"]
+|=============================================================================================================================================================
+| Name                                     | Labels                          | Description                                                                    
+| wmo_wis2_sgc_cache_delay_seconds         | globalcache,centre_id,report_by | Delay between origin and cache message                                         
+| wmo_wis2_sgc_messages_cached_total       | globalcache,centre_id,report_by | Number of data files cached for centre_id                                      
+| wmo_wis2_sgc_messages_cached_delay_total | globalcache,centre_id,report_by | Number of data files cached for centre_id within defined delay (120s 300s 600s)
+| wmo_wis2_sgc_messages_published_total    | centre_id,report_by             | Number of cacheable data files published                                       
+| wmo_wis2_sgc_messages_missed_total       | globalcache,centre_id,report_by | Number of cacheable data not in global cache                                   
+| wmo_wis2_sgc_messages_missed_all_total   | centre_id,report_by             | Number of cacheable data not in any cache                                      
+|=============================================================================================================================================================
+
+The processing of this Sensor Centre is as follow:
+
+- Subsbribe to a given `origin/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Broker
+- Subsbribe to a given `cache/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Cache - The subscription must be done on the broker of the Global Cache (unlike normal subscription to be made only on the Global Broker)
+
+Only on the subscription to the Global Broker:
+
+- Discard the Notification Message if is it `recommended` data or if `cache: false` as the data will not be cached
+- Detect any duplicates `data_id` not including a `rel: update` within a period of at least X hours
+- Store the time where the message as been received
+- (optional) Store the full Notification Message - this can be useful to analyse systematic issues
+
+For each of the subscription to the various Global Caches:
+
+- For each Notification Message and using `data_id`, make the difference between the time was received on `origin` and the same `data_id` on `cache`: Time~Cache~ - Time~Origin~
+- Update the `wmo_wis2_sgc_cache_delay_seconds` metric with this value
+- Compare this value with the three threshold defined in the matric table above. Increase by 1 `wmo_wis2_sgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less that 300s, less than 600s)
+- If no Notification Message for the `data_id` is received after the highest threshould (here 600s), increase by 1 `wmo_wis2_sgc_messages_missed_total`
+
+
+If no Global Cache has cached the data, increase by 1 `wmo_wis2_sgc_messages_missed_all_total`
+
+All the metrics must be exposed for scraping by the Global Monitor.
+
+If desirable and in order to further analyse the situation, the origin Notification Message can be published on monitor/a/wis2/centre-id sensor centre/centre-id of the originator of the message.
+
+Comparing the behaviour of Global Brokers::
+
+By design, all Notification Messages must be avaimable on all Global Brokers. Either after being received directly from the source centre-id or indirectly from another Global Broker.
+
+During the validation tests ran in autumn 2024, it was check that for a (small) giver number of Notification Messages all Global Brokers were behaving as expected.
+
+However, as a complement or as a way to detect anomalies, it could be useful to effectively compare, using operational Notification Messages that all Notification Messages are available on all Global Broker.
+
+It is expected that the Global Brokers will be _almost_ in sync, and the delay between having the same `ìd` on all Global Broker will be less than 15 secondes.
+
+This type of Sensor Centre can be called: sensor-global-broker.
+The full centre-id will therefore be 2 letter country code - name of the centre - sensor-global-broker.
+
+
+[cols="3*", options="header"]
+|=============================================================================================================================================================
+| Name                                     | Labels                          | Description                                                                    
+| wmo_wis2_sgb_missed_total        | globalbroker,centre_id,report_by | Number of Notification Messages missed by the Global Broker                                                                                
+|=============================================================================================================================================================
+_to be further expanded_
+
+The processing of this Sensor Centre is as follow:
+
+- Subsbribe to `origin/a/wis2/...` and `cache/a/wis2/...`, it could be `#` or a particular centre-id on at all Global Brokers
+- For each `id` received, check if the `id` is received by all Global Brokers within the 15s time window
+
+Conclusion::
+
+This document presents the concept of Sensor Centre and provide two examples of such tools.
+
+Obviously, many more types of Sensor Centre can be designed.
+
+Each community within WIS2.0 can design Sensor Centre tailored to its needs.
+
+The approach will always be similar:
+
+. Discuss the opportunity of developping a Sensor Centre to assess how the centre-id providing the data, or how the Global Services are performing, or anything relying on WIS 2.0 for addressing the needs of the community
+. Agree on a list of metrics than can be implemented to perform the assessment
+. Register the list of metrics in the WMO metrics repository  https://github.com/wmo-im/wis2-metric-hierarchy/
+. Develop the Sensor Centre 
+. Register the Sensor Centre centre-id in the WMO Register
+. Operate one or more instance of the Sensor Centre
+. Ensure that the metris are correctly scrape by the Global Monitor
+. Provide the Grafana dashboard that the Global Monitor will host
+
+It is also possible for item 7. and 8. above to use another Monitor Centre if preferred by the community.
