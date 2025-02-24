@@ -1,6 +1,5 @@
 name: Generate list of all GDC channels
 
-
 on: [pull_request]
 
 #on:
@@ -39,7 +38,7 @@ jobs:
         git checkout gh-pages
         git config --global user.email "tomkralidis@gmail.com"
         git config --global user.name "Tom Kralidis"
-        mv -f ${FILEPATH}
+        mv -f ${FILEPATH} .
         git add .
         git commit -am "update GDC all channels"
         git push
