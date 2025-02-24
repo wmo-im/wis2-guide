@@ -1,5 +1,9 @@
 name: Generate list of all GDC channels
 
+
+on:
+  pull_request:
+
 on:
   schedule:
     #- cron: '0 * * * *'  # runs every hour
