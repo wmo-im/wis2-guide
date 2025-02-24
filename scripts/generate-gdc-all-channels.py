@@ -49,5 +49,5 @@ for gdc in GDCS:
                 channel = channel.replace('cache/a/wis2/', '').replace('origin/a/wis2/', '')  # noqa
                 ALL_CHANNELS.append(channel)
 
-for channel in set(ALL_CHANNELS):
+for channel in sorted(set(ALL_CHANNELS)):
     print(channel)
