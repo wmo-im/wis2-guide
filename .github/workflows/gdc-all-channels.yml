@@ -1,0 +1,42 @@
+name: Generate list of all GDC channels
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # runs every hour
+    # - cron: '* * * * *'  # runs every minute, for debugging
+
+env:
+  FILEPATH: /tmp/gdc-all-channels-latest.txt
+
+jobs:
+  generate-gdc-all-channels:
+    name: Generate all unique channels from all WIS2 GDCs
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-python@v5
+      name: Setup Python ${{ matrix.python-version }}
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install requirements 📦
+      run: |
+        pip3 install -r scripts/requirements.txt
+    - name: generate unique channels
+      run: |
+        python3 scripts/generate-gdc-all-channels.py > ${FILEPATH}
+    - name: checkout gh-pages branch
+      uses: actions/checkout@master
+      with:
+        ref: gh-pages
+    - name: update gh-pages branch and publish
+      run: | 
+        git checkout gh-pages
+        git config --global user.email "tomkralidis@gmail.com"
+        git config --global user.name "Tom Kralidis"
+        mv -f ${FILEPATH} .
+        git add .
+        git commit -am "update GDC all channels"
+        git push
