@@ -33,19 +33,24 @@ GDCS = [
     # 'https://gdc.wis.cma.cn/collections/wis2-discovery-metadata'
 ]
 
-params = {
+CHANNELS = (
+    'cache/a/wis2',
+    'origin/a/wis2'
+)
+
+PARAMS = {
     'f': 'json',
     'limit': 100000
 }
 
 for gdc in GDCS:
     url = f'{gdc}/items'
-    response = requests.get(url, params=params).json()
+    response = requests.get(url, params=PARAMS).json()
 
     for feature in response['features']:
         for link in feature['links']:
             channel = link.get('channel')
-            if channel is not None:
+            if channel is not None and channel.startswith(CHANNELS):
                 channel = channel.replace('cache/a/wis2/', '').replace('origin/a/wis2/', '')  # noqa
                 ALL_CHANNELS.append(channel)
 
