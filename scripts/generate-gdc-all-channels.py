@@ -49,10 +49,10 @@ for gdc in GDCS:
 
     for feature in response['features']:
         for link in feature['links']:
-            channel = link.get('channel')
-            if channel is not None and channel.startswith(CHANNELS):
-                channel = channel.replace('cache/a/wis2/', '').replace('origin/a/wis2/', '')  # noqa
-                ALL_CHANNELS.append(channel)
+            channel = link.get('channel', '')
+            if channel.startswith(CHANNELS):
+                channel = '/'.join(channel.split('/')[4:])
+                ALL_CHANNELS.append(','.join([feature['id'], channel]))
 
 for channel in sorted(set(ALL_CHANNELS)):
     print(channel)
