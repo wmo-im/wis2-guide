@@ -3,9 +3,12 @@ urn:wmo:md:ag-antiguamet:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:ai-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bf-anam:mx2w8y,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
+urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
+urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bs-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bz-nms:belize-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bz-nms:belize-upper-air-messages,data/core/weather/surface-based-observations/temp
