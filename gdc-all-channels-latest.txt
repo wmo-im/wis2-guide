@@ -111,6 +111,7 @@ urn:wmo:md:gy-hydromet:core.surface-based-observations.synop,data/core/weather/s
 urn:wmo:md:hk-hko:core.climate.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:hk-hko:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:hk-hko:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-b.amsu-a,data/core/weather/space-based-observations/metop-b/amsu-a
 urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,data/core/weather/surface-based-observations/wind-profile-radar
 urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-based-observations/synop
