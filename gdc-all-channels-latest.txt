@@ -146,6 +146,7 @@ urn:wmo:md:kz-kazhydromet:core.surface-based-observations.synop,data/core/weathe
 urn:wmo:md:kz-kazhydromet:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:lc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ma-marocmeteo:h6vqw6,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
