@@ -127,6 +127,7 @@ urn:wmo:md:fr-meteofrance:dbnet-noaa-21-cris,data/core/weather/space-based-obser
 urn:wmo:md:fr-meteofrance:dbnet-snpp-atms,data/core/weather/space-based-observations/snpp/atms
 urn:wmo:md:fr-meteofrance:dbnet-snpp-cris,data/core/weather/space-based-observations/snpp/cris
 urn:wmo:md:fr-meteofrance:ship-hourly,data/core/weather/surface-based-observations/ship
+urn:wmo:md:fr-meteofrance:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:fr-meteofrance:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:gd-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:gy-hydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
