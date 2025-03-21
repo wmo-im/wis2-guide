@@ -135,7 +135,12 @@ urn:wmo:md:hk-hko:core.climate.surface-based-observations.monthly,data/core/clim
 urn:wmo:md:hk-hko:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:hk-hko:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-b.amsu-a,data/core/weather/space-based-observations/metop-b/amsu-a
+urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-b.mhs,data/core/weather/space-based-observations/metop-b/mhs
 urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-c.amsu-a,data/core/weather/space-based-observations/metop-c/amsu-a
+urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-c.mhs,data/core/weather/space-based-observations/metop-c/mhs
+urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
+urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.amsu-a,data/core/weather/space-based-observations/noaa-19/amsu-a
+urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.mhs,data/core/weather/space-based-observations/noaa-19/mhs
 urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,data/core/weather/surface-based-observations/wind-profile-radar
 urn:wmo:md:hk-hko:http:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
 urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
