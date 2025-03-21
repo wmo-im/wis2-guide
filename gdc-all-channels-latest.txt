@@ -98,8 +98,10 @@ urn:wmo:md:ca-eccc-msc:f702621d-65f2-5c40-bafb-fcf4d62a63cd,data/core/weather/pr
 urn:wmo:md:ca-eccc-msc:fb20aaa2-d206-5ea2-a574-b3cccc0eb4dc,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:fba0e890-a7cc-58f2-bde0-89b8d99acf59,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:ffcf85e1-bb6e-5b55-82ca-47db7fe63042,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
+urn:wmo:md:cg-met:7j4xdo,data/core/weather/advisories-warnings
 urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/climate/surface-based-observations/climat
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cu-insmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
