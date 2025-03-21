@@ -206,6 +206,7 @@ urn:wmo:md:us-noaa-nws:surface-based-observations-us-temp,data/core/surface-base
 urn:wmo:md:us-noaa-nws:surface-based-observations-us-temp-ship,data/core/surface-based-observations/temp-ship
 urn:wmo:md:us-noaa-nws:surface-based-observations-uz-temp,data/core/surface-based-observations/temp
 urn:wmo:md:us-noaa-nws:surface-weather-observations:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:uy-inumet:cap-alerts,data/core/weather/advisories-warnings
 urn:wmo:md:uy-inumet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vg-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
