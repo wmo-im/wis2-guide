@@ -6,8 +6,6 @@ urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
-urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:br-inmet:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
@@ -41,7 +39,6 @@ urn:wmo:md:ca-eccc-msc:6070e77c-290d-57fa-8956-2b5ef38fe932,data/core/weather/pr
 urn:wmo:md:ca-eccc-msc:60af030a-9563-5b5b-b477-7407d55b8014,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:61c4d7be-a8dd-5929-a80b-3d3641334f3f,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:ca-eccc-msc:631e570e-59c3-42d7-aa7b-5a4666ab62b5,data/core/ocean
-urn:wmo:md:ca-eccc-msc:65d3a88b-eb09-4fd9-ac44-cf42dc1f7444,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:65d3a88b-eb09-4fd9-ac44-cf42dc1f7444,data/core/hydrology/experimental/surface-based-observations/water-quantity
 urn:wmo:md:ca-eccc-msc:66caa8cc-0e9c-4fdb-ae40-fab9c255b811,data/core/ocean
 urn:wmo:md:ca-eccc-msc:66e22a26-10f6-5518-92fc-ae38ddf4c519,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
@@ -92,14 +89,12 @@ urn:wmo:md:ca-eccc-msc:d7fedd91-2c7d-58f7-b780-9392744e550f,data/core/weather/pr
 urn:wmo:md:ca-eccc-msc:db262eb3-98db-5ad4-8da2-0ea1cfec9b5e,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:ca-eccc-msc:dc3a7022-95e8-45a7-bf63-3d45b6cda0dc,data/core/ocean
 urn:wmo:md:ca-eccc-msc:e247a8b3-75b6-585e-8ab4-ac3600534799,data/core/weather/prediction/forecast/medium-range/deterministic/global
-urn:wmo:md:ca-eccc-msc:e50a9544-eee2-460c-a8b1-1a92a487d060,data/core/weather/surface-based-observations
 urn:wmo:md:ca-eccc-msc:f3ec3d35-e9ca-521c-998a-a88db31c6205,data/core/weather/prediction/forecast/nowcasting/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:f702621d-65f2-5c40-bafb-fcf4d62a63cd,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:fb20aaa2-d206-5ea2-a574-b3cccc0eb4dc,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:fba0e890-a7cc-58f2-bde0-89b8d99acf59,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:ffcf85e1-bb6e-5b55-82ca-47db7fe63042,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:cg-met:7j4xdo,data/core/weather/advisories-warnings
-urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/climate/surface-based-observations/climat
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
@@ -151,8 +146,6 @@ urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-b
 urn:wmo:md:il-ims:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:in-imd:satellite,data/core/weather/space-based-observations/insat-3dr/imager
-urn:wmo:md:in-imd:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:in-imd:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1010,data/core/weather/space-based-observations/metop-b/iasi
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1010.B,data/core/weather/space-based-observations/metop-b/iasi
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1010:C,data/core/weather/space-based-observations/metop-c/iasi
@@ -162,8 +155,6 @@ urn:wmo:md:io-wis2dev-11-test:data.core.weather.prediction.forecast.shortrange.p
 urn:wmo:md:io-wis2dev-11-test:data.core.weather.space-based-observations.fy-3e.gnos-2,data/core/weather/space-based-observations/fy-3e/gnos-2
 urn:wmo:md:io-wis2dev-11-test:data.core.weather.surface-based-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:io-wis2dev-11-test:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
-urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kn-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kr-kma:core.aviation.experimental.amda,data/core/weather/aviation/experimental/amdar
@@ -171,8 +162,6 @@ urn:wmo:md:kr-kma:core.aviation.metar,data/core/weather/aviation/metar
 urn:wmo:md:kr-kma:core.climate.surface.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:kr-kma:core.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:kr-kma:core.surface-based-observations.moored-buoys-and-moorings,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
-urn:wmo:md:kr-kma:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:kr-kma:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:kr-kma:surface-based-observations.experimental.aws,data/core/weather/surface-based-observations/experimental/aws
 urn:wmo:md:ky-cinws:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kz-kazhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
@@ -183,7 +172,6 @@ urn:wmo:md:ma-marocmeteo:h6vqw6,data/core/weather/surface-based-observations/syn
 urn:wmo:md:ma-marocmeteo:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
-urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
@@ -197,19 +185,6 @@ urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/s
 urn:wmo:md:us-noaa-nws:aviation-metar-observations,data/core/weather/aviation/metar
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp-ship,data/core/weather/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-ue-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-ue-temp-ship,data/core/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-uf-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-uf-temp-ship,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-uk-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-uk-temp-ship,data/core/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-ul-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-ul-temp-ship,data/core/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-um-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-um-temp-ship,data/core/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-us-temp,data/core/surface-based-observations/temp
-urn:wmo:md:us-noaa-nws:surface-based-observations-us-temp-ship,data/core/surface-based-observations/temp-ship
-urn:wmo:md:us-noaa-nws:surface-based-observations-uz-temp,data/core/surface-based-observations/temp
 urn:wmo:md:us-noaa-nws:surface-weather-observations:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:uy-inumet:cap-alerts,data/core/weather/advisories-warnings
 urn:wmo:md:uy-inumet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
