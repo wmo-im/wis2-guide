@@ -2,6 +2,7 @@ urn:wmo:md:ag-antiguamet:6u12a7,data/core/weather/surface-based-observations/syn
 urn:wmo:md:ag-antiguamet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ai-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bf-anam:mx2w8y,data/core/weather/surface-based-observations/synop
+urn:wmo:md:bg-nimh:core.weather.cap,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
