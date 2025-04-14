@@ -106,6 +106,7 @@ urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/clima
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
+urn:wmo:md:cl-meteochile:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:cu-insmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
