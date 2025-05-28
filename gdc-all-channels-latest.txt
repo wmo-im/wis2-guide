@@ -107,6 +107,7 @@ urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:cm-meteocameroon:aqkyax,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cr-imn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cu-insmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
