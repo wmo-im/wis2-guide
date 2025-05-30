@@ -150,8 +150,10 @@ urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-c.mhs,data/core/we
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.amsu-a,data/core/weather/space-based-observations/noaa-19/amsu-a
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.mhs,data/core/weather/space-based-observations/noaa-19/mhs
+urn:wmo:md:hk-hko:core.weather.surface-based-observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,data/core/weather/surface-based-observations/wind-profile-radar
 urn:wmo:md:hk-hko:http:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
+urn:wmo:md:hk-hko:surface-weather-observations:ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:id-bmkg:climate-surface-based-observations,data/core/climate/surface-based-observations/daily
 urn:wmo:md:id-bmkg:surface-based-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
