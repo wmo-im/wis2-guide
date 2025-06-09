@@ -200,6 +200,7 @@ urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weat
 urn:wmo:md:ru-aviamettelecom:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:se-smhi:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
