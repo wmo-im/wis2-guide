@@ -22,7 +22,7 @@ The registration of a WIS2 Node involves the following steps:
 * Provide details of the Global Service: The WMO Secretariat provides connection details (such as IP addresses) for the Global Services so that the WIS2 Node can be configured to provide access. 
 * WIS2 Node assessment: The principal GISC verifies that the WIS2 Node is compliant with WIS2 requirements. This assessment includes:
   - Verification of compliance of the topics used by the centre with the WTH specification;
-  - Verification of compliance of notification messages with the (WNM) specification;
+  - Verification of compliance of notification messages with the WNM specification;
   - Verification that the data server is correctly configured and properly functioning;
   - Verification that the Message Broker is correctly configured and properly functioning.
 * Add a new centre to WIS2: Upon completion of the verification and confirmation that the centre satisfies all the conditions for operating a WIS2 Node, the GISC notifies the WMO Secretariat and confirms that the centre can be added to WIS2 as a WIS2 Node.
