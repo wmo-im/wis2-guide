@@ -67,6 +67,7 @@ urn:wmo:md:cy-dom:weather.radar,data/core/weather/experimental/surface-based-obs
 urn:wmo:md:de-dwd:icon-eps.ALL,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.ship,data/core/weather/surface-based-observations/ship
+urn:wmo:md:de-dwd:weather.observations.teamx,data/core/weather/surface-based-observations/temp
 urn:wmo:md:dm-dms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:fr-meteofrance:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:fr-meteofrance:dbnet-metop-b-amsu-a,data/core/weather/space-based-observations/metop-b/amsu-a
