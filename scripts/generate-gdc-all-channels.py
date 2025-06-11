@@ -30,7 +30,7 @@ ALL_CHANNELS = []
 GDCS = [
     'https://wis2-gdc.weather.gc.ca/collections/wis2-discovery-metadata',
     'https://wis2.dwd.de/gdc/collections/wis2-discovery-metadata',
-    # 'https://gdc.wis.cma.cn/collections/wis2-discovery-metadata'
+    'https://gdc.wis.cma.cn/collections/wis2-discovery-metadata'
 ]
 
 CHANNELS = (
