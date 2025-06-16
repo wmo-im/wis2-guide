@@ -168,6 +168,7 @@ urn:wmo:md:in-imd:surface-based-observations.temp,data/core/weather/surface-base
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1010,data/core/weather/space-based-observations/metop-b/iasi
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1010,data/core/weather/space-based-observations/metop-c/iasi
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:MSG:HRSEVIRI,data/core/weather/space-based-observations/meteosat-10/seviri
+urn:wmo:md:int-eumetsat:SWx:GK2A:SOSMAG,data/core/space-weather/space-based-observations/geo-kompsat-2a/ksem-mag
 urn:wmo:md:io-wis2dev-11-test:climate.climate-daily,data/core/climate
 urn:wmo:md:io-wis2dev-11-test:data.core.weather.prediction.forecast.shortrange.probabilistic.global,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:io-wis2dev-11-test:data.core.weather.space-based-observations.fy-3e.gnos-2,data/core/weather/space-based-observations/fy-3e/gnos-2
