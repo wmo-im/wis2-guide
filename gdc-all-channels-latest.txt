@@ -105,6 +105,7 @@ urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,dat
 urn:wmo:md:hk-hko:http:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
 urn:wmo:md:hk-hko:surface-weather-observations:ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:id-bmkg:climate-surface-based-observations,data/core/climate/surface-based-observations/daily
+urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.temp,data/core/weather/surface-based-observations/temp
