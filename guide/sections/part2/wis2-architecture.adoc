@@ -42,6 +42,7 @@ These roles are outlined below.
   ii)	A Global Broker provides highly available messaging services through which users may subscribe to notifications about all datasets provided by data publishers;
   iii)	A Global Cache provides a highly available download service for cached copies of core data downloaded from data publishers’ web services;
   iv)	A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
+  v)	Global Replay: provides access to WIS Notification Messages via a searchable and queryable API.
 
 ==== 2.2.4 Data consumer
 * This role represents anyone wanting to find, access, and use data from WIS2. Examples include NMHSs, government agencies, research institutions, private sector organizations, and so forth.
@@ -68,7 +69,7 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 
 |WIS2 Notification Message (WNM)
 |Dataset metadata, dataset granules
-|Global Broker, WIS2 Nodes
+|Global Broker, Global Replay, WIS2 Nodes
 
 |===
 
@@ -112,7 +113,14 @@ Refer to the _Manual on WIS_, Volume II for details.
 * A Global Discovery Catalogue amends discovery metadata records to add details of where one can subscribe to updates about the dataset at a Global Broker.
 * A Global Discovery Catalogue makes its content available for indexing by search engines.
 
-==== 2.4.5 Global Monitor
+==== 2.4.5 Global Replay
+* WIS2 may include a Global Replay.
+* The Global Replay provides the Global Cache, Global Discovery Catalogue and data consumers with a mechanism to search, query and subscribe to past notification messages and monitoring events of interest as published by the Global Broker.
+* A Global Replay subscribes to all notification messages and monitoring events as published by Global Broker. It stores the notification message and monitoring events.
+* A Global Replay shall store copies of notification messages and monitoring events for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.
+* A Global Replay will disard notification messages and monitoring events once the retention period has expired.
+
+==== 2.4.6 Global Monitor
 * WIS2 includes a Global Monitor service.
 * The Global Monitor collects metrics from WIS2 components.
 * The Global Monitor provides a dashboard that supports the operational management of the WIS2 system.
