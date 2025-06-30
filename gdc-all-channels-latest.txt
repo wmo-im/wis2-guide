@@ -174,6 +174,7 @@ urn:wmo:md:int-eumetsat:SWx:GK2A:SOSMAG,data/core/space-weather/space-based-obse
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:kg-kyrgyzhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kn-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kr-kma:core.aviation.experimental.amda,data/core/weather/aviation/experimental/amdar
 urn:wmo:md:kr-kma:core.aviation.metar,data/core/weather/aviation/metar
