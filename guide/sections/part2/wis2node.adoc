@@ -93,11 +93,11 @@ A WIS2 Node must be able to publish datasets and compliant discovery metadata. T
 
 If contacted by a Global Monitor for a performance issue via a GISC, the WIS2 Node should provide metrics to the GISC and the Global Monitor when service is restored to inform them of the resolution of the issue.
 
-==== 2.6.3 WIS2 Node reference implementation: WIS2 in a box
+==== 2.6.3 WIS2 Node Reference Implementation: WIS2 in a box
 
 When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
-To assist Members, a free and open-source reference implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.
+To assist Members, a free and open-source Reference Implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.
 
 wis2box provides the functionality required for both data publisher and data consumer roles, as well as the following technical functions:
 
