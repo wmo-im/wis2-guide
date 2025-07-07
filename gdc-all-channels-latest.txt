@@ -157,6 +157,8 @@ urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-c.mhs,data/core/we
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.amsu-a,data/core/weather/space-based-observations/noaa-19/amsu-a
 urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-19.mhs,data/core/weather/space-based-observations/noaa-19/mhs
+urn:wmo:md:hk-hko:core.weather.space-based-observations.noaa-20.atms,data/core/weather/space-based-observations/noaa-20/atms
+urn:wmo:md:hk-hko:core.weather.space-based-observations.snpp.atms,data/core/weather/space-based-observations/snpp/atms
 urn:wmo:md:hk-hko:core.weather.surface-based-observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,data/core/weather/surface-based-observations/wind-profile-radar
 urn:wmo:md:hk-hko:http:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
