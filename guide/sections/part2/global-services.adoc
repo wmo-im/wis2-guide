@@ -216,13 +216,14 @@ wis2-gdc is managed as a free and open source project. Source code, issue tracki
 ** Core
 ** OGC Process Description
 ** JSON
-* A Global Replay shall subscribe to a Global Broker instance, to the topics `+origin/a/wis2/#+`, `+cache/a/wis2/#+` and `+monitor/a/wis2/#+`.
+* A Global Replay shall subscribe to all Global Broker instances, to the topics `+origin/a/wis2/#+`, `+cache/a/wis2/#+` and `+monitor/a/wis2/#+`.
+* A Global Replay shall use the notification message and monitoring event identifier to deduplicate notifications and events.
 * The Global Replay will make notification messages available via the API collection identifier `wis2-notification-messages`.
 * The Global Replay will make monitoring events available via the API collection identifier `wis2-monitoring-events`.
 * The Global Replay will provide an API process to trigger the republication of previously sent messages, allowing users to subscribe to messages with various criteria (spatial and / or temporal extent, topic selection) via the Global Broker.
 ** the API process request accepts the following inputs:
 *** `datetime`: a temporal range of messages to republish (example ``2025-04-06T17:21:26Z/2025-04-06T19:21:26Z``).
-*** `subscriber-id`: a unique identifier (UUID) defined by the user/client.
+*** `subscriber-id`: a unique identifier (UUID) defined by the user/client.  This identifier may be reused.
 *** `topic`: the topic on which to trigger message replication (centre-id required, allowing `+` and `#` for subsequent topic levels)
 ** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<callback>/<wth-topic>+`, where:
 *** ``callback`` is defined by the user/client.

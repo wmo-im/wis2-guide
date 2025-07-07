@@ -117,7 +117,9 @@ Refer to the _Manual on WIS_, Volume II for details.
 * WIS2 may include a Global Replay.
 * The Global Replay provides the Global Cache, Global Discovery Catalogue and data consumers with a mechanism to search, query and subscribe to past notification messages and monitoring events of interest as published by the Global Broker.
 * A Global Replay subscribes to all notification messages and monitoring events as published by Global Broker. It stores the notification message and monitoring events.
-* A Global Replay shall store copies of notification messages and monitoring events for a duration compatible with the real-time or near real-time schedule of the data and not less than 24-hours.
+* A Global Replay shall store copies of notification messages and monitoring events for a duration compatible with the real-time or near real-time schedule of the data and not less than:
+** 3 days for notification messages.
+** 7 days for monitoring events.
 * A Global Replay will disard notification messages and monitoring events once the retention period has expired.
 
 ==== 2.4.6 Global Monitor
