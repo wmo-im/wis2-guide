@@ -156,7 +156,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ===== 2.7.5.1 Technical considerations
 
 * The Global Discovery Catalogue provides data consumers with a mechanism for discovering and searching for datasets of interest as well as learning how to interact with and find out more information about those datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[See OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html.], adhering to the following conformance classes and their dependencies:
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[See OGC-API Records - Part 1 https://docs.ogc.org/is/20-004r1/20-004r1.html.], adhering to the following conformance classes and their dependencies:
 ** Searchable Catalog (Deployment);
 ** Searchable Catalog - Sorting (Deployment);
 ** Searchable Catalog - Filtering (Deployment);
