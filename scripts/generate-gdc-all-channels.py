@@ -43,9 +43,13 @@ PARAMS = {
     'limit': 100000
 }
 
+REQUEST_HEADERS = {
+    'X-Client-Id': 'wis2-guide GitHub Action (https://github.com/wmo-im/wis2-guide/blob/main/.github/workflows/gdc-all-channels.yml)'  # noqa
+}
+
 for gdc in GDCS:
     url = f'{gdc}/items'
-    response = requests.get(url, params=PARAMS).json()
+    response = requests.get(url, headers=REQUEST_HEADERS, params=PARAMS).json()
 
     for feature in response['features']:
         for link in feature['links']:
