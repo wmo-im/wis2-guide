@@ -218,6 +218,7 @@ urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/s
 urn:wmo:md:uk-metoffice:core:ocean.surface-based-observations.drifting-ocean-profilers,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:core:weather.surface-based-observations.synops,data/core/weather/surface-based-observations/synop
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers,data/core/ocean/surface-based-observations/drifting-ocean-profilers
+urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:us-noaa-nws:aviation-metar-observations,data/core/weather/aviation/metar
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp-ship,data/core/weather/surface-based-observations/temp-ship
