@@ -5,9 +5,9 @@ The successful operation of WIS2 depends on a set of Global Services running wel
 
 Depending on the nature of the Global Service, the following are the minimum capabilities needed to ensure that the level of service as a whole reaches 100% (or very close):
 
-*	Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
-*	Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
-*	Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
+* Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
+* Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
+* Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
 * Two Global Monitors - each Global Monitor should scrape the metrics from all other Global Services
 
 In addition to the above, WIS architecture can accommodate adding (or removing) Global Services. Candidate WIS centres should inform their WIS NFP and contact the WMO Secretariat to discuss their offer to provide a Global Service.
@@ -131,7 +131,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * For messages received on the topic ``++origin/a/+/data/core/#++`` or ``++cache/a/+/data/core/#++``, a Global Cache shall:
 ** If the message contains the property ``"properties.cache": false``,
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
-*** Add the property ``properties.global-cache`` with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications.
+*** Add the property ``properties.source`` with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications.
 ** Else
 *** Maintain a list of ``data_id`` values that have already been downloaded;
 *** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
