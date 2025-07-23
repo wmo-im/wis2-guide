@@ -202,6 +202,7 @@ urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/syno
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
