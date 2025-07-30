@@ -163,7 +163,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ** Searchable Catalog - Sorting (Deployment);
 ** Searchable Catalog - Filtering (Deployment);
 ** JSON (Common Component);
-** HTML (Common Component);
+** HTML (Common Component).
 * The Global Discovery Catalogue will make discovery metadata available via the collection identifier `wis2-discovery-metadata`.
 * The Global Discovery Catalogue advertises the availability of datasets and how to access them or subscribe to updates.
 * The Global Discovery Catalogue does not advertise or list the availability of individual data objects that comprise a dataset (that is, data files).
