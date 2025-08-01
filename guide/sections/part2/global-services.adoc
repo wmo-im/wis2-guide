@@ -5,9 +5,9 @@ The successful operation of WIS2 depends on a set of Global Services running wel
 
 Depending on the nature of the Global Service, the following are the minimum capabilities needed to ensure that the level of service as a whole reaches 100% (or very close):
 
-*	Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
-*	Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
-*	Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
+* Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
+* Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
+* Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
 * Two Global Monitors - each Global Monitor should scrape the metrics from all other Global Services
 
 In addition to the above, WIS architecture can accommodate adding (or removing) Global Services. Candidate WIS centres should inform their WIS NFP and contact the WMO Secretariat to discuss their offer to provide a Global Service.
@@ -83,6 +83,7 @@ In the following sections, and for each Global Service, a set of metrics is defi
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. The open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
 ** Additional features, including anti-loop detection, notification message format compliance, validation of the published topic, and metrics provision.
 
+* When connected to a local WIS centre broker or a Global Service broker, the metric ``wmo_wis2_gb_connected_flag`` will be equal to 1. When the connection cannot be established or is later on interrupted the metric ``wmo_wis2_gb_connected_flag`` will be equal to 0.
 * When receiving a message from a local WIS centre broker or a Global Service broker, the metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
 * A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
 * A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_invalid_topic_total`` will be increased by 1.
@@ -130,6 +131,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * For messages received on the topic ``++origin/a/+/data/core/#++`` or ``++cache/a/+/data/core/#++``, a Global Cache shall:
 ** If the message contains the property ``"properties.cache": false``,
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
+*** Add the property ``properties.global-cache`` with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications.
 ** Else
 *** Maintain a list of ``data_id`` values that have already been downloaded;
 *** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
@@ -156,12 +158,12 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 ===== 2.7.5.1 Technical considerations
 
 * The Global Discovery Catalogue provides data consumers with a mechanism for discovering and searching for datasets of interest as well as learning how to interact with and find out more information about those datasets.
-* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[See OGC-API Records - Part 1 https://docs.ogc.org/DRAFTS/20-004.html.], adhering to the following conformance classes and their dependencies:
+* The Global Discovery Catalogue implements the OGC API – Records – Part 1: Core standardfootnote:[See OGC-API Records - Part 1 https://docs.ogc.org/is/20-004r1/20-004r1.html.], adhering to the following conformance classes and their dependencies:
 ** Searchable Catalog (Deployment);
 ** Searchable Catalog - Sorting (Deployment);
 ** Searchable Catalog - Filtering (Deployment);
-** JSON (Building Block);
-** HTML (Building Block).
+** JSON (Common Component);
+** HTML (Common Component).
 * The Global Discovery Catalogue will make discovery metadata available via the collection identifier `wis2-discovery-metadata`.
 * The Global Discovery Catalogue advertises the availability of datasets and how to access them or subscribe to updates.
 * The Global Discovery Catalogue does not advertise or list the availability of individual data objects that comprise a dataset (that is, data files).
@@ -183,11 +185,11 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention, a Global Discovery Catalogue's centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
-===== 2.7.5.2 Global Discovery Catalogue reference implementation: wis2-gdc
+===== 2.7.5.2 Global Discovery Catalogue Reference Implementation: wis2-gdc
 
 To provide a Global Discovery Catalogue, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
-To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue reference implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
+To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
 wis2-gdc provides the functionality required for the Global Discovery Catalogue, including the following technical functions:
 
