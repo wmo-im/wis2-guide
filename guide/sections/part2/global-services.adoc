@@ -9,7 +9,6 @@ Depending on the nature of the Global Service, the following are the minimum cap
 *	Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
 *	Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
 *	Two Global Monitors - each Global Monitor should scrape the metrics from all other Global Services
-*	One (1) Global Replay: Each Global Replay connected to at least one (1) Global Broker
 
 In addition to the above, WIS architecture can accommodate adding (or removing) Global Services. Candidate WIS centres should inform their WIS NFP and contact the WMO Secretariat to discuss their offer to provide a Global Service.
 
