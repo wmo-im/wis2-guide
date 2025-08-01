@@ -1,7 +1,7 @@
-== PART III. Additional services
+== PART III. Additional components
 
 include::introduction.adoc[]
 
-include::additional-global-services.adoc[]
+include::components.adoc[]
 
 include::sensor-centres.adoc[]
