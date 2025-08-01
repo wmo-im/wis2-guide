@@ -2,3 +2,68 @@
 
 ==== 3.2.1 Global Replay
 
+A Global Replay provides access and subscription to past WIS Notification Messages.
+
+===== 3.2.1.1 Component definition
+
+* WIS2 may include a Global Replay.
+* The Global Replay provides the Global Cache, Global Discovery Catalogue and data consumers with a mechanism to search, query and subscribe to past notification messages and monitoring events of interest as published by the Global Broker.
+* A Global Replay subscribes to all notification messages and monitoring events as published by Global Broker. It stores the notification message and monitoring events.
+* A Global Replay shall store copies of notification messages and monitoring events for a duration compatible with the real-time or near real-time schedule of the data and not less than:
+** 3 days for notification messages.
+** 7 days for monitoring events.
+* A Global Replay will discard notification messages and monitoring events once the retention period has expired.
+
+===== 3.2.1.2 Technical considerations
+
+* The Global Replay provides Global Services and data consumers with a mechanism to search, query and subscribe to notification messages and monitoring events of interest.
+* The Global Replay implements the OGC API – Features – Part 1: Core standardfootnote:[https://docs.ogc.org/is/17-069r4/17-069r4.html], adhering to the following conformance classes and their dependencies:
+** Core
+** GeoJSON
+* The Global Replay implements the OGC API – Processes - Part 1: Core standardfootnote:[https://docs.ogc.org/is/18-062r2/18-062r2.html], adhering to the following conformance classes and their dependencies:
+** Core
+** OGC Process Description
+** JSON
+* A Global Replay shall subscribe to all Global Broker instances, to the topics `+origin/a/wis2/#+`, `+cache/a/wis2/#+` and `+monitor/a/wis2/#+`.
+* A Global Replay shall use the notification message and monitoring event identifier to deduplicate notifications and events.
+* The Global Replay will make notification messages available via the API collection identifier `wis2-notification-messages`.
+* The Global Replay will make monitoring events available via the API collection identifier `wis2-monitoring-events`.
+* The Global Replay will provide an API process to trigger the republication of previously sent messages, allowing users to subscribe to messages with various criteria (spatial and / or temporal extent, topic selection) via the Global Broker.
+** the API process request accepts the following inputs:
+*** `datetime`: a temporal range of messages to republish (example ``2025-04-06T17:21:26Z/2025-04-06T19:21:26Z``).
+*** `subscriber-id`: a unique identifier (UUID) defined by the user/client.  This identifier may be reused.
+*** `topic`: the topic on which to trigger message replication (centre-id required, allowing `+` and `#` for subsequent topic levels)
+** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<callback>/<wth-topic>+`, where:
+*** ``callback`` is defined by the user/client.
+*** ``wth-topic`` is the full topic of the message as previously published to WIS2.
+** the API process can set temporal boundary limits which, when exceeded, result in an error message prohibiting the republishing of messages.
+*** the temporal boundary is 15 minutes.
+** an example topic would be `+replay/a/wis2/ca-eccc-msc-global-replay/fdb6dae4-95fe-465a-80fb-498ebd61dce8/cache/a/wis2/br-inmet/data/core/weather/surface-based-observations/synop+`
+* A single Global Replay instance is sufficient for WIS2.
+* Multiple Global Replay instances may be deployed for resilience.
+* Global Replay instances operate independently of each other; each Global Replay instance will hold notification messages and monitoring events according to the required retention period.  Global Replays do not need to synchronize with each other.
+* A Global Replay is populated with notification messages and monitoring events received via a Global Broker instance.
+* A Global Replay is connected to at least one (1) Global Broker
+* A Global Replay should connect and subscribe to more than one Global Broker instance to ensure that no messages or events are lost in the event of a Global Broker failure. A Global Replay instance will discard duplicate messages as needed.
+* A Global Replay can validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message). Valid messages will be stored. Invalid or malformed messages will be discarded.
+* A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see _Manual on WIS_, Volume II – Appendix TODO. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.
+* A Global Replay will remove notification messages after the required retention period.
+* A Global Replay will remove monitoring events after the required retention period.
+* A Global Replay may choose to implement access control for controlling usage.
+* As a convention Global Replay centre-id will be ``tld-{centre-name}-global-replay``.
+
+===== 3.2.1.3 Global Replay Reference Implementation: wis2-grep
+
+To provide a Global Replay, members may use whichever software components they consider most appropriate to comply with WIS2 Technical Regulations.
+
+To assist Members participation in WIS2, a free and open-source Global Replay Reference Implementation is made available for download and use.  wis2-grep builds on mature and robust free and open-source software components that are widely adopted for operational use.
+
+wis2-grep provides functionality required for the Global Replay, providing the following technical functions:
+
+* notification messages and monitoring event subscription from a Global Broker insrtance
+* notification message and monitoring event ingest and API publication
+* user defined subscription for MQTT message replay from a Global Broker instance
+* OGC API - Features - Part 1: Core compliance
+* OGC API - Processes - Part 1: Core compliance
+
+wis2-grep is managed as a free and open source project.  Source code, issue tracking and discussions are hosted in the open on GitHub: https://github.com/wmo-im/wis2-grep.
