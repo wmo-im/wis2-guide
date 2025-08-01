@@ -52,7 +52,7 @@ for gdc in GDCS:
 
     try:
         response = requests.get(url, headers=REQUEST_HEADERS, params=PARAMS).json()  # noqa
-    except Exception as err:  # connection, timeout, or name resolution error
+    except Exception:  # connection, timeout, or name resolution error
         pass
 
     for feature in response['features']:
