@@ -5,9 +5,9 @@ The successful operation of WIS2 depends on a set of Global Services running wel
 
 Depending on the nature of the Global Service, the following are the minimum capabilities needed to ensure that the level of service as a whole reaches 100% (or very close):
 
-*	Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
-*	Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
-*	Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
+* Three Global Brokers, with each Global Broker connected to at least two other Global Brokers;
+* Three Global Caches, with each Global Cache connected to at least two Global Brokers and capable of downloading data from all WIS2 Nodes providing core data;
+* Two Global Discovery Catalogues, with each Global Discovery Catalogue connected to at least one Global Broker;
 * Two Global Monitors - each Global Monitor should scrape the metrics from all other Global Services
 
 In addition to the above, WIS architecture can accommodate adding (or removing) Global Services. Candidate WIS centres should inform their WIS NFP and contact the WMO Secretariat to discuss their offer to provide a Global Service.
@@ -183,11 +183,11 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention, a Global Discovery Catalogue's centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
-===== 2.7.5.2 Global Discovery Catalogue reference implementation: wis2-gdc
+===== 2.7.5.2 Global Discovery Catalogue Reference Implementation: wis2-gdc
 
 To provide a Global Discovery Catalogue, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
-To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue reference implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
+To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.
 
 wis2-gdc provides the functionality required for the Global Discovery Catalogue, including the following technical functions:
 

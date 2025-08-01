@@ -38,17 +38,17 @@ These roles are outlined below.
 
 ==== 2.2.3 Global Service operator
 * To ensure highly available global data exchange, a WIS centre may operate one or more Global Services: 
-  i)	The Global Discovery Catalogue enables users to search all datasets provided by data publishers and discover where and how to interact with those datasets (for example, to subscribe to updates, to access/download/visualize data, to access more detailed information about the dataset);
-  ii)	A Global Broker provides highly available messaging services through which users may subscribe to notifications about all datasets provided by data publishers;
-  iii)	A Global Cache provides a highly available download service for cached copies of core data downloaded from data publishers’ web services;
-  iv)	A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
+  i) The Global Discovery Catalogue enables users to search all datasets provided by data publishers and discover where and how to interact with those datasets (for example, to subscribe to updates, to access/download/visualize data, to access more detailed information about the dataset);
+  ii) A Global Broker provides highly available messaging services through which users may subscribe to notifications about all datasets provided by data publishers;
+  iii) A Global Cache provides a highly available download service for cached copies of core data downloaded from data publishers’ web services;
+  iv) A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.
 
 ==== 2.2.4 Data consumer
 * This role represents anyone wanting to find, access, and use data from WIS2. Examples include NMHSs, government agencies, research institutions, private sector organizations, and so forth.
 * Data consumers search or browse a Global Discovery Catalogue (or another search engine) to discover the datasets that meet their needs ("datasets of interest").
-*	Data consumers subscribe via a Global Broker to receive notification messages about the availability of data or metadata associated with their datasets of interest.
-*	Data consumers determine whether the data or metadata referenced in the notification messages are required.
-*	Data consumers download data from a Global Cache or WIS2 Node.
+* Data consumers subscribe via a Global Broker to receive notification messages about the availability of data or metadata associated with their datasets of interest.
+* Data consumers determine whether the data or metadata referenced in the notification messages are required.
+* Data consumers download data from a Global Cache or WIS2 Node.
 
 === 2.3 WIS2 specifications
 
