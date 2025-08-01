@@ -1,3 +1,7 @@
-== PART III. Information management
+== PART III. Additional services
 
-include::information-management.adoc[]
+include::introduction.adoc[]
+
+include::additional-global-services.adoc[]
+
+include::sensor-centres.adoc[]

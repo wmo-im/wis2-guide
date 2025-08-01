@@ -1,0 +1,3 @@
+== PART V. Competencies
+
+include::competencies.adoc[]
