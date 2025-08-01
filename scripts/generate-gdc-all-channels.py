@@ -49,7 +49,11 @@ REQUEST_HEADERS = {
 
 for gdc in GDCS:
     url = f'{gdc}/items'
-    response = requests.get(url, headers=REQUEST_HEADERS, params=PARAMS).json()
+
+    try:
+        response = requests.get(url, headers=REQUEST_HEADERS, params=PARAMS).json()  # noqa
+    except Exception as err:  # connection, timeout, or name resolution error
+        pass
 
     for feature in response['features']:
         for link in feature['links']:
