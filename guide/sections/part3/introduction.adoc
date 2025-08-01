@@ -1,0 +1,9 @@
+=== 3.1 Overview
+
+In addition to the core set of Global Services defined, additinoal Global Services may exists in WIS2.
+
+Additional Global Services:
+
+* provide value added capabilities and insights into WIS2
+* are not required components of WIS2
+* may be provided with various access control policies depending on their scope

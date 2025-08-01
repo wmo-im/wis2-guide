@@ -277,7 +277,7 @@ harvest and merge these catalogues, creating a global map of the ocean
 data. IODE harvests all metadata shared by ODIS partners, combines 
 these metadata and creates a knowledge graph, and processes these metadata to export derivative 
 products (for example, diagnostic reports and cloud-optimized data products). 
-The Ocean InfoHub (OIH) system is IODE's reference implementation of a 
+The Ocean InfoHub (OIH) system is IODE's Reference Implementation of a 
 discovery system leveraging ODIS. ODIS architecture and tools are
 free and open-source software (FOSS), with regular releases published for the
 community.
