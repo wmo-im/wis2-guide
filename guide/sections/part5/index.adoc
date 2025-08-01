@@ -1,3 +1,3 @@
-== PART V. Competencies
+== PART IV. Security
 
-include::competencies.adoc[]
+include::security.adoc[]
