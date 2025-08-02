@@ -1,9 +1,17 @@
 === 3.3 Sensor Centres
 
-==== 3.3.1 Overview
-
 Sensor Centres are components external to WIS 2.0, which provide continuous assessments on functionality.  Sensor
 Centres can provide external feedback on WIS 2.0 functions to trigger corrective action in support of continuous improvement.
+
+==== 3.3.1 Overview
+
+As described in the Manual of WIS, Volume II, WIS 2.0 is a collective, distributed data exchange system that requires monitoring. 
+
+All WIS 2.0 components have defined metrics and conditions on those metrics to trigger alerts.
+
+The Global Monitor collects the metrics and presents them a suite of dashboards enabling observability, visuaization and analysis.
+
+Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nodes. It implements further processing on any component of the WIS 2.0 architecture.  This procesing results in additional metrics which can also be provided to dashboards, within or external to WIS 2.0.
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
