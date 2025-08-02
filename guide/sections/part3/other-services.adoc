@@ -1,4 +1,4 @@
-=== 3.2 Components
+=== 3.2 Other services
 
 ==== 3.2.1 Global Replay
 

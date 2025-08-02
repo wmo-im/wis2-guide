@@ -2,6 +2,6 @@
 
 include::introduction.adoc[]
 
-include::components.adoc[]
+include::other-services.adoc[]
 
 include::sensor-centres.adoc[]
