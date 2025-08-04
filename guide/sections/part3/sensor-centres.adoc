@@ -17,7 +17,7 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
-==== 3.3.4 Sensor Centre for Global Discovery Catalogues (SCGDC)
+==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
 
 The primary function of an SCGDC is to test and evaluate content parity across all GDCs in WIS 2.0.
 
