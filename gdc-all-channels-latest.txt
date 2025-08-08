@@ -5,6 +5,7 @@ urn:wmo:md:bf-anam:fgspmr,data/recommended/weather/surface-based-observations/sy
 urn:wmo:md:bf-anam:mx2w8y,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bg-nimh:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bg-nimh:core.weather.cap,data/core/weather/advisories-warnings
+urn:wmo:md:bn-bdmd:3-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
