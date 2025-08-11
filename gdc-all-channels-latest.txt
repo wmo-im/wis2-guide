@@ -266,6 +266,7 @@ urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ng-nimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
@@ -283,7 +284,11 @@ urn:wmo:md:tc-metservice:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:td-anam:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:td-anam:core.weather.cap,data/core/weather/advisories-warnings
 urn:wmo:md:tg-anamet:2obre1,data/core/weather/surface-based-observations/synop
+urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:tz-tma:metar,data/recommended/aviation/metar
+urn:wmo:md:tz-tma:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:tz-tma:taff,data/recommended/aviation/taff
 urn:wmo:md:uk-metoffice:core:weather.surface-based-observations.synops,data/core/weather/surface-based-observations/synop
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:us-noaa-nws:aviation-metar-observations,data/core/weather/aviation/metar
