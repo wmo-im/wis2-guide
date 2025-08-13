@@ -131,7 +131,6 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * For messages received on the topic ``++origin/a/+/data/core/#++`` or ``++cache/a/+/data/core/#++``, a Global Cache shall:
 ** If the message contains the property ``"properties.cache": false``,
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
-** Add the property ``properties.global-cache`` with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications.
 ** Else
 *** Maintain a list of ``data_id`` values that have already been downloaded;
 *** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
@@ -141,6 +140,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 **** If data is downloaded successfully,  move the data to the HTTP endpoint of the Global Cache;
 **** Wait until the data becomes available at the endpoint;
 **** Modify the message identifier and the canonical link's ``href`` of the received message and leave all other fields untouched;
+*** Add the property ``properties.global-cache`` with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications;
 **** Republish the modified message to topic ``cache/a/wis2/...`` ,matching the ``+/a/wis2/...`` where the original message has been received;
 **** The metric ``wmo_wis2_gc_downloaded_total`` will be increased by 1; The metric ``wmo_wis2_gc_dataserver_last_download_timestamp_seconds`` will be updated with the timestamp (in seconds) of the last successful download from the WIS2 Node or Global Cache;
 *** Else
