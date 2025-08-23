@@ -33,8 +33,7 @@ A Global Replay provides access and subscription to past WIS Notification Messag
 *** `datetime`: a temporal range of messages to republish (example ``2025-04-06T17:21:26Z/2025-04-06T19:21:26Z``).
 *** `subscriber-uuid`: a unique identifier (UUID) defined by the user/client.  This identifier may be reused.
 *** `topic`: the topic on which to trigger message replication (centre-id required, allowing `+` and `#` for subsequent topic levels)
-** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<callback>/<wth-topic>+`, where:
-*** ``callback`` is defined by the user/client.
+** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<subscriber-uuid>/<wth-topic>+`, where:
 *** ``wth-topic`` is the full topic of the message as previously published to WIS2.
 ** the API process will set temporal boundary limits to 15 minutes. When exceeded, it will result in an error message prohibiting the republishing of messages.
 ** an example topic would be `+replay/a/wis2/ca-eccc-msc-global-replay/fdb6dae4-95fe-465a-80fb-498ebd61dce8/cache/a/wis2/br-inmet/data/core/weather/surface-based-observations/synop+`

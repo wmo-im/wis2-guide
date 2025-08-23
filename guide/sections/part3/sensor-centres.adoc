@@ -5,7 +5,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 
 ==== 3.3.1 Overview
 
-As described in the Manual of WIS, Volume II, WIS 2.0 is a collective, distributed data exchange system that requires monitoring. 
+As described in the Manual on WIS, Volume II, WIS 2.0 is a collective, distributed data exchange system that requires monitoring. 
 
 All WIS 2.0 components have defined metrics and conditions on those metrics to trigger alerts.
 
@@ -23,7 +23,7 @@ The primary function of an SCGDC is to test and evaluate content parity across a
 
 A Global Discovery Catalogue (GDC) must publish, every 24 hours, a zip file containing all metadata records available via the GDC API.
 
-A GDC Sensor Centre checks all GDCs are publishing the zip file and then analyzes the content of the zip file (all metadata records) to detect anomalies (i.e. missing metadata records, inconsistent data records between GDCs).
+A GDC Sensor Centre checks all GDCs are publishing the zip file and then analyzes the content of the zip file (all metadata records) to detect anomalies (i.e. missing metadata records, inconsistent data records between GDCs, validating metdata records for WCMP2 compliance).
 
 Metadata content must be identical for all GDCs. The SCGDC verifies this consistency provides the necessary insights to trigger corrective action of the discrepancies.
 
@@ -31,7 +31,7 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 
 * The SCGDC will connect to a minimum of two Global Brokers. 
 * The SCGDC subscribes to the metadata topic for all GDCs, by one of the following methods:
-** subscribing to ``cache/a/wis2/+/metadata/#``, discarding all Notification Messages whose centre identifier (in the topic) does not end with `-global-discovery-catalogue_.
+** subscribing to ``cache/a/wis2/+/metadata/#``, discarding all Notification Messages whose centre identifier (in the topic) does not end with ``-global-discovery-catalogue``.
 ** subscribing to each GDC via ``cache/a/wis2/centre-id/metadata/#``.
 * The SCGDC will use the link provided in the WIS2 Notification Message received to download the zip file published by the GDC.
 * For each GDC centre identifier, upon successful download of the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_last_download_timestamp_seconds`` with the timestamp (in seconds) of the last successful download.
@@ -39,10 +39,13 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 ** Files older than 24 hours will not be analyzed.
 * The SCGDC will set the metric ``wmo_wis2_scgdc_records_incorrect_total`` to ``0`` at the beginning of the analysis for all GDCs where the zip file is less than 24 hours old. *Note*: the metric ``wmo_wis2_scgdc_records_incorrect_total`` is a gauge (not a counter) whose value can be reset to ``0`` at the beginning of the analysis.
 * After unpacking the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_records_received_total`` with the number of records found in the zip file.
-* For each record, the SCGDC will delete the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove it before further processing for parity checking.
-* The SCGDC will then compare each metadata record with the same WCMP2 `id` received from all other GDCs.
-* If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
-* If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
-** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs except the GDC having the most recent record.
-* If the content is different, and if no GDC holds a record with ``properties.updated``, the SCGDC will consider that it is not possible to ensure which GDC has the correct record.
-** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs.
+* For each record, the SCGDC will:
+** validate the record against the latest approved version of WCMP2
+*** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_invalid_total``, with the WCMP2 id as well as centre id of the GDC
+** delete the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove it before further processing for parity checking.
+** compare each metadata record with the same WCMP2 `id` received from all other GDCs.
+** If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
+** If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
+*** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs except the GDC having the most recent record.
+** If the content is different, and if no GDC holds a record with ``properties.updated``, the SCGDC will consider that it is not possible to ensure which GDC has the correct record.
+*** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs.
