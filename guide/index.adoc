@@ -42,10 +42,4 @@ include::sections/part4/index.adoc[]
 
 include::sections/part5/index.adoc[]
 
-
-
-// include::sections/other-considerations.adoc[]
-
-// include::sections/references.adoc[]
-
-// include::sections/annex-b-audit-certification.adoc[]
+include::sections/part6/index.adoc[]
