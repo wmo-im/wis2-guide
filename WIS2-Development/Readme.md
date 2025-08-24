@@ -1,1 +1,0 @@
-Welcome to the WIS2 Development Repository, the reference hub for new advancements in the WMO Information System 2.0 (WIS2). This repository includes proposals for the establishment of Sensor Centres, the WIS2 Global Replay service, a shared MQTT service, and other key components aimed at enhancing the WIS 2.0.
