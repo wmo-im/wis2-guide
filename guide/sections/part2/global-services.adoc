@@ -36,11 +36,10 @@ WIS2 Global Services (Global Brokers, Global Caches, and Global Discovery Catalo
 
 There is no requirement for WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which can then provide metrics on the availability of WIS2 Nodes.
 
-Metrics for WIS2 monitoring should follow the naming convention ``wmo_<program>_<name>``, where ``<program>`` is the name of the responsible WMO programme and ``<name>`` is the name of the metric. Examples of WIS2 metrics include:
+Metrics for WIS2 monitoring should follow the naming convention ``wmo_<program>_<name>``, where ``<program>`` is the name of the responsible WMO programme and ``<name>`` is the name of the metric. Examples of WIS2 metrics include (but are not limited to):
 
-  ``wmo_wis2_gc_downloaded_total``, and
-
-  ``wmo_wis2_gb_messages_invalid_total``.
+* ``wmo_wis2_gc_downloaded_total``
+* ``wmo_wis2_gb_messages_invalid_total``
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:[See https://github.com/wmo-im/wis2-metric-hierarchy.]
 
