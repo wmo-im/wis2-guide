@@ -40,9 +40,9 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 * The SCGDC will set the metric ``wmo_wis2_scgdc_records_incorrect_total`` to ``0`` at the beginning of the analysis for all GDCs where the zip file is less than 24 hours old. *Note*: the metric ``wmo_wis2_scgdc_records_incorrect_total`` is a gauge (not a counter) whose value can be reset to ``0`` at the beginning of the analysis.
 * After unpacking the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_records_received_total`` with the number of records found in the zip file.
 * For each record, the SCGDC will:
+** prune the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove all links that are not `rel=license` before further processing for parity checking.
 ** validate the record against the latest approved version of WCMP2
 *** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_invalid_total``, with the WCMP2 id as well as centre id of the GDC
-** delete the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove it before further processing for parity checking.
 ** compare each metadata record with the same WCMP2 `id` received from all other GDCs.
 ** If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
 ** If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
