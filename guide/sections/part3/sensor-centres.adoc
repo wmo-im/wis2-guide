@@ -17,13 +17,13 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 
 ===== 3.3.2.1 Technical considerations
 
-* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
+* As a convention, the Sensor Centre for Global Broker centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
 
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
 ===== 3.3.3.1 Technical considerations
 
-* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
+* As a convention, the Sensor Centre for Global Cache centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
 
 ==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
 
