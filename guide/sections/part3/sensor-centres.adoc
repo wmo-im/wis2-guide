@@ -15,7 +15,15 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
+===== 3.3.2.1 Technical considerations
+
+* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
+
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
+
+===== 3.3.3.1 Technical considerations
+
+* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
 
 ==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
 
@@ -49,3 +57,4 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 *** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs except the GDC having the most recent record.
 ** If the content is different, and if no GDC holds a record with ``properties.updated``, the SCGDC will consider that it is not possible to ensure which GDC has the correct record.
 *** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs.
+* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-discovery-catalogue``.
