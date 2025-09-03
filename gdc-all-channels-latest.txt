@@ -187,6 +187,7 @@ urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observ
 urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:in-imd:mdv5s5,data/core/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:in-imd:osycw0,data/core/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:in-imd:satellite,data/core/weather/space-based-observations/insat-3dr/imager
 urn:wmo:md:in-imd:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
