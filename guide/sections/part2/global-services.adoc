@@ -180,6 +180,13 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue will provide human-readable web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index its content. Consequently, data consumers should be able to discover WIS content via third party search engines.
 * A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day; this file will be made be accessible via HTTP. The zipfile will include a directory named after the centre-id of the Global Discovery Catalogue containing all WCMP2 records.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zip file of all WCMP2 records on its centre-id's +metadata+ topic (for example, `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
+* A Global Discovery Catalogue will generate metrics on a daily basis for the following:
+** ``wmo_wis2_gdc_core_total`` (foreach centre identifier)
+** ``wmo_wis2_gdc_recommended_total`` (foreach centre identifier)
+** ``wmo_wis2_gdc_earth_system_discipline_total`` (foreach Earth system discipline per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_total`` (foreach discovery metadata record per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_average`` (foreach centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_over80_total`` (foreach centre identifier)
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention, a Global Discovery Catalogue's centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
