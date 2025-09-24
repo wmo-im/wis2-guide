@@ -250,6 +250,7 @@ urn:wmo:md:kr-kma:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:kr-kma:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:kr-kma:core.weather.experimental.temp-drop,data/core/weather/experimental/temp-drop
 urn:wmo:md:kr-kma:core.weather.space-based-observations.geo-kompsat-2a.ami,data/core/weather/space-based-observations/geo-kompsat-2a/ami
+urn:wmo:md:kr-kma:core.weather.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kr-kma:surface-based-observations.experimental.aws,data/core/weather/surface-based-observations/experimental/aws
 urn:wmo:md:kr-kma:surface-based-observations.experimental.aws,metadata
 urn:wmo:md:ky-cinws:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
