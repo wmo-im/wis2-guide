@@ -92,6 +92,7 @@ urn:wmo:md:ca-eccc-msc:a99e4f08-65ad-532a-997d-3c3687253202,data/core/weather/ex
 urn:wmo:md:ca-eccc-msc:a9f2828c-0d78-5eb6-a4c7-1fc1219f1e3d,data/core/weather/prediction/forecast/medium-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:aae10768-0c0c-4670-807e-8e893680887e,data/core/weather/experimental
 urn:wmo:md:ca-eccc-msc:b24efb37-11b6-5d03-ab19-5759f83db546,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:ca-eccc-msc:b2634521-33fe-4223-ba63-b4d14779bfe9,data/core/weather/experimental
 urn:wmo:md:ca-eccc-msc:ba198d6d-1c80-52f6-9801-4a444ab337a7,data/core/atmospheric-composition/experimental
 urn:wmo:md:ca-eccc-msc:bb0d1eeb-0e11-49e0-a5e3-6d99d4decb31,data/core/weather/prediction/forecast/medium-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:bc52b7a8-46ef-4a7f-90e0-7780abac398c,data/core/climate/surface-based-observations
