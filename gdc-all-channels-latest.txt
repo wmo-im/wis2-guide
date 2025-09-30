@@ -126,6 +126,8 @@ urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/clima
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
+urn:wmo:md:cl-meteochile:synop-onehours,data/core/weather/surface-based-observations/synop
+urn:wmo:md:cl-meteochile:synop-trihours,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:cm-meteocameroon:aqkyax,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cn-cma:data.core.weather.prediction.forecast.medium-range.probabilistic.global,data/core/weather/prediction/forecast/medium-range/probabilistic/global
