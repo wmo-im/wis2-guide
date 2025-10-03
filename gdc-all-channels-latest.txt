@@ -123,8 +123,8 @@ urn:wmo:md:cg-met:7j4xdo,data/core/weather/advisories-warnings
 urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/climate/surface-based-observations/climat
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
-urn:wmo:md:cl-meteochile:climat-dayli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:cl-meteochile:climat-monthly,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:cl-meteochile:climat-monthly-dayli,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:synop-onehours,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:synop-trihours,data/core/weather/surface-based-observations/synop
