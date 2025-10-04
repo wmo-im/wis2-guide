@@ -15,9 +15,15 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
+The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 are making available the same number of messages. In addition, it will provide a connectivity flag to detect the status of the connection toward each GB, as well as a timestamp of the last message being received from each GB.
+
 ===== 3.3.2.1 Technical considerations
 
-* As a convention, the Sensor Centre for Global Broker centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
+* The SCGB will connect to all Global Brokers.
+* The SCGB subscribes to the following topics on all GBs:
+** ``origin/a/wis2/#``
+** ``cache/a/wis2/#``
+** ``monitor/a/wis2/#``
 
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
