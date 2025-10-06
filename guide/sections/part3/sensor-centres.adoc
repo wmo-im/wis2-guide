@@ -11,7 +11,14 @@ All WIS 2.0 components have defined metrics and conditions on those metrics to t
 
 The Global Monitor collects the metrics and presents them a suite of dashboards enabling observability, visuaization and analysis.
 
-Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nodes. It implements further processing on any component of the WIS 2.0 architecture.  This procesing results in additional metrics which can also be provided to dashboards, within or external to WIS 2.0.
+Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nodes. It implements further processing on any component of the WIS 2.0 architecture.  This processing results in additional metrics which can also be provided to dashboards, within or external to WIS 2.0.
+
+"Sensor Centre" is a generic term to describe additional components to measure various aspects including (but not limited to):
+
+* the quality and performance of Global Services
+* the conformance of the products exchanged with the agreed WMO Regulations (eg. RBON)
+
+Each type of Sensor Centre will result in a set of metrics that will be used to measure and evaluate WIS 2.0 Global Services and Nodes.
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
@@ -27,8 +34,11 @@ The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 a
 
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
+TODO
+
 ===== 3.3.3.1 Technical considerations
 
+TODO
 * As a convention, the Sensor Centre for Global Cache centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
 
 ==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
