@@ -191,7 +191,6 @@ urn:wmo:md:hk-hko:core.weather.surface-based-observations.wind-profile-radar,dat
 urn:wmo:md:hk-hko:http:core.weather.space-based-observations.noaa-18.amsu-a,data/core/weather/space-based-observations/noaa-18/amsu-a
 urn:wmo:md:hk-hko:surface-weather-observations:ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:id-bmkg:climate-surface-based-observations,data/core/climate/surface-based-observations/daily
-urn:wmo:md:id-bmkg:surface-based-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
@@ -240,7 +239,6 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:MSG:HRSEVIRI,data/core/weather/space-based-ob
 urn:wmo:md:int-eumetsat:SWx:GK2A:SOSMAG,data/core/space-weather/space-based-observations/geo-kompsat-2a/ksem-mag
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
-urn:wmo:md:ir-irimo:reco.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:jp-jma:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kg-kyrgyzhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
