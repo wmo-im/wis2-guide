@@ -322,3 +322,4 @@ urn:wmo:md:vg-metservice:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:za-weathersa:jwtdpd,data/core/weather/surface-based-observations/temp
 urn:wmo:md:za-weathersa:xoeh2t,data/core/weather/surface-based-observations/synop
 urn:wmo:md:zm-zmd:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:zw-msd:surface-weather-observations,data/core/weather/surface-based-observations/synop
