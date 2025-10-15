@@ -239,6 +239,7 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:MSG:HRSEVIRI,data/core/weather/space-based-ob
 urn:wmo:md:int-eumetsat:SWx:GK2A:SOSMAG,data/core/space-weather/space-based-observations/geo-kompsat-2a/ksem-mag
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:ir-irimo:reco.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:jp-jma:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ke-meteo:synop-dataset-surface-observations,data/core/weather/surface-based-observations/synop
