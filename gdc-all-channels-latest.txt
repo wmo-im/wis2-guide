@@ -200,6 +200,7 @@ urn:wmo:md:in-imd:osycw0,data/core/ocean/surface-based-observations/drifting-buo
 urn:wmo:md:in-imd:satellite,data/core/weather/space-based-observations/insat-3dr/imager
 urn:wmo:md:in-imd:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:in-imd:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/cfosat/swim
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/fy-3d/mwhs-2
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/fy-3d/mwts-2
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/fy-3e/mwhs-2
@@ -229,6 +230,7 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observatio
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-1a/sar-c
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-3a/olci
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-3a/sral
+urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-3b/olci
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-3b/sral
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-6a/poseidon-4
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/atms
