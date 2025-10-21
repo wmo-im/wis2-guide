@@ -235,6 +235,7 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observatio
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/sentinel-6a/poseidon-4
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/atms
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/cris
+urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/viirs
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/swot/poseidon-3c
 urn:wmo:md:ir-irimo:core.surface-based-observations.daily,data/core/climate/surface-based-observations/daily
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
