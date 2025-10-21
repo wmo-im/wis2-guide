@@ -144,6 +144,7 @@ urn:wmo:md:cy-dom:weather.radar,data/core/weather/experimental/surface-based-obs
 urn:wmo:md:de-dwd:icon-eps.ALL,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:de-dwd:icon-eps.ALL,metadata
 urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observations/synop
+urn:wmo:md:de-dwd:weather.observations.GSRN,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:de-dwd:weather.observations.teamx,data/core/weather/surface-based-observations/temp
 urn:wmo:md:dm-dms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
