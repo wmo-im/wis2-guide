@@ -21,6 +21,8 @@ urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:upper-air,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bs-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:by-belgidromet:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:by-belgidromet:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bz-nms:belize-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bz-nms:belize-upper-air-messages,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ca-eccc-msc:02fd8740-af64-4ce0-af42-3c17c92cf02b,data/core/weather/experimental
