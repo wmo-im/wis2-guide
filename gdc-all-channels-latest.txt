@@ -12,6 +12,7 @@ urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,metadata
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
+urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.synop,metadata
 urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
