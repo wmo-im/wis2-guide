@@ -249,6 +249,8 @@ urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:jp-jma:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ke-meteo:synop-dataset-surface-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kg-kyrgyzhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:kg-kyrgyzhydromet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:kg-kyrgyzhydromet:sw1xss,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kn-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kr-kma:core.aviation.metar,data/core/weather/aviation/metar
 urn:wmo:md:kr-kma:core.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
