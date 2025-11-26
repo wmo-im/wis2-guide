@@ -141,6 +141,7 @@ urn:wmo:md:cm-meteocameroon:aqkyax,data/core/weather/surface-based-observations/
 urn:wmo:md:cn-cma:data.core.weather.prediction.forecast.medium-range.probabilistic.global,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:cn-cma:data.core.weather.space-based-observations.fy-3e.gnos-2,data/core/weather/space-based-observations/fy-3e/gnos-2
 urn:wmo:md:cn-cma:data.core.weather.surface-based-observations,data/core/weather/surface-based-observations/synop
+urn:wmo:md:co-ideam:automaticas,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cu-insmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
