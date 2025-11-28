@@ -147,6 +147,7 @@ urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-bas
 urn:wmo:md:cy-dom:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:cy-dom:weather.prediction.deterministic.local,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:cy-dom:weather.radar,data/core/weather/experimental/surface-based-observations/radar
+urn:wmo:md:de-dwd:0-276-9-19790,data/core/weather/surface-based-observations/temp
 urn:wmo:md:de-dwd:icon-eps.ALL,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:de-dwd:icon-eps.ALL,metadata
 urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observations/synop
@@ -291,7 +292,11 @@ urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:recommended.surface-based-observations.ship,data/recommended/weather/surface-based-observations/ship
 urn:wmo:md:se-smhi:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
+urn:wmo:md:sg-mss-asmc:recommended.weather.prediction,data/recommended/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:sg-mss-asmc:recommended.weather.space-based-observations.noaa-20,data/recommended/weather/space-based-observations/noaa-20/viirs
+urn:wmo:md:sg-mss:core.climate.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:sg-mss:recommended.weather.aviation.d_volmet,data/recommended/weather/experimental/aviation/volmet
+urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.wbgt,data/recommended/weather/experimental/surface-based-observations/wbgt
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
