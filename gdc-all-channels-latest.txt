@@ -286,6 +286,7 @@ urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-ba
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-aviamettelecom:temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:ru-aviamettelecom:wipps-dc:forecast:short-range:deterministic:limited-area:icon,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:recommended.surface-based-observations.ship,data/recommended/weather/surface-based-observations/ship
