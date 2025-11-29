@@ -294,13 +294,17 @@ urn:wmo:md:se-smhi:recommended.surface-based-observations.ship,data/recommended/
 urn:wmo:md:se-smhi:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:sg-mss-asmc:recommended.weather.prediction,data/recommended/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:sg-mss-asmc:recommended.weather.space-based-observations.noaa-20,data/recommended/weather/space-based-observations/noaa-20/viirs
+urn:wmo:md:sg-mss-asmc:recommended.weather.space-based-observations.regional-haze,data/recommended/weather/prediction/analysis/short-range/deterministic/limited-area
 urn:wmo:md:sg-mss-asmc:recommended.weather.space-based-observations.snpp,data/recommended/weather/space-based-observations/snpp/viirs
 urn:wmo:md:sg-mss:core.climate.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:sg-mss:core.weather.public.advisories-warnings,data/core/weather/advisories-warnings
 urn:wmo:md:sg-mss:core.weather.surface-based-observations.ship,data/core/weather/surface-based-observations/ship
+urn:wmo:md:sg-mss:core.weather.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sg-mss:recommended.weather.aviation.d_volmet,data/recommended/weather/experimental/aviation/volmet
 urn:wmo:md:sg-mss:recommended.weather.aviation.met-report,data/recommended/weather/experimental/aviation/met-report
+urn:wmo:md:sg-mss:recommended.weather.aviation.metar-speci,data/recommended/weather/aviation/metar
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.wbgt,data/recommended/weather/experimental/surface-based-observations/wbgt
+urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.weather-radar.cappi2km,data/recommended/weather/experimental/surface-based-observations/weather-radar
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
