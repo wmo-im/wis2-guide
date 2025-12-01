@@ -300,6 +300,7 @@ urn:wmo:md:sg-mss:core.climate.surface-based-observations.daily,data/core/climat
 urn:wmo:md:sg-mss:core.climate.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:sg-mss:core.weather.public.advisories-warnings,data/core/weather/advisories-warnings
 urn:wmo:md:sg-mss:core.weather.public.forecast,data/core/weather/prediction/forecast/medium-range/deterministic/limited-area
+urn:wmo:md:sg-mss:core.weather.surface-based-observations.amdar,data/core/weather/experimental/surface-based-observations/amdar
 urn:wmo:md:sg-mss:core.weather.surface-based-observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:sg-mss:core.weather.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sg-mss:core.weather.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
