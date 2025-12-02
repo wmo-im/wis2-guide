@@ -316,6 +316,7 @@ urn:wmo:md:sg-mss:recommended.weather.aviation.wind-shear-warning,data/recommend
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.lightning,data/recommended/weather/experimental/surface-based-observations/lightning
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.wbgt,data/recommended/weather/experimental/surface-based-observations/wbgt
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.weather-radar.cappi2km,data/recommended/weather/experimental/surface-based-observations/weather-radar
+urn:wmo:md:sn-anacim:9b6nz5,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
