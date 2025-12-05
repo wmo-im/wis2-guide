@@ -340,6 +340,7 @@ urn:wmo:md:us-noaa-nws:aviation-metar-observations,data/core/weather/aviation/me
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:us-noaa-nws:surface-based-observations-temp-ship,data/core/weather/surface-based-observations/temp-ship
 urn:wmo:md:us-noaa-nws:surface-weather-observations:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:us-noaa-synoptic:data.core.weather.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:us-ucsd-scripps-ldl:global-drifter-program,data/recommended/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:us-ucsd-scripps-ldl:sio-db,data/recommended/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:uy-inumet:cap-alerts,data/core/weather/advisories-warnings
