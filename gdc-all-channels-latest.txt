@@ -325,6 +325,7 @@ urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:tc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:td-anam:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:td-anam:core.weather.cap,data/core/weather/advisories-warnings
+urn:wmo:md:tg-anamet:2obre1,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
