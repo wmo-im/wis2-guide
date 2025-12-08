@@ -46,7 +46,7 @@ The primary function of an SCGDC is to test and evaluate content parity across a
 
 A Global Discovery Catalogue (GDC) must publish, every 24 hours, a zip file containing all metadata records available via the GDC API.
 
-A GDC Sensor Centre checks all GDCs are publishing the zip file and then analyzes the content of the zip file (all metadata records) to detect anomalies (i.e. missing metadata records, inconsistent data records between GDCs, validating metdata records for WCMP2 compliance).
+A GDC Sensor Centre checks all GDCs are publishing the zip file and then analyzes the content of the zip file (all metadata records) to detect anomalies (i.e. missing metadata records, inconsistent data records between GDCs, validating metadata records for WCMP2 compliance).
 
 Metadata content must be identical for all GDCs. The SCGDC verifies this consistency provides the necessary insights to trigger corrective action of the discrepancies.
 
