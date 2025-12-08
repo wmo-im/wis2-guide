@@ -20,6 +20,8 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 
 Each type of Sensor Centre will result in a set of metrics that will be used to measure and evaluate WIS 2.0 Global Services and Nodes.
 
+A Sensor Centre may also provide logs, in addition to the defined metrics, through download links announced using the WIS2 Monitoring Events standard in support of further analysis and corrective action.
+
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
 The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 are making available the same number of messages. In addition, it will provide a connectivity flag to detect the status of the connection toward each GB, as well as a timestamp of the last message being received from each GB.
