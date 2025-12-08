@@ -67,7 +67,7 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 * For each record, the SCGDC will:
 ** prune the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove all links that are not `rel=license` before further processing for parity checking.
 ** validate the record against the latest approved version of WCMP2
-*** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_invalid_total``, with the WCMP2 id as well as centre id of the GDC
+*** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_record_invalid_total``, with the WCMP2 id as well as centre id of the GDC
 ** compare each metadata record with the same WCMP2 `id` received from all other GDCs.
 ** If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
 ** If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
