@@ -333,6 +333,8 @@ urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/s
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored_buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.ship.ship-reports,data/core/weather/surface-based-observations/ship
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-descent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-20/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-21/cris
