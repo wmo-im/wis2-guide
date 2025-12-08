@@ -27,10 +27,9 @@ The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 a
 ===== 3.3.2.1 Technical considerations
 
 * The SCGB will connect to all Global Brokers.
-* The SCGB subscribes to the following topics on all GBs:
-** ``origin/a/wis2/#``
-** ``cache/a/wis2/#``
-** ``monitor/a/wis2/#``
+* The SCGB subscribes to ``origin/a/wis2/#, cache/a/wis2/#, monitor/a/wis2/#`` on all GBs
+* When the SCGB is successfully connected to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``1``. When the SCGB cannot connect to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``0``.
+* When a message is received on a subscription, the SCGB will increment the metric ``wmo_wis2_scgb_messages_received_total`` by ``1`` and will set the metric ``wmo_wis2_scgb_last_message_timestamp_seconds`` to the current timestamp in seconds.
 
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
