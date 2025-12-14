@@ -24,7 +24,15 @@ A Sensor Centre may also provide logs, in addition to the defined metrics, throu
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
-The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 are making available the same number of messages. In addition, it will provide a connectivity flag to detect the status of the connection toward each GB, as well as a timestamp of the last message being received from each GB.
+The aim of the SCGB is to compare the behaviour of Global Broker(s)::
+
+Through direct subscription to WIS2 Nodes or via other Global Brokers, each Global Broker aims at providing all messages available on WIS 2.0 to users subscribing to their MQTT(S) endpoint. 
+
+Therefore, the primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 are making available the same number of messages. In addition, it will provide a connectivity flag to detect the status of the connection toward each GB, as well as a timestamp of the last message being received from each GB.
+
+As a convention, the Sensor Centre for Global Broker centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
+
+For such a centre operated by Direction de la Météorologie of Congo, the centre-id would be cg-dirmet-sensor-centre-global-cache
 
 ===== 3.3.2.1 Technical considerations
 
@@ -33,14 +41,70 @@ The primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 a
 * When the SCGB is successfully connected to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``1``. When the SCGB cannot connect to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``0``.
 * When a message is received on a subscription, the SCGB will increment the metric ``wmo_wis2_scgb_messages_received_total`` by ``1`` and will set the metric ``wmo_wis2_scgb_last_message_timestamp_seconds`` to the current timestamp in seconds.
 
+All the metrics must be exposed for scraping by the Global Monitor.
+
 ==== 3.3.3 Sensor Centres for Global Caches (SCGC)
 
-TODO
+The aim of the SCGC is to compare the behaviour of Global Cache(s)::
+
+In WIS 2.0 each Global Cache is independent of the other Global Caches. According to the specification of WIS 2.0, Global Cache (see https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html#_2_7_4_1_technical_considerations ) :
+
+`Global Caches will operate independently of one another. Each Global Cache will hold a full copy of the cache – although there may be small differences between the various Global Caches as data availability notification messages propagate through WIS to each one. There is no formal synchronization between Global Caches.`
+
+it is therefore interesting to verify, for example:
+
+. what is the average delay to cache the data made available by WIS2 Node
+. are all files published as _core data_ (and with `cache: true` in the Notification Message) by WIS2 Nodes are effectively available in all Global Caches
+. are files missed by some Global Cache or more critically by all Global Caches
+
+Such metrics would provide useful information to identify problems, to help Global Caches to fix them, to define KPI that could be used to objectively measure the effective performance of the Cache.
+
+It could also be used to detect anomalies from the WIS2 node, such as the reuse too frequently of the same `data_id`.
+
+As a convention, the Sensor Centre for Global Cache centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
+
+For such a centre operated by Météo-France the centre-id would be fr-meteofrance-sensor-centre-global-cache
 
 ===== 3.3.3.1 Technical considerations
 
-TODO
-* As a convention, the Sensor Centre for Global Cache centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
+A list of metrics has been defined for this Sensor Centre (see https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/scgc.csv):
+
+[cols="3*", options="header"]
+|=============================================================================================================================================================
+wmo_wis2_scgc_cache_delay_seconds,global_cache|centre_id|report_by,Delay between origin and cache message,-
+wmo_wis2_scgc_messages_cached_total,global_cache|centre_id|report_by,Number of data files cached for centre_id,-
+wmo_wis2_scgc_messages_cached_delay_total,global_cache|centre_id|delay_threshold|report_by,Number of data files cached for centre_id within defined delay threshold (120s 300s 600s),-
+wmo_wis2_scgc_messages_duplicates_total,centre_id|report_by,Number of messages with identical data_id and no rel=update,-
+wmo_wis2_scgc_messages_published_total,centre_id|report_by,Number of cacheable data files published,-
+wmo_wis2_scgc_messages_missed_total,global_cache|centre_id|report_by,Number of cacheable data not in global cache,-
+wmo_wis2_scgc_messages_missed_all_total,centre_id|report_by,Number of cacheable data not in any cache,-
+wmo_wis2_scgc_messages_cache_override_total,global_cache|centre_id|report_by,Number of cacheable data with override cache directive,-         
+|=============================================================================================================================================================
+
+The processing of this Sensor Centre is as follow:
+
+- Subscribe to a given `origin/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Broker
+- Subscribe to a given `cache/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Cache - The subscription must be done on the broker of the Global Cache (unlike normal subscription to be made only on the Global Broker)
+
+Only on the subscription to the Global Broker:
+
+- Discard the Notification Message if is it `recommended` data as it will not be cached
+- Detect any duplicates `data_id` not including a `rel: update` within a period of at least X hours
+- Store the time where the message as been received
+- (optional) Store the full Notification Message - this can be useful to analyse systematic issues
+
+For each of the subscription to the various Global Caches:
+
+- For each Notification Message and using `data_id`, make the difference between the time was received on `origin` and the same `data_id` on `cache`: Time~Cache~ - Time~Origin~
+- Update the `wmo_wis2_scgc_cache_delay_seconds` metric with this value
+- Compare this value with the three threshold defined in the metric table above. Increase by 1 `wmo_wis2_scgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less that 300s, less than 600s)
+- If no Notification Message for the `data_id` is received after the highest threshold (here 600s), increase by 1 `wmo_wis2_scgc_messages_missed_total`
+
+As a Global Cache can decide not to cache a data granule, and in order to assess if a Global Cache has decided to do so, the Sensor Centre will compare the `links` array published on `origin/a/wis/#` and in the Notification Message received on `cache/a/wis2/#` if the two `links`are identical, then the Global Cache has decided not to cache the data. In this case, increase by 1 `wmo_wis2_scgc_messages_cache_override_total `.
+
+If no Global Cache has cached the data, increase by 1 `wmo_wis2_scgc_messages_missed_all_total`
+
+All the metrics must be exposed for scraping by the Global Monitor.
 
 ==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
 
