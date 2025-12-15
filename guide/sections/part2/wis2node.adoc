@@ -78,8 +78,11 @@ Access controls may be implemented for recommended data. Only the security schem
 
 ===== 2.6.1.4 Improving Level of Service of a WIS2 Node 
 
-It is possible to improve the level of service of a WIS2 Node by running a primary and a backup node. When the MQTT endpoint provided by the primary node in reachable, the Global Broker will subscribe to the primary node. When the MQTT connection is lost, the Global Broker will wait for one minute. If after one minute, the connection to the primary WIS2 Node MQTT endpoint is still down, the connection to the backup node will be activated. When the connection to the primary node is reestablished and stable for one minute, the connection to the backup WIS2 Node will be stopped. It must be noted that the switch between the primary and the backup node is *only* controlled by the connectivity to the MQTT endpoint. The permanent absence of messages on the primary node or the failure to download core data from the Global Cache will not trigger the switch to the backup node.
-It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same centre-id - ) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.
+It is possible to improve the level of service of a WIS2 Node by running a primary and a backup node. When the MQTT endpoint provided by the primary node in reachable, the Global Broker will subscribe to the primary node. When the MQTT connection is lost, the Global Broker will wait for one minute. If after one minute, the connection to the primary WIS2 Node MQTT endpoint is still down, the connection to the backup node will be activated. When the connection to the primary node is reestablished and stable for one minute, the connection to the backup WIS2 Node will be stopped. 
+
+It must be noted that the switch between the primary and the backup node is *only* controlled by the connectivity to the MQTT endpoint. The permanent absence of messages on the primary node or the failure to download core data from the Global Cache will not trigger the switch to the backup node.
+
+It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same ``centre-id`` - ) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.
 
 ==== 2.6.2 Performance management
 
