@@ -353,6 +353,7 @@ urn:wmo:md:us-ucsd-scripps-ldl:sio-db,data/recommended/ocean/surface-based-obser
 urn:wmo:md:uy-inumet:cap-alerts,data/core/weather/advisories-warnings
 urn:wmo:md:uy-inumet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ve-inameh:sinopticos,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vg-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:za-weathersa:jwtdpd,data/core/weather/surface-based-observations/temp
 urn:wmo:md:za-weathersa:xoeh2t,data/core/weather/surface-based-observations/synop
