@@ -342,6 +342,7 @@ urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.lightning,data/
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.wbgt,data/recommended/weather/experimental/surface-based-observations/wbgt
 urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.weather-radar.cappi2km,data/recommended/weather/experimental/surface-based-observations/weather-radar
 urn:wmo:md:sn-anacim:9b6nz5,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sn-anacim:climat,data/core/climate/surface-based-observations/daily
 urn:wmo:md:sn-anacim:krbor9,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sn-anacim:ld49rt,data/recommended/weather/aviation/metar
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
