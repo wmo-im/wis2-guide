@@ -15,10 +15,13 @@ urn:wmo:md:bn-bdmd:aviation-taf,data/recommended/weather/aviation/taf
 urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
+urn:wmo:md:br-inmet:cap,metadata
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:br-inmet:surface-based-observations.synop,metadata
 urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:br-inmet:surface-based-observations.temp,metadata
 urn:wmo:md:br-inmet:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
@@ -149,6 +152,7 @@ urn:wmo:md:cy-dom:weather.prediction.deterministic.local,data/core/weather/predi
 urn:wmo:md:cy-dom:weather.radar,data/core/weather/experimental/surface-based-observations/radar
 urn:wmo:md:de-dwd:0-276-9-19790,data/core/weather/surface-based-observations/temp
 urn:wmo:md:de-dwd:icon-eps.ALL,data/core/weather/prediction/forecast/medium-range/probabilistic/global
+urn:wmo:md:de-dwd:icon-eps.ALL,metadata
 urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.GSRN,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.ship,data/core/weather/surface-based-observations/ship
@@ -288,6 +292,7 @@ urn:wmo:md:lc-metservice:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:ma-marocmeteo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:h6vqw6,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ma-marocmeteo:surface-based-observations.synop,metadata
 urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
