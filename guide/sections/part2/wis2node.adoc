@@ -76,6 +76,14 @@ During registration, the WMO Secretariat will provide host names and IP addresse
 
 Access controls may be implemented for recommended data. Only the security schemes for authentication and authorization specified in OpenAPI should be used.footnote:[See OpenAPI Specification - Security Scheme Object: https://spec.openapis.org/oas/v3.1.0#security-scheme-object.]
 
+===== 2.6.1.4 Improving Level of Service of a WIS Centre
+
+It is possible to improve the level of service of a WIS centre by running a primary and a backup node. When the MQTT endpoint provided by the primary node is reachable, the Global Broker will subscribe to the primary node broker. When the MQTT connection is lost, the Global Broker will wait for one minute. If after one minute, the connection to the primary node broker is still down, the connection to the backup node will be activated. When the connection to the primary node is reestablished and stable for one minute, the connection to the backup node will be stopped. 
+
+It must be noted that the switch between the primary and the backup node is *only* controlled by the connectivity to the MQTT endpoint. The permanent absence of messages on the primary node or the failure to download core data from the Global Cache will not trigger the switch to the backup node.
+
+It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same ``centre-id`` - ) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.
+
 ==== 2.6.2 Performance management
 
 ===== 2.6.2.1 Service levels and performance indicators
@@ -93,11 +101,11 @@ A WIS2 Node must be able to publish datasets and compliant discovery metadata. T
 
 If contacted by a Global Monitor for a performance issue via a GISC, the WIS2 Node should provide metrics to the GISC and the Global Monitor when service is restored to inform them of the resolution of the issue.
 
-==== 2.6.3 WIS2 Node reference implementation: WIS2 in a box
+==== 2.6.3 WIS2 Node Reference Implementation: WIS2 in a box
 
 When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
-To assist Members, a free and open-source reference implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.
+To assist Members, a free and open-source Reference Implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.
 
 wis2box provides the functionality required for both data publisher and data consumer roles, as well as the following technical functions:
 

@@ -185,7 +185,7 @@ The following sections are recommended for further reading:
 * <<_part_iv_security>>
 * <<_part_v_competencies>>
 
-Note that _PART IV. Security_ and _PART V. Competencies_ reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide. 
+Note that _PART V. Security_ and _PART VI. Competencies_ reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide. 
 
 Data publishers publishing aviation weather data via WIS2 for onward transmission through the International Civil Aviation Organization (ICAO) System Wide Information Management (SWIM), should also read <<_2_8_1_1_publishing_meteorological_data_through_wis2_into_icao_swim>>.
 

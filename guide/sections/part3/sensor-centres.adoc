@@ -1,0 +1,141 @@
+=== 3.3 Sensor Centres
+
+Sensor Centres are components external to WIS 2.0, which provide continuous assessments on functionality.  Sensor
+Centres can provide external feedback on WIS 2.0 functions to trigger corrective action in support of continuous improvement.
+
+==== 3.3.1 Overview
+
+As described in the Manual on WIS, Volume II, WIS 2.0 is a collective, distributed data exchange system that requires monitoring. 
+
+All WIS 2.0 components have defined metrics and conditions on those metrics to trigger alerts.
+
+The Global Monitor collects the metrics and presents them a suite of dashboards enabling observability, visuaization and analysis.
+
+Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nodes. It implements further processing on any component of the WIS 2.0 architecture.  This processing results in additional metrics which can also be provided to dashboards, within or external to WIS 2.0.
+
+"Sensor Centre" is a generic term to describe additional components to measure various aspects including (but not limited to):
+
+* the quality and performance of Global Services
+* the conformance of the products exchanged with the agreed WMO Regulations (eg. RBON)
+
+Each type of Sensor Centre will result in a set of metrics that will be used to measure and evaluate WIS 2.0 Global Services and Nodes.
+
+A Sensor Centre may also provide logs, in addition to the defined metrics, through download links announced using the WIS2 Monitoring Events standard in support of further analysis and corrective action.
+
+==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
+
+The aim of the SCGB is to compare the behaviour of Global Broker(s)::
+
+Through direct subscription to WIS2 Nodes or via other Global Brokers, each Global Broker aims at providing all messages available on WIS 2.0 to users subscribing to their MQTT(S) endpoint. 
+
+Therefore, the primary function of a SCGB is to test and evaluate that all GBs in WIS 2.0 are making available the same number of messages. In addition, it will provide a connectivity flag to detect the status of the connection toward each GB, as well as a timestamp of the last message being received from each GB.
+
+As a convention, the Sensor Centre for Global Broker centre-id will be ``{tld}-{centre-name}-sensor-centre-global-broker``.
+
+For such a centre operated by Direction de la Météorologie of Congo, the centre-id would be cg-dirmet-sensor-centre-global-cache
+
+===== 3.3.2.1 Technical considerations
+
+* The SCGB will connect to all Global Brokers.
+* The SCGB subscribes to `+origin/a/wis2/#+`, `+cache/a/wis2/#+`, `+monitor/a/wis2/#+` on all GBs
+* When the SCGB is successfully connected to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``1``. When the SCGB cannot connect to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``0``.
+* When a message is received on a subscription, the SCGB will increment the metric ``wmo_wis2_scgb_messages_received_total`` by ``1`` and will set the metric ``wmo_wis2_scgb_last_message_timestamp_seconds`` to the current timestamp in seconds.
+
+All the metrics must be exposed for scraping by the Global Monitor.
+
+==== 3.3.3 Sensor Centres for Global Caches (SCGC)
+
+The aim of the SCGC is to compare the behaviour of Global Cache(s)::
+
+In WIS 2.0 each Global Cache is independent of the other Global Caches. According to the specification of WIS 2.0, Global Cache (see https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html#_2_7_4_1_technical_considerations ) :
+
+`Global Caches will operate independently of one another. Each Global Cache will hold a full copy of the cache – although there may be small differences between the various Global Caches as data availability notification messages propagate through WIS to each one. There is no formal synchronization between Global Caches.`
+
+it is therefore interesting to verify, for example:
+
+. what is the average delay to cache the data made available by WIS2 Node
+. are all files published as _core data_ (and with `cache: true` in the Notification Message) by WIS2 Nodes are effectively available in all Global Caches
+. are files missed by some Global Cache or more critically by all Global Caches
+
+Such metrics would provide useful information to identify problems, to help Global Caches to fix them, to define KPI that could be used to objectively measure the effective performance of the Cache.
+
+It could also be used to detect anomalies from the WIS2 node, such as the reuse too frequently of the same `data_id`.
+
+As a convention, the Sensor Centre for Global Cache centre-id will be ``{tld}-{centre-name}-sensor-centre-global-cache``.
+
+For such a centre operated by Météo-France the centre-id would be fr-meteofrance-sensor-centre-global-cache
+
+===== 3.3.3.1 Technical considerations
+
+A list of metrics has been defined for this Sensor Centre (see https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/scgc.csv):
+
+[cols="3*", options="header"]
+|=============================================================================================================================================================
+wmo_wis2_scgc_cache_delay_seconds,global_cache|centre_id|report_by,Delay between origin and cache message,-
+wmo_wis2_scgc_messages_cached_total,global_cache|centre_id|report_by,Number of data files cached for centre_id,-
+wmo_wis2_scgc_messages_cached_delay_total,global_cache|centre_id|delay_threshold|report_by,Number of data files cached for centre_id within defined delay threshold (120s 300s 600s),-
+wmo_wis2_scgc_messages_duplicates_total,centre_id|report_by,Number of messages with identical data_id and no rel=update,-
+wmo_wis2_scgc_messages_published_total,centre_id|report_by,Number of cacheable data files published,-
+wmo_wis2_scgc_messages_missed_total,global_cache|centre_id|report_by,Number of cacheable data not in global cache,-
+wmo_wis2_scgc_messages_missed_all_total,centre_id|report_by,Number of cacheable data not in any cache,-
+wmo_wis2_scgc_messages_cache_override_total,global_cache|centre_id|report_by,Number of cacheable data with override cache directive,-         
+|=============================================================================================================================================================
+
+The processing of this Sensor Centre is as follow:
+
+- Subscribe to a given `origin/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Broker
+- Subscribe to a given `cache/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Cache - The subscription must be done on the broker of the Global Cache (unlike normal subscription to be made only on the Global Broker)
+
+Only on the subscription to the Global Broker:
+
+- Discard the Notification Message if is it `recommended` data as it will not be cached
+- Detect any duplicates `data_id` not including a `rel: update` within a period of at least X hours
+- Store the time where the message as been received
+- (optional) Store the full Notification Message - this can be useful to analyse systematic issues
+
+For each of the subscription to the various Global Caches:
+
+- For each Notification Message and using `data_id`, make the difference between the time was received on `origin` and the same `data_id` on `cache`: Time~Cache~ - Time~Origin~
+- Update the `wmo_wis2_scgc_cache_delay_seconds` metric with this value
+- Compare this value with the three threshold defined in the metric table above. Increase by 1 `wmo_wis2_scgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less that 300s, less than 600s)
+- If no Notification Message for the `data_id` is received after the highest threshold (here 600s), increase by 1 `wmo_wis2_scgc_messages_missed_total`
+
+As a Global Cache can decide not to cache a data granule, and in order to assess if a Global Cache has decided to do so, the Sensor Centre will compare the `links` array published on `origin/a/wis/#` and in the Notification Message received on `cache/a/wis2/#` if the two `links`are identical, then the Global Cache has decided not to cache the data. In this case, increase by 1 `wmo_wis2_scgc_messages_cache_override_total `.
+
+If no Global Cache has cached the data, increase by 1 `wmo_wis2_scgc_messages_missed_all_total`
+
+All the metrics must be exposed for scraping by the Global Monitor.
+
+==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
+
+The primary function of an SCGDC is to test and evaluate content parity across all GDCs in WIS 2.0.
+
+A Global Discovery Catalogue (GDC) must publish, every 24 hours, a zip file containing all metadata records available via the GDC API.
+
+A GDC Sensor Centre checks all GDCs are publishing the zip file and then analyzes the content of the zip file (all metadata records) to detect anomalies (i.e. missing metadata records, inconsistent data records between GDCs, validating metadata records for WCMP2 compliance).
+
+Metadata content must be identical for all GDCs. The SCGDC verifies this consistency provides the necessary insights to trigger corrective action of the discrepancies.
+
+===== 3.3.4.1 Technical considerations
+
+* The SCGDC will connect to a minimum of two Global Brokers. 
+* The SCGDC subscribes to the metadata topic for all GDCs, by one of the following methods:
+** subscribing to ``cache/a/wis2/+/metadata/#``, discarding all Notification Messages whose centre identifier (in the topic) does not end with ``-global-discovery-catalogue``.
+** subscribing to each GDC via ``cache/a/wis2/centre-id/metadata/#``.
+* The SCGDC will use the link provided in the WIS2 Notification Message received to download the zip file published by the GDC.
+* For each GDC centre identifier, upon successful download of the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_last_download_timestamp_seconds`` with the timestamp (in seconds) of the last successful download.
+* Once a day, the SCGDC will analyze the content of the latest zip files received across all GDCs
+** Files older than 24 hours will not be analyzed.
+* The SCGDC will set the metric ``wmo_wis2_scgdc_records_incorrect_total`` to ``0`` at the beginning of the analysis for all GDCs where the zip file is less than 24 hours old. *Note*: the metric ``wmo_wis2_scgdc_records_incorrect_total`` is a gauge (not a counter) whose value can be reset to ``0`` at the beginning of the analysis.
+* After unpacking the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_records_received_total`` with the number of records found in the zip file.
+* For each record, the SCGDC will:
+** prune the `links` array. The `links` array is modified by each GDC and modifications are dependent on the GDC itself. It is therefore required to remove all links that are not `rel=license` before further processing for parity checking.
+** validate the record against the latest approved version of WCMP2
+*** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_record_invalid_total``, with the WCMP2 id as well as centre id of the GDC
+** compare each metadata record with the same WCMP2 `id` received from all other GDCs.
+** If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
+** If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
+*** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs except the GDC having the most recent record.
+** If the content is different, and if no GDC holds a record with ``properties.updated``, the SCGDC will consider that it is not possible to ensure which GDC has the correct record.
+*** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs.
+* As a convention, the Sensor Centre for Global Discovery Catalogue centre-id will be ``{tld}-{centre-name}-sensor-centre-global-discovery-catalogue``.
