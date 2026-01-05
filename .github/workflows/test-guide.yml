@@ -3,7 +3,7 @@ name: Test WIS2 Guide build
 on:
   pull_request:
     paths:
-      - '**.adoc'
+      - '**.adoc'   
       
 env:
   FILE_BASENAME: wis2-guide-APPROVED
@@ -19,7 +19,7 @@ jobs:
           && sudo apt-get install -y pandoc \
           && sudo gem install asciidoctor asciidoctor-pdf
       - name: checkout repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
       - name: build documentation
         run: |
           mkdir -p /tmp/wis2-guide/guide/images \
