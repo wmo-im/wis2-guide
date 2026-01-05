@@ -92,9 +92,6 @@ In the following sections, and for each Global Service, a set of metrics is defi
 * A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
 * A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
-* A Global Broker will update its metrics at least every 60 seconds.
-* A Global Broker should not reset its metrics counts.
-* All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * In order to improve the service level, a WIS centre may decide to operate two nodes sharing the same ``centre-id``. One will be considered as _primary_ and the other one as _secondary_. In this case, when the primary WIS centre broker is reachable (the MQTT connection is up and running), the Global Broker will only process the notification messages from this primary node. When the connection is dropped (the MQTT connection is down) for at least one minute, the Global Broker will start processing the notification messages received from the backup WIS centre broker. When the connection to the primary WIS centre broker is active for at least one minute, the Global Broker will stop processing the messages coming from the backup WIS centre broker and will only process the messages received from the primary WIS centre broker. When the Global Broker is processing the messages from the backup WIS centre broker the metric ``wmo_wis2_gb_connected_backup_flag`` will be set to 1. When the backup WIS centre broker is defined but is not used as the source of notification message, the metric ``wmo_wis2_gb_connected_backup_flag`` will be set to 0.
 * All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest regularly.
 * As a convention, the Global Broker centre-id will be ``tld-{centre-name}-global-broker``.
@@ -126,8 +123,6 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * If core data are not cached on a Global Cache (that is, if the data are flagged as ``"cache": false`` or if the Global Cache decides not to cache these data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the ``cache/a/wis2/...`` topic. In this case, the message id will be changed, and the rest of the message will not be modified.
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a publicly resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
 * A Global Cache should validate the integrity of the resources it caches and only accept data that match the integrity value from the WIS2 Notification Message. If the WIS2 Notification Message does not contain an integrity value, the Global Cache should accept the data as valid. In this case, the Global Cache may add an integrity value to the message it republishes.
-* A Global Cache will update its metrics at least every 60 seconds.
-* A Global Cache should not reset its metrics counts.
 * As a convention, the Global Cache centre-id will be ``tld-{centre-name}-global-cache``.
 
 ===== 2.7.4.2 Practices and procedures
@@ -218,7 +213,5 @@ wis2-gdc is managed as a free and open source project. Source code, issue tracki
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the "health" (that is, the performance) of components at NCs/DCPCs, as well as Global Services.
 * The Global Monitor will provide a web-based dashboard that displays the WIS2 system performance and data availability.
-* A Global Monitor will update its metrics at least every 60 seconds.
-* A Global Monitor should not reset its metrics counts.
 * As a convention, the Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
 * The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation. 
