@@ -1,12 +1,12 @@
-name: WIS2 Guide
+name: WIS2 Guide for INFCOM review
 
 on:
   push:
     branches:
-    - main
+    - INFCOM-4
 
 env:
-  FILE_BASENAME: wis2-guide-APPROVED
+  FILE_BASENAME: wis2-guide-DRAFT-INFCOM-4
 
 jobs:
   build-wis2-guide:
@@ -38,8 +38,9 @@ jobs:
           git checkout gh-pages
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
-          rm -rf guide
-          mv -f /tmp/wis2-guide/* .
+          rm -rf guide/infcom
+          mkdir -p guide/infcom
+          mv -f /tmp/wis2-guide/* guide/infcom
           git add .
-          git commit -am "update WIS2 Guide build"
+          git commit -am "update WIS2 Guide INFCOM build"
           git push
