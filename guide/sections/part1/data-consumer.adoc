@@ -52,7 +52,7 @@ Links to where data can be accessed are made available through dataset discovery
 
 A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" footnote:[See Internet Assigned Numbers Authority (IANA) Link Relations: https://www.iana.org/assignments/link-relations/link-relations.xhtml]).
 
-A data consumer should expect to receive multiple notification messages about the same data item. Nor should data consumers assume that messages arrive in time-sequence order (i.e., newest published message, as indicated by ``properties.pubtime``, arriving last). Consequently, for notification messages relating to the same data item (i.e., notification messages with identical ``properties.data_id``), they should:
+A data consumer should expect to receive multiple notification messages about the same data item. Furthermore, data consumers should not assume that messages arrive in time-sequence order (i.e., newest published message, as indicated by ``properties.pubtime``, arriving last). Consequently, for notification messages relating to the same data item (i.e., notification messages with identical ``properties.data_id``), they should:
 
 1. Prioritise the message with the latest publication time. 
 2. Discard any notification messages earlier publication time that have not yet been processed or may be received in the future.
