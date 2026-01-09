@@ -351,6 +351,8 @@ urn:wmo:md:td-anam:core.weather.cap,data/core/weather/advisories-warnings
 urn:wmo:md:tg-anamet:2obre1,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:uk-metoffice-wmc:weather.prediction.analysis.global,data/core/weather/prediction/analysis/medium-range/deterministic/global
+urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored_buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.ship.ship-reports,data/core/weather/surface-based-observations/ship
