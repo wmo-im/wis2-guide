@@ -149,6 +149,7 @@ urn:wmo:md:cy-dom:surface-based-observations.temp,data/core/weather/surface-base
 urn:wmo:md:cy-dom:weather.prediction.deterministic.local,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:cy-dom:weather.radar,data/core/weather/experimental/surface-based-observations/radar
 urn:wmo:md:de-dwd:0-276-9-19790,data/core/weather/surface-based-observations/temp
+urn:wmo:md:de-dwd:NAWDIC-KITsonde,data/core/weather/surface-based-observations/temp
 urn:wmo:md:de-dwd:icon-eps.ALL,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.GSRN,data/recommended/weather/surface-based-observations/synop
