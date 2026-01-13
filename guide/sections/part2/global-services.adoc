@@ -136,7 +136,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
 ** Else
 *** Maintain a list of ``data_id`` values that have already been downloaded;
-*** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
+*** Verify whether the message points to new data (new ``data_id`` and inspecting the link ``rel`` attribute is ``canonical``) or updated data (known ``data_id``, more recent ``pubtime`` and inspecting the link ``rel`` attribute is ``updated``);
 *** If the message is new or updated:
 **** Download only new or updated data from the ``href`` or extract the data from the message content;
 **** If the message contains an integrity value for the data, verify the integrity of the data;
