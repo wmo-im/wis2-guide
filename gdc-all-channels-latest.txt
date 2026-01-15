@@ -309,7 +309,9 @@ urn:wmo:md:ru-roshydromet:core.surface-based-observations.synop,data/core/weathe
 urn:wmo:md:ru-roshydromet:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-roshydromet:wipps-dc.forecast.short-range.deterministic.limited-area.icon,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/
 urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
