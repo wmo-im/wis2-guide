@@ -90,6 +90,8 @@ In the following sections, and for each Global Service, a set of metrics is defi
 * A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
 * A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
+* A Global Broker will update its metrics at least every 60 seconds.
+* A Global Broker should not reset its metrics counts.
 * All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
 * As a convention, the Global Broker centre-id will be ``tld-{centre-name}-global-broker``.
 * A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a publicly resolvable Domain Name System (DNS) name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname and any subsequent changes.
@@ -121,6 +123,8 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a publicly resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
 * A Global Cache should validate the integrity of the resources it caches and only accept data that match the integrity value from the WIS2 Notification Message. If the WIS2 Notification Message does not contain an integrity value, the Global Cache should accept the data as valid. In this case, the Global Cache may add an integrity value to the message it republishes.
 * A Global Cache will provide the ``properties.global-cache`` property (with its centre identifier as the value) in notifications published to ``cache/a/wis2/{centre-id}`` for data that it caches
+* A Global Cache will update its metrics at least every 60 seconds.
+* A Global Cache should not reset its metrics counts.
 * As a convention, the Global Cache centre-id will be ``tld-{centre-name}-global-cache``.
 
 ===== 2.7.4.2 Practices and procedures
@@ -133,7 +137,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 *** Republish the message at topic ``cache/a/wis2/...``, matching ``+/a/wis2/...`` where the original message has been received, after having updated the id of the message.
 ** Else
 *** Maintain a list of ``data_id`` values that have already been downloaded;
-*** Verify whether the message points to new or updated data by comparing the pubtime value of the notification message with the list of ``data_id`` values;
+*** Verify whether the message points to new data (new ``data_id`` and inspecting the link ``rel`` attribute is ``canonical``) or updated data (known ``data_id``, more recent ``pubtime`` and inspecting the link ``rel`` attribute is ``updated``);
 *** If the message is new or updated:
 **** Download only new or updated data from the ``href`` or extract the data from the message content;
 **** If the message contains an integrity value for the data, verify the integrity of the data;
@@ -181,6 +185,13 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue will provide human-readable web pages with embedded markup using the schema.org vocabulary, thereby enabling search engines to crawl and index its content. Consequently, data consumers should be able to discover WIS content via third party search engines.
 * A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day; this file will be made be accessible via HTTP. The zipfile will include a directory named after the centre-id of the Global Discovery Catalogue containing all WCMP2 records.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zip file of all WCMP2 records on its centre-id's +metadata+ topic (for example, `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue).
+* A Global Discovery Catalogue will generate metrics on a daily basis for the following:
+** ``wmo_wis2_gdc_core_total`` (foreach centre identifier)
+** ``wmo_wis2_gdc_recommended_total`` (foreach centre identifier)
+** ``wmo_wis2_gdc_earth_system_discipline_total`` (foreach Earth system discipline per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_total`` (foreach discovery metadata record per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_average`` (foreach centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_over80_total`` (foreach centre identifier)
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention, a Global Discovery Catalogue's centre-id will be ``tld-{centre-name}-global-discovery-catalogue``.
 
@@ -211,5 +222,7 @@ wis2-gdc is managed as a free and open source project. Source code, issue tracki
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the "health" (that is, the performance) of components at NCs/DCPCs, as well as Global Services.
 * The Global Monitor will provide a web-based dashboard that displays the WIS2 system performance and data availability.
+* A Global Monitor will update its metrics at least every 60 seconds.
+* A Global Monitor should not reset its metrics counts.
 * As a convention, the Global Monitor centre-id will be ``tld-{centre-name}-global-monitor``.
-* The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation. 
+* The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.
