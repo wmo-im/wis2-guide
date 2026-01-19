@@ -20,7 +20,6 @@ urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:br-inmet:synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:br-inmet:synop-aut,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:upper-air,data/core/weather/surface-based-observations/temp
