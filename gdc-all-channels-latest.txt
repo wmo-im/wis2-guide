@@ -301,6 +301,7 @@ urn:wmo:md:nz-metservice:surface-based-observations.ship,data/core/weather/surfa
 urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ph-pagasa:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
