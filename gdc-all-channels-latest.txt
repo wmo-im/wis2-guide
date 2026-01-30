@@ -378,6 +378,8 @@ urn:wmo:md:us-noaa-nws:surface-based-observations-temp-ship,data/core/weather/su
 urn:wmo:md:us-noaa-nws:surface-ocean-observations:drifting-buoys,data/core/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:us-noaa-nws:surface-ocean-observations:moored-buoy,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:us-noaa-nws:surface-weather-observations:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:us-noaa-nws:surface-weather-observations:wind-profile,data/core/weather/surface-based-observations/wind-profile
+urn:wmo:md:us-noaa-nws:surface-weather-observations:wind-profile-ship,data/core/weather/surface-based-observations/wind-profile-ship
 urn:wmo:md:us-noaa-synoptic:data.core.weather.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:us-ucsd-scripps-ldl:global-drifter-program,data/recommended/ocean/surface-based-observations/drifting-buoys
 urn:wmo:md:us-ucsd-scripps-ldl:sio-db,data/recommended/ocean/surface-based-observations/drifting-buoys
