@@ -159,6 +159,11 @@ urn:wmo:md:de-dwd:weather.observations,data/core/weather/surface-based-observati
 urn:wmo:md:de-dwd:weather.observations.GSRN,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:de-dwd:weather.observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:de-dwd:weather.observations.teamx,data/core/weather/surface-based-observations/temp
+urn:wmo:md:dj-anm:metar,data/recommended/weather/aviation/metar
+urn:wmo:md:dj-anm:sigmet,data/recommended/weather/advisories-warnings
+urn:wmo:md:dj-anm:speci,data/recommended/weather/aviation/metar
+urn:wmo:md:dj-anm:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:dj-anm:taf,data/recommended/weather/aviation/taf
 urn:wmo:md:dm-dms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:dz-meteoalgerie:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:dz-meteoalgerie:temp-21hours,data/core/weather/surface-based-observations/temp
