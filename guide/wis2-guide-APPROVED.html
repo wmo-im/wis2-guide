@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.26">
-<meta name="copyright" content="Copyright © 2024 World Meteorological Organization (WMO)">
-<title>Guide to the WMO Information System Volume II (APPROVED) - WMO Information System 2.0</title>
+<meta name="copyright" content="Copyright © 2026 World Meteorological Organization (WMO)">
+<title>Guide to the WMO Information System (WMO-No. 1061), Volume II - WMO Information System 2.0 (APPROVED)</title>
 <style>
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
 @import "https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css";
@@ -78,7 +78,7 @@ body {
 </head>
 <body class="book">
 <div id="header">
-<h1>Guide to the WMO Information System Volume II (APPROVED) - WMO Information System 2.0</h1>
+<h1>Guide to the WMO Information System (WMO-No. 1061), Volume II - WMO Information System 2.0 (APPROVED)</h1>
 </div>
 <div id="content">
 <div id="preamble">
@@ -96,10 +96,10 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-01-20</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-02-02</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.0.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.2.0</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document status: APPROVED</p></td>
@@ -117,7 +117,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Commission for Observation, Infrastructure and Information Systems (INFCOM)<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright © 2024 World Meteorological Organization (WMO)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Copyright © 2026 World Meteorological Organization (WMO)</p></td>
 </tr>
 </tbody>
 </table>
@@ -187,7 +187,7 @@ body {
 <ul class="sectlevel3">
 <li><a href="#_2_6_1_practices_and_procedures">2.6.1 Practices and procedures</a></li>
 <li><a href="#_2_6_2_performance_management">2.6.2 Performance management</a></li>
-<li><a href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box">2.6.3 WIS2 Node reference implementation: WIS2 in a box</a></li>
+<li><a href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box">2.6.3 WIS2 Node Reference Implementation: WIS2 in a box</a></li>
 </ul>
 </li>
 <li><a href="#_2_7_implementation_and_operation_of_a_global_service">2.7 Implementation and operation of a Global Service</a>
@@ -222,6 +222,7 @@ body {
 </li>
 <li><a href="#_part_iv_security">PART IV. Security</a></li>
 <li><a href="#_part_v_competencies">PART V. Competencies</a></li>
+<li><a href="#_revision_history">Annex A: Revision History</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -425,7 +426,7 @@ body {
 <div class="sect3">
 <h4 id="_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data"><a class="anchor" href="#_1_2_2_how_to_subscribe_to_notifications_about_the_availability_of_new_data"></a>1.2.2 How to subscribe to notifications about the availability of new data</h4>
 <div class="paragraph">
-<p>WIS2 provides notifications about updates to datasets, for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. Where data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocol.footnote[Subscribing to notifications about newly available data ensures that the data consumers do not need to continually to poll the data server to check for updates.]</p>
+<p>WIS2 provides notifications about updates to datasets, for example, a notification may indicate that a new observation record from an automatic weather station has been added to a dataset of surface observations. These notifications are published on Message Brokers. Where data consumers need to use data rapidly once they have been published (for example, as inputs to a weather prediction model), they should subscribe to one or more Global Brokers to get notification messages using Message Queuing Telemetry Transport (MQTT) protocol.<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>In WIS2, notifications are republished by Global Brokers to ensure resilient distribution. Consequently, there will be multiple places where one can subscribe. Data consumers requiring real-time notifications must subscribe to Global Brokers. Data consumers should subscribe to more than one Global Broker to ensure that notifications continue to be received if a Global Broker instance fails.</p>
@@ -434,7 +435,7 @@ body {
 <p>A dataset in WIS2 is associated with a unique topic. Notifications about updates to a dataset are published to the associated topic. Topics are organized according to a standard scheme (see the <em>Manual on WIS</em>, Volume II - Appendix D. WIS2 Topic Hierarchy).</p>
 </div>
 <div class="paragraph">
-<p>A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, by using an Internet search engine,<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup>, or by browsing the topic hierarchy on a Message Broker.</p>
+<p>A data consumer can find the appropriate topic to subscribe to either by searching the Global Discovery Catalogue, by using an Internet search engine,<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>, or by browsing the topic hierarchy on a Message Broker.</p>
 </div>
 <div class="paragraph">
 <p>WIS2 uses Global Caches to distribute core data, as defined in the WMO Unified Data Policy (Resolution 1 (Cg-Ext (2021))). Each Global Cache republishes core data on its own highly available data server and publishes a new notification message advertising the availability of those data from the Global Cache location.</p>
@@ -486,7 +487,7 @@ body {
 <p>Links to where data can be accessed are made available through dataset discovery metadata (via the Global Discovery Catalogue) and/or data notification messages (via Global Brokers). Links can be used to directly download the data (according to the network protocol and content description provided in the link) using a mechanism appropriate to the workflow of the data consumer. Such mechanisms could include web and/or desktop applications, custom tools and so forth.</p>
 </div>
 <div class="paragraph">
-<p>A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>).</p>
+<p>A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>).</p>
 </div>
 <div class="paragraph">
 <p>Where data are provided through an interactive web service, a canonical link containing a URL from which data consumers can directly download a data object may be complemented with an additional link providing the URL for the root of the web service from which data consumers can interact with or query the entire dataset.</p>
@@ -604,13 +605,13 @@ body {
 <p>Discovery metadata is the mechanism by which data publishers tell potential consumers about their data, how it may be accessed, and any conditions they may place on the use of those data.</p>
 </div>
 <div class="paragraph">
-<p>Each dataset that is published must have an associated discovery metadata record. This record is encoded as GeoJSON (See RFC 7946<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>) and must conform to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix F. WMO Core Metadata Profile (Version 2).</p>
+<p>Each dataset that is published must have an associated discovery metadata record. This record is encoded as GeoJSON (See RFC 7946<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>) and must conform to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix F. WMO Core Metadata Profile (Version 2).</p>
 </div>
 <div class="paragraph">
 <p>Copies of all discovery metadata records from WIS2 are held in the Global Discovery Catalogues, where data consumers can search and browse to find data that is of interest to them.</p>
 </div>
 <div class="paragraph">
-<p>Depending on local arrangements, your GISC may be able to assist in transferring discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, data publishers will need to publish the discovery metadata record(s) themselves<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup> using one of two methods:</p>
+<p>Depending on local arrangements, your GISC may be able to assist in transferring discovery metadata record(s) to the Global Discovery Catalogues. If this is not the case, data publishers will need to publish the discovery metadata record(s) themselves<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup> using one of two methods:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -618,12 +619,12 @@ body {
 <p>The simplest method is to encode the discovery metadata record as a file and publish it to an HTTP server, where it can be accessed with a URL.</p>
 </li>
 <li>
-<p>Alternatively, a data publisher may operate a local metadata catalogue through which discovery metadata records can be shared using an API (for example, OGC API – Records<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup>). Each discovery metadata record (for instance, an item that is part of the discovery metadata catalogue) can be accessed with a unique URL via the API .</p>
+<p>Alternatively, a data publisher may operate a local metadata catalogue through which discovery metadata records can be shared using an API (for example, OGC API – Records). Each discovery metadata record (for instance, an item that is part of the discovery metadata catalogue) can be accessed with a unique URL via the API.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>In both cases, a notification message needs to be published on a Message Broker that tells WIS2 that there is a new discovery metadata record to upload and that it can be accessed at the specified URL.<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> Notification messages shall conform to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix E. WIS2 Notification Message. They must also be published on a topic that conforms to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix D. WIS2 Topic Hierarchy. For example, metadata published by Deutscher Wetterdienst would use the following topic: <code>origin/a/wis2/de-dwd/metadata/core</code>.</p>
+<p>In both cases, a notification message needs to be published on a Message Broker that tells WIS2 that there is a new discovery metadata record to upload and that it can be accessed at the specified URL.<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup> Notification messages shall conform to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix E. WIS2 Notification Message. They must also be published on a topic that conforms to the specification given in the <em>Manual on WIS</em>, Volume II - Appendix D. WIS2 Topic Hierarchy. For example, metadata published by Deutscher Wetterdienst would use the following topic: <code>origin/a/wis2/de-dwd/metadata</code>.</p>
 </div>
 <div class="paragraph">
 <p>These discovery metadata records are then propagated through the Global Service components into the Global Discovery Catalogue, where data consumers can search and browse for datasets of interest.</p>
@@ -633,6 +634,9 @@ body {
 </div>
 <div class="paragraph">
 <p>Discovery metadata must be published in the Global Discovery Catalogues before the data are published.</p>
+</div>
+<div class="paragraph">
+<p>Discovery metadata should be re-published on a daily basis.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1494,12 +1498,12 @@ body {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"><a class="anchor" href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"></a>2.6.3 WIS2 Node reference implementation: WIS2 in a box</h4>
+<h4 id="_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"><a class="anchor" href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"></a>2.6.3 WIS2 Node Reference Implementation: WIS2 in a box</h4>
 <div class="paragraph">
 <p>When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.</p>
 </div>
 <div class="paragraph">
-<p>To assist Members, a free and open-source reference implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.</p>
+<p>To assist Members, a free and open-source Reference Implementation called “WIS2 in a box” (wis2box) is available. wis2box implements the requirements for a WIS2 Node and contains additional enhancements. wis2box is built free and open-source software components that are mature, robust and widely adopted for operational use.</p>
 </div>
 <div class="paragraph">
 <p>wis2box provides the functionality required for both data publisher and data consumer roles, as well as the following technical functions:</p>
@@ -1617,17 +1621,17 @@ body {
 <p>There is no requirement for WIS2 Nodes to provide monitoring metrics. However their WIS2 interfaces may be queried remotely by Global Services, which can then provide metrics on the availability of WIS2 Nodes.</p>
 </div>
 <div class="paragraph">
-<p>Metrics for WIS2 monitoring should follow the naming convention <code>wmo_&lt;program&gt;_&lt;name&gt;</code>, where <code>&lt;program&gt;</code> is the name of the responsible WMO programme and <code>&lt;name&gt;</code> is the name of the metric. Examples of WIS2 metrics include:</p>
+<p>Metrics for WIS2 monitoring should follow the naming convention <code>wmo_&lt;program&gt;_&lt;name&gt;</code>, where <code>&lt;program&gt;</code> is the name of the responsible WMO programme and <code>&lt;name&gt;</code> is the name of the metric. Examples of WIS2 metrics include (but are not limited to):</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>``wmo_wis2_gc_downloaded_total``, and</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>``wmo_wis2_gb_messages_invalid_total``.</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>wmo_wis2_gc_downloaded_total</code></p>
+</li>
+<li>
+<p><code>wmo_wis2_gb_messages_invalid_total</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnotedef_47" title="View footnote.">47</a>]</sup></p>
@@ -1755,6 +1759,9 @@ body {
 </div>
 </li>
 <li>
+<p>When connected to a local WIS centre broker or a Global Service broker, the metric <code>wmo_wis2_gb_connected_flag</code> will be equal to 1. When the connection cannot be established or is interrupted the metric <code>wmo_wis2_gb_connected_flag</code> will be equal to 0.</p>
+</li>
+<li>
 <p>When receiving a message from a local WIS centre broker or a Global Service broker, the metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
@@ -1779,7 +1786,7 @@ body {
 <p>All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.</p>
 </li>
 <li>
-<p>As a convention, the Global Broker centre-id will be <code>tld-{centre-name}-global-broker</code>.</p>
+<p>As a convention, the Global Broker centre-id will be <code>{tld}-{centre-name}-global-broker</code>.</p>
 </li>
 <li>
 <p>A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a publicly resolvable Domain Name System (DNS) name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname and any subsequent changes.</p>
@@ -1862,7 +1869,7 @@ body {
 <p>A Global Cache should validate the integrity of the resources it caches and only accept data that match the integrity value from the WIS2 Notification Message. If the WIS2 Notification Message does not contain an integrity value, the Global Cache should accept the data as valid. In this case, the Global Cache may add an integrity value to the message it republishes.</p>
 </li>
 <li>
-<p>As a convention, the Global Cache centre-id will be <code>tld-{centre-name}-global-cache</code>.</p>
+<p>As a convention, the Global Cache centre-id will be <code>{tld}-{centre-name}-global-cache</code>.</p>
 </li>
 </ul>
 </div>
@@ -1919,6 +1926,9 @@ body {
 </li>
 <li>
 <p>Wait until the data becomes available at the endpoint;</p>
+</li>
+<li>
+<p>Add the property <code>properties.global-cache</code> with the value of the centre identifier of the Global Cache to identify the origin of the data source downloaded by downstream applications;</p>
 </li>
 <li>
 <p>Modify the message identifier and the canonical link&#8217;s <code>href</code> of the received message and leave all other fields untouched;</p>
@@ -1990,10 +2000,10 @@ body {
 <p>Searchable Catalog - Filtering (Deployment);</p>
 </li>
 <li>
-<p>JSON (Building Block);</p>
+<p>JSON (Common Component);</p>
 </li>
 <li>
-<p>HTML (Building Block).</p>
+<p>HTML (Common Component).</p>
 </li>
 </ul>
 </div>
@@ -2060,18 +2070,18 @@ body {
 <p>A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.</p>
 </li>
 <li>
-<p>As a convention, a Global Discovery Catalogue&#8217;s centre-id will be <code>tld-{centre-name}-global-discovery-catalogue</code>.</p>
+<p>As a convention, a Global Discovery Catalogue&#8217;s centre-id will be <code>{tld}-{centre-name}-global-discovery-catalogue</code>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_2_7_5_2_global_discovery_catalogue_reference_implementation_wis2_gdc"><a class="anchor" href="#_2_7_5_2_global_discovery_catalogue_reference_implementation_wis2_gdc"></a>2.7.5.2 Global Discovery Catalogue reference implementation: wis2-gdc</h5>
+<h5 id="_2_7_5_2_global_discovery_catalogue_reference_implementation_wis2_gdc"><a class="anchor" href="#_2_7_5_2_global_discovery_catalogue_reference_implementation_wis2_gdc"></a>2.7.5.2 Global Discovery Catalogue Reference Implementation: wis2-gdc</h5>
 <div class="paragraph">
 <p>To provide a Global Discovery Catalogue, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.</p>
 </div>
 <div class="paragraph">
-<p>To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue reference implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
+<p>To assist Members in participating in WIS2, a free and open-source Global Discovery Catalogue Reference Implementation, wis2-gdc, is available for download and use. wis2-gdc builds on mature and robust free and open-source software components that are widely adopted for operational use.</p>
 </div>
 <div class="paragraph">
 <p>wis2-gdc provides the functionality required for the Global Discovery Catalogue, including the following technical functions:</p>
@@ -2131,7 +2141,7 @@ body {
 <p>The Global Monitor will provide a web-based dashboard that displays the WIS2 system performance and data availability.</p>
 </li>
 <li>
-<p>As a convention, the Global Monitor centre-id will be <code>tld-{centre-name}-global-monitor</code>.</p>
+<p>As a convention, the Global Monitor centre-id will be <code>{tld}-{centre-name}-global-monitor</code>.</p>
 </li>
 <li>
 <p>The main task of the Global Monitor will be to regularly query the metrics provided by the relevant WIS2 entities, aggregate and process the data and then provide the results to the end user in a suitable presentation.</p>
@@ -2520,7 +2530,7 @@ harvest and merge these catalogues, creating a global map of the ocean
 data. IODE harvests all metadata shared by ODIS partners, combines
 these metadata and creates a knowledge graph, and processes these metadata to export derivative
 products (for example, diagnostic reports and cloud-optimized data products).
-The Ocean InfoHub (OIH) system is IODE&#8217;s reference implementation of a
+The Ocean InfoHub (OIH) system is IODE&#8217;s Reference Implementation of a
 discovery system leveraging ODIS. ODIS architecture and tools are
 free and open-source software (FOSS), with regular releases published for the
 community.</p>
@@ -3029,6 +3039,52 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex A: Revision History</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 12%;">
+<col style="width: 18%;">
+<col style="width: 12%;">
+<col style="width: 12%;">
+<col style="width: 46%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Date</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Release</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Proposed by</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Primary clauses modified</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Approved by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">June 2024</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.0.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SC-IMT</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Initial approval for publication</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">EC-78</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">November 2024</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.1.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SC-IMT</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://github.com/wmo-im/wis2-guide/milestone/3?closed=1">See GitHub</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fast-track 2024-2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">February 2026</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.2.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SC-IMT</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://github.com/wmo-im/wis2-guide/milestone/7?closed=1">See GitHub</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fast-track 2025-2</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 <div id="footnotes">
 <hr>
@@ -3045,19 +3101,19 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <a href="#_footnoteref_4">4</a>. In this example, the system used to publish the data only retains the data for five days. Other systems may retain the data for a longer or shorter period of time.
 </div>
 <div class="footnote" id="_footnotedef_5">
-<a href="#_footnoteref_5">5</a>. Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in Global Discovery Catalogues.
+<a href="#_footnoteref_5">5</a>. Subscribing to notifications about newly available data ensures that the data consumers do not need to continually to poll the data server to check for updates.
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. See Internet Assigned Numbers Authority (IANA) Link Relations: <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
+<a href="#_footnoteref_6">6</a>. Internet search engines allow data consumers to discover WIS2 datasets by indexing the content in Global Discovery Catalogues.
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. See RFC 7946 - The GeoJSON Format: <a href="https://datatracker.ietf.org/doc/html/rfc7946" class="bare">https://datatracker.ietf.org/doc/html/rfc7946</a>.
+<a href="#_footnoteref_7">7</a>. See Internet Assigned Numbers Authority (IANA) Link Relations: <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. In the future, WIS2 may provide metadata publication services (for example, through a WIS2 metadata management portal) to assist with this task. However, such services are not currently available.
+<a href="#_footnoteref_8">8</a>. See RFC 7946 - The GeoJSON Format: <a href="https://datatracker.ietf.org/doc/html/rfc7946" class="bare">https://datatracker.ietf.org/doc/html/rfc7946</a>.
 </div>
 <div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. See OGC API - Records - Part 1: Core: <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>.
+<a href="#_footnoteref_9">9</a>. In the future, WIS2 may provide metadata publication services (for example, through a WIS2 metadata management portal) to assist with this task. However, such services are not currently available.
 </div>
 <div class="footnote" id="_footnotedef_10">
 <a href="#_footnoteref_10">10</a>. Both data and metadata are published using the same notification message mechanism to announce the availability of new resources.
@@ -3177,7 +3233,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <a href="#_footnoteref_48">48</a>. It is also technically possible to filter recommended data by using a wildcard subscriptions such as <code>origin/a/wis2/+/data/core/#</code>. However, avoiding wildcard subscription is generally considered good practice as it limits the burden of the broker operated by Global Brokers.
 </div>
 <div class="footnote" id="_footnotedef_49">
-<a href="#_footnoteref_49">49</a>. See OGC-API Records - Part 1 <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>.
+<a href="#_footnoteref_49">49</a>. See OGC-API Records - Part 1 <a href="https://docs.ogc.org/is/20-004r1/20-004r1.html" class="bare">https://docs.ogc.org/is/20-004r1/20-004r1.html</a>.
 </div>
 <div class="footnote" id="_footnotedef_50">
 <a href="#_footnoteref_50">50</a>. PANS-IM is expected to available on ICAO NET by July 2024 and to become applicable in November 2024. The information provided herein is based on draft proposals from ICAO.
@@ -3227,7 +3283,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-01-20 13:19:51 UTC
+Last updated 2026-02-09 16:05:50 UTC
 </div>
 </div>
 </body>
