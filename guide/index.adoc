@@ -27,16 +27,6 @@
 |{copyright}
 |===
 
-== Revision History
-
-[cols="12,18,12,12,46",options="header"]
-|===
-|Date |Release |Proposed by | Primary clauses modified |Approved by
-|June 2024| 1.0.0 | SC-IMT | all | EC-78
-|November 2024 | 1.1.0 | SC-IMT | | Fast-track 2024-2
-|February 2026 | 1.2.0 | SC-IMT | | Fast-track 2025-2
-|===
-
 <<<
 toc::[]
 <<<
@@ -51,6 +41,8 @@ include::sections/part3/index.adoc[]
 include::sections/part4/index.adoc[]
 
 include::sections/part5/index.adoc[]
+
+include::sections/annex_a.adoc[]
 
 
 
