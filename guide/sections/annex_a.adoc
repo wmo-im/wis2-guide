@@ -5,7 +5,7 @@
 [cols="12,18,12,12,46",options="header"]
 |===
 |Date |Release |Proposed by | Primary clauses modified |Approved by
-|June 2024| 1.0.0 | SC-IMT | all | EC-78
-|November 2024 | 1.1.0 | SC-IMT | | Fast-track 2024-2
-|February 2026 | 1.2.0 | SC-IMT | | https://github.com/wmo-im/wis2-guide/milestone/7?closed=1[Fast-track 2025-2]
+|June 2024| 1.0.0 | SC-IMT | Initial approval for publication| EC-78
+|November 2024 | 1.1.0 | SC-IMT |https://github.com/wmo-im/wis2-guide/milestone/3?closed=1[See GitHub]| Fast-track 2024-2
+|February 2026 | 1.2.0 | SC-IMT |https://github.com/wmo-im/wis2-guide/milestone/7?closed=1[See GitHub] |Fast-track 2025-2
 |===
