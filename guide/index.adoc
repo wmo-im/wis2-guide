@@ -1,7 +1,7 @@
 :title: Guide to the WMO Information System (WMO-No. 1061), Volume II - WMO Information System 2.0 (APPROVED)
 :titletext: {title}
 :version: 1.2.0
-:date: {docdate}
+:date: 2026-02-02
 :copyright: Copyright © 2026 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
@@ -17,7 +17,7 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*World Meteorological Organization*
-|Date: {date} (HTML, PDF and Word generation)
+|Date: 2026-02-02
 |Version: {version}
 |Document status: APPROVED
 |Document location: https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html
