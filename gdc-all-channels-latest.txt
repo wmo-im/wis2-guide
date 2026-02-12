@@ -199,6 +199,7 @@ urn:wmo:md:gn-anm:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:gy-hydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:hk-hko-swic:recommended.weather.advisories-warnings,data/recommended/weather/advisories-warnings
 urn:wmo:md:hk-hko:core.climate.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:hk-hko:core.surface-based-observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:hk-hko:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:hk-hko:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:hk-hko:core.weather.space-based-observations.metop-b.amsu-a,data/core/weather/space-based-observations/metop-b/amsu-a
