@@ -1,6 +1,5 @@
 urn:wmo:md:ae-ncm:observations.surface.surface-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ae-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
-urn:wmo:md:ag-antiguamet:6u12a7,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ag-antiguamet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ai-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ar-smn:slt0ci,data/core/weather/surface-based-observations/synop
