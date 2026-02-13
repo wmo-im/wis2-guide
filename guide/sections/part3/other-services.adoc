@@ -31,9 +31,9 @@ A Global Replay provides access and subscription to past WIS Notification Messag
 * The Global Replay will provide an API process to trigger the republication of previously sent messages, allowing users to subscribe to messages with various criteria (spatial and / or temporal extent, topic selection) via the Global Broker.
 ** the API process request accepts the following inputs:
 *** `datetime`: a temporal range of messages to republish (example ``2025-04-06T17:21:26Z/2025-04-06T19:21:26Z``).
-*** `subscriber-uuid`: a unique identifier (UUID) defined by the user/client.  This identifier may be reused.
+*** `subscriber-id`: a unique identifier (UUID) defined by the user/client.  This identifier may be reused.
 *** `topic`: the topic on which to trigger message replication (centre-id required, allowing `+` and `#` for subsequent topic levels)
-** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<subscriber-uuid>/<wth-topic>+`, where:
+** the resulting topic subscription in the API process response will be `+replay/a/wis2/<centre-id>/<subscriber-id>/<wth-topic>+`, where:
 *** ``wth-topic`` is the full topic of the message as previously published to WIS2.
 ** the API process will set temporal boundary limits to 15 minutes. When exceeded, it will result in an error message prohibiting the republishing of messages.
 ** an example topic would be `+replay/a/wis2/ca-eccc-msc-global-replay/fdb6dae4-95fe-465a-80fb-498ebd61dce8/cache/a/wis2/br-inmet/data/core/weather/surface-based-observations/synop+`
@@ -41,7 +41,7 @@ A Global Replay provides access and subscription to past WIS Notification Messag
 * Multiple Global Replay instances may be deployed for resilience.
 * Global Replay instances operate independently of each other; each Global Replay instance will hold notification messages and monitoring events according to the required retention period.  Global Replays do not need to synchronize with each other.
 * A Global Replay is populated with notification messages and monitoring events received via a Global Broker instance.
-* A Global Replay is connected to at least one (1) Global Broker
+* A Global Replay is connected to at least one (1) Global Broker.
 * A Global Replay should connect and subscribe to more than one Global Broker instance to ensure that no messages or events are lost in the event of a Global Broker failure. A Global Replay instance will discard duplicate messages as needed.
 * A Global Replay can validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message). Valid messages will be stored. Invalid or malformed messages will be discarded.
 * A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see _Manual on WIS_, Volume II – Appendix TODO. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.
