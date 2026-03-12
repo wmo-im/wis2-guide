@@ -134,6 +134,7 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 *** If the record is not compliant, the SCGDC will update the metric ``wmo_wis2_scgdc_record_invalid_total``, with the WCMP2 id as well as centre id of the GDC
 ** compare each metadata record with the same WCMP2 `id` received from all other GDCs.
 ** If the content is the same for all GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_identical_total`` by ``1``.
+** If an id is present in one or more GDCs, and the metadata compliant with the WCMP2 latest approved version of WCMP2 and missing from one or more GDCs, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs missing the id.
 ** If the content is different, the SCGDC will compare the record's ``properties.updated`` property, if present, across GDCs. If more than one value of ``properties.updated`` is present, the SCGDC will consider the GDC with the record of the most recent date is the canonical record.
 *** In this case, the SCGDC will increase the metric ``wmo_wis2_scgdc_records_incorrect_total`` by ``1`` for all GDCs except the GDC having the most recent record.
 ** If the content is different, and if no GDC holds a record with ``properties.updated``, the SCGDC will consider that it is not possible to ensure which GDC has the correct record.
