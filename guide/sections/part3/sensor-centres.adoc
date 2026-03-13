@@ -67,21 +67,9 @@ For such a centre operated by Météo-France the centre-id would be fr-meteofran
 
 ===== 3.3.3.1 Technical considerations
 
-A list of metrics has been defined for this Sensor Centre (see https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/scgc.csv):
+A list of metrics has been defined for this Sensor Centre at https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/scgc.csv.
 
-[cols="3*", options="header"]
-|=============================================================================================================================================================
-wmo_wis2_scgc_cache_delay_seconds,global_cache|centre_id|report_by,Delay between origin and cache message,-
-wmo_wis2_scgc_messages_cached_total,global_cache|centre_id|report_by,Number of data files cached for centre_id,-
-wmo_wis2_scgc_messages_cached_delay_total,global_cache|centre_id|delay_threshold|report_by,Number of data files cached for centre_id within defined delay threshold (120s 300s 600s),-
-wmo_wis2_scgc_messages_duplicates_total,centre_id|report_by,Number of messages with identical data_id and no rel=update,-
-wmo_wis2_scgc_messages_published_total,centre_id|report_by,Number of cacheable data files published,-
-wmo_wis2_scgc_messages_missed_total,global_cache|centre_id|report_by,Number of cacheable data not in global cache,-
-wmo_wis2_scgc_messages_missed_all_total,centre_id|report_by,Number of cacheable data not in any cache,-
-wmo_wis2_scgc_messages_cache_override_total,global_cache|centre_id|report_by,Number of cacheable data with override cache directive,-         
-|=============================================================================================================================================================
-
-The processing of this Sensor Centre is as follow:
+The processing of this Sensor Centre is as follows:
 
 - Subscribe to a given `origin/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Broker
 - Subscribe to a given `cache/a/wis2/...`, it could be `#` or a particular centre-id on at least one Global Cache - The subscription must be done on the broker of the Global Cache (unlike normal subscription to be made only on the Global Broker)
