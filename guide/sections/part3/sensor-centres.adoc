@@ -88,7 +88,7 @@ For each of the subscription to the various Global Caches:
 - Compare this value with the three threshold defined in the metric table above. Increase by 1 `wmo_wis2_scgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less that 300s, less than 600s)
 - If no Notification Message for the `data_id` is received after the highest threshold (here 600s), increase by 1 `wmo_wis2_scgc_messages_missed_total`
 
-As a Global Cache can decide not to cache a data granule, and in order to assess if a Global Cache has decided to do so, the Sensor Centre will compare the `links` array published on `origin/a/wis/#` and in the Notification Message received on `cache/a/wis2/#` if the two `links`are identical, then the Global Cache has decided not to cache the data. In this case, increase by 1 `wmo_wis2_scgc_messages_cache_override_total `.
+As a Global Cache can decide not to cache a data granule, and in order to assess if a Global Cache has decided to do so, the Sensor Centre will compare the ``links`` array published on `++origin/a/wis/#++` and in the Notification Message received on `++cache/a/wis2/#++` if the two ``links`` are identical, then the Global Cache has decided not to cache the data. In this case, increase by 1 ``wmo_wis2_scgc_messages_cache_override_total``.
 
 If no Global Cache has cached the data, increase by 1 `wmo_wis2_scgc_messages_missed_all_total`
 
