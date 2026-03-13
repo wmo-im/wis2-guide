@@ -20,6 +20,7 @@
 |Date: 2026-02-02
 |Version: {version}
 |Document status: APPROVED
+|Revision history: see <<_revision_history,Annex A>>
 |Document location: https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html
 |WMO publication location: https://library.wmo.int/idurl/4/69130
 |Standing Committee on Information Management and Technology (SC-IMT)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt]
