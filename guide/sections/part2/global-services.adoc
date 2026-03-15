@@ -208,6 +208,8 @@ wis2-gdc is managed as a free and open source project. Source code, issue tracki
 * The Global Monitor will collect metrics as defined in the OpenMetrics standard.
 * The Global Monitor will monitor the "health" (that is, the performance) of components at NCs/DCPCs, as well as Global Services.
 * The Global Monitor will provide a web-based dashboard that displays the WIS2 system performance and data availability.
+* The Global Monitor will retain logs, metrics, and derived statistics for a minimum period of 180 days to support long-term monitoring, trend analysis, and KPI evaluation.
+* The Global Monitor will allocate a minimum of 50GB of storage for logs, metrics and derived statistics.
 * A Global Monitor will update its metrics at least every 60 seconds.
 * A Global Monitor should not reset its metrics counts.
 * As a convention, the Global Monitor centre-id will be ``{tld}-{centre-name}-global-monitor``.
