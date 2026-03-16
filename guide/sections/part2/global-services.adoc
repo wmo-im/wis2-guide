@@ -133,7 +133,7 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Cache should make sure that data are downloaded in parallel and that downloads are not blocking each other.
 * A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and send a message on the ``monitor`` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a publicly resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
-* A Global Cache will emit the following metrics foreach WIS2 component (e.g., WIS2 Node or other Global Cache, identified with its ``centre-id``) from which it attempts to download and cache resources (e.g., data objects or metadata records): 
+* A Global Cache will emit the following metrics for each WIS2 component (e.g., WIS2 Node or other Global Cache, identified with its ``centre-id``) from which it attempts to download and cache resources (e.g., data objects or metadata records): 
 ** ``wmo_wis2_gc_downloaded_total``: This metric is incremented by 1 each time the Global Cache successfully downloads and validates a new resource or an update to a resource published more recently than any previously received messages for that resource. This metric is not incremented for duplicate resources or out-of-sequence updates. 
 ** ``wmo_wis2_gc_downloaded_errors_total``: This metric is incremented by 1 each time the Global Cache fails to download a resource that it is attempting to cache. 
 ** ``wmo_wis2_gc_last_download_timestamp_seconds``: This metric is set to the current time (timestamp - the number of seconds since Unix epoch) each time the Global Cache successfully downloads a new or updated resource.
@@ -172,12 +172,12 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue will generate and store a zip file of all WCMP2 records once a day; this file will be made be accessible via HTTP. The zip file will include a directory named after the centre-id of the Global Discovery Catalogue containing all WCMP2 records.
 * A Global Discovery Catalogue will publish a WIS2 Notification Message of its zip file of all WCMP2 records on its centre-id's +metadata+ topic at `origin/a/wis2/centre-id/metadata`, where `centre-id` is the centre identifier of the Global Discovery Catalogue.
 * A Global Discovery Catalogue will generate metrics on a daily basis for the following:
-** ``wmo_wis2_gdc_core_total`` (foreach centre identifier)
-** ``wmo_wis2_gdc_recommended_total`` (foreach centre identifier)
-** ``wmo_wis2_gdc_earth_system_discipline_total`` (foreach Earth system discipline per centre identifier)
-** ``wmo_wis2_gdc_kpi_percentage_total`` (foreach discovery metadata record per centre identifier)
-** ``wmo_wis2_gdc_kpi_percentage_average`` (foreach centre identifier)
-** ``wmo_wis2_gdc_kpi_percentage_over80_total`` (foreach centre identifier)
+** ``wmo_wis2_gdc_core_total`` (for each centre identifier)
+** ``wmo_wis2_gdc_recommended_total`` (for each centre identifier)
+** ``wmo_wis2_gdc_earth_system_discipline_total`` (for each Earth system discipline per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_total`` (for each discovery metadata record per centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_average`` (for each centre identifier)
+** ``wmo_wis2_gdc_kpi_percentage_over80_total`` (for each centre identifier)
 * A Global Discovery Catalogue may initialize itself (cold start) from a zip file of all WCMP2 records published.
 * As a convention, a Global Discovery Catalogue's centre-id will be ``{tld}-{centre-name}-global-discovery-catalogue``.
 
