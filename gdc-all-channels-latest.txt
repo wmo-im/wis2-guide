@@ -150,6 +150,7 @@ urn:wmo:md:cn-cma:data.core.weather.surface-based-observations,data/core/weather
 urn:wmo:md:co-ideam:automaticas,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cr-imn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cu-insmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:cv-inmg:sal01,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cy-dom:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:cy-dom:weather.prediction.deterministic.local,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
