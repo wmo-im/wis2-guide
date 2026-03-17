@@ -17,16 +17,10 @@ urn:wmo:md:bj-meteobenin:synop-hourly,data/core/weather/surface-based-observatio
 urn:wmo:md:bn-bdmd:3-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bn-bdmd:aviation-metar,data/recommended/weather/aviation/metar
 urn:wmo:md:bn-bdmd:aviation-taf,data/recommended/weather/aviation/taf
-urn:wmo:md:br-inmet:,data/recommended/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
-urn:wmo:md:br-inmet:cap,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
-urn:wmo:md:br-inmet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:br-inmet:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:br-inmet:synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:br-inmet:synop-aut,data/core/weather/advisories-warnings
-urn:wmo:md:br-inmet:synop-aut,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:upper-air,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bs-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
