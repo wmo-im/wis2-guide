@@ -311,6 +311,8 @@ urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/syno
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
+urn:wmo:md:mx-smn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:mx-smn:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ng-nimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:np-nepalmet:i0yfi5,data/core/weather/surface-based-observations/synop
