@@ -314,6 +314,8 @@ urn:wmo:md:mw-dccms:recommended.surface-based-observations.synop,data/recommende
 urn:wmo:md:mx-smn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mx-smn:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
+urn:wmo:md:na-meteona:synop-dataset,data/core/weather/surface-based-observations/synop
+urn:wmo:md:na-meteona:upper-dataset,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ng-nimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:np-nepalmet:i0yfi5,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.ship,data/core/weather/surface-based-observations/ship
