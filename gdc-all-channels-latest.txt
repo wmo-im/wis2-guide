@@ -369,6 +369,7 @@ urn:wmo:md:sn-anacim:krbor9,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sn-anacim:ld49rt,data/recommended/weather/aviation/metar
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sz-swazimet:eswatin-surface-observation-stations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:td-anam:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
