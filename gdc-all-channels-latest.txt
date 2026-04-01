@@ -6,6 +6,17 @@ urn:wmo:md:ar-smn:slt0ci,data/core/weather/surface-based-observations/synop
 urn:wmo:md:au-imos:wave-buoys,data/core/ocean/surface-based-observations/wave-buoys
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:be-rmib:be-radar,data/core/weather/experimental/bel-radar
+urn:wmo:md:be-rmib:buoy,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
+urn:wmo:md:be-rmib:cap-alerts,data/core/weather/advisories-warnings
+urn:wmo:md:be-rmib:comp-radar,data/recommended/weather/experimental/radar-comp
+urn:wmo:md:be-rmib:hourly-synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:be-rmib:metar,data/recommended/weather/aviation/metar
+urn:wmo:md:be-rmib:misc-marine,data/core/ocean/experimental/miscellaneous/marine
+urn:wmo:md:be-rmib:mon-clim,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:be-rmib:subhourly,data/recommended/weather/surface-based-observations/synop
+urn:wmo:md:be-rmib:taf,data/recommended/weather/experimental/aviation/taf
+urn:wmo:md:be-rmib:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bf-anam:fgspmr,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:bf-anam:mx2w8y,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bg-nimh:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
