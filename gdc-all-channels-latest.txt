@@ -14,6 +14,7 @@ urn:wmo:md:be-rmib:hourly-synop,data/core/weather/surface-based-observations/syn
 urn:wmo:md:be-rmib:metar,data/recommended/weather/aviation/metar
 urn:wmo:md:be-rmib:misc-marine,data/core/ocean/experimental/miscellaneous/marine
 urn:wmo:md:be-rmib:mon-clim,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:be-rmib:subhourly,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:be-rmib:taf,data/recommended/weather/experimental/aviation/taf
 urn:wmo:md:be-rmib:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bf-anam:fgspmr,data/recommended/weather/surface-based-observations/synop
