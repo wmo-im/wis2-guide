@@ -321,7 +321,6 @@ urn:wmo:md:ma-marocmeteo:surface-based-observations.synop,data/core/weather/surf
 urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:mw-dccms:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:mx-smn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mx-smn:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
@@ -338,7 +337,6 @@ urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-ba
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-aviamettelecom:temp,data/core/weather/surface-based-observations/temp
-urn:wmo:md:ru-aviamettelecom:wipps-dc:forecast:short-range:deterministic:limited-area:icon,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ru-roshydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-roshydromet:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-roshydromet:wipps-dc.forecast.short-range.deterministic.limited-area.icon,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
@@ -389,21 +387,15 @@ urn:wmo:md:tg-anamet:2obre1,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:temp-dataset-tmd,data/core/weather/surface-based-observations/temp
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:tz-tma:metar,data/recommended/aviation/metar
-urn:wmo:md:tz-tma:taff,data/recommended/aviation/taff
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.analysis.global,data/core/weather/prediction/analysis/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.mogreps-g-tc,data/core/weather/prediction/forecast/medium-range/probabilistic/trajectory
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk-argo-float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
-urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk_argo_float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored-buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
-urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored_buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:uk-metoffice:weather.prediction.forecast.global-10km,data/recommended/weather/prediction/forecast/medium-range/deterministic/global
-urn:wmo:md:uk-metoffice:weather.surface-based-observations.ship.ship-reports,data/core/weather/surface-based-observations/ship
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-descent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk-synop,data/core/weather/surface-based-observations/synop
-urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-20/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-21/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch-viirs,data/core/weather/space-based-observations
