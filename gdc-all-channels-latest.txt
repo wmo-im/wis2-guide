@@ -333,6 +333,16 @@ urn:wmo:md:np-nepalmet:qtgga5,data/core/weather/surface-based-observations/temp
 urn:wmo:md:nz-metservice:surface-based-observations.ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:nz-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:nz-metservice:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:org-woudc:Broad-band,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
+urn:wmo:md:org-woudc:Lidar,data/core/atmospheric-composition/experimental/observations/gases/ozone
+urn:wmo:md:org-woudc:Multi-band,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
+urn:wmo:md:org-woudc:OzoneSonde,data/core/atmospheric-composition/experimental/observations/gases/ozone
+urn:wmo:md:org-woudc:RocketSonde,data/core/atmospheric-composition/experimental/observations/gases/ozone
+urn:wmo:md:org-woudc:Spectral,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
+urn:wmo:md:org-woudc:TotalOzone,data/core/atmospheric-composition/observations/gases/ozone
+urn:wmo:md:org-woudc:TotalOzoneObs,data/core/atmospheric-composition/experimental/observations/gases/ozone
+urn:wmo:md:org-woudc:UmkehrN14_1.0,data/core/atmospheric-composition/experimental/observations/gases/ozone
+urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ph-pagasa:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
