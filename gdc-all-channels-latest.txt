@@ -143,7 +143,6 @@ urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
 urn:wmo:md:cl-meteochile:climat-monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:cl-meteochile:climat-monthly-dayli,data/core/climate/surface-based-observations/monthly
-urn:wmo:md:cl-meteochile:synop-hour,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:synop-onehours,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:synop-trihours,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cl-meteochile:temp,data/core/weather/surface-based-observations/temp
@@ -410,6 +409,7 @@ urn:wmo:md:uk-metoffice:weather.prediction.forecast.global-10km,data/recommended
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-descent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk-synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:uk-metoffice:weather.upper-air-observations.lightning.uk-leela,data/core/weather/experimental/upper-air-observations/lightning
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-20/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-21/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch-viirs,data/core/weather/space-based-observations
