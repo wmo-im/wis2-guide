@@ -431,6 +431,7 @@ urn:wmo:md:uy-inumet:surface-based-observations.synop,data/core/weather/surface-
 urn:wmo:md:vc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ve-inameh:sinopticos,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vg-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:za-weathersa:76h87o,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:za-weathersa:jwtdpd,data/core/weather/surface-based-observations/temp
 urn:wmo:md:za-weathersa:xoeh2t,data/core/weather/surface-based-observations/synop
 urn:wmo:md:zm-zmd:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
