@@ -1893,7 +1893,7 @@ body {
 <p>The default behaviour for a Global Cache is to cache all data published under the <code>origin/a/wis2/data/+/core</code> topic. A data publisher may indicate that data should not be cached by adding the <code>"cache": false</code> assertion in the WIS2 Notification Message.</p>
 </li>
 <li>
-<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and send a message on the <code>monitor</code> topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.</p>
+<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and shall send a WME (WIS2 Monitoring Event) message on the <code>monitor</code> topic hierarchy to inform other WIS centres about it. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.</p>
 </li>
 <li>
 <p>If core data are not cached on a Global Cache (that is, if the data are flagged as <code>"cache": false</code> or if the Global Cache decides not to cache these data), the Global Cache shall nevertheless republish the WIS2 Notification Message to the <code>cache/a/wis2/&#8230;&#8203;</code> topic. In this case, the message id will be changed, and the rest of the message will not be modified.</p>
@@ -3868,7 +3868,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-04-02 09:00:04 UTC
+Last updated 2026-04-17 16:07:49 UTC
 </div>
 </div>
 </body>
