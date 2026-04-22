@@ -108,8 +108,8 @@ Metadata content must be identical for all GDCs. The SCGDC verifies this consist
 
 * The SCGDC will connect to a minimum of two Global Brokers. 
 * The SCGDC subscribes to the metadata topic for all GDCs, by one of the following methods:
-** subscribing to ``cache/a/wis2/+/metadata/#``, discarding all Notification Messages whose centre identifier (in the topic) does not end with ``-global-discovery-catalogue``.
-** subscribing to each GDC via ``cache/a/wis2/centre-id/metadata/#``.
+** subscribing to ``cache/a/wis2/+/metadata``, discarding all Notification Messages whose centre identifier (in the topic) does not end with ``-global-discovery-catalogue``.
+** subscribing to each GDC via ``cache/a/wis2/centre-id/metadata``.
 * The SCGDC will use the link provided in the WIS2 Notification Message received to download the zip file published by the GDC.
 * For each GDC centre identifier, upon successful download of the zip file, the SCGDC will update the metric ``wmo_wis2_scgdc_last_download_timestamp_seconds`` with the timestamp (in seconds) of the last successful download.
 * Once a day, the SCGDC will analyze the content of the latest zip files received across all GDCs
