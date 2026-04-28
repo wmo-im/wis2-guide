@@ -405,6 +405,8 @@ urn:wmo:md:th-tmd:temp-dataset-tmd,data/core/weather/surface-based-observations/
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tz-tma:metar,data/recommended/aviation/metar
 urn:wmo:md:tz-tma:taff,data/recommended/aviation/taff
+urn:wmo:md:uk-metoffice-globalwave:ocean.prediction.analysis.global-wave,data/core/ocean/experimental/prediction/analysis/medium-range/deterministic/global
+urn:wmo:md:uk-metoffice-globalwave:ocean.prediction.forecast.global-wave,data/core/ocean/experimental/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.analysis.global,data/core/weather/prediction/analysis/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.mogreps-g-tc,data/core/weather/prediction/forecast/medium-range/probabilistic/trajectory
