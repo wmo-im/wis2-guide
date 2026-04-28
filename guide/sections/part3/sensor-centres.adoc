@@ -77,7 +77,8 @@ The processing of this Sensor Centre is as follows:
 Only on the subscription to the Global Broker:
 
 - Discard the Notification Message if is it `recommended` data as it will not be cached
-- Detect any duplicates `data_id` not including a `rel: update` within a period of at least X hours
+- Detect any duplicates `data_id` not including a `rel: update` within a period of at least 3 hours
+- Increase by 1 `wmo_wis2_scgc_messages_published_total` metrics
 - Store the time where the message as been received
 - (optional) Store the full Notification Message - this can be useful to analyse systematic issues
 
