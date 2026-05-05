@@ -179,6 +179,9 @@ urn:wmo:md:dz-meteoalgerie:synop-hourly,data/core/weather/surface-based-observat
 urn:wmo:md:dz-meteoalgerie:temp-21hours,data/core/weather/surface-based-observations/temp
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.amdar,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.tamdar,data/core/weather/surface-based-observations
+urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.lidar-and-ceilometer,data/core/weather/surface-based-observations
+urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.microwave-radiometer,data/core/weather/surface-based-observations
+urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.radar-wind-profiler,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-warnings:core.weather.advisories-warnings,data/core/weather/advisories-warnings
 urn:wmo:md:fr-ifremer-argo:EO:EUM:DAT:MSG:ARGO,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:fr-ifremer-argo:cor:msg:argo,data/core/ocean/surface-based-observations/drifting-ocean-profilers
