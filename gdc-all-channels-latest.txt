@@ -424,10 +424,12 @@ urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.mogreps-g-tc,data/core/w
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk-argo-float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored-buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:uk-metoffice:weather.prediction.forecast.global-10km,data/recommended/weather/prediction/forecast/medium-range/deterministic/global
+urn:wmo:md:uk-metoffice:weather.prediction.forecast.tc-guidance,data/core/weather/prediction/forecast/medium-range/deterministic/trajectory
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.rainfall.hourly-rainfall,data/core/weather/experimental/surface-based-observations/rainfall
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-descent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk-synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.tc-initial-data,data/recommended/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.upper-air-observations.lightning.uk-leela,data/core/weather/experimental/upper-air-observations/lightning
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-20/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-21/cris
