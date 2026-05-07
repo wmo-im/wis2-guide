@@ -180,6 +180,7 @@ urn:wmo:md:dz-meteoalgerie:synop-hourly,data/core/weather/surface-based-observat
 urn:wmo:md:dz-meteoalgerie:temp-21hours,data/core/weather/surface-based-observations/temp
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.amdar,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.tamdar,data/core/weather/surface-based-observations
+urn:wmo:md:eu-eumetnet-gnss:weather.surface-based-observations.gnss-total-delay,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.lidar-and-ceilometer,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.microwave-radiometer,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-profiles:weather.surface-based-observations.radar-wind-profiler,data/core/weather/surface-based-observations
@@ -365,6 +366,7 @@ urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sa-ncm:observations.surface.metar-bufr,data/core/
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
