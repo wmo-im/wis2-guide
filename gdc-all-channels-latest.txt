@@ -412,6 +412,7 @@ urn:wmo:md:tg-anamet:2obre1,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tg-anamet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:th-tmd:temp-dataset-tmd,data/core/weather/surface-based-observations/temp
+urn:wmo:md:tt-trin-met:2qaq9f,data/core/weather/surface-based-observations/temp
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tz-tma:metar,data/recommended/aviation/metar
 urn:wmo:md:tz-tma:taff,data/recommended/aviation/taff
