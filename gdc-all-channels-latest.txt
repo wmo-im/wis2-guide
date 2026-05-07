@@ -365,7 +365,6 @@ urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sa-ncm:observations.surface.metar-bufr,data/core/
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
-urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
@@ -423,6 +422,7 @@ urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.mogreps-g-tc,data/core/w
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk-argo-float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored-buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:uk-metoffice:weather.prediction.forecast.global-10km,data/recommended/weather/prediction/forecast/medium-range/deterministic/global
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.rainfall.hourly-rainfall,data/core/weather/experimental/surface-based-observations/rainfall
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.sonde-descent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.synop.uk-synop,data/core/weather/surface-based-observations/synop
