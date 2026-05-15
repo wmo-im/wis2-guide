@@ -435,6 +435,9 @@ urn:wmo:md:uk-metoffice:weather.surface-based-observations.tc-initial-data,data/
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.temp.sonde-ascent-bas,data/core/weather/surface-based-observations/temp
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.temp.sonde-ascent-fk,data/core/weather/surface-based-observations/temp
 urn:wmo:md:uk-metoffice:weather.surface-based-observations.temp.sonde-ascent-sh,data/core/weather/surface-based-observations/temp
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.temp.sonde-ascent-uk,data/core/weather/surface-based-observations/temp
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.temp.sonde-descent-uk,data/core/weather/surface-based-observations/temp
+urn:wmo:md:uk-metoffice:weather.surface-based-observations.weather-radar.surface-rainrate-estimate-uk-ie,data/core/weather/experimental/surface-based-observations/weather-radar
 urn:wmo:md:uk-metoffice:weather.upper-air-observations.lightning.uk-leela,data/core/weather/experimental/upper-air-observations/lightning
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-20/cris
 urn:wmo:md:us-cimss:dbnet.cris-fullch,data/core/weather/space-based-observations/noaa-21/cris
