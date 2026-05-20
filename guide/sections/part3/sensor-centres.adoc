@@ -102,7 +102,7 @@ In addition to the metrics, the SCGC will also make available an hourly logfile 
 * for each Global Cache a clear indication when the message pertaining to this data-id has been published on the cache topic (the timestamp), and if the data-id was not republished by a particular Global Cache `9999999999999` will be used instead of the timestamp
 * each entry in the log file will be a valid JSON 
 
-Then, at the end of the hour, the SCGC SHALL publish a notification message on `monitor/a/wis2/{tld}-{centre-name}-sensor-centre-global-cache` providing a URL to download the logfile. The notification message published will be conformant with the WMO WIS2 Monitoring Events specifications. The `type`used SHALL be `int.wmo.wis.wme.event.item.download`.
+Then, at the end of the hour, the SCGC SHALL publish a notification message on `monitor/a/wis2/{tld}-{centre-name}-sensor-centre-global-cache` providing a URL to download the logfile. The notification message published will be conformant with the WMO WIS2 Monitoring Events specifications. The monitor message will be of `type` : `int.wmo.wis.wme.event.item.download`.
 
 ==== 3.3.4 Sensor Centres for Global Discovery Catalogues (SCGDC)
 
