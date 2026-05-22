@@ -96,6 +96,7 @@ If no Global Cache has cached the data, increase by 1 `wmo_wis2_scgc_messages_mi
 All the metrics SHALL be exposed for scraping by the Global Monitor.
 
 In addition to the metrics, the SCGC will also make available an hourly logfile containing at least:
+
 * the centre-id 
 * the full topic where the WIS2 Notification Message has been originally published
 * the full WIS2 Notification Message as published by the origin centre-id
