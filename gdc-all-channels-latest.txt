@@ -370,6 +370,7 @@ urn:wmo:md:ru-aviamettelecom:temp,data/core/weather/surface-based-observations/t
 urn:wmo:md:ru-roshydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-roshydromet:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-roshydromet:wipps-dc.forecast.short-range.deterministic.limited-area.icon,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
+urn:wmo:md:ru-roshydromet:wmc-moscow.forecast.medium-range.deterministic.global.sl-av,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:rw-rma:aws810,data/core/weather/surface-based-observations/synop
 urn:wmo:md:rw-rma:kedehn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:rw-rma:mw41,data/core/weather/surface-based-observations/temp
