@@ -379,7 +379,6 @@ urn:wmo:md:rw-rma:mw41,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sa-ncm:observations.surface.metar-bufr,data/core/
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
-urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
