@@ -131,7 +131,7 @@ For a Global Cache, the service level is not less than 98 per cent of operationa
  
 A Global Discovery Catalogue is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of WCMP2 metadata records published by source catalogues are successfully harvested within the latency target set out in the technical reference document; the search and access interfaces are available to consumers for not less than 99.9 per cent of the time, with response times below the threshold set out in the technical reference document; one hundred per cent of catalogue records conform to the WMO Core Metadata Profile (Appendix F of the Manual); and the operational metrics required under §4.7 of the Manual are published.
  
-For a Global Discovery Catalogue, the service level is not less than 98 per cent of operational time per calendar month.
+For a Global Discovery Catalogue, the API should support a minimum of 25 requests per second, and the service level shall not be less than 98 per cent of operational time per calendar month.
  
 ====== 2.7.2.9.4 Global Monitor
  
