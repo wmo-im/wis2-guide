@@ -3109,15 +3109,12 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <div class="ulist">
 <ul>
 <li>
-<p>Subscribe to a given <code>origin/a/wis2/&#8230;&#8203;</code>, it could be <code>#</code> or a particular centre-id on at least one Global Broker</p>
-</li>
-<li>
-<p>Subscribe to a given <code>cache/a/wis2/&#8230;&#8203;</code>, it could be <code>#</code> or a particular centre-id on at least one Global Cache - The subscription must be done on the broker of the Global Cache (unlike normal subscription to be made only on the Global Broker)</p>
+<p>Subscribe to a given <code>origin/a/wis2/&#8230;&#8203;</code> and to the equivalent on the cache topic (<code>cache/a/wis2/&#8230;&#8203;</code>). The last subscription level could be <code>#</code> or a particular centre-id or any subtopic.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Only on the subscription to the Global Broker:</p>
+<p>For the messages received on the <code>origin</code> topic subscription:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3139,8 +3136,12 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </ul>
 </div>
 <div class="paragraph">
-<p>For each of the subscription to the various Global Caches:</p>
+<p>For the messages received on the <code>cache</code> topic subscription and using the `properties.global-cache`value to select the Global Cache:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Check if the link with <code>rel="canonical</code> or <code>rel="update"</code> in <code>links</code> is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to <code>200</code>). If this is not the case, discard the Notification Message. Otherwise:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -3152,8 +3153,11 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <li>
 <p>Compare this value with the three threshold defined in the metric table above. Increase by 1 <code>wmo_wis2_scgc_messages_cached_delay_total</code> using the threshold as a label (so less than 120s, less that 300s, less than 600s)</p>
 </li>
+</ul>
+</div>
+</li>
 <li>
-<p>If no Notification Message for the <code>data_id</code> is received after the highest threshold (here 600s), increase by 1 <code>wmo_wis2_scgc_messages_missed_total</code></p>
+<p>If no Notification Message for the <code>data_id</code> is received after the highest threshold (here 600s) or if the link provided is not valid, increase by 1 <code>wmo_wis2_scgc_messages_missed_total</code></p>
 </li>
 </ul>
 </div>
@@ -3164,7 +3168,32 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>If no Global Cache has cached the data, increase by 1 <code>wmo_wis2_scgc_messages_missed_all_total</code></p>
 </div>
 <div class="paragraph">
-<p>All the metrics must be exposed for scraping by the Global Monitor.</p>
+<p>All the metrics SHALL be exposed for scraping by the Global Monitor.</p>
+</div>
+<div class="paragraph">
+<p>In addition to the metrics, the SCGC will also make available an hourly logfile containing at least:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the centre-id</p>
+</li>
+<li>
+<p>the full topic where the WIS2 Notification Message has been originally published</p>
+</li>
+<li>
+<p>the full WIS2 Notification Message as published by the origin centre-id</p>
+</li>
+<li>
+<p>for each Global Cache a clear indication when the message pertaining to this data-id has been published on the cache topic (the timestamp), and if the data-id was not republished by a particular Global Cache <code>9999999999999</code> will be used instead of the timestamp</p>
+</li>
+<li>
+<p>each entry in the log file will be a valid JSON</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then, at the end of the hour, the SCGC SHALL publish a notification message on <code>monitor/a/wis2/{tld}-{centre-name}-sensor-centre-global-cache</code> providing a URL to download the logfile. The notification message published will be conformant with the WMO WIS2 Monitoring Events specifications. The monitor message will be of <code>type</code> : <code>int.wmo.wis.wme.event.item.download</code>.</p>
 </div>
 </div>
 </div>
@@ -3997,7 +4026,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-05 09:43:06 UTC
+Last updated 2026-06-07 19:58:58 UTC
 </div>
 </div>
 </body>
