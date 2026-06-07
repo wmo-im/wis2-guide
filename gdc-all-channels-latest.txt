@@ -425,6 +425,7 @@ urn:wmo:md:th-tmd:synop-hourly,data/core/weather/surface-based-observations/syno
 urn:wmo:md:th-tmd:temp-dataset-tmd,data/core/weather/surface-based-observations/temp
 urn:wmo:md:tk-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tt-trin-met:2qaq9f,data/core/weather/surface-based-observations/temp
+urn:wmo:md:tt-trin-met:aviation-metar,data/recommended/weather/aviation/metar
 urn:wmo:md:tt-trin-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tt-trin-met:trinidad-tobago-upper-air,data/core/weather/surface-based-observations/temp
 urn:wmo:md:tz-tma:metar,data/recommended/aviation/metar
