@@ -1,5 +1,8 @@
 === 3.2 Other services
 
+// TODO - define link to designation process
+A Member wishing to operate a Service defined in this Guide must submit a service offer as per the DESIGNATION PROCESS.
+
 ==== 3.2.1 Global Replay
 
 A Global Replay provides access and subscription to past WIS Notification Messages.
