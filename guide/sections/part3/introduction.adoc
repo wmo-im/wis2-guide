@@ -41,4 +41,4 @@ The designation of an Additional Component involves the following steps:
 
 ==== 3.1.3 Decommissioning procedure for Additional Components
 
-// TODO
+When a Member seeks to stop operating an Additional Component they must contact the Secretariat to inform WMO of their wish to decommission the service. Members should provide sufficient lead-time between submitting the request to decommission and cessation of the service. Where the service contributes to the effective functioning of WIS2, the Member seeking to stop the service should attempt to find another Member to whom they can transfer their service obligations. On the date agreed for cessation of the service, the Secretariat will: (i) remove the Additional Component from the list designated services, and (ii) coordinate with the Global Service providers to disconnect the Additional Component from WIS2.
