@@ -22,7 +22,7 @@ Each type of Sensor Centre will result in a set of metrics that will be used to 
 
 A Sensor Centre may also provide logs, in addition to the defined metrics, through download links announced using the WIS2 Monitoring Events standard in support of further analysis and corrective action.
 
-Sensor Centres monitoring the Global Services that are critical to the function of WIS 2.0 are described below: Sensor Centre Global Broker, Sensor Centre Global Cache, and Sensor Centre Global Discovery Catalogue.  
+Sensor Centres monitoring the Global Services that are critical to the function of WIS 2.0 are described below: Sensor Centre Global Broker, Sensor Centre Global Cache, and Sensor Centre Global Discovery Catalogue. Multiple instances of each of these Sensor Centre types are deployed globally to provide a Regional perspective on Global Service performance. 
 
 Given that Sensors Centres may be used to monitor any function in WIS 2.0, additional Sensor Centre types may be used to meet other requirements, such as validation of GBON or RBON compliance. 
 
