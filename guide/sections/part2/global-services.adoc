@@ -127,20 +127,6 @@ For each hour, the Global Cache is considered operational where both cache compl
  
 For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.
  
-====== 2.7.2.9.3 Global Discovery Catalogue
- 
-A Global Discovery Catalogue is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of WCMP2 metadata records published by source catalogues are successfully harvested within the latency target set out in the technical reference document; the search and access interfaces are available to consumers for not less than 99.9 per cent of the time, with response times below the threshold set out in the technical reference document; one hundred per cent of catalogue records conform to the WMO Core Metadata Profile (Appendix F of the Manual); and the operational metrics required under §4.7 of the Manual are published.
- 
-For a Global Discovery Catalogue, the API should support a minimum of 25 requests per second, and the service level shall not be less than 98 per cent of operational time per calendar month.
- 
-====== 2.7.2.9.4 Global Monitor
- 
-A Global Monitor is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of operational metric streams published by Global Services and Sensor Centres are successfully ingested; the dashboards and statistical summary interfaces are available to consumers for not less than 99 per cent of the time; and not less than 99 per cent of operational issues meeting the alerting criteria set out in the technical reference document trigger an alert within the latency target set out in the same document.
- 
-For a Global Monitor, the service level is not less than 98 per cent of operational time per calendar month.
- 
-The detailed endpoint checks, conformance tests and operational criteria for each category of Global Service are maintained in a technical reference document published by the WMO Secretariat on behalf of SC-IMT as the operational practice evolves.
- 
 ==== 2.7.3 Global Broker
 
 ===== 2.7.3.1 Technical considerations
