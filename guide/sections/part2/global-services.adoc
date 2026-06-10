@@ -26,7 +26,11 @@ The WMO Secretariat and other Global Services will make the required changes to 
 
 ==== 2.7.2 Performance management and monitoring of a Global Service
 
-===== 2.7.2.1 Monitoring and metrics for WIS2 operations
+===== 2.7.2.1 General
+
+The performance management of designated Global Services is governed by §§2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.
+
+===== 2.7.2.2 Monitoring and metrics for WIS2 operations
 
 The availability of data and the performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive responses to incidents and effective capacity planning for future operations.
 
@@ -43,7 +47,7 @@ Metrics for WIS2 monitoring should follow the naming convention ``wmo_<program>_
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:[See https://github.com/wmo-im/wis2-metric-hierarchy.]
 
-===== 2.7.2.2 Service levels, performance indicators, and fair usage policies
+===== 2.7.2.3 Service levels, performance indicators, and fair usage policies
 * Each WIS centre operating a WIS2 Node is responsible for achieving the highest possible level of service based on its resources and capabilities.
 * All Global Services, in particular Global Brokers and Global Caches, are collectively responsible for making WIS a reliable and efficient means of exchanging the data required for the operation of all WIS centres. The architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.
 * Each Global Service should aim to achieve at least 99.5% availability of the service it provides. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating that service.
@@ -55,7 +59,7 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 * A Global Cache:
 ** Should support a minimum of 100 GB of data in the cache;
 ** Should support a minimum of 1 000 simultaneous downloads;
-** Could limit the number of simultaneous connections from a user (known by its originating source IP) to five;
+** Could limit the number of simultaneous connections from a user (known by its originating source IP) to not less than sixteen;
 ** Could limit the bandwidth usage of the service to 1 Gb/s.
 * A Global Monitor:
 ** Should support a minimum of 50 metrics providers;
@@ -63,16 +67,12 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 ** Could limit the bandwidth usage of the service to 100 Mb/s.
 * A Global Discovery Catalogue:
 ** Should support a minimum of 20 000 metadata records;
-** Should support a minimum of 50 requests per second to the API endpoint.
+** Should support a minimum of 25 requests per second to the API endpoint.
 
-===== 2.7.2.3 Metrics for Global Services
+===== 2.7.2.4 Metrics for Global Services
 
 In the following sections, and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.
 
-===== 2.7.2.4 General
- 
-The performance management of designated Global Services is governed by §§2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.
- 
 ===== 2.7.2.5 Service level
  
 The service level is met in a calendar month where the designated Global Service is operational for not less than the proportion of that month set out, for the relevant category of Global Service, in the per-component operational criteria in section 2.7.2.9. The conditions under which a Global Service is considered operational are set out in those criteria, and the proportion of operational time over the month is determined in accordance with section 2.7.2.6.
@@ -126,20 +126,6 @@ The operational status of a Global Cache is assessed against two criteria, both 
 For each hour, the Global Cache is considered operational where both cache completeness and download availability are not less than 95 per cent. The proportion of operational time for the calendar month is computed from these hourly determinations in accordance with section 2.7.2.6. One hundred per cent of cached data is retained for the period required by Part III of the Manual, and the operational metrics required under §4.7 of the Manual are published. The size of the hourly download sample and the detailed metric definitions are set out in the technical reference document.
  
 For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.
- 
-====== 2.7.2.9.3 Global Discovery Catalogue
- 
-A Global Discovery Catalogue is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of WCMP2 metadata records published by source catalogues are successfully harvested within the latency target set out in the technical reference document; the search and access interfaces are available to consumers for not less than 99.9 per cent of the time, with response times below the threshold set out in the technical reference document; one hundred per cent of catalogue records conform to the WMO Core Metadata Profile (Appendix F of the Manual); and the operational metrics required under §4.7 of the Manual are published.
- 
-For a Global Discovery Catalogue, the API should support a minimum of 25 requests per second, and the service level shall not be less than 98 per cent of operational time per calendar month.
- 
-====== 2.7.2.9.4 Global Monitor
- 
-A Global Monitor is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of operational metric streams published by Global Services and Sensor Centres are successfully ingested; the dashboards and statistical summary interfaces are available to consumers for not less than 99 per cent of the time; and not less than 99 per cent of operational issues meeting the alerting criteria set out in the technical reference document trigger an alert within the latency target set out in the same document.
- 
-For a Global Monitor, the service level is not less than 98 per cent of operational time per calendar month.
- 
-The detailed endpoint checks, conformance tests and operational criteria for each category of Global Service are maintained in a technical reference document published by the WMO Secretariat on behalf of SC-IMT as the operational practice evolves.
  
 ==== 2.7.3 Global Broker
 

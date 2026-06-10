@@ -1,5 +1,7 @@
 === 3.2 Other services
 
+A Member wishing to operate a Service defined in this Guide must submit a service offer as per the designation process described in 3.1.2 Designation procedure for Additional Components.
+
 ==== 3.2.1 Global Replay
 
 A Global Replay provides access and subscription to past WIS Notification Messages.
