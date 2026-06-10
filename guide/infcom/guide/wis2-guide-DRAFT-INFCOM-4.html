@@ -212,7 +212,13 @@ body {
 </li>
 <li><a href="#_part_iii_additional_components">PART III. Additional components</a>
 <ul class="sectlevel2">
-<li><a href="#_3_1_overview">3.1 Overview</a></li>
+<li><a href="#_3_1_overview">3.1 Overview</a>
+<ul class="sectlevel3">
+<li><a href="#_3_1_1_value_added_capabilities">3.1.1 Value-added capabilities</a></li>
+<li><a href="#_3_1_2_designation_procedure_for_additional_components">3.1.2 Designation procedure for Additional Components</a></li>
+<li><a href="#_3_1_3_decommissioning_procedure_for_additional_components">3.1.3 Decommissioning procedure for Additional Components</a></li>
+</ul>
+</li>
 <li><a href="#_3_2_other_services">3.2 Other services</a>
 <ul class="sectlevel3">
 <li><a href="#_3_2_1_global_replay">3.2.1 Global Replay</a></li>
@@ -1640,7 +1646,13 @@ body {
 <div class="sect3">
 <h4 id="_2_7_2_performance_management_and_monitoring_of_a_global_service"><a class="anchor" href="#_2_7_2_performance_management_and_monitoring_of_a_global_service"></a>2.7.2 Performance management and monitoring of a Global Service</h4>
 <div class="sect4">
-<h5 id="_2_7_2_1_monitoring_and_metrics_for_wis2_operations"><a class="anchor" href="#_2_7_2_1_monitoring_and_metrics_for_wis2_operations"></a>2.7.2.1 Monitoring and metrics for WIS2 operations</h5>
+<h5 id="_2_7_2_1_general"><a class="anchor" href="#_2_7_2_1_general"></a>2.7.2.1 General</h5>
+<div class="paragraph">
+<p>The performance management of designated Global Services is governed by §§2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_2_7_2_2_monitoring_and_metrics_for_wis2_operations"><a class="anchor" href="#_2_7_2_2_monitoring_and_metrics_for_wis2_operations"></a>2.7.2.2 Monitoring and metrics for WIS2 operations</h5>
 <div class="paragraph">
 <p>The availability of data and the performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive responses to incidents and effective capacity planning for future operations.</p>
 </div>
@@ -1671,7 +1683,7 @@ body {
 </div>
 </div>
 <div class="sect4">
-<h5 id="_2_7_2_2_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_2_7_2_2_service_levels_performance_indicators_and_fair_usage_policies"></a>2.7.2.2 Service levels, performance indicators, and fair usage policies</h5>
+<h5 id="_2_7_2_3_service_levels_performance_indicators_and_fair_usage_policies"><a class="anchor" href="#_2_7_2_3_service_levels_performance_indicators_and_fair_usage_policies"></a>2.7.2.3 Service levels, performance indicators, and fair usage policies</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -1713,7 +1725,7 @@ body {
 <p>Should support a minimum of 1 000 simultaneous downloads;</p>
 </li>
 <li>
-<p>Could limit the number of simultaneous connections from a user (known by its originating source IP) to five;</p>
+<p>Could limit the number of simultaneous connections from a user (known by its originating source IP) to not less than sixteen;</p>
 </li>
 <li>
 <p>Could limit the bandwidth usage of the service to 1 Gb/s.</p>
@@ -1745,7 +1757,7 @@ body {
 <p>Should support a minimum of 20 000 metadata records;</p>
 </li>
 <li>
-<p>Should support a minimum of 50 requests per second to the API endpoint.</p>
+<p>Should support a minimum of 25 requests per second to the API endpoint.</p>
 </li>
 </ul>
 </div>
@@ -1754,15 +1766,9 @@ body {
 </div>
 </div>
 <div class="sect4">
-<h5 id="_2_7_2_3_metrics_for_global_services"><a class="anchor" href="#_2_7_2_3_metrics_for_global_services"></a>2.7.2.3 Metrics for Global Services</h5>
+<h5 id="_2_7_2_4_metrics_for_global_services"><a class="anchor" href="#_2_7_2_4_metrics_for_global_services"></a>2.7.2.4 Metrics for Global Services</h5>
 <div class="paragraph">
 <p>In the following sections, and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_2_7_2_4_general"><a class="anchor" href="#_2_7_2_4_general"></a>2.7.2.4 General</h5>
-<div class="paragraph">
-<p>The performance management of designated Global Services is governed by §§2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1843,27 +1849,6 @@ body {
 </div>
 <div class="paragraph">
 <p>For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_2_7_2_9_3_global_discovery_catalogue"><a class="anchor" href="#_2_7_2_9_3_global_discovery_catalogue"></a>2.7.2.9.3 Global Discovery Catalogue</h6>
-<div class="paragraph">
-<p>A Global Discovery Catalogue is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of WCMP2 metadata records published by source catalogues are successfully harvested within the latency target set out in the technical reference document; the search and access interfaces are available to consumers for not less than 99.9 per cent of the time, with response times below the threshold set out in the technical reference document; one hundred per cent of catalogue records conform to the WMO Core Metadata Profile (Appendix F of the Manual); and the operational metrics required under §4.7 of the Manual are published.</p>
-</div>
-<div class="paragraph">
-<p>For a Global Discovery Catalogue, the API should support a minimum of 25 requests per second, and the service level shall not be less than 98 per cent of operational time per calendar month.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_2_7_2_9_4_global_monitor"><a class="anchor" href="#_2_7_2_9_4_global_monitor"></a>2.7.2.9.4 Global Monitor</h6>
-<div class="paragraph">
-<p>A Global Monitor is considered operational when, evaluated continuously over the assessment period: not less than 99 per cent of operational metric streams published by Global Services and Sensor Centres are successfully ingested; the dashboards and statistical summary interfaces are available to consumers for not less than 99 per cent of the time; and not less than 99 per cent of operational issues meeting the alerting criteria set out in the technical reference document trigger an alert within the latency target set out in the same document.</p>
-</div>
-<div class="paragraph">
-<p>For a Global Monitor, the service level is not less than 98 per cent of operational time per calendar month.</p>
-</div>
-<div class="paragraph">
-<p>The detailed endpoint checks, conformance tests and operational criteria for each category of Global Service are maintained in a technical reference document published by the WMO Secretariat on behalf of SC-IMT as the operational practice evolves.</p>
 </div>
 </div>
 </div>
@@ -2739,8 +2724,10 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_3_1_overview"><a class="anchor" href="#_3_1_overview"></a>3.1 Overview</h3>
+<div class="sect3">
+<h4 id="_3_1_1_value_added_capabilities"><a class="anchor" href="#_3_1_1_value_added_capabilities"></a>3.1.1 Value-added capabilities</h4>
 <div class="paragraph">
-<p>In addition to the core set of Global Services defined, additional Global Services may exists in WIS2.</p>
+<p>Alongside the core set of Global Services defined, Additional Global Services and Sensor Centres provide value-added capabilities within WIS2.</p>
 </div>
 <div class="paragraph">
 <p>Additional Global Services:</p>
@@ -2758,9 +2745,114 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Sensor Centres:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>provide continuous measurement and assessment on WIS2 functions</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_2_designation_procedure_for_additional_components"><a class="anchor" href="#_3_1_2_designation_procedure_for_additional_components"></a>3.1.2 Designation procedure for Additional Components</h4>
+<div class="paragraph">
+<p>Any WMO Member or partner organisation may request to operate an Additional Component that is defined in this Guide.</p>
+</div>
+<div class="paragraph">
+<p>Additional Components provide value to the entire WIS2 ecosystem. As such, all instances of Additional Components must be assessed to assure their correct operation before being designated as a WIS2 component.</p>
+</div>
+<div class="paragraph">
+<p>The designation of an Additional Component involves the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Request to host an Additional Component: the "service offer".</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A service offer shall be made by the Permanent Representative of the Member country or territory from where the Additional Component will operate, or by the organisation responsible for WMO Programme or Activity that will operate the Additional Component.</p>
+</li>
+<li>
+<p>A service offer shall include: (i) the type of Additional Component - this shall be a type that is defined in this Guide, (ii) an outline the Centre’s capacity to deliver the proposed component, and (iii) contact details for the focal point responsible for the Additional Component.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Complete the WIS2 Register.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Once the Additional Component is ready for assessment, the focal point shall update the WIS2 Register providing the information requested by the Secretariat, including but not limited to: the proposed centre identifier ("centre-id"), and technical details for the Additional Component required to connect with other WIS2 components.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Provide details of WIS2 components.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Secretariat provides connection details (such as IP addresses or hostnames) for the WIS2 services or components to which Additional Component needs to connect.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Additional Component assessment.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In coordination with the WMO Secretariat and SC-IMT, the principal GISC of the Member country or territory from where the Additional Component will operate will assess technical compliance with specifications of WIS2 (e.g., provision of metrics, provision of WIS2 Monitor Event messages) and the specification of the Additional Component defined in this Guide.</p>
+</li>
+<li>
+<p>Following successful technical compliance validation, the principal GISC undertakes a pre-operational assessment of the Additional Component for a period not less than one month. The GISC, in coordination with WMO Secretariat and SC-IMT, will facilitate connection with the Global Services if required. This assessment includes verifying interoperability with Global Services and validating performance against any KPIs defined for the Additional Component. During the pre-operational testing the Additional Component and any outputs it provides will be marked as experimental.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Approve the designation of the Additional Component.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Based on the findings of the technical validation and operational assessment, SC-IMT will consider the service offer and provide a recommendation to President of INFCOM for approval. In cases where the proposal is rejected, SC-IMT will provide constructive feedback to the requestor.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add new Additional Component to WIS2 (if approved).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The Additional Component is added to the list of designated Additional Components maintained and published by the WMO Secretariat.</p>
+</li>
+<li>
+<p>Experimental marking is removed.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_3_1_3_decommissioning_procedure_for_additional_components"><a class="anchor" href="#_3_1_3_decommissioning_procedure_for_additional_components"></a>3.1.3 Decommissioning procedure for Additional Components</h4>
+<div class="paragraph">
+<p>When a Member seeks to stop operating an Additional Component they must contact the Secretariat to inform WMO of their wish to decommission the service. Members should provide sufficient lead-time between submitting the request to decommission and cessation of the service. Where the service contributes to the effective functioning of WIS2, the Member seeking to stop the service should attempt to find another Member to whom they can transfer their service obligations. On the date agreed for cessation of the service, the Secretariat will: (i) remove the Additional Component from the list designated services, and (ii) coordinate with the Global Service providers to disconnect the Additional Component from WIS2.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_3_2_other_services"><a class="anchor" href="#_3_2_other_services"></a>3.2 Other services</h3>
+<div class="paragraph">
+<p>A Member wishing to operate a Service defined in this Guide must submit a service offer as per the designation process described in 3.1.2 Designation procedure for Additional Components.</p>
+</div>
 <div class="sect3">
 <h4 id="_3_2_1_global_replay"><a class="anchor" href="#_3_2_1_global_replay"></a>3.2.1 Global Replay</h4>
 <div class="paragraph">
@@ -3000,19 +3092,16 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>A Sensor Centre may also provide logs, in addition to the defined metrics, through download links announced using the WIS2 Monitoring Events standard in support of further analysis and corrective action.</p>
 </div>
 <div class="paragraph">
-<p>Sensor Centres monitoring the Global Services that are critical to the function of WIS 2.0 are described below: Sensor Centre Global Broker, Sensor Centre Global Cache, and Sensor Centre Global Discovery Catalogue.</p>
+<p>Sensor Centres monitoring the Global Services that are critical to the function of WIS 2.0 are described below: Sensor Centre Global Broker, Sensor Centre Global Cache, and Sensor Centre Global Discovery Catalogue. Multiple instances of each of these Sensor Centre types are deployed globally to provide a Regional perspective on Global Service performance.</p>
 </div>
 <div class="paragraph">
-<p>Given that Sensors Centres may be used to monitor any function in WIS 2.0, further Sensor Centres may be proposed to meet additional requirements, such as validation of GBON or RBON compliance. Every Sensor Centre must follow the standard mechanism for publishing metrics for presentation in dashboards that can be used to monitor the performance of the WIS 2.0 function being assessed.</p>
+<p>Given that Sensors Centres may be used to monitor any function in WIS 2.0, additional Sensor Centre types may be used to meet other requirements, such as validation of GBON or RBON compliance.</p>
 </div>
 <div class="paragraph">
-<p>Any Member may request to operate a Sensor Centre via the <span class="underline">designation process</span> - either for a new or existing type of Sensor Centre. Requests must specify what type of Sensor Centre will be operated and refer to the specification they will implement.</p>
+<p>Any Member may choose to design and operate a Sensor Centre to meet the needs they identify. They may also choose to propose a new recipe for the WIS2 Cookbook that describes what their Sensor Centre monitors and how it functions. Where a Sensor Centre has an official role unrelated to WIS2 (e.g., in support of RBON compliance) the responsible body for that function may assert their own governance requirements regarding their designation and operation. Sensor Centres supporting the formal monitoring of WIS2 - including contributing to the objective evaluation of Global Service performance - are governed by INFCOM. SC-IMT welcomes proposals for new Sensor Centre types that contribute to the formal monitoring of WIS2. Members are invited to contact the Secretariat with details of their Sensor Centre and implementation evidence.</p>
 </div>
 <div class="paragraph">
-<p>The specification of a Sensor Centre must be published in a publicly accessible location, such as a public GitHub repository. Where a Sensor Centre has a role in the objective assessment of Global Service performance, the Sensor Centre specification is subject to approval by INFCOM and will be published in the Guide to WIS, Vol 2, Part III. Where a Sensor Centre has some other official role (e.g., in support of RBON compliance) the responsible body for that function may assert their own governance requirements.</p>
-</div>
-<div class="paragraph">
-<p>Where a Sensor Centre provides insight about the performance of WIS 2.0 as a whole, Global Monitors may agree to collect metrics from the Sensor Centre and provide monitoring dashboards. As part of the designation process, a Member may include a request for Global Monitors to harvest metrics, including suggested thresholds for metrics that would trigger a Global Monitor to publish an alert or warning.</p>
+<p>A Member wishing to operate a Sensor Centre defined in this Guide must submit a service offer as per the designation process described in 3.1.2 Designation procedure for Additional Components, and undergo assessment to assure their correct operation.</p>
 </div>
 </div>
 <div class="sect3">
@@ -4026,7 +4115,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-10 13:49:49 UTC
+Last updated 2026-06-10 20:02:39 UTC
 </div>
 </div>
 </body>
