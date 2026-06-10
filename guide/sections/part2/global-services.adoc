@@ -59,7 +59,7 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 * A Global Cache:
 ** Should support a minimum of 100 GB of data in the cache;
 ** Should support a minimum of 1 000 simultaneous downloads;
-** Could limit the number of simultaneous connections from a user (known by its originating source IP) to five;
+** Could limit the number of simultaneous connections from a user (known by its originating source IP) to not less than sixteen;
 ** Could limit the bandwidth usage of the service to 1 Gb/s.
 * A Global Monitor:
 ** Should support a minimum of 50 metrics providers;
