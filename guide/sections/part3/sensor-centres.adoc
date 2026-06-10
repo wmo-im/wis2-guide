@@ -31,9 +31,6 @@ Any Member may choose to design and operate a Sensor Centre to meet the needs th
 // TODO: add link to designation process
 A Member wishing to operate a Sensor Centre defined in this Guide must submit a service offer as per the DESIGNATION PROCESS and undergo assessment to assure their correct operation. 
 
-// TO BE CONFIRMED: Do we want to require Members to publish a WCMP2 service record for a Sensor Centre? Issue: additional burden to operate a MQTT broker and provide WNM messages to publish the WCMP2 record. Is this appropriate? 
-A Member operating a Sensor Centre must publish a WCMP2 record (`properties.type=service`) that describes it. These WCMP2 records collectively form a register of Sensor Centres in the Global Discovery Catalogue.
-
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
 The aim of the SCGB is to compare the behaviour of Global Broker(s)::
