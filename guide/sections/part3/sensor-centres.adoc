@@ -28,8 +28,7 @@ Given that Sensors Centres may be used to monitor any function in WIS 2.0, addit
 
 Any Member may choose to design and operate a Sensor Centre to meet the needs they identify. They may also choose to propose a new recipe for the WIS2 Cookbook that describes what their Sensor Centre monitors and how it functions. Where a Sensor Centre has an official role unrelated to WIS2 (e.g., in support of RBON compliance) the responsible body for that function may assert their own governance requirements regarding their designation and operation. Sensor Centres supporting the formal monitoring of WIS2 - including contributing to the objective evaluation of Global Service performance - are governed by INFCOM. SC-IMT welcomes proposals for new Sensor Centre types that contribute to the formal monitoring of WIS2. Members are invited to contact the Secretariat with details of their Sensor Centre and implementation evidence.
 
-// TODO: add link to designation process
-A Member wishing to operate a Sensor Centre defined in this Guide must submit a service offer as per the DESIGNATION PROCESS and undergo assessment to assure their correct operation. 
+A Member wishing to operate a Sensor Centre defined in this Guide must submit a service offer as per the designation process described in 3.1.2 Designation procedure for Additional Components, and undergo assessment to assure their correct operation. 
 
 ==== 3.3.2 Sensor Centres for Global Brokers (SCGB)
 
