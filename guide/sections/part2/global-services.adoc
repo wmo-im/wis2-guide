@@ -61,13 +61,13 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 ** Should support a minimum of 1 000 simultaneous downloads;
 ** Could limit the number of simultaneous connections from a user (known by its originating source IP) to not less than sixteen;
 ** Could limit the bandwidth usage of the service to 1 Gb/s.
+* A Global Discovery Catalogue:
+** Should support a minimum of 20 000 metadata records;
+** Should support a minimum of 25 requests per second to the API endpoint.
 * A Global Monitor:
 ** Should support a minimum of 50 metrics providers;
 ** Should support 200 simultaneous "access" to the dashboard;
 ** Could limit the bandwidth usage of the service to 100 Mb/s.
-* A Global Discovery Catalogue:
-** Should support a minimum of 20 000 metadata records;
-** Should support a minimum of 25 requests per second to the API endpoint.
 
 ===== 2.7.2.4 Metrics for Global Services
 
