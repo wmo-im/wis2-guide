@@ -1,4 +1,4 @@
-=== 3.2 Other services
+=== 3.2 Other Global Services
 
 A Member wishing to operate a Service defined in this Guide must submit a service offer as per the designation process described in 3.1.2 Designation procedure for Additional Components.
 
