@@ -101,12 +101,12 @@ As a Global Cache can decide not to cache a data granule, and in order to assess
 
 If no Global Cache has cached the data, increase by 1 `wmo_wis2_scgc_messages_missed_all_total`
 
-In order to assess the downloading feature of a Global Cache, and to provide the required information to determine the KPI on downloads, the Sensor Centre SHALL:
+In order to assess the downloading feature of a Global Cache, and to provide the required information to determine the KPI on downloads, the Sensor Centre will:
 
-* Select randomly every minute a sample of at least 5 data granules successfully cached by all Global Cache. 
-* Increase by the number of selected data granule the metric ``wmo_wis2_scgc_download_selected_total``
-* Attempt a download for that same granule towards all Global Cache.
-* Increase by 1 ``wmo_wis2_scgc_download_successful_total`` if the download is succesful.
+* Select randomly every minute a sample of at least 5 data granules successfully cached by all Global Caches
+* Increase ``wmo_wis2_scgc_download_selected_total`` by the number of selected data granules
+* Attempt a download for that same granule against all Global Caches
+* Increment ``wmo_wis2_scgc_download_successful_total`` by 1 if the download is succesful
 
 All the metrics SHALL be exposed for scraping by the Global Monitor.
 
