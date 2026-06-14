@@ -3257,6 +3257,25 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>If no Global Cache has cached the data, increase by 1 <code>wmo_wis2_scgc_messages_missed_all_total</code></p>
 </div>
 <div class="paragraph">
+<p>In order to assess the downloading feature of a Global Cache, and to provide the required information to determine the KPI on downloads, the Sensor Centre will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Select randomly every minute a sample of at least 5 data granules successfully cached by all Global Caches</p>
+</li>
+<li>
+<p>Increment <code>wmo_wis2_scgc_download_selected_total</code> by the number of selected data granules</p>
+</li>
+<li>
+<p>Attempt a download for that same granule against all Global Caches</p>
+</li>
+<li>
+<p>Increment <code>wmo_wis2_scgc_download_successful_total</code> by 1 if the download is succesful</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>All the metrics SHALL be exposed for scraping by the Global Monitor.</p>
 </div>
 <div class="paragraph">
@@ -4115,7 +4134,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-11 12:06:05 UTC
+Last updated 2026-06-14 13:41:45 UTC
 </div>
 </div>
 </body>
