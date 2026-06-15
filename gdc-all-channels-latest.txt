@@ -300,6 +300,7 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observatio
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/viirs
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/swot/poseidon-3c
 urn:wmo:md:int-eumetsat:cro:lemur:stratos,data/core/weather/space-based-observations/lemur-2/stratos
+urn:wmo:md:int-eumetsat:saral:altika,data/core/weather/space-based-observations/saral/altika
 urn:wmo:md:int-eumetsat:sentinel-1a:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1a/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1c:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1c/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1d:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1d/sar-c
