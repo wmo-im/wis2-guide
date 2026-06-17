@@ -52,6 +52,14 @@ Links to where data can be accessed are made available through dataset discovery
 
 A discovery metadata record or notification message may provide more than one download link. The preferred link will be identified as "canonical" (link relation: "rel": "canonical" footnote:[See Internet Assigned Numbers Authority (IANA) Link Relations: https://www.iana.org/assignments/link-relations/link-relations.xhtml]).
 
+A data consumer should expect to receive multiple notification messages about the same data item. Furthermore, data consumers should not assume that messages arrive in time-sequence order (i.e., newest published message, as indicated by ``properties.pubtime``, arriving last). Consequently, for notification messages relating to the same data item (i.e., notification messages with identical ``properties.data_id``), they should:
+
+1. Prioritise the message with the latest publication time. 
+2. Discard any notification messages earlier publication time that have not yet been processed or may be received in the future.
+3. Where a previous notification message with earlier publication time has already been processed, any data or metadata associated with the earlier notification message should be overwritten. 
+
+This means that a data consumer should keep track of notification messages that have been processed so that newly arrived notification messages can be compared with earlier messages identify which notification message relates to the latest version of the data or metadata. Given that messages propagate rapidly through WIS2, a record of previous messages need not exceed a 60-minute duration.
+
 Where data are provided through an interactive web service, a canonical link containing a URL from which data consumers can directly download a data object may be complemented with an additional link providing the URL for the root of the web service from which data consumers can interact with or query the entire dataset.
 
 If a download link implements access control (for example, the data consumer needs to take some additional action(s) to download the data object), it will contain a security object that provides the pertinent information (such as the access control mechanism used and where/how a data consumer would need to register to request access).
