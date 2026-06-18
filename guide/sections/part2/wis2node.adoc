@@ -101,7 +101,11 @@ A WIS2 Node must be able to publish datasets and compliant discovery metadata. T
 
 If contacted by a Global Monitor for a performance issue via a GISC, the WIS2 Node should provide metrics to the GISC and the Global Monitor when service is restored to inform them of the resolution of the issue.
 
-==== 2.6.3 WIS2 Node Reference Implementation: WIS2 in a box
+==== 2.6.3 Global Service Monitoring considerations
+
+A WIS2 Node can obtain feedback pertaining to its data and metadata publishing from Global Services using the WIS2 Monitoring Events (WME) specification.  By subscribing to the WIS2 Monitoring topic (``monitor/a/wis2/<centre-id>``, where ``<centre-id>`` is the centre identifier of the WIS2 Node), a WIS2 Node can receive feedback to trigger corrective action (for example, a metadata publication error reported by a Global Discovery Catalogue).  For more information, see <<_2_9_monitoring_for_global_service_providers>>.
+
+==== 2.6.4 WIS2 Node Reference Implementation: WIS2 in a box
 
 When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.
 
