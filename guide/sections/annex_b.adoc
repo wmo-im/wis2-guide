@@ -1,0 +1,98 @@
+[appendix]
+:appendix-caption: Annex
+
+== Per-component operational criteria
+ 
+=== B.1 Global Broker
+ 
+The operational status of a Global Broker is assessed against two KPIs, both measured through Sensor Centre Global Broker (SCGB) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGB instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.
+ 
+==== B.1.1 Message completeness KPI
+ 
+This KPI measures the percentage of WIS2 Notification Messages (WNM) published by the Global Broker, within a defined cut-off time, compared against a baseline derived from all Global Brokers.
+ 
+*Measure (calculated each hour):*
+ 
+The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages.
+ 
+* The randomised sample is selected using bytes (or hex digits) from the the message identifier (`message-id`) UUID. Sampling at 10 per cent keeps the processing workload of an SCGB instance at a manageable level.
+* The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour.
+* The cut-off time is 60 seconds: a message is considered "missed" if a Global Broker has not published that message within 60 seconds of it first being published by any other Global Broker.
+ 
+For each SCGB instance, the following workflow is applied to each message:
+ 
+* Evaluate the `message-id` (UUID) of the message. Is the UUID within the randomised sample range?
+** *No* — discard the message (outside sample range).
+** *Yes* — has a message with this UUID already been seen from another Global Broker?
+*** *No* — store the `message-id` and the timestamp at which the message was received in the SCGB database, and increment the `wmo_wis2_scgb_messages_published_total` metric for the Global Broker that published the message.
+*** *Yes* — is the stored timestamp for this message older than 60 seconds?
+**** *No* — increment `wmo_wis2_scgb_messages_published_total` for the Global Broker that published the message (received within the cut-off time).
+**** *Yes* — discard the message; do not increment `wmo_wis2_scgb_messages_published_total` for the Global Broker that published the message (received after the cut-off time — considered a "miss").
+ 
+An SCGB instance retains the identifiers of received messages for a minimum of two hours, so that previously seen messages are not reprocessed.
+ 
+*KPI evaluation (hourly):* the message completeness KPI is set to "pass" for the hour if the number of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.
+ 
+==== B.1.2 Connectivity KPI
+ 
+This KPI measures the proportion of the hour during which the public MQTT endpoint of the Global Broker are reachable, as determined from the connection status recorded by SCGB instances.
+ 
+*Measure (calculated each hour):*
+ 
+The proportion of time that the Global Broker’s MQTT end-point is accessible, published by the Sensor Centre Global Broker using metric `wmo_wis2_scgb_connected_flag`.
+ 
+*KPI evaluation (hourly):* the connectivity KPI is set to "pass" for the hour if the `wmo_wis2_scgb_connected_flag` is set to `1` ("True", connected) for not less than 95 per cent of the time; otherwise it is set to "fail" for the hour.
+ 
+==== B.1.3 Combined hourly and monthly KPI
+ 
+* For each hour, the Global Broker is considered operational where *both* the message completeness KPI *and* the connectivity KPI are set to "pass". If either KPI fails for the hour, the Global Broker is considered non-operational for that hour.
+* Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 99.5 per cent of hours in the month (i.e. the Global Broker may experience up to 3 "failure" hours in a calendar month and still be considered performing within the service level).
+* Hours coinciding with planned outages, or other _force majeure_ agreed by SC-IMT, are excluded from the monthly KPI calculation.
+* The monthly KPI is used in the assessment of Global Broker performance informing the determination of downtime in accordance with section 2.7.2.6.
+ 
+'''
+ 
+=== B.2 Global Cache
+ 
+The operational status of a Global Cache is assessed against two KPIs, both measured through Sensor Centre Global Cache (SCGC) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGC instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.
+ 
+==== B.2.1 Cache completeness KPI
+ 
+This KPI measures the percentage of data items published by the Global Cache compared with the total number of data items published by all WIS2 Nodes (on `origin` topics).
+ 
+*Measure (calculated each hour):*
+ 
+* Cross-reference between the Global Cache and `origin` is based on a compound key of `data-id` + `pubtime` and, if available, a checksum (`integrity.value`).
+* An HTTP HEAD request is made on the relevant URLs to confirm that data items are actually available from the Global Cache’s download server.
+* Only messages where the link-relation (`rel`) is "canonical" are included in the assessment; messages with link-relation "update" are excluded. This is because Global Caches are designed to discard out-of-sequence updates, and counting such discards as "misses" would not be a fair reflection of performance.
+* Messages where `cache=false` are excluded from the assessment.
+ 
+*KPI evaluation (hourly):* the cache completeness KPI is set to "pass" for the hour if the number of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.
+ 
+==== B.2.2 Successful downloads KPI
+ 
+This KPI measures the proportion of cached data items that can be successfully downloaded from the Global Cache, including, where a checksum is available in the message, validation of data integrity.
+ 
+*Measure (calculated each hour):* based on a sample set of 200 randomly selected data items each hour (the same sample set is used for all Global Caches). A sample size of 200 is used to avoid overloading both Global Caches and Sensor Centres.
+ 
+To ensure Global Caches are not double penalised for failing to cache a data item, the download test is performed only on data items that have been cached by *all* Global Cache instances. The sampling methodology is as follows:
+ 
+* Every minute, select a maximum of five data items that have been cached by all Global Caches (fewer than five data items may be available if, for example, a Global Cache is offline and the number cached by all instances is consequently lower, including zero).
+* Increment `wmo_wis2_scgc_download_selected_total` by the number of data items selected.
+* Attempt to download each selected data item from all Global Caches.
+* For each Global Cache with a successful download and, where available, successful checksum validation, increment `wmo_wis2_scgc_download_successful_total`.
+ 
+*KPI evaluation (hourly):*
+ 
+* If `wmo_wis2_scgc_download_selected_total` is zero for the previous hour, the successful downloads KPI cannot be calculated, and is automatically set to "pass" for all Global Caches.
+* Otherwise, the KPI is evaluated as `wmo_wis2_scgc_download_successful_total` ÷ `wmo_wis2_scgc_download_selected_total`, and is set to "pass" for the hour if the result is not less than 95 per cent; otherwise it is set to "fail" for the hour.
+ 
+Note: A Global Cache that is offline for the hour will always fail the cache completeness KPI, since it will not have cached any data items during that period; the combined hourly KPI (defined below) will therefore also be "fail" for that hour.
+ 
+==== B.2.3 Combined hourly and monthly KPI
+ 
+* For each hour, the Global Cache is considered operational where *both* the cache completeness KPI *and* the successful downloads KPI are set to "pass". If either KPI fails for the hour, the Global Cache is considered non-operational for that hour.
+* Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 98 per cent of hours in the month (i.e. the Global Cache may experience up to 14 "failure" hours in a calendar month and still be considered performing within the service level).
+* Hours coinciding with planned outages, or other _force majeure_ agreed by SC-IMT, are excluded from the monthly KPI calculation.
+* The monthly KPI is used in the assessment of Global Cache performance informing the determination of downtime in accordance with section 2.7.2.6.
+ 
