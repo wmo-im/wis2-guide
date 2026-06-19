@@ -304,7 +304,9 @@ urn:wmo:md:int-eumetsat:saral:altika,data/core/weather/space-based-observations/
 urn:wmo:md:int-eumetsat:sentinel-1a:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1a/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1c:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1c/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1d:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1d/sar-c
+urn:wmo:md:int-eumetsat:sentinel-3a:olci,data/core/weather/space-based-observations/sentinel-3a/olci
 urn:wmo:md:int-eumetsat:sentinel-3a:sral,data/core/weather/space-based-observations/sentinel-3a/sral
+urn:wmo:md:int-eumetsat:sentinel-3b:olci,data/core/weather/space-based-observations/sentinel-3b/olci
 urn:wmo:md:int-eumetsat:sentinel-3b:sral,data/core/weather/space-based-observations/sentinel-3b/sral
 urn:wmo:md:int-eumetsat:sentinel-6a:poseidon-4:alt:hr,data/core/weather/space-based-observations/sentinel-6a/poseidon-4
 urn:wmo:md:int-eumetsat:sentinel-6a:poseidon-4:alt:lr,data/core/weather/space-based-observations/sentinel-6a/poseidon-4
