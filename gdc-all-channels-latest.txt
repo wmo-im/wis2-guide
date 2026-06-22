@@ -439,7 +439,6 @@ urn:wmo:md:tz-tma:metar,data/recommended/weather/aviation/metar
 urn:wmo:md:tz-tma:recommended,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:tz-tma:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tz-tma:taf,data/recommended/weather/aviation/taf
-urn:wmo:md:tz-tma:taff,data/core/weather/aviation/taf
 urn:wmo:md:uk-bas:weather.surface-based-observations.sonde-ascent,data/core/weather/surface-based-observations
 urn:wmo:md:uk-metoffice-globalwave:ocean.prediction.analysis.global-wave,data/core/ocean/experimental/prediction/analysis/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-globalwave:ocean.prediction.forecast.global-wave,data/core/ocean/experimental/prediction/forecast/medium-range/deterministic/global
