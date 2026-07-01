@@ -111,7 +111,7 @@ Restoration of a suspended Global Service to WIS 2.0 operations is confirmed by 
  
 The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each category is the assessable floor used for the performance-management procedures of the Manual; it is distinct from, and not higher than, the general availability guidance in 2.7.2.2. The design-capacity figures for each category remain as set out in 2.7.2.2. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.
  
-For a Global Broker, the service level is not less than 99.5 per cent of operational time per calendar month.
+For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.
  
 For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.
 
