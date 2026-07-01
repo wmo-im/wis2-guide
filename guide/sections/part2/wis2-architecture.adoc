@@ -70,6 +70,10 @@ Leveraging existing open standards, WIS2 defines the following specifications in
 |Dataset metadata, dataset granules
 |Global Broker, WIS2 Nodes
 
+|WIS2 Monitoring Events (WME)
+|Monitoring event metadata, datasets, dataset granules
+|All Global Services, WIS2 Nodes
+
 |===
 
 Refer to the _Manual on WIS_, Volume II for details.
