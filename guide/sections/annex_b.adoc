@@ -73,7 +73,7 @@ This KPI measures the percentage of data items published by the Global Cache com
  
 This KPI measures the proportion of cached data items that can be successfully downloaded from the Global Cache, including, where a checksum is available in the message, validation of data integrity.
  
-*Measure (calculated each hour):* based on a sample set of 200 randomly selected data items each hour (the same sample set is used for all Global Caches). A sample size of 200 is used to avoid overloading both Global Caches and Sensor Centres.
+*Measure (calculated each hour):* based on a sample set of 300 randomly selected data items each hour (the same sample set is used for all Global Caches). A small sample size is used to avoid overloading both Global Caches and Sensor Centres.
  
 To ensure Global Caches are not double penalised for failing to cache a data item, the download test is performed only on data items that have been cached by *all* Global Cache instances. The sampling methodology is as follows:
  
