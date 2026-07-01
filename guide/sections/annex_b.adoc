@@ -15,7 +15,7 @@ This KPI measures the percentage of WIS2 Notification Messages (WNM) published b
  
 The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages. The number of messages published by each Global Broker within the cutoff time is recorded using the metric `wmo_wis2_scgb_messages_published_total`. The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour. A message is considered "missed" if a Global Broker has not published that message within 60-seconds of it first being published by any other Global Broker.
  
-*KPI evaluation (hourly):* the message completeness KPI is set to "pass" for the hour if the number of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.
+*KPI evaluation (hourly):* the message completeness KPI is set to "pass" for the hour if the percentage of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.
  
 ==== B.1.2 Connectivity KPI
  
@@ -45,38 +45,40 @@ The operational status of a Global Cache is assessed against two KPIs, both meas
 This KPI measures the percentage of data items published by the Global Cache compared with the total number of data items published by all WIS2 Nodes (on `origin` topics).
  
 *Measure (calculated each hour):*
+
+The number of data items published by all origin WIS2 Nodes is recorded using the metric `wmo_wis2_scgc_messages_published_total`. Only those data items expected to be cached are included in this measure.
+
+The number of data items cached by a Global Cache is recorded using the metric `wmo_wis2_scgc_messages_cached_total`. Data items that are cached more than 600-seconds after publication by the origin WIS2 Node are excluded from this measure.
+
+Because Global Caches are designed to discard out-of-sequence updates, and counting such discards as "misses" would not be a fair reflection of performance, KPI performance is evaluated only for "canonical" data items (i.e., where the Notification Message specifies the link-relation `canonical`). Both `wmo_wis2_scgc_messages_published_total` and `wmo_wis2_scgc_messages_cached_total` metrics include the label `rel` to distinguish the link-relation.
+
+The percentage of data items published by a Global Cache is calculated as the increase in metric `wmo_wis2_scgc_messages_cached_total (rel=canonical)` over the previous hour ÷ the increase in metric `wmo_wis2_scgc_messages_published_total (rel=canonical)` over the previous hour.
  
-* Cross-reference between the Global Cache and `origin` is based on a compound key of `data-id` + `pubtime` and, if available, a checksum (`integrity.value`).
-* An HTTP HEAD request is made on the relevant URLs to confirm that data items are actually available from the Global Cache’s download server.
-* Only messages where the link-relation (`rel`) is "canonical" are included in the assessment; messages with link-relation "update" are excluded. This is because Global Caches are designed to discard out-of-sequence updates, and counting such discards as "misses" would not be a fair reflection of performance.
-* Messages where `cache=false` are excluded from the assessment.
- 
-*KPI evaluation (hourly):* the cache completeness KPI is set to "pass" for the hour if the number of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.
+*KPI evaluation (hourly):* the cache completeness KPI is set to "pass" for the hour if the percentage of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.
  
 ==== B.2.2 Successful downloads KPI
  
 This KPI measures the proportion of cached data items that can be successfully downloaded from the Global Cache, including, where a checksum is available in the message, validation of data integrity.
  
-*Measure (calculated each hour):* based on a sample set of 300 randomly selected data items each hour (the same sample set is used for all Global Caches). A small sample size is used to avoid overloading both Global Caches and Sensor Centres.
- 
-To ensure Global Caches are not double penalised for failing to cache a data item, the download test is performed only on data items that have been cached by *all* Global Cache instances. The sampling methodology is as follows:
- 
-* Every minute, select a maximum of five data items that have been cached by all Global Caches (fewer than five data items may be available if, for example, a Global Cache is offline and the number cached by all instances is consequently lower, including zero).
-* Increment `wmo_wis2_scgc_download_selected_total` by the number of data items selected.
-* Attempt to download each selected data item from all Global Caches.
-* For each Global Cache with a successful download and, where available, successful checksum validation, increment `wmo_wis2_scgc_download_successful_total`.
- 
-*KPI evaluation (hourly):*
- 
-* If `wmo_wis2_scgc_download_selected_total` is zero for the previous hour, the successful downloads KPI cannot be calculated, and is automatically set to "pass" for all Global Caches.
-* Otherwise, the KPI is evaluated as `wmo_wis2_scgc_download_successful_total` ÷ `wmo_wis2_scgc_download_selected_total`, and is set to "pass" for the hour if the result is not less than 95 per cent; otherwise it is set to "fail" for the hour.
- 
-Note: A Global Cache that is offline for the hour will always fail the cache completeness KPI, since it will not have cached any data items during that period; the combined hourly KPI (defined below) will therefore also be "fail" for that hour.
- 
+*Measure (calculated each hour):* 
+
+This measure is evaluated using a sample set of 300 randomly selected data items each hour. Data items must be cached by all Global Caches to be included in the sample set. The same sample set is used for all Global Caches. A small sample size is used to avoid overloading both Global Caches and Sensor Centres.
+
+The total number of data items sampled for download validation is recorded using the metric `wmo_wis2_scgc_download_selected_total`.
+
+The total number of data items in the sample set successfully downloaded by each Global Cache is recorded using the metric `wmo_wis2_scgc_download_successful_total`.
+
+The percentage of data items successfully downloaded is calculated as the increase in metric `wmo_wis2_scgc_download_successful_total` over the previous hour ÷ the increase in metric `wmo_wis2_scgc_download_selected_total` over the previous hour.
+
+*KPI evaluation (hourly):* the successful download KPI is set to "pass" for the hour if the percentage of successful downloads is not less than 95 per cent; otherwise it is set to "fail" for the hour.
+
+Note that if `wmo_wis2_scgc_download_selected_total` is zero for the previous hour (i.e., no data items were cached by any Global Cache - perhaps because one Global Cache is offline), the successful downloads KPI cannot be calculated. In this case, the KPI is automatically set to "pass" for all Global Caches. The Global Cache that is offline will fail the cache completeness KPI, thus the combined KPI (see below) for the offline Global Cache will always be a fail.
+
 ==== B.2.3 Combined hourly and monthly KPI
  
-* For each hour, the Global Cache is considered operational where *both* the cache completeness KPI *and* the successful downloads KPI are set to "pass". If either KPI fails for the hour, the Global Cache is considered non-operational for that hour.
+* For each hour, the Global Cache is considered operational where *both* the cache completeness KPI *and* the successful downloads KPI are set to "pass". If either KPI fails for the hour, the Global Cache is considered non-operational for that hour. 
 * Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 98 per cent of hours in the month (i.e. the Global Cache may experience up to 14 "failure" hours in a calendar month and still be considered performing within the service level).
 * Hours coinciding with planned outages, or other _force majeure_ agreed by SC-IMT, are excluded from the monthly KPI calculation.
 * The monthly KPI is used in the assessment of Global Cache performance informing the determination of downtime in accordance with section 2.7.2.6.
- 
+
+
