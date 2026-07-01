@@ -13,23 +13,7 @@ This KPI measures the percentage of WIS2 Notification Messages (WNM) published b
  
 *Measure (calculated each hour):*
  
-The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages.
- 
-* The randomised sample is selected using bytes (or hex digits) from the the message identifier (`message-id`) UUID. Sampling at 10 per cent keeps the processing workload of an SCGB instance at a manageable level.
-* The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour.
-* The cut-off time is 60 seconds: a message is considered "missed" if a Global Broker has not published that message within 60 seconds of it first being published by any other Global Broker.
- 
-For each SCGB instance, the following workflow is applied to each message:
- 
-* Evaluate the `message-id` (UUID) of the message. Is the UUID within the randomised sample range?
-** *No* — discard the message (outside sample range).
-** *Yes* — has a message with this UUID already been seen from another Global Broker?
-*** *No* — store the `message-id` and the timestamp at which the message was received in the SCGB database, and increment the `wmo_wis2_scgb_messages_published_total` metric for the Global Broker that published the message.
-*** *Yes* — is the stored timestamp for this message older than 60 seconds?
-**** *No* — increment `wmo_wis2_scgb_messages_published_total` for the Global Broker that published the message (received within the cut-off time).
-**** *Yes* — discard the message; do not increment `wmo_wis2_scgb_messages_published_total` for the Global Broker that published the message (received after the cut-off time — considered a "miss").
- 
-An SCGB instance retains the identifiers of received messages for a minimum of two hours, so that previously seen messages are not reprocessed.
+The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages. The number of messages published by each Global Broker within the cutoff time is recorded using the metric `wmo_wis2_scgb_messages_published_total`. The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour. A message is considered "missed" if a Global Broker has not published that message within 60-seconds of it first being published by any other Global Broker.
  
 *KPI evaluation (hourly):* the message completeness KPI is set to "pass" for the hour if the number of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.
  
