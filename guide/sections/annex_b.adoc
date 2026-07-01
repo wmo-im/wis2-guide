@@ -30,7 +30,7 @@ The proportion of time that the Global Broker’s MQTT end-point is accessible, 
 ==== B.1.3 Combined hourly and monthly KPI
  
 * For each hour, the Global Broker is considered operational where *both* the message completeness KPI *and* the connectivity KPI are set to "pass". If either KPI fails for the hour, the Global Broker is considered non-operational for that hour.
-* Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 99.5 per cent of hours in the month (i.e. the Global Broker may experience up to 3 "failure" hours in a calendar month and still be considered performing within the service level).
+* Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 98 per cent of hours in the month (i.e. the Global Broker may experience up to 14 "failure" hours in a calendar month and still be considered performing within the service level).
 * Hours coinciding with planned outages, or other _force majeure_ agreed by SC-IMT, are excluded from the monthly KPI calculation.
 * The monthly KPI is used in the assessment of Global Broker performance informing the determination of downtime in accordance with section 2.7.2.6.
  
