@@ -47,7 +47,10 @@ For such a centre operated by Direction de la Météorologie of Congo, the centr
 * The SCGB will connect to all Global Brokers.
 * The SCGB subscribes to `+origin/a/wis2/#+`, `+cache/a/wis2/#+`, `+monitor/a/wis2/#+` on all GBs
 * When the SCGB is successfully connected to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``1``. When the SCGB cannot connect to the GB, the value of ``wmo_wis2_scgb_connected_flag`` will be set to ``0``.
-* When a message is received on a subscription, the SCGB will increment the metric ``wmo_wis2_scgb_messages_received_total`` by ``1`` and will set the metric ``wmo_wis2_scgb_last_message_timestamp_seconds`` to the current timestamp in seconds.
+* The SCGB validates Global Broker performance using a randomised sample of approximately 10 per cent of all messages. The randomised sample is selected using bytes (or hex digits) from the the message identifier (`message-id`) UUID. Sampling at 10 per cent keeps the processing workload of an SCGB instance at a manageable level.
+* Messages with the same `message-id` should be received from all Global Brokers. A message from a Global Broker is considered "received" if it is the first time that message has been seen, or it arrives within 60-seconds of the when that message was first received from another Global Broker.
+* When a message from the randomized sample is received from a Global Broker, the SCGB will compare the arrival time of the message with those from other Global Brokers. If the message arrived within the 60-second cutoff time, the SCGB will increment the metric ``wmo_wis2_scgb_messages_received_total`` by ``1`` and will set the metric ``wmo_wis2_scgb_last_message_timestamp_seconds`` to the current timestamp in seconds. Otherwise, the message is considered to be "missed" by the Global Broker.
+* The SCGB should retain the identifiers of received messages for a minimum of two hours, so that previously seen messages are not reprocessed.
 
 All the metrics must be exposed for scraping by the Global Monitor.
 
