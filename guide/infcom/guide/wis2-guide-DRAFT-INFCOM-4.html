@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-06-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-01</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.3.0</p></td>
@@ -190,7 +190,8 @@ body {
 <ul class="sectlevel3">
 <li><a href="#_2_6_1_practices_and_procedures">2.6.1 Practices and procedures</a></li>
 <li><a href="#_2_6_2_performance_management">2.6.2 Performance management</a></li>
-<li><a href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box">2.6.3 WIS2 Node Reference Implementation: WIS2 in a box</a></li>
+<li><a href="#_2_6_3_global_service_monitoring_considerations">2.6.3 Global Service Monitoring considerations</a></li>
+<li><a href="#_2_6_4_wis2_node_reference_implementation_wis2_in_a_box">2.6.4 WIS2 Node Reference Implementation: WIS2 in a box</a></li>
 </ul>
 </li>
 <li><a href="#_2_7_implementation_and_operation_of_a_global_service">2.7 Implementation and operation of a Global Service</a>
@@ -203,6 +204,7 @@ body {
 <li><a href="#_2_7_6_global_monitor">2.7.6 Global Monitor</a></li>
 </ul>
 </li>
+<li><a href="#_2_9_monitoring_for_global_service_providers">2.9 Monitoring for Global Service providers</a></li>
 <li><a href="#_2_8_operations">2.8 Operations</a>
 <ul class="sectlevel3">
 <li><a href="#_2_8_1_interoperability_with_external_systems">2.8.1 Interoperability with external systems</a></li>
@@ -1151,6 +1153,11 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dataset metadata, dataset granules</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Global Broker, WIS2 Nodes</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WIS2 Monitoring Events (WME)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Monitoring event metadata, datasets, dataset granules</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">All Global Services, WIS2 Nodes</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
@@ -1556,7 +1563,13 @@ body {
 </div>
 </div>
 <div class="sect3">
-<h4 id="_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"><a class="anchor" href="#_2_6_3_wis2_node_reference_implementation_wis2_in_a_box"></a>2.6.3 WIS2 Node Reference Implementation: WIS2 in a box</h4>
+<h4 id="_2_6_3_global_service_monitoring_considerations"><a class="anchor" href="#_2_6_3_global_service_monitoring_considerations"></a>2.6.3 Global Service Monitoring considerations</h4>
+<div class="paragraph">
+<p>A WIS2 Node can obtain feedback pertaining to its data and metadata publishing from Global Services using the WIS2 Monitoring Events (WME) specification.  By subscribing to the WIS2 Monitoring topic (<code>monitor/a/wis2/&lt;centre-id&gt;</code>, where <code>&lt;centre-id&gt;</code> is the centre identifier of the WIS2 Node), a WIS2 Node can receive feedback to trigger corrective action (for example, a metadata publication error reported by a Global Discovery Catalogue).  For more information, see <a href="#_2_9_monitoring_for_global_service_providers">2.9 Monitoring for Global Service providers</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_2_6_4_wis2_node_reference_implementation_wis2_in_a_box"><a class="anchor" href="#_2_6_4_wis2_node_reference_implementation_wis2_in_a_box"></a>2.6.4 WIS2 Node Reference Implementation: WIS2 in a box</h4>
 <div class="paragraph">
 <p>When providing a WIS2 Node, Members may use whichever software components they consider most appropriate to comply with the WIS2 technical regulations.</p>
 </div>
@@ -2313,6 +2326,28 @@ body {
 </ul>
 </div>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_9_monitoring_for_global_service_providers"><a class="anchor" href="#_2_9_monitoring_for_global_service_providers"></a>2.9 Monitoring for Global Service providers</h3>
+<div class="paragraph">
+<p>WIS2 is comprised of Global Services providing highly available services for discovery, subscription, notification and download, based on the publication of data by WIS2 Nodes.  Global Services need to be able to provide notifications of events WIS2 (examples include, but are not limited to: validation reports on notification messages, discovery metadata, notices of outages, maintenance).</p>
+</div>
+<div class="paragraph">
+<p>Using the WIS2 Monitoring Events (WME) standard, Global Services can publish events using MQTT as the publish-subscribe protocol as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dedicated topic structure (<code>monitor/a/wis2/&lt;centre-id&gt;</code>), where <code>&lt;centre-id&gt;</code> is the centre identifier of the subject that the event notification is pertaining to</p>
+</li>
+<li>
+<p>WIS2 Monitoring Event Message (WMEM) leveraging the CloudEvents specification</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <em>Manual on WIS</em>, Volume II – Appendix G. WIS2 Notification Message.</p>
 </div>
 </div>
 <div class="sect2">
@@ -4164,7 +4199,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-17 22:03:06 UTC
+Last updated 2026-07-01 14:47:32 UTC
 </div>
 </div>
 </body>
