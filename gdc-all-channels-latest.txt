@@ -451,6 +451,7 @@ urn:wmo:md:uk-metoffice-wmc:weather.prediction.analysis.global,data/core/weather
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.analysis.global-10km,data/recommended/weather/prediction/analysis/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global-10km,data/recommended/weather/prediction/forecast/medium-range/deterministic/global
+urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.global-tc,data/core/weather/prediction/forecast/medium-range/deterministic/trajectory
 urn:wmo:md:uk-metoffice-wmc:weather.prediction.forecast.mogreps-g-tc,data/core/weather/prediction/forecast/medium-range/probabilistic/trajectory
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.drifting-ocean-profilers.uk-argo-float,data/core/ocean/surface-based-observations/drifting-ocean-profilers
 urn:wmo:md:uk-metoffice:ocean.surface-based-observations.moored-buoys-and-moorings.moored-buoys,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
