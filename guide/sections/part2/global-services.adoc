@@ -107,24 +107,12 @@ The operating Member should report on the implementation of the remediation plan
 
 Restoration of a suspended Global Service to WIS 2.0 operations is confirmed by SC-IMT, with the assistance of the WMO Secretariat and using the dashboards and statistical summaries provided by the Global Monitors, once the operational performance has met the service level for not less than one calendar month following completion of the remediation actions.
 
-===== 2.7.2.9 Per-component operational criteria
-
-The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each category is the assessable floor used for the performance-management procedures of the Manual; it is distinct from, and not higher than, the general availability guidance in 2.7.2.2. The design-capacity figures for each category remain as set out in 2.7.2.2. The detailed technical checks corresponding to each criterion are maintained by the WMO Secretariat on behalf of SC-IMT and are published as a technical reference.
-
-====== 2.7.2.9.1 Global Broker
-
-The operational status of a Global Broker is assessed against two criteria, both measured through the Sensor Centres for Global Brokers operating in different parts of the globe so as to reduce the influence of localized network conditions or of any individual Sensor Centre. The first criterion, message completeness, is the proportion of the notification messages available on WIS 2.0 that the Global Broker makes available to its subscribers; it is computed for each hour by comparing the number of messages received from the Global Broker by the Sensor Centres against the reference number of messages determined across all Global Brokers. The second criterion, connectivity, is the proportion of the hour during which the public MQTT endpoints of the Global Broker are reachable; it is determined from the connection status recorded by the Sensor Centres for each Global Broker.
-
-For each hour, the Global Broker is considered operational where both message completeness and connectivity are not less than 95 per cent. The proportion of operational time for the calendar month is computed from these hourly determinations in accordance with section 2.7.2.6. The topic hierarchy conforms with Appendix D of the Manual, and the operational metrics required under §4.7 of the Manual are published. The detailed metric definitions are set out in the technical reference document.
-
-For a Global Broker, the service level is not less than 99.5 per cent of operational time per calendar month.
-
-====== 2.7.2.9.2 Global Cache
-
-The operational status of a Global Cache is assessed against two criteria, both measured through the Sensor Centres for Global Caches operating in different parts of the globe so as to reduce the influence of localized network conditions or of any individual Sensor Centre. The first criterion, cache completeness, is the proportion of data granules required to be cached, that is excluding granules not designated for caching, that are successfully cached by the Global Cache; it is computed for each hour from the metrics published by the Sensor Centres, as the number of messages published less the number of messages missed, divided by the number of messages published. The second criterion, download availability, is the proportion of cached data granules that can be successfully downloaded from the Global Cache; it is computed for each hour from a random sample of cached granules selected and retrieved by each Sensor Centre.
-
-For each hour, the Global Cache is considered operational where both cache completeness and download availability are not less than 95 per cent. The proportion of operational time for the calendar month is computed from these hourly determinations in accordance with section 2.7.2.6. One hundred per cent of cached data is retained for the period required by Part III of the Manual, and the operational metrics required under §4.7 of the Manual are published. The size of the hourly download sample and the detailed metric definitions are set out in the technical reference document.
-
+==== 2.7.2.9 Per-component operational criteria
+ 
+The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each category is the assessable floor used for the performance-management procedures of the Manual; it is distinct from, and not higher than, the general availability guidance in 2.7.2.2. The design-capacity figures for each category remain as set out in 2.7.2.2. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.
+ 
+For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.
+ 
 For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.
 
 ==== 2.7.3 Global Broker
