@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-01</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-03</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.3.0</p></td>
@@ -3195,7 +3195,16 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>When the SCGB is successfully connected to the GB, the value of <code>wmo_wis2_scgb_connected_flag</code> will be set to <code>1</code>. When the SCGB cannot connect to the GB, the value of <code>wmo_wis2_scgb_connected_flag</code> will be set to <code>0</code>.</p>
 </li>
 <li>
-<p>When a message is received on a subscription, the SCGB will increment the metric <code>wmo_wis2_scgb_messages_received_total</code> by <code>1</code> and will set the metric <code>wmo_wis2_scgb_last_message_timestamp_seconds</code> to the current timestamp in seconds.</p>
+<p>The SCGB validates Global Broker performance using a randomised sample of approximately 10 per cent of all messages. The randomised sample is selected using bytes (or hex digits) from the the message identifier (<code>message-id</code>) UUID. Sampling at 10 per cent keeps the processing workload of an SCGB instance at a manageable level.</p>
+</li>
+<li>
+<p>Messages with the same <code>message-id</code> should be received from all Global Brokers. A message from a Global Broker is considered "received" if it is the first time that message has been seen, or it arrives within 60-seconds of the when that message was first received from another Global Broker.</p>
+</li>
+<li>
+<p>When a message from the randomized sample is received from a Global Broker, the SCGB will compare the arrival time of the message with those from other Global Brokers. If the message arrived within the 60-second cutoff time, the SCGB will increment the metric <code>wmo_wis2_scgb_messages_received_total</code> by <code>1</code> and will set the metric <code>wmo_wis2_scgb_last_message_timestamp_seconds</code> to the current timestamp in seconds. Otherwise, the message is considered to be "missed" by the Global Broker.</p>
+</li>
+<li>
+<p>The SCGB should retain the identifiers of received messages for a minimum of two hours, so that previously seen messages are not reprocessed.</p>
 </li>
 </ul>
 </div>
@@ -3266,7 +3275,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <div class="ulist">
 <ul>
 <li>
-<p>Discard the Notification Message if is it <code>recommended</code> data as it will not be cached</p>
+<p>Discard the Notification Message if data policy is <code>recommended</code> or <code>cache</code> is set to false: these data are not cached</p>
 </li>
 <li>
 <p>Detect any duplicates <code>data_id</code> not including a <code>rel: update</code> within a period of at least 3 hours</p>
@@ -3283,7 +3292,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </ul>
 </div>
 <div class="paragraph">
-<p>For the messages received on the <code>cache</code> topic subscription and using the `properties.global-cache`value to select the Global Cache:</p>
+<p>For the messages received on the <code>cache</code> topic subscription and using the <code>properties.global-cache</code> value to select the Global Cache:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3292,13 +3301,16 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <div class="ulist">
 <ul>
 <li>
-<p>For each Notification Message and using <code>data_id</code>, make the difference between the time was received on <code>origin</code> and the same <code>data_id</code> on <code>cache</code>: Time<sub>Cache</sub> - Time<sub>Origin</sub></p>
+<p>For each Notification Message and using <code>data_id</code>, calculate the difference between the time was received on <code>origin</code> and the same <code>data_id</code> on <code>cache</code>: Time<sub>Cache</sub> - Time<sub>Origin</sub></p>
 </li>
 <li>
 <p>Update the <code>wmo_wis2_scgc_cache_delay_seconds</code> metric with this value</p>
 </li>
 <li>
-<p>Compare this value with the three threshold defined in the metric table above. Increase by 1 <code>wmo_wis2_scgc_messages_cached_delay_total</code> using the threshold as a label (so less than 120s, less that 300s, less than 600s)</p>
+<p>Compare this value with the three thresholds defined in the metric table above. Increase by 1 <code>wmo_wis2_scgc_messages_cached_delay_total</code> using the threshold as a label (so less than 120s, less than 300s, less than 600s)</p>
+</li>
+<li>
+<p>If the message was received within the 600-second time limit, increase by 1 <code>wmo_wis2_scgc_messages_cached_total</code></p>
 </li>
 </ul>
 </div>
@@ -3307,6 +3319,9 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>If no Notification Message for the <code>data_id</code> is received after the highest threshold (here 600s) or if the link provided is not valid, increase by 1 <code>wmo_wis2_scgc_messages_missed_total</code></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The <code>rel</code> metric label is used to distinguish between messages relating to "canonical" and "updated" data items. This allows Global Cache performance to be evaluated only using "canonical" data items: Given that Global Caches are designed to discard out-of-sequence updates, counting such discards as "misses" would not be a fair reflection of performance.</p>
 </div>
 <div class="paragraph">
 <p>As a Global Cache can decide not to cache a data granule, and in order to assess if a Global Cache has decided to do so, the Sensor Centre will compare the <code>links</code> array published on <code>origin/a/wis/#</code> and in the Notification Message received on <code>cache/a/wis2/#</code> if the two <code>links</code> are identical, then the Global Cache has decided not to cache the data. In this case, increase by 1 <code>wmo_wis2_scgc_messages_cache_override_total</code>.</p>
@@ -3329,7 +3344,10 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>Attempt a download for that same granule against all Global Caches</p>
 </li>
 <li>
-<p>Increment <code>wmo_wis2_scgc_download_successful_total</code> by 1 if the download is succesful</p>
+<p>Evaluate the checksum for the data granule if provided in the Notification Message</p>
+</li>
+<li>
+<p>Increment <code>wmo_wis2_scgc_download_successful_total</code> by 1 if the download is succesful and the (optional) checksum validation passes</p>
 </li>
 </ul>
 </div>
@@ -4199,7 +4217,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-07-01 14:47:32 UTC
+Last updated 2026-07-03 15:31:34 UTC
 </div>
 </div>
 </body>
