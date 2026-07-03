@@ -378,6 +378,9 @@ urn:wmo:md:py-dinac-dmh:cap,data/core/weather/advisories-warnings
 urn:wmo:md:py-dinac-dmh:synop-conv,data/core/weather/surface-based-observations/synop
 urn:wmo:md:py-dinac-dmh:synop-obsmet,data/core/weather/surface-based-observations/synop
 urn:wmo:md:py-dinac-dmh:temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:rs-rhmz:hourly-synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:rs-rhmz:monthly-climat,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:rs-rhmz:upper-level-temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ru-aviamettelecom:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ru-aviamettelecom:temp,data/core/weather/surface-based-observations/temp
