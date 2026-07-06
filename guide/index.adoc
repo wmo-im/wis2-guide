@@ -43,6 +43,8 @@ include::sections/part4/index.adoc[]
 
 include::sections/part5/index.adoc[]
 
+include::sections/appendix_a.adoc[]
+
 include::sections/annex_a.adoc[]
 
 
