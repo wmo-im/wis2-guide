@@ -302,6 +302,7 @@ urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observatio
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/snpp/viirs
 urn:wmo:md:int-eumetsat:EO:EUM:DAT:1020,data/core/weather/space-based-observations/swot/poseidon-3c
 urn:wmo:md:int-eumetsat:cro:lemur:stratos,data/core/weather/space-based-observations/lemur-2/stratos
+urn:wmo:md:int-eumetsat:jason-3:poseidon-3b,data/core/weather/space-based-observations/jason-3/poseidon-3b
 urn:wmo:md:int-eumetsat:met09:amv,data/core/weather/space-based-observations/meteosat-9/seviri
 urn:wmo:md:int-eumetsat:met09:asr,data/core/weather/space-based-observations/meteosat-9/seviri
 urn:wmo:md:int-eumetsat:met10:amv,data/core/weather/space-based-observations/meteosat-10/seviri
