@@ -35,7 +35,7 @@ urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:br-inmet:upper-air,data/core/weather/surface-based-observations/temp
-urn:wmo:md:bs-metservice:climat,data/core/weather/experimental/surface-based-observations/climat
+urn:wmo:md:bs-metservice:climat,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:bs-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bs-metservice:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:by-belgidromet:synop,data/core/weather/surface-based-observations/synop
