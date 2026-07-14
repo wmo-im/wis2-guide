@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-03</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-14</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.3.0</p></td>
@@ -1218,13 +1218,13 @@ body {
 <p>WIS2 incorporates several Global Brokers, ensuring the highly resilient distribution of notification messages across the globe.</p>
 </li>
 <li>
-<p>A Global Broker subscribes to the Message Broker operated by each WIS2 Node and republishes notification messages.</p>
+<p>A Global Broker subscribes to the Message Broker operated by each WIS2 Node and republishes notification and monitoring messages.</p>
 </li>
 <li>
-<p>A Global Broker subscribes to notifications from other Global Brokers to ensure that it receives a copy of all notification messages.</p>
+<p>A Global Broker subscribes to notifications and monitoring events from other Global Brokers to ensure that it receives a copy of all notification messages.</p>
 </li>
 <li>
-<p>A Global Broker republishes notification messages from every WIS2 Node and Global Service.</p>
+<p>A Global Broker republishes notification messages and monitoring events from every WIS2 Node and Global Service.</p>
 </li>
 <li>
 <p>A Global Broker operates a highly available, high-performance Message Broker.</p>
@@ -1233,7 +1233,7 @@ body {
 <p>A Global Broker uses the WIS2 Topic Hierarchy, enabling data consumers to easily find topics relevant to their needs.</p>
 </li>
 <li>
-<p>Data consumers should subscribe to notifications from a Global Broker, not directly from the Message Brokers operated by WIS2 Nodes.</p>
+<p>Data consumers should subscribe to notifications and monitoring events from a Global Broker, not directly from the Message Brokers operated by WIS2 Nodes.</p>
 </li>
 </ul>
 </div>
@@ -1896,16 +1896,16 @@ body {
 <p>As detailed above, there will be at least three Global Brokers to ensure that messages within WIS2 are highly available and delivered globally with low latency.</p>
 </li>
 <li>
-<p>A Global Broker subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim to subscribe to all WIS centres. If this is not possible, the Global Broker should inform the WMO Secretariat so that the situation can be documented.</p>
+<p>A Global Broker subscribes to messages and monitoring events from WIS2 Nodes and other Global Services. The Global Broker should aim to subscribe to all WIS centres. If this is not possible, the Global Broker should inform the WMO Secretariat so that the situation can be documented.</p>
 </li>
 <li>
 <p>Every WIS2 Node or Global Service must have subscriptions from at least two Global Brokers.</p>
 </li>
 <li>
-<p>For full global coverage, a Global Broker will subscribe to messages from at least two other Global Brokers.</p>
+<p>For full global coverage, a Global Broker will subscribe to messages and monitoring events from at least two other Global Brokers.</p>
 </li>
 <li>
-<p>When subscribing to messages from WIS2 Nodes and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS centre and available at WMO Secretariat.</p>
+<p>When subscribing to messages and monitoring events from WIS2 Nodes and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS centre and available at WMO Secretariat.</p>
 </li>
 <li>
 <p>A Global Broker is built around two software components:</p>
@@ -1927,7 +1927,7 @@ body {
 <p>When receiving a message from a local WIS centre broker or a Global Service broker, the metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
+<p>For data notification messages, a Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
 </li>
 <li>
 <p>A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_invalid_topic_total</code> will be increased by 1.</p>
@@ -1939,7 +1939,10 @@ body {
 <p>A Global Broker will validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_invalid_format_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>A Global Broker will republish a message only once. It will record the message identifier (<code>id</code>) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message <code>id</code>). This is the anti-loop feature of the Global Broker.</p>
+<p>A Global Broker will validate monitoring events against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix G. WIS2 Monitoring Events), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_invalid_format_total</code> will be increased by 1.</p>
+</li>
+<li>
+<p>A Global Broker will republish a message or monitoring event only once. It will record the message identifier (<code>id</code>) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message <code>id</code>). This is the anti-loop feature of the Global Broker.</p>
 </li>
 <li>
 <p>When publishing a message to the local broker, the metric <code>wmo_wis2_gb_messages_published_total</code> will be increased by 1.</p>
@@ -4355,7 +4358,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-07-03 15:37:27 UTC
+Last updated 2026-07-14 16:13:39 UTC
 </div>
 </div>
 </body>
