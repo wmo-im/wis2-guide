@@ -92,12 +92,12 @@ Refer to the _Manual on WIS_, Volume II for details.
 
 ==== 2.4.2 Global Broker
 * WIS2 incorporates several Global Brokers, ensuring the highly resilient distribution of notification messages across the globe.
-* A Global Broker subscribes to the Message Broker operated by each WIS2 Node and republishes notification messages.
-* A Global Broker subscribes to notifications from other Global Brokers to ensure that it receives a copy of all notification messages.
-* A Global Broker republishes notification messages from every WIS2 Node and Global Service.
+* A Global Broker subscribes to the Message Broker operated by each WIS2 Node and republishes notification and monitoring messages.
+* A Global Broker subscribes to notifications and monitoring events from other Global Brokers to ensure that it receives a copy of all notification messages.
+* A Global Broker republishes notification messages and monitoring events from every WIS2 Node and Global Service.
 * A Global Broker operates a highly available, high-performance Message Broker.
 * A Global Broker uses the WIS2 Topic Hierarchy, enabling data consumers to easily find topics relevant to their needs.
-* Data consumers should subscribe to notifications from a Global Broker, not directly from the Message Brokers operated by WIS2 Nodes.
+* Data consumers should subscribe to notifications and monitoring events from a Global Broker, not directly from the Message Brokers operated by WIS2 Nodes.
 
 ==== 2.4.3 Global Cache
 * WIS2 incorporates several Global Caches, ensuring the highly resilient distribution of data across the globe.
