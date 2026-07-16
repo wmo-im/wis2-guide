@@ -348,6 +348,14 @@ urn:wmo:md:int-eumetsat:metop-c:iasi:l2twt,data/core/weather/space-based-observa
 urn:wmo:md:int-eumetsat:metop-c:iasi:reg,data/core/weather/space-based-observations/metop-c/iasi
 urn:wmo:md:int-eumetsat:metop-c:mhs:glb,data/core/weather/space-based-observations/metop-c/mhs
 urn:wmo:md:int-eumetsat:metop-c:mhs:reg,data/core/weather/space-based-observations/metop-c/mhs
+urn:wmo:md:int-eumetsat:noaa-20:atms:glb,data/core/weather/space-based-observations/noaa-20/atms
+urn:wmo:md:int-eumetsat:noaa-20:atms:reg,data/core/weather/space-based-observations/noaa-20/atms
+urn:wmo:md:int-eumetsat:noaa-20:cris:glb,data/core/weather/space-based-observations/noaa-20/cris
+urn:wmo:md:int-eumetsat:noaa-20:cris:reg,data/core/weather/space-based-observations/noaa-20/cris
+urn:wmo:md:int-eumetsat:noaa-21:atms:glb,data/core/weather/space-based-observations/noaa-21/atms
+urn:wmo:md:int-eumetsat:noaa-21:atms:reg,data/core/weather/space-based-observations/noaa-21/atms
+urn:wmo:md:int-eumetsat:noaa-21:cris:glb,data/core/weather/space-based-observations/noaa-21/cris
+urn:wmo:md:int-eumetsat:noaa-21:cris:reg,data/core/weather/space-based-observations/noaa-21/cris
 urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations/fy-3d/mwhs-2
 urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations/fy-3d/mwts-2
 urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations/fy-3e/mwhs-2
@@ -363,6 +371,7 @@ urn:wmo:md:int-eumetsat:sentinel-6a:poseidon-4:alt:hr,data/core/weather/space-ba
 urn:wmo:md:int-eumetsat:sentinel-6a:poseidon-4:alt:lr,data/core/weather/space-based-observations/sentinel-6a/poseidon-4
 urn:wmo:md:int-eumetsat:sentinel-6b:poseidon-4:alt:hr,data/core/weather/space-based-observations/sentinel-6b/poseidon-4
 urn:wmo:md:int-eumetsat:sentinel-6b:poseidon-4:alt:lr,data/core/weather/space-based-observations/sentinel-6b/poseidon-4
+urn:wmo:md:int-eumetsat:snpp:atms:reg,data/core/weather/space-based-observations/snpp/atms
 urn:wmo:md:int-eumetsat:swot:poseidon,data/core/weather/space-based-observations/swot/poseidon-3c
 urn:wmo:md:ir-irimo:core.surface-based-observations.daily,data/core/climate/surface-based-observations/daily
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
