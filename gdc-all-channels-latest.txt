@@ -184,7 +184,6 @@ urn:wmo:md:dm-dms:core.surface-based-observations.synop,data/core/weather/surfac
 urn:wmo:md:do-indomet:synop-man,data/core/weather/surface-based-observations/synop
 urn:wmo:md:dz-meteoalgerie:surface-based-observations:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:dz-meteoalgerie:surface-weather-observations,data/core/weather/surface-based-observations/synop
-urn:wmo:md:dz-meteoalgerie:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:dz-meteoalgerie:temp-21hours,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ec-inamhi:wf0wys,data/core/weather/surface-based-observations/synop
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.amdar,data/core/weather/surface-based-observations
