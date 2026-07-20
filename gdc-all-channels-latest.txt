@@ -44,6 +44,7 @@ urn:wmo:md:by-belgidromet:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bz-nms:belize-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bz-nms:belize-upper-air-messages,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ca-eccc-msc:02fd8740-af64-4ce0-af42-3c17c92cf02b,data/core/weather/experimental
+urn:wmo:md:ca-eccc-msc:0ae0310b-ef2d-4efd-9b69-329e7382de51,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:0e73142b-c4a7-4bf0-8d16-72ac2df60fc1,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:0f4c5558-b51e-46e8-9e0c-b75545f217aa,data/core/weather/prediction/hindcast/seasonal/probabilistic/global
 urn:wmo:md:ca-eccc-msc:12b3eba5-319b-4aa1-8e38-e88ad51dfc51,data/core/weather/surface-based-observations/wind-profile
@@ -70,11 +71,13 @@ urn:wmo:md:ca-eccc-msc:46763060-e859-4812-8da5-2361d99b4c34,data/core/hydrology/
 urn:wmo:md:ca-eccc-msc:49126bff-0de8-4b9d-8c03-189be2e66261,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:4fe11fe4-242c-4111-80ae-4adb12188533,data/core/atmospheric-composition/experimental
 urn:wmo:md:ca-eccc-msc:5b401fa0-6c29-57f0-b3d5-749f301d829d,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
+urn:wmo:md:ca-eccc-msc:5d96b90a-926a-402a-8d91-00c9bc5cd4ee,data/core/weather/experimental
 urn:wmo:md:ca-eccc-msc:5dc1e43e-1776-5df8-919e-e229819c8954,data/core/ocean/experimental
 urn:wmo:md:ca-eccc-msc:5e8247ca-891e-5686-a6a5-0631c50fe2db,data/core/ocean/experimental
 urn:wmo:md:ca-eccc-msc:5f963c2d-d4ed-5a79-8a31-c9c582ca5098,data/core/climate/surface-based-observations/daily
 urn:wmo:md:ca-eccc-msc:5fc7ab98-afa1-427b-87b6-658565cca575,data/core/weather/experimental
 urn:wmo:md:ca-eccc-msc:6059da1d-e1da-4f2b-a420-b5c2a130eeaa,data/core/weather/experimental
+urn:wmo:md:ca-eccc-msc:6163d87b-7807-4218-95df-0dd343f001d8,data/recommended/weather/aviation/taf
 urn:wmo:md:ca-eccc-msc:62667506-4f95-4bae-a841-0b63b08af701,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ca-eccc-msc:62c5f03f-8f03-466a-960a-88fbc5882c11,data/core/weather/prediction/analysis/short-range/probabilistic/limited-area
 urn:wmo:md:ca-eccc-msc:631e570e-59c3-42d7-aa7b-5a4666ab62b5,data/core/ocean/experimental
@@ -85,6 +88,7 @@ urn:wmo:md:ca-eccc-msc:6712547a-7b6e-4746-ac51-e369a1f1f1ee,data/core/hydrology/
 urn:wmo:md:ca-eccc-msc:68d21caf-82f6-4559-ba6f-4200a117a22d,data/core/weather/prediction/forecast/medium-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:6d483864-0ec9-4cd6-8cf8-453e14fc9213,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:6d9dd2f8-202e-58cb-a110-e2168832aacb,data/core/weather/prediction/forecast/medium-range/probabilistic/global
+urn:wmo:md:ca-eccc-msc:6e71f4f2-3a48-4af1-acdb-9e550fb76e31,data/recommended/weather/aviation
 urn:wmo:md:ca-eccc-msc:71cb9009-1a55-4c8e-8b5c-35dfce7cabff,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:746f9469-ab78-5dcc-b165-4b51e8ab8652,data/core/climate/experimental
 urn:wmo:md:ca-eccc-msc:75dfb8cb-9efc-4c15-bcb5-7562f89517ce,data/core/weather/experimental
