@@ -222,6 +222,7 @@ urn:wmo:md:fr-meteofrance:ship-hourly,data/core/weather/surface-based-observatio
 urn:wmo:md:fr-meteofrance:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:fr-meteofrance:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:gd-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:gd-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:gh-gmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:gh-gmet:urn:wmo:md:gh-gmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:gn-anm:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
