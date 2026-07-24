@@ -345,14 +345,18 @@ urn:wmo:md:ir-irimo:core.surface-based-observations.daily,data/core/climate/surf
 urn:wmo:md:ir-irimo:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ir-irimo:reco.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
+urn:wmo:md:it-meteoam:forecast.short-range.deterministic.limited-area,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
+urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
 urn:wmo:md:it-meteoam:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:jm-msj:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:jp-jma:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ke-meteo:synop-dataset-surface-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kg-kyrgyzhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:km-anacm:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kn-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:kn-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:kr-kma:core.aviation.metar,data/core/weather/aviation/metar
 urn:wmo:md:kr-kma:core.surface-based-observations.monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:kr-kma:core.surface-based-observations.moored-buoys-and-moorings,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
@@ -364,6 +368,7 @@ urn:wmo:md:ky-cinws:core.surface-based-observations.synop,data/core/weather/surf
 urn:wmo:md:kz-kazhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kz-kazhydromet:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:lc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:lc-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:ly-lnmc:cap-alerts,data/core/weather/advisories-warnings
 urn:wmo:md:ly-lnmc:climate,data/core/climate/surface-based-observations/daily
 urn:wmo:md:ly-lnmc:synop,data/core/weather/surface-based-observations/synop
@@ -514,6 +519,7 @@ urn:wmo:md:us-ucsd-scripps-ldl:sio-db,data/recommended/ocean/surface-based-obser
 urn:wmo:md:uy-inumet:cap-alerts,data/core/weather/advisories-warnings
 urn:wmo:md:uy-inumet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:vc-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:ve-inameh:sinopticos,data/core/weather/surface-based-observations/synop
 urn:wmo:md:vg-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:za-weathersa:76h87o,data/recommended/weather/surface-based-observations/synop
