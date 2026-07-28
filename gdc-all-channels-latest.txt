@@ -348,7 +348,6 @@ urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surfa
 urn:wmo:md:ir-irimo:reco.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:it-meteoam:forecast.short-range.deterministic.limited-area,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
-urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
 urn:wmo:md:it-meteoam:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:jm-msj:metars,data/recommended/weather/aviation/metar
