@@ -251,6 +251,7 @@ urn:wmo:md:hk-hko:surface-weather-observations:ship,data/core/weather/surface-ba
 urn:wmo:md:hn-cenaos:uspxz9,data/core/weather/surface-based-observations/synop
 urn:wmo:md:id-bmkg:climate-surface-based-observations,data/core/climate/surface-based-observations/daily
 urn:wmo:md:id-bmkg:surface-based-observations,data/core/weather/surface-based-observations/synop
+urn:wmo:md:id-bmkg:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:il-ims:climate.climate-monthly,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:il-ims:weather.observations.international,data/core/weather/surface-based-observations/synop
 urn:wmo:md:il-ims:weather.observations.swob-realtime,data/core/weather/surface-based-observations/synop
