@@ -382,6 +382,7 @@ urn:wmo:md:mx-smn:climat-monthly-daily,data/core/climate/surface-based-observati
 urn:wmo:md:mx-smn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mx-smn:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:my-metmalaysia:synop-hourly,data/core/weather/surface-based-observations/synop
+urn:wmo:md:mz-inam:surfaced-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:na-meteona:synop-dataset,data/core/weather/surface-based-observations/synop
 urn:wmo:md:na-meteona:upper-dataset,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ng-nimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
