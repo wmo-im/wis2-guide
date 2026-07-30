@@ -29,6 +29,7 @@ urn:wmo:md:bj-meteobenin:synop-hourly,data/core/weather/surface-based-observatio
 urn:wmo:md:bn-bdmd:3-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bn-bdmd:aviation-metar,data/recommended/weather/aviation/metar
 urn:wmo:md:bn-bdmd:aviation-taf,data/recommended/weather/aviation/taf
+urn:wmo:md:bn-bdmd:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:br-inmet:other,data/core/weather/surface-based-observations/synop
@@ -349,6 +350,7 @@ urn:wmo:md:ir-irimo:core.surface-based-observations.temp,data/core/weather/surfa
 urn:wmo:md:ir-irimo:reco.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
 urn:wmo:md:it-meteoam:forecast.short-range.deterministic.limited-area,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
+urn:wmo:md:it-meteoam:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
 urn:wmo:md:it-meteoam:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:jm-msj:metars,data/recommended/weather/aviation/metar
