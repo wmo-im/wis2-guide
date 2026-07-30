@@ -29,6 +29,8 @@ urn:wmo:md:bj-meteobenin:synop-hourly,data/core/weather/surface-based-observatio
 urn:wmo:md:bn-bdmd:3-hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bn-bdmd:aviation-metar,data/recommended/weather/aviation/metar
 urn:wmo:md:bn-bdmd:aviation-taf,data/recommended/weather/aviation/taf
+urn:wmo:md:bn-bdmd:climat,data/core/weather/experimental/climate/monthly-observations/climat
+urn:wmo:md:bn-bdmd:pibal,data/core/weather/experimental/upper-air-observations/pibal
 urn:wmo:md:bn-bdmd:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:br-inmet:alerts,data/core/weather/advisories-warnings
 urn:wmo:md:br-inmet:daycli,data/core/climate/surface-based-observations/daily
