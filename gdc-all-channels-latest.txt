@@ -405,6 +405,7 @@ urn:wmo:md:org-woudc:TotalOzone,data/core/atmospheric-composition/observations/g
 urn:wmo:md:org-woudc:TotalOzoneObs,data/core/atmospheric-composition/experimental/observations/gases/ozone
 urn:wmo:md:org-woudc:UmkehrN14_1.0,data/core/atmospheric-composition/experimental/observations/gases/ozone
 urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
+urn:wmo:md:pa-imhpa:imhpa_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ph-pagasa:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
@@ -460,6 +461,7 @@ urn:wmo:md:sn-anacim:9b6nz5,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sn-anacim:climat,data/core/climate/surface-based-observations/daily
 urn:wmo:md:sn-anacim:krbor9,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sn-anacim:ld49rt,data/recommended/weather/aviation/metar
+urn:wmo:md:sr-metservice:synop-hourly-data,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:metars,data/recommended/weather/aviation/metar
