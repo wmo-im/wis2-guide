@@ -7,4 +7,4 @@ Using the WIS2 Monitoring Events (WME) standard, Global Services can publish eve
 * dedicated topic structure (``monitor/a/wis2/<centre-id>``), where ``<centre-id>`` is the centre identifier of the subject that the event notification is pertaining to
 * WIS2 Monitoring Event Message (WMEM) leveraging the CloudEvents specification
 
-For more information, see _Manual on WIS_, Volume II – Appendix G. WIS2 Notification Message.
+For more information, see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message.

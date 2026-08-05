@@ -28,7 +28,7 @@ The WMO Secretariat and other Global Services will make the required changes to 
 
 ===== 2.7.2.1 General
 
-The performance management of designated Global Services is governed by §§2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.
+The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.
 
 ===== 2.7.2.2 Monitoring and metrics for WIS2 operations
 
@@ -93,7 +93,7 @@ Operational metrics for each designated Global Service are published in near-rea
 
 ====== 2.7.2.8.1 Deadline for restoring performance
 
-Following notification under §2.8.2.1 of the Manual, SC-IMT establishes a deadline under §2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.
+Following notification under §2.8.2.1 of the _Manual on WIS_, Volume II,  SC-IMT establishes a deadline under §2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.
 
 The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with §2.8.3.1 of the Manual.
 
@@ -133,7 +133,6 @@ For a Global Cache, the service level is not less than 98 per cent of operationa
 * When receiving a message from a local WIS centre broker or a Global Service broker, the metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
 * For data notification messages, a Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
 * A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_invalid_topic_total`` will be increased by 1.
-
 * Suggest to remove : During the pre-operational phase (2024), a Global Broker will not discard the message but instead will send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC.~~
 
 * A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
