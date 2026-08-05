@@ -1,3 +1,0 @@
-== APPENDIX: WMO CORE METADATA PROFILE (VERSION 2), KEY PERFORMANCE INDICATORS
-
-https://wmo-im.github.io/wcmp2/kpi/wcmp2-kpi-DRAFT.html
