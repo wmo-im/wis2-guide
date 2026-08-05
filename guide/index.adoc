@@ -48,7 +48,6 @@ include::sections/appendix_b.adoc[]
 
 include::sections/annex_a.adoc[]
 
-include::sections/annex_b.adoc[]
 
 // include::sections/other-considerations.adoc[]
 
