@@ -4,6 +4,7 @@ urn:wmo:md:ag-antiguamet:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:ai-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ar-smn:slt0ci,data/core/weather/surface-based-observations/synop
 urn:wmo:md:au-imos:wave-buoys,data/core/ocean/surface-based-observations/wave-buoys
+urn:wmo:md:bb-barbadosmetservices:bb-weather-radar,data/core/weather/experimental/surface-based-observations/bb-weather-radar
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bb-barbadosmetservices:weather-radar,data/recommended/weather/experimental/weather-radar
