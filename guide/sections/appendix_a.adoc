@@ -40,7 +40,7 @@ This KPI measures the proportion of the hour during which the public MQTT endpoi
 
 *Measure (calculated each hour)*
 
-The proportion of time that the Global Broker's MQTT end-point is accessible, published by the Sensor Centre Global Broker using metric `wmo_wis2_scgb_connected_flag`.
+The proportion of time that the Global Broker's MQTT endpoint is accessible, published by the Sensor Centre Global Broker using metric `wmo_wis2_scgb_connected_flag`.
 
 *KPI evaluation (hourly)*
 
