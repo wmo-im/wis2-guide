@@ -16,7 +16,7 @@ Sensor Centres:
 
 ==== 3.1.2 Designation procedure for Additional Components
 
-Any WMO Member or partner organisation may request to operate an Additional Component that is defined in this Guide.
+Any WMO Member or partner organization may request to operate an Additional Component that is defined in this Guide.
 
 Additional Components provide value to the entire WIS2 ecosystem. As such, all instances of Additional Components must be assessed to assure their correct operation before being designated as a WIS2 component.
 
