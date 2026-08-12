@@ -183,9 +183,9 @@ Data publishers planning to operate WIS2 Nodes, at a minimum, should read the fo
 
 The following sections are recommended for further reading:
 
-* <<_part_iii_information_management>>
-* <<_part_iv_security>>
-* <<_part_v_competencies>>
+* <<_part_iv_information_management>>
+* <<_part_v_security>>
+* <<_part_vi_competencies>>
 
 Note that _PART V. Security_ and _PART VI. Competencies_ reference content originally published for WIS1. These sections remain largely applicable and will be updated in subsequent releases of this Guide. 
 
