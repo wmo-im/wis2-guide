@@ -28,7 +28,7 @@ The WMO Secretariat and other Global Services will make the required changes to 
 
 ===== 2.7.2.1 General
 
-The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.
+The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in 2.8 of the Manual and the revocation procedure set out in 2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under 4.7.4 of the Manual.
 
 ===== 2.7.2.2 Monitoring and metrics for WIS2 operations
 
@@ -77,7 +77,7 @@ In the following sections, and for each Global Service, a set of metrics is defi
 
 The service level is met in a calendar month where the designated Global Service is operational for not less than the proportion of that month set out, for the relevant category of Global Service, in the per-component operational criteria in section 2.7.2.9. The conditions under which a Global Service is considered operational are set out in those criteria, and the proportion of operational time over the month is determined in accordance with section 2.7.2.6.
 
-The service level is the reference for the suspension and revocation procedures set out in §§2.8 and 2.9 of the Manual; the conditions under which those procedures are initiated are set out in the Manual.
+The service level is the reference for the suspension and revocation procedures set out in 2.8 and 2.9 of the Manual; the conditions under which those procedures are initiated are set out in the Manual.
 
 ===== 2.7.2.6 Assessment methodology
 
@@ -87,21 +87,21 @@ For each incident, the operating Member and the Sensor Centres maintain a record
 
 ===== 2.7.2.7 Reporting cadence
 
-Operational metrics for each designated Global Service are published in near-real-time by the Global Service and by the Sensor Centres. The Global Monitors provide dashboards and statistical summaries based on these metrics. The monthly service-level results of each designated Global Service, including performance against the service level over the relevant assessment period, are published openly by the WMO Secretariat in accordance with §2.7.3.1 of the Manual, so that the performance of all designated Global Services is publicly visible, and are also communicated directly to each operating Member in accordance with §2.7.3.3 of the Manual. SC-IMT reviews aggregated performance results at each of its meetings and considers any indications of sustained deterioration in accordance with §2.7.3.4 of the Manual.
+Operational metrics for each designated Global Service are published in near-real-time by the Global Service and by the Sensor Centres. The Global Monitors provide dashboards and statistical summaries based on these metrics. The monthly service-level results of each designated Global Service, including performance against the service level over the relevant assessment period, are published openly by the WMO Secretariat in accordance with 2.7.3.1 of the Manual, so that the performance of all designated Global Services is publicly visible, and are also communicated directly to each operating Member in accordance with 2.7.3.3 of the Manual. SC-IMT reviews aggregated performance results at each of its meetings and considers any indications of sustained deterioration in accordance with 2.7.3.4 of the Manual.
 
 ===== 2.7.2.8 Remediation and restoration
 
 ====== 2.7.2.8.1 Deadline for restoring performance
 
-Following notification under §2.8.2.1 of the _Manual on WIS_, Volume II,  SC-IMT establishes a deadline under §2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.
+Following notification under 2.8.2.1 of the _Manual on WIS_, Volume II,  SC-IMT establishes a deadline under 2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.
 
-The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with §2.8.3.1 of the Manual.
+The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with 2.8.3.1 of the Manual.
 
 ====== 2.7.2.8.2 Remediation plan following suspension
 
-Following suspension under §2.8.3.1 of the Manual, the operating Member should submit a remediation plan to SC-IMT and the WMO Secretariat. The remediation plan should describe the root cause analysis of the breach, the corrective actions to be taken, the proposed timeline for the restoration of the Global Service to WIS 2.0 operations, and the arrangements for monitoring and reporting progress. SC-IMT and the operating Member agree the timeline for restoration under §2.8.4.1 of the Manual.
+Following suspension under 2.8.3.1 of the Manual, the operating Member should submit a remediation plan to SC-IMT and the WMO Secretariat. The remediation plan should describe the root cause analysis of the breach, the corrective actions to be taken, the proposed timeline for the restoration of the Global Service to WIS 2.0 operations, and the arrangements for monitoring and reporting progress. SC-IMT and the operating Member agree the timeline for restoration under 2.8.4.1 of the Manual.
 
-The operating Member should report on the implementation of the remediation plan at intervals not exceeding thirty calendar days. While a suspended Global Service does not meet the service level, each such calendar month counts towards the rolling window in §2.7.2.3 of the Manual, so that persistent failure to restore the Global Service may result in the initiation of the procedure for the revocation of the designation, in accordance with §2.8.4.3 of the Manual.
+The operating Member should report on the implementation of the remediation plan at intervals not exceeding thirty calendar days. While a suspended Global Service does not meet the service level, each such calendar month counts towards the rolling window in 2.7.2.3 of the Manual, so that persistent failure to restore the Global Service may result in the initiation of the procedure for the revocation of the designation, in accordance with 2.8.4.3 of the Manual.
 
 ====== 2.7.2.8.3 Restoration
 
@@ -109,7 +109,9 @@ Restoration of a suspended Global Service to WIS 2.0 operations is confirmed by 
 
 ==== 2.7.2.9 Per-component operational criteria
  
-The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each category is the assessable floor used for the performance-management procedures of the Manual; it is distinct from, and not higher than, the general availability guidance in 2.7.2.2. The design-capacity figures for each category remain as set out in 2.7.2.2. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.
+The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each Global Service is used for the performance-management procedures of the Manual. The design-capacity figures for each category remain as set out in 2.7.2.3. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.
+
+The per-component operational criteria are provided in Appendix A to this Guide. Criteria for other types of Global Service will be added in subsequent revisions of this Guide.
  
 For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.
  

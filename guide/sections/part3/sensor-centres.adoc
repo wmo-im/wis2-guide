@@ -16,7 +16,7 @@ Beyond WIS 2.0 itself, a Sensor Centre relies on WIS 2.0 Global Services and Nod
 "Sensor Centre" is a generic term to describe additional components to measure various aspects including (but not limited to):
 
 * the quality and performance of Global Services
-* the conformance of the products exchanged with the agreed WMO Regulations (eg. RBON)
+* the conformance of the products exchanged with the agreed WMO Regulations (e.g., RBON)
 
 Each type of Sensor Centre will result in a set of metrics that will be used to measure and evaluate WIS 2.0 Global Services and Nodes.
 
@@ -88,13 +88,13 @@ For the messages received on the `origin` topic subscription:
 
 * Discard the Notification Message if data policy is `recommended` or `cache` is set to false: these data are not cached
 * Detect any duplicates `data_id` not including a `rel: update` within a period of at least 3 hours
-* Increase by 1 `wmo_wis2_scgc_messages_published_total` metrics
+* Increase by 1 `wmo_wis2_scgc_messages_published_total` metric
 * Store the time where the message as been received
 * (optional) Store the full Notification Message - this can be useful to analyse systematic issues
 
 For the messages received on the `cache` topic subscription and using the `properties.global-cache` value to select the Global Cache:
 
-* Check if the link with `rel="canonical` or `rel="update"` in `links` is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to `200`). If this is not the case, discard the Notification Message. Otherwise:
+* Check if the link with `rel="canonical" or `rel="update"` in `links` is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to `200`). If this is not the case, discard the Notification Message. Otherwise:
   ** For each Notification Message and using `data_id`, calculate the difference between the time was received on `origin` and the same `data_id` on `cache`: Time~Cache~ - Time~Origin~
   ** Update the `wmo_wis2_scgc_cache_delay_seconds` metric with this value
   ** Compare this value with the three thresholds defined in the metric table above. Increase by 1 `wmo_wis2_scgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less than 300s, less than 600s)

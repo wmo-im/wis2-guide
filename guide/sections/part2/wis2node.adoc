@@ -82,7 +82,7 @@ It is possible to improve the level of service of a WIS centre by running a prim
 
 It must be noted that the switch between the primary and the backup node is *only* controlled by the connectivity to the MQTT endpoint. The permanent absence of messages on the primary node or the failure to download core data from the Global Cache will not trigger the switch to the backup node.
 
-It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same ``centre-id`` - ) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.
+It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same ``centre-id``) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.
 
 ==== 2.6.2 Performance management
 
