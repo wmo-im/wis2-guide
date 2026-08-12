@@ -1,6 +1,6 @@
 :title: Guide to the WMO Information System (WMO-No. 1061), Volume II - WMO Information System 2.0 (DRAFT-INFCOM-4)
 :titletext: {title}
-:version: 1.3.0
+:version: 1.4.0-draft
 :date: {docdate}
 :copyright: Copyright © 2026 World Meteorological Organization (WMO)
 :doctype: book
@@ -43,7 +43,10 @@ include::sections/part4/index.adoc[]
 
 include::sections/part5/index.adoc[]
 
+include::sections/part6/index.adoc[]
+
 include::sections/appendix_a.adoc[]
+
 include::sections/appendix_b.adoc[]
 
 include::sections/annex_a.adoc[]
@@ -54,4 +57,3 @@ include::sections/annex_a.adoc[]
 // include::sections/references.adoc[]
 
 // include::sections/annex-b-audit-certification.adoc[]
-include::sections/part6/index.adoc[]
