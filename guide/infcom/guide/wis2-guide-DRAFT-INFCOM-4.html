@@ -96,10 +96,10 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-10</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-12</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.3.0</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document status: DRAFT-INFCOM-4</p></td>
@@ -251,8 +251,27 @@ body {
 </ul>
 </li>
 <li><a href="#_part_v_security">PART V. Security</a></li>
-<li><a href="#_revision_history">Annex A: Revision History</a></li>
 <li><a href="#_part_vi_competencies">PART VI. Competencies</a></li>
+<li><a href="#_per_component_operational_criteria">Annex A: Per-component operational criteria</a>
+<ul class="sectlevel2">
+<li><a href="#_b_1_global_broker">B.1 Global Broker</a>
+<ul class="sectlevel3">
+<li><a href="#_b_1_1_message_completeness_kpi">B.1.1 Message completeness KPI</a></li>
+<li><a href="#_b_1_2_connectivity_kpi">B.1.2 Connectivity KPI</a></li>
+<li><a href="#_b_1_3_combined_hourly_and_monthly_kpi">B.1.3 Combined hourly and monthly KPI</a></li>
+</ul>
+</li>
+<li><a href="#_b_2_global_cache">B.2 Global Cache</a>
+<ul class="sectlevel3">
+<li><a href="#_b_2_1_cache_completeness_kpi">B.2.1 Cache completeness KPI</a></li>
+<li><a href="#_b_2_2_successful_downloads_kpi">B.2.2 Successful downloads KPI</a></li>
+<li><a href="#_b_2_3_combined_hourly_and_monthly_kpi">B.2.3 Combined hourly and monthly KPI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_appendix_b_wmo_core_metadata_profile_version_2_key_performance_indicators">APPENDIX B: WMO CORE METADATA PROFILE (VERSION 2), KEY PERFORMANCE INDICATORS</a></li>
+<li><a href="#_revision_history">Annex B: Revision History</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -941,13 +960,13 @@ body {
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#_part_iii_information_management">[_part_iii_information_management]</a></p>
+<p><a href="#_part_iv_information_management">PART IV. Information management</a></p>
 </li>
 <li>
-<p><a href="#_part_iv_security">[_part_iv_security]</a></p>
+<p><a href="#_part_v_security">PART V. Security</a></p>
 </li>
 <li>
-<p><a href="#_part_v_competencies">[_part_v_competencies]</a></p>
+<p><a href="#_part_vi_competencies">PART VI. Competencies</a></p>
 </li>
 </ul>
 </div>
@@ -1088,7 +1107,7 @@ body {
 <p>A Global Cache provides a highly available download service for cached copies of core data downloaded from data publishers’ web services;</p>
 </li>
 <li>
-<p>A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services;</p>
+<p>A Global Monitor gathers and displays system performance, data availability, and other metrics from all WIS2 Nodes and Global Services.</p>
 </li>
 </ol>
 </div>
@@ -3496,7 +3515,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>High-level guidance on information management practices that apply in the context of information related to the Earth system is provided in this part of the Guide. Detailed technical information, such as the specification of data formats or quality control and assurance methods, is provided in other parts of the Guide and in other WMO publications.  These are referenced where applicable.</p>
 </div>
 <div class="paragraph">
-<p>The principles of information management are described below. Section <a href="#_3_3_the_information_management_life_cycle">[_3_3_the_information_management_life_cycle]</a> describes five focus areas.</p>
+<p>The principles of information management are described below. Section <a href="#_4_3_the_information_management_life_cycle">4.3 The information management life cycle</a> describes five focus areas.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3858,10 +3877,10 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>For common types of information, the guides may be generic or link to standard documentation. Information on the observations available from WIGOS is provided in the <a href="https://library.wmo.int/idurl/4/55063"><em>Manual on the WMO Integrated Global Observing System</em></a> (WMO-No. 1160) and the <a href="https://library.wmo.int/idurl/4/55696"><em>Guide to the WMO Integrated Global Observing System</em></a> (WMO-No. 1165). This includes information on the expected uses and quality of the data. Similarly, information on the data and products available through the WMO Integrated Processing and Prediction System is provided in the <a href="https://library.wmo.int/idurl/4/35703"><em>Manual on the WMO Integrated Processing and Prediction System</em></a> (formerly the Manual on the Global Data Processing and Forecasting System) (WMO-No. 485).</p>
 </div>
 <div class="paragraph">
-<p>For non-standard and specialist products, targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described in <a href="#_3_3_3_1_planning_information_creation_and_acquisition">[_3_3_3_1_planning_information_creation_and_acquisition]</a>.</p>
+<p>For non-standard and specialist products, targeted user guides may be more appropriate. These should be accessible and retrievable via a link within the discovery metadata and should include a plain text summary for the non-technical user. Any user guide should be in addition to the technical documentation described in <a href="#_4_3_3_1_planning_information_creation_and_acquisition">4.3.3.1 Planning, information creation and acquisition</a>.</p>
 </div>
 <div class="paragraph">
-<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <a href="#_3_3_3_3_publication_and_exchange_of_information">[_3_3_3_3_publication_and_exchange_of_information]</a>). Other communication methods may also be used, but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.</p>
+<p>Updates and the availability of new information should be announced and published via the WMO Operational Newsletter (see <a href="#_4_3_3_3_publication_and_exchange_of_information">4.3.3.3 Publication and exchange of information</a>). Other communication methods may also be used, but these should not be in place of the operational newsletter. It is also recommended that users be allowed to subscribe to the newsletter to receive updates directly.</p>
 </div>
 <div class="paragraph">
 <p>The discovery metadata should include a valid point of contact, enabling users to provide feedback and ask questions about the information provided.</p>
@@ -3927,17 +3946,163 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in index.adoc - include::sections/appendix_a.adoc[]
-== APPENDIX B: WMO CORE METADATA PROFILE (VERSION 2), KEY PERFORMANCE INDICATORS</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_part_vi_competencies"><a class="anchor" href="#_part_vi_competencies"></a>PART VI. Competencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For this initial version of the <em>Guide to WIS</em>, Volume II, existing guidance on competencies remains largely applicable. Please refer to <em>Guide to the WMO Information System</em> (WMO-No. 1061), Volume I, Appendix A. WMO Information System Training and Learning Guide.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_per_component_operational_criteria"><a class="anchor" href="#_per_component_operational_criteria"></a>Annex A: Per-component operational criteria</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_b_1_global_broker"><a class="anchor" href="#_b_1_global_broker"></a>B.1 Global Broker</h3>
+<div class="paragraph">
+<p>The operational status of a Global Broker is assessed against two KPIs, both measured through Sensor Centre Global Broker (SCGB) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGB instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.</p>
+</div>
+<div class="sect3">
+<h4 id="_b_1_1_message_completeness_kpi"><a class="anchor" href="#_b_1_1_message_completeness_kpi"></a>B.1.1 Message completeness KPI</h4>
+<div class="paragraph">
+<p>This KPI measures the percentage of WIS2 Notification Messages (WNM) published by the Global Broker, within a defined cut-off time, compared against a baseline derived from all Global Brokers.</p>
+</div>
+<div class="paragraph">
+<p><strong>Measure (calculated each hour):</strong></p>
+</div>
+<div class="paragraph">
+<p>The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages. The number of messages published by each Global Broker within the cutoff time is recorded using the metric <code>wmo_wis2_scgb_messages_published_total</code>. The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour. A message is considered "missed" if a Global Broker has not published that message within 60-seconds of it first being published by any other Global Broker.</p>
+</div>
+<div class="paragraph">
+<p><strong>KPI evaluation (hourly):</strong> the message completeness KPI is set to "pass" for the hour if the percentage of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_1_2_connectivity_kpi"><a class="anchor" href="#_b_1_2_connectivity_kpi"></a>B.1.2 Connectivity KPI</h4>
+<div class="paragraph">
+<p>This KPI measures the proportion of the hour during which the public MQTT endpoint of the Global Broker are reachable, as determined from the connection status recorded by SCGB instances.</p>
+</div>
+<div class="paragraph">
+<p><strong>Measure (calculated each hour):</strong></p>
+</div>
+<div class="paragraph">
+<p>The proportion of time that the Global Broker’s MQTT end-point is accessible, published by the Sensor Centre Global Broker using metric <code>wmo_wis2_scgb_connected_flag</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>KPI evaluation (hourly):</strong> the connectivity KPI is set to "pass" for the hour if the <code>wmo_wis2_scgb_connected_flag</code> is set to <code>1</code> ("True", connected) for not less than 95 per cent of the time; otherwise it is set to "fail" for the hour.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_1_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_b_1_3_combined_hourly_and_monthly_kpi"></a>B.1.3 Combined hourly and monthly KPI</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>For each hour, the Global Broker is considered operational where <strong>both</strong> the message completeness KPI <strong>and</strong> the connectivity KPI are set to "pass". If either KPI fails for the hour, the Global Broker is considered non-operational for that hour.</p>
+</li>
+<li>
+<p>Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 98 per cent of hours in the month (i.e. the Global Broker may experience up to 14 "failure" hours in a calendar month and still be considered performing within the service level).</p>
+</li>
+<li>
+<p>Hours coinciding with planned outages, or other <em>force majeure</em> agreed by SC-IMT, are excluded from the monthly KPI calculation.</p>
+</li>
+<li>
+<p>The monthly KPI is used in the assessment of Global Broker performance informing the determination of downtime in accordance with section 2.7.2.6.</p>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_b_2_global_cache"><a class="anchor" href="#_b_2_global_cache"></a>B.2 Global Cache</h3>
+<div class="paragraph">
+<p>The operational status of a Global Cache is assessed against two KPIs, both measured through Sensor Centre Global Cache (SCGC) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGC instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.</p>
+</div>
+<div class="sect3">
+<h4 id="_b_2_1_cache_completeness_kpi"><a class="anchor" href="#_b_2_1_cache_completeness_kpi"></a>B.2.1 Cache completeness KPI</h4>
+<div class="paragraph">
+<p>This KPI measures the percentage of data items published by the Global Cache compared with the total number of data items published by all WIS2 Nodes (on <code>origin</code> topics).</p>
+</div>
+<div class="paragraph">
+<p><strong>Measure (calculated each hour):</strong></p>
+</div>
+<div class="paragraph">
+<p>The number of data items published by all origin WIS2 Nodes is recorded using the metric <code>wmo_wis2_scgc_messages_published_total</code>. Only those data items expected to be cached are included in this measure.</p>
+</div>
+<div class="paragraph">
+<p>The number of data items cached by a Global Cache is recorded using the metric <code>wmo_wis2_scgc_messages_cached_total</code>. Data items that are cached more than 600-seconds after publication by the origin WIS2 Node are excluded from this measure.</p>
+</div>
+<div class="paragraph">
+<p>Because Global Caches are designed to discard out-of-sequence updates, and counting such discards as "misses" would not be a fair reflection of performance, KPI performance is evaluated only for "canonical" data items (i.e., where the Notification Message specifies the link-relation <code>canonical</code>). Both <code>wmo_wis2_scgc_messages_published_total</code> and <code>wmo_wis2_scgc_messages_cached_total</code> metrics include the label <code>rel</code> to distinguish the link-relation.</p>
+</div>
+<div class="paragraph">
+<p>The percentage of data items published by a Global Cache is calculated as the increase in metric <code>wmo_wis2_scgc_messages_cached_total (rel=canonical)</code> over the previous hour ÷ the increase in metric <code>wmo_wis2_scgc_messages_published_total (rel=canonical)</code> over the previous hour.</p>
+</div>
+<div class="paragraph">
+<p><strong>KPI evaluation (hourly):</strong> the cache completeness KPI is set to "pass" for the hour if the percentage of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_2_2_successful_downloads_kpi"><a class="anchor" href="#_b_2_2_successful_downloads_kpi"></a>B.2.2 Successful downloads KPI</h4>
+<div class="paragraph">
+<p>This KPI measures the proportion of cached data items that can be successfully downloaded from the Global Cache, including, where a checksum is available in the message, validation of data integrity.</p>
+</div>
+<div class="paragraph">
+<p><strong>Measure (calculated each hour):</strong></p>
+</div>
+<div class="paragraph">
+<p>This measure is evaluated using a sample set of 300 randomly selected data items each hour. Data items must be cached by all Global Caches to be included in the sample set. The same sample set is used for all Global Caches. A small sample size is used to avoid overloading both Global Caches and Sensor Centres.</p>
+</div>
+<div class="paragraph">
+<p>The total number of data items sampled for download validation is recorded using the metric <code>wmo_wis2_scgc_download_selected_total</code>.</p>
+</div>
+<div class="paragraph">
+<p>The total number of data items in the sample set successfully downloaded by each Global Cache is recorded using the metric <code>wmo_wis2_scgc_download_successful_total</code>.</p>
+</div>
+<div class="paragraph">
+<p>The percentage of data items successfully downloaded is calculated as the increase in metric <code>wmo_wis2_scgc_download_successful_total</code> over the previous hour ÷ the increase in metric <code>wmo_wis2_scgc_download_selected_total</code> over the previous hour.</p>
+</div>
+<div class="paragraph">
+<p><strong>KPI evaluation (hourly):</strong> the successful download KPI is set to "pass" for the hour if the percentage of successful downloads is not less than 95 per cent; otherwise it is set to "fail" for the hour.</p>
+</div>
+<div class="paragraph">
+<p>Note that if <code>wmo_wis2_scgc_download_selected_total</code> is zero for the previous hour (i.e., no data items were cached by any Global Cache - perhaps because one Global Cache is offline), the successful downloads KPI cannot be calculated. In this case, the KPI is automatically set to "pass" for all Global Caches. The Global Cache that is offline will fail the cache completeness KPI, thus the combined KPI (see below) for the offline Global Cache will always be a fail.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_b_2_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_b_2_3_combined_hourly_and_monthly_kpi"></a>B.2.3 Combined hourly and monthly KPI</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>For each hour, the Global Cache is considered operational where <strong>both</strong> the cache completeness KPI <strong>and</strong> the successful downloads KPI are set to "pass". If either KPI fails for the hour, the Global Cache is considered non-operational for that hour.</p>
+</li>
+<li>
+<p>Each month, the overall KPI is set to "pass" if the combined hourly KPI passes for not less than 98 per cent of hours in the month (i.e. the Global Cache may experience up to 14 "failure" hours in a calendar month and still be considered performing within the service level).</p>
+</li>
+<li>
+<p>Hours coinciding with planned outages, or other <em>force majeure</em> agreed by SC-IMT, are excluded from the monthly KPI calculation.</p>
+</li>
+<li>
+<p>The monthly KPI is used in the assessment of Global Cache performance informing the determination of downtime in accordance with section 2.7.2.6.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_appendix_b_wmo_core_metadata_profile_version_2_key_performance_indicators"><a class="anchor" href="#_appendix_b_wmo_core_metadata_profile_version_2_key_performance_indicators"></a>APPENDIX B: WMO CORE METADATA PROFILE (VERSION 2), KEY PERFORMANCE INDICATORS</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://wmo-im.github.io/wcmp2/kpi/wcmp2-kpi-DRAFT.html" class="bare">https://wmo-im.github.io/wcmp2/kpi/wcmp2-kpi-DRAFT.html</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex A: Revision History</h2>
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex B: Revision History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3985,16 +4150,15 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://github.com/wmo-im/wis2-guide/milestone/4?closed=1">See GitHub</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fast-track 2026-1</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">August 2026</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1.4.0-DRAFT</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">SC-IMT</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">INFCOM-4</p></td>
+</tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_part_vi_competencies"><a class="anchor" href="#_part_vi_competencies"></a>PART VI. Competencies</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>For this initial version of the <em>Guide to WIS</em>, Volume II, existing guidance on competencies remains largely applicable. Please refer to <em>Guide to the WMO Information System</em> (WMO-No. 1061), Volume I, Appendix A. WMO Information System Training and Learning Guide.</p>
-</div>
 </div>
 </div>
 </div>
@@ -4207,7 +4371,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-10 11:49:02 UTC
+Last updated 2026-08-12 11:48:55 UTC
 </div>
 </div>
 </body>
