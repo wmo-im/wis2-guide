@@ -335,7 +335,6 @@ urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations
 urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations/fy-3d/mwts-2
 urn:wmo:md:int-eumetsat:regional:vass,data/core/weather/space-based-observations/fy-3e/mwhs-2
 urn:wmo:md:int-eumetsat:saral:altika,data/core/weather/space-based-observations/saral/altika
-urn:wmo:md:int-eumetsat:sentinel-1a:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1a/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1c:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1c/sar-c
 urn:wmo:md:int-eumetsat:sentinel-1d:sac-c:ocn,data/core/weather/space-based-observations/sentinel-1d/sar-c
 urn:wmo:md:int-eumetsat:sentinel-3a:olci,data/core/weather/space-based-observations/sentinel-3a/olci
