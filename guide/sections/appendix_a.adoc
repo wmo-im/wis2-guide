@@ -1,7 +1,7 @@
 [appendix]
 :appendix-caption: Annex
 
-== Per-component operational criteria
+== APPENDIX A: PER-COMPONENT OPERATIONAL CRITERIA 
  
 === B.1 Global Broker
  
