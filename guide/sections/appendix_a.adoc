@@ -3,7 +3,7 @@
 
 == APPENDIX A: PER-COMPONENT OPERATIONAL CRITERIA 
 
- Additional information for 2.7.2. Performance management and monitoring of a Global Service
+ Additional information to 2.7.2. Performance management and monitoring of a Global Service.
 
 === A.1 Global Broker
  
