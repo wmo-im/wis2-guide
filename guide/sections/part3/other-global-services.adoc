@@ -46,7 +46,7 @@ A Global Replay provides access and subscription to past WIS Notification Messag
 * A Global Replay is connected to at least two (2) Global Brokers.
 * A Global Replay instance will discard duplicate messages as needed.
 * A Global Replay can validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message). Valid messages will be stored. Invalid or malformed messages will be discarded.
-* A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see _Manual on WIS_, Volume II – Appendix TODO. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.
+* A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see _Manual on WIS_, Volume II – Appendix G. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.
 * A Global Replay will remove notification messages after the required retention period.
 * A Global Replay will remove monitoring events after the required retention period.
 * A Global Replay may choose to implement access control for controlling usage.
@@ -60,7 +60,7 @@ To assist Members participation in WIS2, a free and open-source Global Replay Re
 
 wis2-grep provides functionality required for the Global Replay, providing the following technical functions:
 
-* notification messages and monitoring event subscription from a Global Broker insrtance
+* notification messages and monitoring event subscription from a Global Broker instance
 * notification message and monitoring event ingest and API publication
 * user defined subscription for MQTT message replay from a Global Broker instance
 * OGC API - Features - Part 1: Core compliance
