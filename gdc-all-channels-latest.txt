@@ -298,6 +298,7 @@ urn:wmo:md:int-eumetsat:met12:amv,data/core/weather/space-based-observations/met
 urn:wmo:md:int-eumetsat:met12:asr,data/core/weather/space-based-observations/meteosat-12/fci
 urn:wmo:md:int-eumetsat:metop-b:amsu-a:glb,data/core/weather/space-based-observations/metop-b/amsu-a
 urn:wmo:md:int-eumetsat:metop-b:amsu-a:reg,data/core/weather/space-based-observations/metop-b/amsu-a
+urn:wmo:md:int-eumetsat:metop-b:ascat:glb,data/recommended/weather/space-based-observations/metop-b/ascat
 urn:wmo:md:int-eumetsat:metop-b:avhrr:amvgb,data/core/weather/space-based-observations/metop-b/avhrr-3
 urn:wmo:md:int-eumetsat:metop-b:avhrr:amvpl,data/core/weather/space-based-observations/metop-b/avhrr-3
 urn:wmo:md:int-eumetsat:metop-b:avhrr:amvtp,data/core/weather/space-based-observations/metop-b/avhrr-3
@@ -315,6 +316,7 @@ urn:wmo:md:int-eumetsat:metop-b:mhs:glb,data/core/weather/space-based-observatio
 urn:wmo:md:int-eumetsat:metop-b:mhs:reg,data/core/weather/space-based-observations/metop-b/mhs
 urn:wmo:md:int-eumetsat:metop-c:amsu-a:glb,data/core/weather/space-based-observations/metop-c/amsu-a
 urn:wmo:md:int-eumetsat:metop-c:amsu-a:reg,data/core/weather/space-based-observations/metop-c/amsu-a
+urn:wmo:md:int-eumetsat:metop-c:ascat:glb,data/recommended/weather/space-based-observations/metop-c/ascat
 urn:wmo:md:int-eumetsat:metop-c:avhrr:amvgb,data/core/weather/space-based-observations/metop-c/avhrr-3
 urn:wmo:md:int-eumetsat:metop-c:avhrr:amvpl,data/core/weather/space-based-observations/metop-c/avhrr-3
 urn:wmo:md:int-eumetsat:metop-c:avhrr:amvtp,data/core/weather/space-based-observations/metop-c/avhrr-3
