@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-13</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
@@ -205,12 +205,12 @@ body {
 <li><a href="#_2_7_6_global_monitor">2.7.6 Global Monitor</a></li>
 </ul>
 </li>
-<li><a href="#_2_9_monitoring_for_global_service_providers">2.9 Monitoring for Global Service providers</a></li>
 <li><a href="#_2_8_operations">2.8 Operations</a>
 <ul class="sectlevel3">
 <li><a href="#_2_8_1_interoperability_with_external_systems">2.8.1 Interoperability with external systems</a></li>
 </ul>
 </li>
+<li><a href="#_2_9_monitoring_for_global_service_providers">2.9 Monitoring for Global Service providers</a></li>
 </ul>
 </li>
 <li><a href="#_part_iii_additional_components">PART III. Additional components</a>
@@ -252,20 +252,20 @@ body {
 </li>
 <li><a href="#_part_v_security">PART V. Security</a></li>
 <li><a href="#_part_vi_competencies">PART VI. Competencies</a></li>
-<li><a href="#_per_component_operational_criteria">Annex A: Per-component operational criteria</a>
+<li><a href="#_appendix_a_per_component_operational_criteria">Annex A: APPENDIX A: PER-COMPONENT OPERATIONAL CRITERIA</a>
 <ul class="sectlevel2">
-<li><a href="#_b_1_global_broker">B.1 Global Broker</a>
+<li><a href="#_a_1_global_broker">A.1 Global Broker</a>
 <ul class="sectlevel3">
-<li><a href="#_b_1_1_message_completeness_kpi">B.1.1 Message completeness KPI</a></li>
-<li><a href="#_b_1_2_connectivity_kpi">B.1.2 Connectivity KPI</a></li>
-<li><a href="#_b_1_3_combined_hourly_and_monthly_kpi">B.1.3 Combined hourly and monthly KPI</a></li>
+<li><a href="#_a_1_1_message_completeness_kpi">A.1.1 Message completeness KPI</a></li>
+<li><a href="#_a_1_2_connectivity_kpi">A.1.2 Connectivity KPI</a></li>
+<li><a href="#_a_1_3_combined_hourly_and_monthly_kpi">A.1.3 Combined hourly and monthly KPI</a></li>
 </ul>
 </li>
-<li><a href="#_b_2_global_cache">B.2 Global Cache</a>
+<li><a href="#_a_2_global_cache">A.2 Global Cache</a>
 <ul class="sectlevel3">
-<li><a href="#_b_2_1_cache_completeness_kpi">B.2.1 Cache completeness KPI</a></li>
-<li><a href="#_b_2_2_successful_downloads_kpi">B.2.2 Successful downloads KPI</a></li>
-<li><a href="#_b_2_3_combined_hourly_and_monthly_kpi">B.2.3 Combined hourly and monthly KPI</a></li>
+<li><a href="#_a_2_1_cache_completeness_kpi">A.2.1 Cache completeness KPI</a></li>
+<li><a href="#_a_2_2_successful_downloads_kpi">A.2.2 Successful downloads KPI</a></li>
+<li><a href="#_a_2_3_combined_hourly_and_monthly_kpi">A.2.3 Combined hourly and monthly KPI</a></li>
 </ul>
 </li>
 </ul>
@@ -1541,7 +1541,7 @@ body {
 <p>It must be noted that the switch between the primary and the backup node is <strong>only</strong> controlled by the connectivity to the MQTT endpoint. The permanent absence of messages on the primary node or the failure to download core data from the Global Cache will not trigger the switch to the backup node.</p>
 </div>
 <div class="paragraph">
-<p>It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same <code>centre-id</code> - ) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.</p>
+<p>It is suggested to run the two instances, primary and backup, as independently as possible (different hardware, different location – but same <code>centre-id</code>) and permanently (the backup node should always publish the notification messages). This ensures the maximum possible level of service and limit the need for manual intervention to switch between primary and backup, or vice-versa.</p>
 </div>
 </div>
 </div>
@@ -1700,7 +1700,7 @@ body {
 <div class="sect4">
 <h5 id="_2_7_2_1_general"><a class="anchor" href="#_2_7_2_1_general"></a>2.7.2.1 General</h5>
 <div class="paragraph">
-<p>The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in §2.8 of the Manual and the revocation procedure set out in §2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under §4.7.4 of the Manual.</p>
+<p>The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in 2.8 of the Manual and the revocation procedure set out in 2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under 4.7.4 of the Manual.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1829,13 +1829,13 @@ body {
 <p>The service level is met in a calendar month where the designated Global Service is operational for not less than the proportion of that month set out, for the relevant category of Global Service, in the per-component operational criteria in section 2.7.2.9. The conditions under which a Global Service is considered operational are set out in those criteria, and the proportion of operational time over the month is determined in accordance with section 2.7.2.6.</p>
 </div>
 <div class="paragraph">
-<p>The service level is the reference for the suspension and revocation procedures set out in §§2.8 and 2.9 of the Manual; the conditions under which those procedures are initiated are set out in the Manual.</p>
+<p>The service level is the reference for the suspension and revocation procedures set out in 2.8 and 2.9 of the Manual; the conditions under which those procedures are initiated are set out in the Manual.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_2_7_2_6_assessment_methodology"><a class="anchor" href="#_2_7_2_6_assessment_methodology"></a>2.7.2.6 Assessment methodology</h5>
 <div class="paragraph">
-<p>For each calendar month, the proportion of time during which the Global Service was operational is determined. The conditions under which a Global Service is considered operational vary by category and are set out in the per-component operational criteria in section 2.7.2.9. The time during which the Global Service is not operational is determined from the operational metrics published by the Global Service and by the Sensor Centres against those criteria, by aggregating the time intervals during which one or more of the per-component operational criteria are not met. Scheduled maintenance windows notified in advance to the WMO Secretariat are excluded from this time, provided that the total duration of such windows does not exceed four hours per calendar month, unless an exception has been approved by SC-IMT. The Global Service meets the service level for the calendar month where the proportion of operational time is not less than the value set out in section 2.7.2.5.</p>
+<p>For each calendar month, the proportion of time during which the Global Service was operational is determined. The conditions under which a Global Service is considered operational vary by category and are set out in the per-component operational criteria in section 2.7.2.9. The time during which the Global Service is not operational is determined from the operational metrics published by the Global Service and by the Sensor Centres against those criteria, by aggregating the time intervals during which one or more of the per-component operational criteria are not met. Scheduled maintenance windows notified in advance to the WMO Secretariat are excluded from this time, provided that the total duration of such windows does not exceed four hours per calendar month, unless an exception has been approved by SC-IMT. SC-IMT will also exclude hours where Global Service operation is adversely affected by conditions beyond the control of the operator. The Global Service meets the service level for the calendar month where the proportion of operational time is not less than the value set out in section 2.7.2.5 and 2.7.2.9..</p>
 </div>
 <div class="paragraph">
 <p>For each incident, the operating Member and the Sensor Centres maintain a record of the start time, the end time, and the affected criteria. These incident records, while not themselves binding, support the determination of operational time and provide operational context for the dashboards and statistical summaries provided by the Global Monitors.</p>
@@ -1844,7 +1844,7 @@ body {
 <div class="sect4">
 <h5 id="_2_7_2_7_reporting_cadence"><a class="anchor" href="#_2_7_2_7_reporting_cadence"></a>2.7.2.7 Reporting cadence</h5>
 <div class="paragraph">
-<p>Operational metrics for each designated Global Service are published in near-real-time by the Global Service and by the Sensor Centres. The Global Monitors provide dashboards and statistical summaries based on these metrics. The monthly service-level results of each designated Global Service, including performance against the service level over the relevant assessment period, are published openly by the WMO Secretariat in accordance with §2.7.3.1 of the Manual, so that the performance of all designated Global Services is publicly visible, and are also communicated directly to each operating Member in accordance with §2.7.3.3 of the Manual. SC-IMT reviews aggregated performance results at each of its meetings and considers any indications of sustained deterioration in accordance with §2.7.3.4 of the Manual.</p>
+<p>Operational metrics for each designated Global Service are published in near-real-time by the Global Service and by the Sensor Centres. The Global Monitors provide dashboards and statistical summaries based on these metrics. The monthly service-level results of each designated Global Service, including performance against the service level over the relevant assessment period, are published openly by the WMO Secretariat in accordance with 2.7.3.1 of the Manual, so that the performance of all designated Global Services is publicly visible, and are also communicated directly to each operating Member in accordance with 2.7.3.3 of the Manual. SC-IMT reviews aggregated performance results at each of its meetings and considers any indications of sustained deterioration in accordance with 2.7.3.4 of the Manual.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1852,19 +1852,19 @@ body {
 <div class="sect5">
 <h6 id="_2_7_2_8_1_deadline_for_restoring_performance"><a class="anchor" href="#_2_7_2_8_1_deadline_for_restoring_performance"></a>2.7.2.8.1 Deadline for restoring performance</h6>
 <div class="paragraph">
-<p>Following notification under §2.8.2.1 of the <em>Manual on WIS</em>, Volume II,  SC-IMT establishes a deadline under §2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.</p>
+<p>Following notification under 2.8.2.1 of the <em>Manual on WIS</em>, Volume II,  SC-IMT establishes a deadline under 2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.</p>
 </div>
 <div class="paragraph">
-<p>The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with §2.8.3.1 of the Manual.</p>
+<p>The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with 2.8.3.1 of the Manual.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_2_7_2_8_2_remediation_plan_following_suspension"><a class="anchor" href="#_2_7_2_8_2_remediation_plan_following_suspension"></a>2.7.2.8.2 Remediation plan following suspension</h6>
 <div class="paragraph">
-<p>Following suspension under §2.8.3.1 of the Manual, the operating Member should submit a remediation plan to SC-IMT and the WMO Secretariat. The remediation plan should describe the root cause analysis of the breach, the corrective actions to be taken, the proposed timeline for the restoration of the Global Service to WIS 2.0 operations, and the arrangements for monitoring and reporting progress. SC-IMT and the operating Member agree the timeline for restoration under §2.8.4.1 of the Manual.</p>
+<p>Following suspension under 2.8.3.1 of the Manual, the operating Member should submit a remediation plan to SC-IMT and the WMO Secretariat. The remediation plan should describe the root cause analysis of the breach, the corrective actions to be taken, the proposed timeline for the restoration of the Global Service to WIS 2.0 operations, and the arrangements for monitoring and reporting progress. SC-IMT and the operating Member agree the timeline for restoration under 2.8.4.1 of the Manual.</p>
 </div>
 <div class="paragraph">
-<p>The operating Member should report on the implementation of the remediation plan at intervals not exceeding thirty calendar days. While a suspended Global Service does not meet the service level, each such calendar month counts towards the rolling window in §2.7.2.3 of the Manual, so that persistent failure to restore the Global Service may result in the initiation of the procedure for the revocation of the designation, in accordance with §2.8.4.3 of the Manual.</p>
+<p>The operating Member should report on the implementation of the remediation plan at intervals not exceeding thirty calendar days. While a suspended Global Service does not meet the service level, each such calendar month counts towards the rolling window in 2.7.2.3 of the Manual, so that persistent failure to restore the Global Service may result in the initiation of the procedure for the revocation of the designation, in accordance with 2.8.4.3 of the Manual.</p>
 </div>
 </div>
 <div class="sect5">
@@ -1878,7 +1878,10 @@ body {
 <div class="sect3">
 <h4 id="_2_7_2_9_per_component_operational_criteria"><a class="anchor" href="#_2_7_2_9_per_component_operational_criteria"></a>2.7.2.9 Per-component operational criteria</h4>
 <div class="paragraph">
-<p>The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each category is the assessable floor used for the performance-management procedures of the Manual; it is distinct from, and not higher than, the general availability guidance in 2.7.2.2. The design-capacity figures for each category remain as set out in 2.7.2.2. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.</p>
+<p>The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each Global Service is used for the performance-management procedures of the Manual. The design-capacity figures for each category remain as set out in 2.7.2.3. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.</p>
+</div>
+<div class="paragraph">
+<p>The per-component operational criteria are provided in Appendix A to this Guide. Criteria for other types of Global Service will be added in subsequent revisions of this Guide.</p>
 </div>
 <div class="paragraph">
 <p>For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.</p>
@@ -2331,28 +2334,6 @@ body {
 </div>
 </div>
 <div class="sect2">
-<h3 id="_2_9_monitoring_for_global_service_providers"><a class="anchor" href="#_2_9_monitoring_for_global_service_providers"></a>2.9 Monitoring for Global Service providers</h3>
-<div class="paragraph">
-<p>WIS2 is comprised of Global Services providing highly available services for discovery, subscription, notification and download, based on the publication of data by WIS2 Nodes.  Global Services need to be able to provide notifications of events WIS2 (examples include, but are not limited to: validation reports on notification messages, discovery metadata, notices of outages, maintenance).</p>
-</div>
-<div class="paragraph">
-<p>Using the WIS2 Monitoring Events (WME) standard, Global Services can publish events using MQTT as the publish-subscribe protocol as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>dedicated topic structure (<code>monitor/a/wis2/&lt;centre-id&gt;</code>), where <code>&lt;centre-id&gt;</code> is the centre identifier of the subject that the event notification is pertaining to</p>
-</li>
-<li>
-<p>WIS2 Monitoring Event Message (WMEM) leveraging the CloudEvents specification</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For more information, see <em>Manual on WIS</em>, Volume II – Appendix E. WIS2 Notification Message.</p>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_2_8_operations"><a class="anchor" href="#_2_8_operations"></a>2.8 Operations</h3>
 <div class="sect3">
 <h4 id="_2_8_1_interoperability_with_external_systems"><a class="anchor" href="#_2_8_1_interoperability_with_external_systems"></a>2.8.1 Interoperability with external systems</h4>
@@ -2777,6 +2758,28 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_2_9_monitoring_for_global_service_providers"><a class="anchor" href="#_2_9_monitoring_for_global_service_providers"></a>2.9 Monitoring for Global Service providers</h3>
+<div class="paragraph">
+<p>WIS2 is comprised of Global Services providing highly available services for discovery, subscription, notification and download, based on the publication of data by WIS2 Nodes.  Global Services need to be able to provide notifications of events WIS2 (examples include, but are not limited to: validation reports on notification messages, discovery metadata, notices of outages, maintenance).</p>
+</div>
+<div class="paragraph">
+<p>Using the WIS2 Monitoring Events (WME) standard, Global Services can publish events using MQTT as the publish-subscribe protocol as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dedicated topic structure (<code>monitor/a/wis2/&lt;centre-id&gt;</code>), where <code>&lt;centre-id&gt;</code> is the centre identifier of the subject that the event notification is pertaining to</p>
+</li>
+<li>
+<p>WIS2 Monitoring Event Message (WMEM) leveraging the CloudEvents specification</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For more information, see <em>Manual on WIS</em>, Volume II – APPENDIX G. WIS2 MONITORING EVENTS.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -3059,7 +3062,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <p>A Global Replay can validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E. WIS2 Notification Message). Valid messages will be stored. Invalid or malformed messages will be discarded.</p>
 </li>
 <li>
-<p>A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see <em>Manual on WIS</em>, Volume II – Appendix TODO. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.</p>
+<p>A Global Replay can validate monitoring events against the WIS Monitoring Events Message Encoding (see <em>Manual on WIS</em>, Volume II – Appendix G. WIS2 Monitoring Events Message Encoding).  Valid WIS Monitoring Events Message Encoding Messages will be stored.  Invalid or malformed monitoring events will be discarded.</p>
 </li>
 <li>
 <p>A Global Replay will remove notification messages after the required retention period.</p>
@@ -3090,7 +3093,7 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 <div class="ulist">
 <ul>
 <li>
-<p>notification messages and monitoring event subscription from a Global Broker insrtance</p>
+<p>notification messages and monitoring event subscription from a Global Broker instance</p>
 </li>
 <li>
 <p>notification message and monitoring event ingest and API publication</p>
@@ -3141,7 +3144,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>the quality and performance of Global Services</p>
 </li>
 <li>
-<p>the conformance of the products exchanged with the agreed WMO Regulations (eg. RBON)</p>
+<p>the conformance of the products exchanged with the agreed WMO Regulations (e.g., RBON)</p>
 </li>
 </ul>
 </div>
@@ -3283,7 +3286,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>Detect any duplicates <code>data_id</code> not including a <code>rel: update</code> within a period of at least 3 hours</p>
 </li>
 <li>
-<p>Increase by 1 <code>wmo_wis2_scgc_messages_published_total</code> metrics</p>
+<p>Increase by 1 <code>wmo_wis2_scgc_messages_published_total</code> metric</p>
 </li>
 <li>
 <p>Store the time where the message as been received</p>
@@ -3299,7 +3302,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <div class="ulist">
 <ul>
 <li>
-<p>Check if the link with <code>rel="canonical</code> or <code>rel="update"</code> in <code>links</code> is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to <code>200</code>). If this is not the case, discard the Notification Message. Otherwise:</p>
+<p>Check if the link with <code>rel="canonical" or `rel="update"</code> in <code>links</code> is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to <code>200</code>). If this is not the case, discard the Notification Message. Otherwise:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -3957,15 +3960,20 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 </div>
 <div class="sect1">
-<h2 id="_per_component_operational_criteria"><a class="anchor" href="#_per_component_operational_criteria"></a>Annex A: Per-component operational criteria</h2>
+<h2 id="_appendix_a_per_component_operational_criteria"><a class="anchor" href="#_appendix_a_per_component_operational_criteria"></a>Annex A: APPENDIX A: PER-COMPONENT OPERATIONAL CRITERIA</h2>
 <div class="sectionbody">
+<div class="literalblock">
+<div class="content">
+<pre>Additional information to 2.7.2. Performance management and monitoring of a Global Service.</pre>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_b_1_global_broker"><a class="anchor" href="#_b_1_global_broker"></a>B.1 Global Broker</h3>
+<h3 id="_a_1_global_broker"><a class="anchor" href="#_a_1_global_broker"></a>A.1 Global Broker</h3>
 <div class="paragraph">
 <p>The operational status of a Global Broker is assessed against two KPIs, both measured through Sensor Centre Global Broker (SCGB) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGB instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.</p>
 </div>
 <div class="sect3">
-<h4 id="_b_1_1_message_completeness_kpi"><a class="anchor" href="#_b_1_1_message_completeness_kpi"></a>B.1.1 Message completeness KPI</h4>
+<h4 id="_a_1_1_message_completeness_kpi"><a class="anchor" href="#_a_1_1_message_completeness_kpi"></a>A.1.1 Message completeness KPI</h4>
 <div class="paragraph">
 <p>This KPI measures the percentage of WIS2 Notification Messages (WNM) published by the Global Broker, within a defined cut-off time, compared against a baseline derived from all Global Brokers.</p>
 </div>
@@ -3973,14 +3981,17 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p><strong>Measure (calculated each hour):</strong></p>
 </div>
 <div class="paragraph">
-<p>The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomised sample of approximately 10 per cent of messages. The number of messages published by each Global Broker within the cutoff time is recorded using the metric <code>wmo_wis2_scgb_messages_published_total</code>. The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour. A message is considered "missed" if a Global Broker has not published that message within 60-seconds of it first being published by any other Global Broker.</p>
+<p>The percentage of WNM messages published by the Global Broker within the cut-off time of 60 seconds, compared to the baseline, is assessed using a randomized sample of approximately 10 per cent of messages. The number of messages published by each Global Broker within the cutoff time is recorded using the metric <code>wmo_wis2_scgb_messages_published_total</code>. The baseline is the highest number of messages published by any Global Broker, as recorded by any SCGB instance, within the previous hour. A message is considered "missed" if a Global Broker has not published that message within 60-seconds of it first being published by any other Global Broker.</p>
 </div>
 <div class="paragraph">
-<p><strong>KPI evaluation (hourly):</strong> the message completeness KPI is set to "pass" for the hour if the percentage of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.</p>
+<p><strong>KPI evaluation (hourly):</strong></p>
+</div>
+<div class="paragraph">
+<p>The message completeness KPI is set to "pass" for the hour if the percentage of messages published is not less than 95 per cent of the baseline; otherwise it is set to "fail" for the hour.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_b_1_2_connectivity_kpi"><a class="anchor" href="#_b_1_2_connectivity_kpi"></a>B.1.2 Connectivity KPI</h4>
+<h4 id="_a_1_2_connectivity_kpi"><a class="anchor" href="#_a_1_2_connectivity_kpi"></a>A.1.2 Connectivity KPI</h4>
 <div class="paragraph">
 <p>This KPI measures the proportion of the hour during which the public MQTT endpoint of the Global Broker are reachable, as determined from the connection status recorded by SCGB instances.</p>
 </div>
@@ -3991,11 +4002,14 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>The proportion of time that the Global Broker’s MQTT end-point is accessible, published by the Sensor Centre Global Broker using metric <code>wmo_wis2_scgb_connected_flag</code>.</p>
 </div>
 <div class="paragraph">
-<p><strong>KPI evaluation (hourly):</strong> the connectivity KPI is set to "pass" for the hour if the <code>wmo_wis2_scgb_connected_flag</code> is set to <code>1</code> ("True", connected) for not less than 95 per cent of the time; otherwise it is set to "fail" for the hour.</p>
+<p><strong>KPI evaluation (hourly):</strong></p>
+</div>
+<div class="paragraph">
+<p>The connectivity KPI is set to "pass" for the hour if the <code>wmo_wis2_scgb_connected_flag</code> is set to <code>1</code> ("True", connected) for not less than 95 per cent of the time; otherwise it is set to "fail" for the hour.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_b_1_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_b_1_3_combined_hourly_and_monthly_kpi"></a>B.1.3 Combined hourly and monthly KPI</h4>
+<h4 id="_a_1_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_a_1_3_combined_hourly_and_monthly_kpi"></a>A.1.3 Combined hourly and monthly KPI</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4016,12 +4030,12 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 </div>
 <div class="sect2">
-<h3 id="_b_2_global_cache"><a class="anchor" href="#_b_2_global_cache"></a>B.2 Global Cache</h3>
+<h3 id="_a_2_global_cache"><a class="anchor" href="#_a_2_global_cache"></a>A.2 Global Cache</h3>
 <div class="paragraph">
 <p>The operational status of a Global Cache is assessed against two KPIs, both measured through Sensor Centre Global Cache (SCGC) instances operating in different parts of the globe, so as to reduce the influence of localized network conditions or of any individual Sensor Centre. Hourly KPI evaluation is based on the best result across all SCGC instances; KPIs are calculated at the Global Monitor, not at the Sensor Centre itself.</p>
 </div>
 <div class="sect3">
-<h4 id="_b_2_1_cache_completeness_kpi"><a class="anchor" href="#_b_2_1_cache_completeness_kpi"></a>B.2.1 Cache completeness KPI</h4>
+<h4 id="_a_2_1_cache_completeness_kpi"><a class="anchor" href="#_a_2_1_cache_completeness_kpi"></a>A.2.1 Cache completeness KPI</h4>
 <div class="paragraph">
 <p>This KPI measures the percentage of data items published by the Global Cache compared with the total number of data items published by all WIS2 Nodes (on <code>origin</code> topics).</p>
 </div>
@@ -4041,11 +4055,14 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>The percentage of data items published by a Global Cache is calculated as the increase in metric <code>wmo_wis2_scgc_messages_cached_total (rel=canonical)</code> over the previous hour ÷ the increase in metric <code>wmo_wis2_scgc_messages_published_total (rel=canonical)</code> over the previous hour.</p>
 </div>
 <div class="paragraph">
-<p><strong>KPI evaluation (hourly):</strong> the cache completeness KPI is set to "pass" for the hour if the percentage of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.</p>
+<p><strong>KPI evaluation (hourly):</strong></p>
+</div>
+<div class="paragraph">
+<p>The cache completeness KPI is set to "pass" for the hour if the percentage of data items cached is not less than 95 per cent of the number published by origin; otherwise it is set to "fail" for the hour.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_b_2_2_successful_downloads_kpi"><a class="anchor" href="#_b_2_2_successful_downloads_kpi"></a>B.2.2 Successful downloads KPI</h4>
+<h4 id="_a_2_2_successful_downloads_kpi"><a class="anchor" href="#_a_2_2_successful_downloads_kpi"></a>A.2.2 Successful downloads KPI</h4>
 <div class="paragraph">
 <p>This KPI measures the proportion of cached data items that can be successfully downloaded from the Global Cache, including, where a checksum is available in the message, validation of data integrity.</p>
 </div>
@@ -4065,14 +4082,17 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <p>The percentage of data items successfully downloaded is calculated as the increase in metric <code>wmo_wis2_scgc_download_successful_total</code> over the previous hour ÷ the increase in metric <code>wmo_wis2_scgc_download_selected_total</code> over the previous hour.</p>
 </div>
 <div class="paragraph">
-<p><strong>KPI evaluation (hourly):</strong> the successful download KPI is set to "pass" for the hour if the percentage of successful downloads is not less than 95 per cent; otherwise it is set to "fail" for the hour.</p>
+<p><strong>KPI evaluation (hourly):</strong></p>
+</div>
+<div class="paragraph">
+<p>The successful download KPI is set to "pass" for the hour if the percentage of successful downloads is not less than 95 per cent; otherwise it is set to "fail" for the hour.</p>
 </div>
 <div class="paragraph">
 <p>Note that if <code>wmo_wis2_scgc_download_selected_total</code> is zero for the previous hour (i.e., no data items were cached by any Global Cache - perhaps because one Global Cache is offline), the successful downloads KPI cannot be calculated. In this case, the KPI is automatically set to "pass" for all Global Caches. The Global Cache that is offline will fail the cache completeness KPI, thus the combined KPI (see below) for the offline Global Cache will always be a fail.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_b_2_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_b_2_3_combined_hourly_and_monthly_kpi"></a>B.2.3 Combined hourly and monthly KPI</h4>
+<h4 id="_a_2_3_combined_hourly_and_monthly_kpi"><a class="anchor" href="#_a_2_3_combined_hourly_and_monthly_kpi"></a>A.2.3 Combined hourly and monthly KPI</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4371,7 +4391,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-12 11:48:55 UTC
+Last updated 2026-08-13 10:54:40 UTC
 </div>
 </div>
 </body>
