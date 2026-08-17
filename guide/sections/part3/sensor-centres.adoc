@@ -113,7 +113,7 @@ In order to assess the downloading feature of a Global Cache, and to provide the
 * Increment ``wmo_wis2_scgc_download_selected_total`` by the number of selected data granules
 * Attempt a download for that same granule against all Global Caches
 * Evaluate the checksum for the data granule if provided in the Notification Message
-* Increment ``wmo_wis2_scgc_download_successful_total`` by 1 if the download is succesful and the (optional) checksum validation passes
+* Increment ``wmo_wis2_scgc_download_successful_total`` by 1 if the download is successful and the (optional) checksum validation passes
 
 All the metrics SHALL be exposed for scraping by the Global Monitor.
 
