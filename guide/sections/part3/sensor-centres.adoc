@@ -94,7 +94,7 @@ For the messages received on the `origin` topic subscription:
 
 For the messages received on the `cache` topic subscription and using the `properties.global-cache` value to select the Global Cache:
 
-* Check if the link with `rel="canonical" or `rel="update"` in `links` is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to `200`). If this is not the case, discard the Notification Message. Otherwise:
+* Check if the link with `rel="canonical"` or `rel="update"` in `links` is reachable by doing a HTTP HEAD request (The HTTP HEAD must provide a response status code equal to `200`). If this is not the case, discard the Notification Message. Otherwise:
   ** For each Notification Message and using `data_id`, calculate the difference between the time was received on `origin` and the same `data_id` on `cache`: Time~Cache~ - Time~Origin~
   ** Update the `wmo_wis2_scgc_cache_delay_seconds` metric with this value
   ** Compare this value with the three thresholds defined in the metric table above. Increase by 1 `wmo_wis2_scgc_messages_cached_delay_total` using the threshold as a label (so less than 120s, less than 300s, less than 600s)
