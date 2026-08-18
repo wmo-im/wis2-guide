@@ -393,6 +393,7 @@ urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/syno
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
+urn:wmo:md:mx-smn:cap-mx,data/core/weather/advisories-warnings
 urn:wmo:md:mx-smn:climat-monthly-daily,data/core/climate/surface-based-observations/daily
 urn:wmo:md:mx-smn:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mx-smn:core.surface-based-observations.temp,data/core/weather/surface-based-observations/temp
