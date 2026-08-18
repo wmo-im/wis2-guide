@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-18</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
@@ -2079,7 +2079,7 @@ body {
 <p>A Global Cache should make sure that data are downloaded in parallel and that downloads are not blocking each other.</p>
 </li>
 <li>
-<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and shall send a WME (WIS2 Monitoring Event) message on the <code>monitor</code> topic hierarchy to inform other WIS centres about it. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.</p>
+<p>A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and shall send a WME (WIS2 Monitoring Event) message on the <code>monitor</code> topic hierarchy to inform other WIS centres about it. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue. The deduplication mechanism mentioned above applies; only one WME per non-cached data instance shall be generated, regardless of the number of received notification messages.</p>
 </li>
 <li>
 <p>A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a publicly resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.</p>
@@ -4391,7 +4391,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-17 12:55:17 UTC
+Last updated 2026-08-18 17:23:07 UTC
 </div>
 </div>
 </body>
