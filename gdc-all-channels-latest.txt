@@ -267,7 +267,7 @@ urn:wmo:md:in-imd:satellite,data/core/weather/space-based-observations/insat-3dr
 urn:wmo:md:in-imd:satellite3ds,data/core/weather/space-based-observations/insat-3ds/imager
 urn:wmo:md:in-imd:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:in-imd:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
-urn:wmo:md:in-imd:tsunami,data/core/weather/advisories-warnings
+urn:wmo:md:in-imd:tsunami,data/core/weather/maritime-safety-information/warnings
 urn:wmo:md:int-ecmwf:aifs:enfo:forecast,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:int-ecmwf:aifs:oper:forecast,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:int-ecmwf:aifs:oper:short-trajectory,data/core/weather/prediction/forecast/medium-range/deterministic/trajectory
