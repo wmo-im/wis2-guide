@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-18</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-19</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
@@ -1878,10 +1878,7 @@ body {
 <div class="sect3">
 <h4 id="_2_7_2_9_per_component_operational_criteria"><a class="anchor" href="#_2_7_2_9_per_component_operational_criteria"></a>2.7.2.9 Per-component operational criteria</h4>
 <div class="paragraph">
-<p>The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each Global Service is used for the performance-management procedures of the Manual. The design-capacity figures for each category remain as set out in 2.7.2.3. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Annex B, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.</p>
-</div>
-<div class="paragraph">
-<p>The per-component operational criteria are provided in Appendix A to this Guide. Criteria for other types of Global Service will be added in subsequent revisions of this Guide.</p>
+<p>The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each Global Service is used for the performance-management procedures of the Manual. The design-capacity figures for each category remain as set out in 2.7.2.3. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Appendix A, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.</p>
 </div>
 <div class="paragraph">
 <p>For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.</p>
@@ -1949,7 +1946,7 @@ body {
 <p>When publishing a message to the local broker, the metric <code>wmo_wis2_gb_messages_published_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>In order to improve the service level, a WIS centre may decide to operate two nodes sharing the same <code>centre-id</code>. One will be considered as <em>primary</em> and the other one as <em>backup</em>. In this case, when the primary WIS centre broker is reachable (the MQTT connection is up and running), the Global Broker will only process the notification messages from this primary node. When the connection is dropped (the MQTT connection is down) for at least one minute, the Global Broker will start processing the notification messages received from the backup WIS centre broker. When the connection to the primary WIS centre broker is active for at least one minute, the Global Broker will stop processing the messages coming from the backup WIS centre broker and will only process the messages received from the primary WIS centre broker. When the Global Broker is processing the messages from the backup WIS centre broker the metric <code>wmo_wis2_gb_connected_backup_flag</code> will be set to 1. When the backup WIS centre broker is defined but is not used as the source of notification message, the metric <code>wmo_wis2_gb_connected_backup_flag</code> will be set to 0.</p>
+<p>To improve the service level, a WIS centre may decide to operate two nodes sharing the same <code>centre-id</code>. One will be considered as <em>primary</em> and the other one as <em>backup</em>. In this case, when the primary WIS centre broker is reachable (the MQTT connection is up and running), the Global Broker will only process the notification messages from this primary node. When the connection is dropped (the MQTT connection is down) for at least one minute, the Global Broker will start processing the notification messages received from the backup WIS centre broker. When the connection to the primary WIS centre broker is active for at least one minute, the Global Broker will stop processing the messages coming from the backup WIS centre broker and will only process the messages received from the primary WIS centre broker. When the Global Broker is processing the messages from the backup WIS centre broker the metric <code>wmo_wis2_gb_connected_backup_flag</code> will be set to 1. When the backup WIS centre broker is defined but is not used as the source of notification message, the metric <code>wmo_wis2_gb_connected_backup_flag</code> will be set to 0.</p>
 </li>
 <li>
 <p>A Global Broker will update its metrics at least every 60 seconds.</p>
@@ -3962,10 +3959,8 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 <div class="sect1">
 <h2 id="_appendix_a_per_component_operational_criteria"><a class="anchor" href="#_appendix_a_per_component_operational_criteria"></a>Annex A: APPENDIX A: PER-COMPONENT OPERATIONAL CRITERIA</h2>
 <div class="sectionbody">
-<div class="literalblock">
-<div class="content">
-<pre>Additional information to 2.7.2. Performance management and monitoring of a Global Service.</pre>
-</div>
+<div class="paragraph">
+<p>This appendix contains additional information to section 2.7.2.9. The operational criteria specific for each category of designated Global Services are set out below. Criteria for other types of Global Service will be added in subsequent revisions of this Guide.</p>
 </div>
 <div class="sect2">
 <h3 id="_a_1_global_broker"><a class="anchor" href="#_a_1_global_broker"></a>A.1 Global Broker</h3>
@@ -4391,7 +4386,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-18 17:23:07 UTC
+Last updated 2026-08-19 08:17:43 UTC
 </div>
 </div>
 </body>
