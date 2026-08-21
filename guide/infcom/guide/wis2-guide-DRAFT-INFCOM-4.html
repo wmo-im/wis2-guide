@@ -1928,7 +1928,7 @@ body {
 <p>When receiving a message from a local WIS centre broker or a Global Service broker, the metric <code>wmo_wis2_gb_messages_received_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>For data notification messages, a Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
+<p>A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
 </li>
 <li>
 <p>A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_invalid_topic_total</code> will be increased by 1.</p>
@@ -4386,7 +4386,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-21 11:01:59 UTC
+Last updated 2026-08-21 11:17:02 UTC
 </div>
 </div>
 </body>
