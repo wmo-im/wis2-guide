@@ -1,0 +1,10 @@
+=== 2.9 Monitoring for Global Service providers
+
+WIS2 is comprised of Global Services providing highly available services for discovery, subscription, notification and download, based on the publication of data by WIS2 Nodes.  Global Services need to be able to provide notifications of events WIS2 (examples include, but are not limited to: validation reports on notification messages, discovery metadata, notices of outages, maintenance).
+
+Using the WIS2 Monitoring Events (WME) standard, Global Services can publish events using MQTT as the publish-subscribe protocol as follows:
+
+* dedicated topic structure (``monitor/a/wis2/<centre-id>``), where ``<centre-id>`` is the centre identifier of the subject that the event notification is pertaining to
+* WIS2 Monitoring Event Message (WMEM) leveraging the CloudEvents specification
+
+For more information, see _Manual on WIS_, Volume II – APPENDIX G. WIS2 MONITORING EVENTS.

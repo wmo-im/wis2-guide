@@ -1,0 +1,44 @@
+=== 3.1 Overview
+
+==== 3.1.1 Value-added capabilities
+
+Alongside the core set of Global Services defined, Additional Global Services and Sensor Centres provide value-added capabilities within WIS2.
+
+Additional Global Services:
+
+* provide value added capabilities and insights into WIS2
+* are not required components of WIS2
+* may be provided with various access control policies depending on their scope
+
+Sensor Centres:
+
+* provide continuous measurement and assessment on WIS2 functions
+
+==== 3.1.2 Designation procedure for Additional Components
+
+Any WMO Member or partner organization may request to operate an Additional Component that is defined in this Guide.
+
+Additional Components provide value to the entire WIS2 ecosystem. As such, all instances of Additional Components must be assessed to assure their correct operation before being designated as a WIS2 component.
+
+The designation of an Additional Component involves the following steps:
+
+* Request to host an Additional Component: the "service offer".
+** A service offer shall be made by the Permanent Representative of the Member country or territory from where the Additional Component will operate, or by the organisation responsible for WMO Programme or Activity that will operate the Additional Component.
+** A service offer shall include: (i) the type of Additional Component - this shall be a type that is defined in this Guide, (ii) an outline the Centre’s capacity to deliver the proposed component, and (iii) contact details for the focal point responsible for the Additional Component.
+* Complete the WIS2 Register.
+** Once the Additional Component is ready for assessment, the focal point shall update the WIS2 Register providing the information requested by the Secretariat, including but not limited to: the proposed centre identifier ("centre-id"), and technical details for the Additional Component required to connect with other WIS2 components.
+* Provide details of WIS2 components.
+** The Secretariat provides connection details (such as IP addresses or hostnames) for the WIS2 services or components to which Additional Component needs to connect.
+* Additional Component assessment. 
+** In coordination with the WMO Secretariat and SC-IMT, the principal GISC of the Member country or territory from where the Additional Component will operate will assess technical compliance with specifications of WIS2 (e.g., provision of metrics, provision of WIS2 Monitor Event messages) and the specification of the Additional Component defined in this Guide.
+** Following successful technical compliance validation, the principal GISC undertakes a pre-operational assessment of the Additional Component for a period not less than one month. The GISC, in coordination with WMO Secretariat and SC-IMT, will facilitate connection with the Global Services if required. This assessment includes verifying interoperability with Global Services and validating performance against any KPIs defined for the Additional Component. During the pre-operational testing the Additional Component and any outputs it provides will be marked as experimental.
+* Approve the designation of the Additional Component.
+** Based on the findings of the technical validation and operational assessment, SC-IMT will consider the service offer and provide a recommendation to President of INFCOM for approval. In cases where the proposal is rejected, SC-IMT will provide constructive feedback to the requestor.
+* Add new Additional Component to WIS2 (if approved).
+** The Additional Component is added to the list of designated Additional Components maintained and published by the WMO Secretariat.
+** Experimental marking is removed. 
+
+
+==== 3.1.3 Decommissioning procedure for Additional Components
+
+When a Member seeks to stop operating an Additional Component they must contact the Secretariat to inform WMO of their wish to decommission the service. Members should provide sufficient lead-time between submitting the request to decommission and cessation of the service. Where the service contributes to the effective functioning of WIS2, the Member seeking to stop the service should attempt to find another Member to whom they can transfer their service obligations. On the date agreed for cessation of the service, the Secretariat will: (i) remove the Additional Component from the list designated services, and (ii) coordinate with the Global Service providers to disconnect the Additional Component from WIS2.

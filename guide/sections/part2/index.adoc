@@ -7,3 +7,5 @@ include::wis2node.adoc[]
 include::global-services.adoc[]
 
 include::operations.adoc[]
+
+include::monitoring.adoc[]

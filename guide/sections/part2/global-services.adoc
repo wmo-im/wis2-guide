@@ -26,7 +26,11 @@ The WMO Secretariat and other Global Services will make the required changes to 
 
 ==== 2.7.2 Performance management and monitoring of a Global Service
 
-===== 2.7.2.1 Monitoring and metrics for WIS2 operations
+===== 2.7.2.1 General
+
+The performance management of designated Global Services is governed by 2.7–2.9 of the Manual on WIS, Volume II. This section of the Guide provides operational guidance on the service level, the methodology used to assess it, the reporting cadence, and the remediation and restoration practice. Section 2.7.2.9 sets out the per-component operational criteria specific to each category of Global Service. The framework set out in this section and in sections 2.7.2.8 and 2.7.2.9 applies for the purposes of the suspension procedure set out in 2.8 of the Manual and the revocation procedure set out in 2.9 of the Manual; routine incident management for Global Services continues to be coordinated by GISCs under 4.7.4 of the Manual.
+
+===== 2.7.2.2 Monitoring and metrics for WIS2 operations
 
 The availability of data and the performance of system components within WIS2 are actively monitored by GISCs and the Global Monitor service to ensure proactive responses to incidents and effective capacity planning for future operations.
 
@@ -43,10 +47,11 @@ Metrics for WIS2 monitoring should follow the naming convention ``wmo_<program>_
 
 The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarchy footnote:[See https://github.com/wmo-im/wis2-metric-hierarchy.]
 
-===== 2.7.2.2 Service levels, performance indicators, and fair usage policies
+===== 2.7.2.3 Service levels, performance indicators, and fair usage policies
 * Each WIS centre operating a WIS2 Node is responsible for achieving the highest possible level of service based on its resources and capabilities.
 * All Global Services, in particular Global Brokers and Global Caches, are collectively responsible for making WIS a reliable and efficient means of exchanging the data required for the operation of all WIS centres. The architecture provides a redundant solution where the failure of one component will not impact the overall level of service of WIS.
 * Each Global Service should aim to achieve at least 99.5% availability of the service it provides. This is not a contractual target. It should be considered by the entity providing the Global Service as a guideline when designing and operating that service.
+* Any Global Service operator anticipating an outage that may exceed 4 hours should notify other WIS2 centres (including other Global Services and the WMO Secretariat) in advance to allow them to prepare for the disruption. A monitor message will be published by the Global Monitor informing about the outage.
 * A Global Broker:
 ** Should support a minimum of 200 WIS2 Nodes or Global Services;
 ** Should support a minimum of 1 000 subscribers;
@@ -54,45 +59,88 @@ The full set of the WIS2 monitoring metrics is given in WMO: WIS2 Metric Hierarc
 * A Global Cache:
 ** Should support a minimum of 100 GB of data in the cache;
 ** Should support a minimum of 1 000 simultaneous downloads;
-** Could limit the number of simultaneous connections from a user (known by its originating source IP) to five;
+** Could limit the number of simultaneous connections from a user (known by its originating source IP) to not less than sixteen;
 ** Could limit the bandwidth usage of the service to 1 Gb/s.
+* A Global Discovery Catalogue:
+** Should support a minimum of 20 000 metadata records;
+** Should support a minimum of 25 requests per second to the API endpoint.
 * A Global Monitor:
 ** Should support a minimum of 50 metrics providers;
 ** Should support 200 simultaneous "access" to the dashboard;
 ** Could limit the bandwidth usage of the service to 100 Mb/s.
-* A Global Discovery Catalogue:
-** Should support a minimum of 20 000 metadata records;
-** Should support a minimum of 50 requests per second to the API endpoint.
 
-===== 2.7.2.3 Metrics for Global Services
+===== 2.7.2.4 Metrics for Global Services
 
 In the following sections, and for each Global Service, a set of metrics is defined. Each Global Service will provide those metrics. They will then be ingested by the Global Monitor.
+
+===== 2.7.2.5 Service level
+
+The service level is met in a calendar month where the designated Global Service is operational for not less than the proportion of that month set out, for the relevant category of Global Service, in the per-component operational criteria in section 2.7.2.9. The conditions under which a Global Service is considered operational are set out in those criteria, and the proportion of operational time over the month is determined in accordance with section 2.7.2.6.
+
+The service level is the reference for the suspension and revocation procedures set out in 2.8 and 2.9 of the Manual; the conditions under which those procedures are initiated are set out in the Manual.
+
+===== 2.7.2.6 Assessment methodology
+
+For each calendar month, the proportion of time during which the Global Service was operational is determined. The conditions under which a Global Service is considered operational vary by category and are set out in the per-component operational criteria in section 2.7.2.9. The time during which the Global Service is not operational is determined from the operational metrics published by the Global Service and by the Sensor Centres against those criteria, by aggregating the time intervals during which one or more of the per-component operational criteria are not met. Scheduled maintenance windows notified in advance to the WMO Secretariat are excluded from this time, provided that the total duration of such windows does not exceed four hours per calendar month, unless an exception has been approved by SC-IMT. SC-IMT will also exclude hours where Global Service operation is adversely affected by conditions beyond the control of the operator. The Global Service meets the service level for the calendar month where the proportion of operational time is not less than the value set out in section 2.7.2.5 and 2.7.2.9.
+
+In the event of an incident affecting the operation of Global Service, the operating Member should maintain a record of the start time, the end time, and affected criteria. These incident records, while not themselves binding, support the determination of operational time and provide operational context for the dashboards and statistical summaries provided by the Global Monitors.
+
+===== 2.7.2.7 Reporting cadence
+
+Operational metrics for each designated Global Service are published in near-real-time by the Global Service and by the Sensor Centres. The Global Monitors provide dashboards and statistical summaries based on these metrics. The monthly service-level results of each designated Global Service, including performance against the service level over the relevant assessment period, are published openly by the WMO Secretariat in accordance with 2.7.3.1 of the Manual, so that the performance of all designated Global Services is publicly visible, and are also communicated directly to each operating Member in accordance with 2.7.3.3 of the Manual. SC-IMT reviews aggregated performance results at each of its meetings and considers any indications of sustained deterioration in accordance with 2.7.3.4 of the Manual.
+
+===== 2.7.2.8 Remediation and restoration
+
+====== 2.7.2.8.1 Deadline for restoring performance
+
+Following notification under 2.8.2.1 of the _Manual on WIS_, Volume II,  SC-IMT establishes a deadline under 2.8.2.2 by which the operating Member is expected to re-establish the performance of the Global Service so that it meets the service level. When establishing the deadline, SC-IMT considers the nature of the failure to meet the service level, the operational impact on WIS 2.0 and its users, and the typical time required to address comparable issues. The deadline reflects the operational nature of the Global Service: it may be set in hours where the issue can be addressed by routine operational measures, and in days where more substantive corrective action is required, but it should not normally extend beyond what is needed to address the immediate issue.
+
+The operating Member should keep SC-IMT and the WMO Secretariat informed of the progress towards re-establishing performance. Failure to meet the deadline triggers suspension in accordance with 2.8.3.1 of the Manual.
+
+====== 2.7.2.8.2 Remediation plan following suspension
+
+Following suspension under 2.8.3.1 of the Manual, the operating Member should submit a remediation plan to SC-IMT and the WMO Secretariat. The remediation plan should describe the root cause analysis of the breach, the corrective actions to be taken, the proposed timeline for the restoration of the Global Service to WIS 2.0 operations, and the arrangements for monitoring and reporting progress. SC-IMT and the operating Member agree the timeline for restoration under 2.8.4.1 of the Manual.
+
+The operating Member should report on the implementation of the remediation plan at intervals not exceeding thirty calendar days. While a suspended Global Service does not meet the service level, each such calendar month counts towards the rolling window in 2.7.2.3 of the Manual, so that persistent failure to restore the Global Service may result in the initiation of the procedure for the revocation of the designation, in accordance with 2.8.4.3 of the Manual.
+
+====== 2.7.2.8.3 Restoration
+
+Restoration of a suspended Global Service to WIS 2.0 operations is confirmed by SC-IMT, with the assistance of the WMO Secretariat and using the dashboards and statistical summaries provided by the Global Monitors, once the operational performance has met the service level for not less than one calendar month following completion of the remediation actions.
+
+==== 2.7.2.9 Per-component operational criteria
+ 
+The operational criteria specific to each category of designated Global Service are set out below. These criteria define what constitutes operational performance for the purposes of the service level and inform the determination of downtime for each component. The service level stated for each Global Service is used for the performance-management procedures of the Manual. The design-capacity figures for each category remain as set out in 2.7.2.3. The detailed assessment methodology and Key Performance Indicators (KPIs) corresponding to each criterion are set out in Appendix A, and the detailed technical checks are maintained by the WMO Secretariat on behalf of SC-IMT and published as a technical reference.
+
+For a Global Broker, the service level is not less than 98 per cent of operational time per calendar month.
+ 
+For a Global Cache, the service level is not less than 98 per cent of operational time per calendar month.
 
 ==== 2.7.3 Global Broker
 
 ===== 2.7.3.1 Technical considerations
 
 * As detailed above, there will be at least three Global Brokers to ensure that messages within WIS2 are highly available and delivered globally with low latency.
-* A Global Broker subscribes to messages from WIS2 Nodes and other Global Services. The Global Broker should aim to subscribe to all WIS centres. If this is not possible, the Global Broker should inform the WMO Secretariat so that the situation can be documented.
+* A Global Broker subscribes to messages and monitoring events from WIS2 Nodes and other Global Services. The Global Broker should aim to subscribe to all WIS centres. If this is not possible, the Global Broker should inform the WMO Secretariat so that the situation can be documented.
 * Every WIS2 Node or Global Service must have subscriptions from at least two Global Brokers.
-* For full global coverage, a Global Broker will subscribe to messages from at least two other Global Brokers.
-* When subscribing to messages from WIS2 Nodes and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS centre and available at WMO Secretariat.
+* For full global coverage, a Global Broker will subscribe to messages and monitoring events from at least two other Global Brokers.
+* When subscribing to messages and monitoring events from WIS2 Nodes and other Global Services, a Global Broker must authenticate using the valid credentials managed by the WIS centre and available at WMO Secretariat.
 
 * A Global Broker is built around two software components:
 ** An off the shelf broker implementing both MQTT 3.1.1 and MQTT 5.0 in a highly available setup, typically in a cluster mode. Tools such as EMQX, HiveMQ, VerneMQ, RabbitMQ (in its latest versions) are compliant with these requirements. The open source version of Mosquitto cannot be clustered and therefore should not be used as part of a Global Broker.
 ** Additional features, including anti-loop detection, notification message format compliance, validation of the published topic, and metrics provision.
 
-* When connected to a local WIS centre broker or a Global Service broker, the metric ``wmo_wis2_gb_connected_flag`` will be equal to 1. When the connection cannot be established or is interrupted the metric ``wmo_wis2_gb_connected_flag`` will be equal to 0.
+* When connected to the local WIS centre broker, the ``wmo_wis2_gb_connected_flag`` will be set to 1. When the connection to the local WIS centre broker is not possible, the ``wmo_wis2_gb_connected_flag`` will be set to 0.
 * When receiving a message from a local WIS centre broker or a Global Service broker, the metric ``wmo_wis2_gb_messages_received_total`` will be increased by 1.
 * A Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_no_metadata_total`` will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every ``centre-id``.
-* A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_invalid_topic_total`` will be increased by 1.
-* During the pre-operational phase (2024), a Global Broker will not discard the message but instead will send a message on the `monitor` topic hierarchy to inform the originating centre and its GISC.
-* A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_invalid_format_total`` will be increased by 1.
-* A Global Broker will republish a message only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
+* A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric ``wmo_wis2_gb_messages_invalid_topic_total`` will be increased by 1.
+* A Global Broker will validate notification messages against the standard format (see _Manual on WIS_, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_messages_invalid_format_total`` will be increased by 1.
+* A Global Broker will validate monitoring events against the standard format (see _Manual on WIS_, Volume II – Appendix G. WIS2 Monitoring Events), discarding non-compliant messages and raising an alert. The metric ``wmo_wis2_gb_messages_invalid_format_total`` will be increased by 1.
+* A Global Broker will republish a message or monitoring event only once. It will record the message identifier (``id``) (as defined in the WIS2 Notification Message) of messages already published and will discard subsequent identical messages (those with the same message ``id``). This is the anti-loop feature of the Global Broker.
 * When publishing a message to the local broker, the metric ``wmo_wis2_gb_messages_published_total`` will be increased by 1.
+* To improve the service level, a WIS centre may decide to operate two nodes sharing the same ``centre-id``. One will be considered as _primary_ and the other one as _backup_. In this case, when the primary WIS centre broker is reachable (the MQTT connection is up and running), the Global Broker will only process the notification messages from this primary node. When the connection is dropped (the MQTT connection is down) for at least one minute, the Global Broker will start processing the notification messages received from the backup WIS centre broker. When the connection to the primary WIS centre broker is active for at least one minute, the Global Broker will stop processing the messages coming from the backup WIS centre broker and will only process the messages received from the primary WIS centre broker. When the Global Broker is processing the messages from the backup WIS centre broker the metric ``wmo_wis2_gb_connected_backup_flag`` will be set to 1. When the backup WIS centre broker is defined but is not used as the source of notification message, the metric ``wmo_wis2_gb_connected_backup_flag`` will be set to 0.
 * A Global Broker will update its metrics at least every 60 seconds.
 * A Global Broker should not reset its metrics counts.
-* All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest from regularly.
+* All above-defined metrics will be made available on HTTPS endpoints that the Global Monitor will ingest regularly.
 * As a convention, the Global Broker centre-id will be ``{tld}-{centre-name}-global-broker``.
 * A Global Broker should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Broker should also operate with a publicly resolvable Domain Name System (DNS) name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname and any subsequent changes.
 
@@ -131,13 +179,13 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * There is no requirement for a Global Cache to provide a browsable interface to the files in its repository in order to allow data consumers to discover what content is available. However, a Global Cache may choose to provide such a capability (for example, implemented as a WAF), along with documentation to inform data consumers of how the capability works.
 * The default behaviour for a Global Cache is to cache all data published under the ``origin/a/wis2/{centre-id}/data/core`` topic. A data publisher may indicate that data should not be cached by adding the ``"cache": false`` assertion in the WIS2 Notification Message.
 * A Global Cache should make sure that data are downloaded in parallel and that downloads are not blocking each other.
-* A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and send a message on the ``monitor`` topic hierarchy to inform the originating centre and its GISC. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue.
+* A Global Cache may decide not to cache data, for example, if the data are considered too large, or if a WIS2 Node publishes an excessive number of small files. If a Global Cache decides not to cache data, it should behave as though the cache property is set to false and shall send a WME (WIS2 Monitoring Event) message on the ``monitor`` topic hierarchy to inform other WIS centres about it. The Global Cache operator should work with the originating WIS2 Node and its GISC to remedy this issue. The deduplication mechanism mentioned above applies; only one WME per non-cached data instance shall be generated, regardless of the number of received notification messages.
 * A Global Cache should operate with a fixed IP address so that WIS2 Nodes can permit access to download resources based on IP address filtering. A Global Cache should also operate with a publicly resolvable DNS name pointing to that IP address. The WMO Secretariat must be informed of the IP address and/or hostname, and any subsequent changes.
-* A Global Cache will emit the following metrics for each WIS2 component (e.g., WIS2 Node or other Global Cache, identified with its ``centre-id``) from which it attempts to download and cache resources (e.g., data objects or metadata records): 
-** ``wmo_wis2_gc_downloaded_total``: This metric is incremented by 1 each time the Global Cache successfully downloads and validates a new resource or an update to a resource published more recently than any previously received messages for that resource. This metric is not incremented for duplicate resources or out-of-sequence updates. 
-** ``wmo_wis2_gc_downloaded_errors_total``: This metric is incremented by 1 each time the Global Cache fails to download a resource that it is attempting to cache. 
+* A Global Cache will emit the following metrics for each WIS2 component (e.g., WIS2 Node or other Global Cache, identified with its ``centre-id``) from which it attempts to download and cache resources (e.g., data objects or metadata records):
+** ``wmo_wis2_gc_downloaded_total``: This metric is incremented by 1 each time the Global Cache successfully downloads and validates a new resource or an update to a resource published more recently than any previously received messages for that resource. This metric is not incremented for duplicate resources or out-of-sequence updates.
+** ``wmo_wis2_gc_downloaded_errors_total``: This metric is incremented by 1 each time the Global Cache fails to download a resource that it is attempting to cache.
 ** ``wmo_wis2_gc_last_download_timestamp_seconds``: This metric is set to the current time (timestamp - the number of seconds since Unix epoch) each time the Global Cache successfully downloads a new or updated resource.
-** ``wmo_wis2_gc_integrity_failed_total``: This metric is incremented by 1 each time the Global Caches fails to validate the integrity of a new or updated resource that it is attempting to cache. 
+** ``wmo_wis2_gc_integrity_failed_total``: This metric is incremented by 1 each time the Global Caches fails to validate the integrity of a new or updated resource that it is attempting to cache.
 * A Global Cache will update its metrics at least every 60 seconds.
 * A Global Cache should not reset its metrics counts.
 * As a convention, the Global Cache centre-id will be ``{tld}-{centre-name}-global-cache``.
@@ -164,6 +212,8 @@ In WIS2, Global Caches provide access to WMO core data for data consumers. This 
 * A Global Discovery Catalogue should connect to and subscribe to more than one Global Broker to ensure that no messages are lost in the event of a Global Broker failure. A Global Discovery Catalogue will discard duplicate messages as needed.
 * A Global Discovery Catalogue will verify that a discovery metadata record identifier’s centre-id token (see Manual on WIS, Volume II – Appendix F. WMO Core Metadata Profile (Version 2)) matches the centre-id level of the topic from which it was published (see Manual on WIS, Volume II – Appendix D. WIS2 Topic Hierarchy) to ensure that discovery metadata are published by the authoritative organization.
 * A Global Discovery Catalogue will validate discovery metadata records against the WCMP2. Valid WCMP2 records will be ingested into the catalogue. Invalid or malformed records will be discarded and reported to the Global Monitor against the centre-id associated with the discovery metadata record.
+* A Global Discovery Catalogue may perform quality assessment of discovery metadata against the WCMP2 Key Performance Indicators (KPIs) footnote:[https://wmo-im.github.io/wcmp2/kpi/wcmp2-kpi-STABLE.html], providing the following metrics as defined in the WIS2 Metric Hierarchy footnote:[https://github.com/wmo-im/wis2-metric-hierarchy/blob/main/metrics/gdc.csv]: ``wmo_wis2_gdc_kpi_percentage_total``, ``wmo_wis2_gdc_kpi_percentage_average``, ``wmo_wis2_gdc_kpi_percentage_over80_total``.
+* A single Global Discovery Catalogue perfoming quality assessment is sufficient for WIS2.
 * A Global Discovery Catalogue will only update discovery metadata records to replace links for dataset subscription and notification (origin), with their equivalent links for subscription at Global Brokers (cache).
 * A Global Discovery Catalogue will periodically assess discovery metadata provided by NCs and DCPCs against a set of key performance indicators (KPIs) in support of continuous improvement. Suggestions for improvement will be reported to the Global Monitor against the centre identifier associated with the discovery metadata record.
 * A Global Discovery Catalogue will remove discovery metadata that are marked for deletion as specified in the data notification message.
