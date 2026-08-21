@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-19</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-21</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
@@ -1835,10 +1835,10 @@ body {
 <div class="sect4">
 <h5 id="_2_7_2_6_assessment_methodology"><a class="anchor" href="#_2_7_2_6_assessment_methodology"></a>2.7.2.6 Assessment methodology</h5>
 <div class="paragraph">
-<p>For each calendar month, the proportion of time during which the Global Service was operational is determined. The conditions under which a Global Service is considered operational vary by category and are set out in the per-component operational criteria in section 2.7.2.9. The time during which the Global Service is not operational is determined from the operational metrics published by the Global Service and by the Sensor Centres against those criteria, by aggregating the time intervals during which one or more of the per-component operational criteria are not met. Scheduled maintenance windows notified in advance to the WMO Secretariat are excluded from this time, provided that the total duration of such windows does not exceed four hours per calendar month, unless an exception has been approved by SC-IMT. SC-IMT will also exclude hours where Global Service operation is adversely affected by conditions beyond the control of the operator. The Global Service meets the service level for the calendar month where the proportion of operational time is not less than the value set out in section 2.7.2.5 and 2.7.2.9..</p>
+<p>For each calendar month, the proportion of time during which the Global Service was operational is determined. The conditions under which a Global Service is considered operational vary by category and are set out in the per-component operational criteria in section 2.7.2.9. The time during which the Global Service is not operational is determined from the operational metrics published by the Global Service and by the Sensor Centres against those criteria, by aggregating the time intervals during which one or more of the per-component operational criteria are not met. Scheduled maintenance windows notified in advance to the WMO Secretariat are excluded from this time, provided that the total duration of such windows does not exceed four hours per calendar month, unless an exception has been approved by SC-IMT. SC-IMT will also exclude hours where Global Service operation is adversely affected by conditions beyond the control of the operator. The Global Service meets the service level for the calendar month where the proportion of operational time is not less than the value set out in section 2.7.2.5 and 2.7.2.9.</p>
 </div>
 <div class="paragraph">
-<p>For each incident, the operating Member and the Sensor Centres maintain a record of the start time, the end time, and the affected criteria. These incident records, while not themselves binding, support the determination of operational time and provide operational context for the dashboards and statistical summaries provided by the Global Monitors.</p>
+<p>In the event of an incident affecting the operation of Global Service, the operating Member should maintain a record of the start time, the end time, and affected criteria. These incident records, while not themselves binding, support the determination of operational time and provide operational context for the dashboards and statistical summaries provided by the Global Monitors.</p>
 </div>
 </div>
 <div class="sect4">
@@ -1931,10 +1931,10 @@ body {
 <p>For data notification messages, a Global Broker will check if a discovery metadata record exists corresponding to the topic on which a message has been published. If there is no corresponding discovery metadata record, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_no_metadata_total</code> will be increased by 1. The Global Broker should not request information from a Global Discovery Catalogue for each notification message but should keep a cache of all valid topics for every <code>centre-id</code>.</p>
 </li>
 <li>
-<p>A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_invalid_topic_total</code> will be increased by 1.</p>
+<p>A Global Broker will check that the topic on which the message is received is valid. If the topic is invalid, the Global Broker will discard non-compliant messages and will raise an alert. The metric <code>wmo_wis2_gb_messages_invalid_topic_total</code> will be increased by 1.</p>
 </li>
 <li>
-<p>A Global Broker will validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_invalid_format_total</code> will be increased by 1.</p>
+<p>A Global Broker will validate notification messages against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix E. WIS2 Notification Message), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_messages_invalid_format_total</code> will be increased by 1.</p>
 </li>
 <li>
 <p>A Global Broker will validate monitoring events against the standard format (see <em>Manual on WIS</em>, Volume II – Appendix G. WIS2 Monitoring Events), discarding non-compliant messages and raising an alert. The metric <code>wmo_wis2_gb_invalid_format_total</code> will be increased by 1.</p>
@@ -4386,7 +4386,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-19 08:17:43 UTC
+Last updated 2026-08-21 10:56:04 UTC
 </div>
 </div>
 </body>
