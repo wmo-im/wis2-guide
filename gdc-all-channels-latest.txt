@@ -281,13 +281,6 @@ urn:wmo:md:int-ecmwf:ifs:oper:forecast,data/core/weather/prediction/forecast/med
 urn:wmo:md:int-ecmwf:ifs:oper:short-forecast,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:int-ecmwf:ifs:oper:short-trajectory,data/core/weather/prediction/forecast/medium-range/deterministic/trajectory
 urn:wmo:md:int-ecmwf:ifs:oper:trajectory,data/core/weather/prediction/forecast/medium-range/deterministic/trajectory
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/atmo-composition/experimental/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/climate/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/cryosphere/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/hydrology/experimental/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/ocean/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/space-weather/experimental/surface-based-observations
-urn:wmo:md:int-eumetsat-dcs:data-collection-platforms,data/core/weather/surface-based-observations
 urn:wmo:md:int-eumetsat:cfosat:swim,data/core/weather/space-based-observations/cfosat/swim
 urn:wmo:md:int-eumetsat:cro:lemur:stratos,data/core/weather/space-based-observations/lemur-2/stratos
 urn:wmo:md:int-eumetsat:jason-3:poseidon-3b,data/core/weather/space-based-observations/jason-3/poseidon-3b
