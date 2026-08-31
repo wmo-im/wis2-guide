@@ -396,6 +396,7 @@ urn:wmo:md:mz-inam:surfaced-based-observations.synop,data/core/weather/surface-b
 urn:wmo:md:na-meteona:synop-dataset,data/core/weather/surface-based-observations/synop
 urn:wmo:md:na-meteona:upper-dataset,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ng-nimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:np-nepalmet:cap_alart,data/core/weather/advisories-warnings
 urn:wmo:md:np-nepalmet:i0yfi5,data/core/weather/surface-based-observations/synop
 urn:wmo:md:np-nepalmet:qtgga5,data/core/weather/surface-based-observations/temp
 urn:wmo:md:nu-metservice:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
