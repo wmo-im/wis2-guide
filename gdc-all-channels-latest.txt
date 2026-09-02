@@ -4,6 +4,8 @@ urn:wmo:md:ag-antiguamet:core.surface-based-observations.synop,data/core/weather
 urn:wmo:md:ai-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ar-smn:autosmn,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ar-smn:slt0ci,data/core/weather/surface-based-observations/synop
+urn:wmo:md:at-geosphere:synop-at-test,data/core/weather/surface-based-observations/synop
+urn:wmo:md:at-geosphere:temp-at-test,data/core/weather/surface-based-observations/temp
 urn:wmo:md:au-imos:wave-buoys,data/core/ocean/surface-based-observations/wave-buoys
 urn:wmo:md:bb-barbadosmetservices:bb-sea-surface-drone-restricted,data/recommended/ocean/surface-based-observations/autonomous-surface-vehicles
 urn:wmo:md:bb-barbadosmetservices:bb-weather-radar-restricted,data/recommended/weather/experimental/surface-based-observations/bb-weather-radar-restricted
