@@ -73,6 +73,7 @@ urn:wmo:md:ca-eccc-msc:38414289-4beb-4854-af58-5ab3b66665eb,data/core/ocean/expe
 urn:wmo:md:ca-eccc-msc:390abee6-4ba0-4d6e-ae79-25753d1c43f3,data/core/ocean/experimental
 urn:wmo:md:ca-eccc-msc:3959c86b-b555-4ad8-9fcc-8fecfb79918c,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:3d4b68a5-13bc-48bb-ad10-801128aa6604,data/core/climate/experimental
+urn:wmo:md:ca-eccc-msc:3e0f265d-f33d-477f-b113-8e9c43c689b1,data/core/ocean/experimental
 urn:wmo:md:ca-eccc-msc:4058ed59-8d43-4e1d-b264-5dc12c97b99f,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:ca-eccc-msc:4564cbf5-9de5-4521-b007-a20d73ad6f89,data/core/weather/space-based-observations/goes-18/abi
 urn:wmo:md:ca-eccc-msc:46763060-e859-4812-8da5-2361d99b4c34,data/core/hydrology/experimental
@@ -94,6 +95,7 @@ urn:wmo:md:ca-eccc-msc:65d3a88b-eb09-4fd9-ac44-cf42dc1f7444,data/core/hydrology/
 urn:wmo:md:ca-eccc-msc:66caa8cc-0e9c-4fdb-ae40-fab9c255b811,data/core/ocean/experimental
 urn:wmo:md:ca-eccc-msc:6712547a-7b6e-4746-ac51-e369a1f1f1ee,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:68d21caf-82f6-4559-ba6f-4200a117a22d,data/core/weather/prediction/forecast/medium-range/deterministic/limited-area
+urn:wmo:md:ca-eccc-msc:6cad6b4f-ea9b-4e14-b06b-46b404b531c5,data/recommended/weather/aviation
 urn:wmo:md:ca-eccc-msc:6d483864-0ec9-4cd6-8cf8-453e14fc9213,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:6d9dd2f8-202e-58cb-a110-e2168832aacb,data/core/weather/prediction/forecast/medium-range/probabilistic/global
 urn:wmo:md:ca-eccc-msc:6e71f4f2-3a48-4af1-acdb-9e550fb76e31,data/recommended/weather/aviation
