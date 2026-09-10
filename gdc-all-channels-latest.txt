@@ -385,7 +385,6 @@ urn:wmo:md:kz-kazhydromet:core.surface-based-observations.temp,data/core/weather
 urn:wmo:md:lc-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:lc-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:ly-lnmc:cap-alerts,data/core/weather/advisories-warnings
-urn:wmo:md:ly-lnmc:climate,data/core/climate/surface-based-observations/daily
 urn:wmo:md:ly-lnmc:climate,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:ly-lnmc:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:h6vqw6,data/core/weather/surface-based-observations/synop
