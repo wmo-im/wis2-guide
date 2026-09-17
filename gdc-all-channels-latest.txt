@@ -425,6 +425,7 @@ urn:wmo:md:org-woudc:TotalOzone,data/core/atmospheric-composition/observations/g
 urn:wmo:md:org-woudc:TotalOzoneObs,data/core/atmospheric-composition/experimental/observations/gases/ozone
 urn:wmo:md:org-woudc:UmkehrN14_1.0,data/core/atmospheric-composition/experimental/observations/gases/ozone
 urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
+urn:wmo:md:pa-imhpa:imhpa_mech_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pa-imhpa:imhpa_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pg-pngnws:cap,data/core/weather/advisories-warnings
