@@ -428,8 +428,6 @@ urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimen
 urn:wmo:md:pa-imhpa:imhpa_mech_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pa-imhpa:imhpa_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
-urn:wmo:md:pg-pngnws:cap,data/core/weather/advisories-warnings
-urn:wmo:md:pg-pngnws:synop-3hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ph-pagasa:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:py-dinac-dmh:cap,data/core/weather/advisories-warnings
