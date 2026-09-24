@@ -199,6 +199,7 @@ urn:wmo:md:dz-meteoalgerie:surface-based-observations:temp,data/core/weather/sur
 urn:wmo:md:dz-meteoalgerie:surface-weather-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:dz-meteoalgerie:temp-21hours,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ec-inamhi:wf0wys,data/core/weather/surface-based-observations/synop
+urn:wmo:md:et-ethiomet:data.core.weather.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.amdar,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-amdar:weather.surface-based-observations.tamdar,data/core/weather/surface-based-observations
 urn:wmo:md:eu-eumetnet-gnss:weather.surface-based-observations.gnss-total-delay,data/core/weather/surface-based-observations
@@ -430,6 +431,8 @@ urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimen
 urn:wmo:md:pa-imhpa:imhpa_mech_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pa-imhpa:imhpa_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
+urn:wmo:md:pg-pngnws:cap,data/core/weather/advisories-warnings
+urn:wmo:md:pg-pngnws:synop-3hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ph-pagasa:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pl-imgw:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:py-dinac-dmh:cap,data/core/weather/advisories-warnings
