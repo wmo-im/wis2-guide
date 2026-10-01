@@ -28,7 +28,7 @@ A Global Replay provides access and subscription to past WIS Notification Messag
 ** JSON
 * A Global Replay shall subscribe to all Global Broker instances, to the topics `+origin/a/wis2/#+`, `+cache/a/wis2/#+` and `+monitor/a/wis2/#+`.
 * A Global Replay shall use the notification message and monitoring event identifier to deduplicate notifications and events.
-* A Global Replay will publish notification messages and monitoring events using a near-identical copy of the original notification message or monitoring event with a new unique message ID.
+* A Global Replay will publish notification messages and monitoring events using a near-identical copy of the original notification message or monitoring event with a new unique identifier.
 * The Global Replay will make notification messages available via the API collection identifier `wis2-notification-messages`.
 * The Global Replay will make monitoring events available via the API collection identifier `wis2-monitoring-events`.
 * The Global Replay will provide an API process to trigger the republication of previously sent messages, allowing users to subscribe to messages with various criteria (spatial and / or temporal extent, topic selection) via the Global Broker.
