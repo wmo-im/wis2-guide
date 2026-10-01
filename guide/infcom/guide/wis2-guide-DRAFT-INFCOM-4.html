@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-21</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-10-01</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 1.4.0-draft</p></td>
@@ -2037,7 +2037,7 @@ body {
 </div>
 </li>
 <li>
-<p>A Global Cache will publish WIS2 Notification Messages advertising the availability of each resource that it has processed. The notification messages will follow the standard structure (see <em>Manual on WIS</em>, Volume II - Appendix E. WIS2 Notification Message) and be a near-identical copy of the original notification message the Global Cache is processing with the following changes: (i) A new unique message ID is used; (ii) A <code>properties.global-cache</code> object with value set to the Global Cache&#8217;s <code>centre-id</code> is added; and (iii) Where the resource has been cached, the canonical (or update) URL in the link object is updated to point to the location of the cached resource.</p>
+<p>A Global Cache will publish WIS2 Notification Messages advertising the availability of each resource that it has processed. The notification messages will follow the standard structure (see <em>Manual on WIS</em>, Volume II - Appendix E. WIS2 Notification Message) and be a near-identical copy of the original notification message the Global Cache is processing with the following changes: (i) A new unique message identifier is used; (ii) A <code>properties.global-cache</code> object with value set to the Global Cache&#8217;s <code>centre-id</code> is added; and (iii) Where the resource has been cached, the canonical (or update) URL in the link object is updated to point to the location of the cached resource.</p>
 </li>
 </ul>
 </div>
@@ -2991,6 +2991,9 @@ federated catalogue.  ODIS data will be published as recommended data as per the
 </li>
 <li>
 <p>A Global Replay shall use the notification message and monitoring event identifier to deduplicate notifications and events.</p>
+</li>
+<li>
+<p>A Global Replay will publish notification messages and monitoring events using a near-identical copy of the original notification message or monitoring event with a new unique identifier.</p>
 </li>
 <li>
 <p>The Global Replay will make notification messages available via the API collection identifier <code>wis2-notification-messages</code>.</p>
@@ -4386,7 +4389,7 @@ Centres can provide external feedback on WIS 2.0 functions to trigger corrective
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-08-21 11:17:02 UTC
+Last updated 2026-10-01 12:08:17 UTC
 </div>
 </div>
 </body>
