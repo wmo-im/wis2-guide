@@ -12,6 +12,7 @@ urn:wmo:md:bb-barbadosmetservices:bb-weather-radar-restricted,data/recommended/w
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:bb-barbadosmetservices:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:bb-barbadosmetservices:weather-radar,data/recommended/weather/experimental/weather-radar
+urn:wmo:md:bd-bmd:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:be-rmib:be-radar,data/core/weather/experimental/bel-radar
 urn:wmo:md:be-rmib:buoy,data/core/ocean/surface-based-observations/moored-buoys-and-moorings
 urn:wmo:md:be-rmib:cap-alerts,data/core/weather/advisories-warnings
@@ -434,6 +435,7 @@ urn:wmo:md:org-woudc:UmkehrN14_1.0,data/core/atmospheric-composition/experimenta
 urn:wmo:md:org-woudc:uv_index_hourly,data/core/atmospheric-composition/experimental/observations/radiation-latent-heat/ultraviolet-radiation
 urn:wmo:md:pa-imhpa:cap-avisos,data/recommended/weather/advisories-warnings
 urn:wmo:md:pa-imhpa:imhpa_mech_synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:pa-imhpa:imhpa_synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pe-senamhi:synop-hourly,data/core/weather/surface-based-observations/synop
 urn:wmo:md:pg-pngnws:cap,data/core/weather/advisories-warnings
 urn:wmo:md:pg-pngnws:synop-3hourly,data/core/weather/surface-based-observations/synop
