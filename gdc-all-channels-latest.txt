@@ -500,6 +500,7 @@ urn:wmo:md:sn-anacim:krbor9,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sn-anacim:ld49rt,data/recommended/weather/aviation/metar
 urn:wmo:md:sr-metservice:synop-hourly-data,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sx-metservice:climat,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:sz-swazimet:eswatin-surface-observation-stations,data/core/weather/surface-based-observations/synop
