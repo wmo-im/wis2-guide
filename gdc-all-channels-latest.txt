@@ -503,6 +503,7 @@ urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surfa
 urn:wmo:md:sx-metservice:climat,data/core/climate/surface-based-observations/monthly
 urn:wmo:md:sx-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sx-metservice:metars,data/recommended/weather/aviation/metar
+urn:wmo:md:sx-metservice:upper-air,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sz-swazimet:eswatin-surface-observation-stations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sz-swazimet:surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:tc-metservice:cap.alerts,data/core/weather/advisories-warnings
