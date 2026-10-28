@@ -500,6 +500,7 @@ urn:wmo:md:sg-mss:recommended.weather.surface-based-observations.weather-radar.c
 urn:wmo:md:sl-slmet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sn-anacim:9b6nz5,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sn-anacim:aviation-metar,data/recommended/weather/aviation/metar
+urn:wmo:md:sn-anacim:climat-daily,data/core/climate/surface-based-observations/daily
 urn:wmo:md:sn-anacim:daycli,data/core/climate/surface-based-observations/daily
 urn:wmo:md:sr-metservice:synop-hourly-data,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ss-ssms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
