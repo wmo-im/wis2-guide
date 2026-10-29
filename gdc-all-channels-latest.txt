@@ -383,6 +383,7 @@ urn:wmo:md:it-meteoam:observations.surface.temp-bufr,data/core/weather/surface-b
 urn:wmo:md:jm-msj:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:jm-msj:metars,data/recommended/weather/aviation/metar
 urn:wmo:md:jp-jma:synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:jp-jma:tsunami,data/core/weather/maritime-safety-information/warnings
 urn:wmo:md:ke-meteo:synop-dataset-surface-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:kg-kyrgyzhydromet:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:km-anacm:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
