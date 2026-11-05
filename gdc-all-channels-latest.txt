@@ -407,6 +407,7 @@ urn:wmo:md:ly-lnmc:synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ma-marocmeteo:h6vqw6,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ml-malimeteo:2yhv9z,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mn-namem:wflvc0,data/core/weather/surface-based-observations/synop
+urn:wmo:md:mr-onm:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ms-metservice:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mv-mms:hourly-synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:mw-dccms:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
