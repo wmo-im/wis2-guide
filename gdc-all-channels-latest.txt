@@ -267,6 +267,7 @@ urn:wmo:md:id-bmkg:climate-surface-based-observations,data/core/climate/surface-
 urn:wmo:md:id-bmkg:ship,data/core/weather/surface-based-observations/ship
 urn:wmo:md:id-bmkg:surface-based-observations,data/core/weather/surface-based-observations/synop
 urn:wmo:md:id-bmkg:temp,data/core/weather/surface-based-observations/temp
+urn:wmo:md:ie-meteireann:mooredbuoys,data/core/ocean/surface-based-observations
 urn:wmo:md:ie-meteireann:ocean.surface-based-observations.moored-buoys.moored-buoys,data/core/ocean/surface-based-observations
 urn:wmo:md:ie-meteireann:radiosonde-ascent-data,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ie-meteireann:synops,data/core/weather/surface-based-observations/synop
