@@ -99,6 +99,7 @@ urn:wmo:md:ca-eccc-msc:68d21caf-82f6-4559-ba6f-4200a117a22d,data/core/weather/pr
 urn:wmo:md:ca-eccc-msc:6cad6b4f-ea9b-4e14-b06b-46b404b531c5,data/recommended/weather/aviation
 urn:wmo:md:ca-eccc-msc:6d483864-0ec9-4cd6-8cf8-453e14fc9213,data/core/weather/prediction/forecast/short-range/deterministic/limited-area
 urn:wmo:md:ca-eccc-msc:6d9dd2f8-202e-58cb-a110-e2168832aacb,data/core/weather/prediction/forecast/medium-range/probabilistic/global
+urn:wmo:md:ca-eccc-msc:6d9f3ee0-05b8-457e-8b58-38673760a1a9,data/core/hydrology/experimental
 urn:wmo:md:ca-eccc-msc:6e71f4f2-3a48-4af1-acdb-9e550fb76e31,data/recommended/weather/aviation
 urn:wmo:md:ca-eccc-msc:71cb9009-1a55-4c8e-8b5c-35dfce7cabff,data/core/weather/prediction/forecast/medium-range/deterministic/global
 urn:wmo:md:ca-eccc-msc:746f9469-ab78-5dcc-b165-4b51e8ab8652,data/core/climate/experimental
@@ -480,6 +481,7 @@ urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather
 urn:wmo:md:sa-ncm:observations.surface.synop-bufr,data/core/weather/surface-based-observations/synop
 urn:wmo:md:sa-ncm:observations.surface.temp-bufr,data/core/weather/surface-based-observations/temp
 urn:wmo:md:sc-seychelles-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
+urn:wmo:md:sd-sma:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:se-smhi:recommended.surface-based-observations.ship,data/recommended/weather/surface-based-observations/ship
 urn:wmo:md:se-smhi:recommended.surface-based-observations.synop,data/recommended/weather/surface-based-observations/synop
