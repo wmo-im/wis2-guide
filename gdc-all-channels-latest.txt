@@ -163,6 +163,11 @@ urn:wmo:md:cg-met:7j4xdo,data/core/weather/advisories-warnings
 urn:wmo:md:cg-met:core.climate.surface-based-observations.climat,data/core/climate/surface-based-observations/climat
 urn:wmo:md:cg-met:core.surface-based-observations.synop,data/core/weather/surface-based-observations/synop
 urn:wmo:md:cg-met:core.weather.advisories-warning,data/core/weather/advisories-warnings
+urn:wmo:md:ch-meteoswiss:climate-daily,data/core/climate/surface-based-observations/daily
+urn:wmo:md:ch-meteoswiss:climate-monthly,data/core/climate/surface-based-observations/monthly
+urn:wmo:md:ch-meteoswiss:synop-10min,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ch-meteoswiss:synop-1h,data/core/weather/surface-based-observations/synop
+urn:wmo:md:ch-meteoswiss:temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:ci-sodexam:bx49vd,data/core/weather/surface-based-observations/synop
 urn:wmo:md:ck-metservice:surface-based-observations.temp,data/core/weather/surface-based-observations/temp
 urn:wmo:md:cl-meteochile:climat-monthly,data/core/climate/surface-based-observations/monthly
